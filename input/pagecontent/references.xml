@@ -1,0 +1,23 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+ 
+
+  <h3>WHO Guideline Development</h3>  <a name="smart-guideliens"> </a>
+  <ul>
+    <li>WHO <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a> overviews the SMART Guidelines approach</li>
+    <li>WHO <a href="https://www.who.int/publications/i/item/9789241548960">Handbook for guideline development</a> provides an overview of the WHO guideline development and publication process</li>
+  </ul>
+
+
+  <h3>Tutorials and Reference Material</h3> <a name='tutorials'> </a>
+  <ul>
+    <li>FHIR Implementation Guide <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">Publisher</a> used to publish this implementatio guide</li>
+    <li>FHIR Mapping Language <a href="http://hl7.org/fhir/r4/mapping-language.html">reference</a> for generating <a href="https://www.hl7.org/fhir/structuremap.html">StructureMaps</a></li>
+    <li>FHRI Mapping Language <a href="http://www.hl7.org/fhir/mapping-tutorial.html">turtorial</a></li>
+    <li>FHIR Shorthand<a href='https://confluence.hl7.org/download/attachments/76163865/FSH%20Quick%20Reference%20Guide%20March%202020%20Two%20Sided%20Trimmed.pdf'>Cheat Sheet</a> for quick reference in defining FHIR resources</li>
+    <li>FHIR Shorthand <a href="http://hl7.org/fhir/uv/shorthand/">Language Reference</a> used for defining FHIR resources</li>
+    <li>Liquid <a href="https://shopify.github.io/liquid/">Templates</a> used by the publisher when pre-processing page content</li>
+    <li>PlantUML <a href="http://plantuml.com/guide">Reference Guide</a> used for sequence and UML diagrams</li>    
+  </ul>
+    
+  
+</div>

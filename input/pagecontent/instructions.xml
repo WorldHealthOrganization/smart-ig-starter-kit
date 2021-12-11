@@ -1,0 +1,169 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     lang="en">
+  <a name="scope">  </a>
+
+  <p>
+    This Implementation Guide, smart-ig-empty, provides is a GitHub <em>template repostiory</em> which means that it can be used as a starting point for developing a new Implementation Guide.  Following these instructions will ensure consistent styling and content structure to ease adoption of WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a>.  This 
+  </p>
+  <ol>
+    <li>
+      Choose an apporpriate for the Implementation Guide you are developing.  The code of this implemenation guide is <em>smart-ig-empty</em>.  For the sake of the following instructions, we will assume that you have chosen <em>smart-ig-my-guide</em>.
+    </li>
+    <li>
+      This Implementation Guide is a template repository and you should <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository">create a repository from this template</a> named smart-ig-my-guide.
+    </li>
+    <li>
+      Create an empty gh-pages branch, if needed, on the new repo using the commands:
+      <blockquote>
+	<pre>git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "Initializing gh-pages branch"
+git push origin gh-pages
+git checkout masin</pre>
+      </blockquote>
+    </li>
+    <li>
+      Modify the following files as indiciated:
+      <dl>
+	<dt>ig.ini</dt>
+	<dd>
+	  Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'ig' field.
+	</dd>
+	<dt>sushi-config.yaml</dt>
+	<dd>
+	  <ul>
+	    <li>Choose a title for this Implementation Guide and update the 'title' field.</li>
+	    <li>Modify the 'email' field as apporpriate. <mark>TODO: create a SMART Guidlines email</mark></li>
+	    <li>Modify the 'description' field as appopriate.</li>
+	    <li>Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'id', 'canonical' and 'name' fields</li>
+	    <li>Change the 'date' field to the current date</li>
+	    <li>Add an appropriate dependencies under the 'dependencies' field.</li>
+	  </ul>
+	  See <a href="https://fshschool.org/docs/sushi/configuration/">sushi config</a> instructions for more infomration on this file.
+	</dd>
+	<dt>input/data/features.yml</dt>
+	<dd>
+	  Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'feedback.dashboard.url' field <mark>@Jose: anything else to do here?</mark>
+	</dd>
+      </dl>      
+    </li>
+    <li>
+      Create your content following the <a href="#checklist">Smart Guidelines IG checklist</a> and using the following directory and file structure:
+      <dl>
+	<dt>input/fsh</dt>
+	<dd>
+	  put any <a href="hl7.org/fhir/uv/shorthand/">FHIR Shorthand</a> (or fsh) files in this directory.
+	</dd>
+	<dt>input/images</dt>
+	<dd>
+	  put any graphical artifacts that are used in this implementation guide
+	</dd>
+	<dt>input/images-source</dt>
+	<dd>
+	  put UML, sequence diagrams, etc in this directory as <a href="https://plantuml.com/">plantUML</a> diagrams.  A UML diagram named XXXX.plantuml can be referenced in a xml file under input/pagecontent as {% include XXXX.svg %}
+	</dd>
+	<dt>input/pagecontent</dt>
+	<dd>
+	  Edit the following pages by providing content according to the <a href="#checklist">Smart Guidelines IG checklist</a> below.
+	  <dl>
+	    <dt>actors.xml</dt>
+	    <dd>
+	      Provide a list and definition of of any human or system actors involved in any transactions or sequence diagrams defined in this profile.
+	    </dd>
+
+	    <dt>changes.xml</dt>
+	    <dd>
+	      A list of verisoned changes to this implementation guide.
+	    </dd>
+	    <dt>concepts.xml</dt>	    
+	    <dd>
+	      Provide a descipription or definition of key concepts needed to understand this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.  
+	    </dd>
+<dt>content_profiles.xml</dt>
+	    <dd>
+	      Provide an overview of the health specific content profiles specified in the implementation guide.
+	    </dd>
+	    <dt>dependencies.xml</dt>
+	    <dd>
+	      Provide a list, linkages and description of the use of any dependencies in this implementation guide.
+	    </dd>
+	    <dt>dictionary.xml</dt>
+	    <dd>
+	      Replicate any relevant data dictionaries defined in L2 content.  Each data dictionary should have a corresponding logical model.
+	    </dd>
+	    <dt>functional.xml</dt>
+	    <dd>
+	      Provide a descipription or definition of key concepts needed to understand this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case precise references to the appropriate section(s) should be given here.
+	    </dd>
+	    <dt>index.html</dt>
+	    <dd>
+	      Remove or comment out these instructions and the checklist.  Modify the  &lt;blockquote class="stu-note"/&gt; with the appropriate disclaimer text.
+	    </dd>	
+
+	    <dt>personas.xml</dt>
+	    <dd>
+	      Provide a brief overview of the personas covered by this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.	      
+	    </dd>
+	    <dt>usecases.xml</dt>
+	    <dd>
+	      Provide a brief overview of the use cases covered by this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.	      
+	    </dd>
+
+	    <dt>testing.xml</dt>
+	    <dd>
+	      Provide information about testing executable artifacts based on this implementation guide
+	    </dd>
+
+
+	    <dt>security_privacy.xml</dt>
+	    <dd>
+	      Provide guidance on specific security and privacy concerns that may arise in executable versions of this profile.
+	    </dd>
+
+	    <dt>transactions.xml</dt>
+	    <dd>
+	      Provide a list and definition of of any transactions defined in this profile.  There should be transactions defined or referneced in other implementation guides for each of the steps in the workflows  in this implementation guide.
+	    </dd>
+
+	    <dt>workflows.xml</dt>
+	    <dd>
+	      Provide a list and desciption of workflows as UML sequence diagrams consiting of actors and transactions for each of the use cases taken up in this implementation guide. 
+	    </dd>
+
+	  </dl>
+	</dd>
+      	<dt>input/resources</dt>
+	<dd>
+	  Resources defined by this profile (that are not .fsh files) are expected to be managed in the following structure
+	  <dl>
+	    <dt>examples</dt>
+	    <dd>
+	      Examples resources.  As much as possible, examples should be provided in the <a href="https://www.un.org/en/our-work/official-languages">official six UN languages</a>.
+	    </dd>
+	    <dt>examples-src</dt>
+	    <dd>
+	      templated examples <mark>TODO: need @Ricard's six UN language template example instructions</mark>
+	    </dd>
+	    <dt>maps-src</dt>
+	    <dd>
+	      StructureDefinition source files in the  <a href="http://hl7.org/fhir/r4/mapping-language.html">FHIR Mapping language</a> 
+	    </dd>
+	    <dt>structuredefinitions</dt>
+	    <dd>
+	      StructureDefintition defined in this profile
+	    </dd>
+	    
+
+	  </dl>
+	</dd>
+	<dt>README.md</dt>
+	<dd>
+	  Change the title and any instances of the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+	</dd>
+      </dl>
+    </li>
+  </ol>
+</div>
