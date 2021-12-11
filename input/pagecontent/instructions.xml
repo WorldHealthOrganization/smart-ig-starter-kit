@@ -63,7 +63,7 @@ git checkout masin</pre>
 	</dd>
 	<dt>input/images-source</dt>
 	<dd>
-	  put UML, sequence diagrams, etc in this directory as <a href="https://plantuml.com/">plantUML</a> diagrams.  A UML diagram named XXXX.plantuml can be referenced in a xml file under input/pagecontent as {% include XXXX.svg %}
+	  put UML, sequence diagrams, etc in this directory as <a href="https://plantuml.com/">plantUML</a> diagrams.  A UML diagram named XXXX.plantuml can be referenced in a xml file under input/pagecontent as  'include XXXX.svg' <mark>TODO: figure out how to esacpe jekyll control sequences </mark>
 	</dd>
 	<dt>input/pagecontent</dt>
 	<dd>
