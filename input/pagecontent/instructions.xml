@@ -165,5 +165,25 @@ git checkout masin</pre>
 	</dd>
       </dl>
     </li>
+    <li>
+      Install Implemnation Guide Publisher dependencies (Ubuntu instructions)
+      <blockquote><pre>apt-get install npm node.js jekyll
+npm install -g sushi
+      </pre></blockquote>
+      See <a href="http://hl7.org/fhir/uv/shorthand/2020May/sushi.html#installation">sushi install</a> for more details.
+    </li>
+    <li>
+      Run the IG Publisher in the root of the github repo (unix-y instructions):
+      <blockquote><pre>./_updatePublisher.sh
+./_genonce.sh      
+ </pre>
+      </blockquote>
+    </li>
+    <li>
+      If all is successful, open the local file 'output/index.html' in your browser and review the content as well as the quality assurance page under 'output/qa.html'
+    </li>
+    <li>
+      Do a github commit, let the github action run and open at https://WorldHealthOrganization.github.io/smart-ig-empty but the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+    </li>
   </ol>
 </div>
