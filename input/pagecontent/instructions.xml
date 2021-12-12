@@ -28,7 +28,7 @@ git checkout masin</pre>
     </li>
   </ul>
 
-  <h3>Modifying the template repostiroty</h3><a name="modify"> </a>
+  <h3>Modifying the template repository</h3><a name="modify"> </a>
   <ul>
     <li>
       Modify the following files as indiciated:
@@ -196,7 +196,44 @@ npm install -g sushi</pre></blockquote>
       If all is successful, open the local file 'output/index.html' in your browser and review the content as well as the quality assurance page under 'output/qa.html'
     </li>
     <li>
-      Do a github commit, let the github action run and open at 'https://WorldHealthOrganization.github.io/smart-ig-empty' but change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+      Do a github commit, let the github action run and open GitHub pages at <a href="{{ site.data.fhir.packageId | split: '.' | last | prepend: 'https://WorldHealthOrganization.github.io/' }}">{{ site.data.fhir.packageId | split: '.' | last }} </a>  but change  <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.
     </li>
   </ul>
+
+
+  <h3>Country Adaptation</h3><a name="adaptation"> </a>
+  <p>
+    Basic country adaptation of SMART Implementation Guide has a few additional steps. In this case, rather than creating a new repostiory based off of <em>smart-ig-empty</em> you should fork an existing repository, such as <em>smart-ig-anc</em>.         Determine the appropriate ISO-alpha3 and M49 ISO-3166 <a href="https://unstats.un.org/unsd/methodology/m49/">jurisdicition codes</a>.  For the purposes of these instructions, suppose it is <em>EXA</em> and <em>999</em> for an 'Example' country. 
+  </p>
+  <ul>
+    <li>
+      Name the forked repository the same as the repository you are forking from but you should add the ISO-alpha3 code to then end.  For example <em>smart-ig-anc</em> would beceom <em>smart-ig-anc-exa</em>
+    </li>
+    <li>
+      Further modify the following files:
+      <dl>
+	<dt>ig.ini</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      Change the occurence of <em>who</em> in the 'ig' field to the lower-case version of the country code, <em>exa</em>, or whatever is the convention in your country.  For example, 'ig = fsh-generated/resources/ImplementationGuide-fhir.<em>exa</em>.smart-ig-anc.json.
+	    </li>
+	  </ul>
+	</dd>
+	<dt>sushi-config.yaml</dt>
+	<dd>
+	  <ul>
+	    <li>Modigy the 'id' field and replace <em>who</em> with the lower-case version of the country code, <em>exa</em>, or whatever is the convention in your country.  For example 'id: fhir.<em>exa</em>.smart-ig-anc-exa</li>	    
+	    <li>Modifty the 'jursidiciton' field by changing the <em>#001</em> to the appropriate M49 code found <a href="https://unstats.un.org/unsd/methodology/m49/">here</a>. For example 'jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#<em>999</em>'</li>
+	    <li>Update the 'publisher.name' and 'publisher.url' fields to something appropriate</li>
+	    <li>Update the 'email' field to something appropriate</li>
+	    <li>Change the 'title' field to add in the country name yet still show that it is adapted from the WHO SMART Guidelines.  For example, 'WHO SMART Guideline: Antenatal Care' becomes 'WHO SMART Guideline: Antenatal Care for Example Country' </li>
+	  </ul>
+	</dd>
+      </dl>	
+    </li>
+    <li>Create new ValueSets and appopriate ConceptMaps based on country requirements</li>
+    <li>Modify data collection resources (e.g. Questionnaires), logical models, and document structures to account for country specific data fields</li>
+  </ul>
+
 </div>
