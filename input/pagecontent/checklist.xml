@@ -6,14 +6,16 @@
   <p>
     The folowing sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
   </p>
-  <div>
+
+  <span>
     <img src="knowledge-levels.png" alt='knowledge levels'/>
     <cite><a href="https://pubmed.ncbi.nlm.nih.gov/22052898/">Knowledge Levels with Examples (Michaels, U.S. Centers for Disease Control and Prevention</a>, 2019; Adapted from: Boxwala, AA, et al.. A multi-layered framework for disseminating knowledge for computer-based decision support. J Am Med Inform Assoc 2011(18) i132-i139)</cite>
-  </div>
+  </span>
 
 
-  <h4>Checklist: L1 Content</h4><a name="checklist-l1"> </a>
-  <p>
+
+  <h3>Checklist: L1 Content</h3><a name="checklist-l1"> </a>
+  <p>ecklist.xml   Toecklist.xml   To
     Checklist for narrative content relating the guidance, guidelines, policies and recommendations underpinning this Implementation Guide.
   </p>
   <table class='checklist'>
@@ -62,7 +64,7 @@
     </tr>
   </table>
 
-  <h4>Checklist: L2 Content</h4><a name="checklist-l2"> </a>
+  <h3>Checklist: L2 Content</h3><a name="checklist-l2"> </a>
   <p>
     Checklist for semi-structure content relating to business requirements, definitions of key concepts, user personas, use cases, and data dictionaries underpinning the Implementation Guide.
   </p>
@@ -97,7 +99,7 @@
     </tr>
   </table>
 
-  <h4>Checklist: L3 Content</h4><a name="checklist-l3"> </a>
+  <h3>Checklist: L3 Content</h3><a name="checklist-l3"> </a>
   <p>
     Checklist for structured content relating to data models, data exchange protocols with actors and transactions defined which are defined in the Implementation Guide.
   </p>
@@ -135,7 +137,7 @@
 
 
   
-  <h4>Checklist: L4 Content</h4><a name="checklist-l4"> </a>
+  <h3>Checklist: L4 Content</h3><a name="checklist-l4"> </a>
   <p>
     Checklist for executable content supporting guidance for adaptation to local contexts in the Implementation Guide.
   </p>

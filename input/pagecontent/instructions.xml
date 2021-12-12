@@ -8,7 +8,8 @@
   <p>
     This Implementation Guide, smart-ig-empty, provides is a GitHub <em>template repostiory</em> which means that it can be used as a starting point for developing a new Implementation Guide.  Following these instructions will ensure consistent styling and content structure to ease adoption of WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a>.  This 
   </p>
-  <ol>
+  <h4>Creating the GitHub repository</h4><a name="github"> </a>
+  <ul>
     <li>
       Choose an apporpriate for the Implementation Guide you are developing.  The code of this implemenation guide is <em>smart-ig-empty</em>.  For the sake of the following instructions, we will assume that you have chosen <em>smart-ig-my-guide</em>.
     </li>
@@ -25,6 +26,10 @@ git push origin gh-pages
 git checkout masin</pre>
       </blockquote>
     </li>
+  </ul>
+
+  <h4>Modifying the template repostiroty</h4><a name="modify"> </a>
+  <ul>
     <li>
       Modify the following files as indiciated:
       <dl>
@@ -82,7 +87,7 @@ git checkout masin</pre>
 	    <dd>
 	      Provide a descipription or definition of key concepts needed to understand this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.  
 	    </dd>
-<dt>content_profiles.xml</dt>
+	    <dt>content_profiles.xml</dt>
 	    <dd>
 	      Provide an overview of the health specific content profiles specified in the implementation guide.
 	    </dd>
@@ -145,7 +150,7 @@ git checkout masin</pre>
 	    </dd>
 	    <dt>examples-src</dt>
 	    <dd>
-	      templated examples <mark>TODO: need @Ricard's six UN language template example instructions</mark>
+	      templated examples <mark>TODO: need @Richard's six UN language template example instructions</mark>
 	    </dd>
 	    <dt>maps-src</dt>
 	    <dd>
@@ -165,18 +170,19 @@ git checkout masin</pre>
 	</dd>
       </dl>
     </li>
+  </ul>
+  <h4>Generating the Implmentation Guide</h4><a name="generation"> </a>
+  <ul>
     <li>
-      Install Implemnation Guide Publisher dependencies (Ubuntu instructions)
+      Install Implemenation Guide Publisher dependencies (Ubuntu instructions)
       <blockquote><pre>apt-get install npm node.js jekyll
-npm install -g sushi
-      </pre></blockquote>
+npm install -g sushi</pre></blockquote>
       See <a href="http://hl7.org/fhir/uv/shorthand/2020May/sushi.html#installation">sushi install</a> for more details.
     </li>
     <li>
       Run the IG Publisher in the root of the github repo (unix-y instructions):
       <blockquote><pre>./_updatePublisher.sh
-./_genonce.sh      
- </pre>
+./_genonce.sh</pre>
       </blockquote>
     </li>
     <li>
@@ -185,5 +191,5 @@ npm install -g sushi
     <li>
       Do a github commit, let the github action run and open at https://WorldHealthOrganization.github.io/smart-ig-empty but the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
     </li>
-  </ol>
+  </ul>
 </div>
