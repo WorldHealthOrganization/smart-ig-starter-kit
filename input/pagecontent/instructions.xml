@@ -159,9 +159,16 @@ git checkout masin</pre>
 	    <dt>structuredefinitions</dt>
 	    <dd>
 	      StructureDefintition defined in this profile
-	    </dd>
-	    
+	    </dd>	    
 
+	  </dl>
+	</dd>
+	<dt>local-template/package</dt>
+	<dd>
+	  Contains any changes to the WHO SMART IG style template that are specific to this IG.  More information is in these <a href="https://build.fhir.org/ig/FHIR/ig-guidance/template.html">instructions</a>.
+	  <dl>
+	    <dt>content/assets/css/local.css</dt>
+	    <dd>for any css changes that nad be added or overidden</dd>
 	  </dl>
 	</dd>
 	<dt>README.md</dt>

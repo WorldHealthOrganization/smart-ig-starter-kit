@@ -1,0 +1,12 @@
+{
+    "name": "who.fhir.smart-ig-empty-locarl",
+    "version": "0.0.1",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "Local template extension for WHO SMART FHIR IG",
+    "author": "http://who.int",
+      "base":  "who.fhir.template",
+    "dependencies": {
+      "who.fhir.template": "current"
+    }
+  }
