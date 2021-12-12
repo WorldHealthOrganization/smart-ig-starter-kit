@@ -11,10 +11,9 @@
     This is an empty implementation guide for WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a> which should be used as a basis for any SMART Guideline Implementation Guide (IG). See the directions for use below.
   </blockquote>
 
+  
   <h3>Summary</h3>  <a name="summary"> </a>
-  <p>
-    A GitHub template repository for creating HL7 FHIR Implementation Guides following the WHO SMART Guidlines approach.
-  </p>
+  {% include layers.xml %}
 
 <!-- BEGIN SECTION TO REMOVE WHEN CREATING A NEW GUIDE-->
   <h3>Creating a new Implementaion Guide</h3> <a name="new-guide"> </a>

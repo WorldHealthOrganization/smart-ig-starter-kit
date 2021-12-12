@@ -39,6 +39,11 @@ table.checklist tr {
 }
 
 
+figure {
+    display: block;
+    width: 100%;
+}
+
 figure img {
     display: block;
     margin-left: auto;
