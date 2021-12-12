@@ -8,7 +8,7 @@
 
   
   <blockquote class="stu-note">
-    This is an empty implementation guide for WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a> which should be used as a basis for any SMART Guideline Implementation Guide (IG). See the directions for use below.
+    This is an empty HL7 FHIR Implementation Guide (IG) for WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a> which should be used as a basis for any SMART Guideline Implementation Guide (IG). See the directions for use below.
   </blockquote>
 
   
@@ -16,7 +16,7 @@
   {% include layers.xml %}
 
 <!-- BEGIN SECTION TO REMOVE WHEN CREATING A NEW GUIDE-->
-  <h3>Creating a new Implementaion Guide</h3> <a name="new-guide"> </a>
+  <h3>Creating a new SMART Guideline IG</h3> <a name="new-guide"> </a>
   Please review the <a href="instructions.html">instructions</a> for initializing a new SMART Guidelines Implementation Guide.
 
   <h3>SMART Guidelines IG Checklist</h3><a name="checklist"> </a>
