@@ -8,7 +8,7 @@
   <p>
     This Implementation Guide, smart-ig-empty, provides is a GitHub <em>template repostiory</em> which means that it can be used as a starting point for developing a new Implementation Guide.  Following these instructions will ensure consistent styling and content structure to ease adoption of WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a>.  This 
   </p>
-  <h4>Creating the GitHub repository</h4><a name="github"> </a>
+  <h3>Creating the GitHub repository</h3><a name="github"> </a>
   <ul>
     <li>
       Choose an apporpriate for the Implementation Guide you are developing.  The code of this implemenation guide is <em>smart-ig-empty</em>.  For the sake of the following instructions, we will assume that you have chosen <em>smart-ig-my-guide</em>.
@@ -28,7 +28,7 @@ git checkout masin</pre>
     </li>
   </ul>
 
-  <h4>Modifying the template repostiroty</h4><a name="modify"> </a>
+  <h3>Modifying the template repostiroty</h3><a name="modify"> </a>
   <ul>
     <li>
       Modify the following files as indiciated:
@@ -171,7 +171,7 @@ git checkout masin</pre>
       </dl>
     </li>
   </ul>
-  <h4>Generating the Implmentation Guide</h4><a name="generation"> </a>
+  <h3>Generating the Implmentation Guide</h3><a name="generation"> </a>
   <ul>
     <li>
       Install Implemenation Guide Publisher dependencies (Ubuntu instructions)
@@ -189,7 +189,7 @@ npm install -g sushi</pre></blockquote>
       If all is successful, open the local file 'output/index.html' in your browser and review the content as well as the quality assurance page under 'output/qa.html'
     </li>
     <li>
-      Do a github commit, let the github action run and open at https://WorldHealthOrganization.github.io/smart-ig-empty but the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+      Do a github commit, let the github action run and open at 'https://WorldHealthOrganization.github.io/smart-ig-empty' but change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
     </li>
   </ul>
 </div>

@@ -7,10 +7,10 @@
     The folowing sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
   </p>
 
-  <span>
+  <figure>
     <img src="knowledge-levels.png" alt='knowledge levels'/>
-    <cite><a href="https://pubmed.ncbi.nlm.nih.gov/22052898/">Knowledge Levels with Examples (Michaels, U.S. Centers for Disease Control and Prevention</a>, 2019; Adapted from: Boxwala, AA, et al.. A multi-layered framework for disseminating knowledge for computer-based decision support. J Am Med Inform Assoc 2011(18) i132-i139)</cite>
-  </span>
+    <figcaption><a href="https://pubmed.ncbi.nlm.nih.gov/22052898/">Knowledge Levels with Examples (Michaels, U.S. Centers for Disease Control and Prevention</a>, 2019; Adapted from: Boxwala, AA, et al.. A multi-layered framework for disseminating knowledge for computer-based decision support. J Am Med Inform Assoc 2011(18) i132-i139)</figcaption>
+  </figure>
 
 
 
@@ -23,7 +23,7 @@
       <th class='checklist-section'>Section in IG</th>
       <th class='checlist-required'>Required</th>
       <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifcats</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
       <th class='checlist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
@@ -73,7 +73,7 @@
       <th class='checklist-section'>Section in IG</th>
       <th class='checlist-required'>Required</th>
       <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifcats</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
       <th class='checlist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
@@ -108,7 +108,7 @@
       <th class='checklist-section'>Section in IG</th>
       <th class='checlist-required'>Required</th>
       <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifcats</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
       <th class='checlist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
@@ -146,7 +146,7 @@
       <th class='checklist-section'>Section in IG</th>
       <th class='checlist-required'>Required</th>
       <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifcats</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
       <th class='checlist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
