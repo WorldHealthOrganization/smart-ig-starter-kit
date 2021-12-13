@@ -19,13 +19,13 @@
       This Implementation Guide is a template repository and you should <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository">create a repository from this template</a> named smart-ig-my-guide.
     </li>
     <li>
-      Create an empty gh-pages branch on the new repo using the commands:
+      If you don't have a gh-pages branch, you can reate an empty gh-pages branch on the new repo using the commands:
       <blockquote>
 	<pre>git checkout --orphan gh-pages
 git reset --hard
 git commit --allow-empty -m "Initializing gh-pages branch"
 git push origin gh-pages
-git checkout masin</pre>
+git checkout main</pre>
       </blockquote>
     </li>
   </ul>
