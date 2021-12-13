@@ -1,0 +1,170 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     lang="en">
+  <p>
+    The folowing sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
+  </p>
+
+
+
+
+  <h3>Checklist: L1 Content</h3><a name="checklist-l1"> </a>
+  <p>ecklist.xml   Toecklist.xml   To
+    Checklist for narrative content relating the guidance, guidelines, policies and recommendations underpinning this Implementation Guide.
+  </p>
+  <table class='checklist'>
+    <tr>
+      <th class='checklist-section'>Section in IG</th>
+      <th class='checlist-required'>Required</th>
+      <th class='checlist-description'>Description</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
+      <th class='checlist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Home Page</td>
+      <td class='checlist-required'>Yes</td>
+      <td class='checlist-description'>Status and maturity level of the Implementation Guide</td>
+      <td class='checlist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide. <mark>TODO: define maturity levels such as 'draft', 'public comment', 'published'. see also forthcoming IPS maturity levels</mark></td>
+      <td class='checlist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Home Page</td>
+      <td class='checlist-required'>Yes</td>
+      <td class='checlist-description'>Linkage to the primary L1 and L2 content that underpins this Implementation Guide.</td>
+      <td class='checlist-artifacts'>URL links on the home page to relevant guidance documents and a brief description of the relevance of the document to this Implementation Guide</td>
+      <td class='checlist-criteria'>Links exist on the home page</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+  </table>
+
+  <h3>Checklist: L2 Content</h3><a name="checklist-l2"> </a>
+  <p>
+    Checklist for semi-structure content relating to business requirements, definitions of key concepts, user personas, use cases, and data dictionaries underpinning the Implementation Guide.
+  </p>
+    <table class='checklist'>
+    <tr>
+      <th class='checklist-section'>Section in IG</th>
+      <th class='checlist-required'>Required</th>
+      <th class='checlist-description'>Description</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
+      <th class='checlist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+  </table>
+
+  <h3>Checklist: L3 Content</h3><a name="checklist-l3"> </a>
+  <p>
+    Checklist for structured content relating to data models, data exchange protocols with actors and transactions defined which are defined in the Implementation Guide.
+  </p>
+    <table class='checklist'>
+    <tr>
+      <th class='checklist-section'>Section in IG</th>
+      <th class='checlist-required'>Required</th>
+      <th class='checlist-description'>Description</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
+      <th class='checlist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+  </table>
+
+
+
+  
+  <h3>Checklist: L4 Content</h3><a name="checklist-l4"> </a>
+  <p>
+    Checklist for executable content supporting guidance for adaptation to local contexts in the Implementation Guide.
+  </p>
+    <table class='checklist'>
+    <tr>
+      <th class='checklist-section'>Section in IG</th>
+      <th class='checlist-required'>Required</th>
+      <th class='checlist-description'>Description</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
+      <th class='checlist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+  </table>
+</div>

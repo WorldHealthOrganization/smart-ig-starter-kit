@@ -1,0 +1,65 @@
+
+dl dd {
+    padding-left: 20px;
+}
+dl dl {
+    padding-left: 20px;
+}
+
+table.checklist  {
+    width: 100%;
+}
+
+
+table.checklist td.checklist-section {
+    width: 10%;
+}
+
+table.checklist td.checklist-required {
+    width: 8%;
+}
+
+table.checklist td.checklist-description {
+    width: 30%;
+}
+table.checklist td.checklist-artifacts {
+    width: 30%;
+}
+
+table.checklist th {
+    background-color: CornflowerBlue;
+}
+
+table.checklist td {
+    background-color: LightBlue;
+}
+
+table.checklist tr {
+   border-top: 1px solid CornflowerBlue;
+}
+
+
+figure {
+    display: block;
+    width: 100%;
+}
+
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure figcaption {
+    border-top: 1px solid CornflowerBlue;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+}
+
+
+em {
+    color: ForestGreen;
+    text-decoration: underline;
+}

@@ -1,0 +1,25 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: fhir.who.smart-ig-empty
+canonical: http://worldhealthorganization.github.io/smart-ig-empty
+name: smart-ig-empty
+status: draft
+version: 0.2.1
+fhirVersion: 4.0.1
+date: 2021-06-03
+# copyright:
+copyrightYear: 2021+
+releaseLabel: "CI Build"
+title: "WHO SMART Guideline: IG Template"
+description: "SMART Guidlines Implemenation Guide Template"
+license: CC0-1.0
+publisher:
+  name: WHO
+  url: http://who.int
+email: leitnerc@who.int
+# contact:
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
+# experimental: true
+dependencies:

@@ -1,0 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <p>
+    Feedback specific to this Implementation Guide can provided through:
+  </p>
+  <ul>
+    <li>Clicking on one of the Feedbacks link to the right of any section header</li>
+    <li>Emailing <mark>TODO: Put in SMART Guidelines email address</mark></li>
+    <li>Creating an issue on GitHub <a href="{{ site.data.fhir.packageId | split: '.' | last | prepend: 'https://github.com/WorldHealthOrganization/' }}">{{ site.data.fhir.packageId | split: '.' | last }} repository</a></li>
+  </ul>
+</div>

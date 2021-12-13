@@ -1,0 +1,247 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     lang="en">
+  <a name="scope">  </a>
+
+  <p>
+    This Implementation Guide, <em>smart-ig-empty</em>, is a GitHub <em>template repostiory</em> which means that it can be used as a starting point for developing a new Implementation Guide.  Following these instructions will ensure consistent styling and content structure to ease adoption of WHO's <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">SMART Guidelines</a>.  This 
+  </p>
+  <h3>Creating a new WHO SMART Guidline</h3><a name="new-smart"> </a>
+
+  <h4>Creating a new GitHub repository</h4><a name="github"> </a>
+  <ul>
+    <li>
+      Choose an apporpriate for the Implementation Guide you are developing.  The code of this implemenation guide is <em>smart-ig-empty</em>.  For the sake of the following instructions, we will assume that you have chosen <em>smart-ig-my-guide</em>.
+    </li>
+    <li>
+      This Implementation Guide is a template repository and you should <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository">create a repository from this template</a> named smart-ig-my-guide.
+    </li>
+    <li>
+      Create an empty gh-pages branch on the new repo using the commands:
+      <blockquote>
+	<pre>git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "Initializing gh-pages branch"
+git push origin gh-pages
+git checkout masin</pre>
+      </blockquote>
+    </li>
+  </ul>
+
+  <h4>Modifying the template repository</h4><a name="modify"> </a>
+  <ul>
+    <li>
+      Modify the following files as indiciated:
+      <dl>
+	<dt>ig.ini</dt>
+	<dd>
+	  Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'ig' field.
+	</dd>
+	<dt>sushi-config.yaml</dt>
+	<dd>
+	  <ul>
+	    <li>Choose a title for this Implementation Guide and update the 'title' field.</li>
+	    <li>Modify the 'email' field as apporpriate. <mark>TODO: create a SMART Guidlines email</mark></li>
+	    <li>Modify the 'description' field as appopriate.</li>
+	    <li>Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'id', 'canonical' and 'name' fields</li>
+	    <li>Change the 'date' field to the current date</li>
+	    <li>Add an appropriate dependencies under the 'dependencies' field.</li>
+	  </ul>
+	  See <a href="https://fshschool.org/docs/sushi/configuration/">sushi config</a> instructions for more infomration on this file.
+	</dd>
+	<dt>input/data/features.yml</dt>
+	<dd>
+	  Change the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em> in the 'feedback.dashboard.url' field <mark>@Jose: anything else to do here?</mark>
+	</dd>
+      </dl>      
+    </li>
+  </ul>
+
+  <h3>Country adaptation of an existing guide</h3><a name="adaptation"> </a>
+  <p>
+    Basic country adaptation of SMART Implementation Guide has a few additional steps. In this case, rather than creating a new repostiory based off of <em>smart-ig-empty</em> you should fork an existing repository, such as <em>smart-ig-anc</em>.         Determine the appropriate ISO-alpha3 and M49 ISO-3166 <a href="https://unstats.un.org/unsd/methodology/m49/">jurisdicition codes</a>.  For the purposes of these instructions, suppose it is <em>EXA</em> and <em>999</em> for an 'Example' country. 
+  </p>
+  <ul>
+    <li>
+      Name the forked repository the same as the repository you are forking from but you should add the ISO-alpha3 code to then end.  For example <em>smart-ig-anc</em> would beceom <em>smart-ig-anc-exa</em>
+    </li>
+    <li>
+      Further modify the following files:
+      <dl>
+	<dt>ig.ini</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      Change the occurence of <em>who</em> in the 'ig' field to the lower-case version of the country code, <em>exa</em>, or whatever is the convention in your country.  For example, 'ig = fsh-generated/resources/ImplementationGuide-fhir.<em>exa</em>.smart-ig-anc.json.
+	    </li>
+	  </ul>
+	</dd>
+	<dt>sushi-config.yaml</dt>
+	<dd>
+	  <ul>
+	    <li>Modigy the 'id' field and replace <em>who</em> with the lower-case version of the country code, <em>exa</em>, or whatever is the convention in your country.  For example 'id: fhir.<em>exa</em>.smart-ig-anc-exa</li>	    
+	    <li>Modifty the 'jursidiciton' field by changing the <em>#001</em> to the appropriate M49 code found <a href="https://unstats.un.org/unsd/methodology/m49/">here</a>. For example 'jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#<em>999</em>'</li>
+	    <li>Update the 'publisher.name' and 'publisher.url' fields to something appropriate</li>
+	    <li>Update the 'email' field to something appropriate</li>
+	    <li>Change the 'title' field to add in the country name yet still show that it is adapted from the WHO SMART Guidelines.  For example, 'WHO SMART Guideline: Antenatal Care' becomes 'WHO SMART Guideline: Antenatal Care for Example Country' </li>
+	  </ul>
+	</dd>
+      </dl>	
+    </li>
+    <li>Create new ValueSets and appopriate ConceptMaps based on country requirements</li>
+    <li>Modify data collection resources (e.g. Questionnaires), logical models, and document structures to account for country specific data fields</li>
+  </ul>
+
+  
+  <h3>Directory layout for content</h3><a name="directory-structure"> </a>
+  <ul>
+    <li>
+      Create your content following the <a href="#checklist">Smart Guidelines IG checklist</a> and using the following directory and file structure:
+      <dl>
+	<dt>input/fsh</dt>
+	<dd>
+	  put any <a href="hl7.org/fhir/uv/shorthand/">FHIR Shorthand</a> (or fsh) files in this directory.
+	</dd>
+	<dt>input/images</dt>
+	<dd>
+	  put any graphical artifacts that are used in this implementation guide
+	</dd>
+	<dt>input/images-source</dt>
+	<dd>
+	  put UML, sequence diagrams, etc in this directory as <a href="https://plantuml.com/">plantUML</a> diagrams.  A UML diagram named XXXX.plantuml can be referenced in a xml file under input/pagecontent as  'include XXXX.svg' <mark>TODO: figure out how to esacpe jekyll control sequences </mark>
+	</dd>
+	<dt>input/pagecontent</dt>
+	<dd>
+	  Edit the following pages by providing content according to the <a href="#checklist">Smart Guidelines IG checklist</a> below.
+	  <dl>
+	    <dt>actors.xml</dt>
+	    <dd>
+	      Provide a list and definition of of any human or system actors involved in any transactions or sequence diagrams defined in this profile.
+	    </dd>
+
+	    <dt>changes.xml</dt>
+	    <dd>
+	      A list of verisoned changes to this implementation guide.
+	    </dd>
+	    <dt>concepts.xml</dt>	    
+	    <dd>
+	      Provide a descipription or definition of key concepts needed to understand this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.  
+	    </dd>
+	    <dt>content_profiles.xml</dt>
+	    <dd>
+	      Provide an overview of the health specific content profiles specified in the implementation guide.
+	    </dd>
+	    <dt>dependencies.xml</dt>
+	    <dd>
+	      Provide a list, linkages and description of the use of any dependencies in this implementation guide.
+	    </dd>
+	    <dt>dictionary.xml</dt>
+	    <dd>
+	      Replicate any relevant data dictionaries defined in L2 content.  Each data dictionary should have a corresponding logical model.
+	    </dd>
+	    <dt>functional.xml</dt>
+	    <dd>
+	      Provide a descipription or definition of key concepts needed to understand this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case precise references to the appropriate section(s) should be given here.
+	    </dd>
+	    <dt>index.html</dt>
+	    <dd>
+	      Remove or comment out these instructions and the checklist.  Modify the  &lt;blockquote class="stu-note"/&gt; with the appropriate disclaimer text.
+	    </dd>	
+
+	    <dt>personas.xml</dt>
+	    <dd>
+	      Provide a brief overview of the personas covered by this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.	      
+	    </dd>
+	    <dt>usecases.xml</dt>
+	    <dd>
+	      Provide a brief overview of the use cases covered by this implementation guide.  Some of these concepts may be introduced in referenced L2 content, in which case they should be copied over hear for ease of the reader as well as precise references to appropraite section(s) should be given here.	      
+	    </dd>
+
+	    <dt>testing.xml</dt>
+	    <dd>
+	      Provide information about testing executable artifacts based on this implementation guide
+	    </dd>
+
+
+	    <dt>security_privacy.xml</dt>
+	    <dd>
+	      Provide guidance on specific security and privacy concerns that may arise in executable versions of this profile.
+	    </dd>
+
+	    <dt>transactions.xml</dt>
+	    <dd>
+	      Provide a list and definition of of any transactions defined in this profile.  There should be transactions defined or referneced in other implementation guides for each of the steps in the workflows  in this implementation guide.
+	    </dd>
+
+	    <dt>workflows.xml</dt>
+	    <dd>
+	      Provide a list and desciption of workflows as UML sequence diagrams consiting of actors and transactions for each of the use cases taken up in this implementation guide. 
+	    </dd>
+
+	  </dl>
+	</dd>
+      	<dt>input/resources</dt>
+	<dd>
+	  Resources defined by this profile (that are not .fsh files) are expected to be managed in the following structure
+	  <dl>
+	    <dt>examples</dt>
+	    <dd>
+	      Examples resources.  As much as possible, examples should be provided in the <a href="https://www.un.org/en/our-work/official-languages">official six UN languages</a>.
+	    </dd>
+	    <dt>examples-src</dt>
+	    <dd>
+	      templated examples <mark>TODO: need @Richard's six UN language template example instructions</mark>
+	    </dd>
+	    <dt>maps-src</dt>
+	    <dd>
+	      StructureDefinition source files in the  <a href="http://hl7.org/fhir/r4/mapping-language.html">FHIR Mapping language</a> 
+	    </dd>
+	    <dt>structuredefinitions</dt>
+	    <dd>
+	      StructureDefintition defined in this profile
+	    </dd>	    
+
+	  </dl>
+	</dd>
+	<dt>local-template/package</dt>
+	<dd>
+	  Contains any changes to the WHO SMART IG style template that are specific to this IG.  More information is in these <a href="https://build.fhir.org/ig/FHIR/ig-guidance/template.html">instructions</a>.
+	  <dl>
+	    <dt>content/assets/css/local.css</dt>
+	    <dd>for any css changes that nad be added or overidden</dd>
+	  </dl>
+	</dd>
+	<dt>README.md</dt>
+	<dd>
+	  Change the title and any instances of the text <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+	</dd>
+      </dl>
+    </li>
+  </ul>
+  <h3>Generating an implmentation guide</h3><a name="generation"> </a>
+  <ul>
+    <li>
+      Install Implemenation Guide Publisher dependencies (Ubuntu instructions)
+      <blockquote><pre>apt-get install npm node.js jekyll
+npm install -g sushi</pre></blockquote>
+      See <a href="http://hl7.org/fhir/uv/shorthand/2020May/sushi.html#installation">sushi install</a> for more details.
+    </li>
+    <li>
+      Run the IG Publisher in the root of the github repo (unix-y instructions):
+      <blockquote><pre>./_updatePublisher.sh
+./_genonce.sh</pre>
+      </blockquote>
+    </li>
+    <li>
+      If all is successful, open the local file 'output/index.html' in your browser and review the content as well as the quality assurance page under 'output/qa.html'
+    </li>
+    <li>
+      Do a github commit, let the github action run.  For a WHO SMART Guideline you can open GitHub pages at <a href="{{ site.data.fhir.packageId | split: '.' | last | prepend: 'https://WorldHealthOrganization.github.io/' }}">{{ site.data.fhir.packageId | split: '.' | last }} </a>  but change  <em>smart-ig-empty</em> to <em>smart-ig-my-guide</em>.  
+    </li>
+  </ul>
+
+
+
+</div>

@@ -1,0 +1,6 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+
+  <p>
+    There are no dependencies for this implementation guide.  The source code for the WHO SMART Guidlines IG template is available <a href="https://github.com/WorldHealthOrganization/smart-ig">here</a>.
+  </p>
+</div>
