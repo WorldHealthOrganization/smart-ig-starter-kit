@@ -27,6 +27,7 @@ git commit --allow-empty -m "Initializing gh-pages branch"
 git push origin gh-pages
 git checkout main</pre>
       </blockquote>
+      Then, under the repoistory, navigate to 'Settings->Pages' and set the 'Source' to 'gh-pages'.
     </li>
   </ul>
 
