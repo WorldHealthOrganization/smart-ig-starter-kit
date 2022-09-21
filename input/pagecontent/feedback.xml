@@ -4,7 +4,7 @@
   </p>
   <ul>
     <li>Clicking on one of the Feedbacks link to the right of any section header</li>
-    <li>Emailing <mark>TODO: Put in SMART Guidelines email address</mark></li>
+    <li>Emailing SMART@who.int</li>
     <li>Creating an issue on GitHub <a href="{{ site.data.fhir.packageId | split: '.' | last | prepend: 'https://github.com/WorldHealthOrganization/' }}">{{ site.data.fhir.packageId | split: '.' | last }} repository</a></li>
   </ul>
 </div>
