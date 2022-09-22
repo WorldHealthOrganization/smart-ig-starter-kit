@@ -11,8 +11,7 @@
 
 
   <h3>Checklist: L1 Content</h3><a name="checklist-l1"> </a>
-  <p>ecklist.xml   Toecklist.xml   To
-    Checklist for narrative content relating the guidance, guidelines, policies and recommendations underpinning this Implementation Guide.
+  <p>Checklist for narrative content relating the guidance, guidelines, policies and recommendations underpinning this Implementation Guide.
   </p>
   <table class='checklist'>
     <tr>
@@ -37,11 +36,11 @@
       <td class='checlist-criteria'>Links exist on the home page</td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-section'><a href="/index.html#providing-feedback">Home Page.Providing Feedback</a></td>
+      <td class='checlist-required'>Yes</td>
+      <td class='checlist-description'>Instructions to describe how feedback can be shared for all knowledge layers in the Implementation Guide</td>
+      <td class='checlist-artifacts'>At the minimum, an email address exists to send feedback, and/or a feature to provide feedback can be provided per section shall exist</td>
+      <td class='checlist-criteria'>Section exists on the home page</td>
     </tr>
 
     <tr>
@@ -149,6 +148,41 @@
       <td class='checklist-section'></td>
       <td class='checlist-required'></td>
       <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'></td>
+      <td class='checlist-description'></td>
+      <td class='checlist-artifacts'></td>
+      <td class='checlist-criteria'></td>
+    </tr>
+  </table>
+  
+    <h3>Checklist: Global</h3><a name="checklist-general"> </a>
+  <p>
+    Checklist applicable for the Implementation Guide in general.
+  </p>
+    <table class='checklist'>
+    <tr>
+ //     <th class='checklist-section'>Section in IG</th>
+      <th class='checlist-required'>Required</th>
+      <th class='checlist-description'>Description</th>
+      <th class='checlist-artifacts'>Expected Artifacts</th>
+      <th class='checlist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'></td>
+      <td class='checlist-required'>Yes</td>
+      <td class='checlist-description'>Shall follow all <a href="https://confluence.hl7.org/display/FHIR/FHIR+Implementation+Guide+Publishing+Requirements">HL7 FHIR Implementation Guide Publishing Requirements</a></td>
       <td class='checlist-artifacts'></td>
       <td class='checlist-criteria'></td>
     </tr>
