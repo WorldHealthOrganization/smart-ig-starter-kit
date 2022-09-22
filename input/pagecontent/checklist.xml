@@ -36,7 +36,7 @@
       <td class='checlist-criteria'>Links exist on the home page</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="/index.html#providing-feedback">Home Page.Providing Feedback</a></td>
+      <td class='checklist-section'><a href="/index.html#feedback">Home Page.Providing Feedback</a></td>
       <td class='checlist-required'>Yes</td>
       <td class='checlist-description'>Instructions to describe how feedback can be shared for all knowledge layers in the Implementation Guide</td>
       <td class='checlist-artifacts'>At the minimum, an email address exists to send feedback, and/or a feature to provide feedback can be provided per section shall exist</td>
