@@ -16,46 +16,38 @@
   <table class='checklist'>
     <tr>
       <th class='checklist-section'>Section in IG</th>
-      <th class='checlist-required'>Required</th>
-      <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifacts</th>
-      <th class='checlist-criteria'>Acceptance Criteria</th>
+      <th class='checklist-required'>Required</th>
+      <th class='checklist-description'>Description</th>
+      <th class='checklist-artifacts'>Expected Artifacts</th>
+      <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
       <td class='checklist-section'>Home Page</td>
-      <td class='checlist-required'>Yes</td>
-      <td class='checlist-description'>Status and maturity level of the Implementation Guide</td>
-      <td class='checlist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide. <mark>TODO: define maturity levels such as 'draft', 'public comment', 'published'. see also forthcoming IPS maturity levels</mark></td>
-      <td class='checlist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Status and maturity level of the Implementation Guide</td>
+      <td class='checklist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide. <mark>TODO: define maturity levels such as 'draft', 'public comment', 'published'. see also forthcoming IPS maturity levels</mark></td>
+      <td class='checklist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
     </tr>
     <tr>
-      <td class='checklist-section'>Home Page</td>
-      <td class='checlist-required'>Yes</td>
-      <td class='checlist-description'>Linkage to the primary L1 and L2 content that underpins this Implementation Guide.</td>
-      <td class='checlist-artifacts'>URL links on the home page to relevant guidance documents and a brief description of the relevance of the document to this Implementation Guide</td>
-      <td class='checlist-criteria'>Links exist on the home page</td>
+      <td class='checklist-section'>Home Page.Summary</td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Linkage to the primary L1 and L2 content that underpins this Implementation Guide</td>
+      <td class='checklist-artifacts'>URL links on the home page to relevant guidance documents and a brief description of the relevance of the document to this Implementation Guide</td>
+      <td class='checklist-criteria'>Links exist on the home page</td>
     </tr>
     <tr>
       <td class='checklist-section'><a href="feedback.html">Home Page.Providing Feedback</a></td>
-      <td class='checlist-required'>Yes</td>
-      <td class='checlist-description'>Instructions to describe how feedback can be shared for all knowledge layers in the Implementation Guide</td>
-      <td class='checlist-artifacts'>At the minimum, an email address exists to send feedback, and/or a feature to provide feedback can be provided per section shall exist</td>
-      <td class='checlist-criteria'>Section exists on the home page</td>
-    </tr>
-
-    <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Instructions to describe how feedback can be shared for all knowledge layers in the Implementation Guide</td>
+      <td class='checklist-artifacts'>At the minimum, an email address exists to send feedback, and/or a feature to provide feedback can be provided per section shall exist</td>
+      <td class='checklist-criteria'>Section exists on the home page</td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-section'><a href="adapting_guidelines.html">Home.Adapting Guidelines for Country use</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Guidance to countries on adapting the Implementation Guide for making adaptations for country use</td>
+      <td class='checklist-artifacts'>adapting_guidelines.xml</td>
+      <td class='checklist-criteria'>Page exists under the home dropdown menu</td>
     </tr>
   </table>
 
@@ -66,31 +58,31 @@
     <table class='checklist'>
     <tr>
       <th class='checklist-section'>Section in IG</th>
-      <th class='checlist-required'>Required</th>
-      <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifacts</th>
-      <th class='checlist-criteria'>Acceptance Criteria</th>
+      <th class='checklist-required'>Required</th>
+      <th class='checklist-description'>Description</th>
+      <th class='checklist-artifacts'>Expected Artifacts</th>
+      <th class='checklist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="concepts.html">Business Requirements.Concepts</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
-    </tr>
-    <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
   </table>
 
@@ -101,31 +93,31 @@
     <table class='checklist'>
     <tr>
       <th class='checklist-section'>Section in IG</th>
-      <th class='checlist-required'>Required</th>
-      <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifacts</th>
-      <th class='checlist-criteria'>Acceptance Criteria</th>
+      <th class='checklist-required'>Required</th>
+      <th class='checklist-description'>Description</th>
+      <th class='checklist-artifacts'>Expected Artifacts</th>
+      <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
   </table>
 
@@ -139,31 +131,31 @@
     <table class='checklist'>
     <tr>
       <th class='checklist-section'>Section in IG</th>
-      <th class='checlist-required'>Required</th>
-      <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifacts</th>
-      <th class='checlist-criteria'>Acceptance Criteria</th>
+      <th class='checklist-required'>Required</th>
+      <th class='checklist-description'>Description</th>
+      <th class='checklist-artifacts'>Expected Artifacts</th>
+      <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
   </table>
   
@@ -173,32 +165,32 @@
   </p>
     <table class='checklist'>
     <tr>
- //     <th class='checklist-section'>Section in IG</th>
-      <th class='checlist-required'>Required</th>
-      <th class='checlist-description'>Description</th>
-      <th class='checlist-artifacts'>Expected Artifacts</th>
-      <th class='checlist-criteria'>Acceptance Criteria</th>
+      <th class='checklist-section'>Section in IG</th>
+      <th class='checklist-required'>Required</th>
+      <th class='checklist-description'>Description</th>
+      <th class='checklist-artifacts'>Expected Artifacts</th>
+      <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
       <td class='checklist-section'></td>
-      <td class='checlist-required'>Yes</td>
-      <td class='checlist-description'>Shall follow all <a href="https://confluence.hl7.org/display/FHIR/FHIR+Implementation+Guide+Publishing+Requirements">HL7 FHIR Implementation Guide Publishing Requirements</a></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Shall follow all <a href="https://confluence.hl7.org/display/FHIR/FHIR+Implementation+Guide+Publishing+Requirements">HL7 FHIR Implementation Guide Publishing Requirements</a></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-section'>Footer</td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>The IG publisher reports many errors in the file qa.html. This shall be published so that any reviewer of the specification can check the status of the IG.</td>
+      <td class='checklist-artifacts'><a href="qa.html">qa.html</a></td>
+      <td class='checklist-criteria'>QA Report has no errors or unsuppressed warnings. All suppressed warnings must have a reasonable explanation for suppression</td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
-      <td class='checlist-required'></td>
-      <td class='checlist-description'></td>
-      <td class='checlist-artifacts'></td>
-      <td class='checlist-criteria'></td>
+      <td class='checklist-section'><a href="changes.html">Home.Changes</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>A page that describes all version releases with a brief description of major changes</td>
+      <td class='checklist-artifacts'>changes.xml</td>
+      <td class='checklist-criteria'>A page for versioning and release notes exist</td>
     </tr>
   </table>
 </div>

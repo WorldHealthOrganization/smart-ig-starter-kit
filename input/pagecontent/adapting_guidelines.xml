@@ -1,0 +1,37 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     lang="en">
+	 
+	<p>
+    The folowing page provides a reference to all useful resources that can guide Countries while adapting the guidelines for Country use. The content below is maintained by Digital Square in the Globsl Goods Guidebook at https://gg-gb.digitalsquare.org
+	</p>
+  <table class='adapting_guidelines'>
+    <tr>
+      <th class='adapting_guidelines-question'>Question</th>
+      <th class='adapting_guidelines-resources'>Resources</th>
+    </tr>
+     <tr>
+      <td class='adapting_guidelines-question'>Where can I find definitions for common digital health terminology?</td>
+      <td class='adapting_guidelines-resources'>The <a href="https://aehin.hingx.org/Share/Attachment/3819?fileName=terminology%20booklet%20English%20Mar23%202018.pdf">Asia eHealth information network (AeHIN) Terminology Guide</a> has definitions for common digital health terminology. Use this resource to look up unfamiliar terms in this guidebook.</td>
+    </tr>
+	<tr>
+      <td class='adapting_guidelines-question'>Where can I learn more about a digital health tool deployed in a country?</th>
+      <td class='adapting_guidelines-resources'>In this guidebook, each global good entry has a geographic reach section. Review the list of countries where the tool has been deployed. In addition, WHO global technology registry platform, the <a href="https://digitalhealthatlas.org/">Digital Health Atlas</a> aims to strengthen the value and impact of digital health interventions, improve coordination, and facilitate institutionalization and scale. Use the Atlas to review and catalog a country’s implemented digital health  tools.</td>
+    </tr>
+	<tr>
+      <td class='adapting_guidelines-question'>Where can I find an overview of digital health?</th>
+      <td class='adapting_guidelines-resources'>MEASURE Evaluation, working collaboratively with the Global Evaluation and Monitoring Network for Health (GEMNet-Health), developed a free, short course for health information system professionals, the <a href="https://www.measureevaluation.org/health-informatics-short-course.html">Health Informatics for Low-and Middle-Income Countries</a> course. Take this course to become familiar with the most commonly found concerns and tools in digital health. This course is hosted on the <a href="https://elearning.digitalsquare.io/">Digital Square learning  platform</a>.</td>
+    </tr>
+	<tr>
+      <td class='adapting_guidelines-question'> I’m planning a digital health intervention. What are the key considerations that I should know?</th>
+      <td class='adapting_guidelines-resources'>K4Health created a <a href="https://www.k4health.org/toolkits/mhealth-planning-guide">mHealth Planning Guide</a> that includes resources for planning digital health interventions. Read the guide to understand key considerations. This course is hosted on the <a href="https://elearning.digitalsquare.io/">Digital Square learning platform.</a></td>
+    </tr>
+	<tr>
+      <td class='adapting_guidelines-question'>Question</td>
+      <td class='adapting_guidelines-resources'>Resources</td>
+    </tr>
+  </table>
+</div>
+    
