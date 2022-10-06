@@ -77,19 +77,19 @@
       <td class='checklist-artifacts'>Personas.xml</td>
       <td class='checklist-criteria'>A page for Personas under business requirement exists</td>
     </tr>
-	    <tr>
+    <tr>
       <td class='checklist-section'><a href="usecases.html">Business Requirements.Use Cases</a></td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>User scenarios depicting how different personas will interact in a typical workflow along with use cases listed as introduced in the L2</td>
       <td class='checklist-artifacts'>usecases.xml</td>
       <td class='checklist-criteria'>A page for User Scenarios and Use Cases under business requirement exists</td>
     </tr>
-	    <tr>
-      <td class='checklist-section'>Business Requirements.Busines Processes</td>
+    <tr>
+      <td class='checklist-section'><a href="business_process.html">Business Requirements.Business Processes</a></td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Depiction of business processes as visual workflows as introduced in the L2</td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
+      <td class='checklist-artifacts'>business_process.xml</td>
+      <td class='checklist-criteria'>A page for depicting the visual business processes exists</td>
     </tr>
     <tr>
       <td class='checklist-section'><a href="dictionary.html">Business Requirements.Data Dictionary</a></td>
@@ -99,11 +99,32 @@
       <td class='checklist-criteria'>A page for data dictionary under business requirements exists</td>
     </tr>
     <tr>
+      <td class='checklist-section'><a href="decision_support.html">Business Requirements.Decision-support Logic</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Decision-support logic and algorithms as introduced in the L2</td>
+      <td class='checklist-artifacts'>decision_support.xml</td>
+      <td class='checklist-criteria'>A page for decision-support logic under business requirements exists</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="indicators.html">Business Requirements.Indicator and Performance Metrics</a></td>
+      <td class='checklist-required'>If indicators are defined</td>
+      <td class='checklist-description'>Core set of indicators and performance metrics as introduced in the L2</td>
+      <td class='checklist-artifacts'>indicators.xml</td>
+      <td class='checklist-criteria'>A page for the indicators table under business requirements exists</td>
+    </tr>
+    <tr>
       <td class='checklist-section'><a href="functional.html">Business Requirements.Functional Requirements</a></td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>List of core functions and capabilities the system must have to meet the end-users’ needs and achieve tasks within the business process.</td>
       <td class='checklist-artifacts'>functional.xml</td>
       <td class='checklist-criteria'>A page for functional requirements under business requirements exists</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="nonfunctional.html">Business Requirements.Non-functional Requirements</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>List of capabilities the system must have as introduced in the L2</td>
+      <td class='checklist-artifacts'>nonfunctional.xml</td>
+      <td class='checklist-criteria'>A page for non-functional requirements under business requirements exists</td>
     </tr>
   </table>
 
@@ -120,18 +141,25 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="actors.html">System Actors</a></td>
+      <td class='checklist-section'><a href="actors.html">Data Models and Exchange.System Actors</a></td>
       <td class='checklist-required'>Yes</td>
-      <td class='checklist-description'>List and description of software or human entities that interact with the system derived from business requirements defined in L2.Actors and Transactions should be defined for a general systems architecture that applies over multiple country implementations and leverages OpenHIE architecture concepts</td>
+      <td class='checklist-description'>List and description of software or human entities that interact with the system derived from business requirements defined in L2.</br>Actors and Transactions should be defined for a general systems architecture that applies over multiple country implementations and leverages OpenHIE architecture concepts.</br>Systems managing clinical and patient information shall be expected to interact with a shared health record, laboratory information system or a longitudinal health record as appropriate and be expected to synchronize with data collected in a clincal encounter /td>
       <td class='checklist-artifacts'>Actors</td>
       <td class='checklist-criteria'>Actors defined are tied to and derived from L2, with a definition of who the actor is and what they do in the system at a minimum</td>
     </tr>
     <tr>
-      <td class='checklist-section'>Transactions</td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
+      <td class='checklist-section'><a href="sequence_diagram.html">Data Models and Exchange.Sequence Diagram</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>A sequence diagram depicting the interactions between system actors in sequence derived from business process in L2</td>
+      <td class='checklist-artifacts'>sequence_diagram.xml</td>
+      <td class='checklist-criteria'>A sequence diagram exists that shows the system interactions</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="transactions.html">Data Models and Exchange.Transactions</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Defined list of system transactions at an atomic level for each actor along with narrative, capability statements, structure definition, questionnaires, document bundles and composition. It can also refer to transactions in other Implementation Guides</td>
+      <td class='checklist-artifacts'>Capability Statement, Structure Definitions, Questionnaires, Document Bundles and Composition</td>
+      <td class='checklist-criteria'>Artifacts exist and are defined for each actor in terms of their roles and responsibilities</td>
     </tr>
     <tr>
       <td class='checklist-section'>Indices.Artifacts Summary.Structures:Logical Models</td>
@@ -141,11 +169,18 @@
       <td class='checklist-criteria'>A logical model for each core data set/data dictionary asset mentioned in the L2 exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'>Indicators and Measures</td>
+      <td class='checklist-section'>Data Models and Exchange.Indicators and Measures</td>
+      <td class='checklist-required'>If indicators are defined</td>
+      <td class='checklist-description'>Thematic list of indicators defined in the IG that link to L1 and L2 guidance documents. The IG shall maintain the reference numbers as defined in the L1 and L2 for the indicators.</td>
+      <td class='checklist-artifacts'>Measures, Value Sets</td>
+      <td class='checklist-criteria'>Measure is defined according to the Data Sharing Specification (DSS) described in the <a href="https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_White_Paper_CQL_Rev1-0_PC_2021-10-26.pdf">IHE White Paper for EXtracting Inidcators from Person Level Data</a>. The Mobile Aggregate Data Exchange (mADX) profile is leveraged.</td>
+    </tr>
+	<tr>
+      <td class='checklist-section'>Relationship to IPS</td>
       <td class='checklist-required'>Yes</td>
-      <td class='checklist-description'>Structure Definition resource describing data element definitions and their associated rules of usage derived from data dictionary in L2</td>
-      <td class='checklist-artifacts'>Structure Definition</td>
-      <td class='checklist-criteria'>A logical model for each core data set/data dictionary asset mentioned in the L2 exists</td>
+      <td class='checklist-description'>The logical model defined in the IG shall be mapped to the IPS data set.</td>
+      <td class='checklist-artifacts'>Structure Maps</td>
+      <td class='checklist-criteria'>For each data set defined in the IG there shall be a related mapping which uses IPS as source and the data set as target in the structure map</td>
     </tr>
 
   </table>
@@ -166,21 +201,42 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
+      <td class='checklist-section'>Test Scripts</td>
       <td class='checklist-required'></td>
       <td class='checklist-description'></td>
       <td class='checklist-artifacts'></td>
       <td class='checklist-criteria'></td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
+      <td class='checklist-section'>Acceptance Criteria</td>
       <td class='checklist-required'></td>
       <td class='checklist-description'></td>
       <td class='checklist-artifacts'></td>
       <td class='checklist-criteria'></td>
     </tr>
     <tr>
-      <td class='checklist-section'></td>
+      <td class='checklist-section'>Synthetic Data</td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Test Data</td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Reference Implementations</td>
+      <td class='checklist-required'></td>
+      <td class='checklist-description'></td>
+      <td class='checklist-artifacts'></td>
+      <td class='checklist-criteria'></td>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Deployment Package </td>
       <td class='checklist-required'></td>
       <td class='checklist-description'></td>
       <td class='checklist-artifacts'></td>

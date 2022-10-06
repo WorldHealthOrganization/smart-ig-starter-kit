@@ -32,9 +32,13 @@
   <h3>Dependencies</h3>  <a name="dependencies"> </a>
   {% include dependencies.xml %}
 
+  
+  
   <h3>Providing Feedback</h3>  <a name="feedback"> </a>
   {% include feedback.xml %}
 
+  <h3>Community</h3>  <a name="Community"></a>
+  {% include community.xml %}
   <h3>Disclaimer</h3>  <a name="disclaimer"> </a>
   {% include disclaimer.xml %}
 </div>  
