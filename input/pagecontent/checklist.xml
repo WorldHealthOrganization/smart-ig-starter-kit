@@ -6,7 +6,11 @@
   <p>
     The folowing sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
   </p>
-<h3>Checklist: L1 Content</h3><a name="checklist-l1"> </a>
+
+
+
+
+  <h3>Checklist: L1 Content</h3><a name="checklist-l1"> </a>
   <p>Checklist for narrative content relating the guidance, guidelines, policies and recommendations underpinning this Implementation Guide.
   </p>
   <table class='checklist'>
@@ -139,7 +143,7 @@
     <tr>
       <td class='checklist-section'><a href="actors.html">Data Models and Exchange.System Actors</a></td>
       <td class='checklist-required'>Yes</td>
-      <td class='checklist-description'>List and description of software or human entities that interact with the system derived from business requirements defined in L2.</br>Actors and Transactions should be defined for a general systems architecture that applies over multiple country implementations and leverages OpenHIE architecture concepts.</br>Systems managing clinical and patient information shall be expected to interact with a shared health record, laboratory information system or a longitudinal health record as appropriate and be expected to synchronize with data collected in a clincal encounter /td>
+      <td class='checklist-description'>List and description of software or human entities that interact with the system derived from business requirements defined in L2.</br>Actors and Transactions should be defined for a general systems architecture that applies over multiple country implementations and leverages OpenHIE architecture concepts.</br>Systems managing clinical and patient information shall be expected to interact with a shared health record, laboratory information system or a longitudinal health record as appropriate and be expected to synchronize with data collected in a clincal encounter </td>
       <td class='checklist-artifacts'>Actors</td>
       <td class='checklist-criteria'>Actors defined are tied to and derived from L2, with a definition of who the actor is and what they do in the system at a minimum</td>
     </tr>
