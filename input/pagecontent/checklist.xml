@@ -22,13 +22,6 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'>Home Page</td>
-      <td class='checklist-required'>Yes</td>
-      <td class='checklist-description'>Status and maturity level of the Implementation Guide</td>
-      <td class='checklist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide. <mark>TODO: define maturity levels such as 'draft', 'public comment', 'published'. see also forthcoming IPS maturity levels</mark></td>
-      <td class='checklist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
-    </tr>
-    <tr>
       <td class='checklist-section'>Home Page.Summary</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Linkage to the primary L1 and L2 content that underpins this Implementation Guide</td>
@@ -176,7 +169,28 @@
       <td class='checklist-criteria'>Measure is defined according to the Data Sharing Specification (DSS) described in the <a href="https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_White_Paper_CQL_Rev1-0_PC_2021-10-26.pdf">IHE White Paper for EXtracting Inidcators from Person Level Data</a>. The Mobile Aggregate Data Exchange (mADX) profile is leveraged.</td>
     </tr>
 	<tr>
-      <td class='checklist-section'>Relationship to IPS</td>
+      <td class='checklist-section'><a href="maps.html">Indices.Mappings</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Relationship to IPS: The logical model defined in the IG shall be mapped to the IPS data set.</td>
+      <td class='checklist-artifacts'>Structure Maps</td>
+      <td class='checklist-criteria'>For each data set defined in the IG there shall be a related mapping which uses IPS as source and the data set as target in the structure map</td>
+    </tr>
+	<tr>
+      <td class='checklist-section'><a href="qa.html">QA Report</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>The logical model defined in the IG shall be mapped to the IPS data set.</td>
+      <td class='checklist-artifacts'>Structure Maps</td>
+      <td class='checklist-criteria'>For each data set defined in the IG there shall be a related mapping which uses IPS as source and the data set as target in the structure map</td>
+    </tr>
+	<tr>
+      <td class='checklist-section'><a href="qa.html">QA Report</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>The logical model defined in the IG shall be mapped to the IPS data set.</td>
+      <td class='checklist-artifacts'>Structure Maps</td>
+      <td class='checklist-criteria'>For each data set defined in the IG there shall be a related mapping which uses IPS as source and the data set as target in the structure map</td>
+    </tr>
+	<tr>
+      <td class='checklist-section'><a href="qa.html">QA Report</a></td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>The logical model defined in the IG shall be mapped to the IPS data set.</td>
       <td class='checklist-artifacts'>Structure Maps</td>
@@ -201,46 +215,39 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'>Test Scripts</td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
+      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Test Definitions are written along with brief description of the scope of testing covered.</td>
+      <td class='checklist-artifacts'>Gherkin .feature files</td>
+      <td class='checklist-criteria'>Acceptance Criteria is written for each test definition.All PlanDefinitions and Measures should have defined Test Cases</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'>Example Data shall be represented via example resources for each of the UN Languages</td>
+      <td class='checklist-artifacts'>FSH files or FHIR Resources, and examples listed under the example tab of resources<mark>QA Report</mark></td>
+      <td class='checklist-criteria'>For every non abstract profile there should be an example resource for each of the UN Languages</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-required'><mark>No</mark></td>
+      <td class='checklist-description'>Test data represented as resources for the test definitions</td>
+      <td class='checklist-artifacts'>Synthea scripts of FSH files</td>
+      <td class='checklist-criteria'>All CQL libraries have associated test libraries</td>
+    </tr>
+    <tr>7777777
+      <td class='checklist-section'><a href="reference_implementation.html">Deployment.Reference Implementations</a></td>
+      <td class='checklist-required'>No</td>
+      <td class='checklist-description'>Links to list of reference implementations</td>
+      <td class='checklist-artifacts'>Links to software download, source code, install documentation, user manuals and such</td>
       <td class='checklist-criteria'></td>
     </tr>
     <tr>
-      <td class='checklist-section'>Acceptance Criteria</td>
+      <td class='checklist-section'><a href="downloads.html">Downloads</a></td>
       <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
-    </tr>
-    <tr>
-      <td class='checklist-section'>Synthetic Data</td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
-    </tr>
-    <tr>
-      <td class='checklist-section'>Test Data</td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
-    </tr>
-    <tr>
-      <td class='checklist-section'>Reference Implementations</td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
-    </tr>
-    <tr>
-      <td class='checklist-section'>Deployment Package </td>
-      <td class='checklist-required'></td>
-      <td class='checklist-description'></td>
-      <td class='checklist-artifacts'></td>
-      <td class='checklist-criteria'></td>
+      <td class='checklist-description'>All IG Content shall be available to download as zip or npm package</td>
+      <td class='checklist-artifacts'>Zip, npm package</td>
+      <td class='checklist-criteria'>Links to npm package are available</td>
     </tr>
   </table>
   
@@ -255,6 +262,20 @@
       <th class='checklist-description'>Description</th>
       <th class='checklist-artifacts'>Expected Artifacts</th>
       <th class='checklist-criteria'>Acceptance Criteria</th>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Home Page</td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'><b>Status and maturity level</b> of the Implementation Guide is based on the CMM (Capability Maturity Model) framework and the intention is to give implementers a sense of how mature the Implementation Guide is.<mark>TODO: define maturity levels such as 'draft', 'candidate recommendation/STU', 'published/recommendation/normative'.</mark></td>
+      <td class='checklist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide</td>
+      <td class='checklist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
+    </tr>
+    <tr>
+      <td class='checklist-section'>Home Page and Footer</td>
+      <td class='checklist-required'>Yes</td>
+      <td class='checklist-description'><b>Versioning policy</b> of the Implementation Guide is based on <a href="https://build.fhir.org/versions.html">FHIR versioning</a> and <a href="http://semver.org/">Semantic versioning. Each IG version s hall be identified by a string composed from 4 parts: major.minor.patch-label.</a></td>
+      <td class='checklist-artifacts'>STU Note and the footer display the versiono of the IG</td>
+      <td class='checklist-criteria'>Criteria#1: If any artifact under the IG undergoes a change, then the IG must undergo a version update that follows semantic versioning. Criteria#2: If the IG version is updated then all the artifacts under it inherit the version number and get updated as well.</td>
     </tr>
     <tr>
       <td class='checklist-section'></td>
