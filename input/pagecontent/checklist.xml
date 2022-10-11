@@ -190,7 +190,7 @@
       <td class='checklist-criteria'>QA report shows no errors for ValueSet and Library artifacts missing executable profile conformance</td>
     </tr>
 	<tr>
-      <td class='checklist-section'>Data Models and Exchange.Codings</a></td>
+      <td class='checklist-section'>Data Models and Exchange.Codings</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>ValueSets defined shall map to ICD-11 or one of the WHO Family of International Classifications (FIC), if the content exists. If not an openly available reference vocabulary such as LOINC shall be used</td>
       <td class='checklist-artifacts'>ValueSet, ConceptMaps, CodeSystems</td>
