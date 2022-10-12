@@ -155,7 +155,7 @@
       <td class='checklist-criteria'>Artifacts exist and are defined for each actor in terms of their roles and responsibilities</td>
     </tr>
     <tr>
-      <td class='checklist-section'>Indices.Artifacts Summary.Structures:Logical Models</td>
+      <td class='checklist-section'><a href="artifacts.html#structures-logical-models">Indices.Artifacts Summary.Structures:Logical Models</a></td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Structure Definition resource describing data element definitions and their associated rules of usage derived from data dictionary in L2</td>
       <td class='checklist-artifacts'>Structure Definition</td>
