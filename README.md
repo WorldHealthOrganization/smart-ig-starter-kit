@@ -1,4 +1,4 @@
-WHO SMART Guidelines Starter Template
+WHO SMART Guidelines Starter Template.
 ---
 This is the SMART Guidelines Starter Template
 <br> </br>
