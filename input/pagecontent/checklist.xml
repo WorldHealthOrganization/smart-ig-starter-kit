@@ -225,7 +225,7 @@
       <td class='checklist-criteria'>Acceptance Criteria is written for each test definition.All PlanDefinitions and Measures should have defined Test Cases</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-section'><a href="testing.html">Deployment.Test Data</a></td>
       <td class='checklist-required'><mark>No</mark></td>
       <td class='checklist-description'>Test data represented as resources for the test definitions</td>
       <td class='checklist-artifacts'>Synthea scripts of FSH files</td>
