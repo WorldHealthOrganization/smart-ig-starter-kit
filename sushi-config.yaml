@@ -2,9 +2,9 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.who.smart-ig-empty
-canonical: http://worldhealthorganization.github.io/smart-ig-empty
-name: smart-ig-empty
+id: fhir.who.smart-ig-starter-kit
+canonical: http://worldhealthorganization.github.io/smart-ig-starter-kit
+name: smart-ig-starter-kit
 status: draft
 version: 0.2.1
 fhirVersion: 4.0.1
