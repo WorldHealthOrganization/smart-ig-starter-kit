@@ -14,8 +14,8 @@ skinparam class<<MD>> {
 
 skinparam class<<TM>> {
  BorderColor #505090
- BackgroundColor APPLICATION
- HeaderBackgroundColor SkyBlue
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor #8db
 }
 
     class "**Persona**" as Pers<<TM>> {
@@ -98,7 +98,6 @@ skinparam class<<TM>> {
  '       |_ description 1..1
         |_ acceptanceCriteria 0..*
           |_ reference?
-
         --
     }
 
@@ -124,7 +123,7 @@ skinparam class<<TM>> {
         |_ activity 1..1
           |_ name 1..1
           |_ description 1..1
-        |_ description 1..1
+        |_ acceptanceCriteria 0..*
         --
     }
 
@@ -138,7 +137,6 @@ skinparam class<<TM>> {
         |_ title 1..1
         |_ definition 1..1
         |_ implementation 0..1
-        
         --
     }
 

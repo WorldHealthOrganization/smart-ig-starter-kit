@@ -15,6 +15,12 @@ releaseLabel: "CI Build"
 title: "WHO SMART Guideline: IG Template"
 description: "SMART Guidlines Implemenation Guide Template"
 license: CC0-1.0
+
+pages: 
+  index.xml:
+    title: "Home"
+  dependencies.xml:
+    title: "Dependencies"
 publisher:
   name: WHO
   url: http://who.int

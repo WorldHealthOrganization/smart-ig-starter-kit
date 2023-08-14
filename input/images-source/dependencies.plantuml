@@ -1,6 +1,6 @@
 @startuml
-skinparam linetype ortho
-'skinparam linetype polyline
+'skinparam linetype ortho
+skinparam linetype polyline
 hide circle
 hide stereotype
 
@@ -18,16 +18,33 @@ skinparam class<<TM>> {
  HeaderBackgroundColor SkyBlue
 }
 
-    ' class "**Commons**" as C<<TM>> {
-    '     Common approved content that can 
-    '     be used in any other SMART IG 
-    '     --
-    '     PersonaValueSet
-    '     PersonaXX
-    '     --
-    ' }
 
-    class "**Base**" as Base<<TM>> {
+skinparam class<<TM+>> {
+ BorderColor #303070  
+ BackgroundColor #90F0FF  
+ HeaderBackgroundColor #50C0E0 
+}
+
+
+     class "**SMART-Template**" as Tpl<<TM>> {
+         Template look-and-feel:
+         .  HTML
+         .  Javascript
+         .  Jekyll
+         --
+         WHOCommonTerms
+         --
+    }
+
+     class "**SMART-Terminologies**" as T<<TM>> {
+         Approved terminology content
+         to be used in SMART IGs 
+         --
+         WHOCommonTerms
+         --
+    }
+
+    class "**SMART-Base**" as Base<<TM>> {
         Support definitions that every
         SMART IG is required to adopt  
         --
@@ -35,23 +52,19 @@ skinparam class<<TM>> {
         |_  SGImplementationGuide
         |_  SGPersona
         --
-        ValueSets:
-        |_  ...
+        (Internal) ValueSets
         --
         **CI Build Scripts (Original)**
     }
 
 
-    class "**Common-Encounter**" as CE<<TM>> {
-        Common content to be used
-        in encounter-related IGs.
+    class "**Commons-Clinical-Encounter**" as CE<<TM>> {
+        Common content to be used in 
+        encounter-related IGs.
         --
-        WHOPatient 
         WHOEncounter 
         --
     }
-
-
 
 
     class "**Empty**" as E<<TM>> {
@@ -60,13 +73,15 @@ skinparam class<<TM>> {
         should copy when initialized.
         --
         .dependsOn = base
+        template = WHO-SMART
         FSH helper functions
+        look-and-feel
         --
         **CI Build Scripts (reference)**
     }
 
 
-    class "**StarterKit**" as SK<<TM>> {
+    class "**Starter-Kit**" as SK<<TM+>> {
       Guidance on how to create 
       and use SMART Guidelines
       --
@@ -78,7 +93,7 @@ skinparam class<<TM>> {
 
 
     class "**PublicationRepo**" as Pub<<MD>> {
-      Webroot content erpository
+      Webroot content repository
       for published releases (html)
       --
     }
@@ -87,13 +102,28 @@ skinparam class<<TM>> {
 ' We con't want IGs to define on StarterKit
 ' Common contains instances of SGPersona
 
+SK  -d[hidden]-> Tpl : "      "
+Tpl  -d[hidden]-> Base : "      "
+
+
+Base  -l[hidden]-> Tpl : "                   "
+IG  -l[hidden]-> SK : "                   "
+'SK  -r[hidden]-> E : "                   "
+E  .u.> IG: "Cloned into"
+E .l.> Base: "Cloned into"
+'E -u-> Base: "dependsOn"
+IG --> Base: "dependsOn"
+IG -r[hidden]-> Pub : "                "
+T -d[hidden]-> IG : "           "
+
+
+
+
+
 'C -u-> Core 
-IG -u-> Base: "dependsOn"
-E  -u-> Base: "dependsOn"
-E  .d.> IG: "Cloned into"
-E  .d.> CE: "Cloned into"
-SK  -r[hidden]-> Base : "                "
-Pub -d[hidden]-> Base : "                "
+E  .r.> CE: "   Cloned into         "
+'IG  <.. CE: "   Cloned into         "
+IG  ..> Pub : "                "
 
 
 
