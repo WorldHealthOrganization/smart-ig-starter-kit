@@ -23,6 +23,10 @@ pages:
     title: "Dependencies"
   authoring-overview.md:
     title: "Authoring - overview"
+    l3_personas.md:
+      title: "Personas"
+    l3_logicalmodels.md:
+      title: "Logical Models"
 publisher:
   name: WHO
   url: http://who.int
