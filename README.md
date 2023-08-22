@@ -8,7 +8,7 @@ This ImplementationGuide is published in the following locations:
 
 
 Continuous Build:  __https://github.com/WorldHealthOrganization/smart-ig-starter-kit__  
-Canonical / permanent URL: __https://WorldHealthOrganization.github.io/smart-ig-starter-kit__  
+Canonical / permanent URL: __https://DigitalSQR.github.io/smart-ig-starter-kit__  
 
 <br> </br>
 
