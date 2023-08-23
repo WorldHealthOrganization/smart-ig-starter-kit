@@ -1,30 +1,18 @@
+
+### Types of Content
+
+### L2 Overview
+
 For narrative, all files are in input/pagecontent
 
 
 
-For artifacts, the canonical folder structure is
-
-* `input/actors`
-* `input/scenarios`
-* `input/testing`
-* `input/examples`
-* `input/process`
-* `input/plandefinitions`
-* `input/process`
-* `input/activitydefinition`
-* `input/models`
-* `input/valuesets`
-* `input/codesystems`
-* `input/questionnaires`
-* `input/profiles`
-* `input/maps`
-* `input/cql`
-* `input/libraries`
-* `input/measures`
-* `input/requirements`
+## Governance
+Adding artifacts, what goes into common-clinical, etc.
 
 
-## L2 artifacts
+
+
 L3 authors should find and use the L2 artifacts.  
 L2 artifacts can be represented as narrative or other representations such as FHIR resources. For reference, these are the locations for such artifacts and narrative:
 
@@ -104,6 +92,9 @@ L2 artifacts can be represented as narrative or other representations such as FH
 
 
 ## L3 Artifacts
+
+The L3 artifacts...
+
 
 
 <table border="1">
@@ -258,4 +249,29 @@ L2 artifacts can be represented as narrative or other representations such as FH
     </tbody>
 </table>
 
+
+
+## Naming convention
+
+Resource IDs
+* ValueSets should be prefixed or suffixed by VS (not enforced)
+* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
+* Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
+  * ResourceId
+  * Resource-id
+
+File names
+For json or xml content, the file name SHALL be in the form
+* ResourceType-resourceid.xml/json (preferred)
+* ResourceType/resourceid.xml/json
+* resourceid.xml/json
+
+For fsh content, the file name SHALL be in the form
+* ResourceType/resourceid.fsh
+
+
+
+## Versioning
+
+see also [versioning](versioning.html)
 

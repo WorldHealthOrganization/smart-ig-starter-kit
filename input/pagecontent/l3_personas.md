@@ -48,3 +48,12 @@ assigned in the persona approval / onboarding process.
 `.title` - add a summary description
 
 Personas will be associated with transactions. That tracking, and the licecycle of a persona, are managed elsewhere.
+
+
+#### **Criteria / Definition of Done**
+Personas SHALL use the SGPersona ActorDefinition profile
+All the personas SHOULD be from the Personas glossary; any exceptions will have to be resolved before final publication
+
+#### **Known issues and dependencies**
+Can we use R5 in base / core and have an R4 IG depend on the R5 core?
+(links to issues, or zulip, or open questions)
