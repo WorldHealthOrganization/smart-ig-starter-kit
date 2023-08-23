@@ -26,7 +26,7 @@ specification SHALL be approved.
 If an ActorDefinition already exists in the Commons repository, and its
 definitions is adequate to the case submitted, the author
 
--   Reuse an existing persona No need to create one
+-   Reuse an existing persona 
 -   Create a dummy / void profile
 
 If an ActorDefinition already exists in the Commons repository, but its

@@ -39,8 +39,10 @@ pages:
       title: "Authoring Artifacts"
       l3_personas.md:
         title: "Personas"
-      l3_userscenarios.md:
+      l3_scenarios.md:
         title: "User Scenarios"
+      l3_processes.md:
+        title: "Business Processes"
       l3_logicalmodels.md:
         title: "Logical Models"
       l3_codesystems.md :
@@ -61,6 +63,20 @@ pages:
         title: "Forms"
       l3_indicators.md:
         title: "Indicators"
+      l3_conceptmaps.md:
+        title: "Concept Maps"
+      l3_cql.md:
+        title: "CQL"
+      l3_requirements.md:
+        title: "Requirements"
+      l3_examples.md:
+        title: "Examples"
+      # l3_testscripts.md:
+      #   title: "Test Scripts"
+      license.md:
+        title: "License"
+
+
     ig_licensing.md:
       title: "Licensing"
     versioning.md:
@@ -79,6 +95,8 @@ pages:
       title: "QA check"
   indices.md:
     title: "Indices"
+  maps.md:
+    title: "Mappings"
 
 
 publisher:
