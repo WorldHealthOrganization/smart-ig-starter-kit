@@ -1,30 +1,18 @@
+
+### Types of Content
+
+### L2 Overview
+
 For narrative, all files are in input/pagecontent
 
 
 
-For artifacts, the canonical folder structure is
-
-* `input/actors`
-* `input/scenarios`
-* `input/testing`
-* `input/examples`
-* `input/process`
-* `input/plandefinitions`
-* `input/process`
-* `input/activitydefinition`
-* `input/models`
-* `input/valuesets`
-* `input/codesystems`
-* `input/questionnaires`
-* `input/profiles`
-* `input/maps`
-* `input/cql`
-* `input/libraries`
-* `input/measures`
-* `input/requirements`
+## Governance
+Adding artifacts, what goes into common-clinical, etc.
 
 
-## L2 artifacts
+
+
 L3 authors should find and use the L2 artifacts.  
 L2 artifacts can be represented as narrative or other representations such as FHIR resources. For reference, these are the locations for such artifacts and narrative:
 
@@ -105,6 +93,9 @@ L2 artifacts can be represented as narrative or other representations such as FH
 
 ## L3 Artifacts
 
+The L3 artifacts...
+
+
 
 <table border="1">
     <thead>
@@ -126,39 +117,39 @@ L2 artifacts can be represented as narrative or other representations such as FH
             <td>Generic Personas</td>
             <td>ActorDefinition</td>
             <td>input/actors</td>
-            <td><a href="l3-personas.html">Actors</a></td>
+            <td><a href="l3_personas.html">Actors</a></td>
         </tr>
         <tr>
             <td rowspan="4">User Scenarios</td>
             <td>ExampleScenario</td>
             <td>input/scenarios</td>
-            <td><a href="l3-scenarios.html">Scenarios</a></td>
+            <td><a href="l3_scenarios.html">Scenarios</a></td>
         </tr>
         <tr>
             <td>TestPlan</td>
             <td>input/testing</td>
-            <td><a href="l3-testplans.html">TestPlans</a></td>
+            <td><a href="l3_testplans.html">TestPlans</a></td>
         </tr>
         <tr>
             <td>TestScript??</td>
             <td>input/testing</td>
-            <td><a href="l3-testscripts.html">TestScripts</a></td>
+            <td><a href="l3_testscripts.html">TestScripts</a></td>
         </tr>
         <tr>
             <td>Example instances</td>
             <td>input/testing<br/>input/examples</td>
-            <td><a href="l3-examples.html">Examples</a></td>
+            <td><a href="l3_examples.html">Examples</a></td>
         </tr>
         <tr>
             <td rowspan="2">Processes</td>
             <td>FHIR PlanDefinition</td>
             <td>input/plandefinitions</td>
-            <td><a href="l3-plandefinitions.html">Plan Definitions</a></td>
+            <td><a href="l3_plandefinitions.html">Plan Definitions</a></td>
         </tr>
         <tr>
             <td>FHIR ActivityDefinition</td>
             <td>input/process<br/>input/activitydefinitions</td>
-            <td><a href="l3-processes.html">Activity definitions</a></td>
+            <td><a href="l3_processes.html">Activity definitions</a></td>
         </tr>
         <tr>
             <td rowspan="10">Data Elements</td>
@@ -169,7 +160,7 @@ L2 artifacts can be represented as narrative or other representations such as FH
         <tr>
             <td>Logical Data Model</td>
             <td>input/models</td>
-            <td><a href="l3-logicalmodels.html">Logical Models</a></td>
+            <td><a href="l3_logicalmodels.html">Logical Models</a></td>
         </tr>
         <tr>
             <td>FHIR Questionnaire</td>
@@ -179,32 +170,32 @@ L2 artifacts can be represented as narrative or other representations such as FH
         <tr>
             <td>FHIR StructureMaps</td>
             <td>input/maps</td>
-            <td><a href="l3-structuremaps.html">Structure Maps</a></td>
+            <td><a href="l3_structuremaps.html">Structure Maps</a></td>
         </tr>
         <tr>
             <td>FHIR ValueSet</td>
             <td>input/valuesets</td>
-            <td><a href="l3-valuesets.html">ValueSets</a></td>
+            <td><a href="l3_valuesets.html">ValueSets</a></td>
         </tr>
         <tr>
             <td>FHIR CodeSystem</td>
             <td>input/codesystems</td>
-            <td><a href="l3-codesystems.html">CodeSystems</a></td>
+            <td><a href="l3_codesystems.html">CodeSystems</a></td>
         </tr>
         <tr>
             <td>FHIR Profile</td>
             <td>input/profiles</td>
-            <td><a href="l3-profiles.html">Profiles</a></td>
+            <td><a href="l3_profiles.html">Profiles</a></td>
         </tr>
         <tr>
             <td>ConceptMap</td>
             <td>input/maps</td>
-            <td><a href="l3-conceptmaps.html">Concept Maps</a></td>
+            <td><a href="l3_conceptmaps.html">Concept Maps</a></td>
         </tr>
         <tr>
             <td>CQL Concepts</td>
             <td>input/cql</td>
-            <td rowspan="2"><a href="l3-cql.html">CQL</a></td>
+            <td rowspan="2"><a href="l3_cql.html">CQL</a></td>
         </tr>
         <tr>
             <td>CQL Data Elements</td>
@@ -214,48 +205,73 @@ L2 artifacts can be represented as narrative or other representations such as FH
             <td rowspan="3">Decision Tables</td>
             <td>FHIR PlanDefinition</td>
             <td>input/plandefinitions</td>
-            <td><a href="l3-plandefinitions.html">Plan Definitions</a></td>
+            <td><a href="l3_plandefinitions.html">Plan Definitions</a></td>
         </tr>
         <tr>
             <td>FHIR Library</td>
             <td>input/libraries</td>
-            <td><a href="l3-conceptmaps.html">Concept Maps</a></td>
+            <td><a href="l3_conceptmaps.html">Concept Maps</a></td>
         </tr>
         <tr>
             <td>CQL</td>
             <td>input/cql</td>
-            <td><a href="l3-cql.html">CQL</a></td>
+            <td><a href="l3_cql.html">CQL</a></td>
         </tr>
         <tr>
             <td rowspan="1">Scheduling Logic</td>
             <td>FHIR PlanDefinition</td>
             <td>input/plandefinitions</td>
-            <td rowspan="1"><a href="l3-plandefinitions.html">Plan Definitions</a></td>
+            <td rowspan="1"><a href="l3_plandefinitions.html">Plan Definitions</a></td>
         </tr>
         <tr>
             <td rowspan="2">Indicators and Measures</td>
             <td>FHIR Measure</td>
             <td>input/measures</td>
-            <td rowspan="1"><a href="l3-measures.html">Measures</a></td>
+            <td rowspan="1"><a href="l3_measures.html">Measures</a></td>
         </tr>
         <tr>
             <td>CQL IndicatorLogic</td>
             <td>input/cql</td>
-            <td><a href="l3-cql.html">CQL</a></td>
+            <td><a href="l3_cql.html">CQL</a></td>
         </tr>
         <tr>
             <td>Functional Requirements</td>
             <td>FHIR Requirements</td>
             <td>input/requirements</td>
-            <td><a href="l3-requirements.html">Requirements</a></td>
+            <td><a href="l3_requirements.html">Requirements</a></td>
         </tr>
         <tr>
             <td>Non-functional Requirements</td>
             <td>FHIR Requirements</td>
             <td>input/requirements</td>
-            <td><a href="l3-requirements.html">Requirements</a></td>
+            <td><a href="l3_requirements.html">Requirements</a></td>
         </tr>
     </tbody>
 </table>
 
+
+
+## Naming convention
+
+Resource IDs
+* ValueSets should be prefixed or suffixed by VS (not enforced)
+* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
+* Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
+  * ResourceId
+  * Resource-id
+
+File names
+For json or xml content, the file name SHALL be in the form
+* ResourceType-resourceid.xml/json (preferred)
+* ResourceType/resourceid.xml/json
+* resourceid.xml/json
+
+For fsh content, the file name SHALL be in the form
+* ResourceType/resourceid.fsh
+
+
+
+## Versioning
+
+see also [versioning](versioning.html)
 

@@ -14,29 +14,27 @@ skinparam class<<MD>> {
 
 skinparam class<<TM>> {
  BorderColor #505090
- BackgroundColor APPLICATION
+ BackgroundColor AliceBlue
  HeaderBackgroundColor SkyBlue
 }
 
 
 skinparam class<<TM+>> {
  BorderColor #303070  
- BackgroundColor #90F0FF  
- HeaderBackgroundColor #50C0E0 
+ BackgroundColor AliceBlue
+ HeaderBackgroundColor Turquoise 
 }
 
 
-     class "**SMART-Template**" as Tpl<<TM>> {
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template-who SMART-Template]]**" as Tpl<<TM>> {
          Template look-and-feel:
          .  HTML
          .  Javascript
          .  Jekyll
          --
-         WHOCommonTerms
-         --
     }
 
-     class "**SMART-Terminologies**" as T<<TM>> {
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-terminologies SMART-Terminologies]]**" as T<<TM>> {
          Approved terminology content
          to be used in SMART IGs 
          --
@@ -44,7 +42,7 @@ skinparam class<<TM+>> {
          --
     }
 
-    class "**SMART-Base**" as Base<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base SMART-Base]]**" as Base<<TM>> {
         Support definitions that every
         SMART IG is required to adopt  
         --
@@ -58,7 +56,7 @@ skinparam class<<TM+>> {
     }
 
 
-    class "**Commons-Clinical-Encounter**" as CE<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-commons-clinical-encounter Commons-Clinical-Encounter  ]]**" as CE<<TM>> {
         Common content to be used in 
         encounter-related IGs.
         --
@@ -67,7 +65,7 @@ skinparam class<<TM+>> {
     }
 
 
-    class "**Empty**" as E<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-empty SMART-Empty]]**" as E<<TM>> {
         Contains foundation (e.g. dependencies) 
         and any content that every SMART IG
         should copy when initialized.
@@ -81,7 +79,7 @@ skinparam class<<TM+>> {
     }
 
 
-    class "**Starter-Kit**" as SK<<TM+>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit Starter-Kit]]**" as SK<<TM+>> {
       Guidance on how to create 
       and use SMART Guidelines
       --
@@ -92,11 +90,11 @@ skinparam class<<TM+>> {
 
 
 
-    class "**PublicationRepo**" as Pub<<MD>> {
-      Webroot content repository
-      for published releases (html)
-      --
-    }
+    ' class "**PublicationRepo**" as Pub<<MD>> {
+    '   Webroot content repository
+    '   for published releases (html)
+    '   --
+    ' }
 
 
 ' We con't want IGs to define on StarterKit
@@ -113,7 +111,7 @@ E  .u.> IG: "Cloned into"
 E .l.> Base: "Cloned into"
 'E -u-> Base: "dependsOn"
 IG --> Base: "dependsOn"
-IG -r[hidden]-> Pub : "                "
+'IG .r.> Pub : "                "
 T -d[hidden]-> IG : "           "
 
 
@@ -123,7 +121,7 @@ T -d[hidden]-> IG : "           "
 'C -u-> Core 
 E  .r.> CE: "   Cloned into         "
 'IG  <.. CE: "   Cloned into         "
-IG  ..> Pub : "                "
+'IG  ..> Pub 
 
 
 
