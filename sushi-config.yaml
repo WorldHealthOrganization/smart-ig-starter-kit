@@ -17,16 +17,46 @@ description: "SMART Guidlines Implemenation Guide Template"
 license: CC0-1.0
 
 pages: 
-  index.xml:
+  home.md:
     title: "Home"
-  dependencies.xml:
-    title: "Dependencies"
-  authoring-overview.md:
-    title: "Authoring - overview"
-    l3_personas.md:
-      title: "Personas"
-    l3_logicalmodels.md:
-      title: "Logical Models"
+    overview.md:
+      title: "Overview"
+    assumptions.md:
+     title: "Assumptions"
+  authoring_overview.md:
+    title: "Authoring"
+    structure.md:
+      title: "Structure of the SOP IG"
+    naming_conventions.md:
+      title: "Naming Conventions"
+    content_types.md:
+      title: "Types of Content"
+    l2_overview.md:
+      title: "L2 overview"
+    authoring_artifacts.md:
+      title: "Authoring Artifacts"
+      l3_personas.md:
+        title: "Personas"
+      l3_logicalmodels.md:
+        title: "Logical Models"
+    ig_licensing.md:
+      title: "Licensing"
+    versioning.md:
+      title: "Versioning"
+  ig_setup.md:
+    title: "IG Setup"
+    github_setup.md:
+      title: "Github Initialization"
+    ig_configuration.md:
+      title: "IG Configuration"
+    folder_structure.md:
+      title: "Folders and File Structure"
+  validating_ig.md:
+    title: "Validating IG"
+    qa_check.md:
+      title: "QA check"
+  indices.md:
+    title: "Indices"
 publisher:
   name: WHO
   url: http://who.int
