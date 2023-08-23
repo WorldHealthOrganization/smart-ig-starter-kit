@@ -20,4 +20,4 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   call_build: 
-    uses: openhie/empty-fhir-ig/.github/workflows/fhirbuild.yml@master
+    uses: WorldHealthOrganization/smart-base/.github/workflows/fhirbuild.yml@main
