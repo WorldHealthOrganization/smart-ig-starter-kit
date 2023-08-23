@@ -16,12 +16,13 @@ The Logical models represent the information shown below::
   {% include model_model.svg %}
 </figure>
 
-### Mapping DAK to a Logical Model
+### Mapping DAK to a logical model
 
 The Data models in the L3 are associated with a data structure for exchange or for a given process. For example "capture vaccination data". L2 authors are expected to follow that rule: one tab is assumed to be one single atomic structure.
 
 This also becomes the "atomic" unit of exchange or use in the L3 - so normally one logical model should correspond to one tab. Some factors may influence the split of a logical model into several functional blocks:
--   Very complex models may be split. For example a full "Lab Report" may consist of "Lab Report" + "Specimen" models.
+- Very complex models may be split. For example a full "Lab Report" may consist of "Lab Report" + "Specimen" models.
+- Common sets of data elements may be captured in a separate reusable logical model.
 
 The logical model name has the name of the tab.
 
@@ -75,11 +76,11 @@ The hierarchical naming will depend on several factors and is best addressed by 
 
 -   Explain Conditionality
 
--   Linkages to Decision Support Tables --?
+-   Linkages to Decision Support Tables?
 
--   Linkages to Aggregate Indicators --?
+-   Linkages to Aggregate Indicators?
 
--   Linkages to workflows --?
+-   Linkages to workflows?
 
 -   Annotations
     -   Example:

@@ -12,21 +12,11 @@ date: 2021-06-03
 # copyright:
 copyrightYear: 2021+
 releaseLabel: "CI Build"
-title: "WHO SMART Guideline: IG Template"
-description: "SMART Guidlines Implemenation Guide Template"
+title: "WHO SMART Guideline: Starter Kit"
+description: "SMART Guidelines Implementation Guide starter kit"
 license: CC0-1.0
 
-pages: 
-  index.xml:
-    title: "Home"
-  dependencies.xml:
-    title: "Dependencies"
-  authoring-overview.md:
-    title: "Authoring - overview"
-    l3_personas.md:
-      title: "Personas"
-    l3_logicalmodels.md:
-      title: "Logical Models"
+
 publisher:
   name: WHO
   url: http://who.int
@@ -34,4 +24,75 @@ email: leitnerc@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 # experimental: true
-dependencies:
+# dependencies:
+
+
+
+menu:
+  Home: index.html
+  Setup:
+    Profiles: artifacts.html#2
+  Authoring: 
+    Personas: ig_setup.html    
+    Business Processes: l3_businessprocesses.html    
+    Value Sets: l3_valuesets.html    
+    Code Systems: l3_codesystems.html    
+    Forms: l3_forms.html    
+    ConceptMaps: l3_conceptmaps.html    
+    Profiles: l3_profiles.html    
+    Logical Models: l3_logicalmodels.html    
+    User Scenarios: l3_userscenarios.html    
+    Indicators: l3_indicators.html    
+    Decision Tables: l3_decisiontables.html    
+    Scheduling Logic: l3_schedulinglogic.html    
+    Structure Maps: l3_structuremaps.html    
+    CQL: l3_cql.html    
+    Testing: l3_testing.html
+  Support:
+    QA Checking: l3_qachecking.md
+    Downloads: downloads.html
+    History: http://hl7.org/fhir/us/example/history.html
+
+
+
+pages: 
+  index.md:
+    title: "Home"
+  dependencies.xml:
+    title: "Dependencies"
+  authoring-overview.md:
+    title: "Authoring - overview"
+    ig_setup.md:
+      title: "Setup"
+    l3_personas.md:
+      title: "Personas"
+    l3_businessprocesses.md:
+      title: "Business Processes"
+    l3_valuesets.md:
+      title: "Value Sets"
+    l3_codesystems.md:
+      title: "Code Systems"
+    l3_forms.md:
+      title: "Forms"
+    l3_conceptmaps.md:
+      title: "Concept Maps"
+    l3_profiles.md:
+      title: "Profiles"
+    l3_logicalmodels.md:
+      title: "Logical Models"
+    l3_userscenarios.md:
+      title: "User Scenarios"
+    l3_indicators.md:
+      title: "Indicators"
+    l3_decisiontables.md:
+      title: "Decision Tables"
+    l3_schedulinglogic.md:
+      title: "Scheduling Logic"
+    l3_structuremaps.md:
+      title: "Structure Maps"
+    l3_cql.md:
+      title: "CQL Authoring"
+    l3_testing.md:
+      title: "Testing"
+  l3_qachecking.md:
+    title: "QA Checking"
