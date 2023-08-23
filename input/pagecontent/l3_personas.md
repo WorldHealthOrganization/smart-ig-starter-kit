@@ -1,4 +1,4 @@
-The objective is to have an ActorDefinition for each Persona mentioned
+The L3 author must ensure there is an ActorDefinition for each Persona mentioned
 in the L2. If the Persona doesn’t exist in the Personas Glossary yet,
 this process can propose the creation of another different persona. This
 creation of a new persona is a provisional measure; there SHALL be a
