@@ -17,7 +17,7 @@ description: "SMART Guidelines Implementation Guide starter kit"
 license: CC0-1.0
 
 pages: 
-  home.md:
+  index.md:
     title: "Home"
     overview.md:
       title: "Overview"

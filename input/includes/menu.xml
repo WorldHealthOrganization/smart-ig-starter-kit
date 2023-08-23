@@ -1,7 +1,7 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   
   <li class="dropdown">
-    <a data-toggle="dropdown" href="home.html" class="dropdown-toggle">Home<b class="caret"></b></a>
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Home<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li><a href="overview.html">Overview</a></li>
       <li><a href="assumptions.html">Assumptions</a></li>
@@ -27,7 +27,7 @@
 	    <li><a href="ig_configuration.html">IG Configuration</a></li>
       <li><a href="folder_structure.html">Folders and File Structure</a></li>
     </ul>
-    
+
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="validating_ig.html" class="dropdown-toggle">Validating IG<b class="caret"></b></a>
