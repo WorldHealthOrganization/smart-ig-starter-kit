@@ -22,10 +22,11 @@ specification SHALL be approved.
 <img src="./process_personas.png" style="width:50%"/>
 <br clear="all"/>
 
+##### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its
-definitions is adequate to the case submitted
+definitions is adequate to the case submitted, the author
 
--   No need to create one
+-   Reuse an existing persona No need to create one
 -   Create a dummy / void profile
 
 If an ActorDefinition already exists in the Commons repository, but its

@@ -6,8 +6,9 @@ A SMART Guidelines Implementation Guide makes use of existing tooling and conten
 
 The key repositories that play a role are identified in the diagram below:
 
-<img src="./process_personas.png" style="width:50%"/>
-<br clear="all"/>
+<figure>
+  {% include dependencies.svg %}
+</figure>
 
 ### Repository Setup
 The [SMART-Empty repository](https://github.com/WorldHealthOrganization/smart-ig-empty) is the repository that should be forked to create a new Implementation Guide. 
