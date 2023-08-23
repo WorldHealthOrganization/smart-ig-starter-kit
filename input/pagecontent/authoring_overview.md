@@ -1,27 +1,5 @@
-For narrative, all files are in input/pagecontent
-
-
-For artifacts, the canonical folder structure is
-
-* `input/actors`
-* `input/scenarios`
-* `input/testing`
-* `input/examples`
-* `input/process`
-* `input/plandefinitions`
-* `input/process`
-* `input/activitydefinition`
-* `input/models`
-* `input/valuesets`
-* `input/codesystems`
-* `input/questionnaires`
-* `input/profiles`
-* `input/maps`
-* `input/cql`
-* `input/libraries`
-* `input/measures`
-* `input/requirements`
-
+L3 Authoring corresponds to authoring computable artifacts and possibly narrative content.
+This is similar or complementary to L2 authoring.
 
 ## L2 artifacts
 L3 authors should find and use the L2 artifacts.  
@@ -103,7 +81,7 @@ L2 artifacts can be represented as narrative or other representations such as FH
 
 
 ## L3 Artifacts
-
+TO DO
 
 <table border="1">
     <thead>
@@ -257,18 +235,11 @@ L2 artifacts can be represented as narrative or other representations such as FH
     </tbody>
 </table>
 
+### File locations
+For narrative, all files are in `input/pagecontent` and can be written in xhtml or markdown.
+See the guidance on authoring [narrative](narrative.html).
 
-
-## Naming convention
-
-Resource IDs
-* ValueSets should be prefixed or suffixed by VS (not enforced)
-* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
-* Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
-  * ResourceId
-  * Resource-id
-
-File names
+For artifacts:, the canonical folder structure is
 For json or xml content, the file name SHALL be in the form
 * ResourceType-resourceid.xml/json (preferred)
 * ResourceType/resourceid.xml/json
@@ -277,9 +248,42 @@ For json or xml content, the file name SHALL be in the form
 For fsh content, the file name SHALL be in the form
 * ResourceType/resourceid.fsh
 
+* `input/actors`
+* `input/scenarios`
+* `input/testing`
+* `input/examples`
+* `input/process`
+* `input/plandefinitions`
+* `input/process`
+* `input/activitydefinition`
+* `input/models`
+* `input/valuesets`
+* `input/codesystems`
+* `input/questionnaires`
+* `input/profiles`
+* `input/maps`
+* `input/cql`
+* `input/libraries`
+* `input/measures`
+* `input/requirements`
+
+
+## Naming convention
+
+Resource IDs
+* ValueSets should be prefixed or suffixed by VS (not enforced)
+* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
+* Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
+  * **`ResourceId`** is valid
+  * **`Resource-id`** is also valid, although not preferred
 
 
 ### Versioning
 
 see also [versioning](versioning.html)
+
+
+## Governance
+Adding artifacts, what goes into common-clinical, etc.
+TO DO
 

@@ -33,6 +33,8 @@ pages:
       title: "Types of Content"
     l2_overview.md:
       title: "L2 overview"
+    authoring_narrative.md:
+      title: "Authoring Narrative"
     authoring_artifacts.md:
       title: "Authoring Artifacts"
       l3_personas.md:
@@ -77,6 +79,8 @@ pages:
       title: "QA check"
   indices.md:
     title: "Indices"
+
+
 publisher:
   name: WHO
   url: http://who.int
