@@ -1,0 +1,48 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor #8db
+}
+
+
+    class "**Concept**" as C<<TM>> {
+        |_ identifier[WHOCommon] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ definition 1..1
+        |_ identifier[other] 0..*
+        |_ designation 0..*
+        |_ property 0..*
+          |_ key 1..1
+          |_ value 0..1
+        --
+    }
+
+    class "**Common Dictionary**" as G<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ name 1..1
+        |_ title 1..1
+        |_ owner 1..*
+        |_ version 1..1
+        |_ concept 0..*
+        --
+    }
+
+C "*" -o "1" G :"               "
+
+@enduml

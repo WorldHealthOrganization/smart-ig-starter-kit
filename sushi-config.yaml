@@ -31,9 +31,13 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 menu:
   Home: index.html
   Setup:
-    Profiles: artifacts.html#2
+    IG Setup: ig_setup.html    
+    Profiles: l3_profiles.html
+  Governance:
+    Dictionaries: g_concept.html    
+#    Value sets: g_valuesets.html
   Authoring: 
-    Personas: ig_setup.html    
+    Personas: personas.html    
     Business Processes: l3_businessprocesses.html    
     Value Sets: l3_valuesets.html    
     Code Systems: l3_codesystems.html    
