@@ -33,7 +33,7 @@ pages:
       title: "Types of Content"
     l2_overview.md:
       title: "L2 overview"
-    authoring_narrative.md:
+    narrative.md:
       title: "Authoring Narrative"
     authoring_artifacts.md:
       title: "Authoring Artifacts"
