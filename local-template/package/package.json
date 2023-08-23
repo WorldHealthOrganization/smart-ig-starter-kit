@@ -1,5 +1,5 @@
 {
-  "name": "who.fhir.smart-ig-empty-locarl",
+  "name": "who.fhir.smart-ig-empty-local",
   "version": "0.0.1",
   "type": "fhir.template",
   "license": "CC0-1.0",
