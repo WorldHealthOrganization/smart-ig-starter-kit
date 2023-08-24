@@ -1,8 +1,27 @@
 When starting L3, if an IG is not present, it should be created.
 
+### Repositories
+
+A SMART Guidelines Implementation Guide makes use of existing tooling and content, to create a consistent ecosystem and allow L3 developers to focus on the authoring and validation.
+
+The key repositories that play a role are identified in the diagram below:
+
+<figure>
+  {% include dependencies.svg %}
+</figure>
+
 ### Repository Setup
+The [SMART-Empty repository](https://github.com/WorldHealthOrganization/smart-ig-empty) is the repository that should be forked to create a new Implementation Guide. 
+To do so, click on "Use this Template" option in Github.
 * For WHO repositories: WHO will create it upon request.
-* For adaptations: See ??
+* For adaptations: Entities that are producing the SMART Implementation Guide are advised to define some level of responsibility, or leaving it to the authors. 
+
+  * For National adaptations, HL7 has the folllowing recommendations:
+    * If the country or region has an affiliate, it is recommended that the affiliate includes the smart guidelines in their process
+    * The recommended package id in this case is: `hl7.fhir.country.smart.xxx`
+    * If there is no affiliate or the affiliate declines, other organizations may fulfill this role
+
+
 
 * The name of the repository depends on the organization 
   * for WHO, should be smart-xxxx (where xxxx is the name of the IG)
@@ -37,13 +56,7 @@ After initializing the IG, it must be configured:
 * Canonical url: `http://worldhealthorganization.github.io/smart-ig-starter-kit`
 * Package id: `who.fhir.????` Or `who.fhir.smart.???` `Or who.smart.fhir.?`
 
-* National adaptations: HL7 has the folllowing recommendations:
-  * If the country or region has an an affiliate, it is recommended that the affiliate includes the smart guidelines in their process
-  * The recommended package id in this case is: `hl7.fhir.country.smart.xxx`
-  * If there is no affiliate or the affiliate declines, other organizations may fulfill this role
-
-
-L3 authors should ensure that the content has some feedback mechanism.
+* L3 authors should ensure that the content has some feedback mechanism.
 
 
 

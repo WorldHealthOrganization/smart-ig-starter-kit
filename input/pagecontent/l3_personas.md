@@ -1,4 +1,4 @@
-The objective is to have an ActorDefinition for each Persona mentioned
+The L3 author must ensure there is an ActorDefinition for each Persona mentioned
 in the L2. If the Persona doesn’t exist in the Personas Glossary yet,
 this process can propose the creation of another different persona. This
 creation of a new persona is a provisional measure; there SHALL be a
@@ -22,10 +22,11 @@ specification SHALL be approved.
 <img src="./process_personas.png" style="width:50%"/>
 <br clear="all"/>
 
+##### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its
-definitions is adequate to the case submitted
+definitions is adequate to the case submitted, the author
 
--   No need to create one
+-   Reuse an existing persona No need to create one
 -   Create a dummy / void profile
 
 If an ActorDefinition already exists in the Commons repository, but its
