@@ -138,6 +138,7 @@ TO DO
             <td><a href="l3_processes.html">Activity definitions</a></td>
         </tr>
         <tr>
+            <td rowspan="9">Elements</td>
             <td>Logical Data Model</td>
             <td>input/models</td>
             <td><a href="l3_logicalmodels.html">Logical Models</a></td>

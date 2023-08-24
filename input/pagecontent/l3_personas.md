@@ -1,3 +1,5 @@
+ActorDefinitions are the ways that the Personas are structured; A common repository of Personas allows reuse, exchange, change tracking, etc.  
+
 The L3 author must ensure there is an ActorDefinition for each Persona mentioned
 in the L2. If the Persona doesn’t exist in the Personas Glossary yet,
 this process can propose the creation of another different persona. This
@@ -16,6 +18,8 @@ specification SHALL be approved.
 
 * L3 ActorDefinition compatible with the SGPersona profile
 * Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation
+* Narrative page listing the Personas
+  * TO DO: What to do with this? How is it published in L3? Table? Will add dependencies from tooling.
 
 #### **Activities:**
 
@@ -24,10 +28,10 @@ specification SHALL be approved.
 
 ##### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its
-definitions is adequate to the case submitted, the author
+definitions is adequate to the case submitted, the author shall
 
 -   Reuse an existing persona 
--   Create a dummy / void profile
+  -   Create a dummy / void profile
 
 If an ActorDefinition already exists in the Commons repository, but its
 definitions is not adequate to the case submitted,

@@ -14,8 +14,16 @@ skinparam class<<MD>> {
 
 skinparam class<<TM>> {
  BorderColor #505090
- BackgroundColor TECHNOLOGY
- HeaderBackgroundColor #8db
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+class "**BusinessProcess**" as Process<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ status 1..1
+    |_ name 1..1
+    |_ title 1..1
+    --
 }
 
     class "**Persona**" as Pers<<TM>> {

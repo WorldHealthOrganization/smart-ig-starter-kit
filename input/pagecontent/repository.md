@@ -6,7 +6,7 @@
 
 * The repository SHOULD be based on the WHO repository template: https://github.com/WorldHealthOrganization/smart-ig-empty.
 
-* The default branch SHOULD be “main”.
+* The default branch SHOULD be "main".
 
 > For WHO repositories: WHO will create the repository.  
 > For adaptations: Following HL7 recommendation, ideally the local HL7 affiliate will publish national specifications.  

@@ -16,7 +16,7 @@ To do so, click on "Use this Template" option in Github.
 * For WHO repositories: WHO will create it upon request.
 * For adaptations: Entities that are producing the SMART Implementation Guide are advised to define some level of responsibility, or leaving it to the authors. 
 
-  * For National adaptations, HL7 has the folllowing recommendations:
+  * For National adaptations, HL7 has the following recommendations:
     * If the country or region has an affiliate, it is recommended that the affiliate includes the smart guidelines in their process
     * The recommended package id in this case is: `hl7.fhir.country.smart.xxx`
     * If there is no affiliate or the affiliate declines, other organizations may fulfill this role
@@ -29,7 +29,7 @@ To do so, click on "Use this Template" option in Github.
 
 * The repository SHOULD be based on the WHO repository template: https://github.com/WorldHealthOrganization/smart-ig-empty 
 
-* The default branch SHOULD be “main”
+* The default branch SHOULD be "main"
 * To publish: 
   * GH Pages
     * Enable pages from the gh-pages branch, root folder.

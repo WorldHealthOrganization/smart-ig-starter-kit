@@ -13,7 +13,7 @@ subsequent steps.
 The Logical models represent the information shown below::
 
 <figure>
-  {% include model_model.svg %}
+  {% include model_logicalmodel.svg %}
 </figure>
 
 ### Mapping DAK to a logical model
@@ -110,3 +110,8 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 
 
+#### **Tooling:**
+
+| Tool | Usage | Doc |
+| --- | ---| ---| 
+| Sushi | Create LMs with fsh syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |

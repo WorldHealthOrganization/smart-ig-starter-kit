@@ -9,7 +9,7 @@ When starting L3, if an IG is not present, it should be created now.
 
 * The name of the repository depends on the organization for WHO, should be smart-xxxx (where xxxx is the name of the IG)
 * The repository SHOULD be based on the WHO repository template: https://github.com/WorldHealthOrganization/smart-ig-empty 
-* The default branch SHOULD be “main”
+* The default branch SHOULD be "main"
   - To publish: 
   - GH Pages
     - Enable pages from the gh-pages branch, root folder.
