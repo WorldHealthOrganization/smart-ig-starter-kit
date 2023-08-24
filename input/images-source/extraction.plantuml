@@ -26,8 +26,12 @@ skinparam class<<TM>> {
 }
 
 
-legend TO DO
-
+legend 
+This will be a diagram that shows different types of data extraction: 
+* From FHIR-native systems that are not aligned with SGs?
+* Questionnaires - 2-step tranforms
+* From other systems?
+endlegend
 
 class "**Logical Model**" as LM<<DM>> {
 }

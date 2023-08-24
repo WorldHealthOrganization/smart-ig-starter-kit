@@ -1,7 +1,7 @@
 L3 Authoring corresponds to authoring computable artifacts and possibly narrative content.
 This is similar or complementary to L2 authoring.
 
-## L2 artifacts
+### L2 artifacts
 L3 authors should find and use the L2 artifacts.  
 L2 artifacts can be represented as narrative or other representations such as FHIR resources. For reference, these are the locations for such artifacts and narrative:
 
@@ -79,9 +79,9 @@ L2 artifacts can be represented as narrative or other representations such as FH
     </tbody>
 </table>
 
-
-## L3 Artifacts
-TO DO
+<br/><br/>
+### L3 Artifacts
+The table below shows the content types that are to be created as part of the L3 authoring process.
 
 <table border="1">
     <thead>
@@ -230,6 +230,7 @@ TO DO
     </tbody>
 </table>
 
+<br/><br/>
 ### File locations
 For narrative, all files are in `input/pagecontent` and can be written in xhtml or markdown.
 See the guidance on authoring [narrative](narrative.html).
