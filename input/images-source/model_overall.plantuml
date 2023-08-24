@@ -23,6 +23,17 @@ class "**BusinessProcess**" as Process<<TM>> {
     |_ status 1..1
     |_ name 1..1
     |_ title 1..1
+    |_ description 1..1
+    --
+}
+
+
+class "**BusinessProcess**" as Process<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ status 1..1
+    |_ name 1..1
+    |_ title 1..1
+    |_ description 1..1
     --
 }
 

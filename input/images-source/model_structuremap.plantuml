@@ -18,7 +18,7 @@ skinparam class<<TM>> {
  HeaderBackgroundColor #8bd
 }
 
-class "**BusinessProcess**" as Process<<TM>> {
+class "**StrutureMap**" as StructureMap<<TM>> {
     |_ identifier[SG] 1..*   
     |_ status 1..1
     |_ name 1..1

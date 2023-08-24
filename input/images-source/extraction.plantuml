@@ -1,0 +1,57 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<DM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor #8db
+}
+
+
+legend TO DO
+
+
+class "**Logical Model**" as LM<<DM>> {
+}
+
+class "**Profile**" as P<<DM>> {
+}
+
+class "**StrutureMap**" as SM<<TM>> {
+}
+
+class "**Questionnaire**" as Q<<DM>> {
+}
+
+class "**QuestionnaireResponse**" as QR<<TM>> {
+}
+
+
+class "**LM Instance**" as LMI<<TM>> {
+}
+
+class "**Resource Instance**" as RI<<TM>> {
+}
+
+LM - LM: contains /\n references
+
+
+@enduml
