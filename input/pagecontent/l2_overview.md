@@ -1,8 +1,4 @@
-#### **Purpose**
-The WHO SMART guidelines present a set of consistent specifications intended to be reused and augmented / adapted worldwide. The creation, validation and maintenance of an increasing number of smart guidelines - by a range of experts at the WHO and an ever growing community - requires a common set of procedures and associated tooling.
+The first step in L3 production is an input verification of the L2 content. 
 
-In addition, the adoption and adaptation of SMART Guidelines by the different countries and entities should be supported by a known and replicable process. This enables:
-* Education and planning, targeted at the right groups
-* Standard tools for facilitating and automating tasks
-* Quality control and validation
-* Process monitoring and improvement
+* It is important to track the versions of L2 content, especially when adapting L2 or L3 to a local implementation, in order to track changes and assess impact of those changes.For this same reason, there’s a versioning and change management section in this document.
+
