@@ -1,6 +1,9 @@
+TO DO: Same as other common artifacts. not the implemented profiles
+
 #### **Inputs:** 
 
-* sometexthere
+* Common Profiles (from commons clinical encounter)
+
 
 #### **Outputs:**
 
