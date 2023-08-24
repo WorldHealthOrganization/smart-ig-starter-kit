@@ -19,8 +19,8 @@ license: CC0-1.0
 pages: 
   index.md:
     title: "Home"
-    overview.md:
-      title: "Overview"
+#    overview.md:
+#      title: "Overview"
     assumptions.md:
      title: "Assumptions"
   authoring_overview.md:

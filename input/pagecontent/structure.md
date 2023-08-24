@@ -16,7 +16,7 @@ For each type of SMART IG content, this SOP describes how it can be produced fro
   - Data models for the artifacts created (this is used for profiles) 
   - Tooling needed for authors 
   - Authoring (based on profiles) 
-  - Testing 
+  - Review and testing 
 * Output Criteria / Definition of Done - checks for ensuring the quality of the output
 * Issues
   - Decisions pending

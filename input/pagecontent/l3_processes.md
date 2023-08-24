@@ -9,33 +9,34 @@ governance process for Business Processes. In that governance, there SHALL be a
 requirement that all Business Process in the final publication of a
 specification SHALL be approved.
 
-#### **Inputs:** 
+### **Inputs:** 
 
 * L2 Business Processes
 * Business Process Repository
 
-#### **Outputs:**
+### **Outputs:**
 
 * if needed, Proposed new Business Process definitions as PlanDefinitions
 * Narrative page with business processes overview for the scope of the current guideline
+* Business Process as BPMN or BPM+ file
 
-#### **Activities:**
+### **Activities:**
 
-#### Checking for reusable Processes
+### Checking for reusable Processes
 * 
 
-#### Creating new Processes
+### Creating new Processes
 * 
 
 <figure>
-  {% include model_businessprocess.svg %}
+  {% include model_process.svg %}
 </figure>
 
 
-#### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done:**
 
 * sometexthere
 
-#### **Issues:**
+### **Issues:**
 
 * sometexthere

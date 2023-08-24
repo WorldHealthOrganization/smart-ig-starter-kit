@@ -1,22 +1,22 @@
 TO DO: Same as other common artifacts. not the implemented profiles
 
-#### **Inputs:** 
+### **Inputs:** 
 
 * Common Profiles (from commons clinical encounter)
 
 
-#### **Outputs:**
+### **Outputs:**
 
 * sometexthere
 
-#### **Activities:**
+### **Activities:**
 
 * sometexthere
 
-#### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done:**
 
 * sometexthere
 
-#### **Issues:**
+### **Issues:**
 
 * sometexthere

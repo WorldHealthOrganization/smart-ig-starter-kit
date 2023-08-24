@@ -1,23 +1,23 @@
 StructureMaps are used for transforming data
 
 <figure>
-  {% include model_structuremap.svg %}
+  {% include extraction.svg %}
 </figure>
 
 
-#### **Inputs:** 
+### **Inputs:** 
 
 * DAK Data Dictionary / L2 Logical Model
 * FHIR Artifacts catalog
 
 
 
-#### **Outputs:**
+### **Outputs:**
 
 * StructureMaps in `input/resources/maps`
 * TO DO
 
-#### **Activities:**
+### **Activities:**
 
 If a form is used, the L3 author should provide the mappings for extraction.
 
@@ -55,7 +55,7 @@ StructureMaps may be reused. A few situations where this is useful:
 
 
 
-#### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done:**
 
 * Mappings should create valid StructureMaps
   * No QA errors on QA page
@@ -63,12 +63,12 @@ StructureMaps may be reused. A few situations where this is useful:
 * Test Bundle that includes maps and all the dependencies
 * TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc?
 
-#### **Issues:**
+### **Issues:**
 
 * Matchbox doesn’t validate the metadata if it’s missing or if the StructureMap is not validxthere
 
 
-#### **Tooling:**
+### **Tooling:**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 

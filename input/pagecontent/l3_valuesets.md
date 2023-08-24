@@ -12,13 +12,13 @@ TO DO: in FHIR, whatever is the semantic pivot, the ValueSets should have a pref
 * NOT The DE.5.1 whatever codes
 How to decide?
 
-#### **Inputs:** 
+### **Inputs:** 
 
 * SMART IG ValueSet catalog
 * Terminology services to lookup and validate the code
 
 
-#### **Outputs:**
+### **Outputs:**
 
 * ValueSets in 
 * Updated list of value sets
@@ -27,7 +27,7 @@ How to decide?
 
 
 
-#### **Activities:**
+### **Activities:**
 
 * ValueSet creation
 * Add "Shareable", “publishable” extensions
@@ -39,11 +39,15 @@ How to decide?
 * CodeSystem creation
 TO DO: When do we create a code system? When do we select codes from an existing code systems
 
-#### **Output Criteria / Definition of Done:**
 
-* sometexthere
+### Review procedure
 
-#### **Issues:**
+
+### **Output Criteria / Definition of Done:**
+
+* 
+
+### **Issues:**
 
 * Is there a relationship before ANC.B5.DE50 and the valueset name? Would the valueset for the values for that element have a similar name?
 * this will actually result in changes to profiles - e.g. needing a value when the existing binding is Required

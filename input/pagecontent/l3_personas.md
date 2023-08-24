@@ -8,20 +8,20 @@ governance process for Personas. In that governance, there SHALL be a
 requirement that all personas in the final publication of a
 specification SHALL be approved.
 
-#### **Inputs:** 
+### **Inputs:** 
 
 * L2 Generic personas (Narrative)
 * Personas Glossary (in ValueSet SGPersonas)
 * Personas repository (in Common artifacts / central repository?)
 
-#### **Outputs:**
+### **Outputs:**
 
 * L3 ActorDefinition compatible with the SGPersona profile
 * Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation
 * Narrative page listing the Personas
   * TO DO: What to do with this? How is it published in L3? Table? Will add dependencies from tooling.
 
-#### **Activities:**
+### **Activities:**
 
 <img src="./process_personas.png" style="width:50%"/>
 <br clear="all"/>
