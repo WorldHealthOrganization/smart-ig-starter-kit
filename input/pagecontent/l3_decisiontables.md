@@ -23,7 +23,7 @@
   - a. there should be a code of "standard" actions in the common or local repository*
   - b. Each of those actions shall use a standard profile. Those standard profiles are also part of the activity outcome repository and respective governance.
 4. CQL Writing
-  - a. Ensure that every input for the CQL there’s a concept in the common dictionary
+  - a. Ensure that every input for the CQL there's a concept in the common dictionary
   - b. See CQL criteria…
   - c. Other elements
 

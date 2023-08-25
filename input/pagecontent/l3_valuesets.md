@@ -14,29 +14,36 @@ How to decide?
 
 ### **Inputs:** 
 
+
+* DAK
 * SMART IG ValueSet catalog
 * Terminology services to lookup and validate the code
 
 
 ### **Outputs:**
 
-* ValueSets in 
-* Updated list of value sets
-* If a valueset changes since the last 
+* ValueSets in `input/valuesets` or `input/fsh/valusets` 
+* Proposal for any common value sets
+* If a valueset changes since the last release, see [tracking changes](tracking_changes.html).
 * Valueset usage registry?
 
 
 
 ### **Activities:**
 
-* ValueSet creation
+* For each element in the DAK that has a value set - i.e. the answer depends on the options
+
+
+* ValueSet creation: 
 * Add "Shareable", “publishable” extensions
 * ValueSet reutilization:
   * ValueSets may be reused if the
   * While reusing of ValueSets is recommended, authors should be aware that a reuse also introduces a dependency
-* ValueSet validation: The ValueSet should 
+* ValueSet validation: The ValueSet should be valid against the SMARTValueSet profile
 
-* CodeSystem creation
+#### CodeSystem creation
+When defining a ValueSet, there may be a perceived need to create a CodeSystem:
+* The 
 TO DO: When do we create a code system? When do we select codes from an existing code systems
 
 

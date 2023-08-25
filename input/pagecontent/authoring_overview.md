@@ -268,7 +268,7 @@ For fsh content, the file name SHALL be in the form
 
 Resource IDs
 * ValueSets should be prefixed or suffixed by VS (not enforced)
-* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
+* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there's no conflict
 * Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
   * **`ResourceId`** is valid
   * **`Resource-id`** is also valid, although not preferred

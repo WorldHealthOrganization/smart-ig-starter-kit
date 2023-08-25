@@ -241,7 +241,7 @@ For json or xml content, the file name SHALL be in the form
 * resourceid.xml/json
 
 For fsh content, the file name SHALL be in the form
-* ResourceType/resourceid.fsh
+* `ResourceType/resourceid.fsh`
 
 * `input/actors`
 * `input/scenarios`
@@ -263,14 +263,24 @@ For fsh content, the file name SHALL be in the form
 * `input/requirements`
 
 
+
+
 ## Naming convention
 
 Resource IDs
 * ValueSets should be prefixed or suffixed by VS (not enforced)
-* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there’s no conflict
+* Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there's no conflict
 * Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
-  * **`ResourceId`** is valid
+  * **`resourceid`** is valid
   * **`Resource-id`** is also valid, although not preferred
+
+
+## File Names
+
+* Resource file names must match the resource id. For profiles, this means the profile id.
+* Tools are case sensitive - file names shall not have overlapping names differing only in case
+* Sushi / FSH Aliases should be stored in `fsh/Aliases.fsh`
+
 
 
 ### Versioning

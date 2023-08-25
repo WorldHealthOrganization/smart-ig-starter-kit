@@ -23,10 +23,11 @@ specification SHALL be approved.
 ### **Activities:**
 
 ### Checking for reusable Processes
-* 
+* The author can check the existing process repository to see if there is a matching process. 
+TO DO: Do we want to link processes to models?
 
 ### Creating new Processes
-* 
+* Creating a new business process consists of creating a PlanDefinition resource following the profile BusinessProcess. The data needs are described in the model below:
 
 <figure>
   {% include model_process.svg %}

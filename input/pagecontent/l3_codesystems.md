@@ -1,6 +1,9 @@
+Code Systems are created when new codes need to be defined
+A special case of code system is when existing codes need to be complemented - for example adding designations in different languages to codes, or adding relationships between vaccine codes.
+
 ### **Inputs:** 
 
-* sometexthere
+* L2 DAK
 
 ### **Outputs:**
 
@@ -8,7 +11,7 @@
 
 ### **Activities:**
 
-* sometexthere
+* The creation of a CodeSystem is typically driven by a ValueSet
 
 ### **Output Criteria / Definition of Done:**
 

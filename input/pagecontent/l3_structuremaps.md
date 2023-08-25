@@ -65,7 +65,7 @@ StructureMaps may be reused. A few situations where this is useful:
 
 ### **Issues:**
 
-* Matchbox doesn’t validate the metadata if it’s missing or if the StructureMap is not validxthere
+* Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not validxthere
 
 
 ### **Tooling:**

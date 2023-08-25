@@ -16,7 +16,19 @@ The Logical models represent the information shown below::
   {% include model_logicalmodel.svg %}
 </figure>
 
-### Mapping DAK to a logical model
+
+### **Inputs:** 
+
+* DAK data elements Spreadsheet
+
+### **Outputs:**
+
+* Logical Models in `input/models` or `fsh/models`
+
+### **Activities:**
+
+
+#### Mapping DAK to a logical model
 
 The Data models in the L3 are associated with a data structure for exchange or for a given process. For example "capture vaccination data". L2 authors are expected to follow that rule: one tab is assumed to be one single atomic structure.
 
@@ -92,12 +104,12 @@ For bindings, check whether the value set already exists in an upstream package.
 -   If not, create a new value set.
     -   New value sets are registered and follow the valueset governance process that is adjacent to authoring of L3 content.
 
-### Mapping to other semantic references
+#### Mapping to other semantic references
 Semantic mapping is done with ConceptMaps, establishing the relationship between the DAK elements and reference terminologies, central dictionary, or other DAKS.
 
 
 
-### **Criteria / Definition of Done:**
+#### **Criteria / Definition of Done:**
 
 -   All data elements in the DAK shall be in one logical model
 -   All elements in the DAK have one and only one WHO Code. 
