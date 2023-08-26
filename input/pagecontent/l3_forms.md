@@ -10,7 +10,8 @@
 * Example QuestionnaireResponses for testing
 
 
-* Questionnaires elements may link to the data elements
+* Questionnaires elements may link to the data elements in the
+  * Note that this can conflict with the definition-based extraction described below
 
 ### **Activities:**
 
