@@ -24,6 +24,7 @@ class "**BusinessProcess**" as Process<<TM>> {
     |_ name 1..1
     |_ title 1..1
     |_ description 1..1
+    |_ diagram_source 1..1  
     --
 }
 

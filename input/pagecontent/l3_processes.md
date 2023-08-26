@@ -16,9 +16,11 @@ specification SHALL be approved.
 
 ### **Outputs:**
 
-* if needed, Proposed new Business Process definitions as PlanDefinitions
+* Proposed new Business Process definitions as PlanDefinitions (following the SMARTBusinessProces profile).
 * Narrative page with business processes overview for the scope of the current guideline
-* Business Process as BPMN or BPM+ file
+* For readability, Business Process shall contain BPMN or BPM+ content or a separate diagram TO DO: Where is this content? 
+TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
+
 
 ### **Activities:**
 
@@ -36,7 +38,7 @@ TO DO: Do we want to link processes to models?
 
 ### **Output Criteria / Definition of Done:**
 
-* sometexthere
+* 
 
 ### **Issues:**
 

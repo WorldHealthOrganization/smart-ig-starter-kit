@@ -31,3 +31,5 @@ Scenarios are uniquely identified "example stories" that describe how the system
 
 
 ### **Tooling**
+
+### **Informative examples**

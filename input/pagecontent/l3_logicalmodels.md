@@ -88,11 +88,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 
 -   Explain Conditionality
 
--   Linkages to Decision Support Tables?
-
--   Linkages to Aggregate Indicators?
-
--   Linkages to workflows?
+TO DO: define the links and how to store these links in a repository.
 
 -   Annotations
     -   Example:
@@ -127,3 +123,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | Create LMs with fsh syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
+
+## TO DO: Not WHO CODES, but WHO SG Codes 
+
+## TO DO: **Calculated data elements in the L2** SHALL be in the logical model
