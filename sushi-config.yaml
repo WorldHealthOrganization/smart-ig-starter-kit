@@ -45,10 +45,10 @@ pages:
         title: "Business Processes"
       l3_logicalmodels.md:
         title: "Logical Models"
-      l3_codesystems.md :
-        title: "Code Systems"
       l3_valuesets.md :
         title: "Value Sets"
+      l3_codesystems.md :
+        title: "Code Systems"
       l3_profiles.md :
         title: "Profiles"
       l3_decisiontables.md :

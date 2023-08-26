@@ -18,7 +18,7 @@ skinparam class<<TM>> {
  HeaderBackgroundColor SkyBlue
 }
 
-    class "**Logical Model**" as LM<<TM>> {
+    class "**  Logical Model  **" as LM<<TM>> {
         |_ identifier[SG] 1..*   
         |_ status 1..1
         |_ name 1..1
@@ -40,6 +40,25 @@ skinparam class<<TM>> {
         --
     }
 
+    class "**  Logical Model  **" as LMP<<TM>> {
+    }
+ 
+     class "**  Logical Model  **" as LMD<<TM>> {
+    }
+
+
+ class "**    Logical Model    **" as LMR<<TM>> {
+    }
+
+LM -u-|> LMP : "\n\n   Specializes  \n " 
+LM -r- LMD : "       Uses       "
+
+LM -u- LMR : "References"
+
+
+LMP -r[hidden]-|> LMR : "                           "
+LMR -D[hidden]- LMD : "  "
+'LM -u- LMR : "                "
 
 
 

@@ -7,10 +7,9 @@ TO DO: Do we add a codesystem also for the discrete values e.g. male, female, et
 
 ### **Inputs:** 
 
-
 * DAK
 * SMART IG ValueSet catalog
-* Terminology services to lookup and validate the code
+* Terminology services to lookup and validate the codes
 
 
 ### **Outputs:**
@@ -78,7 +77,7 @@ TO DO: When do we create a code system? When do we select codes from an existing
 
 ### **Output Criteria / Definition of Done:**
 
-* 
+
 
 ### **Issues:**
 
@@ -86,5 +85,19 @@ TO DO: When do we create a code system? When do we select codes from an existing
 * this will actually result in changes to profiles - e.g. needing a value when the existing binding is Required
 
 
+
 ### **Tooling**
+| Tool | Usage | Doc |
+| --- | ---| ---| 
+|  Sushi | |  |
+|  OCL | |  |
+|  tx.fhir.org | |  |
+
+
+
+### **Informative examples**
+
+
+### **Known issues and dependencies**
+
 TO DO: Preferred Terminology Server

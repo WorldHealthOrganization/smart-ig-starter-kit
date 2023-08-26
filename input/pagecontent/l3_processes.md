@@ -13,6 +13,7 @@ specification SHALL be approved.
 
 * L2 Business Processes
 * Business Process Repository
+* L2 DAK
 
 ### **Outputs:**
 
@@ -23,12 +24,14 @@ TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
 
 
 ### **Activities:**
+<img src="./process_process.png" style="width:50%"/>
+<br clear="all"/>
 
-### Checking for reusable Processes
+### **Checking for reusable Processes**
 * The author can check the existing process repository to see if there is a matching process. 
 TO DO: Do we want to link processes to models?
 
-### Creating new Processes
+### **Creating new Processes**
 * Creating a new business process consists of creating a PlanDefinition resource following the profile BusinessProcess. The data needs are described in the model below:
 
 <figure>
@@ -38,8 +41,16 @@ TO DO: Do we want to link processes to models?
 
 ### **Output Criteria / Definition of Done:**
 
-* 
 
-### **Issues:**
+### Change tracking
 
-* sometexthere
+
+### **Tooling**
+
+
+### **Informative examples**
+
+
+### **Known issues and dependencies**
+
+

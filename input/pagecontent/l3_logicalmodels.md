@@ -1,16 +1,14 @@
 
-Logical models represent a data structure that can be used in a given
-context. These are independent of any physical limitation like which
-FHIR Release or profile version is used. 
-The use of FHIR loogical models allows metadata to be structured, computable, and interoperable, 
-for the purposes of governance and checking.
+Logical models represent the data structures in the Digital Dictionary. This is a computable representation that is independent of any physical limitation like which FHIR Release or profile version is used. 
+The use of FHIR loogical models allows metadata to be structured, computable, and interoperable, for the purposes of governance and checking.
 
-Creating a FHIR logical model entails capturing the elements in the Data
-Dictionary, with their description, terminology and cardinality
-constraints, in a computable form, for input validation and for
-subsequent steps.
+Creating a FHIR logical model entails capturing the elements in the Data Dictionary, with their description, terminology and cardinality constraints.
 
-The Logical models represent the information shown below::
+Logical models relate to other models in 3 aspects:
+* Logical models can extend or constrain "parent" models - for example a Patient extending a Person
+* Logical models can "contain" other models as a data type - for example patient and practitioner containing "name" ddata structure
+* Logical models can refer to other models - for example a request referencing a product
+
 
 <figure>
   {% include model_logicalmodel.svg %}
@@ -27,16 +25,34 @@ The Logical models represent the information shown below::
 
 ### **Activities:**
 
+This is the overview of the activities and related artifacts used:
+<img src="./process_logicalmodel.png" style="width:50%"/>
+<br clear="all"/>
+
+
+
+#### Looking up existing models
+
+Some of the data entries are commons. 
+
+If an existing model is found, it is possible to
+* reuse the model as is;
+* create a specialization of the model - this includes adding elements, removing elements, changing elements;
+
+TO DO: describe what can be done with logical model specializations.
+
+Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
+
 
 #### Mapping DAK to a logical model
-
 The Data models in the L3 are associated with a data structure for exchange or for a given process. For example "capture vaccination data". L2 authors are expected to follow that rule: one tab is assumed to be one single atomic structure.
 
-This also becomes the "atomic" unit of exchange or use in the L3 - so normally one logical model should correspond to one tab. Some factors may influence the split of a logical model into several functional blocks:
-- Very complex models may be split. For example a full "Lab Report" may consist of "Lab Report" + "Specimen" models.
+This also becomes the "atomic" unit of exchange or use in the L3 - so normally one logical model should correspond to one tab. Some factors may influence the split of a logical model into several functional blocks, besides the specialization, reference and usage described above. For example:
+- Complex models may be split. For example a full "Lab Report" may consist of "Lab Report" + "Specimen" models.
 - Common sets of data elements may be captured in a separate reusable logical model.
 
 The logical model name has the name of the tab.
+Logical model should conform to the [SGLogical](TO DO) model profile.
 
 Upon starting to create the logical model, an intake validation is useful:
 1.  Verify that each data element needed exists in the common Glossary
@@ -47,7 +63,6 @@ Upon starting to create the logical model, an intake validation is useful:
         or provisionally create a new one and request it to be added
         to the common glossary.
 2. The data labels should be unique within the same data model
-
 
 For each line in the tab, there shall be one data element in the logical model (represented here by `differential.element[*]`):
 
@@ -105,16 +120,17 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 
 
-#### **Criteria / Definition of Done:**
+### **Criteria / Definition of Done:**
 
--   All data elements in the DAK shall be in one logical model
--   All elements in the DAK have one and only one WHO Code. 
-  -  The WHO code for all elements should be approved; exceptions should be resolved before final publication
+* All data elements in the DAK shall be in one logical model
+* All data elements defined in DAK as calculated elements shall be present in a logical model
+* All elements in the DAK have one and only one WHO SMART Code. 
+  *  The WHO code for all elements should be approved; exceptions should be resolved before final publication
+* Each data element in the logical model is mapped to the existing semantic references - see [semantic references](semanticreferences.html).
+  * The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings
 
-### **Known issues and dependencies:**
 
-
-  * Each L3 author is responsible for the documentation and approval of the mapping of each data element in the DAK to other terminologies.
+### Change tracking
 
 
 
@@ -126,4 +142,12 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 ## TO DO: Not WHO CODES, but WHO SG Codes 
 
-## TO DO: **Calculated data elements in the L2** SHALL be in the logical model
+
+
+### **Informative examples**
+
+
+
+### **Known issues and dependencies:**
+
+
