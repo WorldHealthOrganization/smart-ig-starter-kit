@@ -13,6 +13,9 @@ Therefore some profiles for FHIR artifacts share commonalities.
 
 ### **Activities:**
 
+<img src="./process_process.png" style="width:50%"/>
+<br clear="all"/>
+
 
 #### Identify profile needs
 The FHIR profiles are determined by the need for information objects from the definitions:
@@ -30,13 +33,10 @@ may exist which either
 * cover the exchange requirements for the scope
 * may be profiled - if they are in a similar or broader area that can be constrained in a derived profile
 
+This search is in related sources - within the the SMART Guidelines ecosystem - or even outside, such as IHE or HL7 or national guidance. In these cases, 
+the L3 author shall apply the necessary validation as the profiles may not meet the expectations or may change without warning.
 
-#### Identify reusable profiles
-
-
-For reference / Search for wisdom
-
-* search for existing profiles
+The recommended priority for the search for existing profiles
   * other SMART IGs
   * HL7 international balloted reference implementation guides
   * IHE profiles
@@ -54,6 +54,8 @@ For reference / Search for wisdom
 * All data elements that need to be exchanged or used in a decision, workflow, or indicator are covered by one or more profiles.
 
 
+### Change tracking
+
 ### **Tooling**
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -64,5 +66,6 @@ For reference / Search for wisdom
 
 
 ### **Known issues and dependencies**
+
 
 

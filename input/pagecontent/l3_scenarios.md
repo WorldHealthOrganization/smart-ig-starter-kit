@@ -1,5 +1,7 @@
 Scenarios are uniquely identified "example stories" that describe how the system is expected to behave in a relatively concrete scenario. 
 
+
+
 ### **Inputs:** 
 
 * L2 scenarios in narrative form
@@ -11,6 +13,9 @@ Scenarios are uniquely identified "example stories" that describe how the system
 
 
 ### **Activities:**
+
+<img src="./process_process.png" style="width:50%"/>
+<br clear="all"/>
 
 * Check input scenarios - the L2 should contain identifiable, well-defined and well-delimited scenario descriptions. these should be rather concrete - i.e. not high abstractions, but concrete to a specific context.
 * Develop ExampleScenario resources 
@@ -25,6 +30,9 @@ Scenarios are uniquely identified "example stories" that describe how the system
   * At least the "normal" flow shall be covered by an example scenario
 * ExampleScenarios should be validated by the publisher 
 * ExampleScenarios should be reviewed by the L2 author
+
+
+### Change tracking
 
 
 

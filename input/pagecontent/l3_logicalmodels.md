@@ -140,7 +140,6 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 | --- | ---| ---| 
 | Sushi | Create LMs with fsh syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
 
-## TO DO: Not WHO CODES, but WHO SG Codes 
 
 
 

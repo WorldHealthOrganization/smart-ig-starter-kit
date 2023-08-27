@@ -1,9 +1,12 @@
 
-For the elements whose value is from a set of (coded) options, a FHIR ValueSet should exist. 
+For the elements whose value is from a set of (coded) options, a FHIR ValueSet should exist. SMART Guidelines can use Common ValueSets or define new ones.
+
 * The L3 should use same codes as defined for LM
 TO DO: Do we add a codesystem also for the discrete values e.g. male, female, etc
 
-
+<figure>
+  {% include model_valueset.svg %}
+</figure>
 
 ### **Inputs:** 
 
@@ -22,6 +25,11 @@ TO DO: Do we add a codesystem also for the discrete values e.g. male, female, et
 
 
 ### **Activities:**
+
+This is the overview of the activities and related artifacts used:
+<img src="./process_valueset.png" style="width:50%"/>
+<br clear="all"/>
+
 
 * For each element in the DAK that has a value set - i.e. the answer depends on the options for the data element - for example sex, etc., the author shall have a value set. this can mean 
 * reusing a value set
