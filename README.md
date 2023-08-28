@@ -5,9 +5,9 @@
 </blockquote>
 </div>
 
-SMART Guidelines L3 SOP
+DRAFT SMART Guidelines L3 SOP
 ---
-This is the SMART Guidelines L3 SOP
+This is the DRAFT SMART Guidelines L3 SOP
 <br> </br>
 ###
 ### Publication
