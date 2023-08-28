@@ -1,14 +1,21 @@
-WHO SMART Guidelines Starter Template.
+<div>
+<blockquote class="stu-note">
+	<strong>This is a draft document still being edited.</strong>
+	This content should not yet be expected to be coherent or even compatible with the SMART Guidelines
+</blockquote>
+</div>
+
+SMART Guidelines L3 SOP
 ---
-This is the SMART Guidelines Starter Template
+This is the SMART Guidelines L3 SOP
 <br> </br>
 ###
 ### Publication
 This ImplementationGuide is published in the following locations:
 
 
-Continuous Build:  __https://DigitalSQR.github.io/smart-ig-starter-kit__  
-Continuous Build:  __https://build.fhir.org/ig/DigitalSQR/smart-ig-starter-kit__  
+Continuous Build:  __https://WorldHealthOrganization.github.io/smart-ig-starter-kit__  
+Continuous Build:  __https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit__  
 Canonical / permanent URL:   
 <br> </br>
 

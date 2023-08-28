@@ -38,7 +38,7 @@ skinparam class<<TM+>> {
          Approved terminology content
          to be used in SMART IGs 
          --
-         WHOCommonTerms
+         SGCommonTerms
          --
     }
 
@@ -60,7 +60,7 @@ skinparam class<<TM+>> {
         Common content to be used in 
         encounter-related IGs.
         --
-        WHOEncounter 
+        SGEncounter 
         --
     }
 
@@ -71,7 +71,7 @@ skinparam class<<TM+>> {
         should copy when initialized.
         --
         .dependsOn = base
-        template = WHO-SMART
+        template = SG-SMART
         FSH helper functions
         look-and-feel
         --

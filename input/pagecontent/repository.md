@@ -23,8 +23,6 @@ The standard build script and github action SHOULD be retained. If there are cha
 FHIR Build
 
 
-
-
 The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
 
 ## Implementation Guide configuration

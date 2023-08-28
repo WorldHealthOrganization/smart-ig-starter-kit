@@ -3,7 +3,7 @@ For non-FSH source files, the current folder structure is the one in the base IG
 
 'input/models'
 'input/examples'
-'input/vocabulary'  → WHO IG will add “valuesets” and “codesystems” and “namingsystems”?
+'input/vocabulary'  → SG IG will add “valuesets” and “codesystems” and “namingsystems”?
 'input/profiles'
 'input/extensions'
 'input/operations'
