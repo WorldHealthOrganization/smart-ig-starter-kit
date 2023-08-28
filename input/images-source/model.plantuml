@@ -1,0 +1,152 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+class "**BusinessProcess**" as Process<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ status 1..1
+    |_ name 1..1
+    |_ title 1..1
+    --
+}
+
+    class "**Persona**" as Pers<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ type = 'person'
+        |_ experimental 1..1    
+        |_ description 1..1
+        --
+    }
+
+    class "**Logical Model**" as LM<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ element 1..*
+          |_ short 1..1
+          |_ definition 1..1
+          |_ type 1..1
+          |_ binding 1..1
+          |_ definition 1..1
+          |_ comment 0..1
+          |_ constraint 0..1
+          |_ code[SGCommons] 1..1   
+'            |_ system 1..1
+            |_ code 1..1
+          |_ code[icd-11]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[icd-10]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[loinc]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[ichi]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[icf]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[atc]
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+          |_ code[snomed-gps]    
+'            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+        --
+    }
+
+
+
+    class "**Functional Requirement**" as FReq<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ type = 'functional'
+        |_ persona 1..1
+        |_ activity 1..1
+          |_ name 1..1
+          |_ description 1..1
+          |_ (reference)
+ '       |_ description 1..1
+        |_ acceptanceCriteria 0..*
+          |_ reference?
+        --
+    }
+
+
+    class "**AcceptanceCriteria**" as AC<<TM>> {
+        |_ parentReq 1..1
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ type = 'functional'
+        |_ description 1..1
+        --
+    }
+
+
+    class "**Non-Functional Requirement**" as NFR<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ context 1..*
+        |_ activity 1..1
+          |_ name 1..1
+          |_ description 1..1
+        |_ acceptanceCriteria 0..*
+        --
+    }
+
+'do we capture the CQL definition for a term, if available?
+
+
+    class "**Data Element**" as DE<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ title 1..1
+        |_ definition 1..1
+        |_ implementation 0..1
+        --
+    }
+
+
+@enduml

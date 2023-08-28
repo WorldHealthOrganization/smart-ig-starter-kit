@@ -1,0 +1,65 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+    class "**  Logical Model  **" as LM<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ status 1..1
+        |_ name 1..1
+        |_ element 1..*
+          |_ short 1..1
+          |_ definition 1..1
+          |_ type 1..1
+          |_ binding 1..1
+          |_ definition 1..1
+          |_ comment 0..1
+          |_ constraint 0..1
+          |_ code[WorldHealthOrganizationCommon] 1..1   
+            |_ code 1..1
+          |_ code[other]
+            |_ system 1..1
+            |_ code 1..1
+            |_ comments 0..1
+            |_ relationship 0..1
+        --
+    }
+
+    class "**  Logical Model  **" as LMP<<TM>> {
+    }
+ 
+     class "**  Logical Model  **" as LMD<<TM>> {
+    }
+
+
+ class "**    Logical Model    **" as LMR<<TM>> {
+    }
+
+LM -u-|> LMP : "\n\n   Specializes  \n " 
+LM -r- LMD : "       Uses       "
+
+LM -u- LMR : "References"
+
+
+LMP -r[hidden]-|> LMR : "                           "
+LMR -D[hidden]- LMD : "  "
+'LM -u- LMR : "                "
+
+
+
+@enduml

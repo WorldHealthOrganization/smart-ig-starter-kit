@@ -12,12 +12,95 @@ date: 2021-06-03
 # copyright:
 copyrightYear: 2021+
 releaseLabel: "CI Build"
-title: "WHO SMART Guideline: IG Template"
-description: "SMART Guidlines Implemenation Guide Template"
+title: "DRAFT SMART Guidelines L3 SOP"
+description: "DRAFT SMART Guidelines L3 SOP"
 license: CC0-1.0
+
+pages: 
+  index.md:
+    title: "Home"
+#    overview.md:
+#      title: "Overview"
+    assumptions.md:
+     title: "Assumptions"
+  authoring_overview.md:
+    title: "Authoring"
+    structure.md:
+      title: "Structure of the SOP IG"
+    naming_conventions.md:
+      title: "Naming Conventions"
+    content_types.md:
+      title: "Types of Content"
+    l2_overview.md:
+      title: "L2 overview"
+    narrative.md:
+      title: "Authoring Narrative"
+    authoring_artifacts.md:
+      title: "Authoring Artifacts"
+      l3_personas.md:
+        title: "Personas"
+      l3_scenarios.md:
+        title: "User Scenarios"
+      l3_processes.md:
+        title: "Business Processes"
+      l3_logicalmodels.md:
+        title: "Logical Models"
+      l3_valuesets.md :
+        title: "Value Sets"
+      l3_codesystems.md :
+        title: "Code Systems"
+      l3_profiles.md :
+        title: "Profiles"
+      l3_decisiontables.md :
+        title: "Decision Tables"
+      l3_schedulinglogic.md :
+        title: "Scheduling Logic"
+      l3_structuremaps.md :
+        title: "Structure Maps"
+      l3_testing.md :
+        title: "Testing"
+      l3_forms.md:
+        title: "Forms"
+      l3_indicators.md:
+        title: "Indicators"
+      l3_conceptmaps.md:
+        title: "Concept Maps"
+      l3_cql.md:
+        title: "CQL"
+      l3_requirements.md:
+        title: "Requirements"
+      l3_examples.md:
+        title: "Examples"
+      # l3_testscripts.md:
+      #   title: "Test Scripts"
+      license.md:
+        title: "License"
+
+    ig_licensing.md:
+      title: "Licensing"
+    versioning.md:
+      title: "Versioning"
+  ig_setup.md:
+    title: "IG Setup"
+    github_setup.md:
+      title: "Github Initialization"
+    ig_configuration.md:
+      title: "IG Configuration"
+    folder_structure.md:
+      title: "Folders and File Structure"
+  validating_ig.md:
+    title: "Validating IG"
+    qa_check.md:
+      title: "QA check"
+  indices.md:
+    title: "Indices"
+  maps.md:
+    title: "Mappings"
+
+
 publisher:
-  name: WHO
-  url: http://who.int
+  name: TBD
+  url: http://example.int
 email: leitnerc@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001

@@ -1,0 +1,128 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor AliceBlue
+ HeaderBackgroundColor SkyBlue
+}
+
+
+skinparam class<<TM+>> {
+ BorderColor #303070  
+ BackgroundColor AliceBlue
+ HeaderBackgroundColor Turquoise 
+}
+
+
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template-who SMART-Template]]**" as Tpl<<TM>> {
+         Template look-and-feel:
+         .  HTML
+         .  Javascript
+         .  Jekyll
+         --
+    }
+
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-terminologies SMART-Terminologies]]**" as T<<TM>> {
+         Approved terminology content
+         to be used in SMART IGs 
+         --
+         SGCommonTerms
+         --
+    }
+
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base SMART-Base]]**" as Base<<TM>> {
+        Support definitions that every
+        SMART IG is required to adopt  
+        --
+        Profiles:
+        |_  SGImplementationGuide
+        |_  SGPersona
+        --
+        (Internal) ValueSets
+        --
+        **CI Build Scripts (Original)**
+    }
+
+
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-commons-clinical-encounter Commons-Clinical-Encounter  ]]**" as CE<<TM>> {
+        Common content to be used in 
+        encounter-related IGs.
+        --
+        SGEncounter 
+        --
+    }
+
+
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-empty SMART-Empty]]**" as E<<TM>> {
+        Contains foundation (e.g. dependencies) 
+        and any content that every SMART IG
+        should copy when initialized.
+        --
+        .dependsOn = base
+        template = SG-SMART
+        FSH helper functions
+        look-and-feel
+        --
+        **CI Build Scripts (reference)**
+    }
+
+
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit Starter-Kit]]**" as SK<<TM+>> {
+      Guidance on how to create 
+      and use SMART Guidelines
+      --
+    }
+
+    class "**(Any) SMART ImplementationGuide**" as IG<<TM>> {
+    }
+
+
+
+    ' class "**PublicationRepo**" as Pub<<MD>> {
+    '   Webroot content repository
+    '   for published releases (html)
+    '   --
+    ' }
+
+
+' We con't want IGs to define on StarterKit
+' Common contains instances of SGPersona
+
+SK  -d[hidden]-> Tpl : "      "
+Tpl  -d[hidden]-> Base : "      "
+
+
+Base  -l[hidden]-> Tpl : "                   "
+IG  -l[hidden]-> SK : "                   "
+'SK  -r[hidden]-> E : "                   "
+E  .u.> IG: "Cloned into"
+E .l.> Base: "Cloned into"
+'E -u-> Base: "dependsOn"
+IG --> Base: "dependsOn"
+'IG .r.> Pub : "                "
+T -d[hidden]-> IG : "           "
+
+
+
+
+
+'C -u-> Core 
+E  .r.> CE: "   Cloned into         "
+'IG  <.. CE: "   Cloned into         "
+'IG  ..> Pub 
+
+
+
+@enduml
