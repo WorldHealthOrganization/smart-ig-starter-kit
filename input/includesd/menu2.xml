@@ -1,0 +1,55 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Home<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="index.html">Summary</a></li>
+      <li><a href="changes.html">Changes</a></li>
+      <li><a href="dependencies.html">Dependencies</a></li>
+      <li><a href="references.html">References</a></li>
+	  <li><a href="adapting_guidelines.html">Adapting Guidelines for Country Use</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="requirements.html" class="dropdown-toggle">Business Requirements<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="personas.html">Generic Personas</a></li>
+      <li><a href="usecases.html">Use Cases</a></li>
+      <li><a href="business_process.html">Business Processes</a></li>
+      <li><a href="dictionary.html">Data Dictionary</a></li>
+      <li><a href="decision_support.html">Decision-support Logic</a></li>
+      <li><a href="indicators.html">Indicator and Performance Metrics</a></li>
+      <li><a href="functional.html">Functional Requirements</a></li>    
+      <li><a href="nonfunctional.html">Non-functional Requirements</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="data_exchange.html" class="dropdown-toggle">Data Models and Exchange<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="actors.html">System Actors</a></li>
+	    <li><a href="sequence_diagram.html">Sequence Diagram</a></li>
+      <li><a href="transactions.html">Transactions</a></li>
+      <li><a href="content_profiles.html">Content Profiles</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="deployment.html" class="dropdown-toggle"> Deployment<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="security_privacy.html">Security and Privacy Considerations</a></li>
+      <li><a href="testing.html">Testing</a></li>
+      <li><a href="test_data.html">Test Data</a></li>
+	  <li><a href="reference_implementation.html">Reference Implementations</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="deployment.html" class="dropdown-toggle"> Indices<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artifact Index</a></li>
+      <li><a href="maps.html">Mappings</a></li>
+    </ul>
+  </li>
+</ul>      

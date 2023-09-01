@@ -16,6 +16,55 @@ title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
 license: CC0-1.0
 
+
+menu:
+  Home: 
+    Homepage: index.html
+    Overview: '#'
+    Assumptions: 'assumptions.html'
+  Authoring:
+    Structuring of the SOP IG: 'structure.html'
+    Naming Conventions: 'naming_conventions.html'
+    Types of content: 'content_types.html'
+    Commons and Governance: 
+      Governance overview: gov_overview.html
+      Concept Governance: gov_concepts.html
+    L2 Overview: 'l2_overview.html'
+    Authoring Artifacts: 
+      Authoring: 'authoring_artifacts.html'
+      Personas: 'l3_personas.html'
+      User scenarios: 'l3_scenarios.html'
+      Processes: 'l3_processes.html'
+      Logical Models: 'l3_logicalmodels.html'
+      Value Sets: 'l3_valuesets.html'
+      Code Systems: 'l3_codesystems.html'
+      Profiles: 'l3_profiles.html'
+      Decision Tables: 'l3_decisiontables.html'
+      Scheduling Logic: 'l3_schedulinglogic.html'
+      Structure Maps: 'l3_structuremaps.html'
+      Testing: 'l3_testing.html'
+      Forms: 'l3_forms.html'
+      Indicators: 'l3_indicators.html'
+      Concept Maps: 'l3_conceptmaps.html'
+      CQL: 'l3_cql.html'
+      Requirements: 'l3_requirements.html'
+      Examples: 'l3_examples.html'
+      License: 'license.html'
+
+
+    Versioning: 'versioning.html'
+    Licensing: 'ig_licensing.html'
+  IG Setup:
+    GitHub Initialization: 'ig_licensing.html'
+    IG Configuration: 'ig_licensing.html'
+    Folders and File structure: 'ig_licensing.html'
+  Validating IG:
+    QA Check: 'qa_check.html'
+  Indices:
+    Artifacts:
+      Extensions: 'artifacts.html'
+      Value Sets: maps.html'
+
 pages: 
   index.md:
     title: "Home"
@@ -35,6 +84,10 @@ pages:
       title: "L2 overview"
     narrative.md:
       title: "Authoring Narrative"
+    gov_overview.md:
+      title: "Governance Overview"
+      gov_concepts.md:
+        title: "Concept Governance"
     authoring_artifacts.md:
       title: "Authoring Artifacts"
       l3_personas.md:

@@ -68,9 +68,12 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 
 ### **Tooling**
+
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | New persona instances can be created in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
+{:.table-bordered}  
+   
 
 
 ### **Informative examples**

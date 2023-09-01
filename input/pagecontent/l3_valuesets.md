@@ -1,5 +1,9 @@
-
 For the elements whose value is from a set of (coded) options, a FHIR ValueSet should exist. SMART Guidelines can use Common ValueSets or define new ones.
+ValueSets are used in 
+* Logical Models
+* Profiles
+* Questionnaires
+
 
 * The L3 should use same codes as defined for LM
 TO DO: Do we add a codesystem also for the discrete values e.g. male, female, etc
@@ -81,9 +85,16 @@ TO DO: When do we create a code system? When do we select codes from an existing
 
 
 ### Review procedure
+ValueSets shall be reviewed for criteria
+
 
 
 ### **Output Criteria / Definition of Done:**
+* All the elements in the L3 that have coded values shall have a corresponding valueset
+* All the values in the valueset shall be valid codes: 
+  * Available in an available code set (for example no SNOMED unless SNOMED is supported)
+  * Not deprecated
+
 
 
 
@@ -100,7 +111,7 @@ TO DO: When do we create a code system? When do we select codes from an existing
 |  Sushi | |  |
 |  OCL | |  |
 |  tx.fhir.org | |  |
-
+{:.table-bordered}  
 
 
 ### **Informative examples**

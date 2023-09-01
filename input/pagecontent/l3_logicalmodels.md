@@ -30,7 +30,6 @@ This is the overview of the activities and related artifacts used:
 <br clear="all"/>
 
 
-
 #### Looking up existing models
 
 Some of the data entries are commons. 
@@ -45,16 +44,16 @@ Inheritance is preferred for consistency, but the advantage should be checked ag
 
 
 #### Mapping DAK to a logical model
-The Data models in the L3 are associated with a data structure for exchange or for a given process. For example "capture vaccination data". L2 authors are expected to follow that rule: one tab is assumed to be one single atomic structure.
+The Data models in the L3 are associated with a data structure for exchange or for a given process. For example "capture vaccination data". L2 authors are expected to follow that rule: **one tab is assumed to be one data structure, i.e. a logical data model**.
 
-This also becomes the "atomic" unit of exchange or use in the L3 - so normally one logical model should correspond to one tab. Some factors may influence the split of a logical model into several functional blocks, besides the specialization, reference and usage described above. For example:
+This is the "atomic" unit of exchange or use in the L3. Some factors may influence the split of a logical model into several functional blocks, besides the specialization, reference and usage described above. For example:
 - Complex models may be split. For example a full "Lab Report" may consist of "Lab Report" + "Specimen" models.
 - Common sets of data elements may be captured in a separate reusable logical model.
 
 The logical model name has the name of the tab.
 Logical model should conform to the [SGLogical](TO DO) model profile.
 
-Upon starting to create the logical model, an intake validation is useful:
+Upon starting to create the logical model, an intake validation is useful, although it can be done simultaneouslty done with the editing of the logical model:
 1.  Verify that each data element needed exists in the common Glossary
     1.  If not, create and provisionally use a draft concept, and
         request that concept to be added to the common glossary.
@@ -62,7 +61,7 @@ Upon starting to create the logical model, an intake validation is useful:
         a change and decide whether to provisionally use the concept,
         or provisionally create a new one and request it to be added
         to the common glossary.
-2. The data labels should be unique within the same data model
+2. The data labels should be unique within the same data model.
 
 For each line in the tab, there shall be one data element in the logical model (represented here by `differential.element[*]`):
 
@@ -78,7 +77,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
    
 *   Data Element Label is captured in 2 places:
     -   Element id = same as label but no spaces and camelCase - e.g. "measlesVaccine"
-    -   Element short description (`differential.element[*].short`) : same as element label
+    -   Element short description (`differential.element[*].short`): same as element label
 
 -   Description and Definition: `differential.element[*].definition`
 
