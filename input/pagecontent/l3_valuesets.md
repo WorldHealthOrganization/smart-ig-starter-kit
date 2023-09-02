@@ -95,13 +95,14 @@ ValueSets shall be reviewed for criteria
   * Available in an available code set (for example no SNOMED unless SNOMED is supported)
   * Not deprecated
 
+Terminology Services
+* lookup
+* mapping
+* validate
 
 
 
-### **Issues:**
-
-* Is there a relationship before ANC.B5.DE50 and the valueset name? Would the valueset for the values for that element have a similar name?
-* this will actually result in changes to profiles - e.g. needing a value when the existing binding is Required
+### **Change tracking**
 
 
 
@@ -120,3 +121,7 @@ ValueSets shall be reviewed for criteria
 ### **Known issues and dependencies**
 
 TO DO: Preferred Terminology Server
+
+* Is there a relationship before ANC.B5.DE50 and the valueset name? Would the valueset for the values for that element have a similar name?
+* this will actually result in changes to profiles - e.g. needing a value when the existing binding is Required
+

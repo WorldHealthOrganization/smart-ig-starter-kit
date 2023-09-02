@@ -1,6 +1,6 @@
 ### **Inputs:** 
 
-* sometexthere
+* terminologies
 
 ### **Outputs:**
 
@@ -8,12 +8,17 @@
 
 ### **Activities:**
 
-* sometexthere
+#### Code Validation
+When picking a code for mapping or validation of the mapping, it is important to 
 
-### **Output Criteria / Definition of Done:**
 
-* sometexthere
+### **Criteria / Definition of Done:**
 
-### **Issues:**
+### Change tracking
 
-* sometexthere
+### **Tooling:**
+
+### **Informative examples**
+
+### **Known issues and dependencies:**
+

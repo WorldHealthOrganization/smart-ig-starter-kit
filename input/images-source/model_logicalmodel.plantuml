@@ -27,16 +27,15 @@ skinparam class<<TM>> {
           |_ definition 1..1
           |_ type 1..1
           |_ binding 1..1
-          |_ definition 1..1
           |_ comment 0..1
           |_ constraint 0..1
-          |_ code[WorldHealthOrganizationCommon] 1..1   
+          |_ code[SG] 1..1   
             |_ code 1..1
           |_ code[other]
             |_ system 1..1
             |_ code 1..1
             |_ comments 0..1
-            |_ relationship 0..1
+            |_ relationship 0..1  
         --
     }
 
@@ -51,13 +50,14 @@ skinparam class<<TM>> {
     }
 
 LM -u-|> LMP : "\n\n   Specializes  \n " 
-LM -r- LMD : "       Uses       "
+LM -r- LMD : "       Uses         "
+'LMP -r- LMR : "     "
 
-LM -u- LMR : "References"
+LM -u- LMR : "Ref."  
 
 
-LMP -r[hidden]-|> LMR : "                           "
-LMR -D[hidden]- LMD : "  "
+LMP -r[hidden]-|> LMR : "                      "
+LMR -D[hidden]- LMD : "      \n\n\n\n\n  "
 'LM -u- LMR : "                "
 
 

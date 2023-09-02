@@ -21,8 +21,12 @@ A special case of code system is when existing codes need to be complemented - f
 
 ### **Output Criteria / Definition of Done:**
 
-* sometexthere
+### Change tracking
 
-### **Issues:**
+### **Tooling:**
 
-* sometexthere
+### **Informative examples**
+
+### **Known issues and dependencies:**
+
+

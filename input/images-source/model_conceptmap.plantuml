@@ -1,0 +1,48 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+
+
+    class "**  ConceptMap  **" as CM<<TM>> {
+        |_ identifier[SG] 1..*   
+        |_ url 1..1
+        |_ version 1..1
+        |_ name 0..1
+        |_ title 1..1
+        |_ status 1..1
+        |_ experimental 1..1
+        |_ publisher 0..1
+        |_ description 1..1
+        |_ status 1..1
+        |_ name 1..1
+        |_ group  1..*
+          |_ source 1..1
+          |_ target 1..1
+          |_ maps 1..1
+            |_ sourcecode 1..1
+            |_ targetcode 1..1
+            |_ equivalence 0..1    
+        --
+    }
+
+
+
+
+@enduml

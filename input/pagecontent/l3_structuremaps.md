@@ -63,10 +63,8 @@ StructureMaps may be reused. A few situations where this is useful:
 * Test Bundle that includes maps and all the dependencies
 * TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc?
 
-### **Issues:**
 
-* Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not validxthere
-
+### **Change tracking**
 
 ### **Tooling:**
 
@@ -75,3 +73,15 @@ StructureMaps may be reused. A few situations where this is useful:
 | Matchbox | |  |
 | IG Publisher | Convert FML files |  |
 |  | |  |
+
+
+### **Informative examples**
+
+### **Known issues and dependencies:**
+* Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not validxthere
+
+
+
+
+
+

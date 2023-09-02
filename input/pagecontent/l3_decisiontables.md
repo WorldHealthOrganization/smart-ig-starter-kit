@@ -41,6 +41,13 @@ Decision tree auto generation
 
 * Every Decision Table SHALL have a Requirements document pointing at it (for testability and inheritability)
 
-### **Issues:**
 
-* sometexthere
+### **Change tracking**
+
+### **Tooling:**
+
+### **Informative examples**
+
+### **Known issues and dependencies:**
+
+
