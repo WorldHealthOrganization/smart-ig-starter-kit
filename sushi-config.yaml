@@ -18,19 +18,27 @@ license: CC0-1.0
 
 
 menu:
+  # Top: 
+  #   Section 1: section1.html
+  #   Section 2:
+  #     Section 2.1: section21.html
+  #     Section 2.2: section22.html
+  #   Section 3: section3.html
+
   Home: 
     Homepage: index.html
     Overview: '#'
     Assumptions: 'assumptions.html'
   Authoring:
     Structuring of the SOP IG: 'structure.html'
-    Naming Conventions: 'naming_conventions.html'
     Types of content: 'content_types.html'
     Commons and Governance: 
+      Common Artifacts: gov_overview.html
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
     L2 Overview: 'l2_overview.html'
     Authoring Artifacts: 
+#      Naming Conventions: 'naming_conventions.html'
       Authoring: 'authoring_artifacts.html'
       Personas: 'l3_personas.html'
       User scenarios: 'l3_scenarios.html'
@@ -57,7 +65,7 @@ menu:
   IG Setup:
     GitHub Initialization: 'ig_licensing.html'
     IG Configuration: 'ig_licensing.html'
-    Folders and File structure: 'ig_licensing.html'
+#    Folders and File structure: 'ig_licensing.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
@@ -76,8 +84,8 @@ pages:
     title: "Authoring"
     structure.md:
       title: "Structure of the SOP IG"
-    naming_conventions.md:
-      title: "Naming Conventions"
+#    naming_conventions.md:
+#      title: "Naming Conventions"
     content_types.md:
       title: "Types of Content"
     l2_overview.md:
@@ -139,8 +147,8 @@ pages:
       title: "Github Initialization"
     ig_configuration.md:
       title: "IG Configuration"
-    folder_structure.md:
-      title: "Folders and File Structure"
+#    folder_structure.md:
+#      title: "Folders and File Structure"
   validating_ig.md:
     title: "Validating IG"
     qa_check.md:
@@ -154,8 +162,8 @@ pages:
 publisher:
   name: TBD
   url: http://example.int
-email: leitnerc@who.int
+  email: leitnerc@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 # experimental: true
-dependencies:
+

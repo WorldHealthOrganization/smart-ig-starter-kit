@@ -1,4 +1,4 @@
-StructureMaps are used for transforming data
+StructureMaps are used for transforming databetween formats. For example between QuestionnaireResponses and FHIR target profile instances.
 
 <figure>
   {% include extraction.svg %}
@@ -8,14 +8,16 @@ StructureMaps are used for transforming data
 ### **Inputs:** 
 
 * DAK Data Dictionary / L2 Logical Model
+* FHIR Profiles
+* Questionnaire
 * FHIR Artifacts catalog
-
 
 
 ### **Outputs:**
 
 * StructureMaps in `input/resources/maps`
-* TO DO
+* Test Bundle that includes maps and all the dependencies
+
 
 ### **Activities:**
 
@@ -37,8 +39,7 @@ The following structuremaps are expected:
 
 * For [Forms / Questionnaires](forms.html)
   * the data extraction map from Questionnaire to Logical Model instances
-
-* For [Forms / Questionnaires](forms.html), the data extraction questionnaire to Logical Model instances
+  * the data extraction map from Logical Model instances to FHIR resources
 
 
 * Create Maps in FML language
@@ -54,17 +55,23 @@ StructureMaps may be reused. A few situations where this is useful:
 2. 
 
 
-
 ### **Output Criteria / Definition of Done:**
 
-* Mappings should create valid StructureMaps
-  * No QA errors on QA page
-* All the dependencies of the StructureMap shall be in the IG dependencies - SDC, base profiles, logical models,...  
-* Test Bundle that includes maps and all the dependencies
-* TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc?
+* Mappings should create valid StructureMaps - including the necessary metadata. 
+  * the map should be correctly parsed and validated by the publisher
+  * optional metadata should according to the spec 
+    * group names should not contain spaces
+
+* All the dependencies of the StructureMap shall be in the IG dependencies - SDC, base profiles, logical models, etc.
+
+<div class="todo">
+* TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc.?
+</div>
 
 
 ### **Change tracking**
+* All artifacts should have a change history.
+
 
 ### **Tooling:**
 
@@ -77,11 +84,8 @@ StructureMaps may be reused. A few situations where this is useful:
 
 ### **Informative examples**
 
+
 ### **Known issues and dependencies:**
-* Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not validxthere
-
-
-
-
+* Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not valid.
 
 

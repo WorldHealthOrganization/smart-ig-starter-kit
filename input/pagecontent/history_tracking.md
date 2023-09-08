@@ -1,8 +1,3 @@
-## Versioning
-
-
-
-## History
 After [publication](), any changes to the L3 resources should be tracked. 
 Tracking changes should include:
 
@@ -38,18 +33,12 @@ This data is represented in a FHIR Provenance resource:
 * `agent.type` is the role of participant in the change (author, reviewer) and SHALL be bound to the ValueSet `http://terminology.hl7.org/CodeSystem/provenance-participant-type`
 * `agent.who` is the name of participant in the change
 
-<div class="todo">
-TO DO: SGHistoryProvenance Profile?
-</div>
-<div class="todo">
-TO DO: Tooling: Ask for pages to be tracked as well.
-</div>
+<p class="todo">TO DO: SGHistoryProvenance Profile?</p>
+<p class="todo">TO DO: Tooling: Ask for pages to be tracked as well.</p>
 
 ### Version Difference
 For some artifacts, the FHIR ImplementationGuide tooling may highlight the differences in the content of the artifacts between two versions. This can be used to track and demonstrate the detailed artifact changes.
 
 
 ### Release Notes
-<div class="todo">
-TO DO
-</div>
+<p class="todo">TO DO

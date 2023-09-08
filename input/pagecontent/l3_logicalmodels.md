@@ -10,6 +10,7 @@ Logical models relate to other models in 3 aspects:
 * Logical models can refer to other models - for example a request referencing a product
 
 
+Each Logical Model is defined by the following data:
 <figure>
   {% include model_logicalmodel.svg %}
 </figure>
@@ -38,7 +39,9 @@ If an existing model is found, it is possible to
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
+<div class="todo">
 TO DO: describe what can be done with logical model specializations.
+</div>
 
 Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
 
@@ -76,17 +79,21 @@ The hierarchical naming will depend on several factors and is best addressed by 
     -   Unknow → C.3 Unknown  
    
 *   Data Element Label is captured in 2 places:
-    -   Element id = same as label but no spaces and camelCase - e.g. "measlesVaccine"
     -   Element short description (`differential.element[*].short`): same as element label
+    -   Element id = same as label but no spaces and camelCase - e.g. "measlesVaccine"
+> this makes the logical model tree easier to read, with meaningful names in the tree, while the mapping to the "internal" element ids like `DE1.3` are persisted as a mapping.
 
 -   Description and Definition: `differential.element[*].definition`
 
--   Multiple Choice Type (if applicable): This means the question will have possibly several answers. This corresponds to a `*` in cardinality.
+-   Multiple Choice Type (if applicable): This means the element may have several possible values (as in a multiple-choice question). This corresponds to a `*` in cardinality.
 
--   Data Type is captured in `differential.element[*].type`
-    -   Logical data types should be defined
+-   Data Type is captured in `differential.element[*].type` 
+  
+<span class="todo">    - TO DO:  Logical data types should be defined </span>
+
 
 -   Input Options: is captured in the bindings
+
 
 -   Input Option Groupings: this is a grouper for the rows that have a common group.
 
@@ -101,9 +108,9 @@ The hierarchical naming will depend on several factors and is best addressed by 
 -   Required is captured in cardinality
 
 -   Explain Conditionality
-
+<div class="todo">
 TO DO: define the links and how to store these links in a repository.
-
+</div>
 -   Annotations
     -   Example:
     -   "Measles Vaccine" → short= "measlesVaccine"
@@ -129,7 +136,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
   * The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings
 
 
-### Change tracking
+### **Change tracking**
 
 
 
@@ -138,7 +145,8 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | Create LMs with fsh syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
-
+{:.table-bordered}  
+   
 
 
 

@@ -54,9 +54,10 @@ The recommended priority for the search for existing profiles
 * All data elements that need to be exchanged or used in a decision, workflow, or indicator are covered by one or more profiles.
 
 
-### Change tracking
+### **Change tracking**
 
 ### **Tooling**
+
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 |  | |  |

@@ -192,8 +192,15 @@ em {
     transform: translateY(-50%) rotate(270deg);
   }
 
+  :root {
+    --showtodo: "on";
+  }
 
+  .todo {
+    display: none; /* Default to not display */
+    background-color: #ffe0e0; /* Very light pink */
 
-  
-    
-    
+    /* If --showtodo is set to "on", display the element */
+    display: var(--showtodo, "off") == "on" ? block : none;
+}
+

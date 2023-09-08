@@ -1,8 +1,4 @@
-Data for the can be entered in .... or from questionnaires
- sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+Data used in the different stages of the business processes can 
 
 Forms represent data that can be acquired manual
 
