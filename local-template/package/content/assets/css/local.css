@@ -193,7 +193,7 @@ em {
   }
 
   :root {
-    --showtodo: "on";
+    --showtodo: "off";
   }
 
   .todo {
