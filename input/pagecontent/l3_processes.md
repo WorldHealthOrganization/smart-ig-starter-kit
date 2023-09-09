@@ -31,13 +31,16 @@ TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
 <img src="./process_process.png" style="width:50%"/>
 <br clear="all"/>
 
-### **Checking for reusable Processes**
+### **Checking for reusable Business Processes**
 * The author can check the existing process repository to see if there is a matching process. 
 <div class="todo">
 TO DO: Do we want to link processes to models?
 </div>
-### **Creating new Processes**
+
+### **Creating a new Business Process**
 * Creating a new business process consists of creating a PlanDefinition resource following the profile BusinessProcess. The data needs are described in the model below:
+
+### **Creating Business Process diagram**
 
 
 

@@ -26,7 +26,7 @@ Initiatives about prevention, monitoring or addressing medical conditions.
 ### Business Process
 A collection of related tasks or activities that achieve a specific organizational goal. Business processes often encompass or give rise to multiple user scenarios, especially in complex systems.
 * L2: []()
-* L3: [Business Processes](l3_businessprocesses.html)
+* L3: [Business Processes](l3_processes.html)
 
 
 ### Requirement
