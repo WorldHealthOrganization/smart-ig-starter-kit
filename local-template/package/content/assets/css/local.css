@@ -194,13 +194,20 @@ em {
 
   :root {
     --showtodo: "off";
+    --display-todo: none; /* Default display value */    
+  }
+
+/* If --showtodo is set to "on", modify the --display-todo variable */
+  [data-showtodo="on"] {
+    --display-todo: block;
   }
 
   .todo {
-    display: none; /* Default to not display */
+    display: var(--display-todo);
     background-color: #ffe0e0; /* Very light pink */
+  }
 
-    /* If --showtodo is set to "on", display the element */
-    display: var(--showtodo, "off") == "on" ? block : none;
-}
 
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 1.2em;
+  }

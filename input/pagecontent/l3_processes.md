@@ -45,7 +45,7 @@ TO DO: Do we want to link processes to models?
 
 
 ### **Output Criteria / Definition of Done:**
-
+* The PlanDefinition should 
 
 ### **Change tracking**
 
