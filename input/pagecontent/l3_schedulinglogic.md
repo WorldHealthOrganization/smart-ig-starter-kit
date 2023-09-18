@@ -32,7 +32,7 @@ Other Example :  create reminders to come to vaccine tomorrow
 | Tool | Usage | Doc |
 | --- | ---| --- |
 |  |  | |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
    
 
 ### **Informative examples**

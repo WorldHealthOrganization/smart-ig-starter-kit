@@ -66,9 +66,10 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 
 ### **Criteria / Definition of Done**
-* Personas SHALL use the SGPersona ActorDefinition profile
-* Persona source follow the guidelines for file content and names
+* All Personas SHALL use the SGPersona ActorDefinition profile
+* Each Persona source follow the guidelines for file content and names
 * All the personas SHOULD be from the Personas glossary; any exceptions will have to be resolved before final publication
+
 
 ### **Change tracking**
 
@@ -78,7 +79,7 @@ Personas will be associated with actions(processes). The tracking of that associ
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | New persona instances can be created in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
    
 
 

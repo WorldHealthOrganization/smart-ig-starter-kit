@@ -1,0 +1,52 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+class "**Requirement**" as R<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ status 1..1
+    |_ name 1..1
+    |_ title 1..1
+    |_ description 1..1
+    |_ activityId 1..1  
+    |_ category 0..*
+    --
+}
+
+class "**Functional**\n**Requirement**" as FR<<TM>> {
+    |_ process 1..*
+    |_ persona 1..*
+    |_ description 1..1  
+      |_ text 1..1  
+      |_ functionality 1..1  
+      |_ goal 1..1  
+    --
+}
+
+class "**Non-Functional**\n**Requirement**" as NFR<<TM>> {
+    |_ category 1..*
+    |_ description 1..1  
+      |_ text 1..1  
+    --
+}
+
+FR -u-|> R
+NFR -u-|> R
+
+@enduml

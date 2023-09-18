@@ -48,7 +48,7 @@ Decision tree auto generation
 | Tool | Usage | Doc |
 | --- | ---| --- |
 |  |  | |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
    
 
 ### **Informative examples**

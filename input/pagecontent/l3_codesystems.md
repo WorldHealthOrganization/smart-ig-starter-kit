@@ -44,7 +44,7 @@ This is the overview of the activities and related artifacts used:
 |  Sushi | |  |
 |  OCL | |  |
 |  tx.fhir.org | |  |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
 
 
 ### **Informative examples**

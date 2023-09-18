@@ -34,15 +34,15 @@ TO DO: This deserves some data generation feature.
 
 
 ### **Output Criteria / Definition of Done:**
-* No QA issues
 * Each User Scenario in the L2 should be covered by one or more ExampleScenarios
   * At least the "normal" flow shall be covered by an example scenario
-* ExampleScenarios should be validated by the publisher 
+* ExampleScenarios should reference the example instances from the other resources (see [profiles](l3_profiles.html), [decision tables](l3_decisiontables.html), [scheduling logic](l3_schedulinglogic.html), [forms](l3_forms.html), [indicators](l3_indicators.html))
+* ExampleScenarios should be validated by the publisher (i.e. no QA issues)
 * ExampleScenarios should be reviewed by the L2 author
 
 
 ### **Change tracking**
-
+ExampleScenarios are not normative material. Change tracking shall follow the general guidance.
 
 
 ### **Tooling**
@@ -50,7 +50,7 @@ TO DO: This deserves some data generation feature.
 | Tool | Usage | Doc |
 | --- | ---| --- |
 | Sushi | New ExampleScenarios can be created in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
    
 
 

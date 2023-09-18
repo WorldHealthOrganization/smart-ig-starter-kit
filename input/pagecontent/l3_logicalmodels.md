@@ -121,6 +121,14 @@ For bindings, check whether the value set already exists in an upstream package.
 -   If not, create a new value set.
     -   New value sets are registered and follow the valueset governance process that is adjacent to authoring of L3 content.
 
+
+#### Binding elements to value sets
+When adding valuesets, the binding strength should be considered: 
+* If the valueset is expected to be used or adapted in downstream adaptations, the binding should be more permissive (i.e. either example or preferred).
+See [valuesets](l3_valuesets.html) for procedures on obtaining or creating valuesets.
+
+
+
 #### Mapping to other semantic references
 Semantic mapping is done with ConceptMaps, establishing the relationship between the DAK elements and reference terminologies, central dictionary, or other DAKS.
 
@@ -128,6 +136,9 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 ### **Criteria / Definition of Done:**
 
+* One logical model per json file / One profile per fsh file, as per naming convention
+  * The constraints or invariants applicable to a logical model may be contained in the same FSH file.
+  * elements that are repeatable across different models (e.g. Patient Demographics) shall be in a separate FSH file.
 * All data elements in the DAK shall be in one logical model
 * All data elements defined in DAK as calculated elements shall be present in a logical model
 * All elements in the DAK have one and only one WHO SMART Code. 
@@ -145,7 +156,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | Create LMs with fsh syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
    
 
 

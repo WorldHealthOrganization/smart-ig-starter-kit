@@ -117,7 +117,7 @@ Terminology Services
 |  Sushi | |  |
 |  OCL | |  |
 |  tx.fhir.org | |  |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
 
 
 ### **Informative examples**

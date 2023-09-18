@@ -55,7 +55,7 @@ TO DO: Do we want to link processes to models?
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 |  | |  |
-{:.table-bordered}  
+{:.table-bordered.full-width}  
 
 ### **Informative examples**
 

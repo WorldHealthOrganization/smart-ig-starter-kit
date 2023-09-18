@@ -9,6 +9,7 @@ Therefore some profiles for FHIR artifacts share commonalities.
 
 ### **Outputs:**
 * Profiles in `input/profiles` or `input/fsh/profiles`
+* Example instances in `input/examples` or `input/fsh/examples`
 
 
 ### **Activities:**
@@ -50,17 +51,23 @@ The recommended priority for the search for existing profiles
 
 ### **Output Criteria / Definition of Done:**
 
+* One profile per json file / One profile per fsh file, as per naming convention
+  * The constraints or invariants applicable to a profile may be contained in the same FSH file.
 * All profiles shall be valid profiles
 * All data elements that need to be exchanged or used in a decision, workflow, or indicator are covered by one or more profiles.
+* Every profile shall have one example instance
 
-
+ 
 ### **Change tracking**
+* Profiles are essential traceability artifacts, and all changes to a profile shall be tracked in change history
+* Breaking changes to a prior published release should follow a dedicated review process
 
 ### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
-|  | |  |
+| Sushi | Profiles can be authored in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
+{:.table-bordered.full-width}  
 
 
 ### **Informative examples**

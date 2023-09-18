@@ -211,3 +211,7 @@ em {
   h1, h2, h3, h4, h5, h6 {
     padding-top: 1.2em;
   }
+
+  .full-width {
+    width: 100%;
+}
