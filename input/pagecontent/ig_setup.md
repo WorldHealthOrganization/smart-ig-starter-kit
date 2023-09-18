@@ -49,7 +49,7 @@ The default branch is expected to build with the empty default content. Until a 
 The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
 
 
-# ImplementationGuide Configuration
+### ImplementationGuide Configuration
 
 After initializing the IG, it must be configured:
 
@@ -58,28 +58,3 @@ After initializing the IG, it must be configured:
 
 * L3 authors should ensure that the content has some feedback mechanism.
 
-
-
-### Folder structure
-For artifacts, the canonical folder structure is the following:
-
-* `input/actors`
-* `input/scenarios`
-* `input/testing`
-* `input/examples`
-* `input/process`
-* `input/plandefinitions`
-* `input/process`
-* `input/activitydefinition`
-* `input/models`
-* `input/valuesets`
-* `input/codesystems`
-* `input/questionnaires`
-* `input/profiles`
-* `input/maps`
-* `input/cql`
-* `input/libraries`
-* `input/measures`
-* `input/requirements`
-* `input/requests`
-* `input/definitions`

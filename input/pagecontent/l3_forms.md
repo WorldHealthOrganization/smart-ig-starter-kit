@@ -1,14 +1,17 @@
+Data used in the different stages of the business processes can 
+
+Forms represent data that can be acquired manual
+
 ### **Inputs:** 
 
-* sometexthere
-
+* Logical model
+* ValueSets associated with logical model
 
 
 ### **Outputs:**
 
 * Questionnaires
 * Example QuestionnaireResponses for testing
-
 
 * Questionnaires elements may link to the data elements in the
   * Note that this can conflict with the definition-based extraction described below
@@ -29,9 +32,7 @@
 
 * Questionnaire Responses
 
-### **Issues:**
-
-* sometexthere
+### **Change tracking**
 
 
 ### **Tooling:**
@@ -43,3 +44,9 @@
 |  | |  |
 
 Several SDC-related tools and implementations are available from the [HL7 Confluence](https://confluence.hl7.org/display/FHIRI/SDC+Implementations).
+
+### **Informative examples**
+
+### **Known issues and dependencies:**
+
+

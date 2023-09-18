@@ -28,7 +28,6 @@
   - c. Other elements
 
 
-
 L3 artifact type catalog - getting tasks/immunizationrecom - cpg profiles
 Guidance column - communication request
 Actiona colum - machine action
@@ -41,6 +40,19 @@ Decision tree auto generation
 
 * Every Decision Table SHALL have a Requirements document pointing at it (for testability and inheritability)
 
-### **Issues:**
 
-* sometexthere
+### **Change tracking**
+
+### **Tooling:**
+
+| Tool | Usage | Doc |
+| --- | ---| --- |
+|  |  | |
+{:.table-bordered.full-width}  
+   
+
+### **Informative examples**
+
+### **Known issues and dependencies:**
+
+

@@ -8,8 +8,7 @@ Each Persona is defined by the following data:
 The L3 author must ensure there is an ActorDefinition for each Persona mentioned in the L2. If the Persona doesn't exist in the Personas Glossary yet,
 this process can propose the creation of another different persona. This
 creation of a new persona is a provisional measure; there SHALL be a
-governance process for Personas. In that governance, there SHALL be a requirement that all personas in the final publication of a
-specification SHALL be approved.
+governance process for Personas. In that governance, there SHALL be a requirement that all personas in the final publication of a specification SHALL be approved.
 
 ### **Inputs:** 
 
@@ -22,8 +21,9 @@ specification SHALL be approved.
 * L3 ActorDefinition compatible with the SGPersona profile
 * Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation
 * Narrative page listing the Personas
+<div class="todo">
   * TO DO: What to do with this? How is it published in L3? Table? Will add dependencies from tooling.
-
+</div>
 ### **Activities:**
 
 <img src="./process_personas.png" style="width:50%"/>
@@ -32,9 +32,10 @@ specification SHALL be approved.
 #### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its
 definitions is adequate to the case submitted, the author shall reuse an existing persona 
+<div class="todo">
 TO DO: how? See IG Publisher issue https://github.com/HL7/fhir-ig-publisher/issues/311
   -   Create a dummy / void profile
-
+</div>
 If an ActorDefinition already exists in the Commons repository, but its
 definitions is not adequate to the case submitted,
 
@@ -44,33 +45,42 @@ definitions is not adequate to the case submitted,
 #### Creating a new Persona definition
 If no ActorDefinition exists in the Commons repository, create a draft & propose a new persona.
 
-`.identifier` - don't add an identifier. A final identifier will be
-assigned in the persona approval / onboarding process.
+`.identifier` - don't add an identifier. A final identifier will be assigned in the persona approval / onboarding process. 
+
+<div class="todo">
+TO DO: NamingSystem for Actor Identifiers?
+</div>
+<div class="todo">
+TO DO: SGPersona is a profile of Shareable? Publishable?
+</div>
 
 `.status` = fixed value `draft`
-
 `.name` - add a meaningful computer-readable name (no spaces, PascalCase)
-
 `.title` - add a meaningful title we.g. `Healthcare Worker`
 `.description` - add a summary description
 `.type` - fixed value `person`
-`.description` - add a summary description
+`.description` - add a summary description  
 
 
 Personas will be associated with actions(processes). The tracking of that association is managed in another process. See [Common artifacts governance](commons_governance.html).
 
 
 ### **Criteria / Definition of Done**
-* Personas SHALL use the SGPersona ActorDefinition profile
+* All Personas SHALL use the SGPersona ActorDefinition profile
+* Each Persona source follow the guidelines for file content and names
 * All the personas SHOULD be from the Personas glossary; any exceptions will have to be resolved before final publication
 
-### Change tracking
+
+### **Change tracking**
 
 
 ### **Tooling**
+
 | Tool | Usage | Doc |
 | --- | ---| ---| 
 | Sushi | New persona instances can be created in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
+{:.table-bordered.full-width}  
+   
 
 
 ### **Informative examples**
@@ -78,7 +88,9 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 
 ### **Known issues and dependencies**
-* TO DO: Is it a good idea to use R5 in base / core and have an R4 IG depend on the R5 core?
+<div class="todo">
+* TO DO: How to use R5 resourcesin an R4 IG ? Sushi issue on the way
+</div>
 * (links to issues, or zulip, or open questions)
 
 

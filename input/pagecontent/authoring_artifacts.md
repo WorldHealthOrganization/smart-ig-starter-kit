@@ -231,38 +231,46 @@ The table below shows the content types that are to be created as part of the L3
 </table>
 
 ### File locations
+
+#### Narrative
 For narrative, all files are in `input/pagecontent` and can be written in xhtml or markdown.
 See the guidance on authoring [narrative](narrative.html).
 
-For artifacts:, the canonical folder structure is
+#### Artifacts
+The canonical folder structure for all artifacts is: 
+
+#### Native FHIR (JSON / XML)
 For json or xml content, the file name SHALL be in the form
 * ResourceType-resourceid.xml/json (preferred)
 * ResourceType/resourceid.xml/json
 * resourceid.xml/json
 
+#### FSH Content
 For fsh content, the file name SHALL be in the form
 * `ResourceType/resourceid.fsh`
 
-* `input/actors`
+The input folders for the resources are:
 * `input/scenarios`
+* `input/actors`
+* `input/measures`
+* `input/requirements`
+* `input/processes`
+* `input/plandefinitions`
+* `input/activitydefinition`
 * `input/testing`
 * `input/examples`
-* `input/process`
-* `input/plandefinitions`
-* `input/process`
-* `input/activitydefinition`
-* `input/models`
-* `input/valuesets`
 * `input/codesystems`
+* `input/valuesets`
+* `input/models`
 * `input/questionnaires`
 * `input/profiles`
 * `input/maps`
 * `input/cql`
 * `input/libraries`
-* `input/measures`
-* `input/requirements`
 
+<p class="todo"> TO DO: Decision Tables and Scheduling Logic? Should these represent the 16 types of objects?</p>
 
+For FSH, the folders are the same but in the `fsh` folder, e.g. `input/fsh/scenarios`, `input/fsh/actors` etc.
 
 
 ## Naming convention
@@ -271,7 +279,7 @@ Resource IDs
 * ValueSets should be prefixed or suffixed by VS (not enforced)
 * Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there's no conflict
 * Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
-  * **`resourceid`** is valid
+  * **`Resourceid`** is valid
   * **`Resource-id`** is also valid, although not preferred
 
 
@@ -282,13 +290,10 @@ Resource IDs
 * Sushi / FSH Aliases should be stored in `fsh/Aliases.fsh`
 
 
-
 ### Versioning
-
 see also [versioning](versioning.html)
 
 
 ## Governance
-Adding artifacts, what goes into common-clinical, etc.
-TO DO
+<p class= "todo">TO DO: Adding artifacts, what goes into common-clinical, etc.</p>
 
