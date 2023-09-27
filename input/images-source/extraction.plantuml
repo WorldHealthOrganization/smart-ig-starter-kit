@@ -3,6 +3,7 @@
 skinparam linetype polyline
 hide circle
 hide stereotype
+allowmixing
 
 '!pragma layout smetana
 
@@ -26,20 +27,19 @@ skinparam class<<TM>> {
 }
 
 
-legend 
-This will be a diagram that shows different types of data extraction: 
-* From FHIR-native systems that are not aligned with SGs?
-* Questionnaires - 2-step tranforms
-* From other systems?
-endlegend
-
 class "**Logical Model**" as LM<<DM>> {
 }
 
 class "**Profile**" as P<<DM>> {
 }
 
-class "**StrutureMap**" as SM<<TM>> {
+class "**StrutureMap**\n**QResp &#8594; LM**" as SMQL<<TM>> {
+}
+
+class "**StrutureMap**\n**LM &#8594; Instance**" as SMLR<<TM>> {
+}
+
+class "**StrutureMap**\n**(Group)**" as SMG<<TM>> {
 }
 
 class "**Questionnaire**" as Q<<DM>> {
@@ -52,10 +52,40 @@ class "**QuestionnaireResponse**" as QR<<TM>> {
 class "**LM Instance**" as LMI<<TM>> {
 }
 
-class "**Resource Instance**" as RI<<TM>> {
+package "**Resource Bundle**" as RIP {
+  class "**Resource Instance**" as RI<<TM>> {
+  }
 }
 
-LM - LM: contains /\n references
+'LM - LM: contains /\n references
+
+'QR -r-> LMI
+
+queue "   (transform)     " as T1
+queue "   (transform)     " as T2
+
+QR -r-> T1
+T1 -r-> LMI : "    "
+SMQL -u-> T1
+
+LMI -r-> T2 : "    "
+T2 -r-> RI
+SMLR -u-> T2 : "       "
+
+
+
+LM .d.|> LMI: "                        "
+QR .u.|> Q
+'RI .u.|> P
+RI .u.|> P
+
+SMQL -r-o SMG: "        "
+SMLR -l-o SMG: "        "
+
+'SMQL -u[hidden]- LM
+'SMLR -u[hidden]- LM
+
+'SMLR -r[hidden]- P: "             "
 
 
 @enduml

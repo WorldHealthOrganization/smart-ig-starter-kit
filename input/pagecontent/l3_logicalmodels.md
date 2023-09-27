@@ -54,9 +54,11 @@ This is the "atomic" unit of exchange or use in the L3. Some factors may influen
 - Common sets of data elements may be captured in a separate reusable logical model.
 
 The logical model name has the name of the tab.
-Logical model should conform to the [SGLogical](TO DO) model profile.
+Logical model should conform to the [SGLogical](http://build.fhir.org/ig/WorldHealthOrganization/smart-base/StructureDefinition-SGLogicalModel.html) model profile.
 
-Upon starting to create the logical model, an intake validation is useful, although it can be done simultaneouslty done with the editing of the logical model:
+Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are persent in the L2.
+
+To start creating the logical model, an intake validation is useful, although it can be done simultaneouslty done with the editing of the logical model:
 1.  Verify that each data element needed exists in the common Glossary
     1.  If not, create and provisionally use a draft concept, and
         request that concept to be added to the common glossary.

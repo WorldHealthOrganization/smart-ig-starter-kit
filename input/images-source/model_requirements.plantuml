@@ -18,7 +18,7 @@ skinparam class<<TM>> {
  HeaderBackgroundColor #8bd
 }
 
-class "**Requirement**" as R<<TM>> {
+class "**Requirement Set**" as RS<<TM>> {
     |_ identifier[SG] 1..*   
     |_ status 1..1
     |_ name 1..1
@@ -26,6 +26,13 @@ class "**Requirement**" as R<<TM>> {
     |_ description 1..1
     |_ activityId 1..1  
     |_ category 0..*
+    --
+}
+
+class "**Requirement**" as R<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ category 0..*
+    |_ strength 0..1
     --
 }
 
@@ -40,12 +47,12 @@ class "**Functional**\n**Requirement**" as FR<<TM>> {
 }
 
 class "**Non-Functional**\n**Requirement**" as NFR<<TM>> {
-    |_ category 1..*
     |_ description 1..1  
       |_ text 1..1  
     --
 }
 
+R -u-* RS
 FR -u-|> R
 NFR -u-|> R
 

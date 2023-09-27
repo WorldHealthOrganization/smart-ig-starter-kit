@@ -7,7 +7,7 @@ The L3 author is expected to capture the requirements in a [Requirements](https:
 
 The requirements capture the following data:
 <figure>
-  {% include model_logicalmodel.svg %}
+  {% include model_requirements.svg %}
 </figure>
 
 
@@ -23,16 +23,29 @@ The requirements capture the following data:
 
 ### **Activities:**
 The L3 author takes the L2 requirements and expresses those as FHIR Requirements.
+In FHIR, the resource used is a Requirements - which is a set of requirement statements. So, each requirement in the L2 group will normally be one of the statements included in a Requirements resource. The Requirements resource identifies the Business Process for which the requirements are being expressed e.g "Register Client".
+
+The Requirements will capture the following elements:
+* id: the unique id of the requiremetn set, using the convention `<sg>-<p>-fxnreq`, where `<sg>` is the abbreviation of the SMART guideline (e.g. `immz`) and `<p>` is the letter of the functional process e.g. `e` corresponding to "Register Client".
+* title: 
+* status
+* statement: one statement for each requirement, e.g. 
+  * key: the unique id of the requirement e.g. `IMMZ.FXNREQ.087`
+  * label: an optional short label for the requirement
+  * conformance: the optional strength of the requirement
+  * requirement: The actual text, as a Scrum-like description:
+    * *"As a "* ... [Persona]
+    * *"I want"* ... [Functionality/activity]
+    * *"So that"* ... [Functional goal]
+
+  
 
 ### **Output Criteria / Definition of Done:**
 * Each requirement shall be associated with a Persona.
 * Each Functional requirement shall have a link to a business [Process] that it is associated with
   * Each Functional requirement should have an Activity ID
 
-* Each requirement shall have a unique id, a title, and a Scrum-like description:
-  * *"As a "* ... [Persona]
-  * *"I want"* ... [Functionality/activity]
-  * *"So that"* ... [Functional goal]
+* Each requirement shall have a unique id, a title, and the Scrum-like description.
 
 
 ### **Change tracking**
