@@ -39,6 +39,7 @@ Decision tree auto generation
 ### **Output Criteria / Definition of Done:**
 
 * Every Decision Table SHALL have a Requirements document pointing at it (for testability and inheritability)
+* Every parameter in the decision table should be in the data dictionary
 
 
 ### **Change tracking**

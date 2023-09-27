@@ -134,7 +134,7 @@ The table below shows the content types that are to be created as part of the L3
         </tr>
         <tr>
             <td>FHIR ActivityDefinition</td>
-            <td>input/process<br/>input/activitydefinitions</td>
+            <td>input/processes<br/>input/activitydefinitions</td>
             <td><a href="l3_processes.html">Activity definitions</a></td>
         </tr>
         <tr>

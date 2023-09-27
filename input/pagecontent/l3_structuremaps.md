@@ -1,7 +1,13 @@
 
-StructureMaps are a machine-readable specification for data transformation. They are used in converting data from one format to another. For  the SMART Guidelines, StructureMaps are used to convert data between QuestionnaireResponses and FHIR target profile instances.
+StructureMaps are a machine-readable specification for data transformation. They are used in converting data from one format to another. For  the SMART Guidelines, StructureMaps are used to convert data between QuestionnaireResponses and FHIR target profile instances. This is done in 2 steps:
+1. Extract a Questionnaire Response into a Logical Model instance  
+  This gets the data in a simple form that only depends on the data specification, and not on the profiles that are used
+2. Extract the Logical Model instance into the FHIR resource instances
 
-StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/fhir/R4/mapping-language.html) (see also [tutorial](https://hl7.org/fhir/R4/mapping-tutorial.html)).
+This process is done by 3 StructureMaps: 
+* The StructureMap from QuestionnaireResponse to logical model instance;
+* The StructureMap from logical model instance to Resource instance ;
+* A grouping map that combines the two maps above to enable a single transform operation.
 
 
 <figure>
@@ -9,6 +15,9 @@ StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/
 </figure>
 
 
+StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/fhir/R4/mapping-language.html) (see also [tutorial](https://hl7.org/fhir/R4/mapping-tutorial.html)).
+
+  
 ### **Inputs:** 
 
 * DAK Data Dictionary / L2 Logical Model
