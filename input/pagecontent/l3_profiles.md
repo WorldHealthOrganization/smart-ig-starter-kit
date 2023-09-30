@@ -29,7 +29,7 @@ The FHIR profiles are determined by the need for information objects from the de
 The L3 author consults the logical models and the business processes to see which profiles are necessary.
 
 #### Identify reusable profiles
-The L3 Author shall search the [common profiles](commonprofiles.html) repository to search for profiles that 
+The L3 Author shall search the [common profiles](#) repository to search for profiles that 
 may exist which either 
 * cover the exchange requirements for the scope
 * may be profiled - if they are in a similar or broader area that can be constrained in a derived profile

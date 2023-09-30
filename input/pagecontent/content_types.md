@@ -15,8 +15,7 @@ A narrative or situation where users interact with a system, environment, or ser
 ### Generic Persona
 An archetype representing a person interacting with the system. This aids in understanding the motivations and potential actions of users within scenarios.
 * L2: []()
-* L3: [Personas](l3_personas)
-
+* L3: [Personas](l3_personas.html
 
 ### Health Intervention
 Initiatives about prevention, monitoring or addressing medical conditions. 

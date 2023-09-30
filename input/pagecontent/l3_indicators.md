@@ -35,7 +35,7 @@ Measures are defined using CQL. The activities to define such Measures are:
 
 | Tool | Usage | Doc |
 | --- | ---| --- |
-| CQF Ruler | A FHIR server to upload the artifacts and test the `$evaluate-measure` | [Testing Measures](l3_measures_testing.html) |
+| CQF Ruler | A FHIR server to upload the artifacts and test the `$evaluate-measure` | [Testing Measures](#) |
 {:.table-bordered.full-width}  
    
 

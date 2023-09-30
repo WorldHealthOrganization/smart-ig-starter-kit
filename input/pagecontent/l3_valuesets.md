@@ -24,7 +24,7 @@ TO DO: Do we add a codesystem also for the discrete values e.g. male, female, et
 
 * ValueSets in `input/valuesets` or `input/fsh/valusets` 
 * Proposal for any common value sets
-* If a valueset changes since the last release, see [tracking changes](tracking_changes.html).
+* If a valueset changes since the last release, this must be signaled using the common change tracking procedure - see [tracking changes](#).
 * Valueset usage registry?
 
 

@@ -145,7 +145,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 * All data elements defined in DAK as calculated elements shall be present in a logical model
 * All elements in the DAK have one and only one WHO SMART Code. 
   *  The WHO code for all elements should be approved; exceptions should be resolved before final publication
-* Each data element in the logical model is mapped to the existing semantic references - see [semantic references](semanticreferences.html).
+* Each data element in the logical model is mapped to the existing semantic references - see [semantic references](#).
   * The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings
 
 

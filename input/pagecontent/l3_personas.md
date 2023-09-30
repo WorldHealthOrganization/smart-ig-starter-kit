@@ -62,7 +62,7 @@ TO DO: SGPersona is a profile of Shareable? Publishable?
 `.description` - add a summary description  
 
 
-Personas will be associated with actions(processes). The tracking of that association is managed in another process. See [Common artifacts governance](commons_governance.html).
+Personas will be associated with actions(processes). The tracking of that association is managed in another process. See [Common artifacts governance](#).
 
 
 ### **Criteria / Definition of Done**

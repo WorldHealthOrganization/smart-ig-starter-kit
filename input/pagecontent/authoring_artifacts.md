@@ -276,6 +276,8 @@ For FSH, the folders are the same but in the `fsh` folder, e.g. `input/fsh/scena
 ## Naming convention
 
 Resource IDs
+* Resource source files shall have extension .json or .xml
+* StructureMaps authored in FHIR Mapping Language shall have extension `.fml` 
 * ValueSets should be prefixed or suffixed by VS (not enforced)
 * Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there's no conflict
 * Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 

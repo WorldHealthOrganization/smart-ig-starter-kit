@@ -16,3 +16,9 @@ In addition, the adoption and adaptation of SMART Guidelines by the different co
 * Standard tools for facilitating and automating tasks
 * Quality control and validation
 * Process monitoring and improvement
+
+### Intellectual Property and copyright considerations
+
+This documentation is distributed under the CC-BY-IGO license. Please see the [license details](license.html).
+
+{% include ip-statements.xhtml %}

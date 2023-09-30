@@ -55,7 +55,7 @@ If this approach is used, the mapping is done by filling in the `.definition` el
 #### StructureMap extraction
 The following structuremaps are expected: 
 
-* For [Forms / Questionnaires](forms.html)
+* For [Forms / Questionnaires](l3_forms.html)
   * the data extraction map from Questionnaire to Logical Model instances
   * the data extraction map from Logical Model instances to FHIR resources
   * the combined data extraction map that includes the 2 maps above and can process the extraction from Questionnaire to FHIR Resources

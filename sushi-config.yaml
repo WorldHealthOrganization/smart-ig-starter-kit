@@ -71,7 +71,7 @@ menu:
   Indices:
     Artifacts:
       Extensions: 'artifacts.html'
-      Value Sets: maps.html'
+#      Value Sets: maps.html'
 
 pages: 
   index.md:
