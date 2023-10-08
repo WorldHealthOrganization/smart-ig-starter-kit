@@ -1,4 +1,3 @@
-### **Structure of this document**
 For each type of SMART IG content, this SOP describes how it can be produced from the expected content of the L2 and additional information. A summary table shows the types of content, their source location and naming convention. Then for each type of content, the following is presented:
 
 * The type of author that executes the creation (this is relevant for any training and tooling needs for each type of author)

@@ -63,13 +63,10 @@ Creating an indicator from the L2 means:
 
 * Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements).
 
-* If known, add the 
-
-* data requirements:
+* If known, add the data requirements:
   * add codes that are used directly in the measure
   Add the libraries that contain the functions 
   http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition
-
 
 
 

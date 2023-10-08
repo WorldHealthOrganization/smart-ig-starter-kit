@@ -1,6 +1,3 @@
-### Governance: 
-
-
 To ensure consistency and reusability, several outcomes can be transversal across several SMART Guidelines. 
 
 #### 
