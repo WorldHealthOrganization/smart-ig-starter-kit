@@ -96,6 +96,8 @@ pages:
       title: "Governance Overview"
       gov_concepts.md:
         title: "Concept Governance"
+    artifacts_catalog.md:
+      title: "Artifacts Catalog"
     authoring_artifacts.md:
       title: "Authoring Artifacts"
       l3_personas.md:
