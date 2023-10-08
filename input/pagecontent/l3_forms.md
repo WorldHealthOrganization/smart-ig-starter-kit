@@ -1,6 +1,28 @@
-Data used in the different stages of the business processes can 
+Data used in the different stages of the business processes can be captured from the system, or directly from the user. When data is intended to be captured from the user, a form is created, which in L3 terms corresponds to a Questionnaire.
 
-Forms represent data that can be acquired manual
+Since the purpose of the forms is to expose data in a user-friendly manner (and following the L2 DAK data structures), it is expected that several of these forms will result in the data being extracted to FHIR-native resources, like Patient, Observation, Condition, etc.
+This means the L2 data structures are represented both as instances Questionnaires and as FHIR resource profiles, and these FHIR resources can be obtained natively or by extracting a QuestionnaireResponse:
+<img src="./forms_resources.png" style="width:50%"/>
+<br clear="all"/>
+
+
+SMART Guidelines make use of the [FHIR Structured Data Capture specification](http://hl7.org/fhir/uv/sdc) to define the common aspects around Questionnaire resources:
+* Design
+* Reuse
+* Data extraction
+
+Forms are reuse other forms and make use of value sets. 
+<figure>
+  {% include model_form.svg %}
+</figure>
+
+This extraction uses [structure maps](l3_structuremaos.html) and is represented as follows:
+<figure>
+  {% include extraction.svg %}
+</figure>
+
+
+
 
 ### **Inputs:** 
 

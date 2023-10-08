@@ -1,0 +1,55 @@
+@startuml
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+
+class "**Profile**" as P<<TM>> {
+    |_ identifier[SG] 1..*   
+    |_ url 1..*   
+    |_ status 1..1
+    |_ name 1..1
+    |_ title 1..1
+    |_ experimental 1..1    
+    |_ description 1..1
+    |_ **base resource** 1..1   
+    --
+}
+
+
+class "**Extension**" as X<<TM>> {
+}
+class "**ElementDefinition**" as ED<<TM>> {
+}
+
+class "**Constraint**" as C<<TM>> {
+}
+
+
+P - X : "  Contains  "
+
+P -- C : "  obeys  "
+
+C -u[hidden]- X 
+
+ED -r[hidden]- C : "                   "
+
+P -- ED : "  Contains  "
+
+
+@enduml

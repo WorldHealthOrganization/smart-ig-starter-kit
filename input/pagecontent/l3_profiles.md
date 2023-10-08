@@ -1,20 +1,32 @@
-SMART Guidelines consist of common types of interventions and content. 
-Therefore some profiles for FHIR artifacts share commonalities. 
+
+Profiles are the FHIR representation of the data objects. They include constraints and extensions.
+Profiles and extensions should be reusable as much as possible, and L3 authors should should aim for reusing reusable profiles/extensions and for creating profiles/extensions that can be reused by others. 
+
+
+Profiles include Element constraints or extensions, and may include constraints:
+<figure>
+  {% include model_profile.svg %}
+</figure>
+
 
 ### **Inputs:** 
-
-* Common Profiles (from commons clinical encounter)
+The inputs for creating a profile, extensions and constraints are:
+* Data models (DAK)
 * Activity to Profile mapping/catalog
+* Common Profiles (from commons clinical encounter)
+* Common extensions from dependencies
 
 
 ### **Outputs:**
 * Profiles in `input/profiles` or `input/fsh/profiles`
+* In Shorthand, constraints should be in the same folder as the profile
+* Extension definitions in `input/extensions` or `input/fsh/extensions`
 * Example instances in `input/examples` or `input/fsh/examples`
 
 
 ### **Activities:**
 
-<img src="./process_process.png" style="width:50%"/>
+<img src="./process_profile.png" style="width:50%"/>
 <br clear="all"/>
 
 
@@ -37,7 +49,7 @@ may exist which either
 This search is in related sources - within the the SMART Guidelines ecosystem - or even outside, such as IHE or HL7 or national guidance. In these cases, 
 the L3 author shall apply the necessary validation as the profiles may not meet the expectations or may change without warning.
 
-The recommended priority for the search for existing profiles
+The recommended priority for the search for existing profiles and extensions:
   * other SMART IGs
   * HL7 international balloted reference implementation guides
   * IHE profiles
@@ -45,8 +57,6 @@ The recommended priority for the search for existing profiles
   * other references
 * search in previous or upcoming releases of FHIR 
 
-
-* Profiles 
 
 
 ### **Output Criteria / Definition of Done:**
