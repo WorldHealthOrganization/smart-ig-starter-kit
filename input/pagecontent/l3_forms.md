@@ -16,7 +16,7 @@ Forms are reuse other forms and make use of value sets.
   {% include model_form.svg %}
 </figure>
 
-This extraction uses [structure maps](l3_structuremaos.html) and is represented as follows:
+This extraction uses [structure maps](l3_structuremaps.html) and is represented as follows:
 <figure>
   {% include extraction.svg %}
 </figure>
