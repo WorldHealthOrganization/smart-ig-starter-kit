@@ -3,7 +3,11 @@
      xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      lang="en">
-<h3>License details for the Implementation Guide</h3>
+
+<p>SMART Guidelines, including this one, are required to express the license their copyright license.</p>
+<p>All WHO-authored SMART Guidelines shall be subject to the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License. This includes all commons and dependencies authored by the WHO and this current guidance.<p>
+
+<h3>SMART Guidelines license details</h3>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/igo/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/igo/88x31.png"/></a>
 
