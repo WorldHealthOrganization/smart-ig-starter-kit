@@ -25,36 +25,46 @@ This extraction uses [structure maps](l3_structuremaps.html) and is represented 
 
 
 ### **Inputs:** 
-
 * Logical model
 * ValueSets associated with logical model
 
 
 ### **Outputs:**
-
 * Questionnaires
 * Example QuestionnaireResponses for testing
 
-* Questionnaires elements may link to the data elements in the
+* Questionnaires elements may link to the data elements in the Common glossary
   * Note that this can conflict with the definition-based extraction described below
 
 ### **Activities:**
 
+For each data element in the logical model (i.e. in the data dictionary)
+
 * For extracting data, the Questionnaire should be an instance of SDC extractable questinnaire
   * For StructureMap extraction, the extension [Target Structure Map](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap) needs to be present. See [Authoring StructureMaps](l3_structuremaps.html) for authoring of structuremaps.
-
-
-#### Modular Questionnaires
+* The Questionnaire shall indicate what is the StructureMap that should be used for extracting the data, using the [`targetStructureMap`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap) extension. 
+  * The questionnaire extraction is in 2 steps - transform a QuestionnaireResponse to a logical model instance and transform a logical model instance into the FHIR resources. 
+  * These shall be 2 StructureMaps, and a third StructureMap that includes these 2 and runs the two transformations one after the other.
+  * The StructureMap that is mentioned in the Questionnaire is the one corresponding to the **combined** transformation.
+  * for example: 
+```
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
+* extension[=].valueCanonical = "http://worldhealthorganization.github.io/smart-immunizations-measles/StructureMap/IMMZCQRToResources"
+```
 
 
 ### **Output Criteria / Definition of Done:**
 
 * For using the $extract operation, Questionnaires shall have the extension pointing to the StructureMap, and the map should also be present (see [Authoring StructureMaps](l3_structuremaps.html).)
+* Example instances of the QuestionnaireResponses, the corresponding Logical Model instance and the FHIR resources are available (the latter should actually be obtained by running the data extraction).
+* No QA errors in the build
+* Confirmation that extraction is working with the reference extraction tool.
 
 
-* Questionnaire Responses
 
 ### **Change tracking**
+* Questionnaires and StructureMaps need to be tracked with changes.
+* Example instances (QuestionnaireResponse, logical model instance, and FHIR resource instances) may be tracked.
 
 
 ### **Tooling:**
