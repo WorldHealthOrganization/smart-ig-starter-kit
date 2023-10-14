@@ -22,7 +22,11 @@ The requirements capture the following data:
 <li class="todo">TO DO: Minimal testing expectations for all requirements?</p>
 
 ### **Activities:**
-The L3 author takes the L2 requirements and expresses those as FHIR Requirements.
+<img src="./l3_requirements.png" style="width:50%"/>
+<br clear="all"/>
+> Summary: From the Functional and Non-Functional requirements in the L2, the L3 author creates  Requirements resources.
+
+
 In FHIR, the resource used is a Requirements - which is a set of requirement statements. So, each requirement in the L2 group will normally be one of the statements included in a Requirements resource. The Requirements resource identifies the Business Process for which the requirements are being expressed e.g "Register Client".
 
 The Requirements will capture the following elements:

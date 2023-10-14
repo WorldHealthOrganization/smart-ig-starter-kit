@@ -32,7 +32,7 @@ TO DO: Do we add a codesystem also for the discrete values e.g. male, female, et
 ### **Activities:**
 
 This is the overview of the activities and related artifacts used:
-<img src="./process_valueset.png" style="width:50%"/>
+<img src="./l3_process_codeset.png" style="width:50%"/>
 <br clear="all"/>
 
 

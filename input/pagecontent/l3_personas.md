@@ -26,8 +26,9 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 </div>
 ### **Activities:**
 
-<img src="./process_personas.png" style="width:50%"/>
+<img src="./l3_process_persona.png" style="width:50%"/>
 <br clear="all"/>
+> Summary: The L3 author starts with the L2 persona and reuses an existing ActorDefinition from the Common Personas repository, if one exists. If not, the author creates an ActorDefinition, which will be added to the Common Personas repository.
 
 #### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its

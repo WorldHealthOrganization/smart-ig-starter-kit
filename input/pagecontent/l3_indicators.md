@@ -11,9 +11,9 @@ Indicators are a machine-readable expressions that define the indicator and its 
 
 ### **Activities:**
 Measures are FHIR resources and can refer to CQL libraries. 
-<img src="./process_indicator.png" style="width:50%"/>
+<img src="./l3_process_indicator.png" style="width:50%"/>
 <br clear="all"/>
-
+> Summary: For each indicator in the L2, the L3 author creates a Measure resource. This includes adding populations and stratifiers (consulting the CQF-Measures guidance). The create the CQL definitions needed for the calculations, which will be encoded into the Library resources.
 
 Creating an indicator from the L2 means:
 

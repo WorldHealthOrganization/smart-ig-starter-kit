@@ -20,9 +20,9 @@ Each Persona is defined by the following data:
 
 ### **Activities:**
 
-<img src="./process_process.png" style="width:50%"/>
+<img src="./l3_process_scenario.png" style="width:50%"/>
 <br clear="all"/>
-
+> Summary: From each L2 Use Case, the L3 author creates an ExampleScenario. Ideally  some example data (resources) are also added.
 * Check input scenarios - the L2 should contain identifiable, well-defined and well-delimited scenario descriptions. these should be rather concrete - i.e. not high abstractions, but concrete to a specific context.
 * Develop ExampleScenario resources 
 <div class="todo">

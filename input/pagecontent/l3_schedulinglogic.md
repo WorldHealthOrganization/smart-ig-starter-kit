@@ -14,7 +14,7 @@ Scheduling logic represents the schedule of actions that are expected to be foll
 
 ### **Activities:**
 
-<img src="./process_logic.png" style="width:50%"/>
+<img src="./l3_process_logic.png" style="width:50%"/>
 <br clear="all"/>
 
 

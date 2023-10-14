@@ -26,7 +26,7 @@ The inputs for creating a profile, extensions and constraints are:
 
 ### **Activities:**
 
-<img src="./process_profile.png" style="width:50%"/>
+<img src="./l3_process_profile.png" style="width:50%"/>
 <br clear="all"/>
 
 

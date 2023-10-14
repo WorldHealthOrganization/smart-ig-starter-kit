@@ -28,8 +28,10 @@ TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
 </div>
 
 ### **Activities:**
-<img src="./process_process.png" style="width:50%"/>
+<img src="./l3_process_process.png" style="width:50%"/>
 <br clear="all"/>
+> Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. This may include capturing the business process as a BPMN diagram.  
+
 
 ### **Checking for reusable Business Processes**
 * The author can check the existing process repository to see if there is a matching process. 

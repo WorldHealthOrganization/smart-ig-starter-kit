@@ -27,7 +27,7 @@ Each Logical Model is defined by the following data:
 ### **Activities:**
 
 This is the overview of the activities and related artifacts used:
-<img src="./process_logicalmodel.png" style="width:50%"/>
+<img src="./l3_process_logicalmodel.png" style="width:50%"/>
 <br clear="all"/>
 
 

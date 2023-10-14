@@ -2,8 +2,8 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.who.smart-ig-starter-kit
-canonical: http://worldhealthorganization.github.io/smart-ig-starter-kit
+id: who.fhir.smart-ig-starter-kit
+canonical: http://smart.who.int/ig/smart-ig-starter-kit
 name: smart-ig-starter-kit
 status: draft
 version: 0.2.1
@@ -36,7 +36,7 @@ menu:
       Common Artifacts: gov_overview.html
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
-    L2 Overview: 'l2_overview.html'
+    L2 Overview: 'l2_l3_overview.html'
     Authoring Artifacts: 
 #      Naming Conventions: 'naming_conventions.html'
       Authoring: 'authoring_artifacts.html'
@@ -88,7 +88,7 @@ pages:
 #      title: "Naming Conventions"
     content_types.md:
       title: "Types of Content"
-    l2_overview.md:
+    l2_l3_overview.md:
       title: "L2 overview"
     narrative.md:
       title: "Authoring Narrative"
@@ -163,7 +163,7 @@ pages:
 
 publisher:
   name: TBD
-  url: http://example.int
+  url: http://smart.who.int
   email: leitnerc@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001

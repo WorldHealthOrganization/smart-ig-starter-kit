@@ -13,7 +13,7 @@ Decision tables represent the activities that are performed when triggered or re
 
 ### **Activities:**
 
-<img src="./process_logic.png" style="width:50%"/>
+<img src="./l3_process_logic.png" style="width:50%"/>
 <br clear="all"/>
 
 1. For each decision table in L2, create a PlanDefinition

@@ -1,9 +1,17 @@
 L3 Authoring corresponds to authoring computable artifacts and possibly narrative content.
-This is similar or complementary to L2 authoring.
 
-## L2 artifacts
-L3 authors should find and use the L2 artifacts.  
-L2 artifacts can be represented as narrative or other representations such as FHIR resources. For reference, these are the locations for such artifacts and narrative:
+
+This transformation is supported by a series of tools, reference content, and processes, which are described here.
+
+Taking a simple example of [authoring an ActorDefinition from a Persona](l3_personas.html), which transforms the narrative L2 Persona definition into an L3 FHIR ActorDefinition, each of these processes requires some input, has criteria for completeness, and dependencies, and results in the expected output.
+
+<img src="./l3_authoring.png" style="width:50%; align:center"/>
+<br clear="all"/>
+
+Some of the criteria and constraints are checked by the tooling - for example the ImplementationGuide Publisher checks that all FHIR resources are technically valid. In addition, there are other directives and requirements from the SMART Guidelines that are also imposed on the artifacts generated.
+
+
+### Input: L2 artifacts
 
 <table border="1">
     <thead>
@@ -80,8 +88,13 @@ L2 artifacts can be represented as narrative or other representations such as FH
 </table>
 
 
-## L3 Artifacts
-The table below shows the content types that are to be created as part of the L3 authoring process.
+### Result: L3 Artifacts
+The diagram and table below shows the content types that are to be created as part of the L3 authoring process.
+
+
+<img src="./l3_artifacts.png" style="width:80%; align:center"/>
+<br clear="all"/>
+
 
 <table border="1">
     <thead>
