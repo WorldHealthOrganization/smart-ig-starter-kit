@@ -1,0 +1,25 @@
+.mw-85 {
+  max-width: 85%!important;
+}
+
+.rotate {
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.todo-card {
+  width: 400px;
+}
+
+.btn-add {
+  color: #fff;
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.form-check-input.green:checked {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+

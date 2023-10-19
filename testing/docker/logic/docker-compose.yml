@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  fhir-server:
+    image: alphora/cqf-ruler:0.14.2-SNAPSHOT
+    #image: costateixeira/hapi:test
+    #image: hapiproject/hapi:latest
+    restart: always
+    container_name: ${server_name}
+    ports:
+      - ${server_port:-8080}:8080
+    env_file:
+      - .env
+    environment:
+       - hapi.fhir.allow_multiple_delete=true
+       - hapi.fhir.reuse_cached_search_results_millis=1000
+
+      #  - hapi.fhir.implementationguides.${ig_name:-this}.url=${ig_url}/package.tgz
+      #  - hapi.fhir.implementationguides.${ig_name:-this}.name=${ig_package_name}
+      #  - hapi.fhir.implementationguides.${ig_name:-this}.version=${ig_version}
+
+  web:
+    image: nginx:alpine
+    container_name: webserver
+    ports:
+      - ${static_server_port:-8087}:80
+    command: /bin/sh -c "apk --no-cache add git && \
+                         cd /tmp && \
+                         git clone https://github.com/PATH-Global-Health/MERindicators.git && \
+                         cp -r /tmp/MERindicators/test/server/app/* /usr/share/nginx/html/ && \
+                         nginx -g 'daemon off;'"

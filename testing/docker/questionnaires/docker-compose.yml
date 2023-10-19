@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  fhir-server:
+    image: europe-west6-docker.pkg.dev/ahdis-ch/ahdis/matchbox:v3.4.4
+    restart: always
+
+    container_name: ${server_name}
+    ports:
+      - ${server_port:-8080}:8080
+    env_file:
+      - .env
+
+    environment:
+      - server.servlet.context-path=
+      - hapi.fhir.allow_multiple_delete=true
+      - hapi.fhir.server_address=localhost:${server_port}
+      - hapi.fhir.reuse_cached_search_results_millis=10000
+      - matchbox.fhir.context.onlyOneEngine=true
+      - hapi.fhir.cors.allow_Credentials=true
+      - hapi.fhir.cors.allowed_origin_patterns="http:localhost:*"
+
+      - hapi.fhir.implementationguides.fhir_r4_core.name=hl7.fhir.r4.core
+      - hapi.fhir.implementationguides.fhir_r4_core.version=4.0.1
+      - hapi.fhir.implementationguides.fhir_r4_core.url=http://hl7.org/fhir/R4/hl7.fhir.r4.core.tgz
+      - hapi.fhir.implementationguides.fhir_terminology.name=hl7.terminology
+      - hapi.fhir.implementationguides.fhir_terminology.version=5.0.0
+      - hapi.fhir.implementationguides.fhir_terminology.url=http://terminology.hl7.org/5.0.0/package.tgz
+      - hapi.fhir.implementationguides.fhir_extensions.name=hl7.fhir.uv.extensions
+      - hapi.fhir.implementationguides.fhir_extensions.version=1.0.0
+      - hapi.fhir.implementationguides.fhir_extensions.url=http://hl7.org/fhir/extensions/package.tgz
+      - hapi.fhir.implementationguides.hl7_fhir_uv_sdc.name=hl7.fhir.uv.sdc
+      - hapi.fhir.implementationguides.hl7_fhir_uv_sdc.version=3.0.0
+      - hapi.fhir.implementationguides.hl7_fhir_uv_sdc.url=http://hl7.org/fhir/uv/sdc/package.tgz
+
+
+  web:
+    image: nginx:alpine
+    container_name: webserver    
+    volumes:
+      - ./app:/usr/share/nginx/html
+    ports:
+      - ${static_server_port:-8087}:80
+    command: >-
+      /bin/sh -c "
+      apk --no-cache add git wget && \
+      cd /usr/share/nginx/html/ && \
+      wget -O resources.json $ig_url/package.db && \
+      echo '{\"ig_url\": \"'$ig_url'\", \"server_url\": \"http://localhost:'$server_port'/fhir\"}' > config.json && \
+      cd /tmp && \
+      rm -rf fhirservers && \
+      git clone https://github.com/WorldHealthOrganization/smart-ig-starter-kit.git && \
+      cp -r /tmp/smart-ig-starter-kit/testing/app/* /usr/share/nginx/html/ && \
+      nginx -g 'daemon off;'"

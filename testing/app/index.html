@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuestionnaireResponse Extraction Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .status-searching {
+      color: red;
+    }
+
+    .status-found {
+      color: darkgreen;
+    }
+
+    textarea {
+      font-family: 'Courier New', monospace;
+    }
+
+    .code-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 0 5px;
+    }
+
+    #left-block {
+      max-width: 50%;
+      position: relative;
+      /* Ensure the positioning is relative to this block */
+    }
+
+    #left-block.collapsed {
+      max-width: 5ch;
+      /* Reduced width instead of display:none; */
+      margin-right: 10px;
+      /* Add some margin when collapsed */
+    }
+
+    #left-block.collapsed #left-code {
+      /* max-width: 5ch; */
+      /* Almost hide the code box when collapsed */
+    }
+
+
+    #right-block {
+      width: 100%;
+    }
+
+    #left-code {
+      width: 100%;
+      margin-left: 0;
+      /* Remove or reduce left margin */
+      margin-right: 0;
+    }
+
+
+    .code-box {
+      width: 100%;
+      height: 100%;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      border: 1px solid #ccc;
+      margin-right: 0px;
+      margin-right: 0px;
+      /* padding: 5px; */
+    }
+
+    .code-container {
+      display: flex;
+      align-items: stretch;
+      /* Ensures the children of .code-container expand to the same height */
+      margin-top: 20px;
+      height: 350px;
+    }
+
+    #collapse-button {
+      width: 100%;
+      min-width: 5ch;
+      margin-left: 0;
+      /* Remove or reduce left margin */
+      margin-right: 0;
+      /* Remove or reduce right margin */
+      text-align: left;
+      /* Align text to the left */
+      padding: 0px;
+      /* Adjust padding as per requirement */
+      margin-bottom: 10px;
+      /* space between button and text area */
+    }
+
+    #left-block.collapsed #collapse-button {
+      padding: 0px;
+      /* Adjust padding when collapsed */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <h2>QuestionnaireResponse Extraction Test</h2>
+    <p id="server-status" class="status-searching">Searching for server...</p>
+
+    <button id="uploadBtn" class="btn btn-secondary mb-2">Upload all resources to server</button>
+    <select id="questionnaireResponseDropdown" class="form-select mb-2">
+      <!-- Options will be dynamically added -->
+    </select>
+    <button id="processBtn" class="btn btn-primary mb-2">Extract QR</button>
+
+    <div class="code-container">
+      <div id="left-block" class="block">
+        <button id="collapse-button" class="btn btn-primary mb-2">&lt;&lt;</button>
+        <pre id="left-code" class="code-box"></pre>
+      </div>
+      <div id="right-block" class="block">
+        <pre id="responseBox" class="code-box"></pre>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.5.0/js/sql.js"></script>
+  <script>
+    $(document).ready(function () {
+      let serverUrl;
+      let resourcesBaseUrl;
+      let commit = false;
+
+      fetch('/config.json')
+        .then(response => response.json())
+        .then(config => {
+          serverUrl = config.server_url;
+          resourcesBaseUrl = config.ig_url;
+
+          var fetchServer = function () {
+            fetch(serverUrl + '/metadata')
+              .then(response => {
+                if (response.ok) {
+                  clearInterval(serverInterval);
+                  $("#server-status")
+                    .removeClass('status-searching')
+                    .addClass('status-found')
+                    .text("Server found at: " + serverUrl);
+                  //                                   fetchAndProcessSQLData();
+                }
+              })
+              .catch(error => console.error("Error:", error));
+          };
+          fetchServer();
+          var serverInterval = setInterval(fetchServer, 5000);
+
+          var fetchAndProcessSQLData = function () {
+            fetch(resourcesBaseUrl + 'package.db')
+              .then(response => response.arrayBuffer())
+              .then(dbBuffer => {
+                var db = new SQL.Database(new Uint8Array(dbBuffer));
+                var results = db.exec("SELECT Type, Id FROM Resources WHERE Url IS NOT NULL AND Url != '';");
+
+                if (results[0]) {
+                  results[0].values.forEach(resource => {
+                    var resourceType = resource[0];
+                    var resourceId = resource[1];
+                    fetchAndProcessResourceData(resourceType, resourceId);
+                  });
+                } else {
+                  console.error('No results found');
+                }
+
+                var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='QuestionnaireResponse';");
+                $('#questionnaireResponseDropdown').empty();
+                if (questionnaireResults[0]) {
+                  questionnaireResults[0].values.forEach(response => {
+                    var responseId = response[0];
+                    $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
+                  });
+                } else {
+                  console.error('No QuestionnaireResponse found');
+                }
+                db.close();
+              })
+              .catch(error => console.error('Error loading the database:', error));
+          };
+
+          var fetchAndProcessResourceData = function (resourceType, resourceId) {
+            fetch(`${resourcesBaseUrl}${resourceType}-${resourceId}.json`)
+              .then(response => response.json())
+              .then(resourceData => {
+                if (resourceType === "Bundle" && resourceData.type === "transaction") {
+                  console.log("Would POST to: " + serverUrl);
+                  console.log("Data: ", resourceData);
+
+                  if (commit) {
+                    fetch(serverUrl, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(resourceData)
+                    }).then(response => {
+                      console.log("POST Response: ", response);
+                    }).catch(error => {
+                      console.error("POST Error: ", error);
+                    });
+                  }
+                } else {
+                  const putUrl = `${serverUrl}/${resourceType}/${resourceId}`;
+                  console.log("Would PUT to: " + putUrl);
+                  console.log("Data: ", resourceData);
+
+                  if (commit) {
+                    fetch(putUrl, {
+                      method: 'PUT',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(resourceData)
+                    }).then(response => {
+                      console.log("PUT Response: ", response);
+                    }).catch(error => {
+                      console.error("PUT Error: ", error);
+                    });
+                  }
+                }
+              })
+              .catch(error => console.error(`Error loading the resource (${resourceType}-${resourceId}):`, error));
+          };
+          $("#uploadBtn").click(function () {
+            commit = true;
+            fetchAndProcessSQLData();
+          });
+
+
+          $("#questionnaireResponseDropdown").change(function () {
+            var selectedResponse = $(this).val();
+
+            fetch(`${resourcesBaseUrl}QuestionnaireResponse-${selectedResponse}.json`)
+              .then(response => response.json())
+              .then(data => {
+                if (data.text) {
+                  delete data.text;
+                };
+                $("#left-code").text(JSON.stringify(data, null, 2));
+              })
+              .catch(error => {
+                console.error(`Error fetching the resource (QuestionnaireResponse-${selectedResponse}):`, error);
+              });
+          });
+
+          $("#collapse-button").click(function () {
+            $("#left-block").toggleClass("collapsed");
+            if ($("#left-block").hasClass("collapsed")) {
+              $("#collapse-button").text(">>");
+            } else {
+              $("#collapse-button").text("<<                 Collapse ");
+            }
+          });
+
+          // ...
+          $("#processBtn").click(function () {
+            var selectedResponse = $("#questionnaireResponseDropdown").val();
+            fetch(`${resourcesBaseUrl}QuestionnaireResponse-${selectedResponse}.json`)
+              .then(response => response.json())
+              .then(resourceJson => {
+                fetch(`${serverUrl}/QuestionnaireResponse/$extract`, {
+                  method: 'POST',
+                  headers: {
+                    'Accept': 'application/fhir+json;fhirVersion=4.0',
+                    'Content-Type': 'application/fhir+json;fhirVersion=4.0'
+                  },
+                  body: JSON.stringify(resourceJson)
+                })
+                  .then(response => response.json())
+                  .then(data => {
+                    console.log("POST Response: ", data);
+                    $("#responseBox").text(JSON.stringify(data, null, 2)); // Updated line here
+                  })
+                  .catch(error => {
+                    console.error("POST Error: ", error);
+                    $("#responseBox").text("Error: " + error); // And here
+                  });
+              })
+              .catch(error => {
+                console.error(`Error fetching the resource (QuestionnaireResponse-${selectedResponse}):`, error);
+              });
+          });
+          // ...
+
+        })
+        .catch(error => {
+          console.error('Error fetching config:', error);
+        });
+    });
+  </script>
+</body>
+
+</html>
