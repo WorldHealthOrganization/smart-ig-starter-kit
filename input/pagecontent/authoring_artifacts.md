@@ -1,14 +1,4 @@
-L3 Authoring corresponds to authoring computable artifacts and possibly narrative content.
-
-
-This transformation is supported by a series of tools, reference content, and processes, which are described here.
-
-Taking a simple example of [authoring an ActorDefinition from a Persona](l3_personas.html), which transforms the narrative L2 Persona definition into an L3 FHIR ActorDefinition, each of these processes requires some input, has criteria for completeness, and dependencies, and results in the expected output.
-
-<img src="./l3_authoring.png" style="width:50%; align:center"/>
-<br clear="all"/>
-
-Some of the criteria and constraints are checked by the tooling - for example the ImplementationGuide Publisher checks that all FHIR resources are technically valid. In addition, there are other directives and requirements from the SMART Guidelines that are also imposed on the artifacts generated.
+L3 authors are expected to create the necessary artifacts to cover the entire L2 specification and demonstrate a working SMART Guideline. This includes several types of artifacts and possibly narrative content.
 
 
 ### Input: L2 artifacts
@@ -183,7 +173,7 @@ The diagram and table below shows the content types that are to be created as pa
         </tr>
         <tr>
             <td>ConceptMap</td>
-            <td>input/maps</td>
+            <td>input/conceptmaps</td>
             <td><a href="l3_conceptmaps.html">Concept Maps</a></td>
         </tr>
         <tr>
@@ -269,7 +259,7 @@ The input folders for the resources are:
 * `input/requirements`
 * `input/processes`
 * `input/plandefinitions`
-* `input/activitydefinition`
+* `input/activitydefinitions`
 * `input/testing`
 * `input/examples`
 * `input/codesystems`
