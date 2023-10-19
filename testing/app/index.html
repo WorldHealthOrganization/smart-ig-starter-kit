@@ -121,6 +121,16 @@
       </div>
       <div id="right-block" class="block">
         <pre id="responseBox" class="code-box"></pre>
+
+        <!-- Adding the group of two horizontally laid-out buttons below the response box -->
+        <div class="d-flex justify-content-end mt-3">
+            <!-- Dummy Button (Add functionality as needed) -->
+            <button id="dummyBtn" class="btn btn-primary me-2">Dummy</button>
+            
+            <!-- Button for POSTing to FHIR server -->
+            <button id="validateBtn" class="btn btn-secondary">Validate</button>
+        </div>
+
       </div>
     </div>
 
@@ -177,6 +187,11 @@
 
                 var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='QuestionnaireResponse';");
                 $('#questionnaireResponseDropdown').empty();
+
+
+                // Add an "empty" option to the dropdown
+                $('#questionnaireResponseDropdown').append(new Option("Select a QuestionnaireResponse", "", true, true));
+
                 if (questionnaireResults[0]) {
                   questionnaireResults[0].values.forEach(response => {
                     var responseId = response[0];
@@ -294,6 +309,37 @@
         .catch(error => {
           console.error('Error fetching config:', error);
         });
+
+
+        // Add functionality to the Validate button
+        $("#validateBtn").click(function() {
+            const responseData = $("#responseBox").text();
+            const parsedResponse = JSON.parse(responseData);
+            const resourceType = parsedResponse.resourceType;
+            const serverPort = ""; // Add your server port here
+            const validateUrl = `http://localhost:${serverPort}/${resourceType}/$validate`;
+            
+            fetch(validateUrl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/fhir+json;fhirVersion=4.0',
+                    'Content-Type': 'application/fhir+json;fhirVersion=4.0'
+                },
+                body: JSON.stringify(parsedResponse)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Validation Response: ", data);
+                // Handle the validation response here
+            })
+            .catch(error => {
+                console.error("POST Error: ", error);
+                // Handle error here
+            });
+        });
+
+
+
     });
   </script>
 </body>
