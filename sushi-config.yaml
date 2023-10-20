@@ -30,6 +30,7 @@ menu:
     Overview: '#'
     Assumptions: 'assumptions.html'
   Authoring:
+    Overview: 'authoring_overview.html'
     Structuring of the SOP IG: 'structure.html'
     Types of content: 'content_types.html'
     Commons and Governance: 
@@ -37,6 +38,7 @@ menu:
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
     L2 Overview: 'l2_l3_overview.html'
+    Narrative Authoring: 'narrative.html'
     Authoring Artifacts: 
 #      Naming Conventions: 'naming_conventions.html'
       Authoring: 'authoring_artifacts.html'
@@ -63,6 +65,7 @@ menu:
     Versioning: 'versioning.html'
     Licensing: 'ig_licensing.html'
   IG Setup:
+    GitHub Repositories: 'ig_setup.html'
     GitHub Initialization: 'ig_licensing.html'
     IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
