@@ -107,8 +107,8 @@
   <div class="container mt-4">
     <h2>QuestionnaireResponse Extraction Test</h2>
     <p id="server-status" class="status-searching">Searching for server...</p>
-    <button id="refreshFromServerBtn" class="btn btn-secondary mb-2 mr-2">Refresh from server</button>
-    <button id="uploadBtn" class="btn btn-secondary mb-2">Upload all resources to server</button>
+    <button id="refreshFromServerBtn" class="btn btn-secondary mb-2 mr-2">Refresh from package</button>
+    <button id="uploadBtn" class="btn btn-secondary mb-2">Upload package resources to server</button>
     <select id="questionnaireResponseDropdown" class="form-select mb-2">
       <!-- Options will be dynamically added -->
     </select>
@@ -120,12 +120,13 @@
         <pre id="left-code" class="code-box"></pre>
       </div>
       <div id="right-block" class="block">
-        <pre id="responseBox" class="code-box"></pre>
+        <textarea id="responseBox" class="code-box form-control" rows="10"></textarea>
+
 
         <!-- Adding the group of two horizontally laid-out buttons below the response box -->
         <div class="d-flex justify-content-end mt-3">
             <!-- Dummy Button (Add functionality as needed) -->
-            <button id="dummyBtn" class="btn btn-primary me-2">Dummy</button>
+            <button id="dummyBtn" class="btn btn-primary me-2">POST to server</button>
             
             <!-- Button for POSTing to FHIR server -->
             <button id="validateBtn" class="btn btn-secondary">Validate</button>
@@ -137,27 +138,9 @@
 
   </div>
 
-  <div class="modal fade" id="validationModal" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="validationModalLabel">Validation Response</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <pre id="validationResponseBox" class="code-box"></pre>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.5.0/js/sql.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function () {
       let serverUrl;
@@ -187,11 +170,38 @@
           fetchServer();
           var serverInterval = setInterval(fetchServer, 5000);
 
+
+          function populateQuestionnaireResponseDropdown(db) {
+              var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='QuestionnaireResponse';");
+              $('#questionnaireResponseDropdown').empty();
+
+              // Add an "empty" option to the dropdown
+              $('#questionnaireResponseDropdown').append(new Option("Select a QuestionnaireResponse", "", true, true));
+
+              if (questionnaireResults[0]) {
+                  questionnaireResults[0].values.forEach(response => {
+                      var responseId = response[0];
+                      $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
+                  });
+              } else {
+                  console.error('No QuestionnaireResponse found');
+              }
+          }
+
+
+
+          $("#refreshFromServerBtn").click(function() {
+              fetchAndProcessSQLData();
+          });
+
+
+
           var fetchAndProcessSQLData = function () {
             fetch(resourcesBaseUrl + 'package.db')
               .then(response => response.arrayBuffer())
               .then(dbBuffer => {
                 var db = new SQL.Database(new Uint8Array(dbBuffer));
+                populateQuestionnaireResponseDropdown(db); 
                 var results = db.exec("SELECT Type, Id FROM Resources WHERE Url IS NOT NULL AND Url != '';");
 
                 if (results[0]) {
@@ -311,11 +321,11 @@
                   .then(response => response.json())
                   .then(data => {
                     console.log("POST Response: ", data);
-                    $("#responseBox").text(JSON.stringify(data, null, 2)); // Updated line here
+                    $("#responseBox").val(JSON.stringify(data, null, 2)); // Updated line here
                   })
                   .catch(error => {
                     console.error("POST Error: ", error);
-                    $("#responseBox").text("Error: " + error); // And here
+                    $("#responseBox").val("Error: " + error); // And here
                   });
               })
               .catch(error => {
@@ -329,14 +339,15 @@
           console.error('Error fetching config:', error);
         });
 
-
         // Add functionality to the Validate button
         $("#validateBtn").click(function() {
-            const responseData = $("#responseBox").text();
+            const responseData = $("#responseBox").val();
             const parsedResponse = JSON.parse(responseData);
             const resourceType = parsedResponse.resourceType;
             const serverPort = ""; // Add your server port here
-            const validateUrl = `${serverUrl}/${resourceType}/$validate`;
+//            const validateUrl = `${serverUrl}/${resourceType}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+//            const validateUrl = `${serverUrl}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+            const validateUrl = `http://hapi.fhir.org/fhir/$validate`;
             
             fetch(validateUrl, {
                 method: 'POST',
@@ -352,13 +363,13 @@
                 $("#validationResponseBox").text(JSON.stringify(data, null, 2));
                 new bootstrap.Modal(document.getElementById('validationModal')).show();
                 })
-            })
             .catch(error => {
                 console.error("POST Error: ", error);
                 // Handle error here
-            });
+              });
         });
 
+    
 
         $("#refreshFromServerBtn").click(function() {
             fetch(`${serverUrl}/QuestionnaireResponse`)
@@ -384,8 +395,62 @@
         });
 
 
+
+        $("#dummyBtn").click(function () {
+          // URL of the StructureDefinition resource
+          const structureDefinitionURL = "http://hl7.org/fhir/StructureDefinition/document-bundle";
+
+          fetch(structureDefinitionURL)
+              .then(response => response.json())
+              .then(data => {
+                  // Check if the fetched data is valid and contains necessary information
+                  if (data && data.id) {
+                      // URL of your FHIR server endpoint for StructureDefinition with id "Bundle"
+                      const serverEndpoint = `${serverUrl}/StructureDefinition/Bundle`;
+
+                      // Performing a PUT request to update/create the StructureDefinition on the server
+                      fetch(serverEndpoint, {
+                          method: 'PUT',
+                          headers: {
+                              'Content-Type': 'application/fhir+json'
+                          },
+                          body: JSON.stringify(data)
+                      })
+                      .then(response => {
+                          if (response.ok) {
+                              return response.json();
+                          } else {
+                              throw new Error('Failed to PUT the StructureDefinition');
+                          }
+                      })
+                      .then(putResponseData => {
+                          console.log("PUT Response: ", putResponseData);
+                      })
+                      .catch(error => {
+                          console.error("PUT Error: ", error);
+                      });
+                  } else {
+                      console.error("Fetched StructureDefinition is not valid.");
+                  }
+              })
+              .catch(error => {
+                  console.error("Fetch Error: ", error);
+              });
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+    });
   </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
 
 </body>
 
