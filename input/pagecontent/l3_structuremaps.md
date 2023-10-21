@@ -93,9 +93,10 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 {:.table-bordered.full-width}  
 
 ### **Informative examples**
-
+https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-structure-maps
 
 ### **Known issues and dependencies:**
+* Publisher doesn't support metadata, so the StructureMaps show without description in the artifacts table
 * Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not valid.
 
 

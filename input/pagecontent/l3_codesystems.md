@@ -48,6 +48,7 @@ This is the overview of the activities and related artifacts used:
 
 
 ### **Informative examples**
+[SMART Guidelines - Immunizations (Measles): Code Systems](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-code-systems)
 
 ### **Known issues and dependencies:**
 

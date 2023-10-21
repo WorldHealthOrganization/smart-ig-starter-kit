@@ -121,7 +121,7 @@ Terminology Services
 
 
 ### **Informative examples**
-
+https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-value-sets
 
 ### **Known issues and dependencies**
 <div class="todo">

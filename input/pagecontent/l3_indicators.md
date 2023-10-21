@@ -98,6 +98,9 @@ All FHIR artifacts and CQL libraries are subject to change tracking.
 
 ### **Informative examples**
 
+https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND05.html
+https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND40.html
+
 ### **Known issues and dependencies:**
 
 * Stratifiers: combined or not?

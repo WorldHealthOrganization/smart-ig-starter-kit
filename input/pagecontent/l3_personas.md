@@ -86,7 +86,9 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 ### **Informative examples**
 
+https://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition-CommunityHealthWorker.html
 
+https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html
 
 ### **Known issues and dependencies**
 <div class="todo">

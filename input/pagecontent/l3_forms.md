@@ -79,6 +79,8 @@ Several SDC-related tools and implementations are available from the [HL7 Conflu
 
 ### **Informative examples**
 
+https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-questionnaires
+
 ### **Known issues and dependencies:**
 
 
