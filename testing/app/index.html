@@ -129,11 +129,11 @@
 
         <!-- Adding the group of two horizontally laid-out buttons below the response box -->
         <div class="d-flex justify-content-end mt-3">
-            <!-- Dummy Button (Add functionality as needed) -->
-            <button id="dummyBtn" class="btn btn-primary me-2">POST to server</button>
-            
-            <!-- Button for POSTing to FHIR server -->
-            <button id="validateBtn" class="btn btn-secondary">Validate</button>
+          <!-- Dummy Button (Add functionality as needed) -->
+          <button id="dummyBtn" class="btn btn-primary me-2">POST to server</button>
+
+          <!-- Button for POSTing to FHIR server -->
+          <button id="validateBtn" class="btn btn-secondary">Validate</button>
         </div>
 
       </div>
@@ -158,41 +158,41 @@
           resourcesBaseUrl = config.ig_url;
           updateIgUrlLabel();
           function updateIgUrlLabel() {
-              $("#igUrlLabel").text(resourcesBaseUrl);
+            $("#igUrlLabel").text(resourcesBaseUrl);
           }
 
           $("#localOutputCheckbox").change(function () {
             if ($(this).is(':checked')) {
-                resourcesBaseUrl = "./output/";
+              resourcesBaseUrl = "./output/";
             } else {
-                resourcesBaseUrl = config.ig_url; 
+              resourcesBaseUrl = config.ig_url;
             }
             updateIgUrlLabel();
             // ... rest of your code
-        });
+          });
 
 
           fetch('/output/package.db', { method: 'HEAD' })
             .then(response => {
-                if (response.ok) {
-                    $("#localOutputCheckbox").prop('checked', true);
-                    resourcesBaseUrl = "./output/"; // Update the base URL
-                  } else {
-                    $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
-                }
+              if (response.ok) {
+                $("#localOutputCheckbox").prop('checked', true);
+                resourcesBaseUrl = "./output/"; // Update the base URL
+              } else {
+                $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
+              }
             })
             .catch(error => {
               // Handle any other type of errors here, if necessary.
               $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
-          });
+            });
 
-            $("#localOutputCheckbox").change(function () {
-              if ($(this).is(':checked')) {
-                  resourcesBaseUrl = "./output/";
-              } else {
-                  resourcesBaseUrl = config.ig_url; // assuming you have 'config' in this context
-              }
-              // Call any function or update any other variables that depend on resourcesBaseUrl here
+          $("#localOutputCheckbox").change(function () {
+            if ($(this).is(':checked')) {
+              resourcesBaseUrl = "./output/";
+            } else {
+              resourcesBaseUrl = config.ig_url; // assuming you have 'config' in this context
+            }
+            // Call any function or update any other variables that depend on resourcesBaseUrl here
           });
 
           var fetchServer = function () {
@@ -214,26 +214,26 @@
 
 
           function populateQuestionnaireResponseDropdown(db) {
-              var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='QuestionnaireResponse';");
-              $('#questionnaireResponseDropdown').empty();
+            var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='QuestionnaireResponse';");
+            $('#questionnaireResponseDropdown').empty();
 
-              // Add an "empty" option to the dropdown
-              $('#questionnaireResponseDropdown').append(new Option("Select a QuestionnaireResponse", "", true, true));
+            // Add an "empty" option to the dropdown
+            $('#questionnaireResponseDropdown').append(new Option("Select a QuestionnaireResponse", "", true, true));
 
-              if (questionnaireResults[0]) {
-                  questionnaireResults[0].values.forEach(response => {
-                      var responseId = response[0];
-                      $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
-                  });
-              } else {
-                  console.error('No QuestionnaireResponse found');
-              }
+            if (questionnaireResults[0]) {
+              questionnaireResults[0].values.forEach(response => {
+                var responseId = response[0];
+                $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
+              });
+            } else {
+              console.error('No QuestionnaireResponse found');
+            }
           }
 
 
 
-          $("#refreshFromServerBtn").click(function() {
-              fetchAndProcessSQLData();
+          $("#refreshFromServerBtn").click(function () {
+            fetchAndProcessSQLData();
           });
 
 
@@ -243,7 +243,7 @@
               .then(response => response.arrayBuffer())
               .then(dbBuffer => {
                 var db = new SQL.Database(new Uint8Array(dbBuffer));
-                populateQuestionnaireResponseDropdown(db); 
+                populateQuestionnaireResponseDropdown(db);
                 var results = db.exec("SELECT Type, Id FROM Resources WHERE Url IS NOT NULL AND Url != '';");
 
                 if (results[0]) {
@@ -381,103 +381,103 @@
           console.error('Error fetching config:', error);
         });
 
-        // Add functionality to the Validate button
-        $("#validateBtn").click(function() {
-            const responseData = $("#responseBox").val();
-            const parsedResponse = JSON.parse(responseData);
-            const resourceType = parsedResponse.resourceType;
-            const serverPort = ""; // Add your server port here
-//            const validateUrl = `${serverUrl}/${resourceType}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
-//            const validateUrl = `${serverUrl}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
-            const validateUrl = `http://hapi.fhir.org/fhir/$validate`;
-            
-            fetch(validateUrl, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/fhir+json;fhirVersion=4.0',
-                    'Content-Type': 'application/fhir+json;fhirVersion=4.0'
-                },
-                body: JSON.stringify(parsedResponse)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log("Validation Response: ", data);
-                $("#validationResponseBox").text(JSON.stringify(data, null, 2));
-                new bootstrap.Modal(document.getElementById('validationModal')).show();
-                })
-            .catch(error => {
-                console.error("POST Error: ", error);
-                // Handle error here
-              });
-        });
+      // Add functionality to the Validate button
+      $("#validateBtn").click(function () {
+        const responseData = $("#responseBox").val();
+        const parsedResponse = JSON.parse(responseData);
+        const resourceType = parsedResponse.resourceType;
+        const serverPort = ""; // Add your server port here
+        //            const validateUrl = `${serverUrl}/${resourceType}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+        //            const validateUrl = `${serverUrl}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+        const validateUrl = `http://hapi.fhir.org/fhir/$validate`;
 
-    
+        fetch(validateUrl, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/fhir+json;fhirVersion=4.0',
+            'Content-Type': 'application/fhir+json;fhirVersion=4.0'
+          },
+          body: JSON.stringify(parsedResponse)
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log("Validation Response: ", data);
+            $("#validationResponseBox").text(JSON.stringify(data, null, 2));
+            new bootstrap.Modal(document.getElementById('validationModal')).show();
+          })
+          .catch(error => {
+            console.error("POST Error: ", error);
+            // Handle error here
+          });
+      });
 
-        $("#refreshFromServerBtn").click(function() {
-            fetch(`${serverUrl}/QuestionnaireResponse`)
-            .then(response => response.json())
-            .then(data => {
-                // Clear the dropdown and add the empty option
-                $('#questionnaireResponseDropdown').empty();
-                $('#questionnaireResponseDropdown').append(new Option("-- Select a QuestionnaireResponse --", ""));
-                
-                // Assuming data.entry contains the resources
-                data.entry.forEach(entry => {
-                    let id = entry.resource.id;
-                    $('#questionnaireResponseDropdown').append(new Option(id, id));
-                });
 
-                if ($('#questionnaireResponseDropdown option').length == 2) { 
-                    $('#questionnaireResponseDropdown').val($('#questionnaireResponseDropdown option:last').val()).change();
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching QuestionnaireResponses:", error);
+
+      $("#refreshFromServerBtn").click(function () {
+        fetch(`${serverUrl}/QuestionnaireResponse`)
+          .then(response => response.json())
+          .then(data => {
+            // Clear the dropdown and add the empty option
+            $('#questionnaireResponseDropdown').empty();
+            $('#questionnaireResponseDropdown').append(new Option("-- Select a QuestionnaireResponse --", ""));
+
+            // Assuming data.entry contains the resources
+            data.entry.forEach(entry => {
+              let id = entry.resource.id;
+              $('#questionnaireResponseDropdown').append(new Option(id, id));
             });
-        });
+
+            if ($('#questionnaireResponseDropdown option').length == 2) {
+              $('#questionnaireResponseDropdown').val($('#questionnaireResponseDropdown option:last').val()).change();
+            }
+          })
+          .catch(error => {
+            console.error("Error fetching QuestionnaireResponses:", error);
+          });
+      });
 
 
 
-        $("#dummyBtn").click(function () {
-          // URL of the StructureDefinition resource
-          const structureDefinitionURL = "http://hl7.org/fhir/StructureDefinition/document-bundle";
+      $("#dummyBtn").click(function () {
+        // URL of the StructureDefinition resource
+        const structureDefinitionURL = "http://hl7.org/fhir/StructureDefinition/document-bundle";
 
-          fetch(structureDefinitionURL)
-              .then(response => response.json())
-              .then(data => {
-                  // Check if the fetched data is valid and contains necessary information
-                  if (data && data.id) {
-                      // URL of your FHIR server endpoint for StructureDefinition with id "Bundle"
-                      const serverEndpoint = `${serverUrl}/StructureDefinition/Bundle`;
+        fetch(structureDefinitionURL)
+          .then(response => response.json())
+          .then(data => {
+            // Check if the fetched data is valid and contains necessary information
+            if (data && data.id) {
+              // URL of your FHIR server endpoint for StructureDefinition with id "Bundle"
+              const serverEndpoint = `${serverUrl}/StructureDefinition/Bundle`;
 
-                      // Performing a PUT request to update/create the StructureDefinition on the server
-                      fetch(serverEndpoint, {
-                          method: 'PUT',
-                          headers: {
-                              'Content-Type': 'application/fhir+json'
-                          },
-                          body: JSON.stringify(data)
-                      })
-                      .then(response => {
-                          if (response.ok) {
-                              return response.json();
-                          } else {
-                              throw new Error('Failed to PUT the StructureDefinition');
-                          }
-                      })
-                      .then(putResponseData => {
-                          console.log("PUT Response: ", putResponseData);
-                      })
-                      .catch(error => {
-                          console.error("PUT Error: ", error);
-                      });
-                  } else {
-                      console.error("Fetched StructureDefinition is not valid.");
-                  }
+              // Performing a PUT request to update/create the StructureDefinition on the server
+              fetch(serverEndpoint, {
+                method: 'PUT',
+                headers: {
+                  'Content-Type': 'application/fhir+json'
+                },
+                body: JSON.stringify(data)
               })
-              .catch(error => {
-                  console.error("Fetch Error: ", error);
-              });
+                .then(response => {
+                  if (response.ok) {
+                    return response.json();
+                  } else {
+                    throw new Error('Failed to PUT the StructureDefinition');
+                  }
+                })
+                .then(putResponseData => {
+                  console.log("PUT Response: ", putResponseData);
+                })
+                .catch(error => {
+                  console.error("PUT Error: ", error);
+                });
+            } else {
+              console.error("Fetched StructureDefinition is not valid.");
+            }
+          })
+          .catch(error => {
+            console.error("Fetch Error: ", error);
+          });
       });
 
 
