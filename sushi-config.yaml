@@ -32,6 +32,7 @@ menu:
   Authoring:
     Overview: 'authoring_overview.html'
     Structuring of the SOP IG: 'structure.html'
+    Diagrams Legend: 'diagram_legend.html'
     Types of content: 'content_types.html'
     Commons and Governance: 
       Common Artifacts: gov_overview.html
@@ -87,6 +88,8 @@ pages:
     title: "Authoring"
     structure.md:
       title: "Structure of the SOP IG"
+      diagram_legend.md:
+        title: "Diagrams Legend"
 #    naming_conventions.md:
 #      title: "Naming Conventions"
     content_types.md:
