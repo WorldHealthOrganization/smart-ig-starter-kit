@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Setup and test measures</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.css">
+  <style>
+    #pivot-table-container {
+      width: 100%;
+      height: 500px;
+    }
+
+    #bundle-select {
+      width: 200px;
+    }
+
+    .flex-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status-searching {
+      color: red;
+    }
+
+    .status-found {
+      color: darkgreen;
+    }
+
+    .monospaced {
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container mt-4">
+    <h2>Measure Evaluate Test</h2>
+    <p id="server-status" class="status-searching">Searching for server...</p>
+    <p>IG URL: <span id="igUrlLabel"></span></p>
+
+    <div><label><input type="checkbox" id="localOutputCheckbox"> Local output</label></div>
+
+    <button id="refreshFromServerBtn" class="btn btn-secondary mb-2 mr-2">Refresh from package</button>
+    <button id="uploadBtn" class="btn btn-secondary mb-2">Upload package resources to server</button>
+    <select id="questionnaireResponseDropdown" class="form-select mb-2">
+      <!-- Options will be dynamically added -->
+    </select>
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col">
+        <button id="get-data-btn" class="btn btn-primary">
+          <i class="bi bi-arrow-repeat"></i> Refresh
+        </button>
+        <span id="refresh-status"></span>
+        <div class="row mt-4">
+          <div class="col">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#tab-content1">Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#tab-content2">JSON</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-2">
+              <div class="tab-pane fade show active" id="tab-content1">
+                <p>Status: <span id="status"></span></p>
+                <p>Type: <span id="type"></span></p>
+                <p>Date: <span id="date"></span></p> 
+                <div id="pivot-table-container"></div>
+              </div>
+              <div class="tab-pane fade" id="tab-content2">
+                <pre id="json-response" class="bg-light p-3"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.5.0/js/sql.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.js"></script>
+  <script>
+
+ 
+ 
+    $(document).ready(function () {
+      let serverUrl;
+      let resourcesBaseUrl;
+      let commit = false;
+
+      fetch('/config.json')
+        .then(response => response.json())
+        .then(config => {
+          serverUrl = config.server_url;
+          resourcesBaseUrl = config.ig_url;
+          updateIgUrlLabel();
+          function updateIgUrlLabel() {
+            $("#igUrlLabel").text(resourcesBaseUrl);
+          }
+
+          $("#localOutputCheckbox").change(function () {
+            if ($(this).is(':checked')) {
+              resourcesBaseUrl = "./output/";
+            } else {
+              resourcesBaseUrl = config.ig_url;
+            }
+            updateIgUrlLabel();
+            // ... rest of your code
+          });
+
+ 
+          fetch('/output/package.db', { method: 'HEAD' })
+            .then(response => {
+              if (response.ok) {
+                $("#localOutputCheckbox").prop('checked', true);
+                resourcesBaseUrl = "./output/"; // Update the base URL
+              } else {
+                $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
+              }
+            })
+            .catch(error => {
+              // Handle any other type of errors here, if necessary.
+              $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
+            });
+
+          $("#localOutputCheckbox").change(function () {
+            if ($(this).is(':checked')) {
+              resourcesBaseUrl = "./output/";
+            } else {
+              resourcesBaseUrl = config.ig_url; // assuming you have 'config' in this context
+            }
+            // Call any function or update any other variables that depend on resourcesBaseUrl here
+          });
+
+          var fetchServer = function () {
+            fetch(serverUrl + '/metadata')
+              .then(response => {
+                if (response.ok) {
+                  clearInterval(serverInterval);
+                  $("#server-status")
+                    .removeClass('status-searching')
+                    .addClass('status-found')
+                    .text("Server found at: " + serverUrl);
+                  //                                   fetchAndProcessSQLData();
+                }
+              })
+              .catch(error => console.error("Error:", error));
+          };
+          fetchServer();
+          var serverInterval = setInterval(fetchServer, 5000);
+ 
+
+          function populateQuestionnaireResponseDropdown(db) {
+            var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='Measure';");
+            $('#questionnaireResponseDropdown').empty();
+
+            // Add an "empty" option to the dropdown
+            $('#questionnaireResponseDropdown').append(new Option("Select a Measure", "", true, true));
+
+            if (questionnaireResults[0]) {
+              questionnaireResults[0].values.forEach(response => {
+                var responseId = response[0];
+                $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
+              });
+            } else {
+              console.error('No Measure found');
+            }
+          }
+
+
+
+          $("#refreshFromServerBtn").click(function () {
+            fetchAndProcessSQLData();
+          });
+
+
+
+          var fetchAndProcessSQLData = function () {
+            fetch(resourcesBaseUrl + 'package.db')
+              .then(response => response.arrayBuffer())
+              .then(dbBuffer => {
+                var db = new SQL.Database(new Uint8Array(dbBuffer));
+                populateQuestionnaireResponseDropdown(db);
+                var results = db.exec("SELECT Type, Id FROM Resources WHERE Url IS NOT NULL AND Url != '';");
+
+                if (results[0]) {
+                  results[0].values.forEach(resource => {
+                    var resourceType = resource[0];
+                    var resourceId = resource[1];
+                    fetchAndProcessResourceData(resourceType, resourceId);
+                  });
+                } else {
+                  console.error('No results found');
+                }
+
+                var questionnaireResults = db.exec("SELECT Id FROM Resources WHERE Type='Measure';");
+                $('#measureResponseDropdown').empty();
+
+
+                // Add an "empty" option to the dropdown
+                $('#questionnaireResponseDropdown').append(new Option("Select a QuestionnaireResponse", "", true, true));
+
+                if (questionnaireResults[0]) {
+                  questionnaireResults[0].values.forEach(response => {
+                    var responseId = response[0];
+                    $('#questionnaireResponseDropdown').append(new Option(responseId, responseId));
+                  });
+                } else {
+                  console.error('No QuestionnaireResponse found');
+                }
+                db.close();
+              })
+              .catch(error => console.error('Error loading the database:', error));
+          };
+
+          var fetchAndProcessResourceData = function (resourceType, resourceId) {
+            fetch(`${resourcesBaseUrl}${resourceType}-${resourceId}.json`)
+              .then(response => response.json())
+              .then(resourceData => {
+                if (resourceType === "Bundle" && resourceData.type === "transaction") {
+                  console.log("Would POST to: " + serverUrl);
+                  console.log("Data: ", resourceData);
+
+                  if (commit) {
+                    fetch(serverUrl, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(resourceData)
+                    }).then(response => {
+                      console.log("POST Response: ", response);
+                    }).catch(error => {
+                      console.error("POST Error: ", error);
+                    });
+                  }
+                } else {
+                  const putUrl = `${serverUrl}/${resourceType}/${resourceId}`;
+                  console.log("Would PUT to: " + putUrl);
+                  console.log("Data: ", resourceData);
+
+                  if (commit) {
+                    fetch(putUrl, {
+                      method: 'PUT',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(resourceData)
+                    }).then(response => {
+                      console.log("PUT Response: ", response);
+                    }).catch(error => {
+                      console.error("PUT Error: ", error);
+                    });
+                  }
+                }
+              })
+              .catch(error => console.error(`Error loading the resource (${resourceType}-${resourceId}):`, error));
+          };
+          $("#uploadBtn").click(function () {
+            commit = true;
+            fetchAndProcessSQLData();
+          });
+
+
+          $("#questionnaireResponseDropdown").change(function () {
+            var selectedResponse = $(this).val();
+
+            fetch(`${resourcesBaseUrl}Measure-${selectedResponse}.json`)
+              .then(response => response.json())
+              .then(data => {
+                if (data.text) {
+                  delete data.text;
+                };
+                $("#left-code").text(JSON.stringify(data, null, 2));
+              })
+              .catch(error => {
+                console.error(`Error fetching the resource (Measure-${selectedResponse}):`, error);
+              });
+          });
+
+          $("#collapse-button").click(function () {
+            $("#left-block").toggleClass("collapsed");
+            if ($("#left-block").hasClass("collapsed")) {
+              $("#collapse-button").text(">>");
+            } else {
+              $("#collapse-button").text("<<                 Collapse ");
+            }
+          });
+
+          // ...
+          $("#processBtn").click(function () {
+            var selectedResponse = $("#questionnaireResponseDropdown").val();
+            fetch(`${resourcesBaseUrl}QuestionnaireResponse-${selectedResponse}.json`)
+              .then(response => response.json())
+              .then(resourceJson => {
+                fetch(`${serverUrl}/QuestionnaireResponse/$extract`, {
+                  method: 'POST',
+                  headers: {
+                    'Accept': 'application/fhir+json;fhirVersion=4.0',
+                    'Content-Type': 'application/fhir+json;fhirVersion=4.0'
+                  },
+                  body: JSON.stringify(resourceJson)
+                })
+                  .then(response => response.json())
+                  .then(data => {
+                    console.log("POST Response: ", data);
+                    $("#responseBox").val(JSON.stringify(data, null, 2)); // Updated line here
+                  })
+                  .catch(error => {
+                    console.error("POST Error: ", error);
+                    $("#responseBox").val("Error: " + error); // And here
+                  });
+              })
+              .catch(error => {
+                console.error(`Error fetching the resource (Measure-${selectedResponse}):`, error);
+              });
+          });
+          // ...
+
+        })
+        .catch(error => {
+          console.error('Error fetching config:', error);
+        });
+
+      // Add functionality to the Validate button
+      $("#validateBtn").click(function () {
+        const responseData = $("#responseBox").val();
+        const parsedResponse = JSON.parse(responseData);
+        const resourceType = parsedResponse.resourceType;
+        const serverPort = ""; // Add your server port here
+        //            const validateUrl = `${serverUrl}/${resourceType}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+        //            const validateUrl = `${serverUrl}/$validate?profile=http://hl7.org/fhir/StructureDefinition/document-bundle`;
+        const validateUrl = `http://hapi.fhir.org/fhir/$validate`;
+
+        fetch(validateUrl, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/fhir+json;fhirVersion=4.0',
+            'Content-Type': 'application/fhir+json;fhirVersion=4.0'
+          },
+          body: JSON.stringify(parsedResponse)
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log("Validation Response: ", data);
+            $("#validationResponseBox").text(JSON.stringify(data, null, 2));
+            new bootstrap.Modal(document.getElementById('validationModal')).show();
+          })
+          .catch(error => {
+            console.error("POST Error: ", error);
+            // Handle error here
+          });
+      });
+
+
+
+      $("#refreshFromServerBtn").click(function () {
+        fetch(`${serverUrl}/Measure`)
+          .then(response => response.json())
+          .then(data => {
+            // Clear the dropdown and add the empty option
+            $('#questionnaireResponseDropdown').empty();
+            $('#questionnaireResponseDropdown').append(new Option("-- Select a Measure --", ""));
+
+            // Assuming data.entry contains the resources
+            data.entry.forEach(entry => {
+              let id = entry.resource.id;
+              $('#questionnaireResponseDropdown').append(new Option(id, id));
+            });
+
+            if ($('#questionnaireResponseDropdown option').length == 2) {
+              $('#questionnaireResponseDropdown').val($('#questionnaireResponseDropdown option:last').val()).change();
+            }
+          })
+          .catch(error => {
+            console.error("Error fetching QuestionnaireResponses:", error);
+          });
+      });
+
+
+
+      $("#dummyBtn").click(function () {
+        // URL of the StructureDefinition resource
+        const structureDefinitionURL = "http://hl7.org/fhir/StructureDefinition/document-bundle";
+
+        fetch(structureDefinitionURL)
+          .then(response => response.json())
+          .then(data => {
+            // Check if the fetched data is valid and contains necessary information
+            if (data && data.id) {
+              // URL of your FHIR server endpoint for StructureDefinition with id "Bundle"
+              const serverEndpoint = `${serverUrl}/StructureDefinition/Bundle`;
+
+              // Performing a PUT request to update/create the StructureDefinition on the server
+              fetch(serverEndpoint, {
+                method: 'PUT',
+                headers: {
+                  'Content-Type': 'application/fhir+json'
+                },
+                body: JSON.stringify(data)
+              })
+                .then(response => {
+                  if (response.ok) {
+                    return response.json();
+                  } else {
+                    throw new Error('Failed to PUT the StructureDefinition');
+                  }
+                })
+                .then(putResponseData => {
+                  console.log("PUT Response: ", putResponseData);
+                })
+                .catch(error => {
+                  console.error("PUT Error: ", error);
+                });
+            } else {
+              console.error("Fetched StructureDefinition is not valid.");
+            }
+          })
+          .catch(error => {
+            console.error("Fetch Error: ", error);
+          });
+      });
+ 
+
+
+
+ 
+  
+ 
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   $(document).ready(function() {
+  //     var serverUrl;
+  //     var measureReportExpression;
+
+  //     var fetchServer = function() {
+  //       $.getJSON("./config.json")
+  //         .done(function(data) {
+  //           fetch(data.serverurl + '/fhir/metadata')
+  //             .then(response => {
+  //               if (response.ok) {
+  //                 clearInterval(serverInterval);
+  //                 serverUrl = data.serverurl;
+  //                 measureReportExpression = data["measure-report-expression"];
+  //                 $("#server-status")
+  //                   .removeClass('status-searching')
+  //                   .addClass('status-found')
+  //                   .html("Server found at: <span class='monospaced'>" + serverUrl + "</span>");
+  //               }
+  //             })
+  //             .catch(error => console.error("Error:", error));
+  //         })
+  //         .fail(function(jqXHR, textStatus, errorThrown) {
+  //           console.error("Failed to fetch config.json:", errorThrown);
+  //         });
+  //     };
+
+  //     // Call fetchServer function immediately when the page loads
+  //     fetchServer();
+
+  //     // Then, if server is not found, try again every 5 seconds
+  //     var serverInterval = setInterval(fetchServer, 5000);
+
+  //     $.getJSON("./bundles.json")
+  //       .done(function(data) {
+  //         data.forEach(bundle => {
+  //           $("#bundle-select").append(new Option(bundle.name, bundle.filename));
+  //         });
+  //       })
+  //       .fail(function(jqXHR, textStatus, errorThrown) {
+  //         console.error("Failed to fetch bundles.json:", errorThrown);
+  //       });
+
+  //     $("#post-btn").click(function() {
+  //       var selectedFilename = $("#bundle-select").val();
+
+  //       if (selectedFilename) {
+  //         $.getJSON(selectedFilename)
+  //           .done(function(data) {
+  //             $.ajax({
+  //               url: serverUrl + "/fhir",
+  //               type: "POST",
+  //               data: JSON.stringify(data),
+  //               contentType: "application/fhir+json",
+  //               success: function (data, textStatus, jqXHR) {
+  //                 console.log("POST request successful:", textStatus);
+  //               },
+  //               error: function (jqXHR, textStatus, errorThrown) {
+  //                 console.error("Failed to send POST request:", errorThrown);
+  //               }
+  //             });
+  //           })
+  //           .fail(function(jqXHR, textStatus, errorThrown) {
+  //             console.error("Failed to fetch " + selectedFilename + ":", errorThrown);
+  //           });
+  //       } else { 
+  //         console.error("No bundle selected");
+  //       }
+  //     });
+
+  //     $(document).ready(function() {
+  //       $("#get-data-btn").click(function() {
+  //   // Fetch the JSON data
+  //   $.getJSON(serverUrl+measureReportExpression)
+  //     .done(function(data) {
+  //       const measureReport = data;
+
+  //       // Extracting necessary data from MeasureReport
+  //       const strata = measureReport.group[0].stratifier[0].stratum;
+  //       const populations = measureReport.group[0].population;
+
+  //       // Prepare data for PivotTable.js
+  //       const pivotData = [];
+  //       const dimensions = ["Stratum", "Population", "Count"];
+
+  //       // Extract population codes
+  //       const populationCodes = populations.map(pop => pop.code.coding[0].code);
+
+  //       strata.forEach((stratum) => {
+  //         const stratumValue = stratum.value.text;
+
+  //         populationCodes.forEach((code) => {
+  //           // Find the population for this code
+  //           const population = stratum.population.find(
+  //             (pop) => pop.code.coding[0].code === code
+  //           );
+
+  //           // Get the count, or default to 0 if the population isn't present
+  //           const count = population ? population.count : 0;
+
+  //           // Add data row
+  //           pivotData.push([stratumValue, code, count]);
+  //         });
+  //       });
+
+  //       // Transform the data to the format expected by PivotTable.js
+  //       const transformedData = pivotData.map(item => {
+  //         return {
+  //           Stratum: item[0],
+  //           Population: item[1],
+  //           Count: item[2]
+  //         };
+  //       });
+
+  //       // Logging PivotTable input data
+  //       console.log("PivotTable Input Data:", transformedData);
+
+  //       // Creating PivotTable.js
+  //       $("#pivot-table-container").pivotUI(transformedData, {
+  //         cols: ["Stratum"],
+  //         rows: ["Population"],
+  //         aggregatorName: "Sum",
+  //         vals: ["Count"],
+  //       });
+
+  //       // Displaying other information
+  //       $("#status").text(measureReport.status);
+  //       $("#type").text(measureReport.type);
+  //       $("#date").text(measureReport.date);
+
+  //       // Displaying JSON response
+  //       $("#json-response").text(JSON.stringify(data, null, 2));
+  //       $("#refresh-status").text("OK").css("color", "darkgreen");
+  //     })
+  //     .fail(function(jqXHR, textStatus, errorThrown) {
+  //       // Displaying error information
+  //       $("#json-response").text(jqXHR.responseText);
+  //       $("#refresh-status").text("Error (" + jqXHR.status + ")").css("color", "red");
+  //       console.error("Failed to fetch JSON data:", errorThrown);
+  //     });
+  // });
+
+  //   });
+  //   });
+  //   
+  </script>
+</body>
+
+</html>
