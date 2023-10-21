@@ -107,6 +107,10 @@
   <div class="container mt-4">
     <h2>QuestionnaireResponse Extraction Test</h2>
     <p id="server-status" class="status-searching">Searching for server...</p>
+    <p>IG URL: <span id="igUrlLabel"></span></p>
+
+    <div><label><input type="checkbox" id="localOutputCheckbox"> Local output</label></div>
+
     <button id="refreshFromServerBtn" class="btn btn-secondary mb-2 mr-2">Refresh from package</button>
     <button id="uploadBtn" class="btn btn-secondary mb-2">Upload package resources to server</button>
     <select id="questionnaireResponseDropdown" class="form-select mb-2">
@@ -152,6 +156,44 @@
         .then(config => {
           serverUrl = config.server_url;
           resourcesBaseUrl = config.ig_url;
+          updateIgUrlLabel();
+          function updateIgUrlLabel() {
+              $("#igUrlLabel").text(resourcesBaseUrl);
+          }
+
+          $("#localOutputCheckbox").change(function () {
+            if ($(this).is(':checked')) {
+                resourcesBaseUrl = "./output/";
+            } else {
+                resourcesBaseUrl = config.ig_url; 
+            }
+            updateIgUrlLabel();
+            // ... rest of your code
+        });
+
+
+          fetch('/output/package.db', { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    $("#localOutputCheckbox").prop('checked', true);
+                    resourcesBaseUrl = "./output/"; // Update the base URL
+                  } else {
+                    $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
+                }
+            })
+            .catch(error => {
+              // Handle any other type of errors here, if necessary.
+              $("#localOutputCheckbox").prop('checked', false).prop('disabled', true);
+          });
+
+            $("#localOutputCheckbox").change(function () {
+              if ($(this).is(':checked')) {
+                  resourcesBaseUrl = "./output/";
+              } else {
+                  resourcesBaseUrl = config.ig_url; // assuming you have 'config' in this context
+              }
+              // Call any function or update any other variables that depend on resourcesBaseUrl here
+          });
 
           var fetchServer = function () {
             fetch(serverUrl + '/metadata')
