@@ -164,7 +164,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 
 ### **Informative examples**
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-logical-models
+[SMART Guidelines - Immunizations (Measles): Logical Models](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-logical-models)
 
 
 ### **Known issues and dependencies:**

@@ -36,11 +36,11 @@ Each SMART Implementation Guide shall contain sufficient data to validate itself
 
 
 ### **Informative examples**
-https://worldhealthorganization.github.io/smart-immunizations-measles/Immunization-Immunization1.html
-https://worldhealthorganization.github.io/smart-immunizations-measles/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1.html
+[SMART Guidelines - Immunizations (Measles): Example Immunization event](https://worldhealthorganization.github.io/smart-immunizations-measles/Immunization-Immunization1.html)
+[SMART Guidelines - Immunizations (Measles): Example QuestionnaireResponse](https://worldhealthorganization.github.io/smart-immunizations-measles/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1.html)
 
 
 ### **Known issues and dependencies:**
 
-* TO DO: Data generation?
-* TO DO: Packaging of example data?
+* Test and Data generation, and packaging of such data, might take considerable reference. This will be handled when tools and processes are in place.
+ 

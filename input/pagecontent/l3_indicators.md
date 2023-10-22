@@ -97,9 +97,8 @@ All FHIR artifacts and CQL libraries are subject to change tracking.
    
 
 ### **Informative examples**
-
-https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND05.html
-https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND40.html
+[SMART Guidelines - Immunizations (Measles): Indicator 05](https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND05.html)
+[SMART Guidelines - Immunizations (Measles): Indicator 08](https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND40.html)
 
 ### **Known issues and dependencies:**
 

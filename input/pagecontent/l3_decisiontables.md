@@ -53,9 +53,8 @@ Decision tables represent the activities that are performed when triggered or re
    
 
 ### **Informative examples**
-
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-plan-definitions
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-activity-definitions
+[SMART Guidelines - Immunizations (Measles): PlanDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-plan-definitions)
+[SMART Guidelines - Immunizations (Measles): Activity Definitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-activity-definitions)
 
 ### **Known issues and dependencies:**
 

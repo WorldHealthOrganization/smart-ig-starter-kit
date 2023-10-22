@@ -78,8 +78,7 @@ For each data element in the logical model (i.e. in the data dictionary)
 Several SDC-related tools and implementations are available from the [HL7 Confluence](https://confluence.hl7.org/display/FHIRI/SDC+Implementations).
 
 ### **Informative examples**
-
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-questionnaires
+[SMART Guidelines - Immunizations (Measles): Questionnaires](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-questionnaires)
 
 ### **Known issues and dependencies:**
 

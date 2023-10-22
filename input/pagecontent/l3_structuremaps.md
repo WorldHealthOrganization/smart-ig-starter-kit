@@ -60,6 +60,8 @@ The following structuremaps are expected:
   * the data extraction map from Logical Model instances to FHIR resources
   * the combined data extraction map that includes the 2 maps above and can process the extraction from Questionnaire to FHIR Resources
 
+* StructureMaps may be difficult to implement and debug. It is important to compile the maps frequently while authoring, and check the output in the QA of the publisher.
+
 
 Reusing StructureMaps:  
 StructureMaps may be reused. For example, modular questionnaires (like Patient demographic modules) - which would use common transformations.
@@ -69,10 +71,12 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 ### **Output Criteria / Definition of Done:**
 
 * Mappings should create valid StructureMaps - including the necessary metadata. 
-  * the map should be correctly parsed and validated by the publisher
+  * the map should be correctly compiled and validated by the publisher - no QA errors
   * optional metadata should be added according to the spec 
     * group names shall not contain spaces
-* All the dependencies of the StructureMap shall be in the IG dependencies - SDC, base profiles, logical models, etc.
+* StructureMaps for extraction must be tested to successfully transform the artifacts (for example, in a Questionnaire, the StructureMaps ust be tested to successfully obtain the intended resources from the QuestionnaireResponse).
+* All mapped elements and groups should be tested
+* All the dependencies of the StructureMap shall be in the IG or dependencies - SDC, base profiles, logical models, etc.
 
 <div class="todo">
 * TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc.?
@@ -93,7 +97,7 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 {:.table-bordered.full-width}  
 
 ### **Informative examples**
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-structure-maps
+[SMART Guidelines - Immunizations (Measles): StructureMaps](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-structure-maps)
 
 ### **Known issues and dependencies:**
 * Publisher doesn't support metadata, so the StructureMaps show without description in the artifacts table

@@ -81,8 +81,8 @@ The recommended priority for the search for existing profiles and extensions:
 
 
 ### **Informative examples**
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-resource-profiles
-https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-extension-definitions
+[SMART Guidelines - Immunizations (Measles): Profiles](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-resource-profiles)
+[SMART Guidelines - Immunizations (Measles): Extensions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-extension-definitions)
 
 
 ### **Known issues and dependencies**
