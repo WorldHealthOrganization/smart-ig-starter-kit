@@ -1,0 +1,68 @@
+@startuml
+'skinparam monochrome true
+skinparam shadowing false
+hide circle
+hide stereotype
+
+
+sprite $aProcess jar:archimate/application-process
+sprite $tArtifact jar:archimate/technology-artifact
+
+
+rectangle "Data Model" as Aggregation  #Technology{
+}
+
+rectangle "Data Elements" as Department  #Technology{
+}
+
+
+rectangle "Code System" as Composition  #Technology{
+}
+
+Composition -l[hidden]- Aggregation :"                                                                                                             "
+
+
+rectangle "Concept" as Course  #Technology{
+}
+
+rectangle "L2: Generic\n  Personas" as Access <<tArtifact>> #Technology{
+}
+
+
+Access-u[hidden]- Course
+
+rectangle "Create Persona" as Database <<$aProcess>><<behavior>> #Application{
+}
+
+rectangle "Data Element" as RelatedTo  #Technology{
+}
+
+
+RelatedTo -r[hidden]- Access :"                                                                                                             "
+
+
+
+rectangle "ValueSet" as Research <<$bProcess>><<behavior>> #Technology{
+}
+
+rectangle "Create CQL" as FlowsTo <<$aProcess>><<behavior>> #Application{
+}
+
+
+
+FlowsTo -u[hidden]- Research
+
+
+rectangle "NextActivity" as NextActivity <<$aProcess>><<behavior>> #Application{
+}
+
+'NextActivity -u[hidden]- Database
+
+
+
+Aggregation o-- Department : Aggregation\n- Illustrates that an object or process \ngroups several other objects/processes.\n  Example: A Data model aggregates several Data Elements.\nThe Data Elements can exist without the Data Model.
+Composition *-- Course : Composition\n- Indicates that an object or process \nis composed of one or more other objects/processes.\n Example: A CodeSystem is composed of Concepts.\n   If the CodeSystem is deleted, the Concepts cease to exist.
+Access --> Database : Access (Read/Write)\n- Indicates that a process has an artifact as input or output.\n Example: To Create a Persona has L2 Generic Personas as input.
+RelatedTo -- Research : Related To\n- A generic relationship \nwith a label specifying the type of connection.\n   Example: A ValueSet is related to a Data Element.
+FlowsTo -r-> NextActivity :   Activity **Flows to** Activity\n              - A relationship where one activity follows another.             \n       Example: "Create CQL" flows to "Encode CQL".   
+@enduml

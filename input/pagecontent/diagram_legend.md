@@ -29,6 +29,10 @@ The relations are represented by arrows
 
 - **Flows to**: A relationship where an activity (process) is followed by another activity
 
+<figure>
+  {% include diagram-arrows.svg %}
+</figure>
+
 
 ### Example Diagram:
 <img src="./l3_process_indicator.png" style="width:50%"/>
