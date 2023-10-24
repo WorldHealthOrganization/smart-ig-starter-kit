@@ -11,11 +11,13 @@ This specification uses:
 
 ### Layers:
 
-- **Application Layer**: Offers a functional description, typically illustrating processes, functions, and services.
+- **Application Layer**: Offers a functional description, typically illustrating processes, functions, and services. This is represented by blue elements.
   
-- **Technology Layer**: Represents actual artifacts, like files, resource instances, or other data objects.
+- **Technology Layer**: Represents actual artifacts, like files, resource instances, or other data objects. This is represented by green elements.
 
-### Relations:
+### Relations :
+
+The relations are represented by arrows
 
 - **Aggregation**: Illustrates that an object groups several other objects.
   

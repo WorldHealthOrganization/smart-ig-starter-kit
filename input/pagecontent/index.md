@@ -17,6 +17,14 @@ In addition, the adoption and adaptation of SMART Guidelines by the different co
 * Quality control and validation
 * Process monitoring and improvement
 
+
+### About this implementation guide
+This guide is divided into several sections that are displayed in the menu bar located at the top of the page:
+- <a href="index.html">Home</a> - Provides the introduction about this guide.
+- <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3.
+- <a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies.
+- <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG.
+
 ### Intellectual Property and copyright considerations
 
 This documentation is distributed under the CC-BY-IGO license. Please see the [license details](license.html).

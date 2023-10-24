@@ -30,7 +30,7 @@ menu:
     Overview: '#'
     Assumptions: 'assumptions.html'
   Authoring:
-    Overview: 'authoring_overview.html'
+#    Overview: 'authoring_overview.html'
     Structuring of the SOP IG: 'structure.html'
     Diagrams Legend: 'diagram_legend.html'
     Types of content: 'content_types.html'
