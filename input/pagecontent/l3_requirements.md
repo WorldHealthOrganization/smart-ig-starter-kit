@@ -22,7 +22,7 @@ The requirements capture the following data:
 <li class="todo">TO DO: Minimal testing expectations for all requirements?</p>
 
 ### **Activities:**
-<img src="./l3_requirements.png" style="width:50%"/>
+<img src="./l3_process_requirements.png" style="width:50%"/>
 <br clear="all"/>
 > Summary: From the Functional and Non-Functional requirements in the L2, the L3 author creates  Requirements resources.
 

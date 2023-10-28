@@ -4,7 +4,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: who.fhir.smart-ig-starter-kit
 canonical: http://smart.who.int/ig/smart-ig-starter-kit
-name: smart-ig-starter-kit
+name: SMARTStarterKit
 status: draft
 version: 0.2.1
 fhirVersion: 4.0.1
@@ -52,6 +52,7 @@ menu:
       Profiles: 'l3_profiles.html'
       Decision Tables: 'l3_decisiontables.html'
       Scheduling Logic: 'l3_schedulinglogic.html'
+      Libraries: 'l3_libraries.html'
       Structure Maps: 'l3_structuremaps.html'
       Testing: 'l3_testing.html'
       Forms: 'l3_forms.html'
@@ -124,6 +125,8 @@ pages:
         title: "Decision Tables"
       l3_schedulinglogic.md :
         title: "Scheduling Logic"
+      l3_libraries.md :
+        title: "Libraries"
       l3_structuremaps.md :
         title: "Structure Maps"
       l3_testing.md :

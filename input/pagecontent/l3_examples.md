@@ -42,5 +42,5 @@ Each SMART Implementation Guide shall contain sufficient data to validate itself
 
 ### **Known issues and dependencies:**
 
-* Test and Data generation, and packaging of such data, might take considerable reference. This will be handled when tools and processes are in place.
+* Test and Data generation, and packaging of such data, might take considerable effort. This will be handled when tools and processes are in place.
  

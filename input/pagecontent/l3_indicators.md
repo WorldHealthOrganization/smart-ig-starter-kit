@@ -27,7 +27,7 @@ Creating an indicator from the L2 means:
 
 
 * Create or reuse a CQL library that contains the definitions and functions that are needed for the Measure
-  * see [Library authoring](l3_library.html) and [CQL authoring](l3_cql.html)
+  * see [Library authoring](l3_libraries.html) and [CQL authoring](l3_cql.html)
 
 * Add the canonical URL of the Library to the Measure
 
@@ -92,7 +92,7 @@ All FHIR artifacts and CQL libraries are subject to change tracking.
 | Tool | Usage | Doc |
 | --- | ---| --- |
 | Sushi | Create FHIR resources in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
-| CQF Ruler | A FHIR server to upload the artifacts and test the `$evaluate-measure` | [Testing Measures](l3_measures_testing.html) |
+| CQF Ruler | A FHIR server to upload the artifacts and test the `$evaluate-measure` |  |
 {:.table-bordered.full-width}  
    
 
