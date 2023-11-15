@@ -1,5 +1,5 @@
 <div>
-<blockquote style="background-color: rgba(255, 160, 160, 0.3);">
+<blockquote style="background-color: rgba(255, 160, 160, 0.5);">
 	<strong>This is a draft document still being edited.</strong>
 	This content should not yet be expected to be coherent or even compatible with the SMART Guidelines
 </blockquote>
