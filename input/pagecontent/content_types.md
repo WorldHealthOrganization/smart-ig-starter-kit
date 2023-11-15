@@ -61,7 +61,7 @@ An atomic piece of data, often a part of data objects. Elements get transformed,
 ### Coding
 The assignment of codes to data elements, where applicable, using standard terminologies and mapped to other codes as needed. Coding aids in ensuring that data elements are universally understood and interpretable.
 * L2: []()
-* L3: [ValueSets](l3_valuesets.html), [CodeSystems](l3_Codesystems.html)
+* L3: [ValueSets](l3_valuesets.html), [CodeSystems](l3_codesystems.html)
 
 ### Mapping
 Mapping the codes from one system to another, ensuring that multiple representations, when possible, are documented and accessible.
