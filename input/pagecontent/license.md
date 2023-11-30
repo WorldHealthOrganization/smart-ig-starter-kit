@@ -30,6 +30,7 @@ Intellectual Property Organization. (http://www.wipo.int/amc/en/mediation/rules/
 
 <p>Copyright(c) 2022 World Health Organization All rights reserved.</p>
 
+<p><a href ="https://opensource.org/license/bsd-3-clause/">3-clause BSD license</a></p>
 <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
 <ol>
 <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
