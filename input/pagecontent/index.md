@@ -1,7 +1,7 @@
 <div>
 <blockquote class="stu-note">
 	<strong>This is a draft document still being edited.</strong>
-	The SMART Guidelines Standard Operating Procedures are beind edited as a community effort. Authors of SMART Guidelines are welcome to submit [issues](https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues) and join the discussions to validate and improve these authoring procedures.
+	The SMART Guidelines Standard Operating Procedures are beind edited as a community effort. Authors of SMART Guidelines are welcome to submit <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues">issues</a> and join the discussions to validate and improve these authoring procedures.
 </blockquote>
 </div>
 
