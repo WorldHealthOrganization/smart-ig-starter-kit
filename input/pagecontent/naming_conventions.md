@@ -6,7 +6,7 @@
 
 ### Canonical URLs: 
 The ImplementationGuides shall have a Canonical URL following the structure
-  http://smart.who.int/ig/`<IG package>`
+  http://smart.who.int/ig/`<IG code>`
 
 
 

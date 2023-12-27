@@ -31,7 +31,7 @@ Scheduling logic represents the schedule of actions that are expected to be foll
   - For any calculated value (`condition` or `dynamicValue`), capture the expressions in a CQL library and refer to that library in the `library``
 4. CQL Writing
   - a. Ensure that every input for the CQL there's a concept in the common dictionary
-  - b. See CQL authoring
+  - b. See [CQL authoring](l3_cql.html) for criteria and guidance.
   
 
 ### **Output Criteria / Definition of Done:**
