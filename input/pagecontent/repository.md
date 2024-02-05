@@ -12,32 +12,39 @@
 > For adaptations: Following HL7 recommendation, ideally the local HL7 affiliate will publish national specifications.  
 > If the affiliate is not available or declines, other organisations can step in.
 
-* The name of the repository should match the code of the IG (see #)
+* The name of the repository should match the code of the IG (see below).
 
 
-To publish: 
-GH Pages
-Enable pages from the gh-pages branch, root folder.
-Confirm that the repo allows github actions to have read and write access
-The standard build script and github action SHOULD be retained. If there are changes needed, they SHOULD be reported back to the community.
-FHIR Build
+## Publishing development builds : 
+### GitHub Pages
+When enabled, GitHub pages will contain the continuous build. This is triggered for every commit. 
+
+To enable: 
+* In the repository settings, enable pages from the gh-pages branch, root folder.
+* Confirm that the repo allows github actions to have read and write access
+* The standard build script and github action SHOULD be retained. If there are changes needed, they SHOULD be reported back to the community.
+
+The result website is published on `https://WorldHealthOrganization.github.io/<repository-name>` (or generically, for non-WHO publications, `https://<OrganizationName>.github.io/<RepositoryName>` ).
+Any branches are published on `https://<OrganizationName>.github.io/<RepositoryName>/branches/<branch-name>`.
+
+### FHIR Build
+The HL7 build page is also built. It uses the same tooling but slightly different infrastructure. It is required for the publications to be found by tooling and registries. 
+The result website is published on `https://build.fhir.org/ig/WorldHealthOrganization/<repository-name>` (or generically, for non-WHO publications, `https://build.fhir.org/ig/<OrganizationName>/<RepositoryName>` ).
+Any branches are published on `https://build.fhir.org/ig/<OrganizationName>/<RepositoryName>/branches/<branch-name>`.
 
 
 The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
 
-## Implementation Guide configuration
+## Implementation Guide naminng and configuration
 
-* Canonical url should be in the form `<smart_base_url>/<ig_code>`
+All WHO SMART Guidelines IGs will be published in one technical publication web space, `https://smart.who.int`. For this, the following convention is required:
 
-* Package id should be in the form: `who.fhir.<ig_code>` Or `who.fhir.smart.<ig_code>` Or `who.smart.fhir.<ig_code>`
+* Canonical url should be in the form `https://smart.who.int/<ig_code>`
 
+* Package id should be in the form: `smart.who.int.<ig_code>`.
 
-
-`<smart_base_url>` - all SMART Guidelines IGs will be published in one technical publication web space. `base_url`
-
-`<ig_code>` - the ig code is the part of the package name that identifies the smart IG itself - for example `anc` for antenatal care
-
+* `<ig_code>` is an identifier - it can contain dashes `-` and lowercase letters, numbers or hyphens. It must start with a lowercase character. The expression is `^[a-z][a-z0-9-]*$`. For example `anc` for antenatal care
 
 National adaptations: 
-Affiliates can apply their ig package name convention to the smart guidelines IG. As a result, package IDs would be like `hl7.fhir.country.smart.<ig_code>` or `hl7.fhir.country.<ig_code>`.
+Affiliates can apply their ig package name convention to the smart guidelines IG. As a result, package IDs would be like `hl7.fhir.country.smart.<ig_code>` or `hl7.fhir.country.<ig_code>`. This will impact the publication setup.
 
