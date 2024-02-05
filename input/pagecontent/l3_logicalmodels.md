@@ -31,7 +31,7 @@ This is the overview of the activities and related artifacts used:
 <br clear="all"/>
 
 
-#### Looking up existing models
+#### Looking up an reusing existing models
 
 Some of the data entries are commons. 
 
@@ -39,11 +39,15 @@ If an existing model is found, it is possible to
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
-<div class="todo">
-TO DO: describe what can be done with logical model specializations.
-</div>
+For example, "Client Registration" is a dataset that is similar across different vaccination processes. L3 authors may create a "Client Registration" logical data model with the common elements and create specific models for each antigen with any specific questions.
 
 Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
+
+Another possibility is the use of common structures - for example person identification - with given and family names, identifier(s), etc. These can be used as types or subsets of a logical model.
+
+L3 authors should take into consideration that reused models are version-sensitive and any changes should take this versioning into consideration.
+
+When reusing an existing model, L3 authors are recommended to produce a UML-like diagram or any other illustration that depicts this reuse.
 
 
 #### Mapping DAK to a logical model
