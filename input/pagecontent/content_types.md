@@ -55,23 +55,23 @@ A comprehensive representation of information, often deriving from business proc
 
 ### Data Element
 An atomic piece of data, often a part of data objects. Elements get transformed, coded, or mapped as per transformation logic or coding systems.
-* L2: []()
+* L2: DAK - This information is in the data dictionary - each data element
 * L3: [Logical Models](l3_logicalmodels.html)
 
 ### Coding
 The assignment of codes to data elements, where applicable, using standard terminologies and mapped to other codes as needed. Coding aids in ensuring that data elements are universally understood and interpretable.
-* L2: []()
+* L2: DAK - This information is in the data dictionary - each coded value in coded data elements
 * L3: [ValueSets](l3_valuesets.html), [CodeSystems](l3_codesystems.html)
 
 ### Mapping
 Mapping the codes from one system to another, ensuring that multiple representations, when possible, are documented and accessible.
-* L2: []()
+* L2:DAK - the mapping is obtained from the maps in the DAK (to LOINC, ICD-11, etc.)
 * L3: [Mapping](l3_conceptmaps.html)
 
 
 ### Form
 A tool for data collection, often driven by the requirements of business processes or the need to collect specific data.
-* L2: []()
+* L2: (This is derived from the data dictonary - each activity tab)
 * L3: [Questionnaires](l3_forms.html)
 
 ### Transformation Logic
