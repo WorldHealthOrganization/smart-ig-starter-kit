@@ -1,17 +1,22 @@
 
-CQL - [Clinical Query Language](https://cql.hl7.org/) is a way to computably express data queries for the inputs and outputs of decision support - [decision logic](l3_decisiontables.html) and [scheduling logic](l3_scheduling_logic.htlm) - as well as [indicators](l3_indicators.html). 
+CQL - [Clinical Query Language](https://cql.hl7.org/) is a way to computably express queries and logic for the inputs and outputs of decision support - [decision logic](l3_decisiontables.html) and [scheduling logic](l3_scheduling_logic.htlm) - as well as [indicators](l3_indicators.html). 
 
-CQL expressions are data definitions are defined in cql files; Common CQL libraries are available, containing commonly usable expressions, including FHIR resources.
+> TODO: Should we point here? Or include getting started guidance in this IG?
+For background and introduction to CQL, refer to the [Getting Started](https://github.com/cqframework/CQL-Formatting-and-Usage-Wiki/wiki/Getting-Started) page of the CQFramework wiki.
+
+CQL expressions are defined in CQL libraries; Common CQL libraries are available, containing commonly usable expressions for accessing data represented as FHIR resources.
 
 Upon authoring, CQL libraries are encoded (base64) and included in FHIR Library resources.  
 
-The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. Dependencies are common definitions intended to be used across different specification.
+The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. Dependencies are common definitions intended to be reused among multiple artifacts, and potentially multiple SMART Guidelines.
 
 
 ### **Inputs:** 
 
-* L2 Decision and Scheduling table
-* Common CQL files
+* L2 Decision tables
+* L2 Scheduling tables
+* L2 Indicator tables
+* Common CQL Libraries
 
 
 ### **Outputs:**
@@ -22,9 +27,9 @@ The L3 author must ensure that there are CQL expressions in each Measure or Deci
 ### **Activities:**
 
 1. The L3 author creates an input CQL file for:
-* each input columns in the Decision Table
-* each input columns in the Scheduling Table
-* each indicator tab 
+* each Decision Table
+* each Scheduling Table
+* each Indicator
 
 CQL files are named after the decision/scheduling/measure: 
 * e.g., IMMZ.D2.DT.Measles -> IMMZD2DTMeaslesInputs.cql
@@ -73,6 +78,7 @@ In this case, the auhor can for example:
 2.4. Include any other dynamic values that are needed for the PlanDefinition in the output CQL.
 2.5. Tag any other expressions needed as internal.
 
+// TODO: A CommunicationRequest is only necessary if that is the actual guidance...
 3. Create or reuse ActivityDefinitions depending on what FHIR resources need to be created from the Decision Tables. This will include a CommunicationRequest to alert the Health Worker to the Guidance that will be output.
 
 4. Create PlanDefintions for each Decision Table that references the output CQL libraries.  
