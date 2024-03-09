@@ -30,7 +30,7 @@ The L3 author must ensure that there are CQL expressions in each Measure or Deci
 * each Scheduling Table
 * each Indicator
 
-CQL files are named after the decision/scheduling/measure: 
+CQL Libraries are named after the decision/scheduling/measure: 
 * e.g., IMMZ.D2.DT.Measles -> IMMZD2DTMeaslesInputs.cql
 
 1.2. Create expressions for all input columns with tags:
