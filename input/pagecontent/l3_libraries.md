@@ -32,7 +32,7 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 
 ##### ** Publishable **
 
-* Published `active` Library resources SHALL conform to CRMIPublishableLibrary
+* Published `active` status Library resources SHALL conform to CRMIPublishableLibrary
 
 | Element | Guidance |
 | ---- | ---- |
