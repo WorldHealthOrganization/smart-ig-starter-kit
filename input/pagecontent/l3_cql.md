@@ -29,7 +29,7 @@ The L3 author must ensure that there are CQL expressions in each Measure or Deci
 * each Decision Table
 * each Scheduling Table
 * each Indicator
-
+CQL Libraries using in SMART Guidelines follow the conventions and conformance requirements established in the [Using CQL With FHIR](https://build.fhir.org/ig/HL7/cql-ig/using-cql.html) implementation guide.
 CQL Libraries are named after the decision/scheduling/measure: 
 * e.g., IMMZ.D2.DT.Measles -> IMMZD2DTMeaslesInputs.cql
 
