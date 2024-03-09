@@ -8,7 +8,7 @@ CQL expressions are defined in CQL libraries; Common CQL libraries are available
 
 Upon authoring, CQL libraries are encoded (base64) and included in FHIR Library resources.  
 
-The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. Dependencies are common definitions intended to be reused among multiple artifacts, and potentially multiple SMART Guidelines.
+The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. CQL Library dependencies are common definitions intended to be reused among multiple artifacts, and potentially multiple SMART Guidelines.
 
 
 ### **Inputs:** 
