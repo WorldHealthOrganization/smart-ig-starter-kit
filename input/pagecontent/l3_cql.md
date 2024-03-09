@@ -25,7 +25,7 @@ The L3 author must ensure that there are CQL expressions in each Measure or Deci
 
 ### **Activities:**
 
-1. The L3 author creates an input CQL file for:
+1. The L3 author creates an input CQL Library for:
 * each Decision Table
 * each Scheduling Table
 * each Indicator
