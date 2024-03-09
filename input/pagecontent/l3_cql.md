@@ -1,7 +1,6 @@
 
 CQL - [Clinical Query Language](https://cql.hl7.org/) is a way to computably express queries and logic for the inputs and outputs of decision support - [decision logic](l3_decisiontables.html) and [scheduling logic](l3_scheduling_logic.htlm) - as well as [indicators](l3_indicators.html). 
 
-> TODO: Should we point here? Or include getting started guidance in this IG?
 For background and introduction to CQL, refer to the [Getting Started](https://github.com/cqframework/CQL-Formatting-and-Usage-Wiki/wiki/Getting-Started) page of the CQFramework wiki.
 
 CQL expressions are defined in CQL libraries; Common CQL libraries are available, containing commonly usable expressions for accessing data represented as FHIR resources.
