@@ -18,7 +18,7 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 | Element | Guidance |
 | ---- | ---- |
 | id | SHALL be populated with {{Library Name}}
-| url | SHALL be populated with {{canonical base}}/Library/id |
+| url | SHALL be populated with {{canonical base}}/Library/{{Library Name}} |
 | version | SHALL be populated with {{ig version}} |
 | versionAlgorithm | SHALL be populated with {{ig version algorithm}} |
 | versionPolicy | SHOULD be populated with {{strict | metadata}} |
