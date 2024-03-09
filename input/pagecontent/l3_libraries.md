@@ -24,7 +24,7 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 | versionPolicy | SHALL be populated with `strict` |
 | name | SHALL be populated with {{Library Name }} |
 | title | SHALL be populated with {{Library Title }} |
-| status | SHALL be populated with {{ig status}} |
+| status | SHALL be populated with {{ig status}} (`draft` for non-released content, `active` for released content) |
 | experimental | SHALL be populated with {{ig experimental}} |
 | publisher | SHALL be populated with {{ig publisher}} |
 | description | SHALL be populated with {{Library Description}} |
