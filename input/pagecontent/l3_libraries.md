@@ -52,7 +52,9 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 | editor | SHOULD be populated with {{ig editor}} |
 | reviewer | SHOULD be populated with {{ig reviewer}} |
 | endorser | SHOULD be populated with {{ig endorser}} |
-| relatedArtifact | SHALL be populated with references to L2 content |
+| relatedArtifact | SHALL be populated with `citation` references to L2 content |
+
+TODO: Define how references to L2 content occur (not only for libraries but throughout)
 
 ##### **Computable** and **Executable**
 
