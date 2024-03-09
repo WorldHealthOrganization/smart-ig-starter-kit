@@ -45,7 +45,7 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 | copyright | SHALL be populated with {{ig copyright}} |
 | copyrightLabel | SHALL be populated with {{ig copyrightLabel}} |
 | approvalDate | SHALL be populated with {{ig approvalDate}} |
-| lastReviewDate | SHALL be populated with {{Library Review Date}} |
+| lastReviewDate | SHALL be populated with {{ig review date}} |
 | effectivePeriod | SHALL be populated with {{ig effectivePeriod}} |
 | topic | SHALL be populated with {{ig topic}} and optionally additional topics specific to the library |
 | author | SHALL be populated with {{ig author}} |
