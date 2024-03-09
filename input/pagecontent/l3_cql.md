@@ -77,7 +77,7 @@ In this case, the auhor can for example:
 2.4. Include any other dynamic values that are needed for the PlanDefinition in the output CQL.
 2.5. Tag any other expressions needed as internal.
 
-// TODO: A CommunicationRequest is only necessary if that is the actual guidance...
+// TODO: Provide documentation of the CommunicationRequest approach that provides a level of indirection between the health worker and the decision support guidance
 3. Create or reuse ActivityDefinitions depending on what FHIR resources need to be created from the Decision Tables. This will include a CommunicationRequest to alert the Health Worker to the Guidance that will be output.
 
 4. Create PlanDefintions for each Decision Table that references the output CQL libraries.  
