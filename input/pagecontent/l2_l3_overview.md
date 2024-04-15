@@ -9,3 +9,18 @@ The L2 content is presented in the artifacts represented in the diagram below:
 
 * It is important to track the versions of L2 content, especially when adapting L2 or L3 to a local implementation, in order to track changes and assess impact of those changes.For this same reason, there's a versioning and change management section in this document.
 
+Authoring Steps:
+
+* Logical Models
+* Profiles
+* Forms
+* Libraries
+* Decision Tables
+* Indicators
+* Scheduling Logic
+* Test Cases
+* Personas
+* Scenarios
+* Processes
+* Requirements
+* Examples

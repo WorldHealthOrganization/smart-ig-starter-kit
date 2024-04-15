@@ -7,7 +7,7 @@
 
 
 <br/> <br/> 
-  This Starter Kit describes a SOP for authoring L3 Implementation Guides for SMART Guidelines.
+  This Starter Kit describes a Standard Operating Procedure (SOP) for authoring L3 Implementation Guides for SMART Guidelines.
 
   The SMART guidelines present a set of consistent specifications intended to be reused and augmented / adapted worldwide. The creation, validation and maintenance of an increasing number of smart guidelines - by a range of experts at the Organization and an ever growing community - requires a common set of procedures and associated tooling.
 
