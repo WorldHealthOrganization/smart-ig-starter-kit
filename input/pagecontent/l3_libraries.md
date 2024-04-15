@@ -1,5 +1,7 @@
 Libraries are FHIR Artifacts containing the definitions of data querying and processing that are used in the indicators and scheduling / decision logic.
 
+Each CQL library SHALL have a corresponding Library resource in the SMART Guideline. See the [CQL](l3_cql.html) topic for a description of authoring the CQL libraries.
+
 ### **Inputs:** 
 
 * L3 Indicators, PlanDefinitions
@@ -59,7 +61,7 @@ TODO: Define how references to L2 content occur (not only for libraries but thro
 ##### **Computable** and **Executable**
 
 * Computable Libraries SHALL conform to CQLLibrary (base64-encoded text/cql content)
-* Executable Libraries SHALL conform to ELMLibrary (base64-encoded application/elm+json content)
+* Executable Libraries SHALL conform to ELMJSONLibrary (base64-encoded application/elm+json content)
 
 > TODO: Should we have JSON always?
 
