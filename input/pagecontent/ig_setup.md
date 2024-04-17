@@ -50,8 +50,8 @@ The default branch is expected to build with the empty default content. Until a 
 
 After initializing the IG, it must be configured:
 
-* Canonical url: `http://worldhealthorganization.github.io/<<repo>> `where `<<repo>>`is the repository name
-* Package id: `smart.who.int.<<code>>` where `<<code>>`is the last part of the package id, which should be the same as the `id` of the ImplementationGuide resource.
+* Canonical url: `http://worldhealthorganization.github.io/<repo_name>`
+* Package id: `smart.who.int.<code>` where `<code>`is the last part of the package id, which should be the same as the `id` of the ImplementationGuide resource.
 
 * L3 authors should ensure some feedback mechanism for questions, comments etc.
 
