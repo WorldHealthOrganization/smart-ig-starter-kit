@@ -2,15 +2,15 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: who.fhir.smart-ig-starter-kit
-canonical: http://smart.who.int/ig/smart-ig-starter-kit
-name: SMARTStarterKit
+id: smart.who.int.ig-starter-kit
+canonical: http://smart.who.int/ig-starter-kit
+name: SMART_IG_STARTER_KIT
 status: draft
 version: 0.2.1
 fhirVersion: 5.0.0
-date: 2021-06-03
+date: 2024-04-29
 # copyright:
-copyrightYear: 2021+
+copyrightYear: 2023+
 releaseLabel: "CI Build"
 title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
@@ -46,23 +46,22 @@ menu:
   #   Section 3: section3.html
 
   Home: 
-    Homepage: index.html
-    Overview: '#'
+    Overview: index.html
     Assumptions: 'assumptions.html'
   Authoring:
-#    Overview: 'authoring_overview.html'
-    Structuring of the SOP IG: 'structure.html'
-    Diagrams Legend: 'diagram_legend.html'
-    Types of content: 'content_types.html'
+    Overview: 'authoring_overview.html'
+#   Diagrams Legend: 'diagram_legend.html'
+#   Types of content: 'content_types.html'
     Commons and Governance: 
       Common Artifacts: gov_overview.html
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
-    L2 Overview: 'l2_l3_overview.html'
-    Narrative Authoring: 'narrative.html'
+#   L2 Overview: 'l2_l3_overview.html'
+    Authoring Narrative content: 'narrative.html'
     Authoring Artifacts: 
-#      Naming Conventions: 'naming_conventions.html'
+#     Naming Conventions: 'naming_conventions.html'
       Authoring: 'authoring_artifacts.html'
+      Structuring of the SOP IG: 'structure.html'
       Personas: 'l3_personas.html'
       User scenarios: 'l3_scenarios.html'
       Processes: 'l3_processes.html'
@@ -81,15 +80,14 @@ menu:
       CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
-      License: 'license.html'
-
-
+#      License: 'license.html'
     Versioning: 'versioning.html'
     Licensing: 'ig_licensing.html'
+    Diagrams Legend: 'diagram_legend.html'
   IG Setup:
     GitHub Repositories: 'ig_setup.html'
-    GitHub Initialization: 'ig_licensing.html'
-    IG Configuration: 'ig_licensing.html'
+#    GitHub Initialization: 'ig_licensing.html'
+#    IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
   Validating IG:
     QA Check: 'qa_check.html'
@@ -191,9 +189,9 @@ pages:
 
 
 publisher:
-  name: TBD
+  name: WHO
   url: http://smart.who.int
-  email: leitnerc@who.int
+  email: smart@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 # experimental: true

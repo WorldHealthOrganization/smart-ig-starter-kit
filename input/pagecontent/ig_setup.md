@@ -58,4 +58,4 @@ After initializing the IG, it must be configured:
 * Package id: `who.fhir.????` Or `who.fhir.smart.???` `Or who.smart.fhir.?`
 
 * L3 authors should ensure that the content has some feedback mechanism.
-
+ 

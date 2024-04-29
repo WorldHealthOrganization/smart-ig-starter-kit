@@ -35,7 +35,7 @@ Any branches are published on `https://build.fhir.org/ig/<OrganizationName>/<Rep
 
 The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
 
-## Implementation Guide naminng and configuration
+## Implementation Guide naming and configuration
 
 All WHO SMART Guidelines IGs will be published in one technical publication web space, `https://smart.who.int`. For this, the following convention is required:
 

@@ -11,7 +11,7 @@ These are described below:
 ## Content coverage
 This is a manual effort. The L3 author is expected to ensure that all the expectations on the L2 are covered by some artifact. 
 
-## Verify confirmance with QA rules 
+## Verify conformance with QA rules 
 The quality checks are increasingly automated. Every Guide contains a QA page (see [QA Check](qa_check.html)) which automatically identifies issues like missing elements, references not found, etc.
 
 ## Validating L3 artifact functionality
