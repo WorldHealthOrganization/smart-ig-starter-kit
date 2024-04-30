@@ -52,10 +52,4 @@ The default branch is expected to build with the empty default content. Until a 
 
 ### ImplementationGuide Configuration
 
-After initializing the IG, it must be configured:
-
-* Canonical url: `http://worldhealthorganization.github.io/smart-ig-starter-kit`
-* Package id: `who.fhir.????` Or `who.fhir.smart.???` `Or who.smart.fhir.?`
-
-* L3 authors should ensure that the content has some feedback mechanism.
- 
+See [ImplementationGuide Configuration](ig_configuration.html)
