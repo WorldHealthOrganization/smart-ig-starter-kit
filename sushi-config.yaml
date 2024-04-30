@@ -103,8 +103,8 @@ pages:
     title: "Home"
 #    overview.md:
 #      title: "Overview"
-    assumptions.md:
-     title: "Assumptions"
+#  assumptions.md:
+#   title: "Assumptions"
   authoring_overview.md:
     title: "Authoring"
     structure.md:
