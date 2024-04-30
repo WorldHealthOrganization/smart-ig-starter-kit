@@ -1,6 +1,6 @@
 Authoring L3 consists in creating, validating and publishing L3 FHIR artifacts that correspond to the L2 specifications.
 
-<img src="./l3_authoring.png" style="width:80%; align:center"/>
+<img src="./l3_authoring.png" style="width:60%; align:center"/>
 <br clear="all"/>
 
 
