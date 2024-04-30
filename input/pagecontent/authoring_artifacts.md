@@ -1,5 +1,4 @@
-L3 authors are expected to create the necessary artifacts to cover the entire L2 specification and demonstrate a working SMART Guideline. This includes several types of artifacts and possibly narrative content.
-
+L3 authors create the necessary artifacts to cover the entire L2 specification and demonstrate a working SMART Guideline. This includes several types of artifacts and possibly narrative content.
 
 ### Input: L2 artifacts
 
@@ -79,12 +78,7 @@ L3 authors are expected to create the necessary artifacts to cover the entire L2
 
 
 ### Result: L3 Artifacts
-The diagram and table below shows the content types that are to be created as part of the L3 authoring process.
-
-
-<img src="./l3_artifacts.png" style="width:80%; align:center"/>
-<br clear="all"/>
-
+The table and diagram below show the content types that are to be created as part of the L3 authoring process.
 
 <table border="1">
     <thead>
@@ -120,7 +114,7 @@ The diagram and table below shows the content types that are to be created as pa
             <td><a href="l3_testing.html">Testing</a></td>
         </tr>
         <tr>
-            <td>TestScript??</td>
+            <td>TestScript</td>
             <td>input/testing</td>
             <td><a href="l3_testing.html">Testing</a></td>
         </tr>
@@ -233,6 +227,13 @@ The diagram and table below shows the content types that are to be created as pa
     </tbody>
 </table>
 
+This is an overview of these objects:
+
+<img src="./l3_artifacts.png" style="width:60%; align:center"/>
+<br clear="all"/>
+
+
+
 ### File locations
 
 #### Narrative
@@ -288,17 +289,28 @@ Resource IDs
   * **`Resource-id`** is also valid, although not preferred
 
 
+<div class="info-box must">
+  <span class="info-title">Resource IDs can only use up to 64 letters,numbers, hyphens and periods.</span>
+    Resource Ids must be combination of letters, numbers, hyphens, and periods. Ensure that the name is at least 1 character long but does not exceed 64 characters in length. The expression is <pre>[A-Za-z0-9\-\.]{1,64}</pre>
+</div>
+
+
+
 ## File Names
 
 * Resource file names must match the resource id. For profiles, this means the profile id.
 * Tools are case sensitive - file names shall not have overlapping names differing only in case
 * Sushi / FSH Aliases should be stored in `fsh/Aliases.fsh`
+* See [versioning](versioning.html)
 
 
-### Versioning
-see also [versioning](versioning.html)
+<div class="info-box must">
+  <span class="info-title">Names must start with an uppercase character, and may contain letters, numbers or underscores</span>
+    Names must start with an uppercase letter followed by up to 254 characters that can be a mix of letters, numbers, or underscores. The expression is <pre>^[A-Z]([A-Za-z0-9_]){1,254}$</pre>
+</div>
 
 
-## Governance
+
+
 <p class= "todo">TO DO: Adding artifacts, what goes into common-clinical, etc.</p>
 
