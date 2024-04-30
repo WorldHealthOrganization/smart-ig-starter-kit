@@ -82,7 +82,7 @@ menu:
       Examples: 'l3_examples.html'
 #      License: 'license.html'
     Versioning: 'versioning.html'
-    Licensing: 'ig_licensing.html'
+#    Licensing: 'ig_licensing.html'
     Diagrams Legend: 'diagram_legend.html'
   IG Setup:
     GitHub Repositories: 'ig_setup.html'
@@ -166,8 +166,8 @@ pages:
       license.md:
         title: "License"
 
-    ig_licensing.md:
-      title: "Licensing"
+#    ig_licensing.md:
+#      title: "Licensing"
     versioning.md:
       title: "Versioning"
   ig_setup.md:
