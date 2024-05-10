@@ -47,15 +47,7 @@ The default branch is expected to build with the empty default content. Until a 
 
 
 
-The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
-
 
 ### ImplementationGuide Configuration
 
-After initializing the IG, it must be configured:
-
-* Canonical url: `http://worldhealthorganization.github.io/smart-ig-starter-kit`
-* Package id: `who.fhir.????` Or `who.fhir.smart.???` `Or who.smart.fhir.?`
-
-* L3 authors should ensure that the content has some feedback mechanism.
-
+The Implementation Guide must be configured. See [ImplementationGuide Configuration](ig_configuration.html)

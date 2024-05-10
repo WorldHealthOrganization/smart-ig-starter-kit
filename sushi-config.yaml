@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: who.fhir.smart-ig-starter-kit
+id: smart.who.int.ig-starter-kit
 canonical: http://smart.who.int/ig/smart-ig-starter-kit
 name: SMARTStarterKit
 status: draft
@@ -103,8 +103,8 @@ pages:
     title: "Home"
 #    overview.md:
 #      title: "Overview"
-    assumptions.md:
-     title: "Assumptions"
+#  assumptions.md:
+#   title: "Assumptions"
   authoring_overview.md:
     title: "Authoring"
     structure.md:
