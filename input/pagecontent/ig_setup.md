@@ -48,4 +48,4 @@ The default branch is expected to build with the empty default content. Until a 
 
 ### ImplementationGuide Configuration
 
-See [ImplementationGuide Configuration](ig_configuration.html)
+The Implementation Guide must be configured. See [ImplementationGuide Configuration](ig_configuration.html)

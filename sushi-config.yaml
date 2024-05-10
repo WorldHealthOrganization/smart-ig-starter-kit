@@ -4,7 +4,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: smart.who.int.ig-starter-kit
 canonical: http://smart.who.int/ig-starter-kit
-name: SMART_IG_STARTER_KIT
+name: IgStarterKit
 status: draft
 version: 0.2.1
 fhirVersion: 5.0.0
@@ -101,8 +101,8 @@ pages:
     title: "Home"
 #    overview.md:
 #      title: "Overview"
-    assumptions.md:
-     title: "Assumptions"
+#  assumptions.md:
+#   title: "Assumptions"
   authoring_overview.md:
     title: "Authoring"
     structure.md:

@@ -8,11 +8,9 @@ General authoring guidance:
 * [PlantUML diagrams](http://build.fhir.org/ig/FHIR/ig-guidance/diagrams.html) can be added
 * All narrative pages must be listed in the ImplementationGuide resource (or equivalently in the sushi-config.yaml).
 
-<div class="info-box">
-  <div class="info-title"><span class="info-icon"></span>Title</div>
-  <div class="info-details">
-    All narrative pages must be listed in the ImplementationGuide resource (or equivalently in the sushi-config.yaml).
-  </div>
+<div class="info-box must">
+  <span class="info-title">Narrative pages must be listed in the ImplementationGuide</span>
+    All narrative pages must be listed in the ImplementationGuide resource (or equivalently in the sushi-config.yaml). Narrative files that are not listed will not be processed or displayed.
 </div>
 
 ### XHTML 
