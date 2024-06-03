@@ -30,6 +30,8 @@ The L3 author creates CQL libraries for:
   * Common library containing common expressions used by multiple artifacts within the SMART Guideline
   * Config library with declarations to enable configuration options to be referenced within CQL logic
   * Elements library containing CQL expressions corresponding to the elements defined in the data dictionary
+  * EncounterElements library containing CQL expressions corresponding to the elements defined in the data dictionary and from the perspective of an encounter (i.e. with Today and Encounter parameters)
+  * IndicatorElements library containing CQL expressions corresponding to the elements defined in the data dictionary and from the perspctive of an indicator (i.e. with a Measurement Period parameter)
   * Decision table libraries, one for each Decision table containing the recommendation logic referenced by the PlanDefinition
   * Indicator libraries, one for each Indicator definition containing the population criteria logic referenced by the Measure
   * Scheduling libraries, one for each Scheduling Table containing the scheduling logic referenced by the PlanDefinition
@@ -43,9 +45,8 @@ To enable the CQL to refer to concepts defined in the SMART Guideline, create a 
 ```cql
 library IMMZConcepts
 
-codesystem "IMMZ.C": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.C'
-codesystem "IMMZ.D1": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.D1'
-codesystem "IMMZ.D4": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.D4'
+// Immunization Measles Concepts
+codesystem "IMMZConcepts": 'http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts'
 
 //WHO ATC IPS Valueset
 valueset "WHO ATC": 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips'
@@ -68,14 +69,21 @@ library IMMZCommon
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-include FHIRCommon called FC
-include WHOCommon called WCom
-include WHOConcepts called Wcon
-include IMMZConcepts called IMMZc
 ...
 ```
 
 This library is then referenced by the other libraries whenever common logic needs to be shared between the logic libraries for each artifact.
+
+Common libraries typically contain shared function definitions used throughout the various Elements, Logic, and Indicator libraries. For example, a fluent function in the IMMZCommon library:
+
+```cql
+/**
+ * @description Fetches a singleton protocol applied from an immunization
+ * @comment The protocol list from the immunization
+ */
+define fluent function only(protocols List<FHIR.Immunization.ProtocolApplied>):
+  singleton from protocols
+```
 
 > NOTE: Common libraries are an organizing capability of CQL, and multiple common libraries MAY be created to facilitate sharing as appropriate for organizing the logic defined in the SMART Guideline. For example, logic may be organized around particular topic areas so that logic needed for recommendations related to a particular topic can be shared, without requiring that logic to be shared everywhere. Depending on the size of complexity of a SMART Guideline, multiple common libraries can be used to organized and share the logic. In addition, libraries may be refactored as needed when sharing patterns are recognized as the content develops.
 
@@ -100,18 +108,157 @@ To allow CQL logic to reference data elements defined in the SMART Guideline, cr
 ```cql
 library IMMZElements
 
-define "..."
-...
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include fhir.cqf.common.FHIRCommon called FC
+
+include WHOConcepts
+include WHOCommon called WC
+include WHOElements called WE
+
+include IMMZConcepts called Concepts
+include IMMZCommon called IC
+
+context Patient
+
+/*
+ * Measles elements
+ */
+define "MCV Dose":
+  [Immunization: Concepts."MCV Vaccine"] MCV
+    where MCV.status = 'completed'
+      and MCV.isSubpotent is not true
+
+define "MCV Primary Series Dose":
+  "MCV Dose" MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'primary'
+    )
+
+define "MCV Supplementary Dose":
+  "MCV Dose" MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'supplementary'
+    )
+
+define "MCV Dose 0 Dose":
+  "MCV Dose" MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'dose 0'
+    )
 ```
 
-TODO: Where are the L2 artifacts in the SMART Immunizations Measles IG?
+Note that these expressions are not tied to any particular timeframe, they are only tied to the `Patient` context and provide a basis for sharing the definition of data elements between decision support, scheduling logic, and indicator logic. These expressions are rarely, if ever, used on their own; instead, they are used by inclusion in the EncounterElements and IndicatorElements libraries, as shown in the following sections.
+
+#### Encounter and Indicator Elements Libraries
+
+The `EncounterElements` library defines data elements from the perspective of an encounter, and allows the data elements to be referenced from decision support logic as part of the evaluation of recommendations at the point of care (i.e. for an Encounter); while the `IndicatorElements` library defines the data elements from the perspective of an indicator, and allows the data elements to be referenced as part of the definition of an indicator (i.e. with a Measurement Period). For example:
+
+```cql
+library IMMZEncounterElements
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+
+include WHOConcepts
+include WHOCommon called WC
+include WHOEncounterElements called WE
+
+include IMMZConcepts called Concepts
+include IMMZCommon called Common
+include IMMZElements called Elements
+
+parameter Today Date default Today()
+parameter EncounterId String
+
+context Patient
+
+/*
+ * Measles elements
+ */
+define "MCV Dose":
+  Elements."MCV Dose" MCV
+    where MCV.occurrence.toInterval() on or before Today
+
+define "MCV Primary Series Dose":
+  Elements."MCV Primary Series Dose" MCV
+    where MCV.occurrence.toInterval() on or before Today
+
+define "MCV Supplementary Dose":
+  Elements."MCV Supplementary Dose" MCV
+    where MCV.occurrence.toInterval() on or before Today
+
+define "MCV Dose 0 Dose":
+  Elements."MCV Dose 0 Dose" MCV
+    where MCV.occurrence.toInterval() on or before Today
+```
+
+Note the inclusion of the `IMMZElements` library called `Elements`; this allows the definitions in this library to extend the base element definitions from the encounter perspective. Consider the `MCV Primary Series Dose` element from the base `Elements` library:
+
+```cql
+define "MCV Primary Series Dose":
+  "MCV Dose" MCV
+    where exists (
+      MCV.protocolApplied Protocol
+        where Protocol.series = 'primary'
+    )
+```
+
+An `MCV Primary Series Dose` is an `MCV Dose` (i.e. Measles Containing Vaccine Dose) where the protocol series has a value of `primary`. This definition is then contextualized in the `EncounterElements` library to identify only those primary series doses that occurred on or before today:
+
+```cql
+define "MCV Primary Series Dose":
+  Elements."MCV Primary Series Dose" MCV
+    where MCV.occurrence.toInterval() on or before Today
+```
+
+Similarly, the `MCV Doses Administered To Patient` expression in the indicator elements contextualizes the `MCV Dose` element to only those that occurred during the measurement period:
+
+```cql
+define "MCV Doses Administered to Patient During Measurement Period":
+  Elements."MCV Dose" I
+    where I.occurrence.toInterval() starts during "Measurement Period"
+```
+
+By organizing the data elements in this way, the definitions that are common to both decision support and indicators can be shared.
 
 #### Artifact Logic
 
-Each decision support rule, scheduling rule, or measure (indicator), should have its own logic library containing all and only the expressions that are referenced from the FHIR PlanDefinition or Measure resource. This approach allows the logic for each artifact to be organized alongside the artifact. Note that if logic needs to be reorganized so that it can be reused among multiple artifacts, create a Common library to support the common definitions.
+Each decision support rule, scheduling rule, or measure (indicator), should have its own logic library containing all and only the expressions that are referenced from the FHIR PlanDefinition or Measure resource. This approach allows the logic for each artifact to be organized alongside the artifact. Note that if logic needs to be reorganized so that it can be reused among multiple artifacts, create a common library to support the common definitions.
 
-CQL Libraries are named after the decision/scheduling/measure: 
-* e.g., IMMZ.D2.DT.Measles -> IMMZD2DTMeaslesInputs.cql
+CQL Libraries are named after the decision/scheduling/measure. For example:
+
+```cql
+/*
+@DecisionID: IMMZ.D2.DT.Measles.Ongoing transmission
+@BusinessRule: Determine if the client is due for a measles vaccination according to the national immunization schedule
+@Trigger: IMMZ.D2 Determine required vaccination(s) if any
+@Description: Countries with ongoing transmission in which the risk of measles mortality remains high (countries that provide first dose of MCV at 9 months and second dose of MCV at 15 months)
+*/
+library IMMZD2DTMeaslesOTLogic
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+
+include WHOCommon called WC
+include IMMZD2DTMeaslesLogic called Logic
+
+parameter Today default Today()
+```
+
+Note the use of tags:
+
+* @DecisionID
+* @BusinessRule
+* @Trigger
+* @Description
+
 
 ##### Input Column Expressions
 

@@ -10,20 +10,35 @@ Indicators are a machine-readable expressions that define the indicator and its 
 * Example MeasureReport corresponding to the test / example data included
 
 ### **Activities:**
+
 Measures are FHIR resources and can refer to CQL libraries. 
+
 <img src="./l3_process_indicator.png" style="width:50%"/>
 <br clear="all"/>
+
 > Summary: For each indicator in the L2, the L3 author creates a Measure resource. This includes adding populations and stratifiers (consulting the CQF-Measures guidance). The create the CQL definitions needed for the calculations, which will be encoded into the Library resources.
 
-Creating an indicator from the L2 means:
-
-* For each indicator in the DAK, a Measure resource instance needs to be created
-  * `id` is the code of the indicator but with no dashes or underscores
-  * Currently only one group is supported per Measure. The measure's `group.id` must be the same as the name of the measure.
-* Populate metadata (author, title, description, etc.) from the L2:
-  * `title` is the Indicator name
-  * `description` is the description in L2
-  * `Name` should be the Indicator name but without spaces, dashes or underscores e.g. `ImmunizationCoverageForBCG`
+1. For each indicator in the L2, create a Measure
+  - a. The Measure SHALL conform to the appropriate scoring profile based on the scoring type:
+      - i. Proportion - CQFMProportionMeasure
+      - ii. Ratio - CQFMRatioMeasure
+      - iii. Cohort - CQFMCohortMeasure
+      - iv. ContinuousVariable - CQFMContinuousVariableMeasure
+  - b. NOTE: Proportion measures with an estimated denominator are modeled as continuous variable measures to allow the metric to be collected and analyzed downstream as a proportion measure when the estimated denominator is known
+  - c. The Measure ID should be derived from the indicator code, e.g. IMMZ.IND.08 -> IMMZIND08
+  - d. Url: The URL SHALL be: [base canonical]/Measure/[id]
+  - e. Version: Do not set the version element, it will be set by the publication process
+  - f. Name: The Name SHALL be the same as the id
+  - g. Title: The L2 Indicator ID e.g. IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)
+  - h. Description: The long description of the indicator (i.e. the indicator description)
+2. Create an "indicator" logic library specific to the measure, e.g. IMMZIND08Logic
+  - a. The logic library SHALL contain expressions for each population criteria appropriate to the scoring type of the measure
+  - b. The logic library SHALL make use of an IndicatorElements library to reference data elements from the guideline
+  - c. The logic library MAY make use of an IndicatorLogic library to share common logic between multiple indicators in the guideline
+2. Create a `group` appropriate to the scoring type (only one group is supported)
+  - a. group.id SHALL be the same as the name of the measure
+  - b. create populations appropriate to the scoring type (https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#criteria-names)
+  - c. each population references an expression in the indicator library
 
 
 * Create or reuse a CQL library that contains the definitions and functions that are needed for the Measure
@@ -61,6 +76,8 @@ Creating an indicator from the L2 means:
       * expression = "Age Group Stratifier"
 ```
 
+> NOTE: Determining effective data requirements is a detailed process and should be done through the use of tooling such as the CQF Tooling to process Measure and Library resources
+
 * Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements).
 
 * If known, add the data requirements:
@@ -72,7 +89,6 @@ Creating an indicator from the L2 means:
 
 
 ### **Output Criteria / Definition of Done:**
-* Indicators shall conform to the [SGMeasure](https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMeasure.html) profile.
 
 * All the input variables shall be in the measure's `terms`.
 * All terms shall part of the Data Dictionary
