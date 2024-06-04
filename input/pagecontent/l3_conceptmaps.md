@@ -3,6 +3,7 @@ ConceptMap resources are created to provide a mapping from the codes of one syst
 ### **Inputs:** 
 
 * L2 Data Dictionary (Concept IDs and Terminology Mappings)
+* L3 CodeSystem(s)
 
 ### **Outputs:**
 
@@ -11,14 +12,11 @@ ConceptMap resources are created to provide a mapping from the codes of one syst
 
 ### **Activities:**
 
-#### Code Validation
-When picking a code for mapping or validation of the mapping, it is important to ...
-
 ### **Criteria / Definition of Done:**
 
 * A ConceptMap exists for each target code system identifier in the data dictionary terminology mappings
-* ConceptMaps SHALL conform to CRMIShareableConceptMap
-* Active, published ConceptMaps SHALL conform to CRMIPublishableConceptMap
+* ConceptMaps SHALL conform to [CRMIShareableConceptMap](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareableconceptmap.html)
+* Active, published ConceptMaps SHALL conform to [CRMIPublishableConceptMap](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishableconceptmap.html)
 
 ### **Change tracking**
 
