@@ -74,6 +74,7 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 ### **Change tracking**
 
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of ActorDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling**
 

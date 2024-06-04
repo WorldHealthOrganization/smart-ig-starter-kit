@@ -20,10 +20,10 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 1. For each indicator in the L2, create a Measure
   - a. The Measure SHALL conform to the appropriate scoring profile based on the scoring type:
-      - i. Proportion - CQFMProportionMeasure
-      - ii. Ratio - CQFMRatioMeasure
-      - iii. Cohort - CQFMCohortMeasure
-      - iv. ContinuousVariable - CQFMContinuousVariableMeasure
+      - i. Proportion - [CQFMProportionMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-proportion-measure-cqfm.html)
+      - ii. Ratio - [CQFMRatioMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-ratio-measure-cqfm.html)
+      - iii. Cohort - [CQFMCohortMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cohort-measure-cqfm.html)
+      - iv. ContinuousVariable - [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)
   - b. NOTE: Proportion measures with an estimated denominator are modeled as continuous variable measures to allow the metric to be collected and analyzed downstream as a proportion measure when the estimated denominator is known
   - c. The Measure ID should be derived from the indicator code, e.g. IMMZ.IND.08 -> IMMZIND08
   - d. Url: The URL SHALL be: [base canonical]/Measure/[id]
@@ -37,7 +37,7 @@ Measures are FHIR resources and can refer to CQL libraries.
   - c. The logic library MAY make use of an IndicatorLogic library to share common logic between multiple indicators in the guideline
 2. Create a `group` appropriate to the scoring type (only one group is supported)
   - a. group.id SHALL be the same as the name of the measure
-  - b. create populations appropriate to the scoring type (https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#criteria-names)
+  - b. create populations appropriate to the scoring type ({{site.data.fhir.ver.cqfm}}/measure-conformance.html#criteria-names)
   - c. each population references an expression in the indicator library
 
 
@@ -46,12 +46,10 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 * Add the canonical URL of the Library to the Measure
 
-* Create the resource device "cqf-tooling" and point to it as the value for the extension `http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem`
-
 * Depending on the type/purpose of the indicator, define the value for the measure [`scoring`](http://hl7.org/fhir/R4/valueset-measure-scoring.html). 
 * Add the `type` and `improvementNotation`
 
-* From the scoring, see what populations are permitted - according to the [CQF Guidance](https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#conformance-requirement-3-8)
+* From the scoring, see what populations are permitted - according to the [CQF Guidance]({{site.data.fhir.ver.cqfm}}/measure-conformance.html#conformance-requirement-3-8)
 
 * For each population, define the code and id, the description, and the cql expression that evaluates the population. For example,
 ```
@@ -96,12 +94,13 @@ Measures are FHIR resources and can refer to CQL libraries.
 * At least one example MeasureReport should be provided
   * The example MeasureReport should indicate in which conditions
 * There should be a Bundle (Transaction) with all that is needed to evaluate the Measure and the `$evaluate-measure` operation, with example data included or available.
-
+* Measures SHALL conform to [CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)
+* Active, published Measures SHALL conform to [CQFMPublishableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-publishablemeasure-cqfm.html)
+* Measures SHALL conform to the profile appropriate to their scoring type (as described above)
 
 
 ### **Change tracking**
-All FHIR artifacts and CQL libraries are subject to change tracking.
-
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of Measures defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 

@@ -15,12 +15,12 @@ ConceptMap resources are created to provide a mapping from the codes of one syst
 ### **Criteria / Definition of Done:**
 
 * A ConceptMap exists for each target code system identifier in the data dictionary terminology mappings
-* ConceptMaps SHALL conform to [CRMIShareableConceptMap](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareableconceptmap.html)
-* Active, published ConceptMaps SHALL conform to [CRMIPublishableConceptMap](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishableconceptmap.html)
+* ConceptMaps SHALL conform to [CRMIShareableConceptMap]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareableconceptmap.html)
+* Active, published ConceptMaps SHALL conform to [CRMIPublishableConceptMap]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishableconceptmap.html)
 
 ### **Change tracking**
 
-As with all FHIR Conformance resources, change management is critical. Do not set the version element of ConceptMaps defined in the SMART Guideline, the version element will be set by the publication process.
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of ConceptMaps defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 

@@ -17,6 +17,10 @@ For WHO-authored Guidelines (i.e. not for adaptations), the configuration includ
 * Version: `0.1.0` initially, see [Versioning](versioning.md) for more details on artifact versioning
 * Jurisdiction: Should be 001 from http://unstats.un.org/unsd/methods/m49/m49.htm for World (see https://www.hl7.org/fhir/valueset-jurisdiction.html)
 * Publisher: Set as appropriate for the publisher (i.e. steward) of the IG
+* ImplementationGuide resources SHALL conform to [CRMIShareableImplementationGuide]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareableimplementationguide.html)
+* Active, published ImplementationGuide resources SHALL conform to [CRMIPublishableImplementationGuide]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishableimplementationguide.html)
+* ImplementationGuide resources SHALL conform to [CPGComputableImplementationGuide]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-computableimplementationguide.html)
+
 
 For National adaptations: 
 - If the country or region has an an HL7 affiliate, the HL7 affiliate can include the smart guidelines in their publication process and use the defined conventions
@@ -24,3 +28,4 @@ For National adaptations:
 - If there is no affiliate or the affiliate declines, other organizations 
 
 * L3 authors should ensure that the content has some feedback mechanism.
+

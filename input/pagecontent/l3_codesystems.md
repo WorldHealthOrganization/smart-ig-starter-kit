@@ -41,6 +41,8 @@ This is the overview of the activities and related artifacts used:
 
 ### **Change tracking**
 
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of CodeSystems defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
+
 ### **Tooling:**
 
 | Tool | Usage | Doc |

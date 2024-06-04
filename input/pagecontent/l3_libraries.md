@@ -15,7 +15,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 ##### **Shareable**
 
-* Library resources SHALL conform to CRMIShareableLibrary
+* Library resources SHALL conform to [CRMIShareableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablelibrary.html)
 
 | Element | Guidance |
 | ---- | ---- |
@@ -34,7 +34,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 ##### ** Publishable **
 
-* Published `active` status Library resources SHALL conform to CRMIPublishableLibrary
+* Published `active` status Library resources SHALL conform to [CRMIPublishableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablelibrary.html)
 
 | Element | Guidance |
 | ---- | ---- |
@@ -60,10 +60,8 @@ TODO: Define how references to L2 content occur (not only for libraries but thro
 
 ##### **Computable** and **Executable**
 
-* Computable Libraries SHALL conform to CQLLibrary (base64-encoded text/cql content)
-* Executable Libraries SHALL conform to ELMJSONLibrary (base64-encoded application/elm+json content)
-
-> TODO: Should we have JSON always?
+* Computable Libraries SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html) (base64-encoded text/cql content)
+* Executable Libraries SHALL conform to [ELMJSONLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-elm-json-library.html) (base64-encoded application/elm+json content)
 
 ### **Activities:**
 
@@ -83,12 +81,14 @@ TODO: Define how references to L2 content occur (not only for libraries but thro
 
 * Each CQL Library in the IG SHALL have a Library resource
 * Each Library SHALL indicate the type of library according to the above (with a useContext slice) TODO: SGLibrary
-* Each Library resource SHALL conform to CRMIShareableLibrary
-* Each active published Library SHALL conform to CRMIPublishableLibrary
-* Each Library resource SHALL conform to CQLLibrary
-* Each Library resource SHALL conform to CQLModule
+* Each Library resource SHALL conform to [CRMIShareableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablelibrary.html)
+* Each active published Library SHALL conform to [CRMIPublishableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablelibrary.html)
+* Each Library resource representing a CQL Library SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html)
+* Each Library resource representing a CQL Library SHALL conform to [CQLModule]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-module.html)
 
 ### **Change tracking**
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of Libraries defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 In addition to the change tracking provided generally for all resources:
 

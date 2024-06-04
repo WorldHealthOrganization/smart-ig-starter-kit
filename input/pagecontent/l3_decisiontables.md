@@ -247,9 +247,14 @@ Which in turn makes use of the `EncounterElements` library.
 * Every parameter in the decision table should be in the data dictionary
 * An example instance of the outcome of the PlanDefinition (CarePlan) shall be authored as reference/test.
 * The PlanDefinition should be testable with the standard tools and should produce the same results as the  test CarePlan that is authored in the L3.
+* PlanDefinitions SHALL conform to [CRMIShareablePlanDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareableplandefinition.html)
+* Active, published PlanDefinitions SHALL conform to [CRMIPublishablePlanDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishableplandefinition.html)
+* PlanDefinitions representing decision tables SHALL conform to [CPGRecommendationDefinition]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-recommendationdefinition.html)
+* PlanDefinitions representing strategies SHALL conform to [CPGStrategyDefinition]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-strategydefinition.html)
 
 ### **Change tracking**
-* PlanDefinitions, Libraries and ActivityDefinitions are subject to the general change tracking requirements for all normative resources.
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of PlanDefinitions and ActivityDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 

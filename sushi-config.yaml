@@ -34,7 +34,7 @@ dependencies:
     reason: This IG uses content management profiles and capabilities provided by CRMI
   hl7.fhir.uv.cpg:
     id: cpg
-    version: dev
+    version: 2.0.0-ballot
     reason: This IG uses computable guideline profiles and capabilities provided by CPG
 
 menu:
@@ -86,6 +86,8 @@ menu:
     Diagrams Legend: 'diagram_legend.html'
   IG Setup:
     GitHub Repositories: 'ig_setup.html'
+    Configuration: 'ig_configuration.html'
+    Publication: 'ig_publication.html'
 #    GitHub Initialization: 'ig_licensing.html'
 #    IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
@@ -176,6 +178,8 @@ pages:
       title: "Github Initialization"
     ig_configuration.md:
       title: "IG Configuration"
+    ig_publication.md:
+      title: "IG Publication"
 #    folder_structure.md:
 #      title: "Folders and File Structure"
   validating_ig.md:
