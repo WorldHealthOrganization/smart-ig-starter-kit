@@ -8,9 +8,15 @@ For WHO-authored Guidelines (i.e. not for adaptations), the configuration includ
    
 For WHO-authored Guidelines (i.e. not for adaptations), the configuration includes:
 
-
-* Canonical url: http://worldhealthorganization.github.io/smart-ig-starter-kit
+* Id: `smart.who.int.<ig_code>`
+* Canonical url: `http://smart.who.int/<ig_code>`
 * Package id: `smart.who.int.<ig_code>`
+* Name: Machine-friendly `<IgName>` (i.e. no spaces, pascal-cased)
+* Title: User-friendly `Ig Name` (i.e. title-cased)
+* Status: `draft` initially
+* Version: `0.1.0` initially, see [Versioning](versioning.md) for more details on artifact versioning
+* Jurisdiction: Should be 001 from http://unstats.un.org/unsd/methods/m49/m49.htm for World (see https://www.hl7.org/fhir/valueset-jurisdiction.html)
+* Publisher: Set as appropriate for the publisher (i.e. steward) of the IG
 
 For National adaptations: 
 - If the country or region has an an HL7 affiliate, the HL7 affiliate can include the smart guidelines in their publication process and use the defined conventions
