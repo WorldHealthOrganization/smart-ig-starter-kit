@@ -32,10 +32,18 @@ dependencies:
     id: crmi
     version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by CRMI
+  hl7.fhir.uv.sdc:
+    id: sdc
+    version: 3.0.0
+    reason: This IG uses questionnaire profiles and capabilities provided by SDC
   hl7.fhir.uv.cpg:
     id: cpg
-    version: 2.0.0-ballot
+    version: current
     reason: This IG uses computable guideline profiles and capabilities provided by CPG
+  hl7.fhir.us.cqfmeasures:
+    id: cqfm
+    version: current
+    reason: This IG uses quality measure profiles and capabilities provided by CQF Measures
 
 menu:
   # Top: 
@@ -47,7 +55,7 @@ menu:
 
   Home: 
     Overview: index.html
-    Assumptions: 'assumptions.html'
+#    Assumptions: 'assumptions.html'
   Authoring:
     Overview: 'authoring_overview.html'
 #   Diagrams Legend: 'diagram_legend.html'

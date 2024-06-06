@@ -2,19 +2,19 @@
 
 Authoring L3 means taking the L2 input and, using the recommended processes and tools, create the L3 artifacts. While the exact authoring steps depend on the inputs, the key sequence could normally consist of the following steps: 
 
-* [Logical Models](l3_logicalmodels.md)
-* [Profiles](l3_profiles.md)
-* [Forms](l3_forms.md)
-* [Libraries](l3_libraries.md)
-* [Decision Tables](l3_decisiontables.md)
-* [Indicators](l3_indicators.md)
-* [Scheduling Logic](l3_schedulinglogic.md)
-* [Test Cases](l3_testing.md)
-* [Personas](l3_personas.md)
-* [Scenarios](l3_scenarios.md)
-* [Processes](l3_processes.md)
-* [Requirements](l3_requirements.md)
-* [Examples](l3_examples.md)
+* [Logical Models](l3_logicalmodels.html)
+* [Profiles](l3_profiles.html)
+* [Forms](l3_forms.html)
+* [Libraries](l3_libraries.html)
+* [Decision Tables](l3_decisiontables.html)
+* [Indicators](l3_indicators.html)
+* [Scheduling Logic](l3_schedulinglogic.html)
+* [Test Cases](l3_testing.html)
+* [Personas](l3_personas.html)
+* [Scenarios](l3_scenarios.html)
+* [Processes](l3_processes.html)
+* [Requirements](l3_requirements.html)
+* [Examples](l3_examples.html)
 
 Before that, the first step in L3 production is an input verification of the L2 content. 
 

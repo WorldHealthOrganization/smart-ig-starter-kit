@@ -2,7 +2,7 @@
 
 The publication process is used to publish SMART guidelines IGs:
 
-* Publication readiness (see the [QA Check](qa_check.md) documentation)
+* Publication readiness (see the [QA Check](qa_check.html) documentation)
 * Change log
 * Review process
 * Publication
@@ -60,7 +60,7 @@ The description for each release SHALL have:
 
 > NOTE: The initial release does not require an issues list, though it may be provided if issues were tracked as part of development of the initial content.
 
-See the [versioning](versioning.md) topic for a description of how these changes impact the version number of a release.
+See the [versioning](versioning.html) topic for a description of how these changes impact the version number of a release.
 
 #### Review Process
 

@@ -15,7 +15,7 @@ This process repeats for each release of the implementation guide.
 Note that the FHIR publication tooling uses the `version` of the implementation guide overall to set the `version` element of all the canonical resources in the implementation guide (i.e. all the Library, CodeSystem, ValueSet, StructureDefinition, etc.,.). As such, the `version` element of individual resources in the implementation guide should not be set, allowing the publisher to set the versions appropriately.
 
 ## History
-After [publication](ig_publication.md), any changes to the L3 resources should be tracked. 
+After [publication](ig_publication.html), any changes to the L3 resources should be tracked. 
 
 Tracking changes should include:
 
@@ -31,7 +31,7 @@ Tracking changes should include:
 
 ### Change History and Release Notes
 
-See the [publication]ig_publication.md) topic for a detailed discussion of how to create change history and release notes (including known issues).
+See the [publication]ig_publication.html) topic for a detailed discussion of how to create change history and release notes (including known issues).
 
 ### Version Difference
 For some artifacts, the FHIR ImplementationGuide tooling may highlight the differences in the content of the artifacts between two versions. This can be used to track and demonstrate the detailed artifact changes.

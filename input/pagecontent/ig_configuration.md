@@ -14,12 +14,12 @@ For WHO-authored Guidelines (i.e. not for adaptations), the configuration includ
 * Name: Machine-friendly `<IgName>` (i.e. no spaces, pascal-cased)
 * Title: User-friendly `Ig Name` (i.e. title-cased)
 * Status: `draft` initially
-* Version: `0.1.0` initially, see [Versioning](versioning.md) for more details on artifact versioning
+* Version: `0.1.0` initially, see [Versioning](versioning.html) for more details on artifact versioning
 * Jurisdiction: Should be 001 from http://unstats.un.org/unsd/methods/m49/m49.htm for World (see https://www.hl7.org/fhir/valueset-jurisdiction.html)
 * Publisher: Set as appropriate for the publisher (i.e. steward) of the IG
 * ImplementationGuide resources SHALL conform to [CRMIShareableImplementationGuide]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareableimplementationguide.html)
 * Active, published ImplementationGuide resources SHALL conform to [CRMIPublishableImplementationGuide]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishableimplementationguide.html)
-* ImplementationGuide resources SHALL conform to [CPGComputableImplementationGuide]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-computableimplementationguide.html)
+* ImplementationGuide resources SHALL conform to [CPGComputableGuideline]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-computableguideline.html)
 
 
 For National adaptations: 
