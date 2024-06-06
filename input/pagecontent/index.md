@@ -24,7 +24,7 @@ This guide is divided into several sections that are displayed in the menu bar l
 - <a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies.
 - <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3.
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG.
-- <a href="ig_publishing.html">IG Publishing</a> - Guidance on the overall publication process for SMART guidelines.
+- <a href="ig_publication.html">IG Publication</a> - Guidance on the overall publication process for SMART guidelines.
 
 ### Intellectual Property and copyright considerations
 

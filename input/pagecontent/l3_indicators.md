@@ -76,12 +76,11 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 > NOTE: Determining effective data requirements is a detailed process and should be done through the use of tooling such as the CQF Tooling to process Measure and Library resources
 
-* Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements).
+* Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-effectiveDataRequirements.html).
 
 * If known, add the data requirements:
   * add codes that are used directly in the measure
-  Add the libraries that contain the functions 
-  http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition
+  Add the libraries that contain the functions using [Logic Definition]({{site.data.fhir.ver.ext}}/StructureDefinition-cqf-logicDefinition.html)
 
 
 
@@ -106,7 +105,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 | Tool | Usage | Doc |
 | --- | ---| --- |
-| Sushi | Create FHIR resources in FSH syntax | [HL7 Spec](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
+| Sushi | Create FHIR resources in FSH syntax | [HL7 Spec](https://hl7.org/fhir/uv/shorthand/reference.html)<br/>[Sushi Documentation](https://fshschool.org) |
 | CQF Ruler | A FHIR server to upload the artifacts and test the `$evaluate-measure` |  |
 {:.table-bordered.full-width}  
    
