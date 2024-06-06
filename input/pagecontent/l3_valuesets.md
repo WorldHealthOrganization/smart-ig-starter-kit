@@ -104,11 +104,14 @@ Terminology Services
 * mapping
 * validate
 
+* Each ValueSet resource SHALL conform to [CRMIShareableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablevalueset.html)
+* Each active published ValueSet SHALL conform to [CRMIPublishableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablevalueset.html)
+* Each ValueSet SHALL conform to [CRMIComputableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-computablevalueset.html)
 
 
 ### **Change tracking**
 
-
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of ValueSets defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling**
 

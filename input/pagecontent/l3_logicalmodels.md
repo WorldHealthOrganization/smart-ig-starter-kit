@@ -151,11 +151,13 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
   *  The WHO code for all elements should be approved; exceptions should be resolved before final publication
 * Each data element in the logical model is mapped to the existing semantic references - see [semantic references](#).
   * The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings
+* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablestructuredefinition.html)
+* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablestructuredefinition.html)
 
 
 ### **Change tracking**
 
-
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of LogicalModels defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 

@@ -1,11 +1,12 @@
 Code Systems are created when new codes need to be defined
-A special case of code system is when existing codes need to be complemented - for example adding designations in different languages to codes, or adding relationships between vaccine codes.
 
+In particular, each SMART guideline will have a guideline-level code system defined with codes for all the concepts defined in the guideline (i.e. all the concepts defined in the data dictionary).
+
+In addition, sometimes existing code systems need to be completed, for example adding designations in different languages to codes, or adding relationships between vaccine codes.
 
 <figure>
   {% include model_codesystem.svg %}
 </figure>
-
 
 ### **Inputs:** 
 
@@ -39,6 +40,8 @@ This is the overview of the activities and related artifacts used:
 * no QA issues in the publisher
 
 ### **Change tracking**
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of CodeSystems defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 
