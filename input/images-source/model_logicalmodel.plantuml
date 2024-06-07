@@ -26,7 +26,7 @@ skinparam class<<TM>> {
           |_ short 1..1
           |_ definition 1..1
           |_ type 1..1
-          |_ binding 1..1
+          |_ binding 0..1
           |_ comment 0..1
           |_ constraint 0..1
           |_ code[SG] 1..1   

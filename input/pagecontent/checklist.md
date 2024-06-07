@@ -4,7 +4,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      lang="en">
   <p>
-    The folowing sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
+    The following sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
   </p>
 
 

@@ -53,7 +53,10 @@ The Requirements will capture the following elements:
 
 
 ### **Change tracking**
-* Requirements are essential traceable artifacts. Every time a requirement changes, the change history shall be appended.
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of Requirements defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
+
+In addition, Requirements are essential traceable artifacts. Every time a requirement changes, the change history shall be appended.
 
 ### **Tooling:**
 

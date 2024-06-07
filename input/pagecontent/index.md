@@ -1,7 +1,7 @@
 <div>
 <blockquote class="stu-note">
 	<strong>This is a draft document still being edited.</strong>
-	The SMART Guidelines Standard Operating Procedures are beind edited as a community effort. Authors of SMART Guidelines are welcome to submit <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues">issues</a> and join the discussions to validate and improve these authoring procedures.
+	The SMART Guidelines Standard Operating Procedures are being edited as a community effort. Authors of SMART Guidelines are welcome to submit <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues">issues</a> and join the discussions to validate and improve these authoring procedures.
 </blockquote>
 </div>
 
@@ -21,9 +21,10 @@ In addition, the adoption and adaptation of SMART Guidelines by the different co
 ### About this implementation guide
 This guide is divided into several sections that are displayed in the menu bar located at the top of the page:
 - <a href="index.html">Home</a> - Provides the introduction about this guide.
-- <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3.
 - <a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies.
+- <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3.
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG.
+- <a href="ig_publication.html">IG Publication</a> - Guidance on the overall publication process for SMART guidelines.
 
 ### Intellectual Property and copyright considerations
 

@@ -22,11 +22,8 @@ To do so, click on "Use this Template" option in Github.
     * The recommended package id in this case is: `hl7.fhir.country.smart.xxx`
     * If there is no affiliate or the affiliate declines, other organizations may fulfill this role
 
-
-
 * The name of the repository depends on the organization 
-  * for WHO, should be smart-xxxx (where xxxx is the name of the IG)
-
+  * for WHO IGs, should be smart-xxxx (where xxxx is the web-friendly code of the IG) (e.g. smart-immunizations-measles)
 
 * The repository SHOULD be based on the WHO repository template: https://github.com/WorldHealthOrganization/smart-ig-empty 
 
@@ -44,8 +41,6 @@ To do so, click on "Use this Template" option in Github.
         * `build.fhir.org/ig/<org_name>/<repo_name>/branches/branch_name` for other branches
 
 The default branch is expected to build with the empty default content. Until a release is published, it SHOULD always clearly indicate it is not a published release  - or in the README or in the IG itself, an indication that the work may be followed in another location (pointing to the branch)
-
-
 
 
 ### ImplementationGuide Configuration
