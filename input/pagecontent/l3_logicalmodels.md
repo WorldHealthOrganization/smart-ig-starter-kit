@@ -39,7 +39,7 @@ If an existing model is found, it is possible to
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
-For example, "Client Registration" is a dataset that is similar across different vaccination processes. L3 authors may create a "Client Registration" logical data model with the common elements and create specific models for each antigen with any specific questions.
+For example, "Client Registration" is a dataset that is similar across different vaccination processes. L3 authors may create a "Client Registration" logical data model with the common elements and create specific models for each antigen with any specific data elements.
 
 Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
 
