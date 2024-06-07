@@ -3,14 +3,14 @@
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: smart.who.int.ig-starter-kit
-canonical: http://smart.who.int/ig/smart-ig-starter-kit
-name: SMARTStarterKit
+canonical: http://smart.who.int/ig-starter-kit
+name: IgStarterKit
 status: draft
 version: 0.2.1
 fhirVersion: 5.0.0
-date: 2021-06-03
+date: 2024-04-29
 # copyright:
-copyrightYear: 2021+
+copyrightYear: 2023+
 releaseLabel: "CI Build"
 title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
@@ -23,19 +23,29 @@ dependencies:
 #    reason: |
 #      This IG leverages subscription constructs pre-adopted from R4B.  Importing this IG makes the relevant terminologies available.
   hl7.terminology: 5.5.0
-  hl7.fhir.uv.extensions: 5.1.0-cibuild
+  hl7.fhir.uv.extensions.r4: 
+    id: ext
+    version: 5.1.0
   hl7.fhir.uv.cql:
     id: cql
-    version: 1.0.0-snapshot
+    version: 1.0.0
     reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
   hl7.fhir.uv.crmi:
     id: crmi
-    version: 1.0.0-snapshot
+    version: 1.0.0
     reason: This IG uses content management profiles and capabilities provided by CRMI
+  hl7.fhir.uv.sdc:
+    id: sdc
+    version: 3.0.0
+    reason: This IG uses questionnaire profiles and capabilities provided by SDC
   hl7.fhir.uv.cpg:
     id: cpg
-    version: dev
+    version: current
     reason: This IG uses computable guideline profiles and capabilities provided by CPG
+  hl7.fhir.us.cqfmeasures:
+    id: cqfm
+    version: current
+    reason: This IG uses quality measure profiles and capabilities provided by CQF Measures
 
 menu:
   # Top: 
@@ -45,24 +55,27 @@ menu:
   #     Section 2.2: section22.html
   #   Section 3: section3.html
 
-  Home: 
-    Homepage: index.html
-    Overview: '#'
-#    Assumptions: 'assumptions.html'
+  Home: index.html
+  IG Setup:
+    GitHub Repositories: 'ig_setup.html'
+    Configuration: 'ig_configuration.html'
+    Publication: 'ig_publication.html'
+    Release: 'ig_release.html'
+    Release Publication: 'release_publication.html'
   Authoring:
-#    Overview: 'authoring_overview.html'
-    Structuring of the SOP IG: 'structure.html'
-    Diagrams Legend: 'diagram_legend.html'
-    Types of content: 'content_types.html'
+    Overview: 'authoring_overview.html'
+#   Diagrams Legend: 'diagram_legend.html'
+#   Types of content: 'content_types.html'
     Commons and Governance: 
       Common Artifacts: gov_overview.html
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
-    L2 Overview: 'l2_l3_overview.html'
-    Narrative Authoring: 'narrative.html'
+#   L2 Overview: 'l2_l3_overview.html'
+    Authoring Narrative content: 'narrative.html'
     Authoring Artifacts: 
-#      Naming Conventions: 'naming_conventions.html'
+#     Naming Conventions: 'naming_conventions.html'
       Authoring: 'authoring_artifacts.html'
+      Structuring of the SOP IG: 'structure.html'
       Personas: 'l3_personas.html'
       User scenarios: 'l3_scenarios.html'
       Processes: 'l3_processes.html'
@@ -81,23 +94,13 @@ menu:
       CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
-      License: 'license.html'
-
-
     Versioning: 'versioning.html'
-    Licensing: 'ig_licensing.html'
-  IG Setup:
-    GitHub Repositories: 'ig_setup.html'
-    GitHub Initialization: 'ig_licensing.html'
-    IG Configuration: 'ig_licensing.html'
-#    Folders and File structure: 'ig_licensing.html'
-    Release Publication: 'release_publication.html'
+    Diagrams Legend: 'diagram_legend.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
     Artifacts:
       Extensions: 'artifacts.html'
-#      Value Sets: maps.html'
 
 pages: 
   index.md:
@@ -106,6 +109,18 @@ pages:
 #      title: "Overview"
 #  assumptions.md:
 #   title: "Assumptions"
+  ig_setup.md:
+    title: "IG Setup"
+    github_setup.md:
+      title: "Github Initialization"
+    ig_configuration.md:
+      title: "IG Configuration"
+    ig_publication.md:
+      title: "IG Publication"
+    ig_release.md:
+      title: "IG Release"
+#    folder_structure.md:
+#      title: "Folders and File Structure"
   authoring_overview.md:
     title: "Authoring"
     structure.md:
@@ -169,18 +184,10 @@ pages:
       license.md:
         title: "License"
 
-    ig_licensing.md:
-      title: "Licensing"
+#    ig_licensing.md:
+#      title: "Licensing"
     versioning.md:
       title: "Versioning"
-  ig_setup.md:
-    title: "IG Setup"
-    github_setup.md:
-      title: "Github Initialization"
-    ig_configuration.md:
-      title: "IG Configuration"
-#    folder_structure.md:
-#      title: "Folders and File Structure"
   validating_ig.md:
     title: "Validating IG"
     qa_check.md:
@@ -192,9 +199,9 @@ pages:
 
 
 publisher:
-  name: TBD
+  name: WHO
   url: http://smart.who.int
-  email: leitnerc@who.int
+  email: smart@who.int
 # contact:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 # experimental: true
