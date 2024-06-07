@@ -61,7 +61,10 @@ menu:
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
     Release: 'ig_release.html'
-    Release Publication: 'release_publication.html'
+#    GitHub Initialization: 'ig_licensing.html'
+#    IG Configuration: 'ig_licensing.html'
+#    Folders and File structure: 'ig_licensing.html'
+  Release Publication: 'release_publication.html'
   Authoring:
     Overview: 'authoring_overview.html'
 #   Diagrams Legend: 'diagram_legend.html'
