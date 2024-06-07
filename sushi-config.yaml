@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: who.fhir.smart-ig-starter-kit
+id: smart.who.int.ig-starter-kit
 canonical: http://smart.who.int/ig/smart-ig-starter-kit
 name: SMARTStarterKit
 status: draft
@@ -16,6 +16,26 @@ title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
 license: CC0-1.0
 
+dependencies:
+#  hl7.fhir.core:
+#    id: r4b
+#    version: 4.6.0
+#    reason: |
+#      This IG leverages subscription constructs pre-adopted from R4B.  Importing this IG makes the relevant terminologies available.
+  hl7.terminology: 5.5.0
+  hl7.fhir.uv.extensions: 5.1.0-cibuild
+  hl7.fhir.uv.cql:
+    id: cql
+    version: 1.0.0-snapshot
+    reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
+  hl7.fhir.uv.crmi:
+    id: crmi
+    version: 1.0.0-snapshot
+    reason: This IG uses content management profiles and capabilities provided by CRMI
+  hl7.fhir.uv.cpg:
+    id: cpg
+    version: dev
+    reason: This IG uses computable guideline profiles and capabilities provided by CPG
 
 menu:
   # Top: 
@@ -28,7 +48,7 @@ menu:
   Home: 
     Homepage: index.html
     Overview: '#'
-    Assumptions: 'assumptions.html'
+#    Assumptions: 'assumptions.html'
   Authoring:
 #    Overview: 'authoring_overview.html'
     Structuring of the SOP IG: 'structure.html'
@@ -71,6 +91,7 @@ menu:
     GitHub Initialization: 'ig_licensing.html'
     IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
+    Release Publication: 'release_publication.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
@@ -83,8 +104,8 @@ pages:
     title: "Home"
 #    overview.md:
 #      title: "Overview"
-    assumptions.md:
-     title: "Assumptions"
+#  assumptions.md:
+#   title: "Assumptions"
   authoring_overview.md:
     title: "Authoring"
     structure.md:
