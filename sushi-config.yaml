@@ -55,7 +55,9 @@ menu:
   #     Section 2.2: section22.html
   #   Section 3: section3.html
 
-  Home: index.html
+  Home: 
+    Overview: index.html
+#    Assumptions: 'assumptions.html'
   IG Setup:
     GitHub Repositories: 'ig_setup.html'
     Configuration: 'ig_configuration.html'
@@ -64,7 +66,6 @@ menu:
 #    GitHub Initialization: 'ig_licensing.html'
 #    IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
-  Release Publication: 'release_publication.html'
   Authoring:
     Overview: 'authoring_overview.html'
 #   Diagrams Legend: 'diagram_legend.html'
@@ -97,7 +98,9 @@ menu:
       CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
+#      License: 'license.html'
     Versioning: 'versioning.html'
+#    Licensing: 'ig_licensing.html'
     Diagrams Legend: 'diagram_legend.html'
   Validating IG:
     QA Check: 'qa_check.html'
