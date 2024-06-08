@@ -70,11 +70,37 @@ Prior to final release, a review process should be used to gather feedback about
 * The `version` of the IG should include a label indicating the draft status: `0.1.0-draft`
 * The `releaseLabel` of the IG should be `draft`
 
+
 #### Publication
 
-Once the review process is complete and any resulting issues addressed and applied to the implementation guide, the final publication should be prepared:
+Once the review process is complete and any resulting issues addressed and applied to the implementation guide, the release publication should be prepared. The release publication takes the current status of the specification, and saves it as a named release that is available for referencing.
+SMART Guidelines, when released, are published in `https://smart.who.int/<code>`, where `<code>` is the implementation guide code.   
 
-* The `status` of the IG (and all conformance artifacts in the IG) should be `active`
-* The `version` of the IG should not include a label: `0.1.0`
-* The `releaseLabel` of the IG should be `release`
+The release publication steps are:
 
+1. Review the changes since the last release, and define if these are breaking changes or not, and update the version accordingly in the `sushi-config.yaml` or implementation guide `.json` file.  
+1.1. If this is the first release, review the entire content and version policy to decide if this is a first official release, or a preview, and define the version number accordingly.
+
+2. Optionally, create a new branch, e.g. `release-candidate` for iterating changes.  
+
+3. Create a publication-request.json   
+
+4. Update the ImplementationGuide (and all conformance artifacts in the IG):
+    * The `status` of the IG (and all conformance artifacts in the IG) should be `active`;
+    * The `version` of the IG should be in the format `0.1.0` and should not include a label;
+    * The `releaseLabel` of the IG should be `release`
+    * The date of the ImplementationGuide should be set to the current date
+
+5. Run the normal build process and check if all is ok
+
+6. Run the release publication process using the ImplementationGuide publisher in release publication mode (see [HL7 page](https://confluence.hl7.org/pages/viewpage.action?pageId=81027536) for some details on the tooling)
+
+7. If all is ok and the pages are created correctly, create a release and tag with the latest changes
+
+8. Make a PR of the built specification (all releases) to smart.who.int.
+
+9. If a branch was created in step 2, optionally merge it with any updates that have been done meanwhile.
+
+10. In the main branch, update the ImplementationGuide resource
+    * The `status` of the IG should be set back to `draft`;
+    * The `version` should be updated - this way it's immediately assured that any new changes are for a new version.

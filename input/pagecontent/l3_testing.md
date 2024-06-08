@@ -41,7 +41,7 @@ This is the first testing expected to be present - all the possible outcomes of 
 This testing includes additional scenarios for testing invalid or unexpected conditions. This testing helps identify possible real-world scenarios that may happen and were not initially foreseen but which could cause harm if not accommodated.
 
 * Performance testing
-(To do)
+This testing would include larger volumes of data, to check how the system performs for example under load or in other real-world scenarios
 
 
 ### Test Data

@@ -25,12 +25,6 @@ Each Persona is defined by the following data:
 > Summary: From each L2 Use Case, the L3 author creates an ExampleScenario. Ideally  some example data (resources) are also added.
 * Check input scenarios - the L2 should contain identifiable, well-defined and well-delimited scenario descriptions. these should be rather concrete - i.e. not high abstractions, but concrete to a specific context.
 * Develop ExampleScenario resources 
-<div class="todo">
-TO DO: we should have SUSHI RuleSets for this resource
-</div>
-<div class="todo">
-TO DO: This deserves some data generation feature.
-</div>
 
 
 ### **Output Criteria / Definition of Done:**

@@ -39,7 +39,7 @@ If an existing model is found, it is possible to
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
-For example, "Client Registration" is a dataset that is similar across different vaccination processes. L3 authors may create a "Client Registration" logical data model with the common elements and create specific models for each antigen with any specific questions.
+For example, "Client Registration" is a dataset that is similar across different vaccination processes. L3 authors may create a "Client Registration" logical data model with the common elements and create specific models for each antigen with any specific data elements.
 
 Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
 
@@ -95,11 +95,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 
 -   Data Type is captured in `differential.element[*].type` 
   
-<span class="todo">    - TO DO:  Logical data types should be defined </span>
-
-
 -   Input Options: is captured in the bindings
-
 
 -   Input Option Groupings: this is a grouper for the rows that have a common group.
 
@@ -114,9 +110,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 -   Required is captured in cardinality
 
 -   Explain Conditionality
-<div class="todo">
-TO DO: define the links and how to store these links in a repository.
-</div>
+
 -   Annotations
     -   Example:
     -   "Measles Vaccine" → short= "measlesVaccine"

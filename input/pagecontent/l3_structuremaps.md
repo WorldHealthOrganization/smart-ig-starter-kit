@@ -78,10 +78,6 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 * All mapped elements and groups should be tested
 * All the dependencies of the StructureMap shall be in the IG or dependencies - SDC, base profiles, logical models, etc.
 
-<div class="todo">
-* TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc.?
-</div>
-
 
 ### **Change tracking**
 

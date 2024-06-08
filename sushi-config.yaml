@@ -16,36 +16,36 @@ title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
 license: CC0-1.0
 
-dependencies:
+# dependencies:
 #  hl7.fhir.core:
 #    id: r4b
 #    version: 4.6.0
 #    reason: |
 #      This IG leverages subscription constructs pre-adopted from R4B.  Importing this IG makes the relevant terminologies available.
-  hl7.terminology: 5.5.0
-  hl7.fhir.uv.extensions.r4: 
-    id: ext
-    version: 5.1.0
-  hl7.fhir.uv.cql:
-    id: cql
-    version: 1.0.0
-    reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
-  hl7.fhir.uv.crmi:
-    id: crmi
-    version: 1.0.0
-    reason: This IG uses content management profiles and capabilities provided by CRMI
-  hl7.fhir.uv.sdc:
-    id: sdc
-    version: 3.0.0
-    reason: This IG uses questionnaire profiles and capabilities provided by SDC
-  hl7.fhir.uv.cpg:
-    id: cpg
-    version: current
-    reason: This IG uses computable guideline profiles and capabilities provided by CPG
-  hl7.fhir.us.cqfmeasures:
-    id: cqfm
-    version: current
-    reason: This IG uses quality measure profiles and capabilities provided by CQF Measures
+  # hl7.terminology: 5.5.0
+  # hl7.fhir.uv.extensions.r4: 
+  #   id: ext
+  #   version: 5.1.0
+  # hl7.fhir.uv.cql:
+  #   id: cql
+  #   version: 1.0.0
+  #   reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
+  # hl7.fhir.uv.crmi:
+  #   id: crmi
+  #   version: 1.0.0
+  #   reason: This IG uses content management profiles and capabilities provided by CRMI
+  # hl7.fhir.uv.sdc:
+  #   id: sdc
+  #   version: 3.0.0
+  #   reason: This IG uses questionnaire profiles and capabilities provided by SDC
+  # hl7.fhir.uv.cpg:
+  #   id: cpg
+  #   version: current
+  #   reason: This IG uses computable guideline profiles and capabilities provided by CPG
+  # hl7.fhir.us.cqfmeasures:
+  #   id: cqfm
+  #   version: current
+  #   reason: This IG uses quality measure profiles and capabilities provided by CQF Measures
 
 menu:
   # Top: 
@@ -98,9 +98,7 @@ menu:
       CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
-#      License: 'license.html'
     Versioning: 'versioning.html'
-#    Licensing: 'ig_licensing.html'
     Diagrams Legend: 'diagram_legend.html'
   Validating IG:
     QA Check: 'qa_check.html'
@@ -200,8 +198,8 @@ pages:
       title: "QA check"
   indices.md:
     title: "Indices"
-  maps.md:
-    title: "Mappings"
+#  maps.md:
+#    title: "Mappings"
 
 
 publisher:
