@@ -1,6 +1,5 @@
-### **ImplementationGuide publication**
 
-The publication process is used to publish SMART guidelines IGs:
+The release publication process is used to publish SMART guidelines IGs:
 
 * Publication readiness (see the [QA Check](qa_check.html) documentation)
 * Change log
@@ -71,7 +70,7 @@ Prior to final release, a review process should be used to gather feedback about
 * The `releaseLabel` of the IG should be `draft`
 
 
-#### Publication
+#### Release Publication
 
 Once the review process is complete and any resulting issues addressed and applied to the implementation guide, the release publication should be prepared. The release publication takes the current status of the specification, and saves it as a named release that is available for referencing.
 SMART Guidelines, when released, are published in `https://smart.who.int/<code>`, where `<code>` is the implementation guide code.   
