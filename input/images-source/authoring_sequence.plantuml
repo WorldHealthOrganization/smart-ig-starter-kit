@@ -1,0 +1,20 @@
+@startuml
+!define MUST_BG_COLOR #f2dcdc
+!define SHOULD_BG_COLOR #d7e6dc
+
+start
+SHOULD_BG_COLOR: [[l3_logicalmodels.html Logical Models]];
+MUST_BG_COLOR: [[l3_profiles.html Profiles]];
+SHOULD_BG_COLOR: [[l3_forms.html Forms]];
+MUST_BG_COLOR: [[l3_libraries.html Libraries]];
+MUST_BG_COLOR: [[l3_decisiontables.html Decision Tables]];
+MUST_BG_COLOR: [[l3_indicators.html Indicators]];
+MUST_BG_COLOR: [[l3_schedulinglogic.html Scheduling Logic]];
+MUST_BG_COLOR: [[l3_testing.html Test Cases]];
+MUST_BG_COLOR: [[l3_personas.html Personas]];
+SHOULD_BG_COLOR: [[l3_scenarios.html Scenarios]];
+SHOULD_BG_COLOR: [[l3_processes.html Processes]];
+SHOULD_BG_COLOR: [[l3_requirements.html Requirements]];
+MUST_BG_COLOR: [[l3_examples.html Examples]];
+stop
+@enduml
