@@ -16,26 +16,36 @@ title: "DRAFT SMART Guidelines L3 SOP"
 description: "DRAFT SMART Guidelines L3 SOP"
 license: CC0-1.0
 
-dependencies:
+# dependencies:
 #  hl7.fhir.core:
 #    id: r4b
 #    version: 4.6.0
 #    reason: |
 #      This IG leverages subscription constructs pre-adopted from R4B.  Importing this IG makes the relevant terminologies available.
-  hl7.terminology: 5.5.0
-  hl7.fhir.uv.extensions: 5.1.0-cibuild
-  hl7.fhir.uv.cql:
-    id: cql
-    version: 1.0.0-snapshot
-    reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
-  hl7.fhir.uv.crmi:
-    id: crmi
-    version: 1.0.0-snapshot
-    reason: This IG uses content management profiles and capabilities provided by CRMI
-  hl7.fhir.uv.cpg:
-    id: cpg
-    version: dev
-    reason: This IG uses computable guideline profiles and capabilities provided by CPG
+  # hl7.terminology: 5.5.0
+  # hl7.fhir.uv.extensions.r4: 
+  #   id: ext
+  #   version: 5.1.0
+  # hl7.fhir.uv.cql:
+  #   id: cql
+  #   version: 1.0.0
+  #   reason: This IG uses CQL profiles and capabilities provided by the Using CQL With FHIR IG
+  # hl7.fhir.uv.crmi:
+  #   id: crmi
+  #   version: 1.0.0
+  #   reason: This IG uses content management profiles and capabilities provided by CRMI
+  # hl7.fhir.uv.sdc:
+  #   id: sdc
+  #   version: 3.0.0
+  #   reason: This IG uses questionnaire profiles and capabilities provided by SDC
+  # hl7.fhir.uv.cpg:
+  #   id: cpg
+  #   version: current
+  #   reason: This IG uses computable guideline profiles and capabilities provided by CPG
+  # hl7.fhir.us.cqfmeasures:
+  #   id: cqfm
+  #   version: current
+  #   reason: This IG uses quality measure profiles and capabilities provided by CQF Measures
 
 menu:
   # Top: 
@@ -47,7 +57,15 @@ menu:
 
   Home: 
     Overview: index.html
-    Assumptions: 'assumptions.html'
+#    Assumptions: 'assumptions.html'
+  IG Setup:
+    GitHub Repositories: 'ig_setup.html'
+    Configuration: 'ig_configuration.html'
+    Publication: 'ig_publication.html'
+    Release: 'ig_release.html'
+#    GitHub Initialization: 'ig_licensing.html'
+#    IG Configuration: 'ig_licensing.html'
+#    Folders and File structure: 'ig_licensing.html'
   Authoring:
     Overview: 'authoring_overview.html'
 #   Diagrams Legend: 'diagram_legend.html'
@@ -80,21 +98,13 @@ menu:
       CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
-#      License: 'license.html'
     Versioning: 'versioning.html'
-#    Licensing: 'ig_licensing.html'
     Diagrams Legend: 'diagram_legend.html'
-  IG Setup:
-    GitHub Repositories: 'ig_setup.html'
-#    GitHub Initialization: 'ig_licensing.html'
-#    IG Configuration: 'ig_licensing.html'
-#    Folders and File structure: 'ig_licensing.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
     Artifacts:
       Extensions: 'artifacts.html'
-#      Value Sets: maps.html'
 
 pages: 
   index.md:
@@ -103,6 +113,18 @@ pages:
 #      title: "Overview"
 #  assumptions.md:
 #   title: "Assumptions"
+  ig_setup.md:
+    title: "IG Setup"
+    github_setup.md:
+      title: "Github Initialization"
+    ig_configuration.md:
+      title: "IG Configuration"
+    ig_publication.md:
+      title: "IG Publication"
+    ig_release.md:
+      title: "IG Release"
+#    folder_structure.md:
+#      title: "Folders and File Structure"
   authoring_overview.md:
     title: "Authoring"
     structure.md:
@@ -170,22 +192,14 @@ pages:
 #      title: "Licensing"
     versioning.md:
       title: "Versioning"
-  ig_setup.md:
-    title: "IG Setup"
-    github_setup.md:
-      title: "Github Initialization"
-    ig_configuration.md:
-      title: "IG Configuration"
-#    folder_structure.md:
-#      title: "Folders and File Structure"
   validating_ig.md:
     title: "Validating IG"
     qa_check.md:
       title: "QA check"
   indices.md:
     title: "Indices"
-  maps.md:
-    title: "Mappings"
+#  maps.md:
+#    title: "Mappings"
 
 
 publisher:

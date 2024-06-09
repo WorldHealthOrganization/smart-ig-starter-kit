@@ -66,11 +66,15 @@ The recommended priority for the search for existing profiles and extensions:
 * All profiles shall be valid profiles
 * All data elements that need to be exchanged or used in a decision, workflow, or indicator are covered by one or more profiles.
 * Every profile shall have one example instance
+* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablestructuredefinition.html)
+* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablestructuredefinition.html)
 
  
 ### **Change tracking**
-* Profiles are essential traceability artifacts, and all changes to a profile shall be tracked in change history
-* Breaking changes to a prior published release should follow a dedicated review process
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of StructureDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
+
+In addition, breaking changes to a prior published release should follow a dedicated review process
 
 ### **Tooling**
 

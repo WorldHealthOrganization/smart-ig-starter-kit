@@ -78,14 +78,10 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 * All mapped elements and groups should be tested
 * All the dependencies of the StructureMap shall be in the IG or dependencies - SDC, base profiles, logical models, etc.
 
-<div class="todo">
-* TO DO: Can we have and use a SGStructureMap profile where e.g. title is present etc.?
-</div>
-
 
 ### **Change tracking**
-* StructureMaps are normative artifacts. All artifacts should have a change history.
 
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of StructureMaps defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling:**
 

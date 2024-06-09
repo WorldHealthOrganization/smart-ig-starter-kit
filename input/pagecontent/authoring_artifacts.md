@@ -272,7 +272,6 @@ The input folders for the resources are:
 * `input/cql`
 * `input/libraries`
 
-<p class="todo"> TO DO: Decision Tables and Scheduling Logic? Should these represent the 16 types of objects?</p>
 
 For FSH, the folders are the same but in the `fsh` folder, e.g. `input/fsh/scenarios`, `input/fsh/actors` etc.
 

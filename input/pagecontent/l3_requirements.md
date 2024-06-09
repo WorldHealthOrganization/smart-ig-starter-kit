@@ -19,7 +19,6 @@ The requirements capture the following data:
 ### **Outputs:**
 
 * Requirements resources for all functional and non-functional requirements
-<li class="todo">TO DO: Minimal testing expectations for all requirements?</p>
 
 ### **Activities:**
 <img src="./l3_process_requirements.png" style="width:50%"/>
@@ -53,7 +52,10 @@ The Requirements will capture the following elements:
 
 
 ### **Change tracking**
-* Requirements are essential traceable artifacts. Every time a requirement changes, the change history shall be appended.
+
+As with all FHIR Conformance resources, change management is critical. Do not set the version element of Requirements defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
+
+In addition, Requirements are essential traceable artifacts. Every time a requirement changes, the change history shall be appended.
 
 ### **Tooling:**
 
