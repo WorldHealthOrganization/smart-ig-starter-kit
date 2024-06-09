@@ -62,7 +62,7 @@ menu:
     GitHub Repositories: 'ig_setup.html'
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
-    Release: 'ig_release.html'
+#    Release: 'ig_release.html'
 #    GitHub Initialization: 'ig_licensing.html'
 #    IG Configuration: 'ig_licensing.html'
 #    Folders and File structure: 'ig_licensing.html'
@@ -121,8 +121,8 @@ pages:
       title: "IG Configuration"
     ig_publication.md:
       title: "IG Publication"
-    ig_release.md:
-      title: "IG Release"
+#    ig_release.md:
+#      title: "IG Release"
 #    folder_structure.md:
 #      title: "Folders and File Structure"
   authoring_overview.md:
@@ -133,6 +133,8 @@ pages:
         title: "Diagrams Legend"
 #    naming_conventions.md:
 #      title: "Naming Conventions"
+    checklist.md:
+      title: "Checklist"
     content_types.md:
       title: "Types of Content"
     l2_l3_overview.md:
@@ -143,8 +145,8 @@ pages:
       title: "Governance Overview"
       gov_concepts.md:
         title: "Concept Governance"
-    artifacts_catalog.md:
-      title: "Artifacts Catalog"
+#    artifacts_catalog.md:
+#      title: "Artifacts Catalog"
     authoring_artifacts.md:
       title: "Authoring Artifacts"
       l3_personas.md:
