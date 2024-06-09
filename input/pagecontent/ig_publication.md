@@ -6,7 +6,7 @@ The release publication process is used to publish SMART guidelines IGs:
 * Review process
 * Publication
 
-#### Change log
+### Change log
 
 Each SMART guideline IG SHALL have a "changes" page that documents the changes made to each version of the IG. The page should be structured with sections for each publication version, in reverse chronological order for example:
 
@@ -25,7 +25,7 @@ Each SMART guideline IG SHALL have a "changes" page that documents the changes m
 * issue list
 * ...
 
-#### Compatible, Subtantive Changes
+#### Compatible, Substantive Changes
 * issue list
 * issue list
 * ...
@@ -61,7 +61,7 @@ The description for each release SHALL have:
 
 See the [versioning](versioning.html) topic for a description of how these changes impact the version number of a release.
 
-#### Review Process
+### Review Process
 
 Prior to final release, a review process should be used to gather feedback about publication readiness. A draft publication should be prepared and circulated among stakeholders for feedback. For this draft publication:
 
@@ -70,7 +70,7 @@ Prior to final release, a review process should be used to gather feedback about
 * The `releaseLabel` of the IG should be `draft`
 
 
-#### Release Publication
+### Release Publication
 
 Once the review process is complete and any resulting issues addressed and applied to the implementation guide, the release publication should be prepared. The release publication takes the current status of the specification, and saves it as a named release that is available for referencing.
 SMART Guidelines, when released, are published in `https://smart.who.int/<code>`, where `<code>` is the implementation guide code.   
