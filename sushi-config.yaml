@@ -60,6 +60,7 @@ menu:
 #    Assumptions: 'assumptions.html'
   IG Setup:
     GitHub Repositories: 'ig_setup.html'
+    GitHub Setup: 'github_setup.html'
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
 #    Release: 'ig_release.html'
@@ -116,7 +117,7 @@ pages:
   ig_setup.md:
     title: "IG Setup"
     github_setup.md:
-      title: "Github Initialization"
+      title: "Github Setup"
     ig_configuration.md:
       title: "IG Configuration"
     ig_publication.md:
@@ -155,14 +156,22 @@ pages:
         title: "User Scenarios"
       l3_processes.md:
         title: "Business Processes"
+      l3_requirements.md:
+        title: "Requirements"
       l3_logicalmodels.md:
         title: "Logical Models"
       l3_valuesets.md :
         title: "Value Sets"
       l3_codesystems.md :
         title: "Code Systems"
+      l3_conceptmaps.md:
+        title: "Concept Maps"
+      l3_forms.md:
+        title: "Forms"
       l3_profiles.md :
         title: "Profiles"
+      l3_indicators.md:
+        title: "Indicators"
       l3_decisiontables.md :
         title: "Decision Tables"
       l3_schedulinglogic.md :
@@ -173,22 +182,14 @@ pages:
         title: "Structure Maps"
       l3_testing.md :
         title: "Testing"
-      l3_forms.md:
-        title: "Forms"
-      l3_indicators.md:
-        title: "Indicators"
-      l3_conceptmaps.md:
-        title: "Concept Maps"
       l3_cql.md:
         title: "CQL"
-      l3_requirements.md:
-        title: "Requirements"
       l3_examples.md:
         title: "Examples"
       # l3_testscripts.md:
       #   title: "Test Scripts"
-      license.md:
-        title: "License"
+    license.md:
+      title: "License"
 
 #    ig_licensing.md:
 #      title: "Licensing"
