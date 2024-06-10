@@ -56,7 +56,6 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 | endorser | SHOULD be populated with {{ig endorser}} |
 | relatedArtifact | SHALL be populated with `citation` references to L2 content |
 
-TODO: Define how references to L2 content occur (not only for libraries but throughout)
 
 ##### **Computable** and **Executable**
 
@@ -80,7 +79,7 @@ TODO: Define how references to L2 content occur (not only for libraries but thro
 ### **Output Criteria / Definition of Done:**
 
 * Each CQL Library in the IG SHALL have a Library resource
-* Each Library SHALL indicate the type of library according to the above (with a useContext slice) TODO: SGLibrary
+* Each Library SHALL indicate the type of library according to the above (with a useContext slice) 
 * Each Library resource SHALL conform to [CRMIShareableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablelibrary.html)
 * Each active published Library SHALL conform to [CRMIPublishableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablelibrary.html)
 * Each Library resource representing a CQL Library SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html)
@@ -101,7 +100,6 @@ In addition to the change tracking provided generally for all resources:
 
 ### **Tooling:**
 
-> TODO: Need to determine the best way to integrate the library processing. In progress
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
