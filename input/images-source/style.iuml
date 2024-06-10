@@ -41,11 +41,11 @@ skinparam {
     'DPI 200
     'Shadowing false
     roundcorner 9
-    NoteFontName Roboto Condensed
-    NoteFontStyle Italic
+'    NoteFontName Roboto Condensed
+'    NoteFontStyle Italic
 
-    DefaultFontName Roboto Condensed
-    DefaultMonospacedFontName Inconsolata
+'    DefaultFontName Roboto Condensed
+'    DefaultMonospacedFontName Inconsolata
     DefaultFontColor STYLE_FGC
 
     ' Styles - Borders
@@ -158,6 +158,33 @@ skinparam {
     'NoteBackgroundColor STYLE_BGC
 
 }
+skinparam backgroundcolor transparent
+
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+skinparam class<<TM+>> {
+ BorderColor #303070  
+ BackgroundColor AliceBlue
+ HeaderBackgroundColor Turquoise 
+}
+
+skinparam class<<TMT>> {
+ BorderColor #505090
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor #8db
+}
+
 
 
 @enduml

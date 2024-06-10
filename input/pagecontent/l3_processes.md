@@ -16,16 +16,9 @@ The data required to be captured for each Business Process is:
 
 ### **Outputs:**
 
-* Proposed new Business Process definitions as PlanDefinitions (following the SMARTBusinessProces profile).
+* Proposed new Business Process definitions as PlanDefinitions.
 * Narrative page with business processes overview for the scope of the current guideline
 * For readability, Business Process shall contain BPMN or BPM+ content or a separate diagram 
-
-<div class="todo">
-TO DO: Where is this content? 
-</div>
-<div class="todo">
-TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
-</div>
 
 ### **Activities:**
 <img src="./l3_process_process.png" style="width:50%"/>
@@ -34,17 +27,14 @@ TO DO: Add the rendering of BPMN diagrams to the IG Publisher template
 
 
 ### **Checking for reusable Business Processes**
-* The author can check the existing process repository to see if there is a matching process. 
-<div class="todo">
-TO DO: Do we want to link processes to models?
-</div>
+* The author may check the existing process repository to see if there is a matching process. 
+
 
 ### **Creating a new Business Process**
 * Creating a new business process consists of creating a PlanDefinition resource following the profile BusinessProcess. The data needs are described in the model below:
 
 ### **Creating Business Process diagram**
-
-
+Business Process Diagram
 
 ### **Output Criteria / Definition of Done:**
 * The PlanDefinition should 
@@ -54,11 +44,7 @@ TO DO: Do we want to link processes to models?
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of PlanDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling**
-
-| Tool | Usage | Doc |
-| --- | ---| ---| 
-|  | |  |
-{:.table-bordered.full-width}  
+There are several tools to edit BPMN processes. For example [bpmn.io](https://bpmn.io/) is a reference open source implementation of the standard.
 
 ### **Informative examples**
 
