@@ -1,11 +1,7 @@
-### **GitHub repository**
-
-**Actor**: ImplementationGuide repository Admin
-
-When starting L3, if an IG is not present, it should be created now.
+When starting L3, if an ImplementationGuide is not present, it should be created now.
 
 * For WHO repositories: WHO will create it upon request.
-* For adaptations: See ??
+* For adaptations: the responsible organization will create it. They may use some of the WHO infrastructure.
 
 * The name of the repository depends on the organization for WHO, should be smart-xxxx (where xxxx is the name of the IG)
 * The repository SHOULD be based on the WHO repository template: https://github.com/WorldHealthOrganization/smart-ig-empty 
