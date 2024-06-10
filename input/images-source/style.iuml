@@ -36,7 +36,7 @@ skinparam {
 ' See Custom Style section below to override items here.
 
 skinparam {
-
+    svgDimensionStyle false
     ' Global Options
     'DPI 200
     'Shadowing false
