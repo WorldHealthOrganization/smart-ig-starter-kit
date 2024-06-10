@@ -73,7 +73,7 @@ Prior to final release, a review process should be used to gather feedback about
 ### Release Publication
 
 Once the review process is complete and any resulting issues addressed and applied to the implementation guide, the release publication should be prepared. The release publication takes the current status of the specification, and saves it as a named release that is available for referencing.
-SMART Guidelines, when released, are published in `https://smart.who.int/<code>`, where `<code>` is the implementation guide code.   
+SMART Guidelines, when released, are published in `https://smart.who.int/<ig_code>`, where `<ig_code>` is the implementation guide code.   
 
 The release publication steps are:
 
