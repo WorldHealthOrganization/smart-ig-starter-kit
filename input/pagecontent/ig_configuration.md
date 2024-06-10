@@ -1,9 +1,5 @@
-The L3 Author needs to configure the Implementation Guide:
+After initializing the IG, the L3 Author needs to configure the Implementation Guide.
 
-For WHO-authored Guidelines (i.e. not for adaptations), the configuration includes:
-
- After initializing the IG, it must be configured.   
-   
 For WHO-authored Guidelines (i.e. not for adaptations), the configuration includes:
 
 * Id: `smart.who.int.<ig_code>`

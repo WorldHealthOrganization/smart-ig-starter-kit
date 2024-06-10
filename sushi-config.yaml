@@ -119,7 +119,7 @@ pages:
     github_setup.md:
       title: "Github Setup"
     ig_configuration.md:
-      title: "IG Configuration"
+      title: "ImplementationGuide Configuration"
     ig_publication.md:
       title: "IG Publication"
 #    ig_release.md:
