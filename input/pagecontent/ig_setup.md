@@ -12,8 +12,8 @@ The key repositories that play a role are identified in the diagram below:
 
 ### Repository Setup
 The [SMART-Empty repository](https://github.com/WorldHealthOrganization/smart-ig-empty) is the repository that should be forked to create a new Implementation Guide. 
-To do so, click on "Use this Template" option in Github.  
-** Ensure that the option to "Include all branches".** so that the `gh-pages` branch is also cloned. Otherwise you must create it manually. 
+To do so, the L3 author can click on "Use this Template" option in Github.
+* It is important to ensure that the option to "Include all branches" is selected** so that the `gh-pages` branch is also cloned. Otherwise it must be created manually. 
 * For WHO repositories: WHO will create it upon request.
 * For adaptations: Entities that are producing the SMART Implementation Guide are advised to define some level of responsibility, or leaving it to the authors. 
 
