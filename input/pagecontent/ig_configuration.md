@@ -1,5 +1,3 @@
-### **ImplementationGuide configuration**
-
 The L3 Author needs to configure the Implementation Guide:
 
 For WHO-authored Guidelines (i.e. not for adaptations), the configuration includes:
