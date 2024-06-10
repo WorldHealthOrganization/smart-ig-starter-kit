@@ -3,20 +3,8 @@
 skinparam linetype polyline
 hide circle
 hide stereotype
+!include ./style.iuml
 
-'!pragma layout smetana
-
-skinparam class<<MD>> {
- BorderColor DarkSlateGray
- BackgroundColor WhiteSmoke
- HeaderBackgroundColor #909090
-}
-
-skinparam class<<TM>> {
- BorderColor #505090
- BackgroundColor APPLICATION
- HeaderBackgroundColor SkyBlue
-}
 
     class "**  Logical Model  **" as LM<<TM>> {
         |_ identifier[SG] 1..*   

@@ -19,7 +19,6 @@ The requirements capture the following data:
 ### **Outputs:**
 
 * Requirements resources for all functional and non-functional requirements
-<li class="todo">TO DO: Minimal testing expectations for all requirements?</p>
 
 ### **Activities:**
 <img src="./l3_process_requirements.png" style="width:50%"/>

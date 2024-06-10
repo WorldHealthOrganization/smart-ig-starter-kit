@@ -1,44 +1,14 @@
 @startuml
-'skinparam linetype ortho
 skinparam linetype polyline
 hide circle
 hide stereotype
+!include ./style.iuml
 
-'!pragma layout smetana
-
-skinparam class<<MD>> {
- BorderColor DarkSlateGray
- BackgroundColor WhiteSmoke
- HeaderBackgroundColor #909090
-}
-
-skinparam class<<TM>> {
- BorderColor #505090
- BackgroundColor AliceBlue
- HeaderBackgroundColor SkyBlue
-}
-
-
-skinparam class<<TM+>> {
- BorderColor #303070  
- BackgroundColor AliceBlue
- HeaderBackgroundColor Turquoise 
-}
-
-
-     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template-who SMART-Template]]**" as Tpl<<TM>> {
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template SMART-IG-Template]]**" as Tpl<<TM>> {
          Template look-and-feel:
          .  HTML
          .  Javascript
          .  Jekyll
-         --
-    }
-
-     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-terminologies SMART-Terminologies]]**" as T<<TM>> {
-         Approved terminology content
-         to be used in SMART IGs 
-         --
-         SGCommonTerms
          --
     }
 
@@ -56,11 +26,9 @@ skinparam class<<TM+>> {
     }
 
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-commons-clinical-encounter Commons-Clinical-Encounter  ]]**" as CE<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base-clinical SMART-Base-Clinical]]**" as CE<<TM>> {
         Common content to be used in 
         encounter-related IGs.
-        --
-        SGEncounter 
         --
     }
 
@@ -79,7 +47,7 @@ skinparam class<<TM+>> {
     }
 
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit Starter-Kit]]**" as SK<<TM+>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit SMART-IG-starter-kit]]**" as SK<<TM+>> {
       Guidance on how to create 
       and use SMART Guidelines
       --
@@ -112,8 +80,6 @@ E .l.> Base: "Cloned into"
 'E -u-> Base: "dependsOn"
 IG --> Base: "dependsOn"
 'IG .r.> Pub : "                "
-T -d[hidden]-> IG : "           "
-
 
 
 
@@ -121,8 +87,5 @@ T -d[hidden]-> IG : "           "
 'C -u-> Core 
 E  .r.> CE: "   Cloned into         "
 'IG  <.. CE: "   Cloned into         "
-'IG  ..> Pub 
-
-
-
+'IG  ..> Pub
 @enduml

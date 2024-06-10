@@ -307,8 +307,6 @@ Include any other dynamic values that are needed for the PlanDefinition in the o
 
 Tag any other expressions needed as `private`.
 
-// TODO: Provide documentation of the CommunicationRequest approach that provides a level of indirection between the health worker and the decision support guidance
-
 Create or reuse ActivityDefinitions depending on what FHIR resources need to be created from the Decision Tables. This will include a CommunicationRequest to alert the Health Worker to the Guidance that will be output.
 
 Create PlanDefintions for each Decision Table that references the output CQL libraries.  
@@ -360,16 +358,9 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html)
 
 ### **Known issues and dependencies**
-<div class="todo">
-* TO DO: How to use R5 resourcesin an R4 IG ? Sushi issue on the way
-</div>
 * (links to issues, or zulip, or open questions)
 
 Each CQL code must have its wrapper FHIR resource. 
 For this, the corresponding Libraries must exist.
 
 The IG Publisher is able to parse CQL libraries
-
-<div class="todo">
-* TO DO: Capture "critical data elements" in CQL
-</div>

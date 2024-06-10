@@ -76,8 +76,8 @@ Example instances (QuestionnaireResponse, logical model instance, and FHIR resou
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
-| Matchbox | |  |
-| LHC Form viewer | Convert FML files |  |
+| Matchbox | Compile FML files; Extract data|  |
+| LHC Form viewer | Display questionnaires|  |
 |  | |  |
 
 Several SDC-related tools and implementations are available from the [HL7 Confluence](https://confluence.hl7.org/display/FHIRI/SDC+Implementations).

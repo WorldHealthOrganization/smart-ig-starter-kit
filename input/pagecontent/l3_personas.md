@@ -18,12 +18,10 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 
 ### **Outputs:**
 
-* L3 ActorDefinition compatible with the SGPersona profile
-* Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation
+* L3 ActorDefinition (compatible with the SGPersona profile).
+* Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
 * Narrative page listing the Personas
-<div class="todo">
-  * TO DO: What to do with this? How is it published in L3? Table? Will add dependencies from tooling.
-</div>
+
 ### **Activities:**
 
 <img src="./l3_process_persona.png" style="width:50%"/>
@@ -32,11 +30,8 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 
 #### Reusing an existing Persona
 If an ActorDefinition already exists in the Commons repository, and its
-definitions is adequate to the case submitted, the author shall reuse an existing persona 
-<div class="todo">
-TO DO: how? See IG Publisher issue https://github.com/HL7/fhir-ig-publisher/issues/311
-  -   Create a dummy / void profile
-</div>
+definitions is adequate to the case submitted, the author shall reuse an existing persona.
+
 If an ActorDefinition already exists in the Commons repository, but its
 definitions is not adequate to the case submitted,
 
@@ -47,13 +42,6 @@ definitions is not adequate to the case submitted,
 If no ActorDefinition exists in the Commons repository, create a draft & propose a new persona.
 
 `.identifier` - don't add an identifier. A final identifier will be assigned in the persona approval / onboarding process. 
-
-<div class="todo">
-TO DO: NamingSystem for Actor Identifiers?
-</div>
-<div class="todo">
-TO DO: SGPersona is a profile of Shareable? Publishable?
-</div>
 
 `.status` = fixed value `draft`
 `.name` - add a meaningful computer-readable name (no spaces, PascalCase)
@@ -91,9 +79,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html)
 
 ### **Known issues and dependencies**
-<div class="todo">
-* TO DO: How to use R5 resourcesin an R4 IG ? Sushi issue on the way
-</div>
-* (links to issues, or zulip, or open questions)
+* Currently it is possible to use the ActorDefinition (an R5 resource) in FHIR R4 IGs but it not possible to create profiles in sushi for that resource
+
 
 

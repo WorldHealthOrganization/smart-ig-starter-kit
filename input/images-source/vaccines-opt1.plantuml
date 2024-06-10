@@ -3,20 +3,7 @@ skinparam linetype ortho
 'skinparam linetype polyline
 hide circle
 hide stereotype
-
-'!pragma layout smetana
-
-skinparam class<<MD>> {
- BorderColor DarkSlateGray
- BackgroundColor WhiteSmoke
- HeaderBackgroundColor #909090
-}
-
-skinparam class<<TM>> {
- BorderColor #505090
- BackgroundColor APPLICATION
- HeaderBackgroundColor SkyBlue
-}
+!include ./style.iuml
 
 
 class "**Disease**" as D <<TM>>{

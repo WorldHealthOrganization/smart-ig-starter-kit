@@ -4,7 +4,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      lang="en">
   <p>
-    The following sections provides a checklist to review to ensure that a SMART Guidelines Implmentation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
+    The following sections provides a checklist to review to ensure that a SMART Guidelines Implementation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
   </p>
 
 
@@ -263,7 +263,7 @@
       <td class='checklist-section'>Home Page</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'><b>Status and maturity level</b> of the Implementation Guide is based on the CMM (Capability Maturity Model) framework and the intention is to give implementers a sense of how mature the Implementation Guide is.<mark>TODO: define maturity levels such as 'draft', 'candidate recommendation/STU', 'published/recommendation/normative'.</mark></td>
-      <td class='checklist-artifacts'>Disclaimer notice indicating the maturity level of the implemenation guide</td>
+      <td class='checklist-artifacts'>Disclaimer notice indicating the maturity level of the implementation guide</td>
       <td class='checklist-criteria'>Maturity level is indicated in the 'STU Note' block quote on the home page of the Implementation Guide.</td>
     </tr>
     <tr>

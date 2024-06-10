@@ -272,12 +272,11 @@ The input folders for the resources are:
 * `input/cql`
 * `input/libraries`
 
-<p class="todo"> TO DO: Decision Tables and Scheduling Logic? Should these represent the 16 types of objects?</p>
 
 For FSH, the folders are the same but in the `fsh` folder, e.g. `input/fsh/scenarios`, `input/fsh/actors` etc.
 
 
-## Naming convention
+### Naming convention
 
 Resource IDs
 * Resource source files shall have extension .json or .xml
@@ -294,6 +293,13 @@ Resource IDs
     Resource Ids must be combination of letters, numbers, hyphens, and periods. Ensure that the name is at least 1 character long but does not exceed 64 characters in length. The expression is <pre>[A-Za-z0-9\-\.]{1,64}</pre>
 </div>
 
+<div class="info-box must">
+  <span class="info-title">Names must start with an uppercase character, and may contain letters, numbers or underscores</span>
+    Names must start with an uppercase letter followed by up to 254 characters that can be a mix of letters, numbers, or underscores. The expression is <pre>^[A-Z]([A-Za-z0-9_]){1,254}$</pre>
+</div>
+
+
+
 
 
 ## File Names
@@ -303,14 +309,4 @@ Resource IDs
 * Sushi / FSH Aliases should be stored in `fsh/Aliases.fsh`
 * See [versioning](versioning.html)
 
-
-<div class="info-box must">
-  <span class="info-title">Names must start with an uppercase character, and may contain letters, numbers or underscores</span>
-    Names must start with an uppercase letter followed by up to 254 characters that can be a mix of letters, numbers, or underscores. The expression is <pre>^[A-Z]([A-Za-z0-9_]){1,254}$</pre>
-</div>
-
-
-
-
-<p class= "todo">TO DO: Adding artifacts, what goes into common-clinical, etc.</p>
 
