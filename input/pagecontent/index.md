@@ -21,10 +21,9 @@ In addition, the adoption and adaptation of SMART Guidelines by the different co
 ### About this implementation guide
 This guide is divided into several sections that are displayed in the menu bar located at the top of the page:
 - <a href="index.html">Home</a> - Provides the introduction about this guide.
-- <a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies.
+- <a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies as well as publishing SMART guidelines 
 - <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3.
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG.
-- <a href="ig_publication.html">IG Publication</a> - Guidance on the overall publication process for SMART guidelines.
 
 ### Intellectual Property and copyright considerations
 
