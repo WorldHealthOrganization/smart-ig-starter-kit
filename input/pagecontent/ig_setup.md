@@ -1,4 +1,4 @@
-When starting L3, if an IG is not present, it should be created.
+Each L3 layer of SMART Guidelines for a health programme area is represented in an individual Implementation Guide. The first step in starting a L3 FHIR IG is to create a FHIR IG. The page here is a guide on how to setup a FHIR IG for L3.
 
 ### Repositories
 
@@ -11,9 +11,11 @@ The key repositories that play a role are identified in the diagram below:
 </figure>
 
 ### Repository Setup
-The [SMART-Empty repository](https://github.com/WorldHealthOrganization/smart-ig-empty) is the repository that should be forked to create a new Implementation Guide. 
-To do so, click on "Use this Template" option in Github.  
-** Ensure that the option to "Include all branches".** so that the `gh-pages` branch is also cloned. Otherwise you must create it manually. 
+The [SMART-Empty repository](https://github.com/WorldHealthOrganization/smart-ig-empty) is the repository that should be forked to create a new Implementation Guide.
+
+
+To do so, click on "Use this Template" option in Github. **Ensure that the option to "Include all branches".** so that the `gh-pages` branch is also cloned. Otherwise you must create it manually. 
+
 * For WHO repositories: WHO will create it upon request.
 * For adaptations: Entities that are producing the SMART Implementation Guide are advised to define some level of responsibility, or leaving it to the authors. 
 
