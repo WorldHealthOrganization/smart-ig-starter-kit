@@ -1,6 +1,5 @@
 {% include l2_l3_overview.md %}
 
-Authoring L3 consists in creating, validating and publishing L3 FHIR artifacts that correspond to the L2 specifications.
 
 #### Overview of Content types
 

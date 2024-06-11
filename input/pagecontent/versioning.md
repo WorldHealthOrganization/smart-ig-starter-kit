@@ -1,4 +1,4 @@
-## Versioning
+### Versioning
 
 Versioning is critical to ensuring that consumers of the SMART guideline can understand when changes occur how those changes impact their implementations. For this reason, SMART guidelines SHALL follow semantic versioning as prescribed in the [Artifact Versioning]({{site.data.fhir.ver.crmi}}/artifact-lifecycle.html#artifact-versioning) topic of the Canonical Resource Management Infrastructure IG.
 
@@ -14,7 +14,7 @@ This process repeats for each release of the implementation guide.
 
 Note that the FHIR publication tooling uses the `version` of the implementation guide overall to set the `version` element of all the canonical resources in the implementation guide (i.e. all the Library, CodeSystem, ValueSet, StructureDefinition, etc.,.). As such, the `version` element of individual resources in the implementation guide should not be set, allowing the publisher to set the versions appropriately.
 
-## History
+### History
 After [publication](ig_publication.html), any changes to the L3 resources should be tracked. 
 
 Tracking changes should include:
@@ -23,15 +23,15 @@ Tracking changes should include:
 * Differencing between different versions of a publication
 * Release Notes
 
-### Github Issues
+#### Github Issues
 * Every change should be traceable to a GitHub issue. This allows tracking the change and any approvals/discussions, as well as assisting in creating release notes.
 
 * State of each issue: GitHub issues should not be considered "done" when the change is agreed, but only when the change is effectively implemented and tested and the respective criteria is met.
 
 
-### Change History and Release Notes
+#### Change History and Release Notes
 
 See the [publication]ig_publication.html) topic for a detailed discussion of how to create change history and release notes (including known issues).
 
-### Version Difference
+#### Version Difference
 For some artifacts, the FHIR ImplementationGuide tooling may highlight the differences in the content of the artifacts between two versions. This can be used to track and demonstrate the detailed artifact changes.

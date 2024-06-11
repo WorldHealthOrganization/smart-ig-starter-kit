@@ -1,12 +1,12 @@
 
 Logical models represent the data structures in the Digital Dictionary. This is a computable representation that is independent of any physical limitation like which FHIR Release or profile version is used. 
-The use of FHIR loogical models allows metadata to be structured, computable, and interoperable, for the purposes of governance and checking.
+The use of FHIR logical models allows metadata to be structured, computable, and interoperable, for the purposes of governance and checking.
 
 Creating a FHIR logical model entails capturing the elements in the Data Dictionary, with their description, terminology and cardinality constraints.
 
 Logical models relate to other models in 3 aspects:
 * Logical models can extend or constrain "parent" models - for example a Patient extending a Person
-* Logical models can "contain" other models as a data type - for example patient and practitioner containing "name" ddata structure
+* Logical models can "contain" other models as a data type - for example patient and practitioner containing "name" data structure
 * Logical models can refer to other models - for example a request referencing a product
 
 
@@ -60,9 +60,9 @@ This is the "atomic" unit of exchange or use in the L3. Some factors may influen
 The logical model name has the name of the tab.
 Logical model should conform to the [SGLogical](http://build.fhir.org/ig/WorldHealthOrganization/smart-base/StructureDefinition-SGLogicalModel.html) model profile.
 
-Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are persent in the L2.
+Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are present in the L2.
 
-To start creating the logical model, an intake validation is useful, although it can be done simultaneouslty done with the editing of the logical model:
+To start creating the logical model, an intake validation is useful, although it can be done simultaneously done with the editing of the logical model:
 1.  Verify that each data element needed exists in the common Glossary
     1.  If not, create and provisionally use a draft concept, and
         request that concept to be added to the common glossary.
@@ -82,7 +82,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
     -   DE.1 Do you have measles?
     -   Yes → C.1 Yes
     -   No → C.2 No
-    -   Unknow → C.3 Unknown  
+    -   Unknown → C.3 Unknown  
    
 *   Data Element Label is captured in 2 places:
     -   Element short description (`differential.element[*].short`): same as element label

@@ -7,15 +7,15 @@ This specification uses:
 3. Representation of starting artifacts as technology artifacts (e.g., files or data objects).
 4. Display of processes within the application layer, illustrating how functional processes transform L2 inputs  into L3 outputs.
 
-## ArchiMate Notation Overview
+### ArchiMate Notation Overview
 
-### Layers:
+#### Layers:
 
 - **Application Layer**: Offers a functional description, typically illustrating processes, functions, and services. This is represented by blue elements.
   
 - **Technology Layer**: Represents actual artifacts, like files, resource instances, or other data objects. This is represented by green elements.
 
-### Relations :
+#### Relations :
 
 The relations are represented by arrows
 
@@ -34,7 +34,7 @@ The relations are represented by arrows
 </figure>
 
 
-### Example Diagram:
+#### Example Diagram:
 <img src="./l3_process_indicator.png" style="width:50%"/>
 <br clear="all"/>
 > The diagram above shows the process for creating an indicator: 
@@ -46,12 +46,12 @@ The relations are represented by arrows
 * The output of this is the L3 library that is referenced by the Measure resource
 
 
-## Artifact Authoring Processes
+### Artifact Authoring Processes
 
 The diagrams capture the essence of transforming an L2 input into the corresponding L3 artifacts through processes. These processes can use different tooling or technologies; however the criteria for output and for process are defined.
 
 
-## Data Object Details with PlantUML
+### Data Object Details with PlantUML
 
 To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This discloses some of the intended structure, relationships, and attributes of the L3 artifacts.
 
