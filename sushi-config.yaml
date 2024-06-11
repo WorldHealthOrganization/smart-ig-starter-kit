@@ -104,8 +104,7 @@ menu:
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
-    Artifacts:
-      Extensions: 'artifacts.html'
+    Artifacts: 'artifacts.html'
 
 pages: 
   index.md:
