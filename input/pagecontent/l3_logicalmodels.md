@@ -11,7 +11,7 @@ Logical models relate to other models in 3 aspects:
 
 
 Each Logical Model is defined by the following data:
-<figure>
+<figure style = "width:400px">
   {% include model_logicalmodel.svg %}
 </figure>
 

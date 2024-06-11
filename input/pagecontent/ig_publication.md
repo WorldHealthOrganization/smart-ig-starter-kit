@@ -82,7 +82,7 @@ The release publication steps are:
 
 2. Optionally, create a new branch, e.g. `release-candidate` for iterating changes.  
 
-3. Create a publication-request.json   
+3. Create the [`publication-request.json`](https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation) file. This file is critical and it is important to follow the instructions correctly, as incorrect changes may cause irreparable damage to previously published and normative specifications.   
 
 4. Update the ImplementationGuide (and all conformance artifacts in the IG):
     * The `status` of the IG (and all conformance artifacts in the IG) should be `active`;

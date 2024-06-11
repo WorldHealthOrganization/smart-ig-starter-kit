@@ -4,7 +4,7 @@ hide circle
 hide stereotype
 !include ./style.iuml
 
-     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template SMART-IG-Template]]**" as Tpl<<TM>> {
+     class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-template smart-ig-template]]**" as Tpl<<TM>> {
          Template look-and-feel:
          .  HTML
          .  Javascript
@@ -12,7 +12,7 @@ hide stereotype
          --
     }
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base SMART-Base]]**" as Base<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base smart-base]]**" as Base<<TM>> {
         Support definitions that every
         SMART IG is required to adopt  
         --
@@ -26,20 +26,20 @@ hide stereotype
     }
 
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base-clinical SMART-Base-Clinical]]**" as CE<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-base-clinical smart-base-clinical]]**" as CE<<TM>> {
         Common content to be used in 
         encounter-related IGs.
         --
     }
 
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-empty SMART-Empty]]**" as E<<TM>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-empty smart-ig-empty]]**" as E<<TM>> {
         Contains foundation (e.g. dependencies) 
         and any content that every SMART IG
         should copy when initialized.
         --
         .dependsOn = base
-        template = SG-SMART
+        template = smart-ig-template
         FSH helper functions
         look-and-feel
         --
@@ -47,7 +47,7 @@ hide stereotype
     }
 
 
-    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit SMART-IG-starter-kit]]**" as SK<<TM+>> {
+    class "**[[https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit smart-ig-starter-kit]]**" as SK<<TM+>> {
       Guidance on how to create 
       and use SMART Guidelines
       --
