@@ -10,19 +10,19 @@ this process can propose the creation of another different persona. This
 creation of a new persona is a provisional measure; there SHALL be a
 governance process for Personas. In that governance, there SHALL be a requirement that all personas in the final publication of a specification SHALL be approved.
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 Generic personas (Narrative)
 * Personas Glossary (in ValueSet SGPersonas)
 * Personas repository (in Common artifacts / central repository?)
 
-### **Outputs:**
+### **Outputs**
 
 * L3 ActorDefinition (compatible with the SGPersona profile).
 * Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
 * Narrative page listing the Personas
 
-### **Activities:**
+### **Activities**
 
 <img src="./l3_process_persona.png" style="width:50%"/>
 <br clear="all"/>

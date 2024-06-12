@@ -1,4 +1,6 @@
-The SMART Guidelines define the provision of guidance and monitoring using a structured, standardized representation of knowledge of different types, which are represented in L2 and L3. The L3 authoring process consists of creating the L3 artifacts from the corresponding L2 artifact (and its adjacent artifacts) - for example creating PlanDefinitions from a Decision Table.
+The SMART Guidelines define the provision of guidance and monitoring using a structured, standardized representation of knowledge of different types, which are represented in L2 and L3. The diagram and table here represent those concepts in a visual manner. 
+
+**Note: This diagram is not representative of the component/artifact names across L2 or L3, but is an abstract overview of concept types involved in the definition of SMART Guidelines.**
 
 
 <img src="./content_types.png" style="width:50%; align:center"/>

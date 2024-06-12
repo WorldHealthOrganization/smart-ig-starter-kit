@@ -10,7 +10,7 @@ Upon authoring, CQL libraries are encoded (base64) and included in FHIR Library 
 The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. CQL Library dependencies are common definitions intended to be reused among multiple artifacts, and potentially multiple SMART Guidelines.
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 Data Dictionary
 * L2 Decision Tables
@@ -19,11 +19,11 @@ The L3 author must ensure that there are CQL expressions in each Measure or Deci
 * L2 Configuration
 * Common CQL Libraries
 
-### **Outputs:**
+### **Outputs**
 
 * CQL Libraries containing CQL declarations including terminology, parameters, functions, and expressions
 
-### **Activities:**
+### **Activities**
 
 The L3 author creates CQL libraries for:
   * Concepts library with terminology declarations defined by the SMART Guideline

@@ -16,15 +16,15 @@ Each Logical Model is defined by the following data:
 </figure>
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * DAK data elements Spreadsheet
 
-### **Outputs:**
+### **Outputs**
 
 * Logical Models in `input/models` or `fsh/models`
 
-### **Activities:**
+### **Activities**
 
 This is the overview of the activities and related artifacts used:
 <img src="./l3_process_logicalmodel.png" style="width:50%"/>
@@ -153,7 +153,7 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of LogicalModels defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -167,6 +167,6 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): Logical Models](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-logical-models)
 
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 

@@ -1,18 +1,18 @@
 Scheduling logic represents the schedule of actions that are expected to be followed on a predefined schedule - for example a vaccination schedule. This doesn't necessarily mean that the actions will be executed; the schedule is currently only expected to be communicated to the patient or professionals, as informations. The professionals, based on the schedule, can always evaluate the needed actions. In practice, the schedule and the decision tables, combined with the runtime assessment and conditions, will determine a set of activities being planned or executed for or about the patients.
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * Scheduling Table as per [template](https://worldhealthorg.sharepoint.com/:x:/r/sites/DigitalAcceleratorKits/_layouts/15/Doc.aspx?sourcedoc=%7B17A8AAB1-8120-48DD-92E7-7811AB74E5D5%7D&file=Web%20Annex%20B.%20Decision%20support%20logic_template%20V3.xlsx&action=default&mobileredirect=true). 
 
-### **Outputs:**
+### **Outputs**
 
 * PlanDefinitions as part of the IG
 * ActivityDefinitions as part of the IG or common repository
 * Codes for the concepts used 
 * Example CarePlan for the scenario selected
 
-### **Activities:**
+### **Activities**
 
 <img src="./l3_process_logic.png" style="width:50%"/>
 <br clear="all"/>
@@ -34,7 +34,7 @@ Scheduling logic represents the schedule of actions that are expected to be foll
   - b. See [CQL authoring](l3_cql.html) for criteria and guidance.
   
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Every Decision Table SHALL have a Requirements document pointing at it (for testability and inheritability)
 * Every parameter in the decision table should be in the data dictionary
@@ -47,7 +47,7 @@ Scheduling logic represents the schedule of actions that are expected to be foll
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of PlanDefinitions, ActivityDefinitions, and Libraries defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| --- |
@@ -57,7 +57,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 ### **Informative examples**
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 
 

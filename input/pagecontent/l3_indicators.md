@@ -1,15 +1,15 @@
 Indicators are a machine-readable expressions that define the indicator and its input variables, population, and stratifiers. Indicators are expressed using FHIR Measure resource.
 
-### **Inputs:** 
+### **Inputs** 
 * L2 indicator definition
 * Data dictionary
 * CQL dependencies
 
-### **Outputs:**
+### **Outputs**
 * Measure FHIR artifact
 * Example MeasureReport corresponding to the test / example data included
 
-### **Activities:**
+### **Activities**
 
 Measures are FHIR resources and can refer to CQL libraries. 
 
@@ -85,7 +85,7 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * All the input variables shall be in the measure's `terms`.
 * All terms shall part of the Data Dictionary
@@ -101,7 +101,7 @@ Measures are FHIR resources and can refer to CQL libraries.
 ### **Change tracking**
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of Measures defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| --- |
@@ -114,7 +114,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): Indicator 05](https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND05.html)
 [SMART Guidelines - Immunizations (Measles): Indicator 08](https://worldhealthorganization.github.io/smart-immunizations-measles/Measure-IMMZIND40.html)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 * Stratifiers: combined or not?
 * Can we use measurereport to capture multiple values and computationally figure out what are the figures behind each aggregate?

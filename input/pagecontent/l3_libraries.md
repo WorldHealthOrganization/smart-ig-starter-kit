@@ -2,12 +2,12 @@ Libraries are FHIR Artifacts containing the definitions of data querying and pro
 
 Each CQL library SHALL have a corresponding Library resource in the SMART Guideline. See the [CQL](l3_cql.html) topic for a description of authoring the CQL libraries.
 
-### **Inputs:** 
+### **Inputs** 
 
 * L3 Indicators, PlanDefinitions
 * Library resources in dependencies
 
-### **Outputs:**
+### **Outputs**
 
 * Library resources - populated with the necessary metadata and content
 
@@ -62,7 +62,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 * Computable Libraries SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html) (base64-encoded text/cql content)
 * Executable Libraries SHALL conform to [ELMJSONLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-elm-json-library.html) (base64-encoded application/elm+json content)
 
-### **Activities:**
+### **Activities**
 
 * The L3 Author creates Library resources for each CQL Library
 * Library Types: 
@@ -76,7 +76,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 | IndicatorElements | CQL expressions representing data elements from the perspective of an indicator (i.e. parameterized with a Measurement Period) |
 | Logic | CQL expressions containing artifact logic, either specific to a particular artifact or shared by multiple artifacts |
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Each CQL Library in the IG SHALL have a Library resource
 * Each Library SHALL indicate the type of library according to the above (with a useContext slice) 
@@ -98,7 +98,7 @@ In addition to the change tracking provided generally for all resources:
 ** Scheduling: A tag referring to the L2 Scheduling Table (at the library level)
 ** Indicators: A tag referring to the L2 Indicator (at the library level)
 
-### **Tooling:**
+### **Tooling**
 
 
 | Tool | Usage | Doc |
@@ -111,6 +111,6 @@ In addition to the change tracking provided generally for all resources:
 ### **Informative examples**
 
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
  

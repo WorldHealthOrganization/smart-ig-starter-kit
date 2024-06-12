@@ -17,6 +17,10 @@ For each type of SMART IG content, this SOP describes how it can be produced fro
   - Authoring (based on profiles) 
   - Review and testing 
 * Output Criteria / Definition of Done - checks for ensuring the quality of the output
-* Issues
+* Change Tracking
+  - Change tracking notes
+* Tooling
+  - Available tooling and links to documentation
+* Known Issues and dependencies
   - Decisions pending
   - Tooling dependencies

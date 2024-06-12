@@ -11,16 +11,16 @@ The requirements capture the following data:
 </figure>
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * Personas, Processes and Requirements from L2
 * Personas and Processes from L3
 
-### **Outputs:**
+### **Outputs**
 
 * Requirements resources for all functional and non-functional requirements
 
-### **Activities:**
+### **Activities**
 <img src="./l3_process_requirements.png" style="width:50%"/>
 <br clear="all"/>
 > Summary: From the Functional and Non-Functional requirements in the L2, the L3 author creates  Requirements resources.
@@ -43,7 +43,7 @@ The Requirements will capture the following elements:
 
   
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 * Each requirement shall be associated with a Persona.
 * Each Functional requirement shall have a link to a business [Process] that it is associated with
   * Each Functional requirement should have an Activity ID
@@ -57,7 +57,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 In addition, Requirements are essential traceable artifacts. Every time a requirement changes, the change history shall be appended.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -71,6 +71,6 @@ In addition, Requirements are essential traceable artifacts. Every time a requir
 [SMART Guidelines - Immunizations (Measles): Rendered Requirements table](https://worldhealthorganization.github.io/smart-immunizations-measles/functional-requirements.html)
 [SMART Guidelines - Immunizations (Measles): Example Requirements resource](https://worldhealthorganization.github.io/smart-immunizations-measles/Requirements-immz-e-fxnreq.html)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 

@@ -9,7 +9,7 @@ name: IgStarterKit
 status: draft
 version: 0.2.1
 fhirVersion: 5.0.0
-date: 2024-04-29
+date: 2024-06-12
 # copyright:
 copyrightYear: 2023+
 releaseLabel: "CI Build"
@@ -58,50 +58,44 @@ menu:
 
   Home: 
     Overview: index.html
-#    Assumptions: 'assumptions.html'
   IG Setup:
-    GitHub Repositories: 'ig_setup.html'
-    GitHub Setup: 'github_setup.html'
+    GitHub Repositories: 'ig_repositories.html'
+    GitHub Setup: 'ig_setup.html'
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
-#    Release: 'ig_release.html'
-#    GitHub Initialization: 'ig_licensing.html'
-#    IG Configuration: 'ig_licensing.html'
-#    Folders and File structure: 'ig_licensing.html'
   Authoring:
     Overview: 'authoring_overview.html'
-#   Diagrams Legend: 'diagram_legend.html'
-#   Types of content: 'content_types.html'
     Commons and Governance: 
-      Common Artifacts: gov_overview.html
       Governance overview: gov_overview.html
       Concept Governance: gov_concepts.html
-#   L2 Overview: 'l2_l3_overview.html'
     Authoring Narrative content: 'narrative.html'
     Authoring Artifacts: 
-#     Naming Conventions: 'naming_conventions.html'
-      Authoring: 'authoring_artifacts.html'
-      Structuring of the SOP IG: 'structure.html'
+      Authoring Conventions: 'authoring_conventions.html'
+      Structure of the SOP IG: 'structure.html'
       Personas: 'l3_personas.html'
       User scenarios: 'l3_scenarios.html'
       Processes: 'l3_processes.html'
       Logical Models: 'l3_logicalmodels.html'
       Value Sets: 'l3_valuesets.html'
       Code Systems: 'l3_codesystems.html'
+      Concept Maps: 'l3_conceptmaps.html'
       Profiles: 'l3_profiles.html'
       Decision Tables: 'l3_decisiontables.html'
       Scheduling Logic: 'l3_schedulinglogic.html'
+      Indicators: 'l3_indicators.html'
       Libraries: 'l3_libraries.html'
+      CQL: 'l3_cql.html'
+      Forms: 'l3_forms.html'
       Structure Maps: 'l3_structuremaps.html'
       Testing: 'l3_testing.html'
-      Forms: 'l3_forms.html'
-      Indicators: 'l3_indicators.html'
-      Concept Maps: 'l3_conceptmaps.html'
-      CQL: 'l3_cql.html'
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
     Versioning: 'versioning.html'
-    Diagrams Legend: 'diagram_legend.html'
+    ArchiMate Diagrams:
+      L2 : 'diagram_l2_overview.html'
+      L3 : 'diagram_l3_overview.html'
+      Content Type : 'diagram_content_types.html'
+      Diagrams Legend: 'diagram_legend.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
@@ -110,54 +104,38 @@ menu:
 pages: 
   index.md:
     title: "Home"
+    license.md:
+      title: "License"
 #    overview.md:
 #      title: "Overview"
 #  assumptions.md:
 #   title: "Assumptions"
+  ig_repositories.md:
+    title: "GitHub Repositories"
   ig_setup.md:
-    title: "IG Setup"
-    github_setup.md:
-      title: "Github Setup"
-    ig_configuration.md:
-      title: "ImplementationGuide Configuration"
-    ig_publication.md:
-      title: "IG Publication"
-#    ig_release.md:
-#      title: "IG Release"
-#    folder_structure.md:
-#      title: "Folders and File Structure"
+    title: "Github Setup"
+  ig_configuration.md:
+    title: "ImplementationGuide Configuration"
+  ig_publication.md:
+    title: "IG Publication"
   authoring_overview.md:
     title: "Authoring"
-    structure.md:
-      title: "Structure of the SOP IG"
-      diagram_legend.md:
-        title: "Diagrams Legend"
-#    naming_conventions.md:
-#      title: "Naming Conventions"
-    checklist.md:
-      title: "Checklist"
-    content_types.md:
-      title: "Types of Content"
-    l2_l3_overview.md:
-      title: "L2 overview"
-    narrative.md:
-      title: "Authoring Narrative"
     gov_overview.md:
       title: "Governance Overview"
       gov_concepts.md:
         title: "Concept Governance"
-#    artifacts_catalog.md:
-#      title: "Artifacts Catalog"
-    authoring_artifacts.md:
-      title: "Authoring Artifacts"
+    narrative.md:
+      title: "Authoring Narrative content"
+    authoring_conventions.md:
+      title: "Authoring Conventions"
+      structure.md:
+        title: "Structure of the SOP IG"
       l3_personas.md:
         title: "Personas"
       l3_scenarios.md:
         title: "User Scenarios"
       l3_processes.md:
         title: "Business Processes"
-      l3_requirements.md:
-        title: "Requirements"
       l3_logicalmodels.md:
         title: "Logical Models"
       l3_valuesets.md :
@@ -166,43 +144,46 @@ pages:
         title: "Code Systems"
       l3_conceptmaps.md:
         title: "Concept Maps"
-      l3_forms.md:
-        title: "Forms"
       l3_profiles.md :
         title: "Profiles"
-      l3_indicators.md:
-        title: "Indicators"
       l3_decisiontables.md :
         title: "Decision Tables"
       l3_schedulinglogic.md :
         title: "Scheduling Logic"
+      l3_indicators.md:
+        title: "Indicators"
       l3_libraries.md :
         title: "Libraries"
+      l3_cql.md:
+        title: "CQL"
+      l3_forms.md:
+        title: "Forms"
       l3_structuremaps.md :
         title: "Structure Maps"
       l3_testing.md :
         title: "Testing"
-      l3_cql.md:
-        title: "CQL"
+      l3_requirements.md:
+        title: "Requirements"
       l3_examples.md:
         title: "Examples"
-      # l3_testscripts.md:
-      #   title: "Test Scripts"
-    license.md:
-      title: "License"
-
-#    ig_licensing.md:
-#      title: "Licensing"
     versioning.md:
-      title: "Versioning"
+      title: "Versioning"    
+    diagram_legend.md:
+        title: "ArchiMate Diagrams Legend"
+      diagram_l2_overview.md:
+        title: "L2 ArchiMate Diagram"
+      diagram_l3_overview.md:
+        title: "L3 ArchiMate Diagram"
+      diagram_content_types.md:
+        title: "Content Types ArchiMate Diagram"
   validating_ig.md:
     title: "Validating IG"
     qa_check.md:
       title: "QA check"
+    checklist.md:
+      title: "Checklist"
   indices.md:
     title: "Indices"
-#  maps.md:
-#    title: "Mappings"
 
 
 publisher:

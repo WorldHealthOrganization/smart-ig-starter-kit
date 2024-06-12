@@ -9,7 +9,7 @@ The first step in L3 production is an input verification of the L2 content. L3 a
 
 #### Input for authoring L3: L2 DAK components
 
-For WHO published L2 DAKs, each DAK will be represented as a GitHub repository along with a published PDF DAK word document. The GitHub repository shall contain the structured spreadsheets, bpmn files and more, that were authored during the publication process of the DAK.
+For WHO published L2 DAKs, each DAK will be represented as a GitHub repository along with a published PDF DAK word document. The GitHub repository shall contain the structured spreadsheets, bpmn files and more, that were authored during the publication process of the DAK. Authoring presumes the L2 content is available and consistent. It is possible that the L2 content gets changed, notably due to input from L3 authoring. It is important to track the versions of L2 content, especially when adapting L2 or L3 to a local implementation, in order to track changes and assess impact of those changes.
 
 <table border="1">
     <thead>
@@ -77,7 +77,7 @@ For WHO published L2 DAKs, each DAK will be represented as a GitHub repository a
     </tbody>
 </table>
 
-#### Authored L3 Artifacts: Table of authored L3 artifacts as they correspond to L2 DAK components
+#### Authored L3 artifacts: Table of authored L3 artifacts as they correspond to L2 DAK components
 
 The table and diagram below show the content types that are to be created as part of the L3 authoring process.
 

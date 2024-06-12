@@ -1,16 +1,16 @@
 ConceptMap resources are created to provide a mapping from the codes of one system to another. Each SMART Guideline should have a ConceptMap that maps the concepts defined in the guideline to each target code system.
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 Data Dictionary (Concept IDs and Terminology Mappings)
 * L3 CodeSystem(s)
 
-### **Outputs:**
+### **Outputs**
 
 * A ConceptMap for each target code system identified in the terminology mappings
 * Any additional ConceptMaps required to communicate mappings between codes required for operationalizing SMART Guideline content
 
-### **Activities:**
+### **Activities**
 
 ### **Criteria / Definition of Done:**
 
@@ -22,10 +22,10 @@ ConceptMap resources are created to provide a mapping from the codes of one syst
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of ConceptMaps defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 ### **Informative examples**
 [SMART Guidelines - Immunizations (Measles): Concept Maps](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-concept-maps)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 

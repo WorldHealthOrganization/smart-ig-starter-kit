@@ -7,18 +7,18 @@ Each Persona is defined by the following data:
 </figure>
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 scenarios in narrative form
 
 
-### **Outputs:**
+### **Outputs**
 
 * ExampleScenarios in `input/scenarios`
 * One FSH file per ExampleScenario in `input/fsh/scenarios`
 
 
-### **Activities:**
+### **Activities**
 
 <img src="./l3_process_scenario.png" style="width:50%"/>
 <br clear="all"/>
@@ -27,7 +27,7 @@ Each Persona is defined by the following data:
 * Develop ExampleScenario resources 
 
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 * Each User Scenario in the L2 should be covered by one or more ExampleScenarios
   * At least the "normal" flow shall be covered by an example scenario
 * ExampleScenarios should reference the example instances from the other resources (see [profiles](l3_profiles.html), [decision tables](l3_decisiontables.html), [scheduling logic](l3_schedulinglogic.html), [forms](l3_forms.html), [indicators](l3_indicators.html))

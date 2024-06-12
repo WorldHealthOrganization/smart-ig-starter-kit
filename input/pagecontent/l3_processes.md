@@ -8,19 +8,19 @@ The data required to be captured for each Business Process is:
 </figure>
 
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 Business Processes
 * Business Process Repository
 * L2 DAK
 
-### **Outputs:**
+### **Outputs**
 
 * Proposed new Business Process definitions as PlanDefinitions.
 * Narrative page with business processes overview for the scope of the current guideline
 * For readability, Business Process shall contain BPMN or BPM+ content or a separate diagram 
 
-### **Activities:**
+### **Activities**
 <img src="./l3_process_process.png" style="width:50%"/>
 <br clear="all"/>
 > Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. This may include capturing the business process as a BPMN diagram.  
@@ -36,7 +36,7 @@ The data required to be captured for each Business Process is:
 ### **Creating Business Process diagram**
 Business Process Diagram
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 * The PlanDefinition should 
 
 ### **Change tracking**
