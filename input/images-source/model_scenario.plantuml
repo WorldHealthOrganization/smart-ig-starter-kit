@@ -6,17 +6,17 @@ hide stereotype
 
 
     class "**Scenario**" as Scenario<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
-        |_ description 1..1
+        |_ description 1..1  
         |_ actor 1..*
         |_ step 1..1
           |_ initiator 0..1
           |_ receiver 0..1
           |_ activity 0..1
-          |_ description 0..1
+          |_ description 0..1  
         --
     }
 

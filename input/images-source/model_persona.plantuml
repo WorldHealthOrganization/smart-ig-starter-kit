@@ -6,13 +6,13 @@ hide stereotype
 
 
     class "**Persona**" as Pers<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
 '        |_ type = 'person'
 '        |_ experimental 1..1    
-        |_ description 1..1
+        |_ description 1..1  
         --
     }
 

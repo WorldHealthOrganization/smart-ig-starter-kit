@@ -6,7 +6,7 @@ hide stereotype
 
 
 class "**Profile**" as P<<TM>> {
-    |_ identifier[SG] 1..*   
+    |_ identifier 1..*   
     |_ url 1..*   
     |_ status 1..1
     |_ name 1..1
