@@ -106,10 +106,6 @@ pages:
     title: "Home"
     license.md:
       title: "License"
-#    overview.md:
-#      title: "Overview"
-#  assumptions.md:
-#   title: "Assumptions"
   ig_repositories.md:
     title: "GitHub Repositories"
   ig_setup.md:
@@ -169,7 +165,7 @@ pages:
     versioning.md:
       title: "Versioning"    
     diagram_legend.md:
-        title: "ArchiMate Diagrams Legend"
+      title: "ArchiMate Diagrams Legend"
       diagram_l2_overview.md:
         title: "L2 ArchiMate Diagram"
       diagram_l3_overview.md:
