@@ -94,7 +94,7 @@ menu:
     ArchiMate Diagrams:
       L2 : 'diagram_l2_overview.html'
       L3 : 'diagram_l3_overview.html'
-      Content Type : 'diagram_content_types.html'
+      Content Types : 'diagram_content_types.html'
       Diagrams Legend: 'diagram_legend.html'
   Validating IG:
     QA Check: 'qa_check.html'
