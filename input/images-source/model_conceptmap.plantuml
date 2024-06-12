@@ -7,7 +7,7 @@ hide stereotype
 
 
     class "**  ConceptMap  **" as CM<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ url 1..1
         |_ version 1..1
         |_ name 0..1

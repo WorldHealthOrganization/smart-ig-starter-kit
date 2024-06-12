@@ -7,7 +7,7 @@ hide stereotype
 
 
     class "**  Logical Model  **" as LM<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ element 1..*
@@ -17,8 +17,7 @@ hide stereotype
           |_ binding 0..1
           |_ comment 0..1
           |_ constraint 0..1
-          |_ code[SG] 1..1   
-            |_ code 1..1
+          |_ code 1..1   
           |_ code[other]
             |_ system 1..1
             |_ code 1..1
