@@ -1,7 +1,7 @@
 ActorDefinitions are the ways that the Personas are structured; A common repository of Personas allows reuse, exchange, change tracking, etc.  
 
 Each Persona is defined by the following data:
-<figure>
+<figure style = "width:30%">
   {% include model_persona.svg %}
 </figure>
 
@@ -24,7 +24,7 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 
 ### **Activities**
 
-<img src="./l3_process_persona.png" style="width:50%"/>
+<img src="./l3_process_persona.png" style="width:30%"/>
 <br clear="all"/>
 > Summary: The L3 author starts with the L2 persona and reuses an existing ActorDefinition from the Common Personas repository, if one exists. If not, the author creates an ActorDefinition, which will be added to the Common Personas repository.
 
