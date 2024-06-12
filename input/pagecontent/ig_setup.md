@@ -6,7 +6,7 @@ A SMART Guidelines Implementation Guide makes use of existing tooling and conten
 
 The key repositories that play a role are identified in the diagram below:
 
-<figure>
+<figure style = "width:90em; max-width:90%">
   {% include dependencies.svg %}
 </figure>
 

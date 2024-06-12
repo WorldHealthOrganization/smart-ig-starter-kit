@@ -7,7 +7,7 @@ ValueSets are used in
 
 * The L3 should use same codes as defined for LM
 
-<figure>
+<figure style = "width:15em">
   {% include model_valueset.svg %}
 </figure>
 

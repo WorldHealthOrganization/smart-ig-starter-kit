@@ -29,7 +29,7 @@ The relations are represented by arrows
 
 - **Flows to**: A relationship where an activity (process) is followed by another activity
 
-<figure>
+<figure style = "width:90em; max-width:90%">
   {% include diagram-arrows.svg %}
 </figure>
 

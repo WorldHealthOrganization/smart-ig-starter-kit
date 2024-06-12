@@ -10,7 +10,7 @@ This process is done by 3 StructureMaps:
 * A grouping map that combines the two maps above to enable a single transform operation.
 
 
-<figure>
+<figure style = "width:50em">
   {% include extraction.svg %}
 </figure>
 
@@ -37,7 +37,7 @@ StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/
 If a form is used, the L3 author should provide the mappings for extraction.
 
 * The StructureMap shall be saved as `input/resources/maps/<id>.fml` where id is the id of the map - not necessarily the name.
-<figure>
+<figure style = "width:15em">
   {% include model_structuremap.svg %}
 </figure>
 
