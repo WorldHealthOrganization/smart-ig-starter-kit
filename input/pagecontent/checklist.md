@@ -288,7 +288,7 @@
       <td class='checklist-criteria'>QA Report has no errors or unsuppressed warnings. All suppressed warnings must have a reasonable explanation for suppression</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="changes.html">Home.Changes</a></td>
+      <td class='checklist-section'>Home.Changes</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>A page that describes all version releases with a brief description of major changes</td>
       <td class='checklist-artifacts'>changes.xml</td>
