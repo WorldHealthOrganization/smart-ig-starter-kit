@@ -20,7 +20,7 @@ ValueSets are used in
 
 ### **Outputs**
 
-* ValueSets in `input/valuesets` or `input/fsh/valusets` 
+* ValueSets in `input/valuesets` or `input/fsh/valuesets` 
 * Proposal for any common value sets
 * If a valueset changes since the last release, this must be signaled using the common change tracking procedure - see [tracking changes](#).
 * Valueset usage registry?

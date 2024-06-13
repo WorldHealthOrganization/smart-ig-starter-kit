@@ -3,7 +3,7 @@ Business processes are structured into FHIR PlanDefinitions. This can be used to
 The L3 author must ensure there is a PlanDefinition for each Business Process mentioned in the L2. 
 
 The data required to be captured for each Business Process is:
-<figure>
+<figure style="width:30%">
   {% include model_process.svg %}
 </figure>
 
@@ -17,24 +17,12 @@ The data required to be captured for each Business Process is:
 ### **Outputs**
 
 * Proposed new Business Process definitions as PlanDefinitions.
-* Narrative page with business processes overview for the scope of the current guideline
-* For readability, Business Process shall contain BPMN or BPM+ content or a separate diagram 
 
 ### **Activities**
-<img src="./l3_process_process.png" style="width:50%"/>
+<img src="./l3_process_process.png" style="width:30%"/>
 <br clear="all"/>
 > Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. This may include capturing the business process as a BPMN diagram.  
 
-
-### **Checking for reusable Business Processes**
-* The author may check the existing process repository to see if there is a matching process. 
-
-
-### **Creating a new Business Process**
-* Creating a new business process consists of creating a PlanDefinition resource following the profile BusinessProcess. The data needs are described in the model below:
-
-### **Creating Business Process diagram**
-Business Process Diagram
 
 ### **Output Criteria / Definition of Done**
 * The PlanDefinition should 

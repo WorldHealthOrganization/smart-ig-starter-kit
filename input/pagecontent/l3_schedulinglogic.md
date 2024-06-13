@@ -1,4 +1,4 @@
-Scheduling logic represents the schedule of actions that are expected to be followed on a predefined schedule - for example a vaccination schedule. This doesn't necessarily mean that the actions will be executed; the schedule is currently only expected to be communicated to the patient or professionals, as informations. The professionals, based on the schedule, can always evaluate the needed actions. In practice, the schedule and the decision tables, combined with the runtime assessment and conditions, will determine a set of activities being planned or executed for or about the patients.
+Scheduling logic represents the schedule of actions that are expected to be followed on a predefined schedule - for example a vaccination schedule. This doesn't necessarily mean that the actions will be executed; the schedule is currently only expected to be communicated to the patient or professionals, as information. The professionals, based on the schedule, can always evaluate the needed actions. In practice, the schedule and the decision tables, combined with the runtime assessment and conditions, will determine a set of activities being planned or executed for or about the patients.
 
 
 ### **Inputs** 
@@ -19,7 +19,7 @@ Scheduling logic represents the schedule of actions that are expected to be foll
 
 
 1. For each scheduling table in L2, create a PlanDefinition
-  - a. The PlanDefinition shall conform to the SGScdedulingTable profile
+  - a. The PlanDefinition shall conform to the SGSchedulingTable profile
   - b. PlanDefinition ID should be the same as the decision table
   - c. Title: The human-readable short description of the decision table
   - d. Description: The long description of the decision table

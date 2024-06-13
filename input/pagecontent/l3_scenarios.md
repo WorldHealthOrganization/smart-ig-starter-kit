@@ -2,7 +2,7 @@ Scenarios are uniquely identified "example stories" that describe how the system
 
 
 Each Persona is defined by the following data:
-<figure>
+<figure style="width:30%">
   {% include model_scenario.svg %}
 </figure>
 

@@ -4,7 +4,7 @@ In particular, each SMART guideline will have a guideline-level code system defi
 
 In addition, sometimes existing code systems need to be completed, for example adding designations in different languages to codes, or adding relationships between vaccine codes.
 
-<figure>
+<figure style="width:30%">
   {% include model_codesystem.svg %}
 </figure>
 

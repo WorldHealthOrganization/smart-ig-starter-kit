@@ -29,7 +29,7 @@ The requirements capture the following data:
 In FHIR, the resource used is a Requirements - which is a set of requirement statements. So, each requirement in the L2 group will normally be one of the statements included in a Requirements resource. The Requirements resource identifies the Business Process for which the requirements are being expressed e.g "Register Client".
 
 The Requirements will capture the following elements:
-* id: the unique id of the requiremetn set, using the convention `<sg>-<p>-fxnreq`, where `<sg>` is the abbreviation of the SMART guideline (e.g. `immz`) and `<p>` is the letter of the functional process e.g. `e` corresponding to "Register Client".
+* id: the unique id of the requirement set, using the convention `<sg>-<p>-fxnreq`, where `<sg>` is the abbreviation of the SMART guideline (e.g. `immz`) and `<p>` is the letter of the functional process e.g. `e` corresponding to "Register Client".
 * title: 
 * status
 * statement: one statement for each requirement, e.g. 
