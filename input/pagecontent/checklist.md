@@ -4,7 +4,7 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      lang="en">
   <p>
-    The following sections provides a checklist to review to ensure that a SMART Guidelines Implementation Guide has the expected content and level of quality.   This checklist is broken up according four layers of knowledge representation.
+    The following sections provides a checklist to review to ensure that a SMART Guidelines Implementation Guide has the expected content and level of quality.This checklist is broken up according four layers of knowledge representation.
   </p>
 
 
@@ -29,14 +29,14 @@
       <td class='checklist-criteria'>Links exist on the home page</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="feedback.html">Home Page.Providing Feedback</a></td>
+      <td class='checklist-section'>Home Page.Providing Feedback</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Instructions to describe how feedback can be shared for all knowledge layers in the Implementation Guide</td>
       <td class='checklist-artifacts'>At the minimum, an email address exists to send feedback, and/or a feature to provide feedback can be provided per section shall exist</td>
       <td class='checklist-criteria'>Section exists on the home page</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="adapting_guidelines.html">Home.Adapting Guidelines for Country use</a></td>
+      <td class='checklist-section'>Home.Adapting Guidelines for Country use</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Guidance to countries on adapting the Implementation Guide for making adaptations for country use</td>
       <td class='checklist-artifacts'>adapting_guidelines.xml</td>
@@ -57,63 +57,63 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="concepts.html">Business Requirements.Concepts</a></td>
+      <td class='checklist-section'>Business Requirements.Concepts</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>A glossary of terms and key concepts introduced in the L2 or in the Implementation Guide</td>
       <td class='checklist-artifacts'>concepts.xml</td>
       <td class='checklist-criteria'>A page for key concepts under business requirement exists</td>
     </tr>
 	<tr>
-      <td class='checklist-section'><a href="personas.html">Business Requirements.Generic Personas</a></td>
+      <td class='checklist-section'>Business Requirements.Generic Personas</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Depiction of end-users and related stakeholders as introduced in the L2</td>
       <td class='checklist-artifacts'>Personas.xml</td>
       <td class='checklist-criteria'>A page for Personas under business requirement exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="usecases.html">Business Requirements.Use Cases</a></td>
+      <td class='checklist-section'>Business Requirements.Use Cases</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>User scenarios depicting how different personas will interact in a typical workflow along with use cases listed as introduced in the L2</td>
       <td class='checklist-artifacts'>usecases.xml</td>
       <td class='checklist-criteria'>A page for User Scenarios and Use Cases under business requirement exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="business_process.html">Business Requirements.Business Processes</a></td>
+      <td class='checklist-section'>Business Requirements.Business Processes</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Depiction of business processes as visual workflows as introduced in the L2</td>
       <td class='checklist-artifacts'>business_process.xml</td>
       <td class='checklist-criteria'>A page for depicting the visual business processes exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="dictionary.html">Business Requirements.Data Dictionary</a></td>
+      <td class='checklist-section'>Business Requirements.Data Dictionary</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Data dictionary with detailed data specifications as introduced in the L2</td>
       <td class='checklist-artifacts'>dictionary.xml</td>
       <td class='checklist-criteria'>A page for data dictionary under business requirements exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="decision_support.html">Business Requirements.Decision-support Logic</a></td>
+      <td class='checklist-section'>Business Requirements.Decision-support Logic</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Decision-support logic and algorithms as introduced in the L2</td>
       <td class='checklist-artifacts'>decision_support.xml</td>
       <td class='checklist-criteria'>A page for decision-support logic under business requirements exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="indicators.html">Business Requirements.Indicator and Performance Metrics</a></td>
+      <td class='checklist-section'>Business Requirements.Indicator and Performance Metrics</td>
       <td class='checklist-required'>If indicators are defined</td>
       <td class='checklist-description'>Core set of indicators and performance metrics as introduced in the L2</td>
       <td class='checklist-artifacts'>indicators.xml</td>
       <td class='checklist-criteria'>A page for the indicators table under business requirements exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="functional.html">Business Requirements.Functional Requirements</a></td>
+      <td class='checklist-section'>Business Requirements.Functional Requirements</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>List of core functions and capabilities the system must have to meet the end-users’ needs and achieve tasks within the business process.</td>
       <td class='checklist-artifacts'>functional.xml</td>
       <td class='checklist-criteria'>A page for functional requirements under business requirements exists</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="nonfunctional.html">Business Requirements.Non-functional Requirements</a></td>
+      <td class='checklist-section'>Business Requirements.Non-functional Requirements</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>List of capabilities the system must have as introduced in the L2</td>
       <td class='checklist-artifacts'>nonfunctional.xml</td>
@@ -134,28 +134,28 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="actors.html">Data Models and Exchange.System Actors</a></td>
+      <td class='checklist-section'>Data Models and Exchange.System Actors</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>List and description of software or human entities that interact with the system derived from business requirements defined in L2.Actors and Transactions should be defined for a general systems architecture that applies over multiple country implementations and leverages OpenHIE architecture concepts.Systems managing clinical and patient information shall be expected to interact with a shared health record, laboratory information system or a longitudinal health record as appropriate and be expected to synchronize with data collected in a clincal encounter </td>
       <td class='checklist-artifacts'>Actors</td>
       <td class='checklist-criteria'>Actors defined are tied to and derived from L2, with a definition of who the actor is and what they do in the system at a minimum</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="sequence_diagram.html">Data Models and Exchange.Sequence Diagram</a></td>
+      <td class='checklist-section'>Data Models and Exchange.Sequence Diagram</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>A sequence diagram depicting the interactions between system actors in sequence derived from business process in L2</td>
       <td class='checklist-artifacts'>sequence_diagram.xml</td>
       <td class='checklist-criteria'>A sequence diagram exists that shows the system interactions</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="transactions.html">Data Models and Exchange.Transactions</a></td>
+      <td class='checklist-section'>Data Models and Exchange.Transactions</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Defined list of system transactions at an atomic level for each actor along with narrative, capability statements, structure definition, questionnaires, document bundles and composition. It can also refer to transactions in other Implementation Guides</td>
       <td class='checklist-artifacts'>Capability Statement, Structure Definitions, Questionnaires, Document Bundles and Composition</td>
       <td class='checklist-criteria'>Artifacts exist and are defined for each actor in terms of their roles and responsibilities</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="artifacts.html#structures-logical-models">Indices.Artifacts Summary.Structures:Logical Models</a></td>
+      <td class='checklist-section'>Indices.Artifacts Summary.Structures:Logical Models</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Structure Definition resource describing data element definitions and their associated rules of usage derived from data dictionary in L2</td>
       <td class='checklist-artifacts'>Structure Definition</td>
@@ -169,7 +169,7 @@
       <td class='checklist-criteria'>Measure is defined according to the Data Sharing Specification (DSS) described in the <a href="https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_White_Paper_CQL_Rev1-0_PC_2021-10-26.pdf">IHE White Paper for EXtracting Indicators from Person Level Data</a>. The Mobile Aggregate Data Exchange (mADX) profile is leveraged.</td>
     </tr>
 	<tr>
-      <td class='checklist-section'><a href="maps.html">Indices.Mappings</a></td>
+      <td class='checklist-section'>Indices.Mappings</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'>Relationship to IPS: The logical model defined in the IG shall be mapped to the IPS data set.</td>
       <td class='checklist-artifacts'>Structure Maps</td>
@@ -211,35 +211,35 @@
       <th class='checklist-criteria'>Acceptance Criteria</th>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-section'>Deployment.Testing</td>
       <td class='checklist-required'>Yes</td>
       <td class='checklist-description'><b>Example Data</b> shall be represented via example resources for each of the UN Languages</td>
       <td class='checklist-artifacts'>FSH files or FHIR Resources, and examples listed under the example tab of resources<mark>QA Report</mark></td>
       <td class='checklist-criteria'>For every non abstract profile there should be an example resource for each of the UN Languages</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="testing.html">Deployment.Testing</a></td>
+      <td class='checklist-section'>Deployment.Testing</td>
       <td class='checklist-required'>No</td>
       <td class='checklist-description'>Test Definitions are written along with brief description of the scope of testing covered.</td>
       <td class='checklist-artifacts'>Gherkin .feature files</td>
       <td class='checklist-criteria'>Acceptance Criteria is written for each test definition.All PlanDefinitions and Measures should have defined Test Cases</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="testing.html">Deployment.Test Data</a></td>
+      <td class='checklist-section'>Deployment.Test Data</td>
       <td class='checklist-required'><mark>No</mark></td>
       <td class='checklist-description'>Test data represented as resources for the test definitions</td>
       <td class='checklist-artifacts'>Synthea scripts of FSH files</td>
       <td class='checklist-criteria'>All CQL libraries have associated test libraries</td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="reference_implementation.html">Deployment.Reference Implementations</a></td>
+      <td class='checklist-section'>Deployment.Reference Implementations</td>
       <td class='checklist-required'>No</td>
       <td class='checklist-description'>Links to list of reference implementations</td>
       <td class='checklist-artifacts'>Links to software download, source code, install documentation, user manuals and such</td>
       <td class='checklist-criteria'></td>
     </tr>
     <tr>
-      <td class='checklist-section'><a href="downloads.html">Downloads</a></td>
+      <td class='checklist-section'>Downloads</td>
       <td class='checklist-required'><mark>?</mark></td>
       <td class='checklist-description'>All IG Content shall be available to download as zip or npm package</td>
       <td class='checklist-artifacts'>Zip, npm package</td>
