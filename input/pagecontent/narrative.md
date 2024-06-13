@@ -13,9 +13,12 @@ General authoring guidance:
     All narrative pages must be listed in the ImplementationGuide resource (or equivalently in the sushi-config.yaml). Narrative files that are not listed will not be processed or displayed.
 </div>
 
-### XHTML 
+### File location
+For narrative, all files are in `input/pagecontent` and can be written in xhtml or markdown.
+
+#### XHTML 
 The tooling supports [xhtml](https://www.w3.org/TR/xhtml1/) pages. The file extension is `.xhtml`.
 
-### Markdown
+#### Markdown
 Markdown pages are created as files with extension `.md`. The Markdown dialect supported is [CommonMark markdown](https://commonmark.org/).
 

@@ -1,6 +1,5 @@
-For each type of SMART IG content, this SOP describes how it can be produced from the expected content of the L2 and additional information. A summary table shows the types of content, their source location and naming convention. Then for each type of content, the following is presented:
+For each type of L3 artifact that needs to be authored, the SOP is structured in the following manner:
 
-* The type of author that executes the creation (this is relevant for any training and tooling needs for each type of author)
 * Inputs 
   - from L2
   - Pre-existing content such as central glossaries
@@ -17,6 +16,12 @@ For each type of SMART IG content, this SOP describes how it can be produced fro
   - Authoring (based on profiles) 
   - Review and testing 
 * Output Criteria / Definition of Done - checks for ensuring the quality of the output
-* Issues
+* Change Tracking
+  - Change tracking notes
+* Tooling
+  - Available tooling and links to documentation
+* Known Issues and dependencies
   - Decisions pending
   - Tooling dependencies
+
+The artifact types, also use ArchiMate drawings to give a visual representation for the artifacts being authored, or the activities that are needed. To understand more about the diagrams, please visit the (Diagram Legend)[diagram_legend.html] page.

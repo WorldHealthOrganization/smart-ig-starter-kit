@@ -9,7 +9,7 @@ Profiles include Element constraints or extensions, and may include constraints:
 </figure>
 
 
-### **Inputs:** 
+### **Inputs** 
 The inputs for creating a profile, extensions and constraints are:
 * Data models (DAK)
 * Activity to Profile mapping/catalog
@@ -17,14 +17,14 @@ The inputs for creating a profile, extensions and constraints are:
 * Common extensions from dependencies
 
 
-### **Outputs:**
+### **Outputs**
 * Profiles in `input/profiles` or `input/fsh/profiles`
 * In Shorthand, constraints should be in the same folder as the profile
 * Extension definitions in `input/extensions` or `input/fsh/extensions`
 * Example instances in `input/examples` or `input/fsh/examples`
 
 
-### **Activities:**
+### **Activities**
 
 <img src="./l3_process_profile.png" style="width:50%"/>
 <br clear="all"/>
@@ -59,7 +59,7 @@ The recommended priority for the search for existing profiles and extensions:
 
 
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * One profile per json file / One profile per fsh file, as per naming convention
   * The constraints or invariants applicable to a profile may be contained in the same FSH file.

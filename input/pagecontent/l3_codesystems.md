@@ -8,15 +8,15 @@ In addition, sometimes existing code systems need to be completed, for example a
   {% include model_codesystem.svg %}
 </figure>
 
-### **Inputs:** 
+### **Inputs** 
 
 * L2 DAK
 
-### **Outputs:**
+### **Outputs**
 
 * CodeSystem resources in `input/codesystems` or `input/fsh/codesystems`
 
-### **Activities:**
+### **Activities**
 
 The creation of a CodeSystem is typically driven by the following needs:
 * When a ValueSets requires codes that are not in yet available from a CodeSystem
@@ -32,7 +32,7 @@ This is the overview of the activities and related artifacts used:
 <img src="./l3_process_codeset.png" style="width:50%"/>
 <br clear="all"/>
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Appropriate CodeSystem resources are defined
 * CodeSystem resources SHALL conform to [CRMIShareableCodeSystem]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablecodesystem.html)
@@ -43,7 +43,7 @@ This is the overview of the activities and related artifacts used:
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of CodeSystems defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -56,6 +56,6 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 ### **Informative examples**
 [SMART Guidelines - Immunizations (Measles): Code Systems](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-code-systems)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 

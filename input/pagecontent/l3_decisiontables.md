@@ -1,17 +1,17 @@
 Decision tables represent the activities that are performed when triggered or requested - e.g .at patient visit, or when requested by the professional. Decision tables consider the input variables expressed in the L2, and the output (activities and data). Decision tables are definitional artifacts that are instantiated when executed.
 
-### **Inputs:** 
+### **Inputs** 
 
 * Decision Table as per [template](https://worldhealthorg.sharepoint.com/:x:/r/sites/DigitalAcceleratorKits/_layouts/15/Doc.aspx?sourcedoc=%7B17A8AAB1-8120-48DD-92E7-7811AB74E5D5%7D&file=Web%20Annex%20B.%20Decision%20support%20logic_template%20V3.xlsx&action=default&mobileredirect=true). 
 
-### **Outputs:**
+### **Outputs**
 
 * PlanDefinitions as part of the IG
 * ActivityDefinitions as part of the IG or common repository
 * Codes for the concepts used 
 
 
-### **Activities:**
+### **Activities**
 
 <img src="./l3_process_logic.png" style="width:50%"/>
 <br clear="all"/>
@@ -241,7 +241,7 @@ define "Number Of Supplementary Doses Administered":
 
 Which in turn makes use of the `EncounterElements` library.
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Every Decision Table SHALL have a Requirements document pointing at it (for testability and inheritability)
 * Every parameter in the decision table should be in the data dictionary
@@ -256,7 +256,7 @@ Which in turn makes use of the `EncounterElements` library.
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of PlanDefinitions and ActivityDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| --- |
@@ -268,6 +268,6 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): PlanDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-plan-definitions)
 [SMART Guidelines - Immunizations (Measles): Activity Definitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-activity-definitions)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 
