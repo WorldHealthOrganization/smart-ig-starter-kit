@@ -1,8 +1,8 @@
 Scenarios are uniquely identified "example stories" that describe how the system is expected to behave in a relatively concrete scenario. 
 
 
-Each Persona is defined by the following data:
-<figure style="width:30%">
+Each Scenario is defined by the following data:
+<figure style = "width:15em">
   {% include model_scenario.svg %}
 </figure>
 

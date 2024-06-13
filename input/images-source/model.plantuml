@@ -6,7 +6,7 @@ hide stereotype
 
 
 class "**BusinessProcess**" as Process<<TM>> {
-    |_ identifier[SG] 1..*   
+    |_ identifier 1..*   
     |_ status 1..1
     |_ name 1..1
     |_ title 1..1
@@ -14,7 +14,7 @@ class "**BusinessProcess**" as Process<<TM>> {
 }
 
     class "**Persona**" as Pers<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
@@ -25,7 +25,7 @@ class "**BusinessProcess**" as Process<<TM>> {
     }
 
     class "**Logical Model**" as LM<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ element 1..*
@@ -80,7 +80,7 @@ class "**BusinessProcess**" as Process<<TM>> {
 
 
     class "**Functional Requirement**" as FReq<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
@@ -99,7 +99,7 @@ class "**BusinessProcess**" as Process<<TM>> {
 
     class "**AcceptanceCriteria**" as AC<<TM>> {
         |_ parentReq 1..1
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
@@ -110,7 +110,7 @@ class "**BusinessProcess**" as Process<<TM>> {
 
 
     class "**Non-Functional Requirement**" as NFR<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1
@@ -126,7 +126,7 @@ class "**BusinessProcess**" as Process<<TM>> {
 
 
     class "**Data Element**" as DE<<TM>> {
-        |_ identifier[SG] 1..*   
+        |_ identifier 1..*   
         |_ status 1..1
         |_ name 1..1
         |_ title 1..1

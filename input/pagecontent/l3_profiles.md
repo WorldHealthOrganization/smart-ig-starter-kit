@@ -4,7 +4,7 @@ Profiles and extensions should be reusable as much as possible, and L3 authors s
 
 
 Profiles include Element constraints or extensions, and may include constraints:
-<figure style="width:30%">
+<figure style = "width:25em">
   {% include model_profile.svg %}
 </figure>
 

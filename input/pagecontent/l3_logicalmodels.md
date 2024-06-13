@@ -11,7 +11,7 @@ Logical models relate to other models in 3 aspects:
 
 
 Each Logical Model is defined by the following data:
-<figure style = "width:30%">
+<figure style = "width:30em">
   {% include model_logicalmodel.svg %}
 </figure>
 
@@ -24,9 +24,10 @@ Each Logical Model is defined by the following data:
 
 * Logical Models in `input/models` or `fsh/models`
 
-### **Activities**
+### **Activities:**  
 
-This is the overview of the activities and related artifacts used:
+This is the overview of the activities and related artifacts used:  
+
 <img src="./l3_process_logicalmodel.png" style="width:50%"/>
 <br clear="all"/>
 

@@ -3,7 +3,7 @@ Business processes are structured into FHIR PlanDefinitions. This can be used to
 The L3 author must ensure there is a PlanDefinition for each Business Process mentioned in the L2. 
 
 The data required to be captured for each Business Process is:
-<figure style="width:30%">
+<figure style = "width:15em">
   {% include model_process.svg %}
 </figure>
 

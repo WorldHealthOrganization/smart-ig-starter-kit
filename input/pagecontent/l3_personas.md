@@ -1,7 +1,7 @@
 ActorDefinitions are the ways that the Personas are structured; A common repository of Personas allows reuse, exchange, change tracking, etc.  
 
 Each Persona is defined by the following data:
-<figure style = "width:30%">
+<figure style = "width:15em">
   {% include model_persona.svg %}
 </figure>
 

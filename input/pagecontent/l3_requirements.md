@@ -6,7 +6,7 @@ Requirements - functional or non-functional - are captured as L3 artifacts for t
 The L3 author is expected to capture the requirements in a [Requirements](https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGRequirements.html) resource.
 
 The requirements capture the following data:
-<figure>
+<figure style = "width:25em">
   {% include model_requirements.svg %}
 </figure>
 
