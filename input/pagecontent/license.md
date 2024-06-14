@@ -4,8 +4,15 @@
      xmlns:xi="http://www.w3.org/2001/XInclude"
      lang="en">
 
-<p>SMART Guidelines, including this one, are required to express the license their copyright license.</p>
-<p>All WHO-authored SMART Guidelines shall be subject to the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License. This includes all commons and dependencies authored by the WHO and this current guidance.<p>
+<p>SMART Guidelines, including this one, are required to express their copyright license.</p>
+
+
+
+<div class="info-box must">
+  <span class="info-title">Required licensing information</span>
+All WHO-authored SMART Guidelines shall be subject to the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License. This includes all commons and dependencies authored by the WHO and this current guidance.
+</div>
+
 
 <h3>SMART Guidelines license details</h3>
 
