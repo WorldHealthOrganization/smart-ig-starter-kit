@@ -110,12 +110,12 @@ pages:
       title: "Change Log"
   ig_repositories.md:
     title: "GitHub Repositories"
-  ig_setup.md:
-    title: "Github Setup"
-  ig_configuration.md:
-    title: "ImplementationGuide Configuration"
-  ig_publication.md:
-    title: "IG Publication"
+    ig_setup.md:
+      title: "Github Setup"
+    ig_configuration.md:
+      title: "ImplementationGuide Configuration"
+    ig_publication.md:
+      title: "IG Publication"
   authoring_overview.md:
     title: "Authoring"
     gov_overview.md:

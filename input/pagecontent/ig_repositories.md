@@ -12,3 +12,7 @@ The repository needs to be created and setup. See [IG Setup](ig_setup.html)
 ### ImplementationGuide Configuration
 
 The Implementation Guide must be configured. See [ImplementationGuide Configuration](ig_configuration.html)
+
+### Publication
+
+The processes for release is described in the [IG Publication](ig_publication.html) page
