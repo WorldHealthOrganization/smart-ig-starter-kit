@@ -33,7 +33,7 @@ This extraction uses [structure maps](l3_structuremaps.html) and is represented 
 * Questionnaires
 * Example QuestionnaireResponses for testing
 
-* Questionnaires elements may link to the data elements in the Common glossary
+* Questionnaires elements may link to the data elements in the common definitions, when those common definitions exist
   * Note that this can conflict with the definition-based extraction described below
 
 ### **Activities:**

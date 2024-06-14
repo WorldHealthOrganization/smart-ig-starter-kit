@@ -10,12 +10,9 @@
     <element xsi:type="archimate:BusinessObject" name="Decision Support Logic" id="id-175efbaf91a44e4ab222e6dde493c461"/>
     <element xsi:type="archimate:BusinessObject" name="Indicator" id="id-3077e347ee8447e7ae1d937ba760695d"/>
     <element xsi:type="archimate:BusinessObject" name="Requirement" id="id-dbfbb7fff2eb44548eb09c13d88df094"/>
-    <element xsi:type="archimate:BusinessProcess" name="Writing" id="id-e413d209e19c4fed95be2571497e74af"/>
-    <element xsi:type="archimate:BusinessProcess" name="Writing BPMN" id="id-c001192247af4c00a2234eac59145e52"/>
     <element xsi:type="archimate:BusinessObject" name="Mapping" id="id-ac250e30f1a34687863e9b3256e1e1ad"/>
     <element xsi:type="archimate:BusinessObject" name="Transformation logic" id="id-9e9b6ca13c5b4af29638d49f48eda0ac"/>
     <element xsi:type="archimate:BusinessObject" name="Scheduling logic" id="id-4ffab67a6e57472f8a75805d7231669c"/>
-    <element xsi:type="archimate:BusinessObject" name="Personas Glossary" id="id-42430c42d3d4421d9e4cbdbecccf1b79"/>
     <element xsi:type="archimate:BusinessObject" name="Common Data Dictionary" id="id-50a2a17387c448748928c7b51eb81883"/>
     <element xsi:type="archimate:BusinessObject" name="Other vocabulary references" id="id-27cbe720bf804aeba03830e27b31352a"/>
     <element xsi:type="archimate:BusinessObject" name="Data Object" id="id-021bdfe3a5e943d7b8043dd8481dd34f"/>
@@ -58,7 +55,6 @@
     <element xsi:type="archimate:ApplicationProcess" name="Create profile" id="id-4eec20189d14426b8b0815905aa7f0fb"/>
     <element xsi:type="archimate:ApplicationProcess" name="Add constraints" id="id-b1907c2ea5aa4d368d5e6008b97757b9"/>
     <element xsi:type="archimate:ApplicationProcess" name="Define data element" id="id-b18f335a608e49dfb00bc64ef2da04b0"/>
-    <element xsi:type="archimate:ApplicationProcess" name="Define terminology bindings (copy)" id="id-b215f04ea517468f8211743fa9c5b158"/>
     <element xsi:type="archimate:ApplicationProcess" name="Map to semantic references (copy)" id="id-96487b4f01b54e6fac4681f9f18c91b5"/>
     <element xsi:type="archimate:ApplicationProcess" name="Create PlanDefinition" id="id-9f42e836292f43c4adb598e9c5424442"/>
     <element xsi:type="archimate:ApplicationProcess" name="Add variables / expressions" id="id-a1b16f43de3b450e8ff12e85cc65ac3d"/>
@@ -84,12 +80,12 @@
     <element xsi:type="archimate:Artifact" name="L3: Test Plan" id="id-b7bc2925d97d4f4aac4a20709f7adb5c"/>
     <element xsi:type="archimate:Artifact" name="L3: Requirements" id="id-9b6668f7ea96423796381e9740f0ad17"/>
     <element xsi:type="archimate:Artifact" name="L3: Actor Definition" id="id-909d178e71d34c50a4b75c8cd5323b4c"/>
-    <element xsi:type="archimate:Artifact" name="L2: Data Dictionary XLS" id="id-9eaf2fa100dc40739c66d393946e746b"/>
-    <element xsi:type="archimate:Artifact" name="L2: Decision Logic XLS" id="id-86a81155be04439f85aaa4b1a56b0985"/>
+    <element xsi:type="archimate:Artifact" name="L2: Data Dictionary" id="id-9eaf2fa100dc40739c66d393946e746b"/>
+    <element xsi:type="archimate:Artifact" name="L2: Decision Logic" id="id-86a81155be04439f85aaa4b1a56b0985"/>
     <element xsi:type="archimate:Artifact" name="L2: Generic personas (Narrative)" id="id-4ef20b33391b458489c807e4f7d242a8"/>
     <element xsi:type="archimate:Artifact" name="L2: User Scenarios (Narrative)" id="id-85d2c36c5a8f4b2597de4ada6ac0bceb"/>
     <element xsi:type="archimate:Artifact" name="L2: Business Processes (Narrative)" id="id-fb8f903bb101415c943cc6f0aa4d42f2"/>
-    <element xsi:type="archimate:Artifact" name="L2: Indicator definition (XLS)" id="id-1954946c0fd84204ab5888b167530e91"/>
+    <element xsi:type="archimate:Artifact" name="L2: Indicator definition" id="id-1954946c0fd84204ab5888b167530e91"/>
     <element xsi:type="archimate:Artifact" name="L2: Functional Requirements (Narrative)" id="id-bd1d1e89b72344fda2d1be9c1bdf1c3a"/>
     <element xsi:type="archimate:Artifact" name="L2: Non-functional Reqs (Narrative)" id="id-8090e59643b34142be3550c6b937cee6"/>
     <element xsi:type="archimate:Artifact" name="L3: Logical Model" id="id-dc0d723608954514b99ef6e88c7fa7c3"/>
@@ -109,7 +105,7 @@
     <element xsi:type="archimate:Artifact" name="Activity Definition" id="id-333da8648d474e519e634760bef9c4d4"/>
     <element xsi:type="archimate:TechnologyProcess" name="Extraction" id="id-e75fd56a3f6e4f5a9381c34d6508b343"/>
     <element xsi:type="archimate:Artifact" name="L3: QuestionnaireResponse" id="id-672b40507c77487f9b88f3c95e35b783"/>
-    <element xsi:type="archimate:Artifact" name="L2: Scheduling Logic XLS" id="id-f8cdf4900204424698de3f73295faef6"/>
+    <element xsi:type="archimate:Artifact" name="L2: Scheduling Logic" id="id-f8cdf4900204424698de3f73295faef6"/>
     <element xsi:type="archimate:Artifact" name="L2: Coding" id="id-8129b6ec65c14dda91e84d9fb290de5d"/>
     <element xsi:type="archimate:Artifact" name="L3: (Existing) Logical Model" id="id-be682d3ec86342abb27674a2f04a2671"/>
     <element xsi:type="archimate:Artifact" name="L3: Plan Definition (BusinessProcess)" id="id-f9bec3a850f84b7d943827b638b9dec4"/>
@@ -140,9 +136,6 @@
     <element xsi:type="archimate:RealizationRelationship" id="id-65da7184ea5648ef84a90dd7fc5a2b19" source="id-21f2232b8fa04e5c90db5cf5136ea730" target="id-42dddb65cbee481b97172f4d3fa1589d"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-e652ac89c68c44fc99dd48d8f4f04837" source="id-9eaf2fa100dc40739c66d393946e746b" target="id-42dddb65cbee481b97172f4d3fa1589d"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-f5658851727844b28b98577143a49402" source="id-86a81155be04439f85aaa4b1a56b0985" target="id-175efbaf91a44e4ab222e6dde493c461"/>
-    <element xsi:type="archimate:AccessRelationship" id="id-f7f274fd8b234f01954500c70bd8f62b" source="id-e413d209e19c4fed95be2571497e74af" target="id-225bada8b13f43148d9224db7796aa10"/>
-    <element xsi:type="archimate:AccessRelationship" id="id-e60b969419814df8918b003eaf4dcf50" source="id-e413d209e19c4fed95be2571497e74af" target="id-ed0d335151914cdea886a6b80094d940"/>
-    <element xsi:type="archimate:AccessRelationship" id="id-029d8cd91ced41da8ab02949a464ecd3" source="id-c001192247af4c00a2234eac59145e52" target="id-bd9a22c2dedc4eb8a9c480f6cc49cdd7"/>
     <element xsi:type="archimate:SpecializationRelationship" id="id-b3d780a3e6ff42399fb751366af8c436" source="id-4ef20b33391b458489c807e4f7d242a8" target="id-ed0d335151914cdea886a6b80094d940"/>
     <element xsi:type="archimate:SpecializationRelationship" id="id-c9bc4e0f68fc471383052cafbed9d228" source="id-85d2c36c5a8f4b2597de4ada6ac0bceb" target="id-ed0d335151914cdea886a6b80094d940"/>
     <element xsi:type="archimate:SpecializationRelationship" id="id-1a5bf15956264e169484d175babc25d3" source="id-fb8f903bb101415c943cc6f0aa4d42f2" target="id-ed0d335151914cdea886a6b80094d940"/>
@@ -155,7 +148,6 @@
     <element xsi:type="archimate:RealizationRelationship" id="id-90b4b80d82eb4c079d235b22b18e7ffb" source="id-bd1d1e89b72344fda2d1be9c1bdf1c3a" target="id-dbfbb7fff2eb44548eb09c13d88df094"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-462be221ed374a1f9804f1cc03db1193" source="id-85d2c36c5a8f4b2597de4ada6ac0bceb" target="id-ce5db6b94ade45ebab25585a581a217a"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-4142fceaa4014220ba467d3bc3cbe23a" source="id-dc0d723608954514b99ef6e88c7fa7c3" target="id-021bdfe3a5e943d7b8043dd8481dd34f"/>
-    <element xsi:type="archimate:AccessRelationship" id="id-ac11a4c19ae64bf1bd57b7d0031bc7c5" source="id-e413d209e19c4fed95be2571497e74af" target="id-d28d4f7ea1d143c1a8fdaa1889b7d180"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-5e91d7f852a6458dabb0a62bc4cbf8ba" source="id-d28d4f7ea1d143c1a8fdaa1889b7d180" target="id-225bada8b13f43148d9224db7796aa10"/>
     <element xsi:type="archimate:RealizationRelationship" id="id-4080dd8302134cafbdb119137aa93065" source="id-bc8bea818f5a4ea4b4cb66cc5ce2366b" target="id-ce5db6b94ade45ebab25585a581a217a"/>
     <element xsi:type="archimate:AssociationRelationship" id="id-5b25882f32784e578e20c9381ce172e4" source="id-2267fe352d6e457e81f1c5e651ea1b3c" target="id-8743c5abe91f4c7eaba2011869291e90"/>
@@ -168,7 +160,6 @@
     <element xsi:type="archimate:RealizationRelationship" id="id-85b2153637a04f53a68de844aa5afce7" source="id-9d26fcbe47a049fda8e24a8a6f13cc7c" target="id-4ffab67a6e57472f8a75805d7231669c"/>
     <element xsi:type="archimate:AccessRelationship" name="input" id="id-258659dcb5fb42f0ab7542b660d6045c" source="id-5c5b2583726a4906b81fad04cbe502fb" target="id-4ef20b33391b458489c807e4f7d242a8" accessType="1"/>
     <element xsi:type="archimate:AccessRelationship" name="output" id="id-d7d0681148394256af861a9920d06388" source="id-5c5b2583726a4906b81fad04cbe502fb" target="id-909d178e71d34c50a4b75c8cd5323b4c"/>
-    <element xsi:type="archimate:AccessRelationship" id="id-8a6258c45f05447286fb962e40b9b602" source="id-5c5b2583726a4906b81fad04cbe502fb" target="id-42430c42d3d4421d9e4cbdbecccf1b79"/>
     <element xsi:type="archimate:AccessRelationship" id="id-6401cc9added4243b2dfe42168b7c879" source="id-12c37a9526ff4830b41d39e8fb426d3b" target="id-a6676a8f0e6b4f5b826c947a4f1b2bc0"/>
     <element xsi:type="archimate:AssociationRelationship" name="associated" id="id-06e10cc3b5af4342afe642e04e816160" source="id-c223f6c0b6044672950714bead4d0c1d" target="id-225bada8b13f43148d9224db7796aa10"/>
     <element xsi:type="archimate:AggregationRelationship" id="id-8f05793d1a3c44c8aae7f70af2cbc52d" source="id-021bdfe3a5e943d7b8043dd8481dd34f" target="id-42dddb65cbee481b97172f4d3fa1589d"/>

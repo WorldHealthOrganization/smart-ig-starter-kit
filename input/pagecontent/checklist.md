@@ -59,7 +59,7 @@
     <tr>
       <td class='checklist-section'><a href="concepts.html">Business Requirements.Concepts</a></td>
       <td class='checklist-required'>Yes</td>
-      <td class='checklist-description'>A glossary of terms and key concepts introduced in the L2 or in the Implementation Guide</td>
+      <td class='checklist-description'>A list of terms and key concepts introduced in the L2 or in the Implementation Guide</td>
       <td class='checklist-artifacts'>concepts.xml</td>
       <td class='checklist-criteria'>A page for key concepts under business requirement exists</td>
     </tr>

@@ -65,13 +65,13 @@ Logical model should conform to the [SGLogical](http://build.fhir.org/ig/WorldHe
 Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are present in the L2.
 
 To start creating the logical model, an intake validation is useful, although it can be done simultaneously done with the editing of the logical model:
-1.  Verify that each data element needed exists in the common Glossary
+1.  Verify that each data element needed exists in the common definitions - 
     1.  If not, create and provisionally use a draft concept, and
-        request that concept to be added to the common glossary.
+        request that concept to be added to the common definitions.
     2.  If it exists but the existing definition is too strict, request
         a change and decide whether to provisionally use the concept,
         or provisionally create a new one and request it to be added
-        to the common glossary.
+        to the common definitions.
 2. The data labels should be unique within the same data model.
 
 For each line in the tab, there shall be one data element in the logical model (represented here by `differential.element[*]`):

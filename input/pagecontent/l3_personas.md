@@ -5,7 +5,7 @@ Each Persona is defined by the following data:
   {% include model_persona.svg %}
 </figure>
 
-The L3 author must ensure there is an ActorDefinition for each Persona mentioned in the L2. If the Persona doesn't exist in the Personas Glossary yet,
+The L3 author must ensure there is an ActorDefinition for each Persona mentioned in the L2. If the Persona doesn't exist in the common Personas list yet,
 this process can propose the creation of another different persona. This
 creation of a new persona is a provisional measure; there SHALL be a
 governance process for Personas. In that governance, there SHALL be a requirement that all personas in the final publication of a specification SHALL be approved.
@@ -13,8 +13,7 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 ### **Inputs:** 
 
 * L2 Generic personas (Narrative)
-* Personas Glossary (in ValueSet SGPersonas)
-* Personas repository (in Common artifacts / central repository?)
+* Common Personas list (in Common artifacts / central repository?)
 
 ### **Outputs:**
 
@@ -57,7 +56,7 @@ Personas will be associated with actions(processes). The tracking of that associ
 ### **Criteria / Definition of Done**
 * All Personas SHALL use the SGPersona ActorDefinition profile
 * Each Persona source follow the guidelines for file content and names
-* All the personas SHOULD be from the Personas glossary; any exceptions will have to be resolved before final publication
+* All the personas SHOULD be registered in (or proposed to) the Personas list; any exceptions will have to be resolved before final publication
 
 
 ### **Change tracking**
