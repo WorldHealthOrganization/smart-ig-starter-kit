@@ -64,7 +64,3 @@ The diagram below shows how the test definition and execution processes integrat
 * Test data is packaged - this may include any pre-existing common test data (e.g. a set of resources representing a reference population). 
 * The test data package is used along with `TestPlan`s and/or `TestScript`s in a testing platform that can run the tests and check the assertions.
 
-
-<img src="./test-process.png" style="width:80%; align:center"/>
-<br clear="all"/>
-
