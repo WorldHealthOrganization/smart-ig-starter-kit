@@ -19,7 +19,7 @@ hide stereotype
         --
     }
 
-    class "**Common Dictionary**" as G<<TM>> {
+    class "**Data Dictionary**" as G<<TM>> {
         |_ identifier 1..*   
         |_ name 1..1
         |_ title 1..1
@@ -30,5 +30,13 @@ hide stereotype
     }
 
 C "*" -o "1" G :"               "
+
+
+legend
+Data needs 
+for concepts
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
+
 
 @enduml

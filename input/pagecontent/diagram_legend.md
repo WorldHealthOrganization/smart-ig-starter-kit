@@ -9,13 +9,13 @@ This specification uses:
 
 ### ArchiMate Notation Overview
 
-#### Layers:
+#### Layers
 
 - **Application Layer**: Offers a functional description, typically illustrating processes, functions, and services. This is represented by blue elements.
   
 - **Technology Layer**: Represents actual artifacts, like files, resource instances, or other data objects. This is represented by green elements.
 
-#### Relations :
+#### Relations
 
 The relations are represented by arrows
 
@@ -29,21 +29,24 @@ The relations are represented by arrows
 
 - **Flows to**: A relationship where an activity (process) is followed by another activity
 
-<figure style = "width:90em; max-width:90%">
+<figure style = "width:80em; max-width:90%">
   {% include diagram-arrows.svg %}
 </figure>
 
 
-#### Example Diagram:
-<img src="./l3_process_indicator.png" style="width:50%"/>
-<br clear="all"/>
-> The diagram above shows the process for creating an indicator: 
+#### Example Diagram
+
+The diagram below represents the process for creating an indicator: 
 * The input artifact is an L2 definition of an indicator (in a spreadsheet) 
 * The main process is to create an L3 Measure artifact
 * To define the Measure, there's a subprocess where the L3 author adds population and stratifiers, by consulting the cqf-measures-guidance.
 * The next step (as part of the Create Measure process) is then to create CQL definitions
 * Following that, the L3 author encodes CQL into libraries. 
 * The output of this is the L3 library that is referenced by the Measure resource
+
+
+<img src="./l3_process_indicator.png" style="width:50%"/>
+<br clear="all"/>
 
 
 ### Artifact Authoring Processes
@@ -53,6 +56,5 @@ The diagrams capture the essence of transforming an L2 input into the correspond
 
 ### Data Object Details with PlantUML
 
-To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This discloses some of the intended structure, relationships, and attributes of the L3 artifacts.
-
+To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This diagram summarizes the data that is part of an object definition. For example, For a ValueSet, the L3 author is required to have a status, a name, an identifier and a URL...
 

@@ -36,6 +36,11 @@ skinparam {
 ' See Custom Style section below to override items here.
 
 skinparam {
+
+    LegendBorderThickness 0
+    LegendBorderColor transparent
+    LegendBackgroundColor transparent
+
     svgDimensionStyle false
     ' Global Options
     'DPI 200

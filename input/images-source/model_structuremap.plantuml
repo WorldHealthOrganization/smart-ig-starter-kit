@@ -14,4 +14,11 @@ class "**StrutureMap**" as StructureMap<<TM>> {
     --
 }
 
+legend
+Data needs for
+structure maps
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
+
+
 @enduml

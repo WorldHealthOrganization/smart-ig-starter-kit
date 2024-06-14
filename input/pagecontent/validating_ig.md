@@ -3,7 +3,7 @@ Validating Smart Guidelines L3 is a responsibility of the author. This comprehen
 1. Ensure that the content of the L2 is correctly represented by L3 artifacts
 2. Verify that the rules for each created artifact are followed e.g. that there are no issues with the artifacts
 3. Confirm the functionality of L3 artifacts - for example that the StructureMaps extraction gives exactly the expected output, using reference tooling
-4. Address any other dependencies and governance issues e.g. updates to common glossary, etc.
+4. Address any other dependencies and governance issues e.g. updates to common definitions, etc.
 
 
 These are described below:

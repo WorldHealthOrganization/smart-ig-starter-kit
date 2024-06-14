@@ -47,6 +47,11 @@ LMP -r[hidden]-|> LMR : "                      "
 LMR -D[hidden]- LMD : "      \n\n\n\n\n  "
 'LM -u- LMR : "                "
 
+legend
+Data needs 
+for logical models
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
 
 
 @enduml

@@ -27,5 +27,10 @@ CS - CSS : "  Extends  "
 
 CS -- CSU : "  Uses  "
 
+legend
+Data needs 
+for code systems
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
 
 @enduml

@@ -35,5 +35,11 @@ F - MF : "  Reuses  "
 
 F -- VS : "  Contains  "
 
+legend
+Data needs 
+for forms
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
+
 
 @enduml
