@@ -18,7 +18,7 @@ This process is done by 3 StructureMaps:
 StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/fhir/R4/mapping-language.html) (see also [tutorial](https://hl7.org/fhir/R4/mapping-tutorial.html)).
 
   
-### **Inputs:** 
+### **Inputs** 
 
 * DAK Data Dictionary / L2 Logical Model
 * FHIR Profiles
@@ -26,13 +26,13 @@ StructureMaps can be authored using the [FHIR Mapping Language](https://hl7.org/
 * FHIR Artifacts catalog
 
 
-### **Outputs:**
+### **Outputs**
 
 * StructureMaps in `input/resources/maps`
 * Test Bundle that includes maps and all the dependencies
 
 
-### **Activities:**
+### **Activities**
 
 If a form is used, the L3 author should provide the mappings for extraction.
 
@@ -68,7 +68,7 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 
 
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Mappings should create valid StructureMaps - including the necessary metadata. 
   * the map should be correctly compiled and validated by the publisher - no QA errors
@@ -83,7 +83,7 @@ StructureMaps may be reused. For example, modular questionnaires (like Patient d
 
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of StructureMaps defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -95,7 +95,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 ### **Informative examples**
 [SMART Guidelines - Immunizations (Measles): StructureMaps](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-structure-maps)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 * Publisher doesn't support metadata, so the StructureMaps show without description in the artifacts table
 * Matchbox doesn't validate the metadata if it's missing or if the StructureMap is not valid.
 

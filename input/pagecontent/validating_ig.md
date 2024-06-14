@@ -19,7 +19,7 @@ There's a reference set of tools that can be used to validate the functionality 
 Each Guide has a Testing page that contains links to enable local testing.
 
 ## Follow governance process
-The results of L3 authoring can be sukject to governance processes outside the authoring of a specific L3 guide, e.g. creating common terms or common libraries, addressing issues or requesting changes in dependencies.
+The results of L3 authoring can be subject to governance processes outside the authoring of a specific L3 guide, e.g. creating common terms or common libraries, addressing issues or requesting changes in dependencies.
 For these, the L3 author is a contributor to a shared pool of resources, and the governance process will determine how to onboard any such artifacts and issues.
 
 

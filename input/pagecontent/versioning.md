@@ -31,7 +31,7 @@ Tracking changes should include:
 
 #### Change History and Release Notes
 
-See the [publication]ig_publication.html) topic for a detailed discussion of how to create change history and release notes (including known issues).
+See the [publication](ig_publication.html) topic for a detailed discussion of how to create change history and release notes (including known issues).
 
 #### Version Difference
 For some artifacts, the FHIR ImplementationGuide tooling may highlight the differences in the content of the artifacts between two versions. This can be used to track and demonstrate the detailed artifact changes.

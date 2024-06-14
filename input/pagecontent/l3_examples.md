@@ -1,20 +1,20 @@
 Examples are essential for L3 authors to validate the specification before it is implementable.
 Each SMART Implementation Guide shall contain sufficient data to validate itself, which includes examples that contain the data that is intended to assert and assess the functioning of the specification in the available tooling.
 
-### **Inputs:** 
+### **Inputs** 
 
 * Conformance / Definitional artifacts: 
 * Example Scenarios
 
-### **Outputs:**
+### **Outputs**
 
 * Example instances of resources - Patient, Observation, ... that can be used on the available tools to validate the specification.
 
-### **Activities:**
+### **Activities**
 
 * For each of the definitional artifacts, the author shall create an example instance, matching the story and data of its predecessors - for example an Immunization or Observation that contain the data that is in the logical model example, which matches the story line selected.
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * Examples should be in the main package, or may be in a dedicated package when the number of examples is significant.
 * Each of the definitional artifacts shall have at least one example
@@ -26,7 +26,7 @@ Each SMART Implementation Guide shall contain sufficient data to validate itself
 * All the validating examples should follow the same rules as for normative materials - i.e. track changes for each relevant change
 * Other examples are normally not normative material
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -40,7 +40,7 @@ Each SMART Implementation Guide shall contain sufficient data to validate itself
 [SMART Guidelines - Immunizations (Measles): Example QuestionnaireResponse](https://worldhealthorganization.github.io/smart-immunizations-measles/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1.html)
 
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 * Test and Data generation, and packaging of such data, might take considerable effort. This will be handled when tools and processes are in place.
  

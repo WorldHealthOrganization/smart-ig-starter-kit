@@ -24,19 +24,19 @@ This extraction uses [structure maps](l3_structuremaps.html) and is represented 
 
 
 
-### **Inputs:** 
+### **Inputs** 
 * Logical model
 * ValueSets associated with logical model
 
 
-### **Outputs:**
+### **Outputs**
 * Questionnaires
 * Example QuestionnaireResponses for testing
 
 * Questionnaires elements may link to the data elements in the common definitions, when those common definitions exist
   * Note that this can conflict with the definition-based extraction described below
 
-### **Activities:**
+### **Activities**
 
 For each data element in the logical model (i.e. in the data dictionary)
 
@@ -53,7 +53,7 @@ For each data element in the logical model (i.e. in the data dictionary)
 ```
 
 
-### **Output Criteria / Definition of Done:**
+### **Output Criteria / Definition of Done**
 
 * For using the $extract operation, Questionnaires shall have the extension pointing to the StructureMap, and the map should also be present (see [Authoring StructureMaps](l3_structuremaps.html).)
 * Example instances of the QuestionnaireResponses, the corresponding Logical Model instance and the FHIR resources are available (the latter should actually be obtained by running the data extraction).
@@ -72,7 +72,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 Example instances (QuestionnaireResponse, logical model instance, and FHIR resource instances) may be tracked.
 
-### **Tooling:**
+### **Tooling**
 
 | Tool | Usage | Doc |
 | --- | ---| ---| 
@@ -85,6 +85,6 @@ Several SDC-related tools and implementations are available from the [HL7 Conflu
 ### **Informative examples**
 [SMART Guidelines - Immunizations (Measles): Questionnaires](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-questionnaires)
 
-### **Known issues and dependencies:**
+### **Known issues and dependencies**
 
 
