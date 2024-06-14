@@ -106,6 +106,8 @@ pages:
     title: "Home"
     license.md:
       title: "License"
+    changes.md:
+      title: "Change Log"
   ig_repositories.md:
     title: "GitHub Repositories"
   ig_setup.md:
