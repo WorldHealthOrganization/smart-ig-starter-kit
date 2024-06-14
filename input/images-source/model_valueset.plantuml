@@ -17,5 +17,10 @@ class "**ValueSet**" as VS<<TM>> {
     --
 }
 
+legend
+Data needs 
+for value sets
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
 
 @enduml

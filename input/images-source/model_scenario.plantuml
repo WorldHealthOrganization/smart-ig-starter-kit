@@ -20,5 +20,11 @@ hide stereotype
         --
     }
 
-    
+legend
+Data needs 
+for scenarios
+(see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
+endlegend
+
+
 @enduml
