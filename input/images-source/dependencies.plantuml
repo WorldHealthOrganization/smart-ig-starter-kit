@@ -18,7 +18,7 @@ hide stereotype
         --
         Profiles:
         |_  SGImplementationGuide
-        |_  SGPersona
+        |_  ...
         --
         (Internal) ValueSets
         --
@@ -66,7 +66,7 @@ hide stereotype
 
 
 ' We con't want IGs to define on StarterKit
-' Common contains instances of SGPersona
+
 
 SK  -d[hidden]-> Tpl : "      "
 Tpl  -d[hidden]-> Base : "      "

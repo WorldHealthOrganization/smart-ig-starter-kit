@@ -1,14 +1,8 @@
 
-Logical models represent the data structures in the Digital Dictionary. This is a computable representation that is independent of any physical limitation like which FHIR Release or profile version is used. 
+Logical models represent the data structures in the Digital Dictionary. This is a computable representation that is independent of any physical contraints such as specific FHIR Releases or profile versions.
 The use of FHIR logical models allows metadata to be structured, computable, and interoperable, for the purposes of governance and checking.
 
 Creating a FHIR logical model entails capturing the elements in the Data Dictionary, with their description, terminology and cardinality constraints.
-
-Logical models relate to other models in 3 aspects:
-* Logical models can extend or constrain "parent" models - for example a Patient extending a Person
-* Logical models can "contain" other models as a data type - for example patient and practitioner containing "name" data structure
-* Logical models can refer to other models - for example a request referencing a product
-
 
 Each Logical Model is defined by the following data:
 <figure style = "width:30em">
@@ -16,13 +10,23 @@ Each Logical Model is defined by the following data:
 </figure>
 
 
+
+Logical models relate to other models in 3 aspects:
+* Logical models can extend or constrain "parent" models - for example a Patient extending a Person
+* Logical models can "contain" other models as a data type - for example patient and practitioner containing "name" data structure
+* Logical models can refer to other models - for example a request referencing a product
+
+
+
 ### **Inputs** 
 
 * DAK data elements Spreadsheet
+* Common element defintitions (Common glossary)
+
 
 ### **Outputs**
 
-* Logical Models in `input/models` or `fsh/models`
+* Logical Models in `input/[fsh/]models` or `fsh/models`
 
 ### **Activities:**  
 
@@ -34,9 +38,7 @@ This is the overview of the activities and related artifacts used:
 
 #### Looking up an reusing existing models
 
-Some of the data entries are commons. 
-
-If an existing model is found, it is possible to
+If an existing model is found that is similar to the intended model, it is possible to:
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
@@ -44,7 +46,7 @@ For example, "Client Registration" is a dataset that is similar across different
 
 Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the "parent" model, it may be best to consider a specialization or a new model.
 
-Another possibility is the use of common structures - for example person identification - with given and family names, identifier(s), etc. These can be used as types or subsets of a logical model.
+Another possibility is the use of common structures - for example person identification - with given and family names, identifier(s), etc. These can be used as data types or subsets of a logical model.
 
 L3 authors should take into consideration that reused models are version-sensitive and any changes should take this versioning into consideration.
 
@@ -59,7 +61,6 @@ This is the "atomic" unit of exchange or use in the L3. Some factors may influen
 - Common sets of data elements may be captured in a separate reusable logical model.
 
 The logical model name has the name of the tab.
-Logical model should conform to the [SGLogical](http://build.fhir.org/ig/WorldHealthOrganization/smart-base/StructureDefinition-SGLogicalModel.html) model profile.
 
 Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are present in the L2.
 
@@ -75,8 +76,8 @@ To start creating the logical model, an intake validation is useful, although it
 
 For each line in the tab, there shall be one data element in the logical model (represented here by `differential.element[*]`):
 
-* Data Element ID is the WHO unique identifier for a concept and therefore is added into `element[*].code[WHOCommon]`.  
-* Every element SHALL have a WHO identifier e.g. TB.A.DE.1. 
+* Data Element ID is the WHO unique identifier for a concept
+* Every element SHALL have a WHO identifier e.g. TB.DE.1. 
 
 * For answer values, the Data Element ID may be reusable in different questions and possibly in different models.
 The hierarchical naming will depend on several factors and is best addressed by the terminology expert or team. For example:
@@ -106,7 +107,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 
 -   Validation Condition is captured in
     -   `differential.element[*].comment`
-    -   `Optionally, as Invariants / constraints`
+    -   Optionally, as Invariants / constraints
 
 -   Required is captured in cardinality
 
