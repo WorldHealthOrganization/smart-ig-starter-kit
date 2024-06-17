@@ -18,7 +18,7 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 ### **Outputs**
 
 * L3 ActorDefinition
-* Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
+* Updated Personas list, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
 * Narrative page listing the Personas
 
 ### **Activities**

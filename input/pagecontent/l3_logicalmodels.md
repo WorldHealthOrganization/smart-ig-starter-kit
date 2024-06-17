@@ -26,7 +26,7 @@ Logical models relate to other models in 3 aspects:
 
 ### **Outputs**
 
-* Logical Models in `input/[fsh/]models` or `fsh/models`
+* Logical Models in `input/[fsh/]models` 
 
 ### **Activities:**  
 
@@ -89,7 +89,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 *   Data Element Label is captured in 2 places:
     -   Element short description (`differential.element[*].short`): same as element label
     -   Element id = same as label but no spaces and camelCase - e.g. "measlesVaccine"
-> this makes the logical model tree easier to read, with meaningful names in the tree, while the mapping to the "internal" element ids like `DE1.3` are persisted as a mapping.
+this makes the logical model tree easier to read, with meaningful names in the tree, while the mapping to the "internal" element ids like `DE1.3` are persisted as a mapping.
 
 -   Description and Definition: `differential.element[*].definition`
 
@@ -103,7 +103,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 
 -   Quantity Sub-type (integer, decimal, duration)
 
--   Calculation
+-   Calculation TO DO
 
 -   Validation Condition is captured in
     -   `differential.element[*].comment`
@@ -116,7 +116,7 @@ The hierarchical naming will depend on several factors and is best addressed by 
 -   Annotations
     -   Example:
     -   "Measles Vaccine" → short= "measlesVaccine"
-    -   `code[WHO]` = `IMMZ.Z1.DE9`
+    -   `code[WHO]` = `IMMZ.DE9`
 
 For bindings, check whether the value set already exists in an upstream package.
 

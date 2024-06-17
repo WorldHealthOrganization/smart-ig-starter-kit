@@ -15,11 +15,11 @@ class "**BusinessProcess**" as Process<<TM>> {
     --
 }
 
-legend
+footer
 Data needs for
 business processes
 (see [[./diagram_legend.html#data-object-details-with-plantuml legend]])
-endlegend
+endfooter
 
 
 @enduml

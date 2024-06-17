@@ -35,6 +35,13 @@ Intellectual Property Organization. (http://www.wipo.int/amc/en/mediation/rules/
 
 <h3>License details for Software</h3>
 
+
+<div class="info-box must">
+  <span class="info-title">Licenses for Software used in creating SMART Guidelines</span>
+The SMART Guidelines use software that is subject to the BSD license.......
+</div>
+
+
 <p>Copyright(c) 2022 World Health Organization All rights reserved.</p>
 
 <p><a href ="https://opensource.org/license/bsd-3-clause/">3-clause BSD license</a></p>
