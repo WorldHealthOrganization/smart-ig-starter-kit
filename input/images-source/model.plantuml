@@ -36,7 +36,7 @@ class "**BusinessProcess**" as Process<<TM>> {
           |_ definition 1..1
           |_ comment 0..1
           |_ constraint 0..1
-          |_ code[SGCommons] 1..1   
+          |_ code[SG] 1..1   
 '            |_ system 1..1
             |_ code 1..1
           |_ code[icd-11]
