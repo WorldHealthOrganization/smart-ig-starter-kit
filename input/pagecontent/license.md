@@ -36,7 +36,7 @@ Intellectual Property Organization. (http://www.wipo.int/amc/en/mediation/rules/
 
 
 <div class="info-box must">
-  <span class="info-title">Software and source code used in SMART Guidelines</span>
+  <span class="info-title">Source code used in SMART Guidelines</span>
 SMART Guidelines source code may include software libraries for decision support logic, indicator calculations, and scheduling logic that is subject to the <a href ="https://opensource.org/license/bsd-3-clause/">3-clause BSD license</a>. 
 
 <p>Copyright(c) 2022 World Health Organization All rights reserved.</p>

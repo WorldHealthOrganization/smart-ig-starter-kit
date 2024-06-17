@@ -38,7 +38,7 @@ This is the overview of the activities and related artifacts used:
 
 #### Looking up an reusing existing models
 
-If an existing model is found that is similar to the intended model, it is possible to:
+Logical models define data structures. They can be reused, which means that if an existing model is found that is similar to the intended model, it is possible to:
 * reuse the model as is;
 * create a specialization of the model - this includes adding elements, removing elements, changing elements;
 
@@ -62,12 +62,11 @@ This is the "atomic" unit of exchange or use in the L3. Some factors may influen
 
 The logical model name has the name of the tab.
 
-Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are present in the L2.
+Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. `DE1`, etc.). Additionally, assigning value sets (creating them when needed), and capturing any constraints that are present in the L2.
 
 To start creating the logical model, an intake validation is useful, although it can be done simultaneously done with the editing of the logical model:
 1.  Verify that each data element needed exists in the common definitions - 
-    1.  If not, create and provisionally use a draft concept, and
-        request that concept to be added to the common definitions.
+    1.  If not, create a draft concept, and request that concept to be added to the common definitions.
     2.  If it exists but the existing definition is too strict, request
         a change and decide whether to provisionally use the concept,
         or provisionally create a new one and request it to be added
@@ -77,14 +76,14 @@ To start creating the logical model, an intake validation is useful, although it
 For each line in the tab, there shall be one data element in the logical model (represented here by `differential.element[*]`):
 
 * Data Element ID is the WHO unique identifier for a concept
-* Every element SHALL have a WHO identifier e.g. TB.DE.1. 
+* Every element SHALL have a WHO identifier e.g. TB.DE1. 
 
 * For answer values, the Data Element ID may be reusable in different questions and possibly in different models.
 The hierarchical naming will depend on several factors and is best addressed by the terminology expert or team. For example:
-    -   DE.1 Do you have measles?
-    -   Yes → C.1 Yes
-    -   No → C.2 No
-    -   Unknown → C.3 Unknown  
+    -   DE1 Do you have measles?
+    -   Yes → DE1.1 Yes
+    -   No → DE1.2 No
+    -   Unknown → DE1.3 Unknown  
    
 *   Data Element Label is captured in 2 places:
     -   Element short description (`differential.element[*].short`): same as element label
@@ -97,13 +96,11 @@ this makes the logical model tree easier to read, with meaningful names in the t
 
 -   Data Type is captured in `differential.element[*].type` 
   
--   Input Options: is captured in the bindings
+-   Input Options: is captured in the bindings - a value set for the options 
 
 -   Input Option Groupings: this is a grouper for the rows that have a common group.
 
 -   Quantity Sub-type (integer, decimal, duration)
-
--   Calculation TO DO
 
 -   Validation Condition is captured in
     -   `differential.element[*].comment`
@@ -111,7 +108,7 @@ this makes the logical model tree easier to read, with meaningful names in the t
 
 -   Required is captured in cardinality
 
--   Explain Conditionality
+-   Conditionality can be explained as a comment in the data element, or as a formal constraint/invariant. 
 
 -   Annotations
     -   Example:
@@ -147,8 +144,8 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
   *  The WHO code for all elements should be approved; exceptions should be resolved before final publication
 * Each data element in the logical model is mapped to the existing semantic references - see [semantic references](#).
   * The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings
-* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablestructuredefinition.html)
-* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablestructuredefinition.html)
+* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablestructuredefinition.html)
+* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablestructuredefinition.html)
 
 
 ### **Change tracking**

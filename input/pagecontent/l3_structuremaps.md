@@ -47,9 +47,8 @@ These can come in the form of:
 - StructureMap extraction
 
 #### Observation extraction
-TO DO
-Also review tooling tables
-also give updated examples
+Observation-based extraction is described in the [HL7 FHIR SDC (Structured Data Capture) specification](https://hl7.org/fhir/uv/sdc/extraction.html#observation-based-extraction). It is not part of the current scope of the SMART Guidelines, but may be used to obtain data.  
+
 
 #### Definition-based extraction
 If this approach is used, the mapping is done by filling in the `.definition` element with the resource that is the target of the extraction - Patient, Observation, Encounter, etc.
