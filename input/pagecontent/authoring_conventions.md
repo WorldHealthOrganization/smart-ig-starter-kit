@@ -43,25 +43,26 @@ For fsh content, the file name SHALL be in the form
 ### File Locations
 
 The input folders for the resources are:
-* `input/scenarios`
-* `input/actors`
-* `input/measures`
-* `input/requirements`
-* `input/processes`
-* `input/plandefinitions`
-* `input/activitydefinitions`
-* `input/testing`
-* `input/examples`
-* `input/codesystems`
-* `input/valuesets`
-* `input/models`
-* `input/questionnaires`
-* `input/profiles`
-* `input/maps`
-* `input/cql`
-* `input/libraries`
+* `input/[fsh/]scenarios`
+* `input/[fsh/]actors`
+* `input/[fsh/]measures`
+* `input/[fsh/]requirements`
+* `input/[fsh/]processes`
+* `input/[fsh/]plandefinitions`
+* `input/[fsh/]activitydefinitions`
+* `input/[fsh/]testing`
+* `input/[fsh/]examples`
+* `input/[fsh/]codesystems`
+* `input/[fsh/]valuesets`
+* `input/[fsh/]models`
+* `input/[fsh/]questionnaires`
+* `input/[fsh/]profiles`
+* `input/[fsh/]maps`
+* `input/[fsh/]cql`
+* `input/[fsh/]libraries`
 
-For FSH, the folders are the same but in the `fsh` folder, e.g. `input/fsh/scenarios`, `input/fsh/actors` etc.
+`[fsh]` is the path for FSH files: the folders structure is the same but inside the `fsh` folder, e.g. the JSON files could go into `input/actors` and the FSH File would go into `input/fsh/actors`.
+
 
 
 

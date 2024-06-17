@@ -14,7 +14,7 @@ ValueSets are used in
 ### **Inputs** 
 
 * DAK
-* SMART IG ValueSet catalog
+* SMART Common ValueSets
 * Terminology services to lookup and validate the codes
 
 
@@ -23,7 +23,6 @@ ValueSets are used in
 * ValueSets in `input/valuesets` or `input/fsh/valuesets` 
 * Proposal for any common value sets
 * If a valueset changes since the last release, this must be signaled using the common change tracking procedure - see [tracking changes](#).
-* Valueset usage registry?
 
 
 
@@ -113,6 +112,4 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 ### **Known issues and dependencies**
 * The ecosystem for terminologies depends on a terminology server. Presently there is not yet a working terminology server that is preferred for the SMART Guidelines.
 
-* Is there a relationship before ANC.B5.DE50 and the valueset name? Would the valueset for the values for that element have a similar name?
-* This will actually result in changes to profiles - e.g. needing a value when the existing binding is Required
 

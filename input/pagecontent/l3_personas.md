@@ -13,11 +13,11 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 ### **Inputs** 
 
 * L2 Generic personas (Narrative)
-* Common Personas list (in Common artifacts / central repository?)
+* Common Personas list
 
 ### **Outputs**
 
-* L3 ActorDefinition (compatible with the SGPersona profile).
+* L3 ActorDefinition
 * Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
 * Narrative page listing the Personas
 
@@ -54,7 +54,6 @@ Personas will be associated with actions(processes). The tracking of that associ
 
 
 ### **Criteria / Definition of Done**
-* All Personas SHALL use the SGPersona ActorDefinition profile
 * Each Persona source follow the guidelines for file content and names
 * All the personas SHOULD be registered in (or proposed to) the Personas list; any exceptions will have to be resolved before final publication
 

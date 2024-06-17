@@ -40,17 +40,22 @@ This extraction uses [structure maps](l3_structuremaps.html) and is represented 
 
 For each data element in the logical model (i.e. in the data dictionary)
 
-* For extracting data, the Questionnaire should be an instance of SDC extractable questinnaire
+* For extracting data, ensure the Questionnaire is an instance of [SDC extractable questionnaire profile](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap)
   * For StructureMap extraction, the extension [Target Structure Map](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap) needs to be present. See [Authoring StructureMaps](l3_structuremaps.html) for authoring of structuremaps.
 * The Questionnaire shall indicate what is the StructureMap that should be used for extracting the data, using the [`targetStructureMap`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap) extension. 
-  * The questionnaire extraction is in 2 steps - transform a QuestionnaireResponse to a logical model instance and transform a logical model instance into the FHIR resources. 
-  * These shall be 2 StructureMaps, and a third StructureMap that includes these 2 and runs the two transformations one after the other.
-  * The StructureMap that is mentioned in the Questionnaire is the one corresponding to the **combined** transformation.
+* Define the questionnaire extraction in 2 steps - 
+  1. transform a QuestionnaireResponse to a logical model instance ;
+  2. transform a logical model instance into the FHIR resources. 
+  These shall be 2 StructureMaps, and a third StructureMap that includes these 2 and runs the two transformations one after the other.
+* The StructureMap that is mentioned in the Questionnaire is the one corresponding to the **combined** transformation.
   * for example: 
 ```
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://worldhealthorganization.github.io/smart-example-immz/StructureMap/IMMZCQRToResources"
 ```
+
+StructureMap authoring requires tooling for validation. Please see the tooling section below.
+
 
 
 ### **Output Criteria / Definition of Done**
