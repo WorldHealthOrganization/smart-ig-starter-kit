@@ -85,8 +85,8 @@ In addition, breaking changes to a prior published release should follow a dedic
 
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): Profiles](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-resource-profiles)
-[SMART Guidelines - Immunizations (Measles): Extensions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-extension-definitions)
+[SMART Guidelines - Immunizations (Measles): Profiles](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#structures-resource-profiles)
+[SMART Guidelines - Immunizations (Measles): Extensions](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#structures-extension-definitions)
 
 
 ### **Known issues and dependencies**

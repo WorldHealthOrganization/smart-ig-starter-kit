@@ -24,4 +24,4 @@ For each type of L3 artifact that needs to be authored, the SOP is structured in
   - Decisions pending
   - Tooling dependencies
 
-The artifact types, also use ArchiMate drawings to give a visual representation for the artifacts being authored, or the activities that are needed. To understand more about the diagrams, please visit the (Diagram Legend)[diagram_legend.html] page.
+The artifact types, also use ArchiMate drawings to give a visual representation for the artifacts being authored, or the activities that are needed. To understand more about the diagrams, please visit the [Diagram Legend](diagram_legend.html) page.
