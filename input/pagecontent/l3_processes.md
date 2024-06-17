@@ -25,7 +25,21 @@ The data required to be captured for each Business Process is:
 
 
 ### **Output Criteria / Definition of Done**
-* The PlanDefinition should 
+* Each PlanDefinition representing a Business Process SHALL have:
+  * name: A computable name for the process
+  * title: A short, user-friendly description of the process
+  * type: workflow-definition
+  * description: A detailed description of the process
+* For each "node" in the business process representing an activity to be performed, the PlanDefinition should have an `action` element:
+  * title: A short, user-friendly description of the activity
+  * description: A more detailed description of the activity
+  * participant: Identify the expected participants in the activity, identified by the [Persona](l3_personas.html)
+* Connect the nodes as appropriate to indicate process flow
+  * relatedAction:
+    * actionId: a reference to the related activity
+    * relationship: the type of relationship (note that the `before-start` relationship should be favored, and that relationships should only be characterized in one direction)
+
+For more information, see the [Mapping and Other Formalisms](https://hl7.org/fhir/uv/cpg/documentation-methodology.html#bpmn-and-fhir) topic in the Clinical Practice Guidelines implementation guide.
 
 ### **Change tracking**
 
@@ -35,6 +49,9 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 There are several tools to edit BPMN processes. For example [bpmn.io](https://bpmn.io/) is a reference open source implementation of the standard.
 
 ### **Informative examples**
+
+* [CPG Common Pathway](https://hl7.org/fhir/uv/cpg/2024Jan/PlanDefinition-cpg-common-pathway.html)
+* [CPG Common Registration Example](https://hl7.org/fhir/uv/cpg/2024Jan/PlanDefinition-cpg-common-registration.html)
 
 
 ### **Known issues and dependencies**
