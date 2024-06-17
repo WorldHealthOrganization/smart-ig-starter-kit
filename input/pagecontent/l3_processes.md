@@ -25,6 +25,9 @@ The data required to be captured for each Business Process is:
 
 
 ### **Output Criteria / Definition of Done**
+* Each Business Process SHALL have a corresponding PlanDefinition
+* Each PlanDefinition representing a Business Process SHALL conform to the [CRMIShareablePlanDefinition](http://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareableplandefinition.html) profile
+* Each active published PlanDefinition representing a Business Process SHALL conform to the [CRMIPublishablePlanDefinition](http://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishableplandefinition.html) profile
 * Each PlanDefinition representing a Business Process SHALL have:
   * name: A computable name for the process
   * title: A short, user-friendly description of the process
