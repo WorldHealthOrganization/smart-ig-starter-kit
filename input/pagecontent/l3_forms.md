@@ -51,7 +51,7 @@ For each data element in the logical model (i.e. in the data dictionary)
   * for example: 
 ```
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-* extension[=].valueCanonical = "http://worldhealthorganization.github.io/smart-example-imz/StructureMap/IMMZCQRToResources"
+* extension[=].valueCanonical = "http://worldhealthorganization.github.io/smart-example-immz/StructureMap/IMMZCQRToResources"
 ```
 
 StructureMap authoring requires tooling for validation. Please see the tooling section below.
@@ -88,7 +88,7 @@ Example instances (QuestionnaireResponse, logical model instance, and FHIR resou
 Several SDC-related tools and implementations are available from the [HL7 Confluence](https://confluence.hl7.org/display/FHIRI/SDC+Implementations).
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): Questionnaires](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#structures-questionnaires)
+[SMART Guidelines - Immunizations (Measles): Questionnaires](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#structures-questionnaires)
 
 ### **Known issues and dependencies**
 

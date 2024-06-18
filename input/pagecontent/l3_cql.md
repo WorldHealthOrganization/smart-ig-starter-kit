@@ -46,14 +46,15 @@ To enable the CQL to refer to concepts defined in the SMART Guideline, create a 
 library IMMZConcepts
 
 // Immunization Measles Concepts
-codesystem "IMMZConcepts": 'http://smart.who.int/immunizations-measles/CodeSystem/IMMZConcepts'
+codesystem "IMMZConcepts": 'https://worldhealthorganization.github.io/smart-example-immz/CodeSystem-IMMZConcepts.html'
 
 //WHO ATC IPS Valueset
 valueset "WHO ATC": 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips'
 
 // General use ValueSets 
-valueset "Negative Result": 'http://smart.who.int/smart-example-imz/ValueSet/Negativetestresult-values'
-valueset "Positive Result": 'http://smart.who.int/smart-example-imz/ValueSet/PositiveTestResult-values'
+valueset "Negative Result": 'https://worldhealthorganization.github.io/smart-example-immz/ValueSet-Negativetestresult-values.html'
+valueset "Positive Result": 'https://worldhealthorganization.github.io/smart-example-immz/ValueSet-PositiveTestResult-values.html'
+
 ...
 ```
 
@@ -353,9 +354,9 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 {:.table-bordered.full-width}  
    
 ### **Informative examples**
+[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-example-immz/ActorDefinition-CommunityHealthWorker.html)
+[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-example-immz/personas.html)
 
-[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-example-imz/ActorDefinition-CommunityHealthWorker.html)
-[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-example-imz/personas.html)
 
 ### **Known issues and dependencies**
 * (links to issues, or zulip, or open questions)

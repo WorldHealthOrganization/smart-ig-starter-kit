@@ -95,7 +95,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 {:.table-bordered.full-width}  
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): StructureMaps](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#terminology-structure-maps)
+[SMART Guidelines - Immunizations (Measles): StructureMaps](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#terminology-structure-maps)
+
 
 ### **Known issues and dependencies**
 * Publisher doesn't support metadata, so the StructureMaps show without description in the artifacts table

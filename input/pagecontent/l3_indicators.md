@@ -111,8 +111,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
    
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): Indicator 05](https://worldhealthorganization.github.io/smart-example-imz/Measure-IMMZIND05.html)
-[SMART Guidelines - Immunizations (Measles): Indicator 08](https://worldhealthorganization.github.io/smart-example-imz/Measure-IMMZIND40.html)
+[SMART Guidelines - Immunizations (Measles): Indicator 05](https://worldhealthorganization.github.io/smart-example-immz/Measure-IMMZIND05.html)
+[SMART Guidelines - Immunizations (Measles): Indicator 08](https://worldhealthorganization.github.io/smart-example-immz/Measure-IMMZIND40.html)
 
 ### **Known issues and dependencies**
 

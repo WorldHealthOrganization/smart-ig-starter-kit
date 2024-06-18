@@ -25,7 +25,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 ### **Tooling**
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): Concept Maps](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#terminology-concept-maps)
+[SMART Guidelines - Immunizations (Measles): Concept Maps](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#terminology-concept-maps)
 
 ### **Known issues and dependencies**
 
