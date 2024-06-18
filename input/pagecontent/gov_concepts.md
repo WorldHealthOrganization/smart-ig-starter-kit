@@ -34,10 +34,6 @@ The mapping is maintained centrally.
   * The onboarding process is the same - at the end, all concepts have one key identifier and are thus part of the common dictionary
 
 
-A possible governance process is displayed in the diagram below:
-<img src="./concept_governance.png" style="width:50%"/>
-<br clear="all"/>
-
 ### Impact for authors
 
 * To ensure the SMART Guideline is semantically interoperable, it should not be released if its data models use concepts that are not approved - this will be reported as a QA issue.

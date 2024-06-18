@@ -1,5 +1,5 @@
 
-StructureMaps are a machine-readable specification for data transformation. They are used in converting data from one format to another. For  the SMART Guidelines, StructureMaps are used to convert data between QuestionnaireResponses and FHIR target profile instances. This is done in 2 steps:
+FHIR StructureMaps are machine-readable data transformation specifications . They are used in converting data from one format to another. For the SMART Guidelines, StructureMaps are used to convert data between QuestionnaireResponses and FHIR target profile instances. This is done in 2 steps:
 1. Extract a Questionnaire Response into a Logical Model instance  
   This gets the data in a simple form that only depends on the data specification, and not on the profiles that are used
 2. Extract the Logical Model instance into the FHIR resource instances
@@ -47,6 +47,8 @@ These can come in the form of:
 - StructureMap extraction
 
 #### Observation extraction
+Observation-based extraction is described in the [HL7 FHIR SDC (Structured Data Capture) specification](https://hl7.org/fhir/uv/sdc/extraction.html#observation-based-extraction). It is not part of the current scope of the SMART Guidelines, but may be used to obtain data.  
+
 
 #### Definition-based extraction
 If this approach is used, the mapping is done by filling in the `.definition` element with the resource that is the target of the extraction - Patient, Observation, Encounter, etc.
@@ -94,6 +96,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 ### **Informative examples**
 [SMART Guidelines - Immunizations (Measles): StructureMaps](https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#terminology-structure-maps)
+
 
 ### **Known issues and dependencies**
 * Publisher doesn't support metadata, so the StructureMaps show without description in the artifacts table

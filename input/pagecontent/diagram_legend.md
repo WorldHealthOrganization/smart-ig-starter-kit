@@ -56,5 +56,8 @@ The diagrams capture the essence of transforming an L2 input into the correspond
 
 ### Data Object Details with PlantUML
 
-To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This diagram summarizes the data that is part of an object definition. For example, For a ValueSet, the L3 author is required to have a status, a name, an identifier and a URL...
+To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This diagram summarizes the data that is part of an object definition. For example, the diagram below shows that for a ValueSet, the L3 author is required to have a status, a name, an identifier and a URL.
 
+<figure style = "width:15em">
+  {% include model_valueset.svg %}
+</figure>

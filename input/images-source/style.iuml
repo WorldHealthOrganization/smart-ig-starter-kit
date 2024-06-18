@@ -40,6 +40,9 @@ skinparam {
     LegendBorderThickness 0
     LegendBorderColor transparent
     LegendBackgroundColor transparent
+    LegendFontName Arial
+    LegendFontSize 12
+    
 
     svgDimensionStyle false
     ' Global Options

@@ -18,7 +18,7 @@ governance process for Personas. In that governance, there SHALL be a requiremen
 ### **Outputs**
 
 * L3 ActorDefinition
-* Updated Personas ValueSet, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
+* Updated Personas list, if a new persona is defined. This should be submitted for validation using a process that is still to be defined.
 * Narrative page listing the Personas
 
 ### **Activities**
@@ -75,6 +75,7 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 [SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-example-immz/ActorDefinition-CommunityHealthWorker.html)
 [SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-example-immz/personas.html)
+
 
 ### **Known issues and dependencies**
 * Currently it is possible to use the ActorDefinition (an R5 resource) in FHIR R4 IGs but it not possible to create profiles in sushi for that resource

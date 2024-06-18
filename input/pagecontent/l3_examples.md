@@ -40,6 +40,7 @@ Each SMART Implementation Guide shall contain sufficient data to validate itself
 [SMART Guidelines - Immunizations (Measles): Example QuestionnaireResponse](https://worldhealthorganization.github.io/smart-example-immz/QuestionnaireResponse-Example.IMMZ.C.QuestionnaireResponse.1.html)
 
 
+
 ### **Known issues and dependencies**
 
 * Test and Data generation, and packaging of such data, might take considerable effort. This will be handled when tools and processes are in place.
