@@ -54,8 +54,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): Code Systems](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#terminology-code-systems)
-
+[SMART Guidelines - Immunizations (Measles): Code Systems](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#terminology-code-systems)
+m
 ### **Known issues and dependencies**
 
 

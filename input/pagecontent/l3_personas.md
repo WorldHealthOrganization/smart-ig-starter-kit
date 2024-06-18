@@ -73,8 +73,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 
 ### **Informative examples**
 
-[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition-CommunityHealthWorker.html)
-[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html)
+[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-example-imz/ActorDefinition-CommunityHealthWorker.html)
+[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-example-imz/personas.html)
 
 ### **Known issues and dependencies**
 * Currently it is possible to use the ActorDefinition (an R5 resource) in FHIR R4 IGs but it not possible to create profiles in sushi for that resource

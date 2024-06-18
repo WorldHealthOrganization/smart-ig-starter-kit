@@ -265,8 +265,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
    
 
 ### **Informative examples**
-[SMART Guidelines - Immunizations (Measles): PlanDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-plan-definitions)
-[SMART Guidelines - Immunizations (Measles): Activity Definitions](https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#knowledge-artifacts-activity-definitions)
+[SMART Guidelines - Immunizations (Measles): PlanDefinitions](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#knowledge-artifacts-plan-definitions)
+[SMART Guidelines - Immunizations (Measles): Activity Definitions](https://worldhealthorganization.github.io/smart-example-imz/artifacts.html#knowledge-artifacts-activity-definitions)
 
 ### **Known issues and dependencies**
 

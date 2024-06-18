@@ -68,8 +68,8 @@ In addition, Requirements are essential traceable artifacts. Every time a requir
 ### **Informative examples**
 
 
-[SMART Guidelines - Immunizations (Measles): Rendered Requirements table](https://worldhealthorganization.github.io/smart-immunizations-measles/functional-requirements.html)
-[SMART Guidelines - Immunizations (Measles): Example Requirements resource](https://worldhealthorganization.github.io/smart-immunizations-measles/Requirements-immz-e-fxnreq.html)
+[SMART Guidelines - Immunizations (Measles): Rendered Requirements table](https://worldhealthorganization.github.io/smart-example-imz/functional-requirements.html)
+[SMART Guidelines - Immunizations (Measles): Example Requirements resource](https://worldhealthorganization.github.io/smart-example-imz/Requirements-immz-e-fxnreq.html)
 
 ### **Known issues and dependencies**
 

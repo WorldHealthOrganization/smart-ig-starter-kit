@@ -52,8 +52,8 @@ codesystem "IMMZConcepts": 'http://smart.who.int/immunizations-measles/CodeSyste
 valueset "WHO ATC": 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips'
 
 // General use ValueSets 
-valueset "Negative Result": 'http://smart.who.int/smart-immunizations-measles/ValueSet/Negativetestresult-values'
-valueset "Positive Result": 'http://smart.who.int/smart-immunizations-measles/ValueSet/PositiveTestResult-values'
+valueset "Negative Result": 'http://smart.who.int/smart-example-imz/ValueSet/Negativetestresult-values'
+valueset "Positive Result": 'http://smart.who.int/smart-example-imz/ValueSet/PositiveTestResult-values'
 ...
 ```
 
@@ -354,8 +354,8 @@ As with all FHIR Conformance resources, change management is critical. Do not se
    
 ### **Informative examples**
 
-[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition-CommunityHealthWorker.html)
-[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html)
+[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-example-imz/ActorDefinition-CommunityHealthWorker.html)
+[SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions](https://worldhealthorganization.github.io/smart-example-imz/personas.html)
 
 ### **Known issues and dependencies**
 * (links to issues, or zulip, or open questions)
