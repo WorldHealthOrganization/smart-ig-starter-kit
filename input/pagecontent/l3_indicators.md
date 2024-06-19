@@ -19,11 +19,11 @@ Measures are FHIR resources and can refer to CQL libraries.
 > Summary: For each indicator in the L2, the L3 author creates a Measure resource. This includes adding populations and stratifiers (consulting the CQF-Measures guidance). The create the CQL definitions needed for the calculations, which will be encoded into the Library resources.
 
 1. For each indicator in the L2, create a Measure
-  - a. The Measure SHALL conform to the appropriate scoring profile based on the scoring type:
-      - i. Proportion - [CQFMProportionMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-proportion-measure-cqfm.html)
-      - ii. Ratio - [CQFMRatioMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-ratio-measure-cqfm.html)
-      - iii. Cohort - [CQFMCohortMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cohort-measure-cqfm.html)
-      - iv. ContinuousVariable - [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)
+  - a. The Measure SHOULD conform to the appropriate scoring profile based on the scoring type:
+      - i. Proportion - [CQFMProportionMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-proportion-measure-cqfm.html)
+      - ii. Ratio - [CQFMRatioMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-ratio-measure-cqfm.html)
+      - iii. Cohort - [CQFMCohortMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cohort-measure-cqfm.html)
+      - iv. ContinuousVariable - [CQFMContinuousVariableMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cv-measure-cqfm.html)
   - b. NOTE: Proportion measures with an estimated denominator are modeled as continuous variable measures to allow the metric to be collected and analyzed downstream as a proportion measure when the estimated denominator is known
   - c. The Measure ID should be derived from the indicator code, e.g. IMMZ.IND.08 -> IMMZIND08
   - d. Url: The URL SHALL be: [base canonical]/Measure/[id]
@@ -37,7 +37,7 @@ Measures are FHIR resources and can refer to CQL libraries.
   - c. The logic library MAY make use of an IndicatorLogic library to share common logic between multiple indicators in the guideline
 2. Create a `group` appropriate to the scoring type (only one group is supported)
   - a. group.id SHALL be the same as the name of the measure
-  - b. create populations appropriate to the scoring type ({{site.data.fhir.ver.cqfm}}/measure-conformance.html#criteria-names)
+  - b. create populations appropriate to the scoring type (https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#criteria-names)
   - c. each population references an expression in the indicator library
 
 
@@ -49,7 +49,7 @@ Measures are FHIR resources and can refer to CQL libraries.
 * Depending on the type/purpose of the indicator, define the value for the measure [`scoring`](http://hl7.org/fhir/R4/valueset-measure-scoring.html). 
 * Add the `type` and `improvementNotation`
 
-* From the scoring, see what populations are permitted - according to the [CQF Guidance]({{site.data.fhir.ver.cqfm}}/measure-conformance.html#conformance-requirement-3-8)
+* From the scoring, see what populations are permitted - according to the [CQF Guidance](https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#conformance-requirement-3-8)
 
 * For each population, define the code and id, the description, and the cql expression that evaluates the population. For example,
 ```
@@ -76,11 +76,11 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 > NOTE: Determining effective data requirements is a detailed process and should be done through the use of tooling such as the CQF Tooling to process Measure and Library resources
 
-* Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-effectiveDataRequirements.html).
+* Add a contained Library to the resource and refer to it using the expression [EffectiveDataRequirements](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-effectiveDataRequirements.html).
 
 * If known, add the data requirements:
   * add codes that are used directly in the measure
-  Add the libraries that contain the functions using [Logic Definition]({{site.data.fhir.ver.ext}}/StructureDefinition-cqf-logicDefinition.html)
+  Add the libraries that contain the functions
 
 
 
@@ -93,8 +93,8 @@ Measures are FHIR resources and can refer to CQL libraries.
 * At least one example MeasureReport should be provided
   * The example MeasureReport should indicate in which conditions
 * There should be a Bundle (Transaction) with all that is needed to evaluate the Measure and the `$evaluate-measure` operation, with example data included or available.
-* Measures SHALL conform to [CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)
-* Active, published Measures SHALL conform to [CQFMPublishableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-publishablemeasure-cqfm.html)
+* Measures SHALL conform to [CRMIShareableMeasure](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablemeasure.html)
+* Active, published Measures SHOULD conform to [CQFMPublishableMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-publishablemeasure-cqfm.html)
 * Measures SHALL conform to the profile appropriate to their scoring type (as described above)
 
 
@@ -115,12 +115,12 @@ As with all FHIR Conformance resources, change management is critical. Do not se
 [SMART Guidelines - Immunizations (Measles): Indicator 08](https://worldhealthorganization.github.io/smart-example-immz/Measure-IMMZIND40.html)
 
 ### **Known issues and dependencies**
+There are a few open questions on standards that are still pending to be addressed:
 
 * Stratifiers: combined or not?
 * Can we use measurereport to capture multiple values and computationally figure out what are the figures behind each aggregate?
   * Could we have a way to add parameters to subject.reference containing the values of each other stratifier for that person?
 
-* What is the cqfm-logicDefinition? 
 * Must Measure be a profile of computable-measure-cqfm ?
 * Effective data requirements as a library?
 * Data requirement in effective-data-requirements - is it a search parameter?

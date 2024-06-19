@@ -86,9 +86,9 @@ Terminology Services
 * mapping
 * validate
 
-* Each ValueSet resource SHALL conform to [CRMIShareableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablevalueset.html)
-* Each active published ValueSet SHALL conform to [CRMIPublishableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablevalueset.html)
-* Each ValueSet SHALL conform to [CRMIComputableValueSet]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-computablevalueset.html)
+* Each ValueSet resource SHALL conform to [CRMIShareableValueSet](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablevalueset.html)
+* Each active published ValueSet SHALL conform to [CRMIPublishableValueSet](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablevalueset.html)
+* Each ValueSet SHALL conform to [CRMIComputableValueSet](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-computablevalueset.html)
 
 
 ### **Change tracking**

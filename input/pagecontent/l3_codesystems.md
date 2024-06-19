@@ -35,8 +35,8 @@ This is the overview of the activities and related artifacts used:
 ### **Output Criteria / Definition of Done**
 
 * Appropriate CodeSystem resources are defined
-* CodeSystem resources SHALL conform to [CRMIShareableCodeSystem]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablecodesystem.html)
-* Active, published CodeSystem resources SHALL conform to [CRMIPublishableCodeSystem]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablecodesystem.html)
+* CodeSystem resources SHALL conform to [CRMIShareableCodeSystem](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablecodesystem.html)
+* Active, published CodeSystem resources SHALL conform to [CRMIPublishableCodeSystem](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablecodesystem.html)
 * no QA issues in the publisher
 
 ### **Change tracking**

@@ -15,7 +15,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 ##### **Shareable**
 
-* Library resources SHALL conform to [CRMIShareableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablelibrary.html)
+* Library resources SHALL conform to [CRMIShareableLibrary](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablelibrary.html)
 
 | Element | Guidance |
 | ---- | ---- |
@@ -34,7 +34,7 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 ##### ** Publishable **
 
-* Published `active` status Library resources SHALL conform to [CRMIPublishableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablelibrary.html)
+* Published `active` status Library resources SHALL conform to [CRMIPublishableLibrary](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablelibrary.html)
 
 | Element | Guidance |
 | ---- | ---- |
@@ -59,8 +59,8 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 ##### **Computable** and **Executable**
 
-* Computable Libraries SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html) (base64-encoded text/cql content)
-* Executable Libraries SHALL conform to [ELMJSONLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-elm-json-library.html) (base64-encoded application/elm+json content)
+* Computable Libraries SHALL conform to [CQLLibrary](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cql-library.html) (base64-encoded text/cql content)
+* Executable Libraries SHALL conform to [ELMJSONLibrary](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-elm-json-library.html) (base64-encoded application/elm+json content)
 
 ### **Activities**
 
@@ -80,10 +80,10 @@ Each CQL library SHALL have a corresponding Library resource in the SMART Guidel
 
 * Each CQL Library in the IG SHALL have a Library resource
 * Each Library SHALL indicate the type of library according to the above (with a useContext slice) 
-* Each Library resource SHALL conform to [CRMIShareableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablelibrary.html)
-* Each active published Library SHALL conform to [CRMIPublishableLibrary]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablelibrary.html)
-* Each Library resource representing a CQL Library SHALL conform to [CQLLibrary]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-library.html)
-* Each Library resource representing a CQL Library SHALL conform to [CQLModule]({{site.data.fhir.ver.cql}}/StructureDefinition-cql-module.html)
+* Each Library resource SHALL conform to [CRMIShareableLibrary](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablelibrary.html)
+* Each active published Library SHALL conform to [CRMIPublishableLibrary](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablelibrary.html)
+* Each Library resource representing a CQL Library SHALL conform to [CQLLibrary](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cql-library.html)
+* Each Library resource representing a CQL Library SHALL conform to [CQLModule](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cql-module.html)
 
 ### **Change tracking**
 
