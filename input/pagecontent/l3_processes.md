@@ -21,7 +21,7 @@ The data required to be captured for each Business Process is:
 ### **Activities**
 <img src="./l3_process_process.png" style="width:30%"/>
 <br clear="all"/>
-> Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. This may include capturing the business process as a BPMN diagram.  
+> Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. 
 
 
 ### **Output Criteria / Definition of Done**
@@ -49,7 +49,7 @@ For more information, see the [Mapping and Other Formalisms](https://hl7.org/fhi
 As with all FHIR Conformance resources, change management is critical. Do not set the version element of PlanDefinitions defined in the SMART Guideline, the version element will be set by the publication process. See the [versioning](versioning.html) topic for more information on change management.
 
 ### **Tooling**
-There are several tools to edit BPMN processes. For example [bpmn.io](https://bpmn.io/) is a reference open source implementation of the standard.
+
 
 ### **Informative examples**
 

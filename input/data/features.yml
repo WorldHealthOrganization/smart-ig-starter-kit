@@ -2,8 +2,12 @@
 feedback:
   - active: true
     dashboard: 
-      url: https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/1
-      label: "Issues"    
+      url: https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues
+      label: "Issues"
+  - active: true
+    dashboard:
+      url: https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new
+      label: "New Issue"    
   - active: true
     dashboard:
       label: Change Log

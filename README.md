@@ -13,7 +13,7 @@
 ![QA warnings](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fworldhealthorganization.github.io%2Fsmart-ig-starter-kit%2Fqa.json&query=%24.warnings&logoColor=orange&label=QA%20warnings&color=yellow)
 ![QA hints](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fworldhealthorganization.github.io%2Fsmart-ig-starter-kit%2Fqa.json&query=%24.hints&logoColor=yellow&label=QA%20hints&color=yellow)
 
-
+ 
 # WHO SMART GUIDELINES - DRAFT SMART Guidelines L3 SOP
 ---
 This is the DRAFT SMART Guidelines L3 SOP

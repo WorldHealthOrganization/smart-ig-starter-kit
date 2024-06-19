@@ -74,14 +74,13 @@ menu:
       Structure of the SOP IG: 'structure.html'
       Personas: 'l3_personas.html'
       User scenarios: 'l3_scenarios.html'
-      Processes: 'l3_processes.html'
+      Business Processes: 'l3_processes.html'
       Logical Models: 'l3_logicalmodels.html'
       Value Sets: 'l3_valuesets.html'
       Code Systems: 'l3_codesystems.html'
       Concept Maps: 'l3_conceptmaps.html'
       Profiles: 'l3_profiles.html'
       Decision Tables: 'l3_decisiontables.html'
-      Scheduling Logic: 'l3_schedulinglogic.html'
       Indicators: 'l3_indicators.html'
       Libraries: 'l3_libraries.html'
       CQL: 'l3_cql.html'
@@ -146,8 +145,6 @@ pages:
         title: "Profiles"
       l3_decisiontables.md :
         title: "Decision Tables"
-      l3_schedulinglogic.md :
-        title: "Scheduling Logic"
       l3_indicators.md:
         title: "Indicators"
       l3_libraries.md :
