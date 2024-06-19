@@ -19,26 +19,26 @@ Measures are FHIR resources and can refer to CQL libraries.
 > Summary: For each indicator in the L2, the L3 author creates a Measure resource. This includes adding populations and stratifiers (consulting the CQF-Measures guidance). The create the CQL definitions needed for the calculations, which will be encoded into the Library resources.
 
 1. For each indicator in the L2, create a Measure
-  - a. The Measure SHOULD conform to the appropriate scoring profile based on the scoring type:
-      - i. Proportion - [CQFMProportionMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-proportion-measure-cqfm.html)
-      - ii. Ratio - [CQFMRatioMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-ratio-measure-cqfm.html)
-      - iii. Cohort - [CQFMCohortMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cohort-measure-cqfm.html)
-      - iv. ContinuousVariable - [CQFMContinuousVariableMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cv-measure-cqfm.html)
-  - b. NOTE: Proportion measures with an estimated denominator are modeled as continuous variable measures to allow the metric to be collected and analyzed downstream as a proportion measure when the estimated denominator is known
-  - c. The Measure ID should be derived from the indicator code, e.g. IMMZ.IND.08 -> IMMZIND08
-  - d. Url: The URL SHALL be: [base canonical]/Measure/[id]
-  - e. Version: Do not set the version element, it will be set by the publication process
-  - f. Name: The Name SHALL be the same as the id
-  - g. Title: The L2 Indicator ID e.g. IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)
-  - h. Description: The long description of the indicator (i.e. the indicator description)
+    - a. The Measure SHOULD conform to the appropriate scoring profile based on the scoring type:
+        - i. Proportion - [CQFMProportionMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-proportion-measure-cqfm.html)
+        - ii. Ratio - [CQFMRatioMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-ratio-measure-cqfm.html)
+        - iii. Cohort - [CQFMCohortMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cohort-measure-cqfm.html)
+        - iv. ContinuousVariable - [CQFMContinuousVariableMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cv-measure-cqfm.html)  
+    - b. NOTE: Proportion measures with an estimated denominator are modeled as continuous variable measures to allow the metric to be collected and analyzed downstream as a proportion measure when the estimated denominator is known
+    - c. The Measure ID should be derived from the indicator code, e.g. IMMZ.IND.08 -> IMMZIND08
+    - d. Url: The URL SHALL be: [base canonical]/Measure/[id]
+    - e. Version: Do not set the version element, it will be set by the publication process
+    - f. Name: The Name SHALL be the same as the id
+    - g. Title: The L2 Indicator ID e.g. IMMZ.IND.08 Immunization coverage for Measles containing vaccine (Estimated Denominator)
+    - h. Description: The long description of the indicator (i.e. the indicator description)
 2. Create an "indicator" logic library specific to the measure, e.g. IMMZIND08Logic
-  - a. The logic library SHALL contain expressions for each population criteria appropriate to the scoring type of the measure
-  - b. The logic library SHALL make use of an IndicatorElements library to reference data elements from the guideline
-  - c. The logic library MAY make use of an IndicatorLogic library to share common logic between multiple indicators in the guideline
+    - a. The logic library SHALL contain expressions for each population criteria appropriate to the scoring type of the measure
+    - b. The logic library SHALL make use of an IndicatorElements library to reference data elements from the guideline
+    - c. The logic library MAY make use of an IndicatorLogic library to share common logic between multiple indicators in the guideline
 2. Create a `group` appropriate to the scoring type (only one group is supported)
-  - a. group.id SHALL be the same as the name of the measure
-  - b. create populations appropriate to the scoring type (https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#criteria-names)
-  - c. each population references an expression in the indicator library
+    - a. group.id SHALL be the same as the name of the measure
+    - b. create populations appropriate to the scoring type (https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#criteria-names)
+    - c. each population references an expression in the indicator library
 
 
 * Create or reuse a CQL library that contains the definitions and functions that are needed for the Measure
