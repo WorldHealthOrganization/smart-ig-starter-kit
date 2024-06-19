@@ -19,7 +19,7 @@ Measures are FHIR resources and can refer to CQL libraries.
 > Summary: For each indicator in the L2, the L3 author creates a Measure resource. This includes adding populations and stratifiers (consulting the CQF-Measures guidance). The create the CQL definitions needed for the calculations, which will be encoded into the Library resources.
 
 1. For each indicator in the L2, create a Measure
-    - a. The Measure SHOULD conform to the appropriate scoring profile based on the scoring type:
+    - a. The Measure SHALL conform to the appropriate scoring profile based on the scoring type:
         - i. Proportion - [CQFMProportionMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-proportion-measure-cqfm.html)
         - ii. Ratio - [CQFMRatioMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-ratio-measure-cqfm.html)
         - iii. Cohort - [CQFMCohortMeasure](https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-cohort-measure-cqfm.html)
