@@ -6,7 +6,7 @@
 id: smart.who.int.ig-starter-kit
 canonical: http://smart.who.int/ig-starter-kit
 name: IgStarterKit
-status: draft
+status: active
 version: 1.0.0
 fhirVersion: 5.0.0
 date: 2024-06-19
