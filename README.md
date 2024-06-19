@@ -9,7 +9,7 @@
 
 # WHO SMART Guidelines L3 SOP v1.0.0
 ---
-This is the DRAFT SMART Guidelines L3 SOP
+This is the v1.0.0 release of the SMART Guidelines L3 SOP
 <br> </br>
 ###
 ### Publication
@@ -18,13 +18,13 @@ This ImplementationGuide is published in the following locations:
 
 Continuous Build:  __https://WorldHealthOrganization.github.io/smart-ig-starter-kit__  
 Continuous Build:  __https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit__  
-Canonical / permanent URL:   
+Canonical / permanent URL: __http://smart.who.int/ig-starter-kit__
 <br> </br>
 
 ### Issues
 Issues and change requests are managed here:  
 
 Issues:  __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues__  
-    or the Kanban board: __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/1__
+    or the Kanban board: __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/31__
 
 
