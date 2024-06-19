@@ -1,6 +1,6 @@
 ### First Release (V1.0.0)
 
-'First draft release of the SOP'
+'First release of the SOP'
 
 #### Known Issues
 * The specific details about the following topics are not fully defined in this release:
