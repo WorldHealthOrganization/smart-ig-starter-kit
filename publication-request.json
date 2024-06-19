@@ -1,0 +1,14 @@
+{
+    "package-id" : "smart.who.int.ig-starter-kit",
+    "title" : "SMART IG STARTER KIT", 
+    "category" : "base",
+    "introduction" : "SMART IG STARTER KIT",
+    "version" : "1.0.0",
+    "desc" : "1.0.0 Release",
+    "mode" : "milestone",    
+    "path" : "http://smart.who.int/ig-starter-kit/v1.0.0",
+    "ci-build": "http://worldhealthorganization.github.io/smart-ig-starter-kit",    
+    "first": true,
+    "status" : "release",
+    "sequence" : "Releases"
+  }
