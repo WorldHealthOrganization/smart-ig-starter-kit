@@ -247,10 +247,10 @@ Which in turn makes use of the `EncounterElements` library.
 * Every parameter in the decision table should be in the data dictionary
 * An example instance of the outcome of the PlanDefinition (CarePlan) shall be authored as reference/test.
 * The PlanDefinition should be testable with the standard tools and should produce the same results as the  test CarePlan that is authored in the L3.
-* PlanDefinitions SHALL conform to [CRMIShareablePlanDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareableplandefinition.html)
-* Active, published PlanDefinitions SHALL conform to [CRMIPublishablePlanDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishableplandefinition.html)
-* PlanDefinitions representing decision tables SHALL conform to [CPGRecommendationDefinition]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-recommendationdefinition.html)
-* PlanDefinitions representing strategies SHALL conform to [CPGStrategyDefinition]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-strategydefinition.html)
+* PlanDefinitions SHALL conform to [CRMIShareablePlanDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareableplandefinition.html)
+* Active, published PlanDefinitions SHALL conform to [CRMIPublishablePlanDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishableplandefinition.html)
+* PlanDefinitions representing decision tables SHALL conform to [CPGRecommendationDefinition](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-recommendationdefinition.html)
+* PlanDefinitions representing strategies SHALL conform to [CPGStrategyDefinition](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-strategydefinition.html)
 
 ### **Change tracking**
 

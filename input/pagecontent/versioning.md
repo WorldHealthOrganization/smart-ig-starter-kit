@@ -1,6 +1,6 @@
 ### Versioning
 
-Versioning is critical to ensuring that consumers of the SMART guideline can understand when changes occur how those changes impact their implementations. For this reason, SMART guidelines SHALL follow semantic versioning as prescribed in the [Artifact Versioning]({{site.data.fhir.ver.crmi}}/artifact-lifecycle.html#artifact-versioning) topic of the Canonical Resource Management Infrastructure IG.
+Versioning is critical to ensuring that consumers of the SMART guideline can understand when changes occur how those changes impact their implementations. For this reason, SMART guidelines SHALL follow semantic versioning as prescribed in the [Artifact Versioning](https://hl7.org/fhir/uv/crmi/artifact-lifecycle.html#artifact-versioning) topic of the Canonical Resource Management Infrastructure IG.
 
 As the guideline moves through the authoring lifecycle, the version and status are updated to reflect the current state:
 
