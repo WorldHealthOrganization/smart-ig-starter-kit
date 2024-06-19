@@ -21,7 +21,7 @@ The data required to be captured for each Business Process is:
 ### **Activities**
 <img src="./l3_process_process.png" style="width:30%"/>
 <br clear="all"/>
-> Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. This may include capturing the business process as a BPMN diagram.  
+> Summary: From the L2 Business Process, the L3 author creates a PlanDefinition to illustrate the business process. 
 
 
 ### **Output Criteria / Definition of Done**
