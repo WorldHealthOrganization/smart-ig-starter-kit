@@ -21,7 +21,6 @@ The introduction of concept management (by means of common data dictionaries) en
 Each concept in the Commons dictionary has therefore its definition and mappings:
 <figure style = "width:25em">
   {% include concept-dictionary.svg %}
-  <figcaption>Concepts and Dictionary - metadata</figcaption>
 </figure>
 
 
