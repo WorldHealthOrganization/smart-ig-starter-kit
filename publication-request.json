@@ -8,7 +8,7 @@
     "mode" : "milestone",    
     "path" : "http://smart.who.int/ig-starter-kit/v1.0.0",
     "ci-build": "http://worldhealthorganization.github.io/smart-ig-starter-kit",    
-    "first": true,
+    "first": false,
     "status" : "release",
     "sequence" : "Releases"
   }
