@@ -5,3 +5,4 @@
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

@@ -82,7 +82,7 @@ The release publication steps are:
 
 2. Optionally, create a new branch, e.g. `release-candidate` for iterating changes.  
 
-3. Create the [`publication-request.json`](https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation) file. This file is critical and it is important to follow the instructions correctly, as incorrect changes may cause irreparable damage to previously published and normative specifications.   
+3. Create the `publication-request.json` file (see [documentation](https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation)). This file is critical and it is important to follow the instructions correctly, as incorrect changes may cause irreparable damage to previously published and normative specifications.   
 
 4. Update the ImplementationGuide (and all conformance artifacts in the IG):
     * The `status` of the IG (and all conformance artifacts in the IG) should be `active`;
@@ -96,10 +96,10 @@ The release publication steps are:
 
 7. If all is ok and the pages are created correctly, create a release and tag with the latest changes
 
-8. Make a PR of the built specification (all releases) to smart.who.int.
+8. Make a PR of the built specification (all releases) to the repository holding the content of http://smart.who.int .
 
 9. If a branch was created in step 2, optionally merge it with any updates that have been done meanwhile.
 
-10. In the main branch, update the ImplementationGuide resource
+10. In the main branch, update the ImplementationGuide resource for continuing work:
     * The `status` of the IG should be set back to `draft`;
     * The `version` should be updated - this way it's immediately assured that any new changes are for a new version.

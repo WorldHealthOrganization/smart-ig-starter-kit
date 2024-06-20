@@ -196,12 +196,12 @@ The table and diagram below show the content types that are to be created as par
             <td>input/cql</td>
             <td><a href="l3_cql.html">CQL</a></td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td rowspan="1">Scheduling Logic</td>
             <td>FHIR PlanDefinition</td>
             <td>input/plandefinitions</td>
             <td rowspan="1"><a href="l3_schedulinglogic.html">Scheduling Logic</a></td>
-        </tr>
+        </tr> -->
         <tr>
             <td rowspan="2">Indicators and Measures</td>
             <td>FHIR Measure</td>
@@ -237,7 +237,6 @@ While the exact authoring steps depend on the inputs, the key sequence could nor
 * [Libraries](l3_libraries.html)
 * [Decision Tables](l3_decisiontables.html)
 * [Indicators](l3_indicators.html)
-* [Scheduling Logic](l3_schedulinglogic.html)
 * [Test Cases](l3_testing.html)
 * [Personas](l3_personas.html)
 * [Scenarios](l3_scenarios.html)

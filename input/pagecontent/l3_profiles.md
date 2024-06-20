@@ -66,8 +66,8 @@ The recommended priority for the search for existing profiles and extensions:
 * All profiles shall be valid profiles
 * All data elements that need to be exchanged or used in a decision, workflow, or indicator are covered by one or more profiles.
 * Every profile shall have one example instance
-* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablestructuredefinition.html)
-* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablestructuredefinition.html)
+* Each StructureDefinition resource SHALL conform to [CRMIShareableStructureDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablestructuredefinition.html)
+* Each active published StructureDefinition SHALL conform to [CRMIPublishableStructureDefinition](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablestructuredefinition.html)
 
  
 ### **Change tracking**

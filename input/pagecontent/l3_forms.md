@@ -64,11 +64,11 @@ StructureMap authoring requires tooling for validation. Please see the tooling s
 * Example instances of the QuestionnaireResponses, the corresponding Logical Model instance and the FHIR resources are available (the latter should actually be obtained by running the data extraction).
 * No QA errors in the build
 * Confirmation that extraction is working with the reference extraction tool.
-* Questionnaires SHALL conform to [CRMIShareableQuestionnaire]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablequestionnaire.html)
-* Active, published Questionnaires SHALL conform to [CRMIPublishableQuestionnaire]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-publishablequestionnaire.html)
-* Questionnaires SHALL conform to [CPGComputableQuestionnaire]({{site.data.fhir.ver.cpg}}/StructureDefinition-cpg-computablequestionnaire.html)
-* Questionnaires SHALL conform to [SDCBaseQuestionnaire]({{site.data.fhir.ver.sdc}}/StructureDefinition-sdc-questionnaire.html)
-* Questionnaires SHOULD conform to other [SDC Questionnaire Profiles]({{site.data.fhir.ver.sdc}}/artifacts.html#structures-resource-profiles) if they support other rendering and questionnaire behavior described by SDC.
+* Questionnaires SHALL conform to [CRMIShareableQuestionnaire](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablequestionnaire.html)
+* Active, published Questionnaires SHALL conform to [CRMIPublishableQuestionnaire](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablequestionnaire.html)
+* Questionnaires SHALL conform to [CPGComputableQuestionnaire](https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-computablequestionnaire.html)
+* Questionnaires SHALL conform to [SDCBaseQuestionnaire](https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html)
+* Questionnaires SHOULD conform to other [SDC Questionnaire Profiles](https://hl7.org/fhir/uv/sdc/STU3/artifacts.html#structures-resource-profiles) if they support other rendering and questionnaire behavior described by SDC.
 
 
 ### **Change tracking**
