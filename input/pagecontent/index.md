@@ -25,6 +25,13 @@ This guide is divided into several sections that are displayed in the menu bar l
 - <a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG
 
+
+#### Keywords
+> The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+"OPTIONAL" in this document are to be interpreted as described in
+[RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
 ### Intellectual Property and Copyright considerations
 
 This documentation is distributed under the CC-BY-IGO license. Please see the [license details](license.html).
