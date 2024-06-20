@@ -7,10 +7,10 @@
 ![QA hints](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fworldhealthorganization.github.io%2Fsmart-ig-starter-kit%2Fqa.json&query=%24.hints&logoColor=yellow&label=QA%20hints&color=yellow)
 
 
-# WHO SMART Guidelines L3 SOP v1.0.0
+# WHO SMART Guidelines L3 SOP CI build
 
 ---
-This is the v1.0.0 release of the SMART Guidelines L3 SOP
+This is the CI build of the SMART Guidelines L3 SOP
 <br> </br>
 ###
 ### Publication
