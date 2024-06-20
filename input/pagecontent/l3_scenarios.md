@@ -30,7 +30,7 @@ Each Scenario is defined by the following data:
 ### **Output Criteria / Definition of Done**
 * Each User Scenario in the L2 should be covered by one or more ExampleScenarios
   * At least the "normal" flow shall be covered by an example scenario
-* ExampleScenarios should reference the example instances from the other resources (see [profiles](l3_profiles.html), [decision tables](l3_decisiontables.html), [scheduling logic](l3_schedulinglogic.html), [forms](l3_forms.html), [indicators](l3_indicators.html))
+* ExampleScenarios should reference the example instances from the other resources (see [profiles](l3_profiles.html), [decision tables](l3_decisiontables.html), [forms](l3_forms.html), [indicators](l3_indicators.html))
 * ExampleScenarios should be validated by the publisher (i.e. no QA issues)
 * ExampleScenarios should be reviewed by the L2 author
 
