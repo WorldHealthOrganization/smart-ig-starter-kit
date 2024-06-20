@@ -6,15 +6,15 @@
 id: smart.who.int.ig-starter-kit
 canonical: http://smart.who.int/ig-starter-kit
 name: IgStarterKit
-status: draft
-version: 0.2.1
+status: active
+version: 1.0.0
 fhirVersion: 5.0.0
-date: 2024-06-12
+date: 2024-06-19
 # copyright:
 copyrightYear: 2023+
-releaseLabel: "CI Build"
-title: "DRAFT SMART Guidelines L3 SOP"
-description: "DRAFT SMART Guidelines L3 SOP"
+releaseLabel: "release"
+title: "SMART Guidelines L3 SOP"
+description: "SMART Guidelines L3 SOP"
 license: CC0-1.0
 
 # dependencies:
