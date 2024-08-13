@@ -138,8 +138,8 @@ Semantic mapping is done with ConceptMaps, establishing the relationship between
 * One logical model per json file / One profile per fsh file, as per naming convention
   * The constraints or invariants applicable to a logical model may be contained in the same FSH file.
   * elements that are repeatable across different models (e.g. Patient Demographics) shall be in a separate FSH file.
-* All data elements in the DAK shall be in one logical model
-* All data elements defined in DAK as calculated elements shall be present in a logical model
+* All data elements in the DAK SHALL be in one logical model per data dictionary page
+* All data elements defined in DAK as calculated elements SHALL be present in a logical model
 * All elements in the DAK have one and only one WHO SMART Code. 
   *  The WHO code for all elements should be approved; exceptions should be resolved before final publication
 * Each data element in the logical model is mapped to the existing semantic references - see [semantic references](#).
