@@ -124,7 +124,7 @@ pages:
     ig_publication.md:
       title: "IG Publication"
   l2_authoring_overview.md:
-      title: "L2 Authoring Overview"
+    title: "L2 Authoring Overview"
     l2_dak_authoring.md:
       title: "Authoring a DAK"
     l2_templates.md:
