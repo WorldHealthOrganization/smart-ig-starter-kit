@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Authoring a DAK - SMART Guidelines Starter Kit v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3.1"}
+    h3,h4,h5,h6{--heading-prefix:"3.1"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">FAQ</a>
+      </li>
+      <li>
+        <a href="l2_references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li>
+        <a href="translations.html">Multi-Language Implementations</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - ci-build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="l2_authoring_overview.html"><b>L2 Authoring Overview</b></a></li><li><b>Authoring a DAK</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 1.1.0 built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/l2sop">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/l2sop</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Authoring a DAK</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#1-plan" id="markdown-toc-1-plan">1. Plan</a></li>
+  <li><a href="#2-develop" id="markdown-toc-2-develop">2. Develop</a></li>
+  <li><a href="#3-publish-dak" id="markdown-toc-3-publish-dak">3. Publish DAK</a></li>
+</ul>
+
+</div>
+<p>While creating a WHO DAK, the focus is to transcribe health and data recommendations published and available in WHO guidelines and other normative products into the DAK components.</p>
+
+<p>Therefore, the DAK should:</p>
+
+<ul>
+  <li>include content that is explicitly mentioned in the WHO guidelines and other normative products (L1 of SMART Guidelines);</li>
+  <li>include content that is needed for indicator reporting while adhering to the principle of “collect once, use many times”;</li>
+  <li>be scoped for primary health care settings;</li>
+  <li>focus on generic components applicable to 80% of the contexts across various countries. Remember, the DAK would still need to be adapted to the country context before it is used to build implementable digital solutions or applications.</li>
+</ul>
+
+<p>The DAK should not:</p>
+
+<ul>
+  <li>add additional clinical content that’s not in the L1 guidance;</li>
+  <li>prescribe specific user interfaces unless specified in the L1 guidance;</li>
+  <li>include content that is country-specific and not applicable across multiple contexts;</li>
+  <li>be a comprehensive software solution. The DAK aims to provide generic business requirements and not to design specific software solutions;</li>
+  <li>review other tools in the market for exhaustiveness of solution.</li>
+</ul>
+
+<p>The authoring of a DAK should follow a structured process. The picture below presents the high-level DAK development process as used by WHO.</p>
+
+<p><img src="https://github.com/user-attachments/assets/d6aca7b5-9cd1-4c91-87ef-92972603e31d" alt="DAK development process"/></p>
+
+<p>This represents generic process guidance, and DAK developers should further tailor the described process and steps to their specific context and needs.</p>
+
+<h3 id="1-plan">1. Plan</h3>
+
+<p>Comprehensive planning is essential for the successful development of a DAK. The following template can be used for planning the below-mentioned activities:  [<a href="https://www.checkifwecanshare.com">DAK development plan</a>]</p>
+
+<p><strong>Note for WHO programme teams:</strong> please contact the digital health and innovations (DHI) team at <a href="mailto:smart@who.int">smart@who.int</a> if you are interested in developing a DAK, to receive appropriate guidance and WHO-specific artefacts (templates, procedures, etc.).</p>
+
+<p>Key activities in this phase:</p>
+
+<ol>
+  <li>Scoping
+    <ul>
+      <li>define the scope
+        <ul>
+          <li>DAK developers should start defining the DAK scope by looking for answers to the following questions:
+            <ul>
+              <li>why is worthwhile developing a DAK?</li>
+              <li>who is the target audience?</li>
+              <li>do similar products exist?</li>
+              <li>what gaps it will address?</li>
+              <li>how will the DAK align with upcoming publications (if any)?</li>
+              <li>…</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>establish the development process to be used for developing the DAK components
+        <ul>
+          <li>agile development methods are recommended because of their iterative and incremental nature, efficient feedback loops, focus on the client and reduced process waste;</li>
+          <li><a name="l737">​</a>an approach, used by WHO in developing DAKs, is detailed <a href="#scrum_framework">here</a>.</li>
+        </ul>
+      </li>
+      <li>determine the tools to be used for project tracking, communication, and DAK components design [for example the tool to design business processes based on the Business Process Model and Notation (BPMN) standard];</li>
+      <li>assess the necessary resources to develop the DAK, including securing an adequate budget for each step of DAK development.</li>
+      <li>…</li>
+    </ul>
+  </li>
+  <li>Define clear roles and responsibilities with the stakeholders
+    <ul>
+      <li>engage key stakeholders and stewards of the guidelines:
+        <ul>
+          <li>to ensure an accurate and comprehensive interpretation of the WHO guidelines and other normative products. It is important to ensure that the authors of the source documents or the domain experts of a specific health area are actively engaged, if not leading, in the collaborative development of these DAKs;</li>
+          <li>developing a DAK should be seen as a department-wide effort. Therefore, spreading the word, having informative presentations about SMART guidelines and DAK within the department, and involving key persons from relevant health areas could be of great help in the long term;</li>
+          <li>collaboration with other departments should be considered as well, because there might be overlapping components, such as indicators or data items. For example: TB and HIV indicators and data items.</li>
+        </ul>
+      </li>
+      <li>define the RASCI matrix (the RASCI matrix from the [<a href="https://www.checkifwecanshare.com">DAK development plan</a>] can be used as a starting point).</li>
+    </ul>
+  </li>
+  <li>Define the timeline of activities:
+    <ul>
+      <li>draft the project roadmap with estimates for each phase and key milestone dates;</li>
+      <li>Plan consultations with the technical SMEs:
+        <ul>
+          <li>define a meeting cadence for the consultations with the technical SMEs (Subject Matter Experts). The cadence of meetings can be influenced by the development process utilized, for example, if an agile methodology is used, with development performed in sprints, the cadence of meetings might be dictated by the sprints cadence;</li>
+          <li>define a format for consultations that work with the SMEs:
+            <ul>
+              <li>workshops (in-person or online);</li>
+              <li>in-person country visits;</li>
+              <li>any other.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Gather L1 source documents:
+    <ul>
+      <li>it is important to understand how many normative products (guidelines and other associated publications) will need to be incorporated into the DAK in order to understand the full level of effort required for development, impacting timelines and resourcing;</li>
+      <li>the WHO DAKs were not built based on a single guideline document but on a multitude of WHO guidelines and other normative products that have been published by WHO. For example, the ANC DAK was created not only based on the WHO ANC Guidelines but also on 8 other normative products issued by WHO.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-develop">2. Develop</h3>
+<h4 id="dak-components">DAK components</h4>
+<p>The DAK consists of 9 interlinked components: (1) health interventions and associated recommendations; (2) generic personas; (3) user scenarios; (4) generic business processes and workflows; (5) core data elements; (6) decision-support logic; (7) scheduling logic; (8) indicators and reporting requirements; and (9) high-level functional and non-functional requirements. Some of the dependencies between the components are:</p>
+
+<ul>
+  <li>the health interventions and recommendations component should be first drafted in order to have a better understanding of the scope;</li>
+  <li>the actors in the user scenarios and business processes represent the personas identified in component 2 “Generic personas”;</li>
+  <li>the actions performed by the actors in the user scenarios define the activities and their sequence, presented in the workflows (component 4);</li>
+  <li>the data elements and the decision-support tables are linked to activities from the business processes, therefore it is important to know at what step of the workflow data is captured or logic is executed. On the other hand, designing the data dictionary and/or the decision-support tables can lead to modifications in the business processes;</li>
+  <li>indicators’ calculations are defined using data elements from the data dictionary. At the same time, when listing the indicators, the author identifies missing data items;</li>
+  <li>functionalities and system capabilities depicted in the user scenarios should be captured in the list of functional and non-functional requirements (component 9).</li>
+</ul>
+
+<p>The diagram below presents the DAK components and the main relationships between them:</p>
+
+<p><img src="https://github.com/user-attachments/assets/1641b936-7851-4517-96b5-a3d0b294ac8d" width="457" alt="DAK components relationship"/><br/></p>
+
+<h4 id="development-process">Development process</h4>
+<p>Because of the complex set of dependencies between the DAK components, it is advised to develop the DAK using an iterative and incremental process that helps the authors adapt and improve the content and the process along the way. Such a process is outlined below.</p>
+
+<h5 id="scrum-framework-">SCRUM framework<sup role="doc-noteref" id="fnref:1"><a rel="footnote" href="#fn:1" class="footnote">1</a></sup> <br/></h5>
+
+<p><img src="https://github.com/user-attachments/assets/1dcdea8c-a2ba-4a2e-a20d-c661d2da94fe" alt="image"/><br/></p>
+
+<p><strong>The Scrum Team</strong> consists of one Scrum Master, one Product Owner, and Developers. Within a Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of professionals focused on one objective at a time, the Product Goal.</p>
+
+<p><em>Developers</em> are the people in the Scrum Team who are committed to creating any aspect of a usable increment each Sprint.</p>
+
+<p><em>The Scrum Master</em> helps everyone understand Scrum theory and practice, both within the Scrum Team and the organization. The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework. Scrum Masters are true leaders who serve the Scrum Team and the larger organization.</p>
+
+<p><em>The Product Owner (PO)</em> is accountable for maximizing the value of the product resulting from the work of the Scrum Team. The Product Owner is also accountable for effective Product Backlog management.<br/></p>
+
+<p><img src="https://github.com/user-attachments/assets/3c377b14-107e-401a-bf4c-7877de99b595" alt="image"/> <br/></p>
+
+<p><strong>The SCRUM Events</strong></p>
+
+<ol>
+  <li>The Sprint
+    <ul>
+      <li>fixed length events of one month or less to create consistency;</li>
+      <li>a new Sprint starts immediately after the conclusion of the previous Sprint;</li>
+      <li>all the work necessary to achieve the Product Goal, including Sprint Planning, Daily Scrums, Sprint Review, and Sprint Retrospective, happens within Sprints.</li>
+    </ul>
+  </li>
+  <li>Sprint Planning (What can be done this Sprint? How will the chosen work get done?)
+    <ul>
+      <li>Goal: plan and breakdown the work for the upcoming sprint;</li>
+      <li>Input: projected capacity (working days), latest sprint results, Product Backlog, past performance;</li>
+      <li>Output: Sprint Goal and the Sprint backlog with items decomposed into small tasks;</li>
+      <li>Duration: maximum of eight hours for a one-month Sprint;</li>
+      <li>Participants: SCRUM team. The Scrum Team may also invite other people to attend Sprint Planning to provide advice.</li>
+    </ul>
+  </li>
+  <li>Daily SCRUM
+    <ul>
+      <li>Daily Scrums improve communications, eliminate other meetings, identify impediments, highlight and promote quick decision-making, and improve the team’s level of knowledge;</li>
+      <li>Goal: to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as necessary, adjusting the upcoming planned work;</li>
+      <li>Input: Sprint backlog, Sprint Goal;</li>
+      <li>Output: A plan for the following 24H;</li>
+      <li>Duration: 15 min;</li>
+      <li>Participants: SCRUM team.</li>
+    </ul>
+  </li>
+  <li>Refinement meeting
+    <ul>
+      <li>Goal: Clarify work to be done (Product Backlog Items);</li>
+      <li>Input: Product Backlog;</li>
+      <li>Output: Refined stories. Estimated stories;</li>
+      <li>Duration: TBD;</li>
+      <li>Participants: SCRUM team. Other people can be invited to provide advice, such as SMEs.</li>
+    </ul>
+  </li>
+  <li>Sprint Review
+    <ul>
+      <li>Goal: inspect the outcome of the Sprint and determine future adaptations;</li>
+      <li>Input: Previous Sprint Backlog, Next Sprint backlog;</li>
+      <li>Output: Happy stakeholders;</li>
+      <li>Duration: TBD (maximum of four hours for a one-month Sprint);</li>
+      <li>Participants: All stakeholders can participate.</li>
+    </ul>
+
+    <p>Note: This is an informal meeting, not a status meeting. The goal of this meeting is to elicit feedback and foster collaboration.</p>
+  </li>
+  <li>Retrospective meeting
+    <ul>
+      <li>Goal: plan ways to increase quality and effectiveness;</li>
+      <li>Input: Feedback provided by the SCRUM team members;</li>
+      <li>Output: Action items (Improvements);</li>
+      <li>Duration: TBD (maximum of three hours for a one-month Sprint);</li>
+      <li>Participants: SCRUM team.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>SCRUM artefacts</strong></p>
+
+<ol>
+  <li>The Product Backlog
+    <ul>
+      <li>the central source of requirements and work to be performed;</li>
+      <li>the PO is responsible for the Product Backlog, including its content, availability, and ordering;</li>
+      <li>the Product Backlog lists all features, functions, requirements, enhancements, and fixes that constitute the changes to be made to the product (in our case the DAK);</li>
+      <li>anyone can add items in the Product Backlog but those would need to be discussed/clarified within the PO before the work is started on those items.</li>
+    </ul>
+
+    <p><a name="l1066">​</a>Note: <a href="www.checkifwecanshare.com">The DAK development plan</a> could be used as the DAK roadmap and as a source for the Product Backlog.</p>
+  </li>
+  <li>The Sprint Backlog
+    <ul>
+      <li>the Sprint Backlog is a highly visible, real-time picture of the work that the SCRUM team plans to accomplish during the Sprint;</li>
+      <li>belongs solely to the SCRUM team.</li>
+    </ul>
+  </li>
+  <li>Increment
+    <ul>
+      <li>an Increment is a concrete steppingstone toward the Product Goal;</li>
+      <li>each Increment is additive to all prior Increments.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The 4 big steps to develop a DAK are presented below:</p>
+
+<h4 id="21-review-l1"><em>2.1 Review L1</em></h4>
+
+<p>Review the L1 (the narrative layer of the SMART guidelines) documentation, such as the WHO guidelines and other normative products. Additionally, take the opportunity to identify and assess existing digital artefacts developed for the health area that integrate the L1 guidance, for example, mobile applications, knowledge-sharing platforms, and eLearning portals. Remember, the purpose of this exercise is to develop a big-picture view and not to review tools in the market for exhaustiveness of solution.</p>
+
+<h4 id="22-fill-in-dak-templates"><em>2.2 Fill in DAK templates</em></h4>
+
+<p>Build the digital adaptation kit according to the templates: to ensure a standardised documentation method for presenting the software requirements, which will allow for facilitated adaptation and comparison across geographies and health domains.</p>
+
+<p>Prefill DAK components by using the templates available at <a href="https://linkToTheL2templatesPage">this location.</a> Please review and follow the instructions from the templates that explain how to fill in the documents.</p>
+
+<p>For each component:</p>
+
+<ol>
+  <li><strong>Health interventions and recommended interventions</strong> - compile a list of health interventions and recommendations, based on narrative guidelines and guidance, that you wish to ‘translate’ into the DAK. This list should be based on existing WHO guidelines and other normative products  and the <a href="https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area">UHC list of essential interventions</a>;</li>
+  <li><strong>Generic personas</strong> - create generic personas based on task-shifting guidelines and/or ground-truthing interviews with real end users in selected contexts and countries;</li>
+  <li><strong>User scenarios</strong> - create high-level narratives based on a compilation of the actual context the majority number of end users would be operating in;</li>
+  <li><strong>Generic business processes and workflows</strong> - based on content in the narrative documents (SMART guidelines L1), domain expertise, and real-life observations in selected contexts and countries;</li>
+  <li><strong>Core data elements</strong> - based on data elements needed for service delivery and indicator reporting, which are described in the WHO guidelines and other normative products; domain expertise; and real data needs in selected contexts and countries;</li>
+  <li><strong>Decision-support logic</strong> - based on logic embedded and described in WHO guidelines and other normative products;</li>
+  <li><strong>Scheduling logic -</strong> based on scheduling logic embedded and described in WHO guidelines and other normative products;</li>
+  <li><strong>Indicators and reporting requirements</strong> - based on WHO guidelines and other normative products;</li>
+  <li><strong>Core functional and non-functional requirements</strong> - based on WHO guidelines and other normative products and actual needs from real people in selected contexts and countries.</li>
+</ol>
+
+<p>It is worth mentioning that is not mandatory to fill in content for all DAK components.  Components can be skipped if not relevant to the health area. In that case, it should be clearly stated in the text of the DAK that there is no content developed for the respective component.</p>
+
+<p>Follow the approach outlined below to streamline the process.<br/></p>
+
+<p><img src="https://github.com/user-attachments/assets/cf454d57-ef02-4dc9-8fd5-65d19b6fe28c" alt="Develop DAK components"/> <br/></p>
+
+<p>The first steps should be identifying the health interventions and recommendations, personas, user scenarios and key business processes specific to the health area. This will be the baseline for developing the rest of the components as it helps clarify further the scope, identify the actors and define the client’s journey on receiving health care services pathway.</p>
+
+<p>Some important aspects to consider while developing the above-mentioned components:</p>
+<ul>
+  <li><strong>Personas</strong>:
+    <ul>
+      <li>Personas may be identified/detailed in the following ways:
+        <ul>
+          <li>through L1 normative guidance which refers to specific personas;</li>
+          <li>through consultations with SMEs which help identify personas participating in certain workflows;</li>
+          <li>through in-person interviews at facilities;</li>
+        </ul>
+      </li>
+      <li>The personas providing care, described in the DAK, might be practising activities in private, public or both types of health clinics.</li>
+    </ul>
+  </li>
+  <li><strong>User scenarios</strong>:
+    <ul>
+      <li>illustrate user scenarios in the DAK that describe typical interactions that one would expect to happen in the specific health programme area. Consider developing a user scenario for each clinical business process, for example, screening, diagnosis, treatment, etc.;</li>
+      <li>in some cases, it could be helpful to include scenarios which are intricate in terms of normative guidance, so that the reader better understands how the system will be used in those settings.</li>
+    </ul>
+  </li>
+  <li><strong>Business processes:</strong>
+    <ul>
+      <li>create the diagram reflecting the overview of key business processes for the health area;</li>
+      <li>the overview diagram and the specific diagrams for each business process should follow the <a href="https://www.bpmn.org/">BPMN standard</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Dedicate enough time to assimilate the knowledge gathered so far and conceptualize the big picture. Create a sketch of all the ideas and review if all the dots connect or if there are gaps. Optionally, creating a <a href="https://en.wikipedia.org/wiki/Concept_map">concept map</a> can help put ideas together.</p>
+
+<p>The next step is to develop the user scenario(s), workflow description, core set of data elements, decision-support logic, scheduling logic, indicators and functional and non-functional requirements for each business process identified in the previous step. Important aspects to consider while developing these components:</p>
+
+<ul>
+  <li><strong>Business processes and workflows:</strong>
+    <ul>
+      <li>the business process workflow should capture 80% of the scenario leaving out 20% for adaptations. The level of detail should be tied to the necessity of detail in WHO recommendations. If the level of detail included in the workflow becomes applicable in one context but not relevant in another – then probably simplification of the workflow and generalizing the workflow is needed;</li>
+      <li>you might illustrate and describe the “Counselling” and “Obtain informed consent” activities:
+        <ul>
+          <li>as part of only specific workflows;</li>
+          <li>as independent workflows;</li>
+          <li>consider that those actions occur throughout the entire healthcare process and there is no exact place in the workflows where they should be described.</li>
+        </ul>
+
+        <p>Reflect on this and choose what best fits your DAK.</p>
+      </li>
+      <li>getting consensus on workflows can get challenging and some tips here might help:
+        <ul>
+          <li>the workflow should be high-level enough to stay valid in a global (or country) context and allow for contextualization. Do not include low-level details where the processes might not necessarily stay true across countries or country contexts;</li>
+          <li>if the guidelines are not recently updated and the technical team has ideas that are forward-looking for the system, go for the future state of the systems along with sign-off on the same with technical teams.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Core data elements</strong>
+    <ul>
+      <li>only data that need to be stored for reporting, auditing, decision-support logic, aggregation and exchange should be captured in the data dictionary. Any data element that is needed for secondary calculation that does not have an explicit need to store, report, audit, use in decision-support logic, aggregate or exchange should not be captured in the data dictionary (e.g. data elements that are needed for the user interface [UI] of the reference application to be more user-friendly should not be captured).</li>
+    </ul>
+  </li>
+  <li><strong>Decision-support logic</strong>
+    <ul>
+      <li>the decision support and logic table should strictly follow the normative contents of the <a href="https://www.omg.org/spec/DMN/1.4/Beta1/PDF">DMN standard</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Indicators</strong>
+    <ul>
+      <li>the focus should be on the indicators that can be derived from the data collected and available at the primary health care level. This is in line with the principle "collect once, use many times” and highlights the importance of reducing the reporting burden for the health workers, allowing them to focus instead on providing care. For higher-level reporting needs, such as national and global aggregated indicators, the authors should refer to the <a href="https://worldhealthorg.sharepoint.com/sites/WorldHealthDataHubPortal/SitePages/Wiki.aspx?source=https%3a//worldhealthorg.sharepoint.com/sites/WorldHealthDataHubPortal/SitePages/Forms/ByAuthor.aspx#key-contacts">World Health Data Hub metamodel</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Core functional and non-functional requirements</strong>
+    <ul>
+      <li>functional and non-functional requirements should be restricted to what the requirements are coming from the L1 recommendations in terms of the health and data content and decision support logic;</li>
+      <li>any other best practice requirements that are nice to have in terms of user-friendliness or cybersecurity can be shared as examples of requirements in a separate table which is not to be included in the compliance checks in the digital clearinghouse.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>As soon as a DAK component is drafted, it should be first reviewed and validated by the health area technical officer(s) that coordinate(s) the work on the DAK. They should be considered part of the team that develops the DAK content and not seen as external stakeholders that only perform high-level reviews.</p>
+
+<p>Some items to review at this stage:</p>
+<ul>
+  <li>do the business processes contain any specific activities that are too specific and may not hold across various countries?</li>
+  <li>are there any decision support tables that rely on 10+ inputs? Is it possible to split the decision-support table into separate decision-support tables?</li>
+  <li>are there any gaps or key changes to make?</li>
+  <li>if some concepts could be approached in multiple ways – define the alternatives and review the pros and cons.</li>
+  <li>are the components defined as software neutral and do not assume any specific software or device?</li>
+  <li>do the personas identified connect with the personas identified in other components of the DAK, for example, in the business processes, in functional requirements?</li>
+  <li>is the same persona named differently in different components (e.g. "Health Worker" and "Health Care Worker")?</li>
+</ul>
+
+<p>The DAK components should be developed to the extent possible before meeting the larger group of SMEs for consultations. This ensures more efficient use of SMEs’ time during the consultations and helps draft a detailed, specific list of questions to review during the sessions.</p>
+
+<h4 id="23-validate-dak-content-with-smes"><em>2.3 Validate DAK content with SMEs</em></h4>
+
+<p>As with many documents, the digital adaptation kits will need to go through a series of reviews and be curated iteratively to ensure the buy-in of all key stakeholders and accuracy in the development of each DAK component. Once the DAK is drafted, consult the SMEs for a review of clinical content for each component of the DAK. The purpose is to gather feedback, clarify doubts and refine the DAK content.</p>
+
+<p>Prepare upfront the meetings with SMEs:</p>
+<ul>
+  <li>create an agenda for the consultation meeting;</li>
+  <li>create a list of questions to discuss with the SMEs;</li>
+  <li>create visual aids to go through the meeting.</li>
+</ul>
+
+<p>During the consultations, keep the focus strictly on the clinical recommendations from the L1 guidance and primary care settings for the use cases.
+At this time ground-truthing exercises should be conducted as well with the technical SMEs from the health programme area. Oftentimes it is hard to create useful documents at the global or national level due to the nature of being far from the actual work happening on the ground. Consultations with “in the country”/”in the region” partners are encouraged which will help validate DAK components, such as personas, user scenarios, and workflows. It can be useful to conduct interviews and observations based on human-centred design methods in a series of multiple countries and contexts to understand the ‘80%’ commonality across all those settings. This will help inform you on what the ‘80%’ of your DAK should consist of. However, take utmost care to not include country-specific uses in the DAK directly without distilling it out or generalizing it.</p>
+
+<h4 id="24-incorporate-feedback"><em>2.4 Incorporate feedback</em></h4>
+
+<p>Incorporate feedback received from the technical teams and go through the review L1, drafting, and content validation steps again, for each identified business process.</p>
+
+<p>Before starting a new iteration of the <em>Review L1-Fill in DAK templates-Validate DAK content with SMEs- Incorporate feedback</em> process, review the DAK to check if there is room for improvement of components, or if there is an easier way to represent certain concepts:</p>
+<ul>
+  <li>review the decision support table to see if the rules could be refactored or condensed;</li>
+  <li>review the data dictionary. For example, check if all the data elements of type "Boolean" are necessary. Could we group "Booleans" as "List" data elements?</li>
+  <li>review the business processes. For example, check if some activities are repeating. Could we group those activities and create a sub-process or a new business process referenced from the main flow?</li>
+</ul>
+
+<h3 id="3-publish-dak">3. Publish DAK</h3>
+
+<p>Once the full DAK is drafted and ready for the publishing phase, do a self-review and fix any gaps, issues and misses. Checklist of items to review:</p>
+<ul>
+  <li>the correct template versions were used;</li>
+  <li>any required cells in the data dictionary/decision support/indicators or any other templates are not left blank;</li>
+  <li>references are marked at each relevant point;</li>
+  <li>data is deduplicated and no redundancies are present;</li>
+  <li>all components have sufficient annotations and remarks that explain how the elements are to be interpreted/adapted/implemented;</li>
+  <li>notations for process IDs, activity IDs, and labels’ names are followed correctly and consistently.</li>
+</ul>
+
+<p>Follow your organisation's relevant verification and clearance processes and publish the DAK. Consider publishing the content under an open-source license so that other organizations or countries can reuse it.</p>
+
+<p><strong>Note for WHO programme teams</strong>: please check the internal, WHO-specific, publication procedure, <code class="language-plaintext highlighter-rouge">available here</code>, and contact the (DHI) team at smart@who.int to receive further guidance related to the WHO clearance and publication process.</p>
+
+<div role="doc-endnotes" class="footnotes">
+  <ol>
+    <li role="doc-endnote" id="fn:1">
+      <p><a href="https://scrumguides.org/">Scrum Guides</a>.&nbsp;<a role="doc-backlink" href="#fnref:1" class="reversefootnote">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Sep 27, 2024 09:20+0000">2024-09-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues" target="_blank">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="changes.html" target="_blank">Change Log</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

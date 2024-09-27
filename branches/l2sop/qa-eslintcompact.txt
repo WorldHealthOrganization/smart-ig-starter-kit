@@ -1,0 +1,8 @@
+IgStarterKit
+=========================================
+
+Generic: line 0, col 0, Error - The link '#scrum_framework' for "here" cannot be resolved (valid targets: [22-fill-in-dak-templates, 2-1-review-l1, markdown-toc-1-plan, project-nav, publish-box, markdown-toc-3-publish-dak, segment-post-footer, 1-plan, development-process, 21-review-l1, fn:1, who-logo, 2-2-fill-in-dak-templates, markdown-toc-2-develop, top, stripe, authoring-a-dak, segment-footer, language-selector, segment-content, 24-incorporate-feedback, segment-header, fnref:1, dak-components, bottom, 3-publish-dak, 2-develop, scrum-framework1, fhir-logo, scrum-framework-, family-nav, ig-status, markdown-toc, 2-3-validate-dak-content-with-smes, 23-validate-dak-content-with-smes, segment-navbar, segment-breadcrumb, 2-4-incorporate-feedback]) (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'www.checkifwecanshare.com' for "The DAK development plan" cannot be resolved (NOTFOUND)
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.6.28

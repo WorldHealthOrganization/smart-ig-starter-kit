@@ -1,0 +1,23 @@
+{
+  "packages" : [
+    {
+      "path" : "ig-starter-kit/package-list.json",
+      "package-id" : "smart.who.int.ig-starter-kit",
+      "title" : "SMART IG STARTER KIT",
+      "canonical" : "http://smart.who.int/ig-starter-kit",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-ig-starter-kit",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2024-06-20",
+        "path" : "http://smart.who.int/ig-starter-kit/v1.0.0"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2024-06-20",
+        "path" : "http://smart.who.int/ig-starter-kit/v1.0.0"
+      }
+    }
+  ]
+}

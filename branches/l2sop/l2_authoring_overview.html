@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>L2 Authoring Overview - SMART Guidelines Starter Kit v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">FAQ</a>
+      </li>
+      <li>
+        <a href="l2_references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li>
+        <a href="translations.html">Multi-Language Implementations</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>L2 Authoring Overview</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 1.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/l2sop">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/l2sop</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>L2 Authoring Overview</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#abbreviations" id="markdown-toc-abbreviations">Abbreviations</a></li>
+  <li><a href="#objective-of-this-sop" id="markdown-toc-objective-of-this-sop">Objective of this SOP</a></li>
+  <li><a href="#what-is-a-dak" id="markdown-toc-what-is-a-dak">What is a DAK?</a></li>
+  <li><a href="#why-is-a-dak-needed" id="markdown-toc-why-is-a-dak-needed">Why is a DAK needed?</a></li>
+  <li><a href="#target-audience-for-the-dak" id="markdown-toc-target-audience-for-the-dak">Target audience for the DAK?</a></li>
+  <li><a href="#uses-of-the-dak" id="markdown-toc-uses-of-the-dak">Uses of the DAK</a></li>
+</ul>
+
+</div>
+<h3 id="abbreviations">Abbreviations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Abbreviation</strong></th>
+      <th><strong>Abbreviated term</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANC</td>
+      <td>antenatal care</td>
+    </tr>
+    <tr>
+      <td>BPMN</td>
+      <td>Business Process Model and Notation</td>
+    </tr>
+    <tr>
+      <td>DAK</td>
+      <td>digital adaptation kit</td>
+    </tr>
+    <tr>
+      <td>DHI</td>
+      <td>digital health and innovations</td>
+    </tr>
+    <tr>
+      <td>DMN</td>
+      <td>Decision Model Notation</td>
+    </tr>
+    <tr>
+      <td>HMIS</td>
+      <td>health management information systems</td>
+    </tr>
+    <tr>
+      <td>PCPOSS</td>
+      <td>person-centred point of service system</td>
+    </tr>
+    <tr>
+      <td>SMART</td>
+      <td>standards-based, machine-readable, adaptive, requirements-based and testable</td>
+    </tr>
+    <tr>
+      <td>SME</td>
+      <td>subject matter expert</td>
+    </tr>
+    <tr>
+      <td>SOP</td>
+      <td>standard operating procedure</td>
+    </tr>
+    <tr>
+      <td>TB</td>
+      <td>tuberculosis</td>
+    </tr>
+    <tr>
+      <td>TPT</td>
+      <td>tuberculosis preventive treatment</td>
+    </tr>
+    <tr>
+      <td>UHC</td>
+      <td>universal health coverage</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="objective-of-this-sop">Objective of this SOP</h3>
+<p>The standard operating procedure (SOP) is intended to guide WHO staff and technical partners who have been engaged to create a Digital Adaptation Kit (DAK) for specific health program areas (e.g., consultants, business analysts, contracted vendors). This SOP aims to establish a standardized DAK development process so that all DAKs are presented consistently.</p>
+
+<h3 id="what-is-a-dak">What is a DAK?</h3>
+<p>DAKs are operational, software-neutral, standardized documentation that distil clinical, public health and data use guidance into a format that can be transparently incorporated into digital systems. Information detailed in the DAKs reflect generic workflow processes, data and decision-support algorithms, as derived from specific health interventions and WHO guidelines and other normative products as well as associated publications for specific health areas, including WHO normative guidance, WHO normative products, WHO guidance and their normative statements. For example, among the documents reviewed for TB DAK we have “<em>WHO consolidated guidelines on tuberculosis – Module 1: prevention (tuberculosis preventive treatment)”, “WHO consolidated guidelines on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease)”</em> but also the corresponding operational handbooks <em>“WHO operational handbook on tuberculosis – Module 1: prevention (tuberculosis preventive treatment)”</em> and <em>“WHO operational handbook on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease)”</em> as well as the associated publication <em>“Framework for collaborative action on tuberculosis and comorbidities”.</em></p>
+
+<p>The outputs of the DAKs are intentionally generic and need to be contextualized to local policies and requirements.</p>
+
+<h3 id="why-is-a-dak-needed">Why is a DAK needed?</h3>
+<p>Evidence-based recommendations, such as those featured in WHO guidelines and other normative products, are often only available in a narrative format. Trying to adopt these recommendations often results in:</p>
+<ul>
+  <li>a resource-intensive process to elaborate the normative statements into specifications needed for digital systems;</li>
+  <li>subjective interpretation by technology partners, which can lead to inaccuracies and inconsistencies;</li>
+  <li>inability to verify clinical content within these systems, potentially leading to adverse health outcomes and other unintended effects.</li>
+</ul>
+
+<p>A DAK outlines the content contained in WHO guidelines and other normative products into a business requirements document to:</p>
+<ul>
+  <li>provide a common language and understanding across various audiences, in particular between health programme managers and technology partners, enabling key stakeholders to have a joint understanding of the health content within the digital system, with a transparent mechanism to review the validity and accuracy of the health content;</li>
+  <li>support adherence to evidence-based recommendations with fidelity and facilitate consistent applications and implementation of those recommendations in point-of-service services and applications;</li>
+  <li>provide a starting point for the business requirements gathering process to accelerate the development of a person-centred point of service system (PCPOSS), reducing the time and resources needed;</li>
+  <li>provide a benchmark of minimum requirements in a software service or application for the specified scope.</li>
+</ul>
+
+<h3 id="target-audience-for-the-dak">Target audience for the DAK?</h3>
+
+<p>The primary target audience for a DAK is:</p>
+<ul>
+  <li>Health programme managers
+    <ul>
+      <li>Use:
+        <ul>
+          <li>create roadmaps and plan activities needed for the implementation of the clinical practices and policies for the health programme area;</li>
+          <li>estimate costs;</li>
+          <li>overseeing and monitoring the implementation of the clinical practices and policies for the health programme area.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Business analysts
+    <ul>
+      <li>Use: apply the DAK framework in the process of translation of health-system processes and guidance documents into standards-compliant software requirements for developing PCPOSS.</li>
+    </ul>
+  </li>
+  <li>Digital health informaticians (software architects, software developers, quality assurance specialists, etc.)
+    <ul>
+      <li>Use:
+        <ul>
+          <li>estimate effort;</li>
+          <li>implement the DAK in machine-readable, computable format.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Country Teams to adapt
+    <ul>
+      <li>Use: adapt and localize the content as per country program policies</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The content therefore should keep these audiences in mind and ensure that all the DAK components offer:</p>
+<ul>
+  <li>easy readability for humans;</li>
+  <li>clarity in outputs expected, including thoughts/annotations for times when there could be overlaps or ambiguity;</li>
+  <li>annotations for country teams and implementation teams that can help with the interpretation of guidance wherever applicable.</li>
+</ul>
+
+<h3 id="uses-of-the-dak">Uses of the DAK</h3>
+<p><img src="https://github.com/user-attachments/assets/0828cbe6-6638-448d-bf49-8eab112b69f9" alt="Uses of DAK" /></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Sep 27, 2024 09:20+0000">2024-09-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="changes.html">Change Log</a>
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/ig-starter-kit/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

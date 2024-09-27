@@ -1,0 +1,12 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 1
+IG Publisher Version: 1.6.10
+Generated Thu Jun 06 23:41:39 UTC 2024. FHIR version 5.0.0 for smart.who.int.ig-starter-kit#0.2.1 (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 0 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==
+INFORMATION: ImplementationGuide/smart.who.int.ig-starter-kit: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

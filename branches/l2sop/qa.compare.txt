@@ -1,0 +1,13 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+$--
+Generated $--. FHIR version $-- for smart.who.int.ig-starter-kit#$-- (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 2 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/l2_dak_authoring.html#/html/body/div/div/div/div/div/ol/li/ul/li/ul/li/a at Line 411, column 73: The link '#scrum_framework' for "here" cannot be resolved (valid targets: [22-fill-in-dak-templates, 2-1-review-l1, markdown-toc-1-plan, project-nav, publish-box, markdown-toc-3-publish-dak, segment-post-footer, 1-plan, development-process, 21-review-l1, fn:1, who-logo, 2-2-fill-in-dak-templates, markdown-toc-2-develop, top, stripe, authoring-a-dak, segment-footer, language-selector, segment-content, 24-incorporate-feedback, segment-header, fnref:1, dak-components, bottom, 3-publish-dak, 2-develop, scrum-framework1, fhir-logo, scrum-framework-, family-nav, ig-status, markdown-toc, 2-3-validate-dak-content-with-smes, 23-validate-dak-content-with-smes, segment-navbar, segment-breadcrumb, 2-4-incorporate-feedback])
+ERROR: /github/workspace/output/l2_dak_authoring.html#/html/body/div/div/div/div/div/ol/li/p/a at Line 561, column 15: The link 'www.checkifwecanshare.com' for "The DAK development plan" cannot be resolved
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==
