@@ -77,14 +77,14 @@ The DAK consists of 9 interlinked components: (1) health interventions and assoc
 
 The diagram below presents the DAK components and the main relationships between them:
 
-<img width="457" alt="DAK components relationship" src="https://github.com/user-attachments/assets/1641b936-7851-4517-96b5-a3d0b294ac8d">
+<img width="457" alt="DAK components relationship" src="https://github.com/user-attachments/assets/1641b936-7851-4517-96b5-a3d0b294ac8d"><br>
 
 #### Development process
 Because of the complex set of dependencies between the DAK components, it is advised to develop the DAK using an iterative and incremental process that helps the authors adapt and improve the content and the process along the way. Such a process is outlined below.
 
-##### SCRUM framework[^1] 
+##### SCRUM framework[^1] <br>
 
-![image](https://github.com/user-attachments/assets/1dcdea8c-a2ba-4a2e-a20d-c661d2da94fe)
+![image](https://github.com/user-attachments/assets/1dcdea8c-a2ba-4a2e-a20d-c661d2da94fe)<br>
 
 **The Scrum Team** consists of one Scrum Master, one Product Owner, and Developers. Within a Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of professionals focused on one objective at a time, the Product Goal.
 
@@ -92,9 +92,9 @@ _Developers_ are the people in the Scrum Team who are committed to creating any 
 
 _The Scrum Master_ helps everyone understand Scrum theory and practice, both within the Scrum Team and the organization. The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework. Scrum Masters are true leaders who serve the Scrum Team and the larger organization.
 
-_The Product Owner (PO)_ is accountable for maximizing the value of the product resulting from the work of the Scrum Team. The Product Owner is also accountable for effective Product Backlog management.
+_The Product Owner (PO)_ is accountable for maximizing the value of the product resulting from the work of the Scrum Team. The Product Owner is also accountable for effective Product Backlog management.<br>
 
-![image](https://github.com/user-attachments/assets/3c377b14-107e-401a-bf4c-7877de99b595)
+![image](https://github.com/user-attachments/assets/3c377b14-107e-401a-bf4c-7877de99b595) <br>
 
 **The SCRUM Events**
 
@@ -169,17 +169,6 @@ Review the L1 (the narrative layer of the SMART guidelines) documentation, such 
 
 Build the digital adaptation kit according to the templates: to ensure a standardised documentation method for presenting the software requirements, which will allow for facilitated adaptation and comparison across geographies and health domains.
 
-The Digital Adaptation Kit (DAK) consists of 6 documents, with Excel spreadsheets that cover 5 of the 9 key components of a DAK:
-
- **File** | **Format** | **Comments** |
---|--|--
-The “main” DAK document _(is the template for the final PDF)_|Written in Word document, published in PDF|The template for the “main” DAK document. The narrative text can and should be changed as needed for each specific health domain. However, highlighted throughout the document are places where health domain specificity should be added. <br>The following components: Health interventions and recommendations, generic personas, user scenarios and other narrative components can be directly edited and drafted within the DAK document template.<br>The business process workflow diagrams would be generated in another tool such as. [Microsoft Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software), [Camunda Modeler](https://camunda.com/download/modeler/), [drawio.com](https://www.drawio.com/), etc. The selected tool should:<br> - be able to cover the needs in terms of BPMN notation (see the table “Business process symbols used in workflows” from the document);<br> - be able to export the diagrams in .bpmn format; <br> - not pose issues in terms of licencing. <br> The workflow diagrams should then be included in the main DAK document as an image file. <br> For the data dictionary, decision support logic, scheduling logic, indicators and performance metrics, and functional and non-functional requirement components, it is recommended that they are finalized in the Excel spreadsheet first before copying content over into the “main” DAK document.
-Core data dictionary|Excel spreadsheet|Please refer to each Excel spreadsheet for detailed instructions.
-Decision support logic|Excel spreadsheet|Please refer to each Excel spreadsheet for detailed instructions.
-Scheduling logic|Excel spreadsheet|Please refer to each Excel spreadsheet for detailed instructions.
-Indicators and performance metrics|Excel spreadsheet|Please refer to each Excel spreadsheet for detailed instructions.
-Functional and non-functional requirements|Excel spreadsheet|Please refer to each Excel spreadsheet for detailed instructions.
-
 Prefill DAK components by using the templates available at [this location.](https://linkToTheL2templatesPage) Please review and follow the instructions from the templates that explain how to fill in the documents.
 
 For each component:
@@ -196,9 +185,9 @@ For each component:
 
 It is worth mentioning that is not mandatory to fill in content for all DAK components.  Components can be skipped if not relevant to the health area. In that case, it should be clearly stated in the text of the DAK that there is no content developed for the respective component.
 
-Follow the approach outlined below to streamline the process.
+Follow the approach outlined below to streamline the process.<br>
 
-![Develop DAK components](https://github.com/user-attachments/assets/cf454d57-ef02-4dc9-8fd5-65d19b6fe28c)
+![Develop DAK components](https://github.com/user-attachments/assets/cf454d57-ef02-4dc9-8fd5-65d19b6fe28c) <br>
 
 The first steps should be identifying the health interventions and recommendations, personas, user scenarios and key business processes specific to the health area. This will be the baseline for developing the rest of the components as it helps clarify further the scope, identify the actors and define the client’s journey on receiving health care services pathway.
 
