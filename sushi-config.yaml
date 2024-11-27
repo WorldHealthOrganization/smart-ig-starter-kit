@@ -9,13 +9,12 @@ name: IgStarterKit
 status: draft
 version: 1.1.0
 fhirVersion: 5.0.0
-date: 2024-06-19
 # copyright:
 copyrightYear: 2023+
 releaseLabel: "ci-build"
 title: "SMART Guidelines Starter Kit"
 description: "SMART Guidelines Starter Kit with L2 and L3 SOP"
-license: CC0-1.0
+license: CC-BY-SA-3.0-IGO
 
 # dependencies:
 #  hl7.fhir.core:
@@ -65,10 +64,9 @@ menu:
     Publication: 'ig_publication.html'
   L2 Authoring:
     Overview: 'l2_authoring_overview.html'
-    Authoring a DAK : 'l2_dak_authoring.html'
-    L2 Templates: 'l2_templates.html'
-    FAQ : 'l2_faq.html'
-    References: 'l2_references.html'
+    Authoring a L2 DAK : 'l2_dak_authoring.html'
+    L2 DAK Templates: 'l2_templates.html'
+    L2 DAK FAQ : 'l2_faq.html'
   L3 Authoring:
     Overview: 'authoring_overview.html'
     Commons and Governance: 
@@ -126,13 +124,11 @@ pages:
   l2_authoring_overview.md:
     title: "L2 Authoring Overview"
     l2_dak_authoring.md:
-      title: "Authoring a DAK"
+      title: "Authoring a L2 DAK"
     l2_templates.md:
-      title: "L2 Templates"
+      title: "L2 DAK Templates"
     l2_faq.md:
-      title: "FAQ"
-    l2_references.md:
-      title: "References"
+      title: "L2 DAK FAQ"
   authoring_overview.md:
     title: "L3 Authoring Overview"
     gov_overview.md:
