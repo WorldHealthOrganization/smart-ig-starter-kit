@@ -4,17 +4,165 @@ While creating a WHO DAK, the focus is to transcribe health and data recommendat
 
 The DAK consists of 9 interlinked components: (1) health interventions and recommendations; (2) generic personas; (3) user scenarios; (4) generic business processes and workflows; (5) core data elements; (6) decision-support logic; (7) scheduling logic; (8) indicators and performance metrics; and (9) high-level functional and non-functional requirements. The table below provides an overview of each of the contributing components of the DAK.
 
- **Component** | **Description** | **Purpose** | **Outputs/artifacts**|
---|--|--|--|
-|1. Health interventions and recommendations | Overview of the health interventions and health-specific recommendations included within this digital adaptation kit (DAK). DAKs are meant to be a repackaging and integration of L1 guidelines and guidance documents, such as WHO guidelines and other normative products and associated publications, in a particular health domain. The list of health interventions should be drawn from [the universal health coverage menu of interventions](https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area)[^1]: compiled by WHO and the digital health interventions should be extracted from the [WHO classification of digital health interventions](https://iris.who.int/handle/10665/373581)[^2]. | **Setting the stage** to understand how the DAK would be applied to person-centred point-of-service systems (PCPOSS) in the context of specific health programmes and interventions.| **List of related health interventions** based on WHO’s universal health coverage essential interventions; and <br>**List of related recommendations** based on guidelines and guidance documents.|
-|2. Generic personas|Depiction of the end users and related stakeholders who would be interacting with the digital system or involved in the care pathway.|**Contextualization** to understand the wants, needs and constraints of the end users.|**Description, competencies and essential interventions** performed by targeted personas.|
-|3. User scenarios|Narratives that describe how the different personas may interact with the digital system and with each other. <br>The user scenarios are only illustrative and are intended to give an idea of a typical workflow.|**Contextualization** to understand how the system would be used, and how it would fit into existing workflows.|Example **narrative** of how the targeted personas may interact with the system and with each other during a workflow.|
-|4. Generic business processes and workflows|A business process is a set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling, referrals. <br>Workflows are a visual representation of the progression of activities (tasks, decision points, interactions) that are performed within the business process.|**Contextualization and system design** to understand how the digital system would fit into existing workflows and how best to design the system for that purpose.|Overview **matrix** presenting the **key processes** in the specific health area;  and <br>**Workflows** for identified business processes with annotations.|
-|5. Core data elements|Data elements are required throughout the different points of the workflow. <br> These data elements are mapped to standards-based classifications and terminologies to ensure the data dictionary is compatible with other digital systems.|**System design and interoperability** to know which data elements need to be logged and how they map to other standard terminologies (e.g. ICD and LOINC) for interoperability with other standards-based systems.|List of data elements.<br>**Data dictionary** with detailed data specifications in spreadsheet format.|
-|6. Decision-support logic|Decision-support logic and algorithms to support appropriate service delivery in accordance with clinical, public health and data use guidelines.|**System design and adherence to recommended clinical practice** to know what underlying logic needs to be coded into the system.|List of decisions that need to be made throughout the encounter.<br>**Decision-support tables** in a spreadsheet format with inputs, outputs and triggers for each decision-support logic.|
-|7. Scheduling logic|Scheduling logic to support appropriate reminders for follow-up visits and services in accordance with clinical, public health and data use guidelines.|**System design and adherence to recommended clinical practice** to know what service schedules need to be coded into the system so that appropriate reminders are generated.|List of scheduling logic tables.<br>**Scheduling logic** for services in spreadsheet format.|
-|8. Indicators and performance metrics|Core set of indicators that need to be aggregated for decision-making, performance metrics, and subnational and national reporting.<br>These indicators and metrics are based on data that can feasibly be captured from a routine digital system, rather than survey-based tools.|**System design and adherence to recommended health monitoring practices** to know what calculations and secondary data use are needed for the system, based on the principle of “[collect once, use many](https://pubmed.ncbi.nlm.nih.gov/22195060/)”[^3].|**Indicators table** with numerator and denominator of data elements for calculation, along with appropriate disaggregation.|
-|9. High-level functional and non-functional requirements|A high-level list of core functions and capabilities that the system must have to meet the end users’ needs and achieve tasks within the business process.|**System design** to know what the system should be able to do.|**Tables of functional and non-functional requirements** with the intended end user of each requirement, and why that user needs that functionality in the system.|
+<table border="1">
+	<thead>
+		<tr>
+			<td width="115"><strong>&nbsp;Component</strong></td>
+			<td width="285"><strong>Description</strong></td>
+			<td width="236"><strong>Purpose</strong></td>
+			<td width="217"><strong>Outputs/ artifacts</strong></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="115">1. Health interventions and recommendations</p></td>
+			<td width="285">
+				<p>Overview of the health interventions and health-specific recommendations included within this digital adaptation kit (DAK). DAKs are meant to be a repackaging and integration of L1 guidelines and guidance documents, such as WHO guidelines and other normative products and associated publications, in a particular health domain. The list of health interventions should be drawn from <a href="https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area">the universal health coverage menu of interventions[^1]</a> compiled by WHO and the digital health interventions should be extracted from the <a href="https://iris.who.int/handle/10665/373581">WHO classification of digital health interventions[^2]</a>.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>Setting the stage</strong> to understand how the DAK would be applied to person-centred point-of-service systems (PCPOSS) in the context of specific health programmes and interventions.</p>
+			</td>
+			<td width="217">
+				<p>
+					<strong>List of related health interventions </strong>based on WHO&rsquo;s universal health coverage essential interventions; and</p>
+				<p>
+					<strong>List of related recommendations </strong>based on guidelines and guidance documents.</p>
+				<p>
+					<strong>List of digital health interventions </strong>based on the WHO classification of digital health interventions.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">2. Generic personas</td>
+			<td width="285">
+				<p>Depiction of the end users and related stakeholders who would be interacting with the digital system or involved in the care pathway.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>Contextualization</strong> to understand the wants, needs and constraints of the end users.</p>
+			</td>
+			<td width="217">
+				<p>
+					<strong>Description, competencies and essential interventions</strong> performed by targeted personas.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>3. User scenarios</p>
+			</td>
+			<td width="285">
+				<p>Narratives that describe how the different personas may interact with the digital system and with each other.</p>
+				<p>The user scenarios are only illustrative and are intended to give an idea of a typical workflow.</p>
+			</td>
+			<td width="236">
+				<p><strong>Contextualization</strong> to understand how the system would be used, and how it would fit into existing workflows.</p>
+			</td>
+			<td width="217">
+				<p>Example <strong>narrative </strong>of how the targeted personas may interact with the system and with each other during a workflow.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>4. Generic business processes and workflows</p>
+			</td>
+			<td width="285">
+				<p>A business process is a set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling, referrals.</p>
+				<p>Workflows are a visual representation of the progression of activities (tasks, decision points, interactions) that are performed within the business process.</p>
+			</td>
+			<td width="236">
+				<p><strong>Contextualization and system design </strong>to understand how the digital system would fit into existing workflows and how best to design the system for that purpose.</p>
+			</td>
+			<td width="217">
+				<p>Overview <strong>matrix </strong>presenting the<strong> key processes</strong> in the specific health area; and</p>
+				<p><strong>Workflows </strong>for identified business processes with annotations</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>5. Core data elements</p>
+			</td>
+			<td width="285">
+				<p>Data elements are required throughout the different points of the workflow.</p>
+				<p>These data elements are mapped to standards-based classifications and terminologies to ensure the data dictionary is compatible with other digital systems.</p>
+			</td>
+			<td width="236">
+				<p><strong>System design and interoperability </strong>to know which data elements need to be logged and how they map to other standard terminologies (e.g. ICD and LOINC) for interoperability with other standards-based systems.</p>
+			</td>
+			<td width="217">
+				<p>List of data elements.</p>
+				<p><strong>Data dictionary</strong> with detailed data specifications in spreadsheet format.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>6. Decision-support logic</p>
+			</td>
+			<td width="285">
+				<p>Decision-support logic and algorithms to support appropriate service delivery in accordance with clinical, public health and data use guidelines.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>System design and adherence to recommended clinical practice </strong>to know what underlying logic needs to be coded into the system.</p>
+			</td>
+			<td width="217">
+				<p>List of decisions that need to be made throughout the encounter.</p>
+				<p>
+					<strong>Decision-support tables</strong> in a spreadsheet format with inputs, outputs and triggers for each decision-support logic.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>7. Scheduling logic</p>
+			</td>
+			<td width="285">
+				<p>Scheduling logic to support appropriate reminders for follow-up visits and services in accordance with clinical, public health and data use guidelines.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>System design and adherence to recommended clinical practice </strong>to know what service schedules needs to be coded into the system so that appropriate reminders are generated.</p>
+			</td>
+			<td width="217">
+				<p>List of scheduling logic tables.</p>
+				<p>
+					<strong>Scheduling logic</strong> for services in spreadsheet format.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>8. Indicators and performance metrics</p>
+			</td>
+			<td width="285">
+				<p>Core set of indicators that need to be aggregated for decision-making, performance metrics, and subnational and national reporting.</p>
+				<p>These indicators and metrics are based on data that can feasibly be captured from a routine digital system, rather than survey-based tools.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>System design and adherence to recommended health monitoring practices</strong> to know what calculations and secondary data use are needed for the system, based on the principle of &ldquo;<a href="https://pubmed.ncbi.nlm.nih.gov/22195060/">collect once, use many[^3]</a>&rdquo;.</p>
+			</td>
+			<td width="217">
+				<p>
+					<strong>Indicators table</strong> with numerator and denominator of data elements for calculation, along with appropriate disaggregation.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="115">
+				<p>9. High-level functional and non-functional requirements</p>
+			</td>
+			<td width="285">
+				<p>A high-level list of core functions and capabilities that the system must have to meet the end users&rsquo; needs and achieve tasks within the business process.</p>
+			</td>
+			<td width="236">
+				<p>
+					<strong>System design </strong>to know what the system should be able to do.</p>
+			</td>
+			<td width="217">
+				<p>
+					<strong>Tables of functional and non-functional requirements </strong>with the intended end user of each requirement, and why that user needs that functionality in the system.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 
 Some of the dependencies between the components are:
 
@@ -27,13 +175,13 @@ Some of the dependencies between the components are:
 
 The diagram below presents the DAK components and the main relationships between them: 
 
-<img src="./L2_DAK_components_relationships.png" align:center"/>
+<img src="./L2_DAK_components_relationships.png" style="width:60%; align:center"/>
 <br clear="all"/>
 
 ### DAK development process
 The picture below presents the high-level DAK development process as used by WHO.
 
-<img src="./L2_DAK_development_process.png" align:center"/>
+<img src="./L2_DAK_development_process.png" style="width:40%; align:center"/>
 <br clear="all"/>
 
 This represents generic process guidance, and DAK developers should further tailor the below-described process and steps to their specific context and needs.
@@ -41,55 +189,89 @@ This represents generic process guidance, and DAK developers should further tail
 ### 1. Plan
 Comprehensive planning is essential for the successful development of a DAK.
 Key activities in the planning phase:
-
-1.  **Scoping**
-- define the scope
-	- the DAK development team (see step “Define clear roles and responsibilities” below) should start defining the DAK scope by looking for answers to the following questions:
-		- what is your purpose in developing a DAK?
-		- who is the target audience?
-		- do similar publications exist?
-		- what gaps it will address?
-	- establish the development process and the governance process to be used for developing the DAK components
-		- agile development methods are recommended because of their iterative and incremental nature, efficient feedback loops, focus on the client and reduced process waste (see section “Development process” from the sub-chapter “DAK development” for more information);
-		- determine ownership and key stakeholders (see step “Define clear roles and responsibilities with stakeholders” below for more information).
-- determine the tools to be used for project tracking, communication, and DAK components design [for example the tool to design business processes based on the Business Process Model and Notation ([BPMN](https://www.bpmn.org/)[^4]:) standard];
-- assess the necessary resources to develop the DAK, including securing an adequate budget for each step of the process.
-
-2. **Define clear roles and responsibilities**
-- form the DAK development team: the DAK development team is a cohesive unit of professionals that have all the skills necessary to create a DAK. It should be small (< 10 people) and nimble but big enough to complete significant work in an iteration. It can consist of programme managers, technical officer(s), clinician(s) and digital health informaticians (e.g. business analyst(s), quality assurance specialists). The team should be empowered by the organisation to self-organize (decide what when and how the work on the DAK is performed) and manage the DAK-related work (collaboration with the stakeholders, DAK content development and validation, publication and anything else that is required). The DAK development team assumes accountability for the final product: the digital adaptation kit.
-- engage key stakeholders and stewards of the guidelines:
-	- to ensure an accurate and comprehensive interpretation of the guidelines and other normative products. It is important to ensure that the authors of the source documents and/or the subject matter experts (SMEs) of a specific health area are actively engaged, if not leading, in the collaborative development of the DAKs;
-	- developing a DAK should be seen as a health programme/department-wide effort. Therefore, spreading the word, having informative presentations about SMART guidelines and DAK within the department, and involving key persons from relevant health areas could be of great help in the long term;
-	- collaboration with other health programmes should be considered as well, because there might be overlapping components, such as indicators or data items. For example: TB and HIV indicators and data items.
-- define the RASCI matrix.
-
-3.  **Define the timeline of activities**
-- start drafting a list of work items (the **DAK backlog**). The initial DAK backlog can be composed of a few big-size work items (e.g. Review source documents), estimated as needing weeks or months in terms of effort, decomposed into smaller items that can be accomplished in a matter of days (e.g. Review guideline X, Review handbook Y, etc.). These items should provide awareness and visibility on the work to be performed in the upcoming 1-2 months but also help the team with the project roadmap drafting. During the lifetime of the project, the backlog should be maintained/refined (e.g. items are added/removed, prioritized, estimated) and considered the central source of work undertaken by the DAK development team;
-- **plan the iterations**: This step implies establishing the length of an iteration of work (commonly known as “sprint”). The iterations should have a fixed length (1 month or less), to ensure consistency. Each iteration needs its own planning. The planning of an iteration represents a meeting where the DAK development team gathers with the aim of answering to the question “What can be done for this iteration?”. The team uses as inputs:
-	- the projected capacity of the team (e.g. number of working days);
-	- the results of the latest iteration;
-	- the past performance of the team;
-	- the backlog with work items (the DAK backlog).
-
-	The output of the iteration planning meeting is:
-	- the list of work items for the next iteration (ideally detailed and estimated) pulled out from the DAK backlog (the backlog with all the work items identified and prioritized);
-	- the iteration goal: the objective that creates coherence and focus, encouraging the team to work together during the iteration rather than on separate initiatives (e.g. “At the end of the iteration key business processes are identified and the overview diagram of key business processes is drafted”).
-
-	Consider having a **retrospective** meeting at the end of each iteration. The retrospective meeting is an opportunity to openly discuss how the iteration went with regards to people, interactions, processes and tools. The DAK development team assesses what went well during the iteration, what problems have been encountered and how those problems were solved (or not). The goal of the event is to identify ways to increase the quality of the work and the effectiveness of the team. There are many fun and engaging retrospective formats, tailored to the goal of the session, for example, “team bonding” formats, “future plans” formats or formats that focus on checking team happiness.
-- draft the **project roadmap** with estimates for each phase and key milestone dates (see example below);
-
-<img src="./L2_tb_dak_example_roadmap.PNG" style="width:60%; align:center"/>
+<ol>
+	<li>
+		<strong>Scoping</strong>
+	</li>
+	<ul>
+		<li>define the scope</li>
+		<ul>
+			<li>the DAK development team (see step &ldquo;Define clear roles and responsibilities&rdquo; below) should start defining the DAK scope by looking for answers to the following questions:</li>
+			<ul>
+				<li>what is your purpose in developing a DAK?</li>
+				<li>who is the target audience?</li>
+				<li>do similar publications exist?</li>
+				<li>what gaps it will address?</li>
+			</ul>
+		</ul>
+		<li>establish the development process and the governance process to be used for developing the DAK components</li>
+		<ul>
+			<li>agile development methods are recommended because of their iterative and incremental nature, efficient feedback loops, focus on the client and reduced process waste (see section &ldquo;Development process&rdquo; from the sub-chapter &ldquo;DAK development&rdquo; for more information);</li>
+			<li>determine ownership and key stakeholders (see step &ldquo;Define clear roles and responsibilities with stakeholders&rdquo; below for more information).</li>
+		</ul>
+		<li>determine the tools to be used for project tracking, communication, and DAK components design [for example the tool to design business processes based on the Business Process Model and Notation (<a href="https://www.bpmn.org/">BPMN</a>) standard];</li>
+		<li>assess the necessary resources to develop the DAK, including securing an adequate budget for each step of the process.</li>
+	</ul>
+	<li>
+		<strong>Define clear roles and responsibilities</strong>
+	</li>
+	<ul>
+		<li>form the DAK development team: the DAK development team is a cohesive unit of professionals that have all the skills necessary to create a DAK. It should be small (&lt; 10 people) and nimble but big enough to complete significant work in an iteration. It can consist of programme managers, technical officer(s), clinician(s) and digital health informaticians (e.g. business analyst(s), quality assurance specialists). The team should be empowered by the organisation to self-organize (decide what when and how the work on the DAK is performed) and manage the DAK-related work (collaboration with the stakeholders, DAK content development and validation, publication and anything else that is required). The DAK development team assumes accountability for the final product: the digital adaptation kit.</li>
+		<li>engage key stakeholders and stewards of the guidelines:
+<ul>
+				<li>to ensure an accurate and comprehensive interpretation of the guidelines and other normative products. It is important to ensure that the authors of the source documents and/or the subject matter experts (SMEs) of a specific health area are actively engaged, if not leading, in the collaborative development of the DAKs;</li>
+				<li>developing a DAK should be seen as a health programme/department-wide effort. Therefore, spreading the word, having informative presentations about SMART guidelines and DAK within the department, and involving key persons from relevant health areas could be of great help in the long term;</li>
+				<li>collaboration with other health programmes should be considered as well, because there might be overlapping components, such as indicators or data items. For example: TB and HIV indicators and data items.</li>
+			</ul>
+		</li>
+		<li>define the RASCI matrix.</li>
+	</ul>
+	<li>
+		<strong>Define the timeline of activities</strong>
+	</li>
+	<ul>
+		<li>start drafting a list of work items (the <strong>DAK backlog</strong>). The initial DAK backlog can be composed of a few big-size work items (e.g. Review source documents), estimated as needing weeks or months in terms of effort, decomposed into smaller items that can be accomplished in a matter of days (e.g. Review guideline X, Review handbook Y, etc.). These items should provide awareness and visibility on the work to be performed in the upcoming 1-2 months but also help the team with the project roadmap drafting. During the lifetime of the project, the backlog should be maintained/refined (e.g. items are added/removed, prioritized, estimated) and considered the central source of work undertaken by the DAK development team;</li>
+		<li>
+			<strong>plan the iterations</strong>: This step implies establishing the length of an iteration of work (commonly known as &ldquo;sprint&rdquo;). The iterations should have a fixed length (1 month or less), to ensure consistency. Each iteration needs its own planning. The planning of an iteration represents a meeting where the DAK development team gathers with the aim of answering to the question &ldquo;What can be done for this iteration?&rdquo;. The team uses as inputs:
+<ul>
+				<li>the projected capacity of the team (e.g. number of working days);</li>
+				<li>the results of the latest iteration;</li>
+				<li>the past performance of the team;</li>
+				<li>the backlog with work items (the DAK backlog).&nbsp;</li>
+			</ul>
+			<p>The output of the iteration planning meeting is:</p>
+			<ul>
+				<li>the list of work items for the next iteration (ideally detailed and estimated) pulled out from the DAK backlog (the backlog with all the work items identified and prioritized);</li>
+				<li>the iteration goal: the objective that creates coherence and focus, encouraging the team to work together during the iteration rather than on separate initiatives (e.g. &ldquo;At the end of the iteration key business processes are identified and the overview diagram of key business processes is drafted&rdquo;).</li>
+			</ul>
+			<p>Consider having a <strong>retrospective</strong> meeting at the end of each iteration. The retrospective meeting is an opportunity to openly discuss how the iteration went with regards to people, interactions, processes and tools. The DAK development team assesses what went well during the iteration, what problems have been encountered and how those problems were solved (or not). The goal of the event is to identify ways to increase the quality of the work and the effectiveness of the team. There are many fun and engaging retrospective formats, tailored to the goal of the session, for example, &ldquo;team bonding&rdquo; formats, &ldquo;future plans&rdquo; formats or formats that focus on checking team happiness.</p>
+		</li>
+	</ul>
+	<ul>
+		<li>draft the <strong>project roadmap</strong> with estimates for each phase and key milestone dates (see example below);</li>
+		<img src="./L2_tb_dak_example_roadmap.PNG" style="width:60%; align:center"/>
 <br clear="all"/>
-
-- **plan consultations** with the technical SMEs:
-	- define a meeting cadence for the consultations with the technical SMEs (Subject Matter Experts). The cadence of meetings can be influenced by the development process utilized, for example, if an agile methodology is used, with development performed in iterations, the cadence of meetings might be dictated by the iterations cadence;
-	- define a format for consultations that work with the SMEs:
-		- workshops (in-person or online);
-		- in-person country visits;
-		- any other.
-
-4. **Gather source documents**
-- it is important to understand what needs to be incorporated into the DAK, this could include documents such as normative products (WHO guidelines and other associated publications), policy documents, paper registers, tally sheets, reporting tools, etc., to understand the full level of effort required for development, impacting timelines and resourcing.
+	</ul>
+	<ul>
+		<li>
+			<strong>plan consultations</strong> with the technical SMEs:</li>
+		<ul>
+			<li>define a meeting cadence for the consultations with the technical SMEs (Subject Matter Experts). The cadence of meetings can be influenced by the development process utilized, for example, if an agile methodology is used, with development performed in iterations, the cadence of meetings might be dictated by the iterations cadence;</li>
+			<li>define a format for consultations that work with the SMEs:</li>
+			<ul>
+				<li>workshops (in-person or online);</li>
+				<li>in-person country visits;</li>
+				<li>any other.</li>
+			</ul>
+		</ul>
+	</ul>
+	<li>
+		<strong>Gather source documents</strong>
+	</li>
+	<ul>
+		<li>it is important to understand what needs to be incorporated into the DAK, this could include documents such as normative products (WHO guidelines and other associated publications), policy documents, paper registers, tally sheets, reporting tools, etc., to understand the full level of effort required for development, impacting timelines and resourcing.</li>
+	</ul>
+</ol>
 
 ### 2. Develop
 
@@ -100,7 +282,7 @@ The Agile methodology, as the name suggests, has flexibility and agility at its 
 
 Because of the complex set of dependencies between the DAK components, it is advised to develop the DAK using an iterative and incremental process, for instance a Scrum-based approach, that helps the authors adapt and improve the content and the process along the way. The work can be performed in time-boxed iterations (e.g. 1 week, 2 weeks or 1 month), called “sprints” in Scrum, representing cycles of _(1) Fill in DAK components, (2) Validate with SMEs, (3) Incorporate feedback_ (described below)  accompanied by  iteration planning and retrospective activities.
 
-<img src="./L2_Develop phase.PNG" align:center"/>
+<img src="./L2_Develop phase.PNG" style="width:40%; align:center"/>
 <br clear="all"/>
 
 #### **2.1 Fill in DAK components**
@@ -220,13 +402,13 @@ At this time ground-truthing exercises should be conducted as well with the tech
 
 Take time and reflect on the input received from the SMEs: analyse the feedback, identify patterns and areas of improvement. Incorporate the feedback received from the SMEs, share the updated content with them and request confirmation for the accurate reflection of their suggestions. Establishing efficient, ongoing feedback loops increases the SMEs engagement, ensures their buy-in and provides the validation mechanism that the DAKs need.
 
-Start a new cycle of (1) _Fill in DAK components, (2) Validate with SMEs, (3) Incorporate feedback_.
+Start a new cycle of _(1) Fill in DAK components, (2) Validate with SMEs, (3) Incorporate feedback_.
 
 **References**
 
 [^1]: [The universal health coverage menu of interventions](https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area).
 [^2]: [Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, 2nd ed.](https://iris.who.int/handle/10665/373581).
-[^3]: [Barton C, Kallem C, Van Dyke P, Mon D, Richesson R. Demonstrating “collect once, use many” – assimilating public health secondary data use requirements into an existing Domain Analysis Model. AMIA Annu Symp Proc. 2011;2011:98–107.] (https://pubmed.ncbi.nlm.nih.gov/22195060/).
+[^3]: [Barton C, Kallem C, Van Dyke P, Mon D, Richesson R. Demonstrating “collect once, use many” – assimilating public health secondary data use requirements into an existing Domain Analysis Model. AMIA Annu Symp Proc. 2011;2011:98–107.](https://pubmed.ncbi.nlm.nih.gov/22195060/).
 [^4]: [Business process model and notation standard](https://www.bpmn.org/).
 [^5]: [The SCRUM Guide](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf).
 [^6]: [Decision model and notation standard](https://www.omg.org/spec/DMN/1.4/Beta1/PDF).
