@@ -45,7 +45,7 @@ N/A
 
 	The “Screening” workflow contains the decision-support logic table “TB.B7 Evaluate the screening results”.
 
-<img src="./L2_TB_Screening.png" style="width:40%; align:center"/>
+<img src="./L2_TB_Screening.png" style="width:20%; align:center"/>
 <br clear="all"/>
 
 One of the rules of the table has as output “TB screening result” = “Inconclusive”, therefore there is no exact path forward in the workflow if this rule matches. The L1 guidance recommends in this case exploring alternate diagnoses to rule out TB, before assessing the client for TB preventive treatment (TPT). In this case, the “System action” column could be used to give instructions to the system: “Recommend alternate diagnoses to rule out TB”. This allows the system to create an output and offers useful instructions for L3 implementers. The content in this column should align with the general message from the “Guidance for the health worker” column.

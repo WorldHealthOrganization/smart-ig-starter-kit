@@ -4,26 +4,27 @@ While creating a WHO DAK, the focus is to transcribe health and data recommendat
 
 The DAK consists of 9 interlinked components: (1) health interventions and recommendations; (2) generic personas; (3) user scenarios; (4) generic business processes and workflows; (5) core data elements; (6) decision-support logic; (7) scheduling logic; (8) indicators and performance metrics; and (9) high-level functional and non-functional requirements. The table below provides an overview of each of the contributing components of the DAK.
 
+
 <table border="1">
 	<thead>
 		<tr>
-			<td width="115"><strong>&nbsp;Component</strong></td>
-			<td width="285"><strong>Description</strong></td>
-			<td width="236"><strong>Purpose</strong></td>
-			<td width="217"><strong>Outputs/ artifacts</strong></td>
+			<td><strong>&nbsp;Component</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Purpose</strong></td>
+			<td><strong>Outputs/ artifacts</strong></td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td width="115">1. Health interventions and recommendations</p></td>
-			<td width="285">
-				<p>Overview of the health interventions and health-specific recommendations included within this digital adaptation kit (DAK). DAKs are meant to be a repackaging and integration of L1 guidelines and guidance documents, such as WHO guidelines and other normative products and associated publications, in a particular health domain. The list of health interventions should be drawn from <a href="https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area">the universal health coverage menu of interventions[^1]</a> compiled by WHO and the digital health interventions should be extracted from the <a href="https://iris.who.int/handle/10665/373581">WHO classification of digital health interventions[^2]</a>.</p>
+			<td>1. Health interventions and recommendations</td>
+			<td>
+				<p>Overview of the health interventions and health-specific recommendations included within this digital adaptation kit (DAK). DAKs are meant to be a repackaging and integration of L1 guidelines and guidance documents, such as WHO guidelines and other normative products and associated publications, in a particular health domain. The list of health interventions should be drawn from <a href="https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area">the universal health coverage menu of interventions</a><sup>a</sup> compiled by WHO and the digital health interventions should be extracted from the <a href="https://iris.who.int/handle/10665/373581">WHO classification of digital health interventions</a><sup>b</sup>.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
 					<strong>Setting the stage</strong> to understand how the DAK would be applied to person-centred point-of-service systems (PCPOSS) in the context of specific health programmes and interventions.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>
 					<strong>List of related health interventions </strong>based on WHO&rsquo;s universal health coverage essential interventions; and</p>
 				<p>
@@ -33,129 +34,129 @@ The DAK consists of 9 interlinked components: (1) health interventions and recom
 			</td>
 		</tr>
 		<tr>
-			<td width="115">2. Generic personas</td>
-			<td width="285">
+			<td>2. Generic personas</td>
+			<td>
 				<p>Depiction of the end users and related stakeholders who would be interacting with the digital system or involved in the care pathway.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
 					<strong>Contextualization</strong> to understand the wants, needs and constraints of the end users.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>
 					<strong>Description, competencies and essential interventions</strong> performed by targeted personas.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>3. User scenarios</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>Narratives that describe how the different personas may interact with the digital system and with each other.</p>
 				<p>The user scenarios are only illustrative and are intended to give an idea of a typical workflow.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p><strong>Contextualization</strong> to understand how the system would be used, and how it would fit into existing workflows.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>Example <strong>narrative </strong>of how the targeted personas may interact with the system and with each other during a workflow.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>4. Generic business processes and workflows</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>A business process is a set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling, referrals.</p>
 				<p>Workflows are a visual representation of the progression of activities (tasks, decision points, interactions) that are performed within the business process.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p><strong>Contextualization and system design </strong>to understand how the digital system would fit into existing workflows and how best to design the system for that purpose.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>Overview <strong>matrix </strong>presenting the<strong> key processes</strong> in the specific health area; and</p>
 				<p><strong>Workflows </strong>for identified business processes with annotations</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>5. Core data elements</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>Data elements are required throughout the different points of the workflow.</p>
 				<p>These data elements are mapped to standards-based classifications and terminologies to ensure the data dictionary is compatible with other digital systems.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p><strong>System design and interoperability </strong>to know which data elements need to be logged and how they map to other standard terminologies (e.g. ICD and LOINC) for interoperability with other standards-based systems.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>List of data elements.</p>
 				<p><strong>Data dictionary</strong> with detailed data specifications in spreadsheet format.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>6. Decision-support logic</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>Decision-support logic and algorithms to support appropriate service delivery in accordance with clinical, public health and data use guidelines.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
 					<strong>System design and adherence to recommended clinical practice </strong>to know what underlying logic needs to be coded into the system.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>List of decisions that need to be made throughout the encounter.</p>
 				<p>
 					<strong>Decision-support tables</strong> in a spreadsheet format with inputs, outputs and triggers for each decision-support logic.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>7. Scheduling logic</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>Scheduling logic to support appropriate reminders for follow-up visits and services in accordance with clinical, public health and data use guidelines.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
 					<strong>System design and adherence to recommended clinical practice </strong>to know what service schedules needs to be coded into the system so that appropriate reminders are generated.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>List of scheduling logic tables.</p>
 				<p>
 					<strong>Scheduling logic</strong> for services in spreadsheet format.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>8. Indicators and performance metrics</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>Core set of indicators that need to be aggregated for decision-making, performance metrics, and subnational and national reporting.</p>
 				<p>These indicators and metrics are based on data that can feasibly be captured from a routine digital system, rather than survey-based tools.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
-					<strong>System design and adherence to recommended health monitoring practices</strong> to know what calculations and secondary data use are needed for the system, based on the principle of &ldquo;<a href="https://pubmed.ncbi.nlm.nih.gov/22195060/">collect once, use many[^3]</a>&rdquo;.</p>
+					<strong>System design and adherence to recommended health monitoring practices</strong> to know what calculations and secondary data use are needed for the system, based on the principle of &ldquo;<a href="https://pubmed.ncbi.nlm.nih.gov/22195060/">collect once, use many</a>&rdquo;<sup>c</sup>.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>
 					<strong>Indicators table</strong> with numerator and denominator of data elements for calculation, along with appropriate disaggregation.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="115">
+			<td>
 				<p>9. High-level functional and non-functional requirements</p>
 			</td>
-			<td width="285">
+			<td>
 				<p>A high-level list of core functions and capabilities that the system must have to meet the end users&rsquo; needs and achieve tasks within the business process.</p>
 			</td>
-			<td width="236">
+			<td>
 				<p>
 					<strong>System design </strong>to know what the system should be able to do.</p>
 			</td>
-			<td width="217">
+			<td>
 				<p>
 					<strong>Tables of functional and non-functional requirements </strong>with the intended end user of each requirement, and why that user needs that functionality in the system.</p>
 			</td>
@@ -163,6 +164,9 @@ The DAK consists of 9 interlinked components: (1) health interventions and recom
 	</tbody>
 </table>
 
+a - The universal health coverage menu of interventions[^1].<br>
+b - Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, 2nd ed.[^2].<br>
+c - Demonstrating “collect once, use many” – assimilating public health secondary data use requirements into an existing Domain Analysis Model[^3].
 
 Some of the dependencies between the components are:
 
@@ -275,14 +279,14 @@ Key activities in the planning phase:
 
 ### 2. Develop
 
-**Development process highlights**
+**Development process highlights**<br>
 The frequency at which the normative content gets updated is increasing, based on the fast pace in which scientific evidence emerges. This is also influenced by an increased adoption of digital technologies. Therefore, a traditional and rigid project management methodology, like “waterfall”, wouldn’t be very effective in such a dynamic context.
 
-The Agile methodology, as the name suggests, has flexibility and agility at its heart. It works best in a living organizational structure that can adapt according to the organisation’s strategy and its clients’ needs. Under the “Agile” umbrella we find multiple methods and frameworks but the most widely used is “[Scrum](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf)”[^5]: a lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
+The Agile methodology, as the name suggests, has flexibility and agility at its heart. It works best in a living organizational structure that can adapt according to the organisation’s strategy and its clients’ needs. Under the “Agile” umbrella we find multiple methods and frameworks but the most widely used is “[Scrum](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf)”[^4]: a lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
 
 Because of the complex set of dependencies between the DAK components, it is advised to develop the DAK using an iterative and incremental process, for instance a Scrum-based approach, that helps the authors adapt and improve the content and the process along the way. The work can be performed in time-boxed iterations (e.g. 1 week, 2 weeks or 1 month), called “sprints” in Scrum, representing cycles of _(1) Fill in DAK components, (2) Validate with SMEs, (3) Incorporate feedback_ (described below)  accompanied by  iteration planning and retrospective activities.
 
-<img src="./L2_Develop phase.PNG" style="width:40%; align:center"/>
+<img src="./L2_Develop phase.PNG" style="width:20%; align:center"/>
 <br clear="all"/>
 
 #### **2.1 Fill in DAK components**
@@ -321,7 +325,7 @@ Below you can find guidance for each step:
 	- illustrate user scenarios in the DAK that describe typical interactions that one would expect to happen in the specific health programme area (e.g., screening, diagnosis, treatment, reporting, etc.); 
 	- in some cases, it could be helpful to include scenarios which are intricate in terms of normative guidance, so that the reader better understands how the system will be used in those settings.
 
-- 2.1.4 **Identify key business processes** - based on content in the narrative documents (SMART guidelines L1), domain expertise, and real-life observations in selected contexts and countries create the diagram reflecting the overview of key business processes for the health area. The diagram should follow the [BPMN standard](https://www.bpmn.org/)[^4];
+- 2.1.4 **Identify key business processes** - based on content in the narrative documents (SMART guidelines L1), domain expertise, and real-life observations in selected contexts and countries create the diagram reflecting the overview of key business processes for the health area. The diagram should follow the [BPMN standard](https://www.bpmn.org/)[^5];
 
 - 2.1.5 **For each business process:**
 
@@ -340,7 +344,7 @@ Below you can find guidance for each step:
 			- However, for country-level DAKs, these should be specific to the context;
 			- if the guidelines are not recently updated and the technical team has ideas that are forward-looking for the system, go for the future state of the systems along with sign-off on the same with technical teams.
 
-		- the specific diagram for each business process should follow the [BPMN standard](https://www.bpmn.org/)[^4].
+		- the specific diagram for each business process should follow the [BPMN standard](https://www.bpmn.org/)[^5].
 
 	- 2.1.5.2 **Define the core data elements** - based on data elements needed for service delivery and indicator reporting, which are described in the WHO guidelines and other normative products; domain expertise; and real data needs in selected contexts and countries;
 		- only data that need to be stored for reporting, auditing, decision-support logic, aggregation and exchange should be captured in the data dictionary. Any data element that is needed for secondary calculation that does not have an explicit need to store, report, audit, use in decision-support or scheduling logic, aggregate or exchange should not be captured in the data dictionary (e.g. data elements that are needed for the user interface [UI] of the reference application to be more user-friendly should not be captured).
@@ -409,7 +413,7 @@ Start a new cycle of _(1) Fill in DAK components, (2) Validate with SMEs, (3) In
 [^1]: [The universal health coverage menu of interventions](https://www.who.int/universal-health-coverage/compendium/interventions-by-programme-area).
 [^2]: [Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, 2nd ed.](https://iris.who.int/handle/10665/373581).
 [^3]: [Barton C, Kallem C, Van Dyke P, Mon D, Richesson R. Demonstrating “collect once, use many” – assimilating public health secondary data use requirements into an existing Domain Analysis Model. AMIA Annu Symp Proc. 2011;2011:98–107.](https://pubmed.ncbi.nlm.nih.gov/22195060/).
-[^4]: [Business process model and notation standard](https://www.bpmn.org/).
-[^5]: [The SCRUM Guide](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf).
+[^4]: [The SCRUM Guide](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf).
+[^5]: [Business process model and notation standard](https://www.bpmn.org/).
 [^6]: [Decision model and notation standard](https://www.omg.org/spec/DMN/1.4/Beta1/PDF).
 [^7]: [WHO Datadot](https://data.who.int/indicators).
