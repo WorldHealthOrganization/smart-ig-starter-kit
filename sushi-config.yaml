@@ -57,6 +57,7 @@ menu:
 
   Home: 
     Overview: index.html
+    SMART Guidelines Community: cop.html
   IG Setup:
     GitHub Repositories: 'ig_repositories.html'
     GitHub Setup: 'ig_setup.html'
@@ -109,6 +110,8 @@ menu:
 pages: 
   index.md:
     title: "Home"
+    cop.md: 
+      title: "SMART Guidelines Community"
     license.md:
       title: "License"
     changes.md:
