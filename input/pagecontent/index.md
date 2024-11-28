@@ -26,7 +26,7 @@ This guide is divided into several sections that are displayed in the menu bar l
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG
 
 ### More ways to engage with the SMART Guidelines Community
-The WHO SMART Guidelines team chairs a Community of Practice organized around workstreams that support L2, L3, L4 community of authors and implementers. Learn more about the CoP <a href ="cop.html">here</>
+The WHO SMART Guidelines team chairs a Community of Practice organized around workstreams that support L2, L3, L4 community of authors and implementers. Learn more about the CoP <a href ="cop.html">here</a>
 
 #### Keywords
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
