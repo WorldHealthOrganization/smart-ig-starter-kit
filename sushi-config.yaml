@@ -95,7 +95,6 @@ menu:
       Requirements: 'l3_requirements.html'
       Examples: 'l3_examples.html'
     Versioning: 'versioning.html'
-    Multi-Language Implementations: 'translations.html'
     ArchiMate Diagrams:
       L2 : 'diagram_l2_overview.html'
       L3 : 'diagram_l3_overview.html'
@@ -180,8 +179,6 @@ pages:
         title: "Examples"
     versioning.md:
       title: "Versioning"    
-    translations.md:
-      title: "Multi-language Implementations"
     diagram_legend.md:
       title: "ArchiMate Diagrams Legend"
       diagram_l2_overview.md:
