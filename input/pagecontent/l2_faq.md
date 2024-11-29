@@ -31,7 +31,7 @@ N/A
 -   Can rows with the same input entry be merged?
 	-   yes, rows with the same input entry can be merged as per the below criteria:
 
-<img src="./L2_DMN_cells_merging.png" style="width:60%; align:center"/>
+<img src="./L2_DMN_cells_merging.png" style="width:30%; align:center"/>
 <br clear="all"/>
 
 -   Can rows with the same output entry be merged?
