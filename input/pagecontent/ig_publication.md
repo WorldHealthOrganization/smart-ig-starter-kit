@@ -82,7 +82,7 @@ SMART Guidelines, when released, are published in `https://smart.who.int/<ig_cod
 </div>
 
 The release publication steps are:
-<figure style = "width:25em">
+<figure style = "width:20em">
   {% include publication.svg %}
 </figure>
 
