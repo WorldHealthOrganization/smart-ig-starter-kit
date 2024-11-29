@@ -80,7 +80,7 @@ The release publication steps are:
 1. Review the changes since the last release, and define if these are breaking changes or not, and update the version accordingly in the `sushi-config.yaml` or implementation guide `.json` file.  
 1.1. If this is the first release, review the entire content and version policy to decide if this is a first official release, or a preview, and define the version number accordingly.
 
-2. Optionally, create a new branch, e.g. `release-candidate` for iterating changes.  
+2. Optionally, create a new branch, e.g. `release-candidate` for iterating final publication changes.  
 
 3. Create the `publication-request.json` file (see [documentation](https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation)). This file is critical and it is important to follow the instructions correctly, as incorrect changes may cause irreparable damage to previously published and normative specifications.   
 
@@ -92,14 +92,21 @@ The release publication steps are:
 
 5. Run the normal build process and check if all is ok
 
-6. Run the release publication process using the ImplementationGuide publisher in release publication mode (see [HL7 page](https://confluence.hl7.org/pages/viewpage.action?pageId=81027536) for some details on the tooling)
+6. If all is ok and the pages are created correctly, create a release and tag with the latest changes
 
-7. If all is ok and the pages are created correctly, create a release and tag with the latest changes
+7. *Run the release publication process using the ImplementationGuide publisher in release publication mode (see [HL7 page](https://confluence.hl7.org/pages/viewpage.action?pageId=81027536) for some details on the tooling) and a [description of the publication process](https://confluence.hl7.org/pages/viewpage.action?pageId=104580055)*
 
-8. Make a PR of the built specification (all releases) to the repository holding the content of http://smart.who.int .
+8. *Make a PR of the built specification (all releases) to the repository holding the content of [http://smart.who.int](http://smart.who.int)*.
 
-9. If a branch was created in step 2, optionally merge it with any updates that have been done meanwhile.
+9. Request (smart@who.int) the creation of a Pull Request of the feeds and package lists, for the FHIR tooling to recognize the newly published package.
 
-10. In the main branch, update the ImplementationGuide resource for continuing work:
+10. If a branch was created in step 2, optionally merge it with any updates that have been done meanwhile.
+
+11. In the main branch, update the ImplementationGuide resource for continuing work:
     * The `status` of the IG should be set back to `draft`;
     * The `version` should be updated - this way it's immediately assured that any new changes are for a new version.
+
+<div class="info-box should">
+  <span class="info-title">Workflow automation</span>
+    The process for publication is a sensitive process - errors can have a large impact on tooling and downstream specifications. For this reason, some of the steps are automated.
+</div>
