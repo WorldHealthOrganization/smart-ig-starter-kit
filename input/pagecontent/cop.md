@@ -1,4 +1,4 @@
-The SMART Guidelines Community brings together technologists, developers, Ministries of Health, funders, and other stakeholders involved in the development and adoption of SMART Guidelines. This ecosystem promotes collaboration and innovation to enhance the implementation of SMART Guidelines globally. 
+The SMART Guidelines Community brings together health programme managers, Digital health teams (business analysts, software architects, software developers, quality assurance specialists, software vendors, etc.) and other stakeholders involved in the development and adoption of SMART Guidelines. This ecosystem promotes collaboration and innovation to enhance the implementation of SMART Guidelines globally. 
 
 ### Quick Start for New Contributors:  
 

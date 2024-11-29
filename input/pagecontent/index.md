@@ -21,14 +21,14 @@ In addition, the adoption and adaptation of SMART Guidelines by the different co
 This guide is divided into several sections that are displayed in the menu bar located at the top of the page:
 - <a href="index.html">Home</a> - Provides the introduction about this guide
 - <a href="ig_setup.html">IG Setup</a> - Guidance on setting up GitHub repositories and related dependencies as well as publishing the Implementation Guides
-- <a href= "l2_authoring_overview.html">L2 Authoring</a> - Contains step  by step guidance, templates and best practice requirements for authoring a L2 DAK
+- <a href= "l2_authoring_overview.html">L2 Authoring</a> - Contains step by step guidance, templates and best practices for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK)
 - <a href="authoring_overview.html">L3 Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3
 - <a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG
 
 ### More ways to engage with the SMART Guidelines Community
 The WHO SMART Guidelines team chairs a Community of Practice organized around workstreams that support L2, L3, L4 community of authors and implementers. Learn more about the CoP <a href ="cop.html">here</a>
 
-#### Keywords
+### Keywords
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
 "OPTIONAL" in this document are to be interpreted as described in
