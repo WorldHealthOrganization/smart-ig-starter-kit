@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - SMART Guidelines L3 SOP v1.1.0</title>
+    <title>Home - SMART Guidelines Starter Kit v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -72,6 +72,9 @@
       <li>
         <a href="index.html">Overview</a>
       </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -94,7 +97,26 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -253,6 +275,8 @@
         <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
     <a id="who-logo" no-external="true" href="index.html">
+      
+<img height="50" style="margin:7px" alt="Welcome on standards website" src="assets/images/h-logo-blue.svg"/>
         
     </a>
 </div>
@@ -262,10 +286,10 @@
 </div> 
 
 
-        <div id="ig-status" class="ig-status-draft">
-          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines L3 SOP</span>
+        <div id="ig-status" class="ig-status-active">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
             <br/>
-            <span style="display:inline-block;">1.1.0 - ci-build
+            <span style="display:inline-block;">2.0.0 - release
 
 
 
@@ -304,7 +328,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the SMART IG STARTER KIT (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the SMART IG STARTER KIT (v2.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -313,13 +337,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">1.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit|1.1.0"/></span>
+      <span class="copy-text">2.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit|2.0.0"/></span>
       </td>
     </tr>
 
@@ -333,9 +357,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <td colspan="4">
         
-          Draft
+          Active
           
-            as of 2024-06-19
+            as of 2024-11-30
           
         
       </td>
@@ -362,6 +386,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#about-this-implementation-guide" id="markdown-toc-about-this-implementation-guide">About this implementation guide</a></li>
+  <li><a href="#more-ways-to-engage-with-the-smart-guidelines-community" id="markdown-toc-more-ways-to-engage-with-the-smart-guidelines-community">More ways to engage with the SMART Guidelines Community</a></li>
+  <li><a href="#keywords" id="markdown-toc-keywords">Keywords</a></li>
   <li><a href="#intellectual-property-and-copyright-considerations" id="markdown-toc-intellectual-property-and-copyright-considerations">Intellectual Property and Copyright considerations</a></li>
 </ul>
 
@@ -373,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <p><br /> <br /> 
-  This Starter Kit describes a Standard Operating Procedure (SOP) for authoring L3 Implementation Guides for SMART Guidelines.</p>
+  This Starter Kit describes the Standard Operating Procedures (SOP) for authoring L2 DAKs and L3 Implementation Guides as per the SMART Guidelines methodology.</p>
 
 <p>The SMART guidelines present a set of consistent specifications intended to be reused and augmented / adapted worldwide. The creation, validation and maintenance of an increasing number of smart guidelines - by a range of experts at the Organization and an ever growing community - requires a common set of procedures and associated tooling.</p>
 
@@ -389,12 +415,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>This guide is divided into several sections that are displayed in the menu bar located at the top of the page:</p>
 <ul>
   <li><a href="index.html">Home</a> - Provides the introduction about this guide</li>
-  <li><a href="ig_setup.html">IG Setup</a> - Guidance on setting up repositories and related dependencies as well as publishing SMART guidelines</li>
-  <li><a href="authoring_overview.html">Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3</li>
+  <li><a href="ig_setup.html">IG Setup</a> - Guidance on setting up GitHub repositories and related dependencies as well as publishing the Implementation Guides</li>
+  <li><a href="l2_authoring_overview.html">L2 Authoring</a> - Contains step by step guidance, templates and best practices for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK)</li>
+  <li><a href="authoring_overview.html">L3 Authoring</a> - Contains a step by step guidance and requirements on authoring L3 resources while transforming from L2 DAK to L3</li>
   <li><a href="qa_check.html">Validating IG</a> - Under development currently. Will contain guidance on running QA checks and available tooling to test the authored IG</li>
 </ul>
 
-<h4 id="keywords">Keywords</h4>
+<h3 id="more-ways-to-engage-with-the-smart-guidelines-community">More ways to engage with the SMART Guidelines Community</h3>
+<p>The WHO SMART Guidelines team chairs a Community of Practice organized around workstreams that support L2, L3, L4 community of authors and implementers. Learn more about the CoP <a href="cop.html">here</a></p>
+
+<h3 id="keywords">Keywords</h3>
 <blockquote>
   <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
@@ -427,7 +457,7 @@ NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Nov 29, 2024 19:37+0000">2024-11-29</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Sat, Nov 30, 2024 06:43+0000">2024-11-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

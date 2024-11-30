@@ -3,15 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="smart.who.int.ig-starter-kit"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide smart.who.int.ig-starter-kit</b></p><a name="smart.who.int.ig-starter-kit"> </a><a name="hcsmart.who.int.ig-starter-kit"> </a><a name="smart.who.int.ig-starter-kit-en-US"> </a><h2>IgStarterKit</h2><p>The official URL for this implementation guide is: </p><pre>http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit</pre><div><p>SMART Guidelines L3 SOP</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide smart.who.int.ig-starter-kit</b></p><a name="smart.who.int.ig-starter-kit"> </a><a name="hcsmart.who.int.ig-starter-kit"> </a><a name="smart.who.int.ig-starter-kit-en-US"> </a><h2>IgStarterKit</h2><p>The official URL for this implementation guide is: </p><pre>http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit</pre><div><p>SMART Guidelines Starter Kit with L2 and L3 SOP</p>
 </div></div>
   </text>
   <url value="http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit"/>
-  <version value="1.1.0"/>
+  <version value="2.0.0"/>
   <name value="IgStarterKit"/>
-  <title value="SMART Guidelines L3 SOP"/>
-  <status value="draft"/>
-  <date value="2024-06-19"/>
+  <title value="SMART Guidelines Starter Kit"/>
+  <status value="active"/>
+  <date value="2024-11-30T06:43:28+00:00"/>
   <publisher value="WHO"/>
   <contact>
     <name value="WHO"/>
@@ -24,7 +24,7 @@
       <value value="smart@who.int"/>
     </telecom>
   </contact>
-  <description value="SMART Guidelines L3 SOP"/>
+  <description value="SMART Guidelines Starter Kit with L2 and L3 SOP"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -32,7 +32,7 @@
     </coding>
   </jurisdiction>
   <packageId value="smart.who.int.ig-starter-kit"/>
-  <license value="CC0-1.0"/>
+  <license value="CC-BY-SA-3.0-IGO"/>
   <fhirVersion value="5.0.0"/>
   <dependsOn id="hl7tx">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -64,6 +64,12 @@
         <name value="index.html"/>
         <title value="Home"/>
         <generation value="markdown"/>
+        <page>
+          <sourceUrl value="cop.html"/>
+          <name value="cop.html"/>
+          <title value="SMART Guidelines Community"/>
+          <generation value="markdown"/>
+        </page>
         <page>
           <sourceUrl value="license.html"/>
           <name value="license.html"/>
@@ -102,9 +108,33 @@
         </page>
       </page>
       <page>
+        <sourceUrl value="l2_authoring_overview.html"/>
+        <name value="l2_authoring_overview.html"/>
+        <title value="L2 Authoring Overview"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="l2_dak_authoring.html"/>
+          <name value="l2_dak_authoring.html"/>
+          <title value="Authoring a L2 DAK"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="l2_templates.html"/>
+          <name value="l2_templates.html"/>
+          <title value="L2 DAK Templates"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="l2_faq.html"/>
+          <name value="l2_faq.html"/>
+          <title value="L2 DAK FAQ"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
         <sourceUrl value="authoring_overview.html"/>
         <name value="authoring_overview.html"/>
-        <title value="Authoring"/>
+        <title value="L3 Authoring Overview"/>
         <generation value="markdown"/>
         <page>
           <sourceUrl value="gov_overview.html"/>
@@ -306,7 +336,7 @@
         <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
         <code value="releaselabel"/>
       </code>
-      <value value="ci-build"/>
+      <value value="release"/>
     </parameter>
     <parameter>
       <code>

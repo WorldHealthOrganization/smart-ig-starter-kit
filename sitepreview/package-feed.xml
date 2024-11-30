@@ -4,21 +4,21 @@
     <description>Packages published by the World Health Organization SMART Guidelines</description>
     <link>https://smart.who.int/package-feed.xml</link>
     <generator>HL7, Inc FHIR Publication tooling</generator>
-    <lastBuildDate>Fri, 29 Nov 2024 07:36:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2024 06:42:30 +0000</lastBuildDate>
     <atom:link href="https://smart.who.int/package-feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Nov 2024 07:36:27 +0000</pubDate>
+    <pubDate>Sat, 30 Nov 2024 06:42:30 +0000</pubDate>
     <language>en</language>
     <ttl>600</ttl>
     <item>
-      <title>smart.who.int.ig-starter-kit#1.1.0</title>
-      <description>1.1.0 Release</description>
-      <link>http://smart.who.int/ig-starter-kit/v1.1.0/package.tgz</link>
-      <guid isPermaLink="true">http://smart.who.int/ig-starter-kit/v1.1.0/package.tgz</guid>
+      <title>smart.who.int.ig-starter-kit#2.0.0</title>
+      <description>2.0.0 Release</description>
+      <link>http://smart.who.int/ig-starter-kit/v2.0.0/package.tgz</link>
+      <guid isPermaLink="true">http://smart.who.int/ig-starter-kit/v2.0.0/package.tgz</guid>
       <dc:creator>WHO</dc:creator>
       <fhir:version>5.0.0</fhir:version>
       <fhir:kind>IG</fhir:kind>
-      <pubDate>Fri, 29 Nov 2024 07:36:27 +0000</pubDate>
-      <fhir:details>Publication run at 29/11/2024 by 88f8b4278703 using vVersion 1.7.5 (Git# 2ec44e6c46a5). Built 2024-11-22T15:37:50.312Z (7 days old) source id Unknown (todo) Run #2</fhir:details>
+      <pubDate>Sat, 30 Nov 2024 06:42:30 +0000</pubDate>
+      <fhir:details>Publication run at 30/11/2024 by a055d86372e1 using vVersion 1.7.5 (Git# 2ec44e6c46a5). Built 2024-11-22T15:37:50.312Z (7 days old) source id Unknown (todo) Run #2</fhir:details>
     </item>
     <item>
       <title>smart.who.int.dak-immz#0.9.9</title>

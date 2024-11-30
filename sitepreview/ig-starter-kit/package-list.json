@@ -7,14 +7,14 @@
       "sequence" : "ci-build"
     },
     {
-      "version" : "1.1.0",
-      "path" : "http://smart.who.int/ig-starter-kit/v1.1.0",
+      "version" : "2.0.0",
+      "path" : "http://smart.who.int/ig-starter-kit/v2.0.0",
       "status" : "release",
       "sequence" : "Releases",
       "fhirversion" : "5.0.0",
-      "date" : "2024-11-29",
+      "date" : "2024-11-30",
       "current" : true,
-      "desc" : "1.1.0 Release"
+      "desc" : "2.0.0 Release"
     },
     {
       "version" : "1.0.0",

@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "smart.who.int.ig-starter-kit"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide smart.who.int.ig-starter-kit</b></p><a name=\"smart.who.int.ig-starter-kit\"> </a><a name=\"hcsmart.who.int.ig-starter-kit\"> </a><a name=\"smart.who.int.ig-starter-kit-en-US\"> </a><h2>IgStarterKit</h2><p>The official URL for this implementation guide is: </p><pre>http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit</pre><div><p>SMART Guidelines L3 SOP</p>\n</div></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide smart.who.int.ig-starter-kit</b></p><a name=\"smart.who.int.ig-starter-kit\"> </a><a name=\"hcsmart.who.int.ig-starter-kit\"> </a><a name=\"smart.who.int.ig-starter-kit-en-US\"> </a><h2>IgStarterKit</h2><p>The official URL for this implementation guide is: </p><pre>http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit</pre><div><p>SMART Guidelines Starter Kit with L2 and L3 SOP</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:version [ fhir:v "2.0.0"] ; # 
   fhir:name [ fhir:v "IgStarterKit"] ; # 
-  fhir:title [ fhir:v "SMART Guidelines L3 SOP"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-06-19"^^xsd:date] ; # 
+  fhir:title [ fhir:v "SMART Guidelines Starter Kit"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-11-30T06:43:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "WHO"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "WHO" ] ;
@@ -29,7 +29,7 @@
        fhir:value [ fhir:v "smart@who.int" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "SMART Guidelines L3 SOP"] ; # 
+  fhir:description [ fhir:v "SMART Guidelines Starter Kit with L2 and L3 SOP"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -37,7 +37,7 @@
      ] )
   ] ) ; # 
   fhir:packageId [ fhir:v "smart.who.int.ig-starter-kit"] ; # 
-  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:license [ fhir:v "CC-BY-SA-3.0-IGO"] ; # 
   fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
   fhir:dependsOn ( [
      fhir:id [ fhir:v "hl7tx" ] ;
@@ -80,6 +80,11 @@
          fhir:title [ fhir:v "Home" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
+           fhir:source [ fhir:v "cop.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "cop.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "SMART Guidelines Community" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
            fhir:source [ fhir:v "license.html"^^xsd:anyURI ] ;
            fhir:name [ fhir:v "license.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "License" ] ;
@@ -112,9 +117,30 @@
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
+         fhir:source [ fhir:v "l2_authoring_overview.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "l2_authoring_overview.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "L2 Authoring Overview" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:source [ fhir:v "l2_dak_authoring.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "l2_dak_authoring.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Authoring a L2 DAK" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "l2_templates.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "l2_templates.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "L2 DAK Templates" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "l2_faq.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "l2_faq.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "L2 DAK FAQ" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] )
+       ] [
          fhir:source [ fhir:v "authoring_overview.html"^^xsd:anyURI ] ;
          fhir:name [ fhir:v "authoring_overview.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Authoring" ] ;
+         fhir:title [ fhir:v "L3 Authoring Overview" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:source [ fhir:v "gov_overview.html"^^xsd:anyURI ] ;
@@ -289,7 +315,7 @@
          fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "releaselabel" ]
        ] ;
-       fhir:value [ fhir:v "ci-build" ]
+       fhir:value [ fhir:v "release" ]
      ] [
        fhir:code [
          fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;

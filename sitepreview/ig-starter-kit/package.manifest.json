@@ -1,7 +1,7 @@
 {
-  "version" : "1.1.0",
+  "version" : "2.0.0",
   "fhirVersion" : ["5.0.0"],
-  "date" : "20241129193714",
+  "date" : "20241130064317",
   "name" : "smart.who.int.ig-starter-kit",
   "jurisdiction" : "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
 }
