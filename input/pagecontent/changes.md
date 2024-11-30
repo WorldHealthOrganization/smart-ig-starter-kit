@@ -1,6 +1,8 @@
 ### Second Release (V2.0.0)
 * L2 SOP and templates included
 * Corrected logical model conformance to indicate logical models per page of the data dictionary, instead of just one logical model overall
+* Updated IG publication documentation and some changes in authoring conventions
+* New page around SMART Guidelines COP added
 
 ### First Release (V1.0.0)
 
