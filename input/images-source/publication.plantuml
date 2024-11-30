@@ -1,0 +1,21 @@
+@startuml
+!include ./style.iuml
+
+start
+:1. Review changes;
+:2. Create <b>""release-candidate""</b>  branch;
+:3. Update the ImplementationGuide
+and all artifacts;
+:4. Create <b>""publication-request.json""</b>;
+:5. Run the normal build process;
+:6. Create a release and tag;
+-[#green]-> 
+   #dfd:7. (Automated) Run the release publication process ; 
+:8. Request the WHO team to check and update
+smart.who.int and the FHIR IG registry;
+:9. Merge branch if needed;
+:10. Update IG to upcoming version.
+If needed, revert statuses back to draft;
+
+stop
+@enduml

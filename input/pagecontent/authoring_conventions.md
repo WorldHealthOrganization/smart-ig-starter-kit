@@ -1,15 +1,15 @@
 This page describes basic conventions for all artifacts that are needed to be authored.
 
-### Naming convention
+### Naming conventions
 
 Resource IDs
-* Resource source files shall have extension .json or .xml
-* StructureMaps authored in FHIR Mapping Language shall have extension `.fml` 
 * ValueSets should be prefixed or suffixed by VS (not enforced)
 * Codesystems do not need to to be prefixed or suffixed. The tooling shall handle the resources per type and ID, so there's no conflict
-* Resource Ids should start with capital letter and may contain hyphens - NOT underscore: 
+* Resource IDs should start with capital letter and may contain hyphens (although not preferred). Resource IDs SHALL NOT contain underscores: 
   * **`Resourceid`** is valid
   * **`Resource-id`** is also valid, although not preferred
+  * **`Resource_id`** is invalid
+
 
 
 <div class="info-box must">
@@ -18,12 +18,16 @@ Resource IDs
 </div>
 
 <div class="info-box must">
-  <span class="info-title">Names must start with an uppercase character, and may contain letters, numbers or underscores</span>
+  <span class="info-title">Names must start with an uppercase character, and may contain letters and numbers</span>
     Names must start with an uppercase letter followed by up to 254 characters that can be a mix of letters, numbers, or underscores. The expression is <pre>^[A-Z]([A-Za-z0-9_]){1,254}$</pre>
+    The use of underscores is to be avoided
+
 </div>
 
 ### File Names
 
+* Resource source files shall have extension .json or .xml
+* StructureMaps authored in FHIR Mapping Language shall have extension `.fml` 
 * Resource file names must match the resource id. For profiles, this means the profile id.
 * Tools are case sensitive - file names shall not have overlapping names differing only in case
 * Sushi / FSH Aliases should be stored in `fsh/Aliases.fsh`
