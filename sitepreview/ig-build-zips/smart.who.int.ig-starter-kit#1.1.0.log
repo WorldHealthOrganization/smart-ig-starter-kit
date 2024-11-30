@@ -1,0 +1,514 @@
+FHIR IG Publisher Version 1.7.5 (Git# 2ec44e6c46a5). Built 2024-11-22T15:37:50.312Z (7 days old)
+Detected Java version: 23-ea from /usr/local/openjdk-23 on amd64 (64bit). 4096MB available
+dir = /workspace, path = /home/publisher/bin:/home/publisher/bin/ig-publisher-scripts:/home/publisher/.node/bin:/usr/local/openjdk-23/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Parameters: -go-publish -package-cache-folder /workspace/fhir-package-cache -source /workspace/source -web /workspace/webroot -temp /workspace/temp -registry /workspace/ig-registry/fhir-ig-list.json -history /workspace/history-template -templates /workspace/webroot/templates
+---------------
+Publication Run: publish /workspace/source to /workspace/webroot
+Run Number: 2
+Relative directory for IG is '/ig-starter-kit'
+===== Web Publication Run Details ===============================
+ Source IG: smart.who.int.ig-starter-kit#1.1.0 : http://smart.who.int/ig-starter-kit (R5) from /workspace/source
+All checks passed. Do the publication build from /workspace/source and publish to /workspace/temp/web-root/run-20241129/ig-starter-kit
+Prepare Build space in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0
+Build IG at /workspace/source: final copy suitable for publication (in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0)
+FHIR IG Publisher Version 1.7.5 (Git# 2ec44e6c46a5). Built 2024-11-22T15:37:50.312Z (7 days old)    
+Detected Java version: 23-ea from /usr/local/openjdk-23 on Linux/amd64 (64bit). 4096MB available    
+dir = /workspace, path = /home/publisher/bin:/home/publisher/bin/ig-publisher-scripts:/home/publisher/.node/bin:/usr/local/openjdk-23/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Parameters: -ig /workspace/temp/smart.who.int.ig-starter-kit#1.1.0 -resetTx -publish http://smart.who.int/ig-starter-kit/v1.1.0 -no-exit
+Start Clock @ Friday, November 29, 2024, 7:36:27 PM Coordinated Universal Time (2024-11-29T19:36:27Z)
+                                                                                                    
+Build FHIR IG from /workspace/temp/smart.who.int.ig-starter-kit#1.1.0                                (00:00.024 / 00:00.025, 30Mb)
+Build Formal Publication package, intended for http://smart.who.int/ig-starter-kit/v1.1.0            (00:00.003 / 00:00.028, 30Mb)
+API keys loaded from /home/publisher/.fhir/fhir-settings.json                                        (00:00.001 / 00:00.029, 30Mb)
+Package Cache: /home/publisher/.fhir/packages                                                        (00:00.004 / 00:00.034, 30Mb)
+Run Sushi on /workspace/temp/smart.who.int.ig-starter-kit#1.1.0                                      (00:00.002 / 00:00.037, 30Mb)
+Sushi: info  Running SUSHI v3.12.1 (implements FHIR Shorthand specification v3.0.0)                  (00:00.409 / 00:00.447, 31Mb)
+Sushi: info  Arguments:                                                                              (00:00.001 / 00:00.448, 31Mb)
+Sushi: info    --require-latest                                                                      (00:00.001 / 00:00.449, 31Mb)
+Sushi: info    --out /workspace/temp/smart.who.int.ig-starter-kit#1.1.0                              (00:00.001 / 00:00.451, 31Mb)
+Sushi: info    /workspace/temp/smart.who.int.ig-starter-kit#1.1.0                                    (00:00.001 / 00:00.452, 31Mb)
+Sushi: info  Using configuration file: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/sushi-config.yaml (00:00.373 / 00:00.826, 31Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.120 / 00:00.947, 31Mb)
+Sushi: info  Preprocessed 0 documents with 0 aliases.                                                (00:00.001 / 00:00.948, 31Mb)
+Sushi: info  Imported 0 definitions and 0 instances.                                                 (00:00.001 / 00:00.949, 31Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.uv.tools#current...                (00:00.001 / 00:00.950, 31Mb)
+Sushi: info  Did not find hl7.fhir.uv.tools#current in /home/publisher/.fhir/packages.               (00:00.022 / 00:00.973, 31Mb)
+Sushi: info  Downloading hl7.fhir.uv.tools#current... https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/package.tgz (00:00.364 / 00:01.337, 31Mb)
+Sushi: info  Downloaded hl7.fhir.uv.tools#current                                                    (00:00.039 / 00:01.377, 31Mb)
+Sushi: info  Loaded package hl7.fhir.uv.tools#current                                                (00:00.070 / 00:01.447, 31Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.terminology.r5#6.1.0...                 (00:00.617 / 00:02.065, 31Mb)
+Sushi: info  Did not find hl7.terminology.r5#6.1.0 in /home/publisher/.fhir/packages.                (00:00.016 / 00:02.081, 31Mb)
+Sushi: info  Downloading hl7.terminology.r5#6.1.0... https://packages.fhir.org/hl7.terminology.r5/6.1.0 (00:00.001 / 00:02.083, 31Mb)
+Sushi: info  Downloaded hl7.terminology.r5#6.1.0                                                     (00:01.166 / 00:03.249, 31Mb)
+Sushi: info  Loaded package hl7.terminology.r5#6.1.0                                                 (00:01.335 / 00:04.585, 31Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.uv.extensions.r5#5.1.0...          (00:00.103 / 00:04.689, 31Mb)
+Sushi: info  Did not find hl7.fhir.uv.extensions.r5#5.1.0 in /home/publisher/.fhir/packages.         (00:00.282 / 00:04.971, 31Mb)
+Sushi: info  Downloading hl7.fhir.uv.extensions.r5#5.1.0... https://packages.fhir.org/hl7.fhir.uv.extensions.r5/5.1.0 (00:00.001 / 00:04.972, 31Mb)
+Sushi: info  Downloaded hl7.fhir.uv.extensions.r5#5.1.0                                              (00:00.213 / 00:05.186, 31Mb)
+Sushi: info  Loaded package hl7.fhir.uv.extensions.r5#5.1.0                                          (00:00.851 / 00:06.037, 31Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.r5.core#5.0.0...                   (00:00.001 / 00:06.039, 31Mb)
+Sushi: info  Did not find hl7.fhir.r5.core#5.0.0 in /home/publisher/.fhir/packages.                  (00:00.398 / 00:06.437, 31Mb)
+Sushi: info  Downloading hl7.fhir.r5.core#5.0.0... https://packages.fhir.org/hl7.fhir.r5.core/5.0.0  (00:00.001 / 00:06.438, 31Mb)
+Sushi: info  Downloaded hl7.fhir.r5.core#5.0.0                                                       (00:00.639 / 00:07.078, 31Mb)
+Sushi: info  Loaded package hl7.fhir.r5.core#5.0.0                                                   (00:01.800 / 00:08.878, 31Mb)
+Sushi: info  Found 6 files in input/* resource folders that were neither XML nor JSON. These files were not processed as resources by SUSHI. To see the unprocessed files in the logs, run SUSHI with the "--log-level debug" flag. (00:00.034 / 00:08.913, 31Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.001 / 00:08.915, 31Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.003 / 00:08.918, 31Mb)
+Sushi: info  Exported 0 FHIR resources as JSON.                                                      (00:00.000 / 00:08.919, 31Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.001 / 00:08.921, 31Mb)
+Sushi: warn  The Commons and Governance menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for Commons and Governance is included in the menu.xml file but it will not be rendered in the IG. (00:00.004 / 00:08.925, 31Mb)
+Sushi: warn  The Authoring Artifacts menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for Authoring Artifacts is included in the menu.xml file but it will not be rendered in the IG. (00:00.002 / 00:08.928, 31Mb)
+Sushi: warn  The ArchiMate Diagrams menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for ArchiMate Diagrams is included in the menu.xml file but it will not be rendered in the IG. (00:00.002 / 00:08.930, 31Mb)
+Sushi: info  Generated ImplementationGuide-smart.who.int.ig-starter-kit.json                         (00:00.002 / 00:08.932, 31Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.001 / 00:08.934, 31Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.001 / 00:08.935, 31Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:08.936, 31Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.001 / 00:08.937, 31Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.001 / 00:08.939, 31Mb)
+Sushi: | |       0       |      0       |      0       |       0       | |                           (00:00.001 / 00:08.940, 31Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:08.941, 31Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:08.943, 31Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.001 / 00:08.945, 31Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.002 / 00:08.946, 31Mb)
+Sushi: | |         0          |         0         |         0          | |                           (00:00.002 / 00:08.948, 31Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:08.949, 31Mb)
+Sushi: |                                                                 |                           (00:00.001 / 00:08.950, 31Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:08.952, 31Mb)
+Sushi: | Warnings... Water those about?         0 Errors      3 Warnings |                           (00:00.001 / 00:08.953, 31Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:08.954, 31Mb)
+Load Template from who.template.root#current                                                         (00:00.466 / 00:09.421, 53Mb)
+Installing who.template.root#current to the package cache
+  Fetching:
+
+Installing who.template.root#current
+ done.
+ Load Template from fhir.base.template#current                                                       (00:01.204 / 00:10.625, 30Mb)
+Installing fhir.base.template#current to the package cache
+  Fetching:
+
+Installing fhir.base.template#current
+ done.
+
+onLoad.findSpreadsheets:
+
+onLoad.updateIg:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onLoad-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onLoad-ig-updated.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onLoad.xslt
+
+onLoad.extend:
+
+onLoad:
+Root directory: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0                                   (00:03.177 / 00:13.803, 106Mb)
+Terminology Cache is at /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input-cache/txcache. Clearing now (00:00.546 / 00:14.349, 125Mb)
+Core Package hl7.fhir.r5.core#5.0.0
+Running Terminology Log: /tmp/ohfu-fhir-ig-11214004267399354526.log
+Connect to Terminology Server at http://tx.fhir.org                                                  (00:04.308 / 00:18.657, 654Mb)
+Installing hl7.fhir.pubpack#0.1.9 to the package cache
+  Fetching:
+
+Installing hl7.fhir.pubpack#0.1.9
+ done.
+Load Package hl7.fhir.pubpack#0.1.9
+Installing hl7.fhir.xver-extensions#0.1.0 to the package cache
+  Fetching:
+
+Installing hl7.fhir.xver-extensions#0.1.0
+ done.
+Load Package hl7.fhir.xver-extensions#0.1.0
+Load Package hl7.terminology.r5#6.1.0
+Load Package hl7.fhir.uv.extensions.r5#5.1.0
+Installing hl7.fhir.uv.tools.r5#0.3.0 to the package cache
+  Fetching:
+
+Installing hl7.fhir.uv.tools.r5#0.3.0
+ done.
+Load Package hl7.fhir.uv.tools.r5#0.3.0
+Initialization complete                                                                              (00:04.703 / 00:23.361, 547Mb)
+Load Content                                                                                         (00:00.001 / 00:23.362, 547Mb)
+Using en-US as the default narrative language. (no language information in Implementation Guide or command line) (00:00.046 / 00:23.408, 550Mb)
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0/fsh-generated/includes] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/fsh-generated/includes
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input/data] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input/data
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input/pagecontent] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input/pagecontent
+Fetch http://smart.who.int/ig-starter-kit/package-list.json for version check                        (00:00.088 / 00:23.497, 558Mb)
+Processing Conformance Resources                                                                     (00:00.191 / 00:23.688, 559Mb)
+Load Dependency Info                                                                                 (00:00.001 / 00:23.689, 559Mb)
+Load Info                                                                                            (00:00.001 / 00:23.691, 559Mb)
+Load Resources                                                                                       (00:00.001 / 00:23.693, 560Mb)
+Load Paths                                                                                           (00:00.026 / 00:23.720, 563Mb)
+Generating Snapshots                                                                                 (00:00.002 / 00:23.722, 563Mb)
+Check R4 / R4B                                                                                       (00:00.004 / 00:23.726, 563Mb)
+Assign Comparison Ids                                                                                (00:00.006 / 00:23.733, 564Mb)
+Propagating status                                                                                   (00:00.001 / 00:23.735, 564Mb)
+Generating Narratives                                                                                (00:00.001 / 00:23.737, 564Mb)
+Validating Conformance Resources                                                                     (00:00.089 / 00:23.826, 589Mb)
+Check profiles & code systems                                                                        (00:00.984 / 00:24.810, 869Mb)
+Check realm rules                                                                                    (00:00.001 / 00:24.812, 869Mb)
+Previous Version Comparison                                                                          (00:00.001 / 00:24.813, 869Mb)
+Installing smart.who.int.ig-starter-kit#1.0.0 to the package cache
+  Fetching:
+2024-11-29 19:36:52.901 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:92] Failed to resolve package smart.who.int.ig-starter-kit#1.0.0 from server: https://packages.fhir.org (Not Found)
+2024-11-29 19:36:52.941 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:92] Failed to resolve package smart.who.int.ig-starter-kit#1.0.0 from server: https://packages2.fhir.org/packages (Not found)
+Error fetching https://packages.fhir.org/smart.who.int.ig-starter-kit: Not Found
+2024-11-29 19:36:53.035 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:92] Failed to resolve package smart.who.int.ig-starter-kit#1.0.x from server: https://packages.fhir.org (Package not found: smart.who.int.ig-starter-kit)
+2024-11-29 19:36:53.933 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:92] Failed to resolve package smart.who.int.ig-starter-kit#1.0.x from server: https://packages2.fhir.org/packages (Package not found: smart.who.int.ig-starter-kit)
+
+Installing smart.who.int.ig-starter-kit#1.0.0
+ done.
+Installing hl7.terminology.r5#5.5.0 to the package cache
+  Fetching:
+
+Installing hl7.terminology.r5#5.5.0
+ done.
+Validating Resources                                                                                 (00:06.572 / 00:31.385, 749Mb)
+Processing Provenance Records                                                                        (00:00.001 / 00:31.386, 749Mb)
+Generating Outputs in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/output                      (00:00.001 / 00:31.388, 749Mb)
+Generate Native Outputs                                                                              (00:00.080 / 00:31.469, 756Mb)
+Run Template                                                                                         (00:00.134 / 00:31.603, 762Mb)
+
+onGenerate.checkVersions:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/versions.txt
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.getVersions.xslt
+
+onGenerate.r5-schemas:
+      [get] Getting: http://build.fhir.org/fhir-single.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input-cache/schemas/R5/fhir-single.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/fhir-xhtml.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input-cache/schemas/R5/fhir-xhtml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xml.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input-cache/schemas/R5/xml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xmldsig-core-schema.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/input-cache/schemas/R5/xmldsig-core-schema.xsd
+      [get] Not modified - so not downloaded
+
+onGenerate.r4-schemas:
+
+onGenerate.r3-schemas:
+
+onGenerate.r2b-schemas:
+
+onGenerate.r2-schemas:
+
+onGenerate.schemas:
+
+onGenerate.data:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages/_data/artifacts.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.data.xslt
+
+onGenerate.setup:
+
+onGenerate.infoFile:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages/_data/info.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.genJson.xslt
+
+onGenerate.processIncludes:
+     [copy] Copying 21 files to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages/_includes
+
+onGenerate.processIg:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.1.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.group.xslt
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.1.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.2.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.groupSort.xslt
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-working.2.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-updated.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.final.xslt
+
+onGenerate.igQa:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-updated.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/ongenerate-validation-igqa.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/onGenerate.qa.xslt
+
+onGenerate.artifactList:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/onGenerate-ig-updated.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages/_includes/artifacts.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/template/scripts/createArtifactSummary.xslt
+
+check-plantumlfiles:
+
+onGenerate.plantUml.ig:
+
+onGenerate.plantUml.template:
+
+onGenerate.plantUml:
+
+onGenerate.copyDataFiles:
+
+onGenerate.extend:
+
+onGenerate:
+Template Done                                                                                        (00:03.657 / 00:35.260, 802Mb)
+Generate HTML Outputs                                                                                (00:00.001 / 00:35.261, 802Mb)
+Generate Summaries                                                                                   (00:00.079 / 00:35.341, 812Mb)
+Generating Summary Outputs                                                                           (00:00.002 / 00:35.343, 812Mb)
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+DB Cumulative Time invested: 00:00:00.57
+Sending Usage Stats to Server                                                                        (00:04.100 / 00:39.443, 964Mb)
+## Memory (MB): Use = 964, Free = 787, Total = 1752, Max = 4096                                      (00:00.006 / 00:39.450, 964Mb)
+Reclaiming memory...                                                                                 (00:00.001 / 00:39.452, 964Mb)
+## Memory (MB): Use = 853, Free = 898, Total = 1752, Max = 4096                                      (00:00.408 / 00:39.861, 854Mb)
+Run jekyll: jekyll build --destination "/workspace/temp/smart.who.int.ig-starter-kit#1.1.0/output" (in folder /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages) (00:00.004 / 00:39.865, 855Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.002 / 00:39.867, 855Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.001 / 00:39.869, 855Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.001 / 00:39.871, 855Mb)
+Jekyll: Source: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/temp/pages                        (00:00.370 / 00:40.241, 858Mb)
+Jekyll: Generating...                                                                                (00:00.001 / 00:40.242, 858Mb)
+Jekyll: done in 0.999 seconds.                                                                       (00:00.998 / 00:41.240, 858Mb)
+
+onCheck.extend:
+
+onCheck:
+
+Installing smart.who.int.ig-starter-kit#1.1.0
+ done.
+Checking Output HTML                                                                                 (00:00.153 / 00:41.394, 869Mb)
+found 668 files                                                                                      (00:00.006 / 00:41.401, 869Mb)
+.........................................
+.........................................
+  ... 668 html files, 0 pages invalid xhtml (0%)                                                     (00:01.211 / 00:42.612, 1Gb)
+  ... 3021 links, 0 broken links (0%)                                                                (00:00.001 / 00:42.614, 1Gb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.001 / 00:42.615, 1Gb)
+Build final .zip                                                                                     (00:00.008 / 00:42.624, 1Gb)
+Final .zip built                                                                                     (00:01.088 / 00:43.712, 1Gb)
+Built. Times: loading: 00:00.324, generate: 00:20.817, narrative generation: 00:00.087, validation: 00:00.982, realm-rules: 00:00.001, previous-version: 00:06.558, jekyll: 00:01.383, template: 00:03.668 (#3) (00:00.807 / 00:44.519, 882Mb)
+Generating QA                                                                                        (00:00.002 / 00:44.521, 882Mb)
+Validation output in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0/output/qa.html
+Errors: 0, Warnings: 0, Info: 0, Broken Links: 0 (00:00.098 / 00:44.620, 891Mb)
+Finished. Max Memory Used = 1Gb. Log file saved in /tmp/fhir-ig-publisher-tmp.log                    (00:00.002 / 00:44.622, 891Mb)
+Prepare Build space in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone
+Build IG at /workspace/source: final copy suitable for publication (in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone) (milestone build)
+FHIR IG Publisher Version 1.7.5 (Git# 2ec44e6c46a5). Built 2024-11-22T15:37:50.312Z (7 days old)    
+Detected Java version: 23-ea from /usr/local/openjdk-23 on Linux/amd64 (64bit). 4096MB available    
+dir = /workspace, path = /home/publisher/bin:/home/publisher/bin/ig-publisher-scripts:/home/publisher/.node/bin:/usr/local/openjdk-23/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Parameters: -ig /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone -publish http://smart.who.int/ig-starter-kit/v1.1.0 -milestone -no-exit
+Start Clock @ Friday, November 29, 2024, 7:37:14 PM Coordinated Universal Time (2024-11-29T19:37:14Z)
+                                                                                                    
+Build FHIR IG from /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone                      (00:00.002 / 00:00.002, 917Mb)
+Build Formal Publication package, intended for http://smart.who.int/ig-starter-kit/v1.1.0            (00:00.000 / 00:00.003, 917Mb)
+API keys loaded from /home/publisher/.fhir/fhir-settings.json                                        (00:00.000 / 00:00.004, 917Mb)
+Package Cache: /home/publisher/.fhir/packages                                                        (00:00.000 / 00:00.005, 917Mb)
+Run Sushi on /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone                            (00:00.000 / 00:00.006, 917Mb)
+Sushi: info  Running SUSHI v3.12.1 (implements FHIR Shorthand specification v3.0.0)                  (00:00.382 / 00:00.388, 919Mb)
+Sushi: info  Arguments:                                                                              (00:00.001 / 00:00.389, 919Mb)
+Sushi: info    --require-latest                                                                      (00:00.001 / 00:00.391, 919Mb)
+Sushi: info    --out /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone                    (00:00.000 / 00:00.391, 919Mb)
+Sushi: info    /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone                          (00:00.000 / 00:00.392, 919Mb)
+Sushi: info  Using configuration file: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/sushi-config.yaml (00:00.381 / 00:00.774, 919Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.104 / 00:00.879, 919Mb)
+Sushi: info  Preprocessed 0 documents with 0 aliases.                                                (00:00.001 / 00:00.880, 919Mb)
+Sushi: info  Imported 0 definitions and 0 instances.                                                 (00:00.001 / 00:00.881, 919Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.uv.tools#current...                (00:00.001 / 00:00.883, 919Mb)
+Sushi: info  Found hl7.fhir.uv.tools#current in /home/publisher/.fhir/packages.                      (00:00.043 / 00:00.926, 919Mb)
+Sushi: info  Loaded package hl7.fhir.uv.tools#current                                                (00:00.435 / 00:01.361, 919Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.terminology.r5#6.1.0...                 (00:00.397 / 00:01.758, 919Mb)
+Sushi: info  Found hl7.terminology.r5#6.1.0 in /home/publisher/.fhir/packages.                       (00:00.528 / 00:02.287, 919Mb)
+Sushi: info  Loaded package hl7.terminology.r5#6.1.0                                                 (00:00.001 / 00:02.288, 919Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.uv.extensions.r5#5.1.0...          (00:00.101 / 00:02.389, 919Mb)
+Sushi: info  Found hl7.fhir.uv.extensions.r5#5.1.0 in /home/publisher/.fhir/packages.                (00:00.507 / 00:02.897, 919Mb)
+Sushi: info  Loaded package hl7.fhir.uv.extensions.r5#5.1.0                                          (00:00.000 / 00:02.898, 919Mb)
+Sushi: info  Checking /home/publisher/.fhir/packages for hl7.fhir.r5.core#5.0.0...                   (00:00.000 / 00:02.899, 919Mb)
+Sushi: info  Found hl7.fhir.r5.core#5.0.0 in /home/publisher/.fhir/packages.                         (00:01.012 / 00:03.912, 919Mb)
+Sushi: info  Loaded package hl7.fhir.r5.core#5.0.0                                                   (00:00.001 / 00:03.913, 919Mb)
+Sushi: info  Found 6 files in input/* resource folders that were neither XML nor JSON. These files were not processed as resources by SUSHI. To see the unprocessed files in the logs, run SUSHI with the "--log-level debug" flag. (00:00.035 / 00:03.948, 919Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.003 / 00:03.952, 919Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.002 / 00:03.954, 919Mb)
+Sushi: info  Exported 0 FHIR resources as JSON.                                                      (00:00.001 / 00:03.956, 919Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.001 / 00:03.957, 919Mb)
+Sushi: warn  The Commons and Governance menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for Commons and Governance is included in the menu.xml file but it will not be rendered in the IG. (00:00.005 / 00:03.962, 919Mb)
+Sushi: warn  The Authoring Artifacts menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for Authoring Artifacts is included in the menu.xml file but it will not be rendered in the IG. (00:00.002 / 00:03.965, 919Mb)
+Sushi: warn  The ArchiMate Diagrams menu item specifies a sub-menu. The IG template currently only supports two levels of menus. The sub-menu for ArchiMate Diagrams is included in the menu.xml file but it will not be rendered in the IG. (00:00.002 / 00:03.968, 919Mb)
+Sushi: info  Generated ImplementationGuide-smart.who.int.ig-starter-kit.json                         (00:00.002 / 00:03.970, 919Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.001 / 00:03.971, 919Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.000 / 00:03.972, 919Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:03.973, 919Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.000 / 00:03.974, 919Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.000 / 00:03.975, 919Mb)
+Sushi: | |       0       |      0       |      0       |       0       | |                           (00:00.000 / 00:03.976, 919Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:03.977, 919Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:03.978, 919Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.000 / 00:03.979, 919Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.000 / 00:03.980, 919Mb)
+Sushi: | |         0          |         0         |         0          | |                           (00:00.000 / 00:03.981, 919Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:03.982, 919Mb)
+Sushi: |                                                                 |                           (00:00.000 / 00:03.982, 919Mb)
+Sushi: ===================================================================                           (00:00.000 / 00:03.983, 919Mb)
+Sushi: | Something smells fishy...              0 Errors      3 Warnings |                           (00:00.000 / 00:03.984, 919Mb)
+Sushi: ===================================================================                           (00:00.000 / 00:03.985, 919Mb)
+Load Template from who.template.root#current                                                         (00:00.028 / 00:04.014, 920Mb)
+ Load Template from fhir.base.template#current                                                       (00:00.505 / 00:04.519, 955Mb)
+
+onLoad.findSpreadsheets:
+
+onLoad.updateIg:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onLoad-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onLoad-ig-updated.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onLoad.xslt
+
+onLoad.extend:
+
+onLoad:
+Root directory: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone                         (00:01.668 / 00:06.187, 1Gb)
+Terminology Cache is at /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input-cache/txcache. 5 files in cache (00:00.446 / 00:06.633, 1Gb)
+Core Package hl7.fhir.r5.core#5.0.0
+Running Terminology Log: /tmp/ohfu-fhir-ig-5568020326921528922.log
+Connect to Terminology Server at http://tx.fhir.org                                                  (00:02.358 / 00:08.992, 1Gb)
+Load Package hl7.fhir.pubpack#0.1.9
+Load Package hl7.fhir.xver-extensions#0.1.0
+Load Package hl7.terminology.r5#6.1.0
+Load Package hl7.fhir.uv.extensions.r5#5.1.0
+Load Package hl7.fhir.uv.tools.r5#0.3.0
+Initialization complete                                                                              (00:02.018 / 00:11.011, 795Mb)
+Load Content                                                                                         (00:00.002 / 00:11.013, 795Mb)
+Using en-US as the default narrative language. (no language information in Implementation Guide or command line) (00:00.011 / 00:11.025, 797Mb)
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/fsh-generated/includes] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/fsh-generated/includes
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input/data] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input/data
+loadPrePages from FetchedFile[/workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input/pagecontent] as /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input/pagecontent
+Fetch http://smart.who.int/ig-starter-kit/package-list.json for version check                        (00:00.071 / 00:11.096, 803Mb)
+Processing Conformance Resources                                                                     (00:00.260 / 00:11.356, 804Mb)
+Load Dependency Info                                                                                 (00:00.001 / 00:11.358, 804Mb)
+Load Info                                                                                            (00:00.001 / 00:11.359, 804Mb)
+Load Resources                                                                                       (00:00.000 / 00:11.360, 805Mb)
+Load Paths                                                                                           (00:00.007 / 00:11.367, 808Mb)
+Generating Snapshots                                                                                 (00:00.001 / 00:11.369, 808Mb)
+Check R4 / R4B                                                                                       (00:00.001 / 00:11.371, 808Mb)
+Assign Comparison Ids                                                                                (00:00.003 / 00:11.374, 809Mb)
+Propagating status                                                                                   (00:00.001 / 00:11.376, 809Mb)
+Generating Narratives                                                                                (00:00.001 / 00:11.377, 809Mb)
+Validating Conformance Resources                                                                     (00:00.021 / 00:11.399, 822Mb)
+Check profiles & code systems                                                                        (00:00.532 / 00:11.931, 1Gb)
+Check realm rules                                                                                    (00:00.000 / 00:11.932, 1Gb)
+Previous Version Comparison                                                                          (00:00.000 / 00:11.933, 1Gb)
+Validating Resources                                                                                 (00:03.531 / 00:15.464, 795Mb)
+Processing Provenance Records                                                                        (00:00.001 / 00:15.465, 795Mb)
+Generating Outputs in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/output            (00:00.000 / 00:15.466, 795Mb)
+Generate Native Outputs                                                                              (00:00.063 / 00:15.530, 800Mb)
+Run Template                                                                                         (00:00.049 / 00:15.579, 806Mb)
+
+onGenerate.checkVersions:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/versions.txt
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.getVersions.xslt
+
+onGenerate.r5-schemas:
+      [get] Getting: http://build.fhir.org/fhir-single.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input-cache/schemas/R5/fhir-single.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/fhir-xhtml.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input-cache/schemas/R5/fhir-xhtml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xml.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input-cache/schemas/R5/xml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xmldsig-core-schema.xsd
+      [get] To: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/input-cache/schemas/R5/xmldsig-core-schema.xsd
+      [get] Not modified - so not downloaded
+
+onGenerate.r4-schemas:
+
+onGenerate.r3-schemas:
+
+onGenerate.r2b-schemas:
+
+onGenerate.r2-schemas:
+
+onGenerate.schemas:
+
+onGenerate.data:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages/_data/artifacts.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.data.xslt
+
+onGenerate.setup:
+
+onGenerate.infoFile:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages/_data/info.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.genJson.xslt
+
+onGenerate.processIncludes:
+     [copy] Copying 21 files to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages/_includes
+
+onGenerate.processIg:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.1.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.group.xslt
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.1.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.2.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.groupSort.xslt
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-working.2.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-updated.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.final.xslt
+
+onGenerate.igQa:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-updated.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/ongenerate-validation-igqa.json
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/onGenerate.qa.xslt
+
+onGenerate.artifactList:
+     [xslt] Processing /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/onGenerate-ig-updated.xml to /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages/_includes/artifacts.xml
+     [xslt] Loading stylesheet /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/template/scripts/createArtifactSummary.xslt
+
+check-plantumlfiles:
+
+onGenerate.plantUml.ig:
+
+onGenerate.plantUml.template:
+
+onGenerate.plantUml:
+
+onGenerate.copyDataFiles:
+
+onGenerate.extend:
+
+onGenerate:
+Template Done                                                                                        (00:03.581 / 00:19.161, 838Mb)
+Generate HTML Outputs                                                                                (00:00.001 / 00:19.162, 838Mb)
+Generate Summaries                                                                                   (00:00.037 / 00:19.199, 847Mb)
+Generating Summary Outputs                                                                           (00:00.001 / 00:19.201, 847Mb)
+DB Cumulative Time invested: 00:00:00.48
+Sending Usage Stats to Server                                                                        (00:02.256 / 00:21.457, 1Gb)
+## Memory (MB): Use = 1479, Free = 420, Total = 1900, Max = 4096                                     (00:00.001 / 00:21.458, 1Gb)
+Reclaiming memory...                                                                                 (00:00.000 / 00:21.459, 1Gb)
+## Memory (MB): Use = 854, Free = 1045, Total = 1900, Max = 4096                                     (00:00.408 / 00:21.868, 855Mb)
+Run jekyll: jekyll build --destination "/workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/output" (in folder /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages) (00:00.001 / 00:21.869, 855Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.001 / 00:21.871, 855Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.000 / 00:21.872, 855Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.000 / 00:21.872, 855Mb)
+Jekyll: Source: /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/temp/pages              (00:00.345 / 00:22.218, 857Mb)
+Jekyll: Generating...                                                                                (00:00.001 / 00:22.219, 857Mb)
+Jekyll: done in 0.975 seconds.                                                                       (00:00.973 / 00:23.193, 857Mb)
+
+onCheck.extend:
+
+onCheck:
+
+Installing smart.who.int.ig-starter-kit#1.1.0
+Checking Output HTML                                                                                 (00:00.046 / 00:23.239, 862Mb)
+found 668 files                                                                                      (00:00.005 / 00:23.245, 862Mb)
+.........................................
+.........................................
+  ... 668 html files, 0 pages invalid xhtml (0%)                                                     (00:00.503 / 00:23.749, 1Gb)
+  ... 3021 links, 0 broken links (0%)                                                                (00:00.001 / 00:23.750, 1Gb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.001 / 00:23.751, 1Gb)
+Build final .zip                                                                                     (00:00.008 / 00:23.760, 1Gb)
+Final .zip built                                                                                     (00:01.077 / 00:24.838, 1Gb)
+Built. Times: loading: 00:00.341, generate: 00:14.316, narrative generation: 00:00.020, validation: 00:00.531, realm-rules: 00:00.000, previous-version: 00:03.528, jekyll: 00:01.331, template: 00:03.586 (#3) (00:00.836 / 00:25.674, 1Gb)
+Generating QA                                                                                        (00:00.001 / 00:25.675, 1Gb)
+Validation output in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/output/qa.html
+Errors: 0, Warnings: 0, Info: 0, Broken Links: 0 (00:00.025 / 00:25.700, 1Gb)
+Finished. Max Memory Used = 1Gb. Log file saved in /tmp/fhir-ig-publisher-tmp.log                    (00:00.002 / 00:25.703, 1Gb)
+Keep a copy of the build directory at /workspace/temp/web-root/run-20241129/ig-build-zips/smart.who.int.ig-starter-kit#1.1.0.zip
+
+ok. All checks passed. Publish v1.1.0 to /workspace/temp/web-root/run-20241129/ig-starter-kit/v1.1.0
+Copy the IG to /workspace/temp/web-root/run-20241129/ig-starter-kit/v1.1.0
+Update /workspace/temp/web-root/run-20241129/ig-starter-kit/package-list.json
+Publish Box Statement: This page is part of the SMART IG STARTER KIT (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a>
+no html insert in /workspace/temp/web-root/run-20241129/ig-starter-kit/v1.1.0/qa-txservers.html
+  .. 41 files checked, 41 updated
+  .. 9 clones checked, 18 updated
+  .. 1 redirections (1 created/updated)
+This is a milestone release - publish v1.1.0 to /workspace/temp/web-root/run-20241129/ig-starter-kit
+Publish Box Statement: This page is part of the SMART IG STARTER KIT (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a>
+no html insert in /workspace/temp/smart.who.int.ig-starter-kit#1.1.0-milestone/output/qa-txservers.html
+  .. 41 files checked, 41 updated
+  .. 9 clones checked, 18 updated
+  .. 1 redirections (1 created/updated)
+Check for Files to delete
+  ... 0 files
+Copy to new IG to /workspace/temp/web-root/run-20241129/ig-starter-kit
+[Fatal Error] :1:1: Content is not allowed in prolog.
+Unable to process RSS feed /workspace/temp/web-root/run-20241129/publication-feed.xml as XML - processing as text instead (Content is not allowed in prolog.)
+Update history page at /workspace/temp/web-root/run-20241129/ig-starter-kit from /workspace/history-template and /workspace/webroot/templates
+Build is complete. Copy from /workspace/temp/web-root/run-20241129
+smart.who.int.ig-starter-kit (http://smart.who.int/ig-starter-kit): SMART IG STARTER KIT @ http://worldhealthorganization.github.io/smart-ig-starter-kit
+  release: Releases 1.1.0/5.0.0 @ http://smart.who.int/ig-starter-kit/v1.1.0
