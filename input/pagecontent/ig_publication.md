@@ -78,7 +78,7 @@ SMART Guidelines, when released, are published in `https://smart.who.int/<ig_cod
 <div class="info-box must">
   <span class="info-title">Workflow automation</span>
     The process for publication is a sensitive process - errors can have a large impact on tooling and downstream specifications. For this reason, some of the steps are automated. Increased automation is expected as the SMART Guidelines and this guidance evolve.
-    Every WHO-published SMART Guideline is based on the [SMART IG Empty template](https://github.com/WorldHealthOrganization/smart-ig-empty), which includes a workflow for automation of a part of this procedure.
+    Every WHO-published SMART Guideline is based on the <a href= "https://github.com/WorldHealthOrganization/smart-ig-empty">SMART IG Empty template</a>, which includes a workflow for automation of a part of this procedure.
 </div>
 
 The release publication steps are:
