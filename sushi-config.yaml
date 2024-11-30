@@ -9,13 +9,12 @@ name: IgStarterKit
 status: draft
 version: 1.1.0
 fhirVersion: 5.0.0
-date: 2024-06-19
 # copyright:
 copyrightYear: 2023+
 releaseLabel: "ci-build"
-title: "SMART Guidelines L3 SOP"
-description: "SMART Guidelines L3 SOP"
-license: CC0-1.0
+title: "SMART Guidelines Starter Kit"
+description: "SMART Guidelines Starter Kit with L2 and L3 SOP"
+license: CC-BY-SA-3.0-IGO
 
 # dependencies:
 #  hl7.fhir.core:
@@ -58,12 +57,18 @@ menu:
 
   Home: 
     Overview: index.html
+    SMART Guidelines Community: cop.html
   IG Setup:
     GitHub Repositories: 'ig_repositories.html'
     GitHub Setup: 'ig_setup.html'
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
-  Authoring:
+  L2 Authoring:
+    Overview: 'l2_authoring_overview.html'
+    Authoring a L2 DAK : 'l2_dak_authoring.html'
+    L2 DAK Templates: 'l2_templates.html'
+    L2 DAK FAQ : 'l2_faq.html'
+  L3 Authoring:
     Overview: 'authoring_overview.html'
     Commons and Governance: 
       Governance overview: gov_overview.html
@@ -100,9 +105,12 @@ menu:
   Indices:
     Artifacts: 'artifacts.html'
 
+
 pages: 
   index.md:
     title: "Home"
+    cop.md: 
+      title: "SMART Guidelines Community"
     license.md:
       title: "License"
     changes.md:
@@ -115,8 +123,16 @@ pages:
       title: "ImplementationGuide Configuration"
     ig_publication.md:
       title: "IG Publication"
+  l2_authoring_overview.md:
+    title: "L2 Authoring Overview"
+    l2_dak_authoring.md:
+      title: "Authoring a L2 DAK"
+    l2_templates.md:
+      title: "L2 DAK Templates"
+    l2_faq.md:
+      title: "L2 DAK FAQ"
   authoring_overview.md:
-    title: "Authoring"
+    title: "L3 Authoring Overview"
     gov_overview.md:
       title: "Governance Overview"
       gov_concepts.md:
