@@ -121,7 +121,7 @@ The release publication steps are:
     "path" : "http://smart.who.int/base/v0.1.0",
     "ci-build": "http://worldhealthorganization.github.io/smart-base",    
     "first": true,
-    "status" : "draft",
+    "status" : "release",
     "sequence" : "Releases"
     } 
       </code> </pre>
