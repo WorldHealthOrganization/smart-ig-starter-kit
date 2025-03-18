@@ -133,6 +133,8 @@ pages:
       title: "L2 DAK Templates"
     l2_faq.md:
       title: "L2 DAK FAQ"
+  l4_compliance.md:
+      title: "L4 Compliance"
   authoring_overview.md:
     title: "L3 Authoring Overview"
     gov_overview.md:
