@@ -100,6 +100,8 @@ menu:
       L3 : 'diagram_l3_overview.html'
       Content Types : 'diagram_content_types.html'
       Diagrams Legend: 'diagram_legend.html'
+  L4 Authoring: 
+    L4: 'l4-compliance.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
