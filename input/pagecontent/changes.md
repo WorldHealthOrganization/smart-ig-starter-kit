@@ -1,19 +1,21 @@
 ### Release (V2.1.0)
- ##### [L2 DAK Templates](https://smart.who.int/ig-starter-kit/l2_templates.html)
+ 
+##### [L2 DAK Templates](https://smart.who.int/ig-starter-kit/l2_templates.html)
 
- L2 DAK templates were updated as described in the table below:
+L2 DAK templates were updated as described in the table below:
+
 <table border="1">
 	<tbody>
 		<tr>
 			<td width="193"><strong>Template</strong></td>
-			<td width="558"><strong>Changes</strong></td>
+			<td width="1300"><strong>Changes</strong></td>
 		</tr>
 		<tr>
 			<td width="193">
 				<p>The DAK document<em> (the main template)</em>
 				</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp;&nbsp;&nbsp; Copyright text was added on the "Cover" tab.</p>
 				<p>&middot;&nbsp;&nbsp;&nbsp; The column "Activity ID and name" was split in 2 independent columns "Activity ID" and "Activity name".</p>
 			</td>
@@ -22,7 +24,7 @@
 			<td width="193">
 				<p>Core data dictionary</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp; Copyright text was added on the "Cover" tab.</p>
 				<p>&middot;&nbsp; The column "Activity ID and name" was split in 2 independent columns "Activity ID" and "Activity name".</p>
 			</td>
@@ -31,7 +33,7 @@
 			<td width="193">
 				<p>Decision-support logic</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp; Copyright text was added on the "Cover" tab.</p>
 				<p>&middot;&nbsp; Decision-support table ID was suffixed with “Sequential number of the decision-support table” to allow linkage of multiple tables to one activity: <br>
 				&nbsp;&nbsp;&nbsp;&nbsp;Old notation example: IMMZ.D2.DT<br>
@@ -48,7 +50,7 @@
 			<td width="193">
 				<p>Scheduling logic</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp; Copyright text was added on the "Cover" tab.</p>
 				<p>&middot;&nbsp; Scheduling table ID was suffixed with “Sequential number of the scheduling logic table” to allow linkage of multiple tables to one activity: <br>
 				&nbsp;&nbsp;&nbsp;&nbsp;Old notation example: IMMZ.D2.S<br>
@@ -65,7 +67,7 @@
 			<td width="193">
 				<p>Indicators and performance metrics</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp; Copyright text was added on the "Cover" tab.</p>
 			</td>
 		</tr>
@@ -73,7 +75,7 @@
 			<td width="193">
 				<p>High-level functional and non-functional requirements</p>
 			</td>
-			<td width="132">
+			<td width="1300">
 				<p>&middot;&nbsp; Copyright text was added on the "Cover" tab.</p>
 				<p>&middot;&nbsp; The column "Activity ID and name" was split in 2 independent columns "Activity ID" and "Activity name".</p>
 			</td>
