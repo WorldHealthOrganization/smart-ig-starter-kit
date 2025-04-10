@@ -86,4 +86,4 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 </table>
 
 
-If you want to download all the templates at once, please download <a href="DAK_templates_v2.1.zip">this archive</a>.
+<p>If you want to download all the templates at once, please download <a href="DAK_templates_v2.1.zip">this archive</a>.</p>
