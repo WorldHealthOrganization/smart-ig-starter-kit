@@ -36,3 +36,17 @@ auto-save-list
 tramp
 .\#*
 .swp
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/smart-ig-starter-kit/CopilotIndices/17.13.433.20974/CodeChunks.db
+.vs/smart-ig-starter-kit/CopilotIndices/17.13.433.20974/SemanticSymbols.db
+.vs/smart-ig-starter-kit/FileContentIndex/65fe29a5-44be-4569-95e0-730044c44f97.vsidx
+.vs/smart-ig-starter-kit/FileContentIndex/78bb7436-7ee9-47aa-9e70-873b508963b1.vsidx
+.vs/smart-ig-starter-kit/FileContentIndex/836e64a9-67ba-40b2-9408-af949af7dda4.vsidx
+.vs/smart-ig-starter-kit/FileContentIndex/b3c7e3f1-6a25-4825-b9d6-aa3df7d50327.vsidx
+.vs/smart-ig-starter-kit/FileContentIndex/dc63feff-9614-48fa-8a6a-77816956231f.vsidx
+.vs/smart-ig-starter-kit/v17/.wsuo
+.vs/smart-ig-starter-kit/v17/DocumentLayout.json
+/.vs
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json

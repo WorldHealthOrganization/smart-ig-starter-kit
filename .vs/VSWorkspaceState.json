@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\input",
+    "\\input\\pagecontent"
   ],
+  "SelectedNode": "\\input\\pagecontent\\l2_templates.md",
   "PreviewInSolutionExplorer": false
 }
