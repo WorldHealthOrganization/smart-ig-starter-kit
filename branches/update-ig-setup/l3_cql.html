@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>CQL - DRAFT SMART Guidelines L3 SOP v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+  <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/font-awesome-all.min.css">
+<link rel="stylesheet" href="assets/css/local.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.7.16"}
+    h3,h4,h5,h6{--heading-prefix:"2.7.16"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="site.data.fhir.ig.status">
+          <p><span style="font-size:12pt;font-weight:bold">DRAFT SMART Guidelines L3 SOP</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - CI Build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Homepage</a>
+      </li>
+      <li>
+        <a href="#">Overview</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="structure.html">Structuring of the SOP IG</a>
+      </li>
+      <li>
+        <a href="diagram_legend.html">Diagrams Legend</a>
+      </li>
+      <li>
+        <a href="content_types.html">Types of content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Common Artifacts</a>
+          </li>
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="l2_l3_overview.html">L2 Overview</a>
+      </li>
+      <li>
+        <a href="narrative.html">Narrative Authoring</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_artifacts.html">Authoring</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_schedulinglogic.html">Scheduling Logic</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+          <li>
+            <a href="license.html">License</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li>
+        <a href="ig_licensing.html">Licensing</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_setup.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_licensing.html">GitHub Initialization</a>
+      </li>
+      <li>
+        <a href="ig_licensing.html">IG Configuration</a>
+      </li>
+      <li><a name="l418">​</a>
+        <a href="release_publication.html">Release Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="artifacts.html">Extensions</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="authoring_overview.html"><b>Authoring</b></a></li><li><a href="authoring_artifacts.html"><b>Authoring Artifacts</b></a></li><li><b>CQL</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">DRAFT SMART Guidelines L3 SOP, published by TBD. This guide is not an authorized publication; it is the continuous build for version 0.2.1 built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit">https://github.com/WorldHealthOrganization/smart-ig-starter-kit</a> and changes regularly. See the <a href="http://smart.who.int/ig/smart-ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>CQL</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inputs" id="markdown-toc-inputs"><strong>Inputs:</strong></a></li>
+  <li><a href="#outputs" id="markdown-toc-outputs"><strong>Outputs:</strong></a></li>
+  <li><a href="#activities" id="markdown-toc-activities"><strong>Activities:</strong></a></li>
+  <li><a href="#criteria" id="markdown-toc-criteria">Criteria:</a></li>
+  <li><a href="#criteria--definition-of-done" id="markdown-toc-criteria--definition-of-done"><strong>Criteria / Definition of Done</strong></a></li>
+  <li><a href="#change-tracking" id="markdown-toc-change-tracking"><strong>Change tracking</strong></a></li>
+  <li><a href="#tooling" id="markdown-toc-tooling"><strong>Tooling</strong></a></li>
+  <li><a href="#informative-examples" id="markdown-toc-informative-examples"><strong>Informative examples</strong></a></li>
+  <li><a href="#known-issues-and-dependencies" id="markdown-toc-known-issues-and-dependencies"><strong>Known issues and dependencies</strong></a></li>
+</ul>
+
+</div>
+
+<p><a name="l610">​</a>CQL - <a href="https://cql.hl7.org/">Clinical Query Language</a> is a way to computably express queries and logic for the inputs and outputs of decision support - <a href="l3_decisiontables.html">decision logic</a> and <a href="l3_scheduling_logic.htlm">scheduling logic</a> - as well as <a href="l3_indicators.html">indicators</a>.</p>
+
+<p>For background and introduction to CQL, refer to the <a href="https://github.com/cqframework/CQL-Formatting-and-Usage-Wiki/wiki/Getting-Started">Getting Started</a> page of the CQFramework wiki.</p>
+
+<p>CQL expressions are defined in CQL libraries; Common CQL libraries are available, containing commonly usable expressions for accessing data represented as FHIR resources.</p>
+
+<p>Upon authoring, CQL libraries are encoded (base64) and included in FHIR Library resources.</p>
+
+<p>The L3 author must ensure that there are CQL expressions in each Measure or Decision/Scheduling artifact, including their dependencies. CQL Library dependencies are common definitions intended to be reused among multiple artifacts, and potentially multiple SMART Guidelines.</p>
+
+<h3 id="inputs"><strong>Inputs:</strong></h3>
+
+<ul>
+  <li>L2 Data Dictionary</li>
+  <li>L2 Decision Tables</li>
+  <li>L2 Scheduling Tables</li>
+  <li>L2 Indicators</li>
+  <li>L2 Configuration</li>
+  <li>Common CQL Libraries</li>
+</ul>
+
+<h3 id="outputs"><strong>Outputs:</strong></h3>
+
+<ul>
+  <li>CQL Libraries containing CQL declarations including terminology, parameters, functions, and expressions</li>
+</ul>
+
+<h3 id="activities"><strong>Activities:</strong></h3>
+
+<p>The L3 author creates CQL libraries for:</p>
+<ul>
+  <li>Concepts library with terminology declarations defined by the SMART Guideline</li>
+  <li>Common library containing common expressions used by multiple artifacts within the SMART Guideline</li>
+  <li>Config library with declarations to enable configuration options to be referenced within CQL logic</li>
+  <li>Elements library containing CQL expressions corresponding to the elements defined in the data dictionary</li>
+  <li>Decision table libraries, one for each Decision table containing the recommendation logic referenced by the PlanDefinition</li>
+  <li>Indicator libraries, one for each Indicator definition containing the population criteria logic referenced by the Measure</li>
+  <li>Scheduling libraries, one for each Scheduling Table containing the scheduling logic referenced by the PlanDefinition</li>
+</ul>
+
+<p>In general, follow the conventions and conformance requirements established in the <a href="https://build.fhir.org/ig/HL7/cql-ig/using-cql.html">Using CQL With FHIR</a> implementation guide. In addition, the <a href="https://build.fhir.org/ig/HL7/cql-ig/patterns.html">Patterns</a> page provides best-practices for writing CQL with FHIR resources.</p>
+
+<h4 id="concepts-library">Concepts Library</h4>
+
+<p>To enable the CQL to refer to concepts defined in the SMART Guideline, create a <code class="language-plaintext highlighter-rouge">Concepts</code> library that includes CQL declarations for each CodeSystem and ValueSet defined in the SMART Guideline. For example:</p>
+
+<pre><code class="language-cql">library IMMZConcepts
+
+codesystem "IMMZ.C": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.C'
+codesystem "IMMZ.D1": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.D1'
+codesystem "IMMZ.D4": 'http://smart.who.int/smart-immunizations-measles/CodeSystem/IMMZ.D4'
+
+//WHO ATC IPS Valueset
+valueset "WHO ATC": 'http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips'
+
+// General use ValueSets 
+valueset "Negative Result": 'http://smart.who.int/smart-immunizations-measles/ValueSet/Negativetestresult-values'
+valueset "Positive Result": 'http://smart.who.int/smart-immunizations-measles/ValueSet/PositiveTestResult-values'
+...
+</code></pre>
+
+<p>This library is then referenced by the other libraries whenever terminology needs to be referenced in CQL. This approach centralizes the management of CQL references to terminology throughout the SMART Guideline.</p>
+
+<h4 id="common-library">Common Library</h4>
+
+<p>To provide a space for re-usable CQL declarations within the SMART Guideline, create a <code class="language-plaintext highlighter-rouge">Common</code> library. For example:</p>
+
+<pre><code class="language-cql">library IMMZCommon
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include FHIRCommon called FC
+include WHOCommon called WCom
+include WHOConcepts called Wcon
+include IMMZConcepts called IMMZc
+...
+</code></pre>
+
+<p>This library is then referenced by the other libraries whenever common logic needs to be shared between the logic libraries for each artifact.</p>
+
+<blockquote>
+  <p>NOTE: Common libraries are an organizing capability of CQL, and multiple common libraries MAY be created to facilitate sharing as appropriate for organizing the logic defined in the SMART Guideline. For example, logic may be organized around particular topic areas so that logic needed for recommendations related to a particular topic can be shared, without requiring that logic to be shared everywhere. Depending on the size of complexity of a SMART Guideline, multiple common libraries can be used to organized and share the logic. In addition, libraries may be refactored as needed when sharing patterns are recognized as the content develops.</p>
+</blockquote>
+
+<h4 id="config-library">Config Library</h4>
+
+<p>To allow for configuration options to be referenced within CQL logic, define a <code class="language-plaintext highlighter-rouge">Config</code> library. For example:</p>
+
+<pre><code class="language-cql">library IMMZConfig
+
+define "High incidence of TB and/or high leprosy burden": true
+define "Polio-endemic country with high risk of spread": true
+...
+</code></pre>
+
+<blockquote>
+  <p>NOTE: This approach supports configuration as part of the definition of the logic. To support more dynamic configuration, consider the CodeSystem supplement approach used in the <a href="https://fhir.org/guides/cdc/opioid-mme-r4/conversion-factors.html">Opioid MME IG</a>. This approach allows configuration options to be defined within a CodeSystem resource, and then referenced from the CQL (and anywhere else that needs them), rather than establishing configuration values in the CQL directly.</p>
+</blockquote>
+
+<h4 id="elements-library">Elements Library</h4>
+
+<p>To allow CQL logic to reference data elements defined in the SMART Guideline, create an <code class="language-plaintext highlighter-rouge">Elements</code> library with an expression for each data element defined in the data dictionary. For example:</p>
+
+<pre><code class="language-cql">library IMMZElements
+
+define "..."
+...
+</code></pre>
+
+<p>TODO: Where are the L2 artifacts in the SMART Immunizations Measles IG?</p>
+
+<h4 id="artifact-logic">Artifact Logic</h4>
+
+<p>Each decision support rule, scheduling rule, or measure (indicator), should have its own logic library containing all and only the expressions that are referenced from the FHIR PlanDefinition or Measure resource. This approach allows the logic for each artifact to be organized alongside the artifact. Note that if logic needs to be reorganized so that it can be reused among multiple artifacts, create a Common library to support the common definitions.</p>
+
+<p>CQL Libraries are named after the decision/scheduling/measure:</p>
+<ul>
+  <li>e.g., IMMZ.D2.DT.Measles -&gt; IMMZD2DTMeaslesInputs.cql</li>
+</ul>
+
+<h5 id="input-column-expressions">Input Column Expressions</h5>
+
+<p>Create expressions for all input columns with tags:</p>
+
+<table class="table-bordered full-width">
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>CQL code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Client’s age is less than 9 months<br/>Today’s date - “Date of birth” &lt; 9 ‘month’</td>
+      <td><code class="language-plaintext highlighter-rouge">/*</code><br/><code class="language-plaintext highlighter-rouge">@input: Client's age is less than 9 months</code><br/><code class="language-plaintext highlighter-rouge">@pseudocode: Today's date - "Date of birth" &lt; 9 'month'</code><br/><code class="language-plaintext highlighter-rouge">*/</code><br/><code class="language-plaintext highlighter-rouge">define "Client's age is less than 9 months":</code><br/><code class="language-plaintext highlighter-rouge"> //Code goes here</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>NOTE: Expressions in the logic library that are not referenced directly by the artifact MAY be marked with the <code class="language-plaintext highlighter-rouge">private</code> access modifier to make clear that only the expressions referenced by the artifact are intended to be used from the library. The private expressions are only used within the library.</p>
+</blockquote>
+
+<p>Create one output CQL file for each Table (e.g., Countries with ongoing transmission in which the risk of measles mortality remains high -&gt; IMMZD2DTMeaslesHighTx.cql)</p>
+
+<h5 id="output-column-expressions">Output Column Expressions</h5>
+
+<p>Create expressions for each output and guidance with tags:</p>
+
+<table class="table-bordered full-width">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Client is due for MCV1</strong><br/><code class="language-plaintext highlighter-rouge">"Immunization recommendation status" = 'Due'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">/*</code><br/><code class="language-plaintext highlighter-rouge">@output: Client is due for MCV1</code><br/><code class="language-plaintext highlighter-rouge">@pseudocode: "Immunization recommendation status" = 'Due'</code><br/><code class="language-plaintext highlighter-rouge">*/</code><br/><code class="language-plaintext highlighter-rouge">define "Client is due for MCV1":</code><br/><code class="language-plaintext highlighter-rouge">  //  input expressions that use this output:</code><br/><code class="language-plaintext highlighter-rouge">  "No measles primary series doses were administered";</code><br/><code class="language-plaintext highlighter-rouge"> "Client's age is more than or equal to 9 months" ;</code><br/><code class="language-plaintext highlighter-rouge"> "No live vaccine was administered in the last four weeks"</code></td>
+    </tr>
+    <tr>
+      <td>Client is less than 9 months. <br/>Check for any vaccines due, and inform the caregiver of when to come back for MCV1 administration.</td>
+      <td><code class="language-plaintext highlighter-rouge">/*</code><br/><code class="language-plaintext highlighter-rouge">@output: Client is due for MCV1 Guidance&lt;br&gt;@guidance: Client is less than 9 months.</code><br/><code class="language-plaintext highlighter-rouge">Check for any vaccines due, and inform the caregiver of when to come back for MCV1 administration.</code><br/><code class="language-plaintext highlighter-rouge">*/</code><br/><code class="language-plaintext highlighter-rouge">define: "Client is due for MCV1 Guidance":</code><br/><code class="language-plaintext highlighter-rouge">  'Client is less than 9 months.</code><br/><code class="language-plaintext highlighter-rouge">Check for any vaccines due, and inform the caregiver of when to come back for MCV1 administration.'</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/>
+Sometimes the same expression may appear in multiple outputs that have different inputs. For example: 
+<em>Client is not due for MCV1</em> can be from</p>
+<ul>
+  <li><em>client is under 9 months</em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or</li>
+  <li><em>client has a live vaccine administered in the last 4 weeks</em>.</li>
+</ul>
+
+<p>In this case, the author can for example:</p>
+<ul>
+  <li>append for example the Case # to each expression (e.g., Case 1, Case 2)</li>
+  <li>include an overall output that checks all the Cases.</li>
+  <li>Have 1 Guidance expression that checks each case and returns the appropriate guidance.</li>
+</ul>
+
+<h5 id="guidance-expressions">Guidance Expressions</h5>
+
+<p>Include a single expression called Guidance to return the main Guidance to be sent using the PlanDefintion. This is to avoid proliferation of actions in the PlanDefinition.  Tag this as a dynamicValue.</p>
+
+<table class="table-bordered full-width">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><code class="language-plaintext highlighter-rouge">/*</code><br/><code class="language-plaintext highlighter-rouge">@dynamicValue: Guidance&lt;br&gt;*/</code><br/><code class="language-plaintext highlighter-rouge">define "Guidance":</code><br/><code class="language-plaintext highlighter-rouge">  case</code><br/><code class="language-plaintext highlighter-rouge">    when "Output 1" then "Output 1 Guidance"</code><br/><code class="language-plaintext highlighter-rouge">    when "Output 2" then "Output 2 Guidance"</code><br/><code class="language-plaintext highlighter-rouge">    else null</code><br/><code class="language-plaintext highlighter-rouge">  end</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Include any other dynamic values that are needed for the PlanDefinition in the output CQL.</p>
+
+<p>Tag any other expressions needed as <code class="language-plaintext highlighter-rouge">private</code>.</p>
+
+<p>// TODO: Provide documentation of the CommunicationRequest approach that provides a level of indirection between the health worker and the decision support guidance</p>
+
+<p>Create or reuse ActivityDefinitions depending on what FHIR resources need to be created from the Decision Tables. This will include a CommunicationRequest to alert the Health Worker to the Guidance that will be output.</p>
+
+<p>Create PlanDefintions for each Decision Table that references the output CQL libraries.<br/>
+Create actions as needed to reference the ActivityDefinitions that are created, including the CommunicationRequest for Guidance.
+Include any dynamicValues here to maintain reusability of the ActivityDefinitions.
+Create at least enough Test resources for each row in the Decision Tables.<br/>
+To enable end-to-end testing and better understanding, The test resources should follow the test scenario that is used for the other resources (Questionnaires, etc.)</p>
+
+<p>Append Case # to each (e.g., Case 1, Case 2).  Include an overall output that checks all the Cases.  Have 1 Guidance expression that checks each case and returns the appropriate guidance.</p>
+
+<p>Include a single expression called Guidance to return the main Guidance to be sent using the PlanDefintion.  This is to avoid proliferation of actions in the PlanDefinition.  Tag this as a dynamicValue.</p>
+
+<h4 id="coding-practices">Coding practices:</h4>
+
+<p>It is important to keep the ActivityDefinitions simple and reusable. For example by avoiding dynamicValues in ActivityDefinitions. Since each output CQL is associated with a PlanDefintion, all dynamicValues may go into the PlanDefinition resources. This avoids the many ActivityDefinitions having have an associated Library.</p>
+
+<p>Code should be tagged:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">private</code> for any expressions needed to use for whatever else (like the list of Immunizations)</li>
+  <li><code class="language-plaintext highlighter-rouge">@dynamicValue:</code> for anything used as a dynamic value in the PlanDefinition.</li>
+  <li>to identify the L2 input, Add a comment tag (<code class="language-plaintext highlighter-rouge">@input:</code>) for the bolded part, and <code class="language-plaintext highlighter-rouge">@pseudocode:</code> for the code.  Also do <code class="language-plaintext highlighter-rouge">@output:</code> for bolded with <code class="language-plaintext highlighter-rouge">@pseudocode:</code> for the rest. Use <code class="language-plaintext highlighter-rouge">@guidance:</code> to include the text to display for the “alert” (CommunicationRequest). Authors should use the same <code class="language-plaintext highlighter-rouge">@output:</code> expression and appended “Guidance” for the guidance expression in cql.</li>
+</ul>
+
+<h3 id="criteria">Criteria:</h3>
+<p>Every input in the Decision and Scheduling tables shall have a CQL expression
+Every input in the Decision and Scheduling tables should have a concept in a CodeSystem</p>
+
+<h3 id="criteria--definition-of-done"><strong>Criteria / Definition of Done</strong></h3>
+<ul>
+  <li>CQL shall compile without errors</li>
+  <li>Test cases shall exist and shall pass</li>
+  <li>Every input in the Decision and Scheduling tables shall have a CQL expression</li>
+  <li>Every input in the Decision and Scheduling tables should have a concept in a CodeSystem</li>
+</ul>
+
+<h3 id="change-tracking"><strong>Change tracking</strong></h3>
+
+<h3 id="tooling"><strong>Tooling</strong></h3>
+
+<table class="table-bordered full-width">
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Usage</th>
+      <th>Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/cqframework/cqf-tooling">CQF tooling</a></td>
+      <td>Parse and process CQL files into Libraries.</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a href="https://marketplace.visualstudio.com/items?itemName=cqframework.cql">VisualStudio plugin</a></td>
+      <td>Validate CQL expressions.</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/cqframework/cqf-ruler">CQF Ruler</a></td>
+      <td>A FHIR server with CQL functionality included</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="informative-examples"><strong>Informative examples</strong></h3>
+
+<p>[SMART Guidelines - Immunizations (Measles): Example ActorDefinition(https://worldhealthorganization.github.io/smart-immunizations-measles/ActorDefinition-CommunityHealthWorker.html)
+<a href="https://worldhealthorganization.github.io/smart-immunizations-measles/personas.html">SMART Guidelines - Immunizations (Measles): Rendered set of ActorDefinitions</a></p>
+
+<h3 id="known-issues-and-dependencies"><strong>Known issues and dependencies</strong></h3>
+<div class="todo">
+* TO DO: How to use R5 resourcesin an R4 IG ? Sushi issue on the way
+</div>
+<ul>
+  <li>(links to issues, or zulip, or open questions)</li>
+</ul>
+
+<p>Each CQL code must have its wrapper FHIR resource. 
+For this, the corresponding Libraries must exist.</p>
+
+<p>The IG Publisher is able to parse CQL libraries</p>
+
+<div class="todo">
+* TO DO: Capture "critical data elements" in CQL
+</div>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">TBD</a>.  Package smart.who.int.ig-starter-kit#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Jun 7, 2024 14:09+0000">2024-06-07</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/1" target="_blank">Issues</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig/smart-ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+
+
+</link></head></html>

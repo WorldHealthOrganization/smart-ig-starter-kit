@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="WHO.TRUST.TRANSACTION"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet WHO.TRUST.TRANSACTION</b></p><a name="WHO.TRUST.TRANSACTION"> </a><a name="hcWHO.TRUST.TRANSACTION"> </a><a name="WHO.TRUST.TRANSACTION-en-US"> </a><ul><li>Include all codes defined in <code>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION</code></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION"/>
+  <version value="1.1.4"/>
+  <name value="WHO_TRUST_TRANSACTION"/>
+  <title value="TRUST.TRANSACTION ValueSet of key usage codes "/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-11-04T12:35:20+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet of codes for key usage codes"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION"/>
+    </include>
+  </compose>
+</ValueSet>
