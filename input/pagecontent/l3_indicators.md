@@ -46,7 +46,11 @@ Measures are FHIR resources and can refer to CQL libraries.
 
 * Add the canonical URL of the Library to the Measure
 
-* Depending on the type/purpose of the indicator, define the value for the measure [`scoring`](http://hl7.org/fhir/R4/valueset-measure-scoring.html). 
+* Depending on the type/purpose of the indicator, define the value for the measure [`scoring`](http://hl7.org/fhir/R4/valueset-measure-scoring.html). In particular:
+    * If the indicator has an estimated denominator, it should be modeled as a continuous-variable measure, since the intent from the implementation perspective is to collect the data needed for evaluation, and the actual evaluation of the measure score will be performed by downstream applications.
+    * Otherwise the indicator is a proportion measure (i.e. has numerator and denominator inclusion and potentially exclusion criteria)
+    * If the indicator denominator should be provided by the implementing country, it should be modeled as simply `true`, with the expectation that implementing countries will provide the more detailed denominator.
+    
 * Add the `type` and `improvementNotation`
 
 * From the scoring, see what populations are permitted - according to the [CQF Guidance](https://build.fhir.org/ig/HL7/cqf-measures/measure-conformance.html#conformance-requirement-3-8)
