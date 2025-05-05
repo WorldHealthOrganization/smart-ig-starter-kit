@@ -7,12 +7,6 @@
 <p>SMART Guidelines products are required to express their copyright license.</p>
 
 
-<div class="info-box must">
-  <span class="info-title">Required licensing information</span>
-All WHO-authored SMART Guidelines are subject to the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO licence (<a href ="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/">CC-BY-NC-SA-3.0-IGO</a>). This includes all commons and dependencies authored by the WHO and this current guidance.
-</div>
-
-
 <h3>SMART Guidelines L2 SOP license details</h3>
 
 <div class="info-box must">
