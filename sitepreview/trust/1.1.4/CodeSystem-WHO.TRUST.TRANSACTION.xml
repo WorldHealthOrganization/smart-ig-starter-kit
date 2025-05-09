@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="WHO.TRUST.TRANSACTION"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem WHO.TRUST.TRANSACTION</b></p><a name="WHO.TRUST.TRANSACTION"> </a><a name="hcWHO.TRUST.TRANSACTION"> </a><a name="WHO.TRUST.TRANSACTION-en-US"> </a><p>This case-insensitive code system <code>http://smart.who.int/trust/CodeSystem/WHO.TRUST.TRANSACTION</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">keys-get-api<a name="WHO.TRUST.TRANSACTION-keys-get-api"> </a></td></tr><tr><td style="white-space:nowrap">keys-get-did<a name="WHO.TRUST.TRANSACTION-keys-get-did"> </a></td></tr><tr><td style="white-space:nowrap">keys-put-api<a name="WHO.TRUST.TRANSACTION-keys-put-api"> </a></td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/trust/CodeSystem/WHO.TRUST.TRANSACTION"/>
+  <version value="1.1.4"/>
+  <name value="WHO_TRUST_TRANSACTION"/>
+  <title value="WHO.TRUST.TRANSACTION CodeSystem"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-11-04T12:35:20+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem for TRUST.TRANSACTION that has usage codes for verification keys published to the Trust Network as defined by the [certificate governance](concepts_certificate_governance.html)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="keys-get-api"/>
+  </concept>
+  <concept>
+    <code value="keys-get-did"/>
+  </concept>
+  <concept>
+    <code value="keys-put-api"/>
+  </concept>
+</CodeSystem>
