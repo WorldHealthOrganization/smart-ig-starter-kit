@@ -85,7 +85,7 @@ L2 DAK templates were updated as described in the table below:
 
 #### [License page](https://smart.who.int/ig-starter-kit/license.html)
 
-The license details were slightly updated and a new table "Scenarios for usage of WHO SMART Guidelines products by the SMART Guidelines community" was added with the purpose of presenting WHO position in different scenarios of usage for WHO SMART Guidelines products.
+The license details were updated and a new table "Scenarios for usage of WHO SMART Guidelines products by the SMART Guidelines community" was added with the purpose of presenting WHO position in different scenarios of usage for WHO SMART Guidelines products.
 
 #### [Authoring a L2 DAK](https://smart.who.int/ig-starter-kit/l2_dak_authoring.html)
 

@@ -10,7 +10,7 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 		</tr>
 		<tr>
 			<td width="193">
-				<p>The &ldquo;main&rdquo; DAK document<em>(is the template for the final PDF)</em>
+				<p>The &ldquo;main&rdquo; DAK document <em>(this is the template for the final PDF)</em>
 				</p>
 			</td>
 			<td width="132">
@@ -29,7 +29,7 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://portal.bizagi.com/?task=register&tmpl=component&prd=mdl">Bizagi Modeler </a> (offline tool that allows import/export of Visio and .bpmn files); </p>
 					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://flower-bpm.com/docs/components/bpmn/coverage">Cloud application for Jira/Confluence (Atlassian)</a> (online application that allows import/export of bpmn files and export as SVG file)
 					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://docs.jboss.org/jbpm/v5.3/userguide/ch.eclipse-bpmn-plugin.html">BPMN 2.0 Plugin for Eclipse Java IDE</a>. </p>
-				<p>Note: To facilitate the development of downstream layers (L3, L4) it is recommended to use Camunda Modeler because this tool produces .bpmn files that contain the structure and metadata needed for an easier drafting of related L3 content. </p>
+				<p> <b>Note: To facilitate the development of downstream layers (L3, L4) it is recommended to use Camunda Modeler because this tool produces .bpmn files that contain the structure and metadata needed for an easier drafting of related L3 content.</b> </p>
 			</td>
 			<td><a href="Digital Adaptation Kit Template_v2.1.docx">Digital Adaptation Kit template</a></td>
 		</tr>
