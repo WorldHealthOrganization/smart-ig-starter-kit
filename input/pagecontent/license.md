@@ -32,7 +32,7 @@ All reasonable precautions have been taken by WHO to verify the information cont
 The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full agreement.
 </p>
 <p>
-The mention of specific companies or of certain manufacturers’ products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters.
+The mention of specific companies or of certain manufacturers&apos; products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters.
 </p>
 <p>
 Any dispute arising from or relating to this license, including its validity, interpretation, or application, shall, unless amicably settled, be subject to conciliation. In the event the dispute is not resolved by conciliation within thirty (30) days, the dispute shall be settled by arbitration. The arbitration shall be conducted in accordance with the modalities to be agreed upon by the parties or, in the absence of agreement within thirty (30) days of written communication of the intent to commence arbitration, with the UNCITRAL Arbitration Rules. The parties shall accept the arbitral award as final.
