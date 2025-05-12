@@ -14,7 +14,7 @@ This IG hosts the WHO prequalified Vaccines Database. The IG depends on the PCMT
 The IG contains:
 - WHO Prequalified vaccines as instances of Product Authorization
 
-<table><thead>
+<table border = "1" ><thead>
   <tr>
     <th>Prequalified Vaccines Database</th>
     <th>Mappings to Product and Product Authorization</th>
