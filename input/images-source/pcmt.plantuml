@@ -1,0 +1,34 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+!include ./style.iuml
+
+    class "**[[https://smart.who.int/pcmt smart-pcmt]]**" as pcmt<<TM>> {
+         Product Catalog:
+         .  Products
+         .  Product Authorization
+         --
+    }
+
+    class "**[[https://smart.who.int/pcmt-vaxprequal smart-pcmt-vaxprequal]]**" as prequal<<TM>> {
+        WHO-prequalified vaccines
+        --
+        .dependsOn = smart.who.int.pcmt
+    }
+
+
+    class "**[[https://smart.who.int/icvp smart-icvp]]**" as icvp<<TM>> {
+        International certificate of vaccination or prophylaxis
+        --
+        .dependsOn = smart.who.int.pcmt-vaxprequal
+    }
+
+
+pcmt  -d[hidden]-> prequal : "      "
+prequal  -d[hidden]-> icvp : "      "
+
+pcmt -> prequal: "dependsOn" 
+prequal -> icvp : "dependsOn"
+
+@enduml

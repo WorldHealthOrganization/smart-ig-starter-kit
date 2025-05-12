@@ -63,6 +63,7 @@ menu:
     GitHub Setup: 'ig_setup.html'
     Configuration: 'ig_configuration.html'
     Publication: 'ig_publication.html'
+    Product Catalog and Vaccination IG setup: 'pcmt.html'
   L2 Authoring:
     Overview: 'l2_authoring_overview.html'
     Authoring a L2 DAK : 'l2_dak_authoring.html'
@@ -125,6 +126,8 @@ pages:
       title: "ImplementationGuide Configuration"
     ig_publication.md:
       title: "IG Publication"
+    pcmt.md:
+      title: "Product Catalog and Vaccines Management Implementation Guide Structures"
   l2_authoring_overview.md:
     title: "L2 Authoring Overview"
     l2_dak_authoring.md:
