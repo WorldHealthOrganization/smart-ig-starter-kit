@@ -8,7 +8,6 @@ hide stereotype
          Product Catalog:
          .  Products
          .  Product Authorization
-         --
     }
 
     class "**[[https://smart.who.int/pcmt-vaxprequal smart-pcmt-vaxprequal]]**" as prequal<<TM>> {
@@ -25,8 +24,6 @@ hide stereotype
     }
 
 
-pcmt  -d[hidden]-> prequal : "      "
-prequal  -d[hidden]-> icvp : "      "
 
 pcmt -> prequal: "dependsOn" 
 prequal -> icvp : "dependsOn"
