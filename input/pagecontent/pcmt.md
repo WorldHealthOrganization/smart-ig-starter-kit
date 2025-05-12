@@ -14,5 +14,38 @@ This IG hosts the WHO prequalified Vaccines Database. The IG depends on the PCMT
 The IG contains:
 - WHO Prequalified vaccines as instances of Product Authorization
 
+<table><thead>
+  <tr>
+    <th>Prequalified Vaccines Database</th>
+    <th>Mappings to Product and Product Authorization</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Vaccine&nbsp;&nbsp;&nbsp;Type</td>
+    <td>Product.classification</td>
+  </tr>
+  <tr>
+    <td>Commercial Name</td>
+    <td>Product.name</td>
+  </tr>
+  <tr>
+    <td>Presentation</td>
+    <td>Product.dosageForm</td>
+  </tr>
+  <tr>
+    <td>No. of doses</td>
+    <td>Product.doseQuantity</td>
+  </tr>
+  <tr>
+    <td>Manufacturer</td>
+    <td>Product.manufacturer</td>
+  </tr>
+  <tr>
+    <td>Responsible NRA</td>
+    <td>productAuthorization.holder</td>
+  </tr>
+</tbody>
+</table>
+
 ###ICVP
 The ICVP IG depends on the pcmt-vaxprequal IG and supports the prequalified vaccine products for Yellow Fever and Polio.
