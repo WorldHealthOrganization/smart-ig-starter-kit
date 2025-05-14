@@ -1,5 +1,7 @@
 The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document with Excel spreadsheets that cover 5 of the 9 key components of a DAK:
-<div>
+
+
+
 <div>
 <table border="1">
 	<tbody>
@@ -21,15 +23,19 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 				<p>The template for the &ldquo;main&rdquo; DAK document. The narrative text can and should be changed as needed for each specific health domain. However, highlighted throughout the document are places where health domain specificity should be added.</p>
 				<p>The following narrative components: health interventions and recommendations (component 1), generic personas (component 2) and user scenarios (component 3) can be directly edited and drafted within the DAK document template.&nbsp;</p>
 				<p>The generic business processes and workflows diagrams would be generated in another tool, such as <a href="https://camunda.com/download/modeler/">Camunda Modeler</a>. The selected tool should:</p>
-				<p>&middot;&nbsp;&nbsp;&nbsp; be able to cover the needs in terms of BPMN notation (see the table &ldquo;Business process symbols used in workflows&rdquo; from the template);</p>
-				<p>&middot;&nbsp;&nbsp;&nbsp; be able to export the diagrams in .bpmn format;</p>
-				<p>&middot;&nbsp;&nbsp;&nbsp; not pose issues in terms of licencing.</p>
-				<p>The tools we have identified so far, that respect the requirements above are:
-					<p>&middot;&nbsp;&nbsp;&nbsp;<a href="https://camunda.com/download/modeler/">Camunda Modeler</a>  (allows import/export of bpmn files and export as SVG file); </p>
-					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-bpmn-editor">BPMN Editor extension for Visual Studio Code</a> (offline tool that allows import/export of bpmn files and export as SVG file); </p>
-					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://portal.bizagi.com/?task=register&tmpl=component&prd=mdl">Bizagi Modeler </a> (offline tool that allows import/export of Visio and .bpmn files); </p>
-					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://flower-bpm.com/docs/components/bpmn/coverage">Cloud application for Jira/Confluence (Atlassian)</a> (online application that allows import/export of bpmn files and export as SVG file)
-					<p>&middot;&nbsp;&nbsp;&nbsp; <a href="https://docs.jboss.org/jbpm/v5.3/userguide/ch.eclipse-bpmn-plugin.html">BPMN 2.0 Plugin for Eclipse Java IDE</a>. </p>
+					<ul>
+						<li>be able to import/export .bpmn files;</li>
+						<li>be able to export the diagrams in .bpmn format;</li>
+						<li>not pose issues in terms of licencing.</li>
+					</ul>
+				<p>The tools we have identified so far, that respect the requirements above are:</p>
+					<ul>
+						<li><a href="https://camunda.com/download/modeler/">Camunda Modeler</a> (allows import/export of bpmn files and export as SVG file);</li>
+						<li><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-bpmn-editor">BPMN Editor extension for Visual Studio Code</a> (offline tool that allows import/export of bpmn files and export as SVG file);</li>
+						<li><a href="https://portal.bizagi.com/?task=register&tmpl=component&prd=mdl">Bizagi Modeler</a> (offline tool that allows import/export of Visio and .bpmn files);</li>
+						<li><a href="https://flower-bpm.com/docs/components/bpmn/coverage">Cloud application for Jira/Confluence (Atlassian)</a> (online application that allows import/export of bpmn files and export as SVG file);</li>
+						<li><a href="https://docs.jboss.org/jbpm/v5.3/userguide/ch.eclipse-bpmn-plugin.html">BPMN 2.0 Plugin for Eclipse Java IDE</a>.</li>
+				</ul>
 				<p> <b>Note: To facilitate the development of downstream layers (L3, L4) it is recommended to use Camunda Modeler because this tool produces .bpmn files that contain the structure and metadata needed for an easier drafting of related L3 content.</b> 
 				</p>
 			</td>
@@ -88,5 +94,6 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 	</tbody>
 </table>
 </div>
-<p>If you want to download all the templates at once, please download <a href="DAK_templates_v2.1.zip">this archive</a>.</p>
-</div>
+
+
+If you want to download all the templates at once, please download <a href="DAK_templates_v2.1.zip">this archive</a>.

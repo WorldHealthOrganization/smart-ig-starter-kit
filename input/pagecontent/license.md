@@ -20,7 +20,7 @@ Under the terms of this licence, you may copy, redistribute and adapt the work, 
 </p>
 <p>
 Attribution notice to include in your product: <br>
-This Digital Adaptation Kit (DAK) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK), available here [URL: https://smart.who.int/ig-starter-kit/index.htm]. WHO is not responsible for the content included in this DAK.
+This Digital Adaptation Kit (DAK) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK), available <a href ="https://smart.who.int/ig-starter-kit/index.html">here</a>. WHO is not responsible for the content included in this DAK.
 </p>
 
 <b>Disclaimers</b>
