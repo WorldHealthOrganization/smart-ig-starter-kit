@@ -28,7 +28,7 @@ The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document w
 						<li>be able to export the diagrams in .bpmn format;</li>
 						<li>not pose issues in terms of licencing.</li>
 					</ul>
-				<p>The tools we have identified so far, that respect the requirements above are:</p>
+				<p>The freely available tools we have identified so far, that respect the requirements above are:</p>
 					<ul>
 						<li><a href="https://camunda.com/download/modeler/">Camunda Modeler</a> (allows import/export of bpmn files and export as SVG file);</li>
 						<li><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-bpmn-editor">BPMN Editor extension for Visual Studio Code</a> (offline tool that allows import/export of bpmn files and export as SVG file);</li>
