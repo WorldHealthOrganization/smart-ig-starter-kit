@@ -1,0 +1,44 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR",
+      "version" : "1.1.4",
+      "status" : "active",
+      "name" : "WHO_TRUST_ACTOR",
+      "title" : "TRUST.ACTOR ValueSet of key usage codes ",
+      "description" : "ValueSet of codes for key usage codes",
+      "systems" : [
+        "http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.DOMAIN",
+      "version" : "1.1.4",
+      "status" : "active",
+      "name" : "WHO_TRUST_DOMAIN",
+      "title" : "WHO SMART Trust Domains",
+      "description" : "Health credential type",
+      "systems" : ["http://smart.who.int/trust/CodeSystem/WHO.TRUST.DOMAIN"]
+    },
+    {
+      "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.KEYUSAGE",
+      "version" : "1.1.4",
+      "status" : "active",
+      "name" : "WHO_TRUST_KEYUSAGE",
+      "title" : "TRUST.KEYUSAGE ValueSet of key usage codes ",
+      "description" : "ValueSet of codes for key usage codes",
+      "systems" : ["http://smart.who.int/trust/CodeSystem/WHO.TRUST.KEYUSAGE"]
+    },
+    {
+      "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION",
+      "version" : "1.1.4",
+      "status" : "active",
+      "name" : "WHO_TRUST_TRANSACTION",
+      "title" : "TRUST.TRANSACTION ValueSet of key usage codes ",
+      "description" : "ValueSet of codes for key usage codes",
+      "systems" : [
+        "http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION"
+      ]
+    }
+  ]
+}
