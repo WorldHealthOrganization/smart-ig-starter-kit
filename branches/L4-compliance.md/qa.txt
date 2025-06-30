@@ -1,0 +1,59 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 1, info = 0
+IG Publisher Version: 1.8.22
+Generated Tue Apr 01 13:16:22 UTC 2025. FHIR version 5.0.0 for smart.who.int.ig-starter-kit#2.1.0 (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 47 / 1 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/authoring_conventions.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/authoring_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/checklist.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/cop.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/diagram_content_types.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/diagram_l2_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/diagram_l3_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/diagram_legend.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/gov_concepts.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/gov_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/ig_configuration.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/ig_publication.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/ig_repositories.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/ig_setup.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/indices.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l2_authoring_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l2_dak_authoring.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l2_faq.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l2_templates.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_codesystems.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_conceptmaps.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_cql.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_examples.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_logicalmodels.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_personas.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_processes.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_profiles.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_requirements.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_scenarios.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_structuremaps.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_testing.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l3_valuesets.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/l4_compliance.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/license.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/narrative.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/qa_check.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/structure.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/validating_ig.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+ERROR: /github/workspace/output/versioning.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 236, column 10: The link 'l4-compliance.html' for "L4" cannot be resolved
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==

@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "0bea7a08-3236-44dc-8935-8b6bd8e3f6da-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/0bea7a08-3236-44dc-8935-8b6bd8e3f6da-11",
+  "name" : "UnionWHO_TRUST_KEYUSAGEAndWHO_TRUST_KEYUSAGE",
+  "title" : "Union of TRUST.KEYUSAGE ValueSet of key usage codes  And TRUST.KEYUSAGE ValueSet of key usage codes ",
+  "status" : "active",
+  "date" : "2024-11-04T12:35:32+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "SCA",
+        "display" : "Signing Certificate Authority"
+      },
+      {
+        "code" : "DSC",
+        "display" : "Document Signing Certificate"
+      },
+      {
+        "code" : "UP",
+        "display" : "Upload"
+      },
+      {
+        "code" : "TLS",
+        "display" : "TLS"
+      }]
+    }]
+  }
+}
