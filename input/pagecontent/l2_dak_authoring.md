@@ -100,37 +100,22 @@ The DAK consists of 9 interlinked components: (1) health interventions and recom
 			</td>
 			<td>
 				<p>Decision-support logic and algorithms to support appropriate service delivery in accordance with clinical, public health and data use guidelines.</p>
+				<p><strong>Scheduling logic</strong>A specific type of decision-support logic to support appropriate reminders for follow-up visits and services in accordance with clinical, public health and data use guidelines.</p>
 			</td>
 			<td>
-				<p>
-					<strong>System design and adherence to recommended clinical practice </strong>to know what underlying logic needs to be coded into the system.</p>
+				<p><strong>System design and adherence to recommended clinical practice </strong>to know what underlying logic needs to be coded into the system.</p>
+				<p><strong>(Scheduling Logic) System design and adherence to recommended clinical practice </strong>to know what service schedules needs to be coded into the system so that appropriate reminders are generated.</p>
 			</td>
 			<td>
 				<p>List of decisions that need to be made throughout the encounter.</p>
-				<p>
-					<strong>Decision-support tables</strong> in a spreadsheet format with inputs, outputs and triggers for each decision-support logic.</p>
+				<p><strong>Decision-support tables</strong> in a spreadsheet format with inputs, outputs and triggers for each decision-support logic.</p>
+				<p><strong>Scheduling Logic</strong>List of scheduling logic tables.</p>
+				<p><strong>Scheduling logic</strong> for services in spreadsheet format.</p>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<p>7. Scheduling logic</p>
-			</td>
-			<td>
-				<p>Scheduling logic to support appropriate reminders for follow-up visits and services in accordance with clinical, public health and data use guidelines.</p>
-			</td>
-			<td>
-				<p>
-					<strong>System design and adherence to recommended clinical practice </strong>to know what service schedules needs to be coded into the system so that appropriate reminders are generated.</p>
-			</td>
-			<td>
-				<p>List of scheduling logic tables.</p>
-				<p>
-					<strong>Scheduling logic</strong> for services in spreadsheet format.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<p>8. Indicators and performance metrics</p>
+				<p>7. Indicators and performance metrics</p>
 			</td>
 			<td>
 				<p>Core set of indicators that need to be aggregated for decision-making, performance metrics, and subnational and national reporting.</p>
@@ -147,7 +132,7 @@ The DAK consists of 9 interlinked components: (1) health interventions and recom
 		</tr>
 		<tr>
 			<td>
-				<p>9. High-level functional and non-functional requirements</p>
+				<p>8. High-level functional and non-functional requirements</p>
 			</td>
 			<td>
 				<p>A high-level list of core functions and capabilities that the system must have to meet the end users&rsquo; needs and achieve tasks within the business process.</p>
@@ -159,6 +144,22 @@ The DAK consists of 9 interlinked components: (1) health interventions and recom
 			<td>
 				<p>
 					<strong>Tables of functional and non-functional requirements </strong>with the intended end user of each requirement, and why that user needs that functionality in the system.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>9. Test scenarios</p>
+			</td>
+			<td>
+				<p>A high-level list of testing scenarios, including test data, that can be used to validate digital health systems adherence to DAK components.</p>
+			</td>
+			<td>
+				<p>
+					<strong>System validation </strong>to validate that a system is behaving as expected.</p>
+			</td>
+			<td>
+				<p><strong>Test scenarios </strong> for each of the Generic Personas, whether human or system, that is behaving according to the expected behaviour as described by a DAK artifact (e.g. functional requirement, business process, decision support table, indicators).  </p>
+				<p><strong>Test data</strong> or descriptors for test data generators that can be used by one or more test scenarios.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -416,4 +417,5 @@ Start a new cycle of _(1) Fill in DAK components, (2) Validate with SMEs, (3) In
 [^4]: [The SCRUM Guide](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf).
 [^5]: [Business process model and notation standard](https://www.bpmn.org/).
 [^6]: [Decision model and notation standard](https://www.omg.org/spec/DMN/1.4/Beta1/PDF).
+
 [^7]: [WHO Datadot](https://data.who.int/indicators).
