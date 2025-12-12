@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "WHO.TRUST.TRANSACTION",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet WHO.TRUST.TRANSACTION</b></p><a name=\"WHO.TRUST.TRANSACTION\"> </a><a name=\"hcWHO.TRUST.TRANSACTION\"> </a><a name=\"WHO.TRUST.TRANSACTION-en-US\"> </a><ul><li>Include all codes defined in <code>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION</code></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION",
+  "version" : "1.1.4",
+  "name" : "WHO_TRUST_TRANSACTION",
+  "title" : "TRUST.TRANSACTION ValueSet of key usage codes ",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2024-11-04T12:35:20+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "ValueSet of codes for key usage codes",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION"
+    }]
+  }
+}

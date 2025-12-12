@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>License - SMART Guidelines Starter Kit v2.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1.2"}
+    h3,h4,h5,h6{--heading-prefix:"1.2"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+      <li>
+        <a href="pcmt.html">Product Catalog and Vaccination IG setup</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L4 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l432">​</a>
+        <a href="l4-compliance.html">L4</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">2.1.0 - ci-build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="index.html"><b>Home</b></a></li><li><b>License</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 2.1.0 built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/pcmt">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/pcmt</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>License</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scenarios-for-usage-of-who-smart-guidelines-products" id="markdown-toc-scenarios-for-usage-of-who-smart-guidelines-products">Scenarios for usage of WHO SMART Guidelines products</a></li>
+</ul>
+
+</div>
+<div xsi:schemalocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<p>SMART Guidelines products are required to express their copyright license.</p>
+
+
+<h3>SMART Guidelines Digital Adaptation Kit (L2) Standard Operating Procedures (SOP) license details</h3>
+
+<div class="info-box must">
+  <span class="info-title">Digital Adaptation Kit (L2) templates</span>
+
+<p> &copy; World Health Organization 2025. Some rights reserved.</p>
+
+<p xmlns:cc="http://creativecommons.org/ns#">This work is available under the <a rel="license noopener noreferrer" style="display:inline-block;" href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank">Creative Commons Attribution 4.0 licence<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="null" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="null" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a></p>
+<p>
+Under the terms of this licence, you may copy, redistribute and adapt the work, including for commercial purposes, provided the attribution notice below is included in your work. In any use of this work, there should be no suggestion that WHO endorses any specific organization, products or services. The use of the WHO logo is not permitted.
+</p>
+<p>
+Attribution notice to include in your product: <br/>
+This Digital Adaptation Kit (DAK) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK), available here [URL: https://smart.who.int/ig-starter-kit/index.htm]. WHO is not responsible for the content included in this DAK.
+</p>
+
+<b>Disclaimers</b>
+
+<p>
+All reasonable precautions have been taken by WHO to verify the information contained in this publication. However, the published material is being distributed without warranty of any kind, either expressed or implied. The responsibility for the interpretation and use of the material lies with the reader. In no event shall WHO be liable for damages arising from its use.
+</p>
+<p>
+The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full agreement.
+</p>
+<p>
+The mention of specific companies or of certain manufacturers' products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters.
+</p>
+<p>
+Any dispute arising from or relating to this license, including its validity, interpretation, or application, shall, unless amicably settled, be subject to conciliation. In the event the dispute is not resolved by conciliation within thirty (30) days, the dispute shall be settled by arbitration. The arbitration shall be conducted in accordance with the modalities to be agreed upon by the parties or, in the absence of agreement within thirty (30) days of written communication of the intent to commence arbitration, with the UNCITRAL Arbitration Rules. The parties shall accept the arbitral award as final.
+
+</p>
+</div>
+
+<h3>License details for SMART Guidelines Machine readable guidelines (L3) and related software</h3>
+
+
+<div class="info-box must">
+  <span class="info-title"> Software code used in SMART Guidelines Machine readable guidelines (L3) and related software</span>
+
+<p>Copyright &copy; 2025+, World Health Organization.</p>
+
+<p>SMART Guidelines source code may include software libraries for decision support logic, indicator calculations, and scheduling logic.</p>
+
+
+<p>This work is licensed under the <a href="https://opensource.org/license/bsd-3-clause">BSD-3-clause</a></p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+<ol>
+<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+
+<li>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+
+<p>Any dispute arising from or relating to this license, including its validity, interpretation, or application, shall, unless amicably settled, be subject to conciliation. In the event the dispute is not resolved by conciliation within thirty (30) days, the dispute shall be settled by arbitration. The arbitration shall be conducted in accordance with the modalities to be agreed upon by the parties or, in the absence of agreement within thirty (30) days of written communication of the intent to commence arbitration, with the UNCITRAL Arbitration Rules. The parties shall accept the arbitral award as final.</p>
+</div>
+
+</div>
+
+<h3 id="scenarios-for-usage-of-who-smart-guidelines-products">Scenarios for usage of WHO SMART Guidelines products</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>WHO resources</th>
+      <th>Local resources</th>
+      <th>Output</th>
+      <th>Suggested additional disclaimer(s) to be added by the external entities using the WHO product(s)</th>
+      <th>Guidance to external entities on how to proceed</th>
+      <th>License to use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>L2_A</strong>: A country and/or an external organization intends to develop a DAK for a health area where <strong>WHO didn't publish a DAK</strong>, based on the local guidelines/policies/recommendations, using the WHO L2 SOP as a framework.</td>
+      <td>WHO L2 SOP</td>
+      <td>Local guidelines/policies/recommendations</td>
+      <td>Published L2 DAK for country context (e.g. diabetes DAK for Kenya)</td>
+      <td>Attribution notice to include in your product: "This Digital Adaptation Kit (DAK) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK), available here <em>[URL: https://smart.who.int/ig-starter-kit/index.htm]</em>. WHO is not responsible for the content included in this DAK."</td>
+      <td>&nbsp;</td>
+      <td>CC BY 4.0</td>
+    </tr>
+    <tr>
+      <td><strong>L2_B</strong>: A country and/or an external organization intends <strong>to adapt a WHO published DAK</strong> and create a local version of it based on the local guidelines/policies/recommendations and the WHO L2 SOP as a framework</td>
+      <td>WHO DAK + WHO L2 SOP + WHO L2 Adaptation guidance</td>
+      <td>Local guidelines/policies/recommendations</td>
+      <td>Published L2 DAK for country context (e.g. ANC DAK for Kenya)</td>
+      <td>Add to standard WHO DAK copyright notice/disclaimer: "This DAK is an adaptation of the WHO <em>[health domain abbreviation]</em> DAK. The original English edition can be accessed here <em>[Handle URI to WHO DAK]</em>. This DAK was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK). This adaptation was not created by the World Health Organization (WHO). WHO is not responsible for the content or accuracy of this adaptation."</td>
+      <td>&nbsp;</td>
+      <td>The WHO DAK is published under the CC BY-NC-SA 3.0 IGO licence. <br/> The L2 SOP is under the CC BY 4.0 licence.</td>
+    </tr>
+    <tr>
+      <td>L2_C: An external organization intends to create a DAK based on the WHO guidelines (L1: normative guidelines) and the WHO L2 SOP, but <strong>no current WHO DAK exists</strong>.</td>
+      <td>WHO guidelines and other normative products as well as associated publications + WHO L2 SOP</td>
+      <td>Not applicable</td>
+      <td>Published WHO L2 DAK, based on WHO recommendations, for global context (e.g. WHO diabetes L2 DAK)</td>
+      <td>Attribution notice to include in your product: "This Digital Adaptation Kit (DAK) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK), available here <em>[URL: https://smart.who.int/ig-starter-kit/index.htm]</em>. WHO is not responsible for the content included in this DAK."</td>
+      <td>&nbsp;</td>
+      <td>The WHO DAK is published under the CC BY-NC-SA 3.0 IGO licence. <br/> The L2 SOP is under the CC BY 4.0 licence.</td>
+    </tr>
+    <tr>
+      <td>L2_D: A country and/or an external organization <strong>translates a DAK published by WHO</strong>, without performing adaptation to the local context.</td>
+      <td>WHO DAK</td>
+      <td>Not applicable</td>
+      <td>Translated WHO L2 DAK (e.g. Immunization DAK translated to Portuguese)</td>
+      <td>Disclaimer to add: "This translation was not created by the World Health Organization (WHO). WHO is not responsible for the content or accuracy of this translation. The original English edition shall be the binding and authentic edition."</td>
+      <td>&nbsp;</td>
+      <td>The WHO DAK is published under the CC BY-NC-SA 3.0 IGO licence.</td>
+    </tr>
+    <tr>
+      <td>L3_A: A country and/or an external organization intends to create <strong>a local L3 (FHIR IG) based on a local DAK and the WHO L3 SOP</strong>. There is no L2 and no L3 developed and published by WHO for the health area.</td>
+      <td>WHO L3 SOP</td>
+      <td>Local DAK</td>
+      <td>Published L3 for country context (e.g. diabetes L3 for Kenya based on diabetes L2 DAK for Kenya)</td>
+      <td>Attribution notice to include in your product: "This implementation guide (IG) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing L3 FHIR Implementation Guide, available here <em>[URL: https://smart.who.int/ig-starter-kit/index.htm]</em>. WHO is not responsible for the content included in this IG."</td>
+      <td>&nbsp;</td>
+      <td>The Implementation guide is licensed under the 3-clause BSD open source licence</td>
+    </tr>
+    <tr>
+      <td>L3_B: A country and/or an external organization <strong>intends to create a L3 (FHIR IG) based on a WHO DAK and the WHO L3 SOP</strong>, but for localized implementation. There is no L3 developed and published by WHO for the health area, but there is a WHO DAK.</td>
+      <td>WHO DAK + WHO L3 SOP</td>
+      <td>Local guidelines/policies/recommendations</td>
+      <td>Published L3 for country context (e.g. TB L3 for Kenya based on WHO TB DAK)</td>
+      <td>Attribution notice to include in your product: "This implementation guide (IG) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing L3 FHIR Implementation Guide, available here <em>[URL: https://smart.who.int/ig-starter-kit/index.htm]</em>. WHO is not responsible for the content included in this IG."</td>
+      <td>&nbsp;</td>
+      <td>The Implementation guide is licensed under the 3-clause BSD open source licence</td>
+    </tr>
+    <tr>
+      <td>L3_C: An external organization <strong>intends to adapt a WHO IG and create a local version</strong> of it based on the local guidelines/policies/recommendations and the WHO L3 SOP as a framework.</td>
+      <td>WHO IG + WHO L3 SOP</td>
+      <td>Local guidelines/policies/recommendations</td>
+      <td>Published L3 for country context (e.g. HIV L3 for Kenya based on WHO HIV L3 IG)</td>
+      <td>Attribution notice to include in your product: "This implementation guide (IG) was developed based on the World Health Organization (WHO) SMART Guidelines methodology, specifically the WHO Standard Operating Procedure (SOP) for developing L3 FHIR Implementation Guide, available here <em>[URL: https://smart.who.int/ig-starter-kit/index.htm]</em>. WHO is not responsible for the content included in this IG. This IG is an adaptation of the WHO <em>[health domain abbreviation]</em> IG and the original WHO IG can be accessed here <em>[Handle URI to WHO IG]</em>. WHO is not responsible for the content or accuracy of this adaptation."</td>
+      <td>&nbsp;</td>
+      <td>The Implementation guide is licensed under the 3-clause BSD open source licence</td>
+    </tr>
+    <tr>
+      <td>L3_D: An external organization <strong>uses the WHO L3 SOP to create an IG based on a published WHO DAK</strong> (TB L3 based on WHO TB DAK)</td>
+      <td>WHO DAK + WHO L3 SOP</td>
+      <td>Not applicable</td>
+      <td>Published WHO L3 IG for global context</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>The Implementation guide is licensed under the 3-clause BSD open source licence</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, May 12, 2025 11:15+0000">2025-05-12</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues" target="_blank">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="changes.html" target="_blank">Change Log</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues&quot;,&quot;label&quot;:&quot;Issues&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new&quot;,&quot;label&quot;:&quot;New Issue&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;label&quot;:&quot;Change Log&quot;,&quot;url&quot;:&quot;changes.html&quot;}}]" data-repo-name="null" data-repo-source="null" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</body></html>

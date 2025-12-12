@@ -1,0 +1,42 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "WHO.TRUST.TRANSACTION",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem WHO.TRUST.TRANSACTION</b></p><a name=\"WHO.TRUST.TRANSACTION\"> </a><a name=\"hcWHO.TRUST.TRANSACTION\"> </a><a name=\"WHO.TRUST.TRANSACTION-en-US\"> </a><p>This case-insensitive code system <code>http://smart.who.int/trust/CodeSystem/WHO.TRUST.TRANSACTION</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">keys-get-api<a name=\"WHO.TRUST.TRANSACTION-keys-get-api\"> </a></td></tr><tr><td style=\"white-space:nowrap\">keys-get-did<a name=\"WHO.TRUST.TRANSACTION-keys-get-did\"> </a></td></tr><tr><td style=\"white-space:nowrap\">keys-put-api<a name=\"WHO.TRUST.TRANSACTION-keys-put-api\"> </a></td></tr></table></div>"
+  },
+  "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.TRANSACTION",
+  "version" : "1.1.4",
+  "name" : "WHO_TRUST_TRANSACTION",
+  "title" : "WHO.TRUST.TRANSACTION CodeSystem",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2024-11-04T12:35:20+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "CodeSystem for TRUST.TRANSACTION that has usage codes for verification keys published to the Trust Network as defined by the [certificate governance](concepts_certificate_governance.html)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "keys-get-api"
+  },
+  {
+    "code" : "keys-get-did"
+  },
+  {
+    "code" : "keys-put-api"
+  }]
+}

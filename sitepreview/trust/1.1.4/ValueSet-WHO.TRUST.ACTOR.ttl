@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "WHO.TRUST.ACTOR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet WHO.TRUST.ACTOR</b></p><a name=\"WHO.TRUST.ACTOR\"> </a><a name=\"hcWHO.TRUST.ACTOR\"> </a><a name=\"WHO.TRUST.ACTOR-en-US\"> </a><ul><li>Include all codes defined in <code>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR</code></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.1.4"] ; # 
+  fhir:name [ fhir:v "WHO_TRUST_ACTOR"] ; # 
+  fhir:title [ fhir:v "TRUST.ACTOR ValueSet of key usage codes "] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-04T12:35:20+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet of codes for key usage codes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR"^^xsd:anyURI ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

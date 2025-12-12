@@ -1,0 +1,256 @@
+Trust : Validation Results
+=========================================
+
+err = 3, warn = 34, info = 3
+IG Publisher Version: 1.7.1
+Generated Mon Nov 04 12:36:38 UTC 2024. FHIR version 4.0.1 for smart.who.int.trust#1.1.4 (canonical = http://smart.who.int/trust)
+ Build Errors : 160 / 4 / 0
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/CodeSystem-WHO.TRUST.ACTOR : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/CodeSystem-WHO.TRUST.DOMAIN : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/CodeSystem-WHO.TRUST.KEYUSAGE : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/CodeSystem-WHO.TRUST.TRANSACTION : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/ImplementationGuide-smart.who.int.trust : 0 / 3 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-COSEHeader : 0 / 4 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-CWT : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-CWTPayload : 0 / 8 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-HCert : 3 / 10 / 4
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-SchemeInformation : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-SmartHealthLink : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/StructureDefinition-SmartHealthLinkPayload : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/ValueSet-WHO.TRUST.ACTOR : 0 / 2 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/ValueSet-WHO.TRUST.DOMAIN : 0 / 0 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/ValueSet-WHO.TRUST.KEYUSAGE : 0 / 1 / 1
+ /workspace/temp/smart.who.int.trust#1.1.4/fsh-generated/resources/ValueSet-WHO.TRUST.TRANSACTION : 0 / 2 / 1
+</table>
+== n/a ==
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/openapi/oauth2-redirect.html: Invalid literal declaration following text: 
+    'use strict';
+
+    function run() {
+        var oauth2 = window.opener.swaggerUIRedirectOauth2;
+        var sentState = oauth2.state;
+        var redirectUrl = oauth2.redirectUrl;
+        var isValid, qp, arr;
+
+        if (/code|token|error/.test(window.location.hash)) {
+            qp = window.location.hash.substring(1);
+        } else {
+            qp = location.search.substring(1);
+        }
+
+        arr = qp.split("
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR.html#/html/body/div/div/div/p/span/a at Line 394, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR.json.html#/html/body/div/div/div/p/span/a at Line 411, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR.ttl.html#/html/body/div/div/div/p/span/a at Line 405, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.ACTOR.xml.html#/html/body/div/div/div/p/span/a at Line 402, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN.html#/html/body/div/div/div/p/span/a at Line 385, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN.json.html#/html/body/div/div/div/p/span/a at Line 396, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN.ttl.html#/html/body/div/div/div/p/span/a at Line 393, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.DOMAIN.xml.html#/html/body/div/div/div/p/span/a at Line 387, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE.html#/html/body/div/div/div/p/span/a at Line 393, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE.json.html#/html/body/div/div/div/p/span/a at Line 408, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE.ttl.html#/html/body/div/div/div/p/span/a at Line 403, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.KEYUSAGE.xml.html#/html/body/div/div/div/p/span/a at Line 403, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION.html#/html/body/div/div/div/p/span/a at Line 382, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION.json.html#/html/body/div/div/div/p/span/a at Line 397, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION.ttl.html#/html/body/div/div/div/p/span/a at Line 393, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/CodeSystem-WHO.TRUST.TRANSACTION.xml.html#/html/body/div/div/div/p/span/a at Line 388, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader-definitions.html#/html/body/div/div/div/p/span/a at Line 419, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader.html#/html/body/div/div/div/p/span/a at Line 760, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader.profile.json.html#/html/body/div/div/div/p/span/a at Line 507, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 481, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-COSEHeader.profile.xml.html#/html/body/div/div/div/p/span/a at Line 487, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT-definitions.html#/html/body/div/div/div/p/span/a at Line 428, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT.html#/html/body/div/div/div/p/span/a at Line 798, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT.profile.json.html#/html/body/div/div/div/p/span/a at Line 538, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 501, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWT.profile.xml.html#/html/body/div/div/div/p/span/a at Line 517, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload-definitions.html#/html/body/div/div/div/p/span/a at Line 437, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload.html#/html/body/div/div/div/p/span/a at Line 836, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload.profile.json.html#/html/body/div/div/div/p/span/a at Line 569, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 521, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-CWTPayload.profile.xml.html#/html/body/div/div/div/p/span/a at Line 539, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert-definitions.html#/html/body/div/div/div/p/span/a at Line 446, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert.html#/html/body/div/div/div/p/span/a at Line 890, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert.profile.json.html#/html/body/div/div/div/p/span/a at Line 612, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 553, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-HCert.profile.xml.html#/html/body/div/div/div/p/span/a at Line 578, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation-definitions.html#/html/body/div/div/div/p/span/a at Line 592, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation.html#/html/body/div/div/div/p/span/a at Line 1508, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation.profile.json.html#/html/body/div/div/div/p/span/a at Line 1190, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 931, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SchemeInformation.profile.xml.html#/html/body/div/div/div/p/span/a at Line 1076, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink-definitions.html#/html/body/div/div/div/p/span/a at Line 413, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink.html#/html/body/div/div/div/p/span/a at Line 754, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink.profile.json.html#/html/body/div/div/div/p/span/a at Line 476, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 461, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLink.profile.xml.html#/html/body/div/div/div/p/span/a at Line 485, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload-definitions.html#/html/body/div/div/div/p/span/a at Line 482, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload-examples.html#/html/body/div/div/div/p/span/a at Line 369, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload-mappings.html#/html/body/div/div/div/p/span/a at Line 368, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload-testing.html#/html/body/div/div/div/p/span/a at Line 376, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload.html#/html/body/div/div/div/p/span/a at Line 1014, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload.profile.history.html#/html/body/div/div/div/p/span/a at Line 358, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload.profile.json.html#/html/body/div/div/div/p/span/a at Line 631, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload.profile.ttl.html#/html/body/div/div/div/p/span/a at Line 561, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/StructureDefinition-SmartHealthLinkPayload.profile.xml.html#/html/body/div/div/div/p/span/a at Line 663, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR.html#/html/body/div/div/div/p/span/a at Line 421, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR.json.html#/html/body/div/div/div/p/span/a at Line 390, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR.ttl.html#/html/body/div/div/div/p/span/a at Line 387, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.ACTOR.xml.html#/html/body/div/div/div/p/span/a at Line 381, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN.html#/html/body/div/div/div/p/span/a at Line 420, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN.json.html#/html/body/div/div/div/p/span/a at Line 398, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN.ttl.html#/html/body/div/div/div/p/span/a at Line 390, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.DOMAIN.xml.html#/html/body/div/div/div/p/span/a at Line 386, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE.html#/html/body/div/div/div/p/span/a at Line 424, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE.json.html#/html/body/div/div/div/p/span/a at Line 408, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE.ttl.html#/html/body/div/div/div/p/span/a at Line 396, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.KEYUSAGE.xml.html#/html/body/div/div/div/p/span/a at Line 397, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION-testing.html#/html/body/div/div/div/p/span/a at Line 353, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION.change.history.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION.html#/html/body/div/div/div/p/span/a at Line 421, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION.json.html#/html/body/div/div/div/p/span/a at Line 390, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION.ttl.html#/html/body/div/div/div/p/span/a at Line 387, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ValueSet-WHO.TRUST.TRANSACTION.xml.html#/html/body/div/div/div/p/span/a at Line 381, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/actors.html#/html/body/div/div/div/p/span/a at Line 323, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/adapting_guidelines.html#/html/body/div/div/div/p/span/a at Line 309, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/artifacts.html#/html/body/div/div/div/p/span/a at Line 463, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/changes.html#/html/body/div/div/div/p/span/a at Line 324, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts.html#/html/body/div/div/div/p/span/a at Line 478, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_CertificatePreperation.html#/html/body/div/div/div/p/span/a at Line 510, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_certificate_governance.html#/html/body/div/div/div/p/span/a at Line 672, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_did.html#/html/body/div/div/div/p/span/a at Line 330, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_governance.html#/html/body/div/div/div/p/span/a at Line 296, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding.html#/html/body/div/div/div/p/span/a at Line 378, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding_checklist.html#/html/body/div/div/div/div/div/p/img at Line 283, column 5: The image source 'Onboarding%20Process.drawio.png' cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding_checklist.html#/html/body/div/div/div/p/span/a at Line 1228, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding_initialguideline_full.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding_initialprocess_full.html#/html/body/div/div/div/p/span/a at Line 328, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/concepts_onboarding_process_full.html#/html/body/div/div/div/p/span/a at Line 637, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/content_profiles.html#/html/body/div/div/div/p/span/a at Line 342, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/data_exchange.html#/html/body/div/div/div/p/span/a at Line 289, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/decision_support.html#/html/body/div/div/div/div/div/p/a at Line 530, column 2: The link 'tx.fhir.org' for "tx.fhir.org" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/decision_support.html#/html/body/div/div/div/p/span/a at Line 809, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/dependencies.html#/html/body/div/div/div/p/span/a at Line 334, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/deployment.html#/html/body/div/div/div/p/span/a at Line 292, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/downloads.html#/html/body/div/div/div/p/span/a at Line 325, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/ethical_principles.html#/html/body/div/div/div/p/span/a at Line 517, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/faq.html#/html/body/div/div/div/p/span/a at Line 403, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/functional.html#/html/body/div/div/div/p/span/a at Line 323, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/hcert_spec.html#/html/body/div/div/div/div/div/ul/li/ul/li/a at Line 345, column 125: The link '/smart-trust/hcert_spec.html#327-health-certificate-claim' for "3.2.7" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/hcert_spec.html#/html/body/div/div/div/div/div/p/a at Line 351, column 46: The link '/smart-trust/StructureDefinition-hcert.html' for "here" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/hcert_spec.html#/html/body/div/div/div/div/div/ul/li/a at Line 413, column 18: The link '/smart-trust/StructureDefinition-hcert.html' for "logical model" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/hcert_spec.html#/html/body/div/div/div/p/span/a at Line 602, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/index.html#/html/body/div/div/div/p/span/a at Line 502, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/indices.html#/html/body/div/div/div/p/span/a at Line 295, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/maps.html#/html/body/div/div/div/p/span/a at Line 285, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/reference_implementation.html#/html/body/div/div/div/p/span/a at Line 343, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/references.html#/html/body/div/div/div/p/span/a at Line 322, column 116: The link 'license.html' for "License" cannot be resolved
+WARNING: /workspace/temp/smart.who.int.trust#1.1.4/output/references.html: The html source has duplicate anchor Ids: 2
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/requirements.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 261, column 12: The link 'usecases.html' for "Use Cases" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/requirements.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 262, column 12: The link 'personas.html' for "Personas" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/requirements.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 263, column 12: The link 'dictionary.html' for "Data Dictionary" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/requirements.html#/html/body/div/div/div/p/span/a at Line 291, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/security_privacy.html#/html/body/div/div/div/p/span/a at Line 281, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/testing.html#/html/body/div/div/div/p/span/a at Line 281, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/toc.html#/html/body/div/div/div/p/span/a at Line 278, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/transactions.html#/html/body/div/div/div/div/div/p/a at Line 329, column 271: The link 'ValueSet-TRUST.KEYUSAGE.html' for "usage" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/transactions.html#/html/body/div/div/div/div/div/p/a at Line 329, column 324: The link 'ValueSet-TRUST.DOMAIN.html' for "trust domain" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/transactions.html#/html/body/div/div/div/p/span/a at Line 479, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/trust_network_gateway_architecture.html#/html/body/div/div/div/p/span/a at Line 987, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/use_cases.html#/html/body/div/div/div/p/span/a at Line 342, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/video_tutorial.html#/html/body/div/div/div/p/span/a at Line 315, column 116: The link 'license.html' for "License" cannot be resolved
+ERROR: /workspace/temp/smart.who.int.trust#1.1.4/output/workflows.html#/html/body/div/div/div/p/span/a at Line 311, column 116: The link 'license.html' for "License" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-WHO.TRUST.ACTOR.json ==
+== fsh-generated/resources/CodeSystem-WHO.TRUST.DOMAIN.json ==
+== fsh-generated/resources/CodeSystem-WHO.TRUST.KEYUSAGE.json ==
+== fsh-generated/resources/CodeSystem-WHO.TRUST.TRANSACTION.json ==
+== fsh-generated/resources/ImplementationGuide-smart.who.int.trust.json ==
+WARNING: ImplementationGuide/smart.who.int.trust: ImplementationGuide.definition.resource[7].name: value should not start or finish with whitespace 'TRUST.ACTOR ValueSet of key usage codes '
+WARNING: ImplementationGuide/smart.who.int.trust: ImplementationGuide.definition.resource[8].name: value should not start or finish with whitespace 'TRUST.KEYUSAGE ValueSet of key usage codes '
+WARNING: ImplementationGuide/smart.who.int.trust: ImplementationGuide.definition.resource[9].name: value should not start or finish with whitespace 'TRUST.TRANSACTION ValueSet of key usage codes '
+== fsh-generated/resources/StructureDefinition-COSEHeader.json ==
+WARNING: StructureDefinition/COSEHeader: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/COSEHeader: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/COSEHeader: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/COSEHeader: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+== fsh-generated/resources/StructureDefinition-CWT.json ==
+== fsh-generated/resources/StructureDefinition-CWTPayload.json ==
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/CWTPayload: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+== fsh-generated/resources/StructureDefinition-HCert.json ==
+ERROR: StructureDefinition/HCert: StructureDefinition.text.div: The URL is not valid because '(URL contains 6 Invalid Characters ([\]))': file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-HCertDCC.html
+ERROR: StructureDefinition/HCert: StructureDefinition.text.div: The URL is not valid because '(URL contains 6 Invalid Characters ([\]))': file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-DDCCCoreDataSetVS.html
+ERROR: StructureDefinition/HCert: StructureDefinition.text.div: The URL is not valid because '(URL contains 6 Invalid Characters ([\]))': file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-DDCCCoreDataSetTR.html
+INFORMATION: StructureDefinition/HCert: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-HCertDCC.html' at 'div/table/tr/td/a' for 'HCertDCC' is not a widely supported protocol and should be checked
+INFORMATION: StructureDefinition/HCert: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-DDCCCoreDataSetVS.html' at 'div/table/tr/td/a' for 'DDCCCoreDataSetVS' is not a widely supported protocol and should be checked
+INFORMATION: StructureDefinition/HCert: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file://C:\work\ImplementationGuides\ig-release\who\ddcc\output/StructureDefinition-DDCCCoreDataSetTR.html' at 'div/table/tr/td/a' for 'DDCCCoreDataSetTR' is not a widely supported protocol and should be checked
+WARNING: StructureDefinition/HCert: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/HCert: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+== fsh-generated/resources/StructureDefinition-SchemeInformation.json ==
+== fsh-generated/resources/StructureDefinition-SmartHealthLink.json ==
+== fsh-generated/resources/StructureDefinition-SmartHealthLinkPayload.json ==
+== fsh-generated/resources/ValueSet-WHO.TRUST.ACTOR.json ==
+WARNING: ValueSet/WHO.TRUST.ACTOR: ValueSet.title: value should not start or finish with whitespace 'TRUST.ACTOR ValueSet of key usage codes '
+WARNING: ValueSet.where(id = 'WHO.TRUST.ACTOR'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR
+== fsh-generated/resources/ValueSet-WHO.TRUST.DOMAIN.json ==
+== fsh-generated/resources/ValueSet-WHO.TRUST.KEYUSAGE.json ==
+WARNING: ValueSet/WHO.TRUST.KEYUSAGE: ValueSet.title: value should not start or finish with whitespace 'TRUST.KEYUSAGE ValueSet of key usage codes '
+== fsh-generated/resources/ValueSet-WHO.TRUST.TRANSACTION.json ==
+WARNING: ValueSet/WHO.TRUST.TRANSACTION: ValueSet.title: value should not start or finish with whitespace 'TRUST.TRANSACTION ValueSet of key usage codes '
+WARNING: ValueSet.where(id = 'WHO.TRUST.TRANSACTION'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION

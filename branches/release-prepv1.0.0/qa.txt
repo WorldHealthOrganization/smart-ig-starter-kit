@@ -1,0 +1,53 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 1
+IG Publisher Version: 1.6.7
+Generated Fri May 10 14:44:27 UTC 2024. FHIR version 5.0.0 for smart.who.int.ig-starter-kit#0.2.1 (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 41 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/artifacts_catalog.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/authoring_artifacts.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/authoring_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/content_types.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/diagram_legend.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/github_setup.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/gov_concepts.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/gov_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/ig_configuration.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/ig_setup.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/indices.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l2_l3_overview.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_codesystems.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_conceptmaps.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_cql.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_cql.html#/html/body/div/div/div/div/div/p/a at Line 328, column 224: The link 'l3_scheduling_logic.htlm' for "scheduling logic" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_examples.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_logicalmodels.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_personas.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_processes.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_profiles.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_requirements.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_scenarios.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_schedulinglogic.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_structuremaps.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_testing.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/l3_valuesets.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/license.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/maps.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/narrative.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/qa_check.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/structure.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/validating_ig.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+ERROR: /github/workspace/output/versioning.html#/html/body/div/div/div/nav/div/div/ul/li/ul/li/a at Line 75, column 10: The link 'assumptions.html' for "Assumptions" cannot be resolved
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==
+INFORMATION: ImplementationGuide/smart.who.int.ig-starter-kit: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

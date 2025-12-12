@@ -1,0 +1,62 @@
+{
+  "date" : "Tue, 01 Apr, 2025 13:15:59 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json",
+      "size" : 11214,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 26,
+          "length" : 27
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 27,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 84
+        },
+        {
+          "activity" : "validate",
+          "start" : 27,
+          "length" : 4010
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 37,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 38,
+          "length" : 63
+        },
+        {
+          "activity" : "generate2",
+          "start" : 41,
+          "length" : 47
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 46,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 49,
+          "length" : 1
+        }
+      ]
+    }
+  ]
+}

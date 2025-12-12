@@ -1,0 +1,1253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Concepts Onboarding Checklist - WHO SMART Trust v1.1.4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1.8.6"}
+    h3,h4,h5,h6{--heading-prefix:"1.8.6"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="ethical_principles.html">Ethical Considerations and Data Protection Principles</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting_guidelines.html">Adapting Guidelines for Country use</a>
+      </li>
+      <li>
+        <a href="faq.html">Frequently Asked Questions</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="decision_support.html">Decision Support Logic</a>
+      </li>
+      <li>
+        <a href="functional.html">Functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="workflows.html">Workflows</a>
+      </li>
+      <li>
+        <a href="content_profiles.html">Content Profiles</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="video_tutorial.html">Video Tutorials</a>
+      </li>
+      <li>
+        <a href="security_privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="reference_implementation.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+      
+<img src="assets/images/h-logo-blue.svg" alt="Welcome on standards website" style="margin:7px" height="50"/>
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-active">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Trust</span>
+            <br/>
+            <span style="display:inline-block;">1.1.4 - CI Build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="index.html"><b>Home</b></a></li><li><a href="concepts.html"><b>Concepts</b></a></li><li><b>Concepts Onboarding Checklist</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the Trust (v1.1.4: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/trust/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Concepts Onboarding Checklist</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#git-repository" id="markdown-toc-git-repository">Git Repository</a></li>
+  <li><a href="#local-repository" id="markdown-toc-local-repository">Local Repository</a></li>
+  <li><a href="#invite-tng-bot" id="markdown-toc-invite-tng-bot">Invite tng-bot</a></li>
+  <li><a href="#generate-gpg-key" id="markdown-toc-generate-gpg-key">Generate GPG Key</a></li>
+  <li><a href="#create-certificates" id="markdown-toc-create-certificates">Create Certificates</a></li>
+  <li><a href="#provide" id="markdown-toc-provide">Provide</a></li>
+  <li><a href="#send-an-onboardingparticipation-request" id="markdown-toc-send-an-onboardingparticipation-request">Send an onboarding/participation request</a></li>
+  <li><a href="#validate-the-connection" id="markdown-toc-validate-the-connection">Validate the connection</a></li>
+  <li><a href="#upload-cms-package" id="markdown-toc-upload-cms-package">Upload CMS Package</a></li>
+  <li><a href="#appendix" id="markdown-toc-appendix">Appendix</a></li>
+</ul>
+
+</div>
+<p>This repository contains the template for building <a href="https://github.com/WorldHealthOrganization/smart-trust/blob/main/input/pagecontent/concepts_onboarding.md">onboarding</a> information for the Smart Trust Network Attendees. This includes CSCAs, Auth information, signing information and other relevant files for onboarding a participant. Videos guides to the steps described here are available on this <a href="video_tutorial.html">page</a>.</p>
+
+<p><strong>Onboarding Process</strong></p>
+<p><a name="l507">​</a><img src="Onboarding%20Process.drawio.png" alt="Onboarding Process" style="width:60%" class="figure-img img-responsive img-rounded center-block"/></p>
+<div style="clear:both;"></div>
+
+<h3 id="git-repository">Git Repository</h3>
+
+<p><strong>Create a private git repository on github. One for each Environment (DEV, UAT, PROD)</strong></p>
+
+<blockquote>
+  <p>Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/2.1.and2.3.full-video.v2.mp4">Create private repository</a> video for reference</p>
+  <ul>
+    <li>From Github profile, go to repositories</li>
+    <li>Click on New</li>
+    <li>Enter Repository name, follow the convention, it has to contain the ISO 3 letter. All the rest is optional</li>
+    <li>Click on Create Repository</li>
+  </ul>
+</blockquote>
+
+<p><strong>Create PAT (Personal Access Token) for Github account if not created already</strong></p>
+<ul>
+  <li>Go to Github profile -&gt; Settings</li>
+  <li>Go to Developers Settings -&gt; Personal Access Tokens -&gt; Tokens (Classic)</li>
+  <li>Click on Generate New Token button (Generate New Token classic)</li>
+  <li>Use Authentication code</li>
+  <li>Add Note, Expiration, 'Repo' as a scope and click ‘Generate Token’</li>
+</ul>
+
+<h3 id="local-repository">Local Repository</h3>
+
+<ul>
+  <li>Go to local repo</li>
+  <li>
+    <p>Clone the new Github repo in your local repo</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - git clone https://(your account PAT)@github.com/(your account or organization)/(repo).git
+  - cd (repo)
+  - git remote add template-repo https://github.com/WorldHealthOrganization/tng-participant-template.git
+  - git pull template-repo main
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="invite-tng-bot">Invite tng-bot</h3>
+<ul>
+  <li>Add tng-bot to new repository
+    <blockquote>
+      <p>Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/2.2.full-video.v2.mp4">Invite tng-bot to private repository</a> video for reference</p>
+    </blockquote>
+  </li>
+  <li>Go to Repository -&gt; Settings</li>
+  <li>Go to Collaborators</li>
+  <li>Authenticate</li>
+  <li>Click on Add people</li>
+  <li>Add tng-bot for Prod and tng-bot-dev for dev and UAT</li>
+</ul>
+
+<h3 id="generate-gpg-key">Generate GPG Key</h3>
+<ul>
+  <li>Create GPG Keys for responsible persons for each environment
+    <blockquote>
+      <p>Note: Before generating a new GPG key, make sure you've verified your email address. If you haven't verified your email address, you won't be able to sign commits and tags with GPG.
+Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/1.2.full-video.v2.mp4">GPG key Creation</a>  video for reference</p>
+    </blockquote>
+  </li>
+  <li>Download and install the GPG command line tools for your operating system. We generally recommend installing the latest version for your operating system.</li>
+  <li>Open Git Bash</li>
+  <li>Generate a GPG key pair. Since there are multiple versions of GPG, you may need to consult the relevant man page to find the appropriate key generation command</li>
+  <li>
+    <p>If you are on version 2.1.17 or greater, paste the text below to generate a GPG key pair.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Shell
+  gpg --full-generate-key
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you are not on version 2.1.17 or greater, the gpg –full-generate-key command doesn't work. Paste the text below and skip to step 4.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Shell
+  gpg --default-new-key-algo rsa4096 --gen-key
+</code></pre></div>    </div>
+  </li>
+  <li>At the prompt, specify the kind of key you want, or press Enter to accept the default. (Default is RSA)</li>
+  <li>At the prompt, specify the key size you want, or press Enter to accept the default. (For RSA go for 4096)</li>
+  <li>Enter the length of time the key should be valid. Press Enter to specify the default selection, indicating that the key doesn't expire. Unless you require an expiration date, we recommend accepting this default.</li>
+  <li>Verify that your selections are correct.</li>
+  <li>Enter your user ID information.
+    <blockquote>
+      <p>Note: When asked to enter your email address, ensure that you enter the verified email address for your GitHub account. To keep your email address private, use your GitHub-provided no-reply email address. For more information, see "Verifying your email address" and "Setting your commit email address."</p>
+    </blockquote>
+  </li>
+  <li>Authenticate</li>
+  <li>Use the <strong>gpg –list-secret-keys –keyid-format=long</strong> command to list the long form of the GPG keys for which you have both a public and private key. A private key is required for signing commits or tags.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Shell
+  gpg --list-secret-keys --keyid-format=long
+</code></pre></div>    </div>
+    <blockquote>
+      <p>Some GPG installations on Linux may require you to use <strong>gpg2 –list-keys –keyid-format LONG</strong> to view a list of your existing keys instead. In this case you will also need to configure Git to use gpg2 by running <strong>git config –global gpg.program gpg2</strong>.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>From the list of GPG keys, copy the long form of the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Shell
+
+  $ gpg --list-secret-keys --keyid-format=long
+  /Users/hubot/.gnupg/secring.gpg
+  ------------------------------------
+  sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+  uid                          Hubot &lt;hubot@example.com&gt;
+  ssb   4096R/4BB6D45482678BE3 2016-03-10
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Paste the text below, substituting in the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Shell
+
+  gpg --armor --export 3AA5C34371567BD2
+  # Prints the GPG key ID, in ASCII armor format
+</code></pre></div>    </div>
+  </li>
+  <li>Copy your GPG key, beginning with —–BEGIN PGP PUBLIC KEY BLOCK—– and ending with —–END PGP PUBLIC KEY BLOCK—–.</li>
+  <li>Add the GPG key to your GitHub account.
+    <blockquote>
+      <p>Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/1.3.full-video.v2.mp4">Adding GPG key to repository</a>  video for reference</p>
+    </blockquote>
+  </li>
+  <li>Go to Github profile -&gt; Settings</li>
+  <li>Go to SSH and GPG Keys</li>
+  <li>Click on New GPG Key</li>
+  <li>Add Title. Add key copied in last step</li>
+  <li>Click on Add GPG Key</li>
+</ul>
+
+<h3 id="create-certificates">Create Certificates</h3>
+
+<h4 id="certificate-preparation-for-dev-and-uat">Certificate Preparation for DEV and UAT</h4>
+
+<blockquote>
+  <p>Disclaimer: The script generates self-signed certificates not intended to be used on production environments.
+  for DEV and UAT environments you may use the conf files and the  <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/gen_all_certs.sh">certgen bash script</a>  as a guideline according to the  <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/README.md">Certificate Preparation</a></p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>You must adapt the following default certificate parameter of <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/DN_template.cnf">DN_template.cnf</a> file which will used  in gen_all_certs.sh to your needs:</p>
+  </li>
+  <li>
+    <p>Configuration Template for Certificate Generation, Modify for your own needs in DN_template.cnf file as it will be 
+used as argument while running the script "gen_all_certs.sh".</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 	export OSSL_COUNTRY_NAME="XC"
+  export OSSL_STATE_NAME="Test State"
+  export OSSL_LOCALITY_NAME="TEST"
+  export OSSL_ORGANIZATION_NAME="WHO"
+  export OSSL_ORGANIZATIONAL_UNIT_NAME="R&amp;D"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Note: OSSL_COUNTRY_NAME should be ISO 2 letter name of the country mapped to the name used in repository.</p>
+</blockquote>
+
+<ul>
+  <li>Then execute the script. It will generate all certificates and keys in a subfolder named by current datetime.</li>
+  <li>
+    <p>While execution of the "gen_all_certs.sh" script, Please provide script argument "DN_template.cnf" file<br/>
+which consists of country related information to generate all required certificates (TLS,SCA,UP)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  For Mac/Unix
+  cd scripts/certgen
+  ./gen_all_certs.sh DN_template.cnf	   
+ 	zsh ./gen_all_certs.sh DN_template.cnf      ## If you are using Ubuntu OS
+        
+  For Windows:
+  cd scripts/certgen
+  ./gen_all_certs.ps1
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Execution On Windows</strong></p>
+
+<p>Windows platform you can use  <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/gen_all_certs.ps1">gen_all_certs.ps1</a>  instead. Please note that you need to have  <a href="https://slproweb.com/products/Win32OpenSSL.html">OpenSSL installed</a>  (e.g. Win64 OpenSSL v3.3.0 Light) and added to your PATH environment variable. Also you may need allow the execution by setting an execution policy.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+```	
+</code></pre></div></div>
+
+<p><strong>Prepare Folders</strong></p>
+
+<blockquote>
+  <p>Note: keep your private keys safe and secure. Do not share them with anyone.
+Copy the generated certificates to the respective folders and change the file names to match the naming convention. For the case of self-signed TLS certificates, the CA.pem is just a copy of the TLS.pem (check to have keyCertSign in the keyUsage). The CA.pem should exist, since it is used to verify the TLS client certificate when connecting to the TNG application.
+Files to be copied in respective folders are as follows:</p>
+  <ul>
+    <li>SCA.pem -&gt; onboarding/DCC/SCA</li>
+    <li>UP.pem -&gt; onboarding/DCC/UP</li>
+    <li>CA.pem -&gt; onboarding/DCC/TLS</li>
+    <li>TLS.pem -&gt; onboarding/DCC/TLS</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>Note: On DEV and UAT environment, if the files are generated using a script, delete the generated folder before committing the files.</p>
+</blockquote>
+
+<h4 id="certification-preparation-for-prod">Certification Preparation for Prod</h4>
+
+<p>This guide follows the certificate templates defined in the certificate governance. Public Key Certificates generated by following this guide will include the minimal required fields - further fields can be added in the configuration files if needed.Self-signed certificates are typically used in DEV and UAT environments.</p>
+
+<p><strong>For production, It is strongly recommended to use certificates signed by a trusted Certificate Authority (CA)</strong>.
+This is just an example reference on how to use a Trusted CA certificate in a production environment. You should refer to the specific procedures provided by the public Trusted Certificate Authority (CA) of your choice for accurate and detailed instructions <a href="#steps-to-obtain-and-use-a-ca-signed-certificate">Reference- Recommendation to use Trusted Public CA Certificate in Prod</a></p>
+
+<p><strong>Elliptic Curve Public Key Certificates (ECDSA with NIST-p-256)</strong></p>
+
+<h5 id="sca-certificate-tnpsca-generation-example">SCA certificate (TNP<sub>SCA</sub>) generation example</h5>
+<blockquote>
+  <p>Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/1.1.full-video.SCA.v2.mp4">SCA Creation</a> video  for reference</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><em>sca.conf</em>: Create a new file called sca.conf and replace the dn entries with your jurisdiction’s details.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [req]
+  prompt = no
+  default_md = sha256
+  distinguished_name = dn
+
+  [dn]
+  C = DE
+  ST = NRW
+  L = Bonn
+  O = MinistryOfTest
+  OU = DGCOperations
+  CN = SCA_DGC_DE_01
+
+  [ext]
+  basicConstraints = critical, CA:TRUE, pathlen:0
+  keyUsage = critical, cRLSign, keyCertSign
+  subjectKeyIdentifier = hash
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><em>Certificate generation</em>: Open a command line prompt in the folder where the sca.conf is located and use the following OpenSSL command to create the private key (CAprivkey.key) and the certificate (CAcert.pem):</p>
+  </li>
+  <li><strong>For Prod it's recommended to use</strong> <a href="#steps-to-obtain-and-use-a-ca-signed-certificate">Trusted CA issued Certificate</a> only. As below command for self-signed certificate generation as it's usually only recommended for <strong>DEV/UAT</strong> environment.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  openssl req -x509 -new -days 1461 -newkey ec:&lt;(openssl ecparam -name prime256v1) -extensions ext -keyout CAprivkey.key -nodes -out CAcert.pem -config sca.conf
+</code></pre></div>    </div>
+    <h5 id="dsc-generation-example">DSC generation example</h5>
+    <p><strong>DSC generation example</strong>
+  Document Signer Certificates (DSCs) must be signed by the SCA. Hence, you have to create the SCA certificate (with the corresponding private key) before you can issue DSCs.</p>
+  </li>
+  <li>
+    <p><em>DSC.conf</em>: Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/3.2.and3.3.full-video.v2.mp4">DSC generation and deletion</a>  video for reference</p>
+  </li>
+  <li>
+    <p>Create a new file called DSC.conf in the folder where your CA’s private key is located and add the following fields:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [ext]
+  keyUsage = critical, digitalSignature
+  subjectKeyIdentifier = hash
+  authorityKeyIdentifier = keyid:always
+  crlDistributionPoints = URI:http://crl.exampledomain.example/CRL/SCA.crl
+  extendedKeyUsage = 1.3.6.1.4.1.1847.2021.1.1,1.3.6.1.4.1.1847.2021.1.2,1.3.6.1.4.1.1847.2021.1.3
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>It is recommended that a SCA provides certificate revocation lists. Therefore, replace the crlDistributionPoints URI with the information for your jurisdiction.</p>
+  </li>
+  <li>
+    <p>The extendedKeyUsage field is optional, for Covid certificates the below values are recommend to be used to further restrict the DSC certificate as follows:</p>
+
+    <p><strong>Field</strong>         <strong>Value</strong><br/>
+  extendedKeyUsage   1.3.6.1.4.1.1847.2021.1.1 for Test Issuers<br/>
+  extendedKeyUsage   1.3.6.1.4.1.1847.2021.1.2 for Vaccination Issuers<br/>
+  extendedKeyUsage   1.3.6.1.4.1.1847.2021.1.3 for Recovery Issuers\</p>
+  </li>
+  <li>
+    <p>The above example contains all three extended key usages.</p>
+  </li>
+  <li>
+    <p><em>Create a certificate signing request (CSR)</em>:In order to create a certificate for a Document Signer, first create a Certificate Signing Request preferably on the machine that will use the certificate in order to avoid copying the private key (DSC01privkey.key) to this machine later. The CSR must contain the Distinguished Name (DN) information that will be included in the DSC. Open a command prompt and use the following command to create the CSR:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  openssl req -newkey ec:&lt;(openssl ecparam -name prime256v1) -keyout DSC01privkey.key -nodes -out DSC01csr.pem
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If needed, you can repeat this procedure to create multiple CSRs for different DSCs (on different machines). When prompted, enter the necessary information (e.g. C= your jurisdiction (MUST), O = your Organization (OPTIONAL), CN = non-empty and unique CN (MUST), …).</p>
+  </li>
+  <li>
+    <p><em>Issue the certificate</em>: Copy the CSR (DSC01csr.pem) to the folder where the private key of your CA is located. Open a command prompt and use the following command to issue the DSC (DSCcert.pem):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  openssl x509 -req -in DSC01csr.pem -CA CAcert.pem -CAkey CAprivkey.key -CAcreateserial -days 730 -extensions ext -extfile DSC.conf -out DSCcert.pem
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Important Recommendations for Prod</strong>: Please replace CAcert.pem and CAprivkey.key with signing material from an officially Trusted Certification Authority instead using your own self-signed one.</li>
+</ul>
+
+<h5 id="tnpup-generation-example">TNP<sub>UP</sub> generation example</h5>
+
+<ul>
+  <li><em>uploadCert.conf</em>
+    <blockquote>
+      <p>Please check <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/1.1.full-video.UP.v2.mp4">UP Creation</a>  video for reference</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Create a new file called <em>uploadCert.conf</em> and replace the dn entries with your jurisdiction’s details.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [req]
+  prompt = no
+  default_md = sha256
+  distinguished_name = dn
+
+  [dn]
+  C = DE
+  ST = NRW
+  L = Bonn
+  O = MinistryOfTest
+  OU = DGCOperations
+  CN = NationX_TNPUP
+
+  [ext]
+  keyUsage = critical, digitalSignature
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><em>Certificate generation</em>: Open a command line prompt in the folder where the <em>uploadCert.conf</em> is located and use the following OpenSSL command to create the private key (<em>TNP_UP.key</em>) and the certificate (<em>TNP_UP.pem</em>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  plaintext
+  openssl req -x509 -new -days 365 -newkey ec:&lt;(openssl ecparam -name prime256v1) -extensions ext -keyout TNP_UP.key -nodes -out TNP_UP.pem -config uploadCert.conf
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h5 id="tnptls-generation-example">TNP<sub>TLS</sub> generation example</h5>
+
+<ul>
+  <li><em>TLSClient.conf</em>
+    <blockquote>
+      <p>Please check  <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/1.1.full-video.TLS.v2.mp4">TLS Creation</a> video for reference</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Create a new file called <em>TLSClient.conf</em> and replace the dn entries with your jurisdiction’s details.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [req]
+  prompt = no
+  default_md = sha256
+  distinguished_name = dn
+
+  [dn]
+  C = DE
+  ST = NRW
+  L = Bonn
+  O = MinistryOfTest
+  OU = DGCOperations
+  CN = NationX_TNP_TLS
+
+  [ext]
+  keyUsage = critical, digitalSignature
+  extendedKeyUsage = clientAuth
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Note :Beware that self-signed certificates should also contain the key usage Certificate signing (keyCertSign), so that the (self) signature of the certificate can be verified.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+plaintext
+[ext]
+keyUsage = critical, digitalSignature, keyCertSign
+extendedKeyUsage = clientAuth
+```
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><em>Certificate generation</em>: Open a command line prompt in the folder where the <em>TLSClient.conf</em> is located and use the following OpenSSL command to create the private key (<em>TNP_TLS.key</em>) and the certificate (<em>TNP_TLS.pem</em>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  plaintext
+  openssl req -x509 -new -days 365 -newkey ec:&lt;(openssl ecparam -name prime256v1) -extensions ext -keyout TNP_TLS.key -nodes -out TNP_TLS.pem -config TLSClient.conf
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>RSA Public Key Certificates</strong>
+In case you want to use RSA certificates you can still use the configuration files provided above. During the CSR/certificate creation, replace the <code class="language-plaintext highlighter-rouge">-newkey ec:&lt;(openssl ecparam -name prime256v1)</code> with <code class="language-plaintext highlighter-rouge">-newkey rsa:4096</code> for a 4096 Bit RSA key.<br/>
+Please be aware that RSA is NOT RECOMMENDED for the DSC and if you want to use RSA as your document signing algorithm, please create either a 2048 bit RSA key or at maximum a 3072 bit RSA key due to the space limitations on the QR codes.</p>
+
+<h3 id="provide">Provide</h3>
+
+<blockquote>
+  <p>Please check  <a href="https://github.com/WorldHealthOrganization/smart-trust/releases/download/v1.1.1/2.4.full-video.v2.mp4">Signing (tag) certificates</a> video for reference</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>Git Commands for Configuring, Committing, and Pushing Signed Commits</strong> are also available <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/README.md#tagging-for-taking-into-use">here</a></p>
+  </li>
+  <li>
+    <p>Finally commit push changes and make a signed tag for the version you want to take into use, by following the steps below:</p>
+  </li>
+  <li>
+    <p>List all the GPG keys available on your system</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gpg --list-key
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+ 	```
+  	Output
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg --list-key
+/home/test/.gnupg/pubring.kbx
+-----------------------------
+
+pub   rsa4096 2024-09-19 [SC]
+      CD822874C7862BA4BB6B950E40CC62009D9A00B0
+uid           [ultimate] Test User1 (This GPG Key is for XXC test Country) &lt;youruser@yourdomain.com&gt;
+sub   rsa4096 2024-09-19 [E]
+  	```
+**Note**: The PUB ID in above output is CD822874C7862BA4BB6B950E40CC62009D9A00B0 , In your case you need to 
+    replace with &lt;&lt; replace with your Pub ID &gt;&gt; with your actual GPG public key ID to configure Git to use a GPG 
+    key for signing commits or tags in next command.
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Configure the signing key to be used globally for Git commits and tag</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git config --global user.signingkey &lt;&lt; replace with your Pub ID &gt;&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Retrieve the current GPG signing key configured for Git
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git config --get user.signingkey
+</code></pre></div>    </div>
+  </li>
+  <li>Configures the global Git username and email
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git config --global user.name "Your Git UserName"
+	
+  git config --global user.email "Your email Id"
+</code></pre></div>    </div>
+  </li>
+  <li>Stage all changes for the next commit
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git add .
+</code></pre></div>    </div>
+  </li>
+  <li>Create a signed Git commit with a commit message,
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git commit -sm "added all certificates files"
+</code></pre></div>    </div>
+  </li>
+  <li>Create a signed Git tag with a message
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git tag -s v1.2 -m 'my signed 1.2 tag'
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Displays the details of a specific tag</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git show v1.2
+</code></pre></div>    </div>
+  </li>
+  <li>Pushes all the local tags to the remote repository
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git push --tags 
+</code></pre></div>    </div>
+  </li>
+  <li>For more detailed git commands please review <a href="#more-information-about-git-commit-signing-and-tagging-commands">Appendix</a></li>
+</ul>
+
+<p><strong>Everyone Must Sign - Always a good idea</strong>
+Signing tags and commits is great, but if you decide to use this in your normal workflow, you’ll have to make sure that everyone on your team understands how to do so. This can be achieved by asking everyone working with the repository to run git config –local commit.gpgsign true to automatically have all of their commits in the repository signed by default. If you don’t, you’ll end up spending a lot of time helping people figure out how to rewrite their commits with signed versions. Make sure you understand GPG and the benefits of signing things before adopting this as part of your standard workflow.</p>
+
+<h3 id="send-an-onboardingparticipation-request">Send an onboarding/participation request</h3>
+
+<ul>
+  <li>Send an onboarding/participation request to gdhcn-support@who.int which contains:
+    <ul>
+      <li>URL of the private repository created as a prerequisite</li>
+      <li>The GPG key exported in Step <a href="#generate-gpg-key">1.8.6.4</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="validate-the-connection">Validate the connection</h3>
+<ul>
+  <li>Once the confirmation of successful onboarding is received from the TNG Support Team ( gdhcn-support@who.int), please do the following</li>
+</ul>
+
+<p><strong>TNG-WHO Endpoints:</strong></p>
+<ul>
+  <li>PRD:	 https://tng.who.int</li>
+  <li>UAT:	 https://tng-uat.who.int</li>
+  <li>
+    <p>DEV:	 https://tng-dev.who.int</p>
+  </li>
+  <li>After onboarding in the DEV/UAT/PROD Environment, check the connectivity with the Trust Network Gateway using its <a href="https://smart.who.int/trust/openapi/">API</a>. This can be achieved with following command:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -v https://tng-dev.who.int/trustList --cert TLS.pem --key TLS_key.pem
+</code></pre></div></div>
+<p>You should see a output like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+{
+    "kid": "+jrpHSqdqZY=",
+    "timestamp": "2023-05-25T07:55:21Z",
+    "country": "XC",
+    "certificateType": "UPLOAD",
+    "thumbprint": "fa3ae91d...",
+    "signature": "MIAGCSqGSIb3D...",
+    "rawData": "MIIErTCCA5WgAwIBAgII..."
+}
+]
+</code></pre></div></div>
+<ul>
+  <li>Test the other Trustlist Routes in the same style (e.g. with DSC/SCA/Upload/Authentication…)</li>
+</ul>
+
+<h3 id="upload-cms-package">Upload CMS Package</h3>
+<ul>
+  <li>
+    <p>Create an Document Signer Certificate and sign it by the SCA <a href="#certification-preparation-for-prod">Refer</a> and <a href="#dsc-generation-example">DSC generation example</a></p>
+  </li>
+  <li>
+    <p>Create an CMS Package with the following Command:</p>
+    <blockquote>
+      <p>Note: Step 3 and 4 could be achieved through two method, commandline and script respectively .</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><strong>Method 1 - Commandline .</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl x509 -outform der -in cert.pem -out cert.der
+openssl cms -sign -nodetach -in cert.der -signer signing.crt -inkey signing.key -out signed.der -outform DER -binary
+openssl base64 -in signed.der -out cms.b64 -e -A
+
+</code></pre></div></div>
+<blockquote>
+  <p>Note: cert.der is your DSC, signing.crt is the TNP<sub>UP</sub>.</p>
+</blockquote>
+
+<p><strong>Method 2 - Scripts</strong></p>
+
+<p>The DSC generation and upload of  CMS package to TNG Gateway  could be achieved through the below mentioned scripts.
+For DEV and UAT environments you may use script.</p>
+
+<p><a href="https://github.com/WorldHealthOrganization/tng-participant-template/tree/main/scripts/certgen#generate-dscs">Generate DSCs</a></p>
+
+<p><a href="https://github.com/WorldHealthOrganization/tng-participant-template/tree/main/scripts/certgen#upload-dscs0">Upload DSCs</a></p>
+
+<p>The Distinguished Name ( DN) configuration file while will parse as source  <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/DN_template.cnf">DN_template.cnf</a> is an example.</p>
+
+<p>Please replace with your actual OSSL_COUNTRY_NAME, OSSL_STATE_NAME etc parameters accordingly of DN_template.cnf file.</p>
+
+<p>The script expects at least two arguments:
+A configuration file (DN_template.cnf) that contains the Distinguished Name (DN) template.
+A subdirectory where the SCA (Signing Certificate Authority) PEM and KEY files are located.
+An optional third argument can be provided to specify the purpose of the DSC (e.g., test, vax, rec). If this argument is not provided, the DSC will be generated for all purposes.</p>
+
+<p><strong>How to to run DSC Generate Script</strong> <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/gen_dsc.sh">gen_dsh.sh</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./script_name.sh DN_template.cnf directory_of_SCA_files [test/vax/rec-purpose]
+
+</code></pre></div></div>
+<p><strong>How to run upload.sh script:</strong> <a href="https://github.com/WorldHealthOrganization/tng-participant-template/blob/main/scripts/certgen/upload_dsc.sh">upload_dsc.sh</a></p>
+
+<p><strong>- ./upload_dsc.sh:</strong> Replace this with the actual name of your script.</p>
+
+<p><strong>- /path/to/subdir:</strong> Path to the directory containing UP.pem and UP.key.</p>
+
+<p><strong>- /path/to/DSC_dir:</strong> Path to the directory containing the DSC files (DSC.pem, DSC.key).</p>
+
+<p><strong>DCC:</strong> The domain name to be used. If omitted, the script will default to DCC.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./upload_dsc.sh /path/to/subdir-up_pem_key  /path/to/DSC_dir [DCC]
+</code></pre></div></div>
+
+<ul>
+  <li>Check DSC is already exist before upload CMS package</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -v https://tng-dev.who.int/trustList/DSC/XC --cert TLS.pem --key TLS.key
+</code></pre></div></div>
+
+<ul>
+  <li>Upload the CMS Package to the Gateway</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -v -X POST -H "Content-Type: application/cms" --cert TLS.pem --key TLS_key.pem --data @cms.b64 https://tng-dev.who.int/signerCertificate
+</code></pre></div></div>
+
+<ul>
+  <li>Download the Trustlist again, and check if your DSC is available.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -v https://tng-dev.who.int/trustList/DSC/XC --cert TLS.pem --key TLS.key
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note: Some versions of curl don’t attach the client certificates automatically. This can be checked via curl –version Ensure that the used version is linked to OpenSSL. Especially under Windows (https://curl.se/windows/):</p>
+
+  <p><strong>Curl verson on Unix/Mac</strong>: We strongly recommend updating curl and nss to newer latest versions for full compatibility with modern cryptographic standards.The outdated version of curl or nss and may not support modern SSL/TLS protocols or elliptic curve cryptography (ECC) cipher suites properly.</p>
+</blockquote>
+
+<p><strong>Working Setup</strong></p>
+<p><img src="https://github.com/user-attachments/assets/b55d083f-dccb-4547-af48-bbb7cb60d681" alt="Working Setup" style="width:60%" class="figure-img img-responsive img-rounded center-block"/></p>
+<div style="clear:both;"></div>
+
+<p><strong>Non-working setup</strong></p>
+<p><img src="https://github.com/user-attachments/assets/0f149617-d5f8-4f1b-bb65-37a073d4c146" alt="Non-working setup" style="width:60%" class="figure-img img-responsive img-rounded center-block"/></p>
+<div style="clear:both;"></div>
+
+<h3 id="appendix">Appendix</h3>
+
+<h4 id="further-example-configuration-files">Further example configuration files</h4>
+<p>The following configuration files have been provided during the alignment on the <a href="https://worldhealthorganization.github.io/smart-trust/concepts_certificate_governance.html">certificate governance</a>. The configuration files contain additional fields that a Trust Network Participant might want to include and use. The config-files are not tested with the OpenSSL commands provided above.</p>
+
+<ul>
+  <li>
+    <p><em>SCA Conf</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  plaintext
+  [ sca_ext ]
+  basicConstraints        = critical,CA:true,pathlen:0
+  keyUsage                = critical,keyCertSign,cRLSign
+  subjectKeyIdentifier    = hash
+  authorityKeyIdentifier  = keyid:always
+  issuerAltName           = dirName:dir_sect
+  subjectAltName          = dirName:dir_sect
+  crlDistributionPoints   = URI:http://crl.publichealth.xx/CRLs/XX-Health.crl
+  2.5.29.16               = ASN1:SEQUENCE:CAprivateKeyUsagePeriod
+
+
+  [ CAprivateKeyUsagePeriod ]
+  notBefore               = IMPLICIT:0,GENERALIZEDTIME:$ENV::PRIV_KEY_START
+  notAfter                = IMPLICIT:1,GENERALIZEDTIME:$ENV::CA_PRIV_KEY_END
+
+  [dir_sect]
+  L=XX
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><em>DSC conf</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  plaintext
+  [ document_signer_all_ext ]
+  keyUsage                = critical,digitalSignature
+  subjectKeyIdentifier    = hash
+  authorityKeyIdentifier  = keyid:always
+  subjectAltName          = dirName:dir_sect
+  issuerAltName           = dirName:dir_sect
+  crlDistributionPoints   = URI:http://crl.npkd.nl/CRLs/NLD-Health.crl
+  extendedKeyUsage        = 1.3.6.1.4.1.1847.2021.1.1,1.3.6.1.4.1.1847.2021.1.2,1.3.6.1.4.1.1847.2021.1.3
+  2.5.29.16               = ASN1:SEQUENCE:DSprivateKeyUsagePeriod
+
+  [ document_signer_test_ext ]
+  keyUsage                = critical,digitalSignature
+  subjectKeyIdentifier    = hash
+  authorityKeyIdentifier  = keyid:always
+  subjectAltName          = dirName:dir_sect
+  issuerAltName           = dirName:dir_sect
+  crlDistributionPoints   = URI:http://crl.npkd.nl/CRLs/NLD-Health.crl
+  extendedKeyUsage        = 1.3.6.1.4.1.1847.2021.1.1
+  2.5.29.16               = ASN1:SEQUENCE:DSprivateKeyUsagePeriod
+
+  [ document_signer_vaccinations_ext ]
+  keyUsage                = critical,digitalSignature
+  subjectKeyIdentifier    = hash
+  authorityKeyIdentifier  = keyid:always
+  subjectAltName          = dirName:dir_sect
+  issuerAltName           = dirName:dir_sect
+  crlDistributionPoints   = URI:http://crl.npkd.nl/CRLs/NLD-Health.crl
+  extendedKeyUsage        = 1.3.6.1.4.1.1847.2021.1.2
+  2.5.29.16               = ASN1:SEQUENCE:DSprivateKeyUsagePeriod
+
+  [ document_signer_recovery_ext ]
+  keyUsage                = critical,digitalSignature
+  subjectKeyIdentifier    = hash
+  authorityKeyIdentifier  = keyid:always
+  subjectAltName          = dirName:dir_sect
+  issuerAltName           = dirName:dir_sect
+  crlDistributionPoints   = URI:http://crl.npkd.nl/CRLs/NLD-Health.crl
+  extendedKeyUsage        = 1.3.6.1.4.1.1847.2021.1.3
+  2.5.29.16               = ASN1:SEQUENCE:DSprivateKeyUsagePeriod
+
+  [ DSprivateKeyUsagePeriod ]
+  notBefore               = IMPLICIT:0,GENERALIZEDTIME:$ENV::PRIV_KEY_START
+  notAfter                = IMPLICIT:1,GENERALIZEDTIME:$ENV::DS_PRIV_KEY_END
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="steps-to-obtain-and-use-a-ca-signed-certificate">Steps to Obtain and Use a CA-Signed Certificate</h4>
+
+<ul>
+  <li>Generate a Certificate Signing Request (CSR)
+To begin, generate a CSR using the following OpenSSL command. This request will include a new private key and a configuration file:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl req -new -nodes -newkey ec:&lt;(openssl ecparam -name prime256v1) -keyout CAprivkey.key -out CAreq.csr -config sca.conf
+</code></pre></div></div>
+
+<p><strong>CAprivkey.key:</strong> This file contains the private key.</p>
+
+<p><strong>CAreq.csr:</strong> This file contains the Certificate Signing Request.</p>
+
+<p><strong>sca.conf:</strong> This is the OpenSSL configuration file used during the CSR generation.</p>
+
+<ul>
+  <li>
+    <p>Submit the CSR to a Public Certificate Authority (CA):
+Submit the generated CAreq.csr file to the public CA of your choice. The CA will use this CSR to issue a certificate. Upon approval, the CA will provide you with:</p>
+  </li>
+  <li>
+    <p>Submit CSR to the Public CA:
+Submit the generated CAreq.csr file to the public CA of your choice. They will use the CSR to issue a certificate. The CA will provide you with the signed certificate and possibly a certificate chain or intermediate certificates.</p>
+  </li>
+  <li>
+    <p>Use the CA-Signed Certificate:
+Once you receive the CA-signed certificate, you will use it instead of generating a new self-signed certificate. Here’s how you can replace the placeholders with the signed certificate:
+cp signed_CA_cert.pem ${subdir}/CAcert.pem 
+cp CAprivkey.key ${subdir}/CAprivkey.key</p>
+  </li>
+</ul>
+
+<h4 id="more-information-about-git-commit-signing-and-tagging-commands">More information about Git commit, signing and tagging commands</h4>
+
+<p><strong>Signing Your Work</strong></p>
+
+<ul>
+  <li>
+    <p>Git is cryptographically secure, but it’s not foolproof. If you’re taking work from others on the internet and want to verify that commits are actually from a trusted source, Git has a few ways to sign and verify work using GPG.</p>
+  </li>
+  <li>
+    <p>First of all, if you want to sign anything you need to get GPG configured and your personal key installed.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ gpg --list-secret-keys --keyid-format=long
+  /Users/hubot/.gnupg/secring.gpg
+  ------------------------------------
+  sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+  uid                          Hubot &lt;hubot@example.com&gt;
+  ssb   4096R/4BB6D45482678BE3 2016-03-10
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you don’t have a key installed, you can generate one with <strong>gpg –gen-key</strong>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ gpg --gen-key
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Once you have a private key to sign with, you can configure Git to use it for signing things by setting the user.signingkey config setting.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git config --global user.signingkey 3AA5C34371567BD2!
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Now Git will use your key by default to sign tags and commits if you want.</p>
+  </li>
+</ul>
+
+<p><strong>Signing Tags</strong></p>
+<ul>
+  <li>
+    <p>If you have a GPG private key set up, you can now use it to sign new tags. All you have to do is use -s instead of -a:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git tag -s v1.5 -m 'my signed 1.5 tag'
+
+  You need a passphrase to unlock the secret key for
+  user: "Ben Straub &lt;ben@straub.cc&gt;"
+  2048-bit RSA key, ID 800430EB, created 2014-05-04
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you run git show on that tag, you can see your GPG signature attached to it:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git show v1.5
+  tag v1.5
+  Tagger: Ben Straub &lt;ben@straub.cc&gt;
+  Date:   Sat May 3 20:29:41 2014 -0700
+
+  my signed 1.5 tag
+  -----BEGIN PGP SIGNATURE-----
+  Version: GnuPG v1
+
+  iQEcBAABAgAGBQJTZbQlAAoJEF0+sviABDDrZbQH/09PfE51KPVPlanr6q1v4/Ut
+  LQxfojUWiLQdg2ESJItkcuweYg+kc3HCyFejeDIBw9dpXt00rY26p05qrpnG+85b
+  hM1/PswpPLuBSr+oCIDj5GMC2r2iEKsfv2fJbNW8iWAXVLoWZRF8B0MfqX/YTMbm
+  ecorc4iXzQu7tupRihslbNkfvfciMnSDeSvzCpWAHl7h8Wj6hhqePmLm9lAYqnKp
+  8S5B/1SSQuEAjRZgI4IexpZoeKGVDptPHxLLS38fozsyi0QyDyzEgJxcJQVMXxVi
+  RUysgqjcpT8+iQM1PblGfHR4XAhuOqN5Fx06PSaFZhqvWFezJ28/CLyX5q+oIVk=
+  =EFTF
+  -----END PGP SIGNATURE-----
+
+  commit ca82a6dff817ec66f44342007202690a93763949
+  Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+  Date:   Mon Mar 17 21:52:11 2008 -0700
+
+      Change version number
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Verifying Tags</strong></p>
+<ul>
+  <li>
+    <p>To verify a signed tag, you use git tag -v <tag-name>. This command uses GPG to verify the signature. You need the signer’s public key in your keyring for this to work properly:</tag-name></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git tag -v v1.4.2.1
+  object 883653babd8ee7ea23e6a5c392bb739348b1eb61
+  type commit
+  tag v1.4.2.1
+  tagger Junio C Hamano &lt;junkio@cox.net&gt; 1158138501 -0700
+
+  GIT 1.4.2.1
+
+  Minor fixes since 1.4.2, including git-mv and git-http with alternates.
+  gpg: Signature made Wed Sep 13 02:08:25 2006 PDT using DSA key ID F3119B9A
+  gpg: Good signature from "Junio C Hamano &lt;junkio@cox.net&gt;"
+  gpg:                 aka "[jpeg image of size 1513]"
+  Primary key fingerprint: 3565 2A26 2040 E066 C9A7  4A7D C0C6 D9A4 F311 9B9A
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you don’t have the signer’s public key, you get something like this instead:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gpg: Signature made Wed Sep 13 02:08:25 2006 PDT using DSA key ID F3119B9A
+  gpg: Can't check signature: public key not found
+  error: could not verify the tag 'v1.4.2.1'
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Signing Commits</strong></p>
+<ul>
+  <li>
+    <p>In more recent versions of Git (v1.7.9 and above), you can now also sign individual commits. If you’re interested in signing commits directly instead of just the tags, all you need to do is add a -S to your git commit command.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git commit -a -S -m 'Signed commit'
+
+  You need a passphrase to unlock the secret key for
+  user: "Scott Chacon (Git signing key) &lt;schacon@gmail.com&gt;"
+  2048-bit RSA key, ID 0A46826A, created 2014-06-04
+
+  [master 5c3386c] Signed commit
+   4 files changed, 4 insertions(+), 24 deletions(-)
+   rewrite Rakefile (100%)
+   create mode 100644 lib/git.rb
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>To see and verify these signatures, there is also a –show-signature option to git log.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git log --show-signature -1
+  commit 5c3386cf54bba0a33a32da706aa52bc0155503c2
+  gpg: Signature made Wed Jun  4 19:49:17 2014 PDT using RSA key ID 0A46826A
+  gpg: Good signature from "Scott Chacon (Git signing key) &lt;schacon@gmail.com&gt;"
+  Author: Scott Chacon &lt;schacon@gmail.com&gt;
+  Date:   Wed Jun 4 19:49:17 2014 -0700
+
+      Signed commit
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Additionally, you can configure git log to check any signatures it finds and list them in its output with the %G? format.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git log --pretty="format:%h %G? %aN  %s"
+
+  5c3386c G Scott Chacon  Signed commit
+  ca82a6d N Scott Chacon  Change the version number
+  085bb3b N Scott Chacon  Remove unnecessary test code
+  a11bef0 N Scott Chacon  Initial commit
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Here we can see that only the latest commit is signed and valid and the previous commits are not.</p>
+  </li>
+  <li>
+    <p>In Git 1.8.3 and later, git merge and git pull can be told to inspect and reject when merging a commit that does not carry a trusted GPG signature with the –verify-signatures command.</p>
+  </li>
+  <li>
+    <p>If you use this option when merging a branch and it contains commits that are not signed and valid, the merge will not work.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git merge --verify-signatures non-verify
+  fatal: Commit ab06180 does not have a GPG signature.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If the merge contains only valid signed commits, the merge command will show you all the signatures it has checked and then move forward with the merge.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git merge --verify-signatures signed-branch
+  Commit 13ad65e has a good GPG signature by Scott Chacon (Git signing key) &lt;schacon@gmail.com&gt;
+  Updating 5c3386c..13ad65e
+  Fast-forward
+   README | 2 ++
+   1 file changed, 2 insertions(+)
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>You can also use the -S option with the git merge command to sign the resulting merge commit itself. The following example both verifies that every commit in the branch to be merged is signed and furthermore signs the resulting merge commit.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git merge --verify-signatures -S  signed-branch
+  Commit 13ad65e has a good GPG signature by Scott Chacon (Git signing key) &lt;schacon@gmail.com&gt;
+
+  You need a passphrase to unlock the secret key for
+  user: "Scott Chacon (Git signing key) &lt;schacon@gmail.com&gt;"
+  2048-bit RSA key, ID 0A46826A, created 2014-06-04
+
+  Merge made by the 'recursive' strategy.
+   README | 2 ++
+   1 file changed, 2 insertions(+)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.trust#1.1.4 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 4, 2024 12:35+0000">2024-11-04</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"><a name="l2014">​</a>
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-empty/projects/1" target="_blank">Issues</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/trust/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
