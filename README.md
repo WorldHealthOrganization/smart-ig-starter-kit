@@ -28,4 +28,3 @@ Issues and change requests are managed here:
 Issues:  __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues__  
     or the Kanban board: __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/31__
 
-
