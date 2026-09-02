@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Logical Models - DRAFT SMART Guidelines L3 SOP v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6.3.5"}
+    h3,h4,h5,h6{--heading-prefix:"6.3.5"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_schedulinglogic.html">Scheduling Logic</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DRAFT SMART Guidelines L3 SOP</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - CI Build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="authoring_overview.html"><b>Authoring</b></a></li><li><a href="authoring_conventions.html"><b>Authoring Conventions</b></a></li><li><b>Logical Models</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">DRAFT SMART Guidelines L3 SOP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.2.1 built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit">https://github.com/WorldHealthOrganization/smart-ig-starter-kit</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Logical Models</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inputs" id="markdown-toc-inputs"><strong>Inputs</strong></a></li>
+  <li><a href="#outputs" id="markdown-toc-outputs"><strong>Outputs</strong></a></li>
+  <li><a href="#activities" id="markdown-toc-activities"><strong>Activities:</strong></a></li>
+  <li><a href="#criteria--definition-of-done" id="markdown-toc-criteria--definition-of-done"><strong>Criteria / Definition of Done:</strong></a></li>
+  <li><a href="#change-tracking" id="markdown-toc-change-tracking"><strong>Change tracking</strong></a></li>
+  <li><a href="#tooling" id="markdown-toc-tooling"><strong>Tooling</strong></a></li>
+  <li><a href="#informative-examples" id="markdown-toc-informative-examples"><strong>Informative examples</strong></a></li>
+  <li><a href="#known-issues-and-dependencies" id="markdown-toc-known-issues-and-dependencies"><strong>Known issues and dependencies</strong></a></li>
+</ul>
+
+</div>
+
+<p>Logical models represent the data structures in the Digital Dictionary. This is a computable representation that is independent of any physical limitation like which FHIR Release or profile version is used. 
+The use of FHIR logical models allows metadata to be structured, computable, and interoperable, for the purposes of governance and checking.</p>
+
+<p>Creating a FHIR logical model entails capturing the elements in the Data Dictionary, with their description, terminology and cardinality constraints.</p>
+
+<p>Logical models relate to other models in 3 aspects:</p>
+<ul>
+  <li>Logical models can extend or constrain “parent” models - for example a Patient extending a Person</li>
+  <li>Logical models can “contain” other models as a data type - for example patient and practitioner containing “name” data structure</li>
+  <li>Logical models can refer to other models - for example a request referencing a product</li>
+</ul>
+
+<p>Each Logical Model is defined by the following data:</p>
+<figure style="width:30em">
+    <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 436 515" zoomAndPan="magnify" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs></defs><g>  <!-- class LM --><g id="elem_LM"><rect codeLine="8" rx="4.5" ry="4.5" width="156" x="7" y="201" style="stroke:#505090;stroke-width:0.5;" id="LM" fill="#C2F0FF" height="307.0469"></rect><rect rx="4.5" ry="4.5" width="156" x="7" y="201" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="156" x="7" y="222.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect codeLine="8" rx="4.5" ry="4.5" width="156" x="7" y="201" style="stroke:#505090;stroke-width:0.5;" id="LM" fill="none" height="307.0469"></rect><text font-weight="bold" lengthAdjust="spacing" x="31.5" font-size="14" textLength="107" y="218.9951" font-family="sans-serif" fill="#000000">Logical Model</text><line y1="227.2969" x1="8" y2="227.2969" style="stroke:#505090;stroke-width:0.5;" x2="162"></line><text lengthAdjust="spacing" x="29" font-size="14" textLength="87" y="250.292" font-family="sans-serif" fill="#000000">identifier 1..*</text><text lengthAdjust="spacing" x="29" font-size="14" textLength="73" y="266.5889" font-family="sans-serif" fill="#000000">status 1..1</text><text lengthAdjust="spacing" x="29" font-size="14" textLength="69" y="282.8857" font-family="sans-serif" fill="#000000">name 1..1</text><text lengthAdjust="spacing" x="29" font-size="14" textLength="85" y="299.1826" font-family="sans-serif" fill="#000000">element 1..*</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="66" y="315.4795" font-family="sans-serif" fill="#000000">short 1..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="93" y="331.7764" font-family="sans-serif" fill="#000000">definition 1..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="60" y="348.0732" font-family="sans-serif" fill="#000000">type 1..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="81" y="364.3701" font-family="sans-serif" fill="#000000">binding 0..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="96" y="380.667" font-family="sans-serif" fill="#000000">comment 0..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="99" y="396.9639" font-family="sans-serif" fill="#000000">constraint 0..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="65" y="413.2607" font-family="sans-serif" fill="#000000">code 1..1</text><text lengthAdjust="spacing" x="37" font-size="14" textLength="82" y="429.5576" font-family="sans-serif" fill="#000000">code[other]</text><text lengthAdjust="spacing" x="45" font-size="14" textLength="80" y="445.8545" font-family="sans-serif" fill="#000000">system 1..1</text><text lengthAdjust="spacing" x="45" font-size="14" textLength="65" y="462.1514" font-family="sans-serif" fill="#000000">code 1..1</text><text lengthAdjust="spacing" x="45" font-size="14" textLength="104" y="478.4482" font-family="sans-serif" fill="#000000">comments 0..1</text><text lengthAdjust="spacing" x="45" font-size="14" textLength="110" y="494.7451" font-family="sans-serif" fill="#000000">relationship 0..1</text><rect width="2" x="22" y="244.4453" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="245.4453" x1="15" y2="245.4453" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><line y1="237.2969" x1="15" y2="245.4453" style="stroke:#000000;stroke-width:1.0;" x2="15"></line><rect width="2" x="22" y="260.7422" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="261.7422" x1="15" y2="261.7422" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><line y1="245.4453" x1="15" y2="261.7422" style="stroke:#000000;stroke-width:1.0;" x2="15"></line><rect width="2" x="22" y="277.0391" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="278.0391" x1="15" y2="278.0391" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><line y1="261.7422" x1="15" y2="278.0391" style="stroke:#000000;stroke-width:1.0;" x2="15"></line><rect width="2" x="22" y="293.3359" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="294.3359" x1="15" y2="294.3359" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><line y1="278.0391" x1="15" y2="294.3359" style="stroke:#000000;stroke-width:1.0;" x2="15"></line><rect width="2" x="30" y="309.6328" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="310.6328" x1="23" y2="310.6328" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="294.3359" x1="23" y2="310.6328" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="325.9297" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="326.9297" x1="23" y2="326.9297" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="310.6328" x1="23" y2="326.9297" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="342.2266" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="343.2266" x1="23" y2="343.2266" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="326.9297" x1="23" y2="343.2266" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="358.5234" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="359.5234" x1="23" y2="359.5234" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="343.2266" x1="23" y2="359.5234" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="374.8203" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="375.8203" x1="23" y2="375.8203" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="359.5234" x1="23" y2="375.8203" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="391.1172" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="392.1172" x1="23" y2="392.1172" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="375.8203" x1="23" y2="392.1172" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="407.4141" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="408.4141" x1="23" y2="408.4141" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="392.1172" x1="23" y2="408.4141" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="30" y="423.7109" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="424.7109" x1="23" y2="424.7109" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="408.4141" x1="23" y2="424.7109" style="stroke:#000000;stroke-width:1.0;" x2="23"></line><rect width="2" x="38" y="440.0078" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="441.0078" x1="31" y2="441.0078" style="stroke:#000000;stroke-width:1.0;" x2="39"></line><line y1="424.7109" x1="31" y2="441.0078" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><rect width="2" x="38" y="456.3047" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="457.3047" x1="31" y2="457.3047" style="stroke:#000000;stroke-width:1.0;" x2="39"></line><line y1="441.0078" x1="31" y2="457.3047" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><rect width="2" x="38" y="472.6016" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="473.6016" x1="31" y2="473.6016" style="stroke:#000000;stroke-width:1.0;" x2="39"></line><line y1="457.3047" x1="31" y2="473.6016" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><rect width="2" x="38" y="488.8984" style="stroke:#000000;stroke-width:1.0;" fill="#C2F0FF" height="2"></rect><line y1="489.8984" x1="31" y2="489.8984" style="stroke:#000000;stroke-width:1.0;" x2="39"></line><line y1="473.6016" x1="31" y2="489.8984" style="stroke:#000000;stroke-width:1.0;" x2="31"></line><line y1="500.0469" x1="8" y2="500.0469" style="stroke:#505090;stroke-width:1.0;" x2="162"></line></g>  <!-- class LMP --><g id="elem_LMP"><rect codeLine="28" rx="4.5" ry="4.5" width="133" x="18.5" y="7" style="stroke:#505090;stroke-width:0.5;" id="LMP" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="133" x="18.5" y="7" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="133" x="18.5" y="28.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect codeLine="28" rx="4.5" ry="4.5" width="133" x="18.5" y="7" style="stroke:#505090;stroke-width:0.5;" id="LMP" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="31.5" font-size="14" textLength="107" y="24.9951" font-family="sans-serif" fill="#000000">Logical Model</text><line y1="33.2969" x1="19.5" y2="33.2969" style="stroke:#505090;stroke-width:0.5;" x2="150.5"></line><line y1="41.2969" x1="19.5" y2="41.2969" style="stroke:#505090;stroke-width:0.5;" x2="150.5"></line></g>  <!-- class LMD --><g id="elem_LMD"><rect codeLine="31" rx="4.5" ry="4.5" width="133" x="295.5" y="333.5" style="stroke:#505090;stroke-width:0.5;" id="LMD" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="133" x="295.5" y="333.5" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="133" x="295.5" y="355.2969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect codeLine="31" rx="4.5" ry="4.5" width="133" x="295.5" y="333.5" style="stroke:#505090;stroke-width:0.5;" id="LMD" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="308.5" font-size="14" textLength="107" y="351.4951" font-family="sans-serif" fill="#000000">Logical Model</text><line y1="359.7969" x1="296.5" y2="359.7969" style="stroke:#505090;stroke-width:0.5;" x2="427.5"></line><line y1="367.7969" x1="296.5" y2="367.7969" style="stroke:#505090;stroke-width:0.5;" x2="427.5"></line></g>  <!-- class LMR --><g id="elem_LMR"><rect codeLine="35" rx="4.5" ry="4.5" width="153" x="276.5" y="7" style="stroke:#505090;stroke-width:0.5;" id="LMR" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="153" x="276.5" y="7" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="153" x="276.5" y="28.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect codeLine="35" rx="4.5" ry="4.5" width="153" x="276.5" y="7" style="stroke:#505090;stroke-width:0.5;" id="LMR" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="299.5" font-size="14" textLength="107" y="24.9951" font-family="sans-serif" fill="#000000">Logical Model</text><line y1="33.2969" x1="277.5" y2="33.2969" style="stroke:#505090;stroke-width:0.5;" x2="428.5"></line><line y1="41.2969" x1="277.5" y2="41.2969" style="stroke:#505090;stroke-width:0.5;" x2="428.5"></line></g>  <!-- reverse link LMP to LM --><g id="link_LMP_LM"><path codeLine="38" d="M85,69.63 C85,103.02 85,152.55 85,200.92 " style="stroke:#107050;stroke-width:1.0;" id="LMP-backto-LM" fill="none"></path><polygon style="stroke:#107050;stroke-width:1.0;" fill="none" points="78,69.3,85,49.3,92,69.3,78,69.3"></polygon><text lengthAdjust="spacing" x="129.5" font-size="13" textLength="4" y="107.0669" font-family="sans-serif" fill="#000000">&nbsp;</text><text lengthAdjust="spacing" x="129.5" font-size="13" textLength="4" y="122.1997" font-family="sans-serif" fill="#000000">&nbsp;</text><text lengthAdjust="spacing" x="98" font-size="13" textLength="71" y="137.3325" font-family="sans-serif" fill="#000000">Specializes</text><text lengthAdjust="spacing" x="129.5" font-size="13" textLength="4" y="152.4653" font-family="sans-serif" fill="#000000">&nbsp;</text></g>  <!-- link LM to LMD --><g id="link_LM_LMD"><path codeLine="39" d="M163.27,354.5 C204.86,354.5 255.46,354.5 295.19,354.5 " style="stroke:#107050;stroke-width:1.0;" id="LM-LMD" fill="none"></path><text lengthAdjust="spacing" x="209.25" font-size="13" textLength="32" y="347.5669" font-family="sans-serif" fill="#000000">Uses</text></g>  <!-- link LMR to LM --><g id="link_LMR_LM"><path codeLine="42" d="M336.24,49.3 C302.32,90.37 223.65,185.62 163.3,258.69 " style="stroke:#107050;stroke-width:1.0;" id="LMR-LM" fill="none"></path><text lengthAdjust="spacing" x="309" font-size="13" textLength="24" y="129.5669" font-family="sans-serif" fill="#000000">Ref.</text></g>  <!-- link LMP to LMR -->  <!-- link LMR to LMD --></g></svg>
+</figure>
+
+<h3 id="inputs"><strong>Inputs</strong></h3>
+
+<ul>
+  <li>DAK data elements Spreadsheet</li>
+</ul>
+
+<h3 id="outputs"><strong>Outputs</strong></h3>
+
+<ul>
+  <li>Logical Models in <code class="language-plaintext highlighter-rouge">input/models</code> or <code class="language-plaintext highlighter-rouge">fsh/models</code></li>
+</ul>
+
+<h3 id="activities"><strong>Activities:</strong></h3>
+
+<p>This is the overview of the activities and related artifacts used:</p>
+
+<p><img src="./l3_process_logicalmodel.png" style="width:50%"/>
+<br clear="all"/></p>
+
+<h4 id="looking-up-an-reusing-existing-models">Looking up an reusing existing models</h4>
+
+<p>Some of the data entries are commons.</p>
+
+<p>If an existing model is found, it is possible to</p>
+<ul>
+  <li>reuse the model as is;</li>
+  <li>create a specialization of the model - this includes adding elements, removing elements, changing elements;</li>
+</ul>
+
+<p>For example, “Client Registration” is a dataset that is similar across different vaccination processes. L3 authors may create a “Client Registration” logical data model with the common elements and create specific models for each antigen with any specific data elements.</p>
+
+<p>Inheritance is preferred for consistency, but the advantage should be checked against the dependency added - if the model that is being authored is expected to increasingly differ from the “parent” model, it may be best to consider a specialization or a new model.</p>
+
+<p>Another possibility is the use of common structures - for example person identification - with given and family names, identifier(s), etc. These can be used as types or subsets of a logical model.</p>
+
+<p>L3 authors should take into consideration that reused models are version-sensitive and any changes should take this versioning into consideration.</p>
+
+<p>When reusing an existing model, L3 authors are recommended to produce a UML-like diagram or any other illustration that depicts this reuse.</p>
+
+<h4 id="mapping-dak-to-a-logical-model">Mapping DAK to a logical model</h4>
+<p>The Data models in the L3 are associated with a data structure for exchange or for a given process. For example “capture vaccination data”. L2 authors are expected to follow that rule: <strong>one tab is assumed to be one data structure, i.e. a logical data model</strong>.</p>
+
+<p>This is the “atomic” unit of exchange or use in the L3. Some factors may influence the split of a logical model into several functional blocks, besides the specialization, reference and usage described above. For example:</p>
+<ul>
+  <li>Complex models may be split. For example a full “Lab Report” may consist of “Lab Report” + “Specimen” models.</li>
+  <li>Common sets of data elements may be captured in a separate reusable logical model.</li>
+</ul>
+
+<p>The logical model name has the name of the tab.
+Logical model should conform to the <a href="http://build.fhir.org/ig/WorldHealthOrganization/smart-base/StructureDefinition-SGLogicalModel.html">SGLogical</a> model profile.</p>
+
+<p>Creating the logical model from a DAK consists in creating the data structure, linking the elements to the common concept identifiers or, if that is not possible, to the internal unique concept identifiers (e.g. <code class="language-plaintext highlighter-rouge">DE1</code>, etc.). Additionally, assigning valuesets (creating them when needed), and capturing any constraints that are present in the L2.</p>
+
+<p>To start creating the logical model, an intake validation is useful, although it can be done simultaneously done with the editing of the logical model:</p>
+<ol>
+  <li>Verify that each data element needed exists in the common Glossary
+    <ol>
+      <li>If not, create and provisionally use a draft concept, and
+request that concept to be added to the common glossary.</li>
+      <li>If it exists but the existing definition is too strict, request
+a change and decide whether to provisionally use the concept,
+or provisionally create a new one and request it to be added
+to the common glossary.</li>
+    </ol>
+  </li>
+  <li>The data labels should be unique within the same data model.</li>
+</ol>
+
+<p>For each line in the tab, there shall be one data element in the logical model (represented here by <code class="language-plaintext highlighter-rouge">differential.element[*]</code>):</p>
+
+<ul>
+  <li>Data Element ID is the WHO unique identifier for a concept and therefore is added into <code class="language-plaintext highlighter-rouge">element[*].code[WHOCommon]</code>.</li>
+  <li>
+    <p>Every element SHALL have a WHO identifier e.g. TB.A.DE.1.</p>
+  </li>
+  <li>For answer values, the Data Element ID may be reusable in different questions and possibly in different models.
+The hierarchical naming will depend on several factors and is best addressed by the terminology expert or team. For example:
+    <ul>
+      <li>DE.1 Do you have measles?</li>
+      <li>Yes → C.1 Yes</li>
+      <li>No → C.2 No</li>
+      <li>Unknown → C.3 Unknown</li>
+    </ul>
+  </li>
+  <li>Data Element Label is captured in 2 places:
+    <ul>
+      <li>Element short description (<code class="language-plaintext highlighter-rouge">differential.element[*].short</code>): same as element label</li>
+      <li>Element id = same as label but no spaces and camelCase - e.g. “measlesVaccine”
+        <blockquote>
+          <p>this makes the logical model tree easier to read, with meaningful names in the tree, while the mapping to the “internal” element ids like <code class="language-plaintext highlighter-rouge">DE1.3</code> are persisted as a mapping.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Description and Definition: <code class="language-plaintext highlighter-rouge">differential.element[*].definition</code></p>
+  </li>
+  <li>
+    <p>Multiple Choice Type (if applicable): This means the element may have several possible values (as in a multiple-choice question). This corresponds to a <code class="language-plaintext highlighter-rouge">*</code> in cardinality.</p>
+  </li>
+  <li>
+    <p>Data Type is captured in <code class="language-plaintext highlighter-rouge">differential.element[*].type</code></p>
+  </li>
+  <li>
+    <p>Input Options: is captured in the bindings</p>
+  </li>
+  <li>
+    <p>Input Option Groupings: this is a grouper for the rows that have a common group.</p>
+  </li>
+  <li>
+    <p>Quantity Sub-type (integer, decimal, duration)</p>
+  </li>
+  <li>
+    <p>Calculation</p>
+  </li>
+  <li>Validation Condition is captured in
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">differential.element[*].comment</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Optionally, as Invariants / constraints</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Required is captured in cardinality</p>
+  </li>
+  <li>
+    <p>Explain Conditionality</p>
+  </li>
+  <li>Annotations
+    <ul>
+      <li>Example:</li>
+      <li>“Measles Vaccine” → short= “measlesVaccine”</li>
+      <li><code class="language-plaintext highlighter-rouge">code[WHO]</code> = <code class="language-plaintext highlighter-rouge">IMMZ.Z1.DE9</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>For bindings, check whether the value set already exists in an upstream package.</p>
+
+<ul>
+  <li>If not, create a new value set.
+    <ul>
+      <li>New value sets are registered and follow the valueset governance process that is adjacent to authoring of L3 content.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="binding-elements-to-value-sets">Binding elements to value sets</h4>
+<p>When adding valuesets, the binding strength should be considered:</p>
+<ul>
+  <li>If the valueset is expected to be used or adapted in downstream adaptations, the binding should be more permissive (i.e. either example or preferred).
+See <a href="l3_valuesets.html">valuesets</a> for procedures on obtaining or creating valuesets.</li>
+</ul>
+
+<h4 id="mapping-to-other-semantic-references">Mapping to other semantic references</h4>
+<p>Semantic mapping is done with ConceptMaps, establishing the relationship between the DAK elements and reference terminologies, central dictionary, or other DAKS.</p>
+
+<h3 id="criteria--definition-of-done"><strong>Criteria / Definition of Done:</strong></h3>
+
+<ul>
+  <li>One logical model per json file / One profile per fsh file, as per naming convention
+    <ul>
+      <li>The constraints or invariants applicable to a logical model may be contained in the same FSH file.</li>
+      <li>elements that are repeatable across different models (e.g. Patient Demographics) shall be in a separate FSH file.</li>
+    </ul>
+  </li>
+  <li>All data elements in the DAK shall be in one logical model</li>
+  <li>All data elements defined in DAK as calculated elements shall be present in a logical model</li>
+  <li>All elements in the DAK have one and only one WHO SMART Code.
+    <ul>
+      <li>The WHO code for all elements should be approved; exceptions should be resolved before final publication</li>
+    </ul>
+  </li>
+  <li>Each data element in the logical model is mapped to the existing semantic references - see <a href="#">semantic references</a>.
+    <ul>
+      <li>The L3 author is responsible for the documentation and approval of the models, its bindings, invariants and mappings</li>
+    </ul>
+  </li>
+  <li><a name="l1152">​</a>Each StructureDefinition resource SHALL conform to <a href="/StructureDefinition-crmi-shareablestructuredefinition.html">CRMIShareableStructureDefinition</a></li>
+  <li><a name="l1157">​</a>Each active published StructureDefinition SHALL conform to <a href="/StructureDefinition-crmi-publishablestructuredefinition.html">CRMIPublishableStructureDefinition</a></li>
+</ul>
+
+<h3 id="change-tracking"><strong>Change tracking</strong></h3>
+
+<p>As with all FHIR Conformance resources, change management is critical. Do not set the version element of LogicalModels defined in the SMART Guideline, the version element will be set by the publication process. See the <a href="versioning.html">versioning</a> topic for more information on change management.</p>
+
+<h3 id="tooling"><strong>Tooling</strong></h3>
+
+<table class="table-bordered full-width">
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Usage</th>
+      <th>Doc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sushi</td>
+      <td>Create LMs with fsh syntax</td>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html">HL7 Spec</a><br/><a href="https://fshschool.org">Sushi Documentation</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="informative-examples"><strong>Informative examples</strong></h3>
+<p><a href="https://worldhealthorganization.github.io/smart-immunizations-measles/artifacts.html#structures-logical-models">SMART Guidelines - Immunizations (Measles): Logical Models</a></p>
+
+<h3 id="known-issues-and-dependencies"><strong>Known issues and dependencies</strong></h3>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Jun 13, 2024 09:34+0000">2024-06-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/1" target="_blank">Issues</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

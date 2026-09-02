@@ -1,0 +1,12 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 1, info = 0
+IG Publisher Version: 1.8.16
+Generated Wed Mar 05 15:28:44 UTC 2025. FHIR version 5.0.0 for smart.who.int.ig-starter-kit#2.1.0 (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 0 / 1 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==

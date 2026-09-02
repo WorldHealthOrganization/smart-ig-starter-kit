@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Trust : Terminology Server Report</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Terminology Server Report for Trust</h1>
+ <p>Generated Mon Nov 04 12:36:38 UTC 2024, FHIR version 4.0.1 for smart.who.int.trust#1.1.4 (canonical = <a href="http://smart.who.int/trust">http://smart.who.int/trust</a> (<a href="http://smart.who.int/trust/history.html">history</a>))</p>
+<p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
+<h2>Terminology Parameters</h2>
+<ul>
+  <li>
+    <b>x-system-cache-id</b>
+:     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
+  </li>
+</ul>
+<h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR|1.1.4</td>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION|1.1.4</td>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4]</td>
+  </tr>
+</table>
+<h2>Primary Server: http://tx.fhir.org/r4</h2>
+<a href="http://tx.fhir.org/r4"></a>
+<p>Use Count: 6. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.ACTOR</td>
+    <td>2</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://smart.who.int/ips-pilgrimage/CodeSystem/WHO.TRUST.TRANSACTION</td>
+    <td>2</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166</td>
+    <td>0</td>
+    <td>2</td>
+    <td>
+      <a href="http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166:-2</td>
+    <td>0</td>
+    <td>2</td>
+    <td>
+      <a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-iso3166-2.html">ISO 3166 Part 2 Country Subdivision Codes</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

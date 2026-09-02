@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 41, errors = 0, warn = 0, info = 1-->
+<head>
+  <title>IgStarterKit : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for IgStarterKit</h1>
+ <p>Generated Fri Jun 14 12:11:25 UTC 2024, FHIR version 5.0.0 for smart.who.int.ig-starter-kit#0.2.1 (canonical = <a href="http://smart.who.int/ig-starter-kit">http://smart.who.int/ig-starter-kit</a> (<a href="http://smart.who.int/ig-starter-kit/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.11</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = smart.who.int.ig-starter-kit, Canonical = http://smart.who.int/ig-starter-kit</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Publication Request:</td><td><ul><li>Error fetching package-list from http://smart.who.int/ig-starter-kit: Not Found <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
+</ul>
+</td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">3 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> smart.who.int.ig-starter-kit</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.2.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://smart.who.int/ig-starter-kit</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r5</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.5.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/5.5.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r5</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.1.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: who.template.root#current -&gt; fhir.base.template#current. Tools: 0.1.0</para></div></td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r5.core#5.0.0:     <a href="http://hl7.org/fhir/R5/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (15 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://smart.who.int/ig-starter-kit (Problem #1 with package-list.json at http://smart.who.int/ig-starter-kit: Not Found)</td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 0, info = 1, broken links = 41</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>41</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ig_configuration.html#l623">output&#8203;/ig_configuration&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 344, column 55</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareableimplementationguide.html' for &quot;CRMIShareableImplementationGuide&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ig_configuration.html#l628">output&#8203;/ig_configuration&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 345, column 73</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishableimplementationguide.html' for &quot;CRMIPublishableImplementationGuide&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ig_configuration.html#l633">output&#8203;/ig_configuration&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 346, column 55</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cpg-computableguideline.html' for &quot;CPGComputableGuideline&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_codesystems.html#l795">output&#8203;/l3_codesystems&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 387, column 46</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablecodesystem.html' for &quot;CRMIShareableCodeSystem&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_codesystems.html#l800">output&#8203;/l3_codesystems&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 388, column 64</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablecodesystem.html' for &quot;CRMIPublishableCodeSystem&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_conceptmaps.html#l658">output&#8203;/l3_conceptmaps&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 362, column 37</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareableconceptmap.html' for &quot;CRMIShareableConceptMap&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_conceptmaps.html#l663">output&#8203;/l3_conceptmaps&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 363, column 55</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishableconceptmap.html' for &quot;CRMIPublishableConceptMap&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_decisiontables.html#l892">output&#8203;/l3_decisiontables&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 596, column 41</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareableplandefinition.html' for &quot;CRMIShareablePlanDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_decisiontables.html#l897">output&#8203;/l3_decisiontables&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 597, column 59</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishableplandefinition.html' for &quot;CRMIPublishablePlanDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_decisiontables.html#l902">output&#8203;/l3_decisiontables&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 598, column 70</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cpg-recommendationdefinition.html' for &quot;CPGRecommendationDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_decisiontables.html#l907">output&#8203;/l3_decisiontables&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 599, column 65</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cpg-strategydefinition.html' for &quot;CPGStrategyDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_forms.html#l1040">output&#8203;/l3_forms&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 414, column 40</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablequestionnaire.html' for &quot;CRMIShareableQuestionnaire&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_forms.html#l1045">output&#8203;/l3_forms&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 415, column 58</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablequestionnaire.html' for &quot;CRMIPublishableQuestionnaire&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_forms.html#l1050">output&#8203;/l3_forms&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 416, column 40</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cpg-computablequestionnaire.html' for &quot;CPGComputableQuestionnaire&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_forms.html#l1055">output&#8203;/l3_forms&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 417, column 40</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-sdc-questionnaire.html' for &quot;SDCBaseQuestionnaire&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_forms.html#l1060">output&#8203;/l3_forms&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 418, column 47</a></b></td><td><b>error</b></td><td><b>The link '/artifacts.html#structures-resource-profiles' for &quot;SDC Questionnaire Profiles&quot; cannot be resolved (valid targets: [segment-header, project-nav, publish-box, bottom, segment-post-footer, fhir-logo, who-logo, family-nav, ig-status, artifacts-summary, top, stripe, segment-footer, segment-navbar, language-selector, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l678">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 372, column 28</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-proportion-measure-cqfm.html' for &quot;CQFMProportionMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l683">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 373, column 24</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-ratio-measure-cqfm.html' for &quot;CQFMRatioMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l688">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 374, column 26</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cohort-measure-cqfm.html' for &quot;CQFMCohortMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l693">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 375, column 37</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cv-measure-cqfm.html' for &quot;CQFMContinuousVariableMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l777">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/p&#8203;/a at Line 415, column 81</a></b></td><td><b>error</b></td><td><b>The link '/measure-conformance.html#conformance-requirement-3-8' for &quot;CQF Guidance&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l863">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/p&#8203;/a at Line 464, column 86</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-effectiveDataRequirements.html' for &quot;EffectiveDataRequirements&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l877">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 470, column 53</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cqf-logicDefinition.html' for &quot;Logic Definition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l918">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 488, column 34</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablemeasure.html' for &quot;CRMIShareableMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_indicators.html#l923">output&#8203;/l3_indicators&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 489, column 52</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-publishablemeasure-cqfm.html' for &quot;CQFMPublishableMeasure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l658">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 362, column 43</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablelibrary.html' for &quot;CRMIShareableLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l803">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 427, column 125</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablelibrary.html' for &quot;CRMIPublishableLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l995">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 512, column 46</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cql-library.html' for &quot;CQLLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l1001">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 513, column 46</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-elm-json-library.html' for &quot;ELMJSONLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l1105">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 563, column 47</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablelibrary.html' for &quot;CRMIShareableLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l1110">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 564, column 55</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablelibrary.html' for &quot;CRMIPublishableLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l1115">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 565, column 74</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cql-library.html' for &quot;CQLLibrary&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_libraries.html#l1120">output&#8203;/l3_libraries&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 566, column 74</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-cql-module.html' for &quot;CQLModule&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_logicalmodels.html#l1165">output&#8203;/l3_logicalmodels&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 535, column 59</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablestructuredefinition.html' for &quot;CRMIShareableStructureDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_logicalmodels.html#l1170">output&#8203;/l3_logicalmodels&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 536, column 67</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablestructuredefinition.html' for &quot;CRMIPublishableStructureDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_profiles.html#l903">output&#8203;/l3_profiles&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 415, column 59</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablestructuredefinition.html' for &quot;CRMIShareableStructureDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_profiles.html#l908">output&#8203;/l3_profiles&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 416, column 67</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablestructuredefinition.html' for &quot;CRMIPublishableStructureDefinition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_valuesets.html#l902">output&#8203;/l3_valuesets&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 447, column 48</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-shareablevalueset.html' for &quot;CRMIShareableValueSet&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_valuesets.html#l907">output&#8203;/l3_valuesets&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 448, column 56</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-publishablevalueset.html' for &quot;CRMIPublishableValueSet&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="l3_valuesets.html#l912">output&#8203;/l3_valuesets&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 449, column 39</a></b></td><td><b>error</b></td><td><b>The link '/StructureDefinition-crmi-computablevalueset.html' for &quot;CRMIComputableValueSet&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="versioning.html#l583">output&#8203;/versioning&#8203;.html&#8203;#&#8203;/html&#8203;/head&#8203;/link&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 336, column 248</a></b></td><td><b>error</b></td><td><b>The link '/artifact-lifecycle.html#artifact-versioning' for &quot;Artifact Versioning&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>This IG doesn't have artifacts, so no dependencies or cross-version analysis are needed</b></p><ul>
+ <li>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)<span></li>
+ <li>Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 <span style="color: maroon">(0 uses)<span></li>
+ <li>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)<span></li>
+</ul>
+<a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="MSG_DEPRECATED"> </a>
+<h2>MSG_DEPRECATED</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json</a></td><td><b>Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0</b></td>
+   </tr>
+</table>
+</body>
+</html>

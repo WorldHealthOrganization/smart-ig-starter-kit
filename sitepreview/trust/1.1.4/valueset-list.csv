@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR,1.1.4,active,,WHO_TRUST_ACTOR,TRUST.ACTOR ValueSet of key usage codes ,"ValueSet of codes for key usage codes",,"Other"
+http://smart.who.int/trust/ValueSet/WHO.TRUST.DOMAIN,1.1.4,active,,WHO_TRUST_DOMAIN,WHO SMART Trust Domains,"Health credential type",,"Internal"
+http://smart.who.int/trust/ValueSet/WHO.TRUST.KEYUSAGE,1.1.4,active,,WHO_TRUST_KEYUSAGE,TRUST.KEYUSAGE ValueSet of key usage codes ,"ValueSet of codes for key usage codes",,"Internal"
+http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION,1.1.4,active,,WHO_TRUST_TRANSACTION,TRUST.TRANSACTION ValueSet of key usage codes ,"ValueSet of codes for key usage codes",,"Other"

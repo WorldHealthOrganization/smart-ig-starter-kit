@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "WHO.TRUST.ACTOR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem WHO.TRUST.ACTOR</b></p><a name=\"WHO.TRUST.ACTOR\"> </a><a name=\"hcWHO.TRUST.ACTOR\"> </a><a name=\"WHO.TRUST.ACTOR-en-US\"> </a><p>This case-insensitive code system <code>http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">credential-holder<a name=\"WHO.TRUST.ACTOR-credential-holder\"> </a></td><td>Holder of a Credential</td><td/></tr><tr><td style=\"white-space:nowrap\">credential-issuer<a name=\"WHO.TRUST.ACTOR-credential-issuer\"> </a></td><td>Issuer of a Credential</td><td/></tr><tr><td style=\"white-space:nowrap\">gdhcn<a name=\"WHO.TRUST.ACTOR-gdhcn\"> </a></td><td>GDHCN</td><td>Global Digital Health Certification Network (GDHCN)</td></tr><tr><td style=\"white-space:nowrap\">TNG<a name=\"WHO.TRUST.ACTOR-TNG\"> </a></td><td>TNG</td><td>Trust Network Gateway</td></tr><tr><td style=\"white-space:nowrap\">TNP<a name=\"WHO.TRUST.ACTOR-TNP\"> </a></td><td>TNP</td><td>Trust Network Participant</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.1.4"] ; # 
+  fhir:name [ fhir:v "WHO_TRUST_ACTOR"] ; # 
+  fhir:title [ fhir:v "WHO.TRUST.ACTOR CodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-04T12:35:20+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem for TRUST.ACTOR that has usage codes for verification keys published to the Trust Network as defined by the [certificate governance](concepts_certificate_governance.html)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "credential-holder" ] ;
+     fhir:display [ fhir:v "Holder of a Credential" ]
+  ] [
+     fhir:code [ fhir:v "credential-issuer" ] ;
+     fhir:display [ fhir:v "Issuer of a Credential" ]
+  ] [
+     fhir:code [ fhir:v "gdhcn" ] ;
+     fhir:display [ fhir:v "GDHCN" ] ;
+     fhir:definition [ fhir:v "Global Digital Health Certification Network (GDHCN)" ]
+  ] [
+     fhir:code [ fhir:v "TNG" ] ;
+     fhir:display [ fhir:v "TNG" ] ;
+     fhir:definition [ fhir:v "Trust Network Gateway" ]
+  ] [
+     fhir:code [ fhir:v "TNP" ] ;
+     fhir:display [ fhir:v "TNP" ] ;
+     fhir:definition [ fhir:v "Trust Network Participant" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

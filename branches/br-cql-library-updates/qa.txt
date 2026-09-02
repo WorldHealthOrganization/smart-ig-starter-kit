@@ -1,0 +1,13 @@
+SMARTStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 1
+IG Publisher Version: 1.6.0
+Generated Sat Mar 09 03:07:14 UTC 2024. FHIR version 5.0.0 for who.fhir.smart-ig-starter-kit#0.2.1 (canonical = http://smart.who.int/ig/smart-ig-starter-kit)
+ Build Errors : 1 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-who.fhir.smart-ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/l3_cql.html#/html/body/div/div/div/div/div/p/a at Line 346, column 224: The link 'l3_scheduling_logic.htlm' for "scheduling logic" cannot be resolved
+== fsh-generated/resources/ImplementationGuide-who.fhir.smart-ig-starter-kit.json ==
+INFORMATION: ImplementationGuide/who.fhir.smart-ig-starter-kit: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

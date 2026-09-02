@@ -1,0 +1,35 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ee5256cf-2771-4c53-bf2f-60a1bc5876d9-6",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/ee5256cf-2771-4c53-bf2f-60a1bc5876d9-6",
+  "name" : "IntersectionWHO_TRUST_KEYUSAGEAndWHO_TRUST_KEYUSAGE",
+  "title" : "Intersection of WHO.TRUST.KEYUSAGE CodeSystem And WHO.TRUST.KEYUSAGE CodeSystem",
+  "status" : "active",
+  "date" : "2024-11-04T12:37:14+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "concept" : [{
+    "code" : "SCA",
+    "display" : "Signer Certificate Authority (SCA)",
+    "definition" : "A certificate which acts a trust anchor in the verification of the certificate chain for the DSCs issued by a Trust Network participant"
+  },
+  {
+    "code" : "DSC",
+    "display" : "Document Signing Certificate (DSC)",
+    "definition" : "A certificate which may be used to verify a digital signature within a Verfifiable Digital Health Certificate"
+  },
+  {
+    "code" : "TLS",
+    "display" : "Transport Layer Security (TLS)",
+    "definition" : "Used for establishing (m)TLS connections with systems, in particular between the Trust Network Gateway and backend systems of a Trust Network Participant"
+  },
+  {
+    "code" : "UP",
+    "display" : "Upload (UP)",
+    "definition" : "Used to verify digital signature of cryptographically signed content uploaded to services within the Global Digital Health Certification Network, in particular the Trust Network Gateway"
+  }]
+}

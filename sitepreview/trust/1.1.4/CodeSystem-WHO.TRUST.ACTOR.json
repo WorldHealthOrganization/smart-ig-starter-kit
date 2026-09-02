@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "WHO.TRUST.ACTOR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem WHO.TRUST.ACTOR</b></p><a name=\"WHO.TRUST.ACTOR\"> </a><a name=\"hcWHO.TRUST.ACTOR\"> </a><a name=\"WHO.TRUST.ACTOR-en-US\"> </a><p>This case-insensitive code system <code>http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">credential-holder<a name=\"WHO.TRUST.ACTOR-credential-holder\"> </a></td><td>Holder of a Credential</td><td/></tr><tr><td style=\"white-space:nowrap\">credential-issuer<a name=\"WHO.TRUST.ACTOR-credential-issuer\"> </a></td><td>Issuer of a Credential</td><td/></tr><tr><td style=\"white-space:nowrap\">gdhcn<a name=\"WHO.TRUST.ACTOR-gdhcn\"> </a></td><td>GDHCN</td><td>Global Digital Health Certification Network (GDHCN)</td></tr><tr><td style=\"white-space:nowrap\">TNG<a name=\"WHO.TRUST.ACTOR-TNG\"> </a></td><td>TNG</td><td>Trust Network Gateway</td></tr><tr><td style=\"white-space:nowrap\">TNP<a name=\"WHO.TRUST.ACTOR-TNP\"> </a></td><td>TNP</td><td>Trust Network Participant</td></tr></table></div>"
+  },
+  "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR",
+  "version" : "1.1.4",
+  "name" : "WHO_TRUST_ACTOR",
+  "title" : "WHO.TRUST.ACTOR CodeSystem",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2024-11-04T12:35:20+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "CodeSystem for TRUST.ACTOR that has usage codes for verification keys published to the Trust Network as defined by the [certificate governance](concepts_certificate_governance.html)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "credential-holder",
+    "display" : "Holder of a Credential"
+  },
+  {
+    "code" : "credential-issuer",
+    "display" : "Issuer of a Credential"
+  },
+  {
+    "code" : "gdhcn",
+    "display" : "GDHCN",
+    "definition" : "Global Digital Health Certification Network (GDHCN)"
+  },
+  {
+    "code" : "TNG",
+    "display" : "TNG",
+    "definition" : "Trust Network Gateway"
+  },
+  {
+    "code" : "TNP",
+    "display" : "TNP",
+    "definition" : "Trust Network Participant"
+  }]
+}

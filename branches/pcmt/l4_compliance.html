@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>L4 Compliance - SMART Guidelines Starter Kit v2.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+      <li>
+        <a href="pcmt.html">Product Catalog and Vaccination IG setup</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L4 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l432">​</a>
+        <a href="l4-compliance.html">L4</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">2.1.0 - ci-build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>L4 Compliance</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 2.1.0 built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/pcmt">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/pcmt</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>L4 Compliance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#on-l4-compliance" id="markdown-toc-on-l4-compliance">On L4 Compliance</a>    <ul>
+      <li><a href="#advantages-and-benefits-of-complying-with-l3-for-l4-software" id="markdown-toc-advantages-and-benefits-of-complying-with-l3-for-l4-software">Advantages and Benefits of Complying with L3 for L4 Software</a>        <ul>
+          <li><a href="#efficiency-and-adaptability" id="markdown-toc-efficiency-and-adaptability">Efficiency and Adaptability</a></li>
+          <li><a href="#guideline-fidelity" id="markdown-toc-guideline-fidelity">Guideline Fidelity</a></li>
+          <li><a href="#interoperability" id="markdown-toc-interoperability">Interoperability</a></li>
+        </ul>
+      </li>
+      <li><a href="#legacy-systems-and-practical-realities" id="markdown-toc-legacy-systems-and-practical-realities">Legacy Systems and Practical Realities</a></li>
+      <li><a href="#whos-compliance-approach" id="markdown-toc-whos-compliance-approach">WHO’s Compliance Approach</a></li>
+      <li><a href="#annex-1-what-is-l1-l2-l3-and-l4" id="markdown-toc-annex-1-what-is-l1-l2-l3-and-l4">Annex 1: What is L1, L2, L3, and L4?</a>        <ul>
+          <li><a href="#what-are-smart-guidelines" id="markdown-toc-what-are-smart-guidelines">What are SMART Guidelines?</a></li>
+          <li><a href="#five-levels-of-smart-guidelines" id="markdown-toc-five-levels-of-smart-guidelines">Five Levels of SMART Guidelines</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="on-l4-compliance">On L4 Compliance</h1>
+
+<p>The current understanding is that in order for a digital health application/system to be considered <strong>L4 compliant</strong>, it should be <strong>L2</strong> and <strong>L3</strong> compliant. L4 compliance is designed to ensure that digital health applications align with WHO guidelines while balancing innovation and practicality. By complying with L2 and L3, L4 applications and software are able to integrate more seamlessly with evolving WHO standards and guidelines.
+WHO adopts a flexible compliance approach, providing standards for L2 and L3 while enabling self-attestation without formal prequalification or certification for software systems to be <strong>L4 compliant</strong>.</p>
+
+<h2 id="advantages-and-benefits-of-complying-with-l3-for-l4-software">Advantages and Benefits of Complying with L3 for L4 Software</h2>
+<h3 id="efficiency-and-adaptability">Efficiency and Adaptability</h3>
+<p>L3-compliant L4 applications can dynamically leverage and reuse existing L3 packages (e.g., ANC, Immunization), reducing development time and effort when WHO updates L1 normative guidelines.</p>
+<h3 id="guideline-fidelity">Guideline Fidelity</h3>
+<p>L3 compliance enhances adherence to WHO guidelines by enabling the use of pre-developed, quality-assured code.</p>
+<h3 id="interoperability">Interoperability</h3>
+<p>L3 compliance supports seamless integration across digital health systems, improving interoperability.</p>
+<h2 id="legacy-systems-and-practical-realities">Legacy Systems and Practical Realities</h2>
+<p>Many digital health systems are built on legacy software using traditional development approaches, where L2 serves as a <strong>Product Requirement Document (PRD)</strong> to guide system development, but such software may be unable to ingest L3 (any reference to FHIR?).</p>
+
+<p>While these systems may lack the flexibility and extensibility of L3-compliant applications, they remain widely deployed and operational in various settings.</p>
+
+<h2 id="whos-compliance-approach">WHO’s Compliance Approach</h2>
+<p>WHO provides <strong>L2 and L3 Standard Operating Procedures (SOPs)</strong> and requires the L4 community to <strong>self-attest</strong> their compliance with L2 and/or L3. However, WHO does not conduct prequalification or certification of software/digital health tools.</p>
+
+<p>L3 compliance can be assessed through <strong>sandbox and test environments</strong>, with structured test plans currently under development.</p>
+
+<hr/>
+
+<h2 id="annex-1-what-is-l1-l2-l3-and-l4">Annex 1: What is L1, L2, L3, and L4?</h2>
+
+<h3 id="what-are-smart-guidelines">What are SMART Guidelines?</h3>
+<p>SMART Guidelines — <strong>Standards-based, Machine-readable, Adaptive, Requirements-based, and Testable</strong> — are a comprehensive set of reusable digital health components. These include <strong>interoperability standards, code libraries, algorithms, and technical and operational specifications</strong>.</p>
+
+<h3 id="five-levels-of-smart-guidelines">Five Levels of SMART Guidelines</h3>
+
+<h4 id="l1-narrative-guidelines"><strong>L1: Narrative Guidelines</strong></h4>
+
+<p><strong>Definition:</strong> WHO guidelines are recommendations intended to inform decisions made by policy-makers, program managers, providers, recipients of health care, and other stakeholders. Recommendations may be for clinical interventions, public health activities, or government policies. These guidelines are rigorously developed through the WHO Guidelines Review Committee.</p>
+
+<p><strong>Key Outputs:</strong> Published narrative guidelines and recommendations.</p>
+
+<p><strong>How it is used by digital health tools:</strong>
+L1 serves as the foundational reference for public health practitioners and policymakers, informing the design and implementation of digital health tools. These digital health tools align with L1 to ensure evidence-based decision-making.</p>
+
+<hr/>
+
+<h4 id="l2-operational-guidelines"><strong>L2: Operational Guidelines</strong></h4>
+
+<p><strong>Definition:</strong> Human-readable, software-neutral documentation that systematically translates clinical and public health guidelines into structured requirements for digital health systems.</p>
+
+<p><strong>Key Output:</strong> <strong>Digital Adaptation Kit (DAK)</strong> – a structured business requirements document containing nine interlinked components described in the L2 SOP.</p>
+
+<p><strong>How it is used by digital health tools:</strong>
+L2 provides structured implementation guidance (<strong>Product Requirement Document</strong>) to software developers and system designers, enabling them to configure digital health applications leveraging WHO recommendations. It acts as a <strong>software-agnostic bridge</strong> between health policies and digital implementation/tools.</p>
+
+<hr/>
+
+<h4 id="l3-machine-readable-recommendations"><strong>L3: Machine-Readable Recommendations</strong></h4>
+
+<p><strong>Definition:</strong> A structured, software-neutral representation of L2 content, including code, classifications, terminologies, and interoperability standards in a computable format.</p>
+
+<p><strong>Key Outputs:</strong> <strong>FHIR Implementation Guide (FHIR IG)</strong> – structured according to WHO’s SMART Guidelines machine-readable recommendations template.</p>
+
+<p><strong>How it is used by digital health tools:</strong>
+L3 provides <strong>computable logic</strong> and structured specifications that digital health systems use to automate processes. It defines system actors, transactions, computable data dictionaries, and indicators, enabling <strong>interoperability</strong> and seamless guideline updates within software applications.</p>
+
+<hr/>
+
+<h4 id="l4-reference-software"><strong>L4: Reference Software</strong></h4>
+
+<p><strong>Definition:</strong> Software applications capable of retrieving and executing algorithms based on interoperable digital components, implementing operational and functional requirements outlined in <strong>L2 (DAK)</strong> and/or <strong>L3 (Machine-readable recommendations)</strong>.</p>
+
+<p><strong>Key Outputs:</strong> Software modules for <strong>clinical decision support, executable algorithms, and digital components</strong>.</p>
+
+<p><strong>How it is used by digital health tools:</strong>
+L4 enables <strong>data collection, processing, and exchange</strong> between different systems. It ensures interoperability with other <strong>SMART Guidelines-compliant</strong> tools, enhancing the ability to integrate and scale digital health solutions effectively.</p>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, May 12, 2025 11:15+0000">2025-05-12</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues" target="_blank">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="changes.html" target="_blank">Change Log</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues&quot;,&quot;label&quot;:&quot;Issues&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new&quot;,&quot;label&quot;:&quot;New Issue&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;label&quot;:&quot;Change Log&quot;,&quot;url&quot;:&quot;changes.html&quot;}}]" data-repo-name="null" data-repo-source="null" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</body></html>
