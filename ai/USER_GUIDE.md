@@ -88,9 +88,9 @@ registries line up without a translation table.
 
 ## Load path 4 — a person
 
-Read [`ai/README.md`](README.md), then the procedures as published in the Implementation Guide —
-which is where they have always been, unchanged. The package adds contracts around that guidance;
-it does not rewrite or replace it.
+Read [`ai/README.md`](README.md), then the procedures as published in the Implementation Guide.
+They are the same words: the IG page renders the skill body through a Liquid include, so there is
+no second copy to fall out of date.
 
 ---
 
@@ -98,18 +98,19 @@ it does not rewrite or replace it.
 
 ### Regenerating
 
-Only `registry.json` is generated. Rebuild it after adding a skill or editing frontmatter:
+Only needed if you edit a `SKILL.md` body or add to the registry.
 
 ```bash
-node ai/tools/build-registry.mjs
-node ai/tools/validate-package.mjs
+node ai/spine/build-registry.mjs
+node ai/spine/build-includes.mjs
+node ai/spine/validate-package.mjs
 ```
 
-It is committed, because the Implementation Guide's CI delegates the whole build to `smart-base`
-and runs no local step. The `AI package` workflow runs `--check` on every push and fails if the
-committed copy no longer matches the tree.
+Generated files (`registry/registry.json`, `input/includes/sop_*.md`) are **committed**, because
+the Implementation Guide's CI delegates the whole build to `smart-base` and runs no local step.
+`validate-package.mjs` fails if any generated file is stale; run it before committing.
 
-Nothing else is generated. The SOP pages are hand-written and stay that way.
+Never hand-edit `input/includes/sop_*.md`. Edit the `SKILL.md` and regenerate.
 
 ### Reading a validation report
 
