@@ -1,0 +1,25 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "programme-manager",
+  "name": "Programme Manager",
+  "type": "person",
+  "description": "Governance oversight, scope, and release authorisation.",
+  "inherits": [
+    "content-reviewer"
+  ],
+  "capabilities": [
+    "git-push"
+  ],
+  "permissions": [
+    "project-governance",
+    "release-authorization"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.ProgrammeManager",
+    "lifecycle": [
+      "plan",
+      "review",
+      "publish"
+    ]
+  }
+}

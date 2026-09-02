@@ -1,0 +1,23 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "l2-dak-expert",
+  "name": "L2 DAK Expert",
+  "type": "person",
+  "description": "Authors and validates the nine DAK components. The L2 half of the transformation: everything upstream of the L2 to L3 gate.",
+  "inherits": [
+    "business-analyst",
+    "clinical-sme"
+  ],
+  "capabilities": [
+    "bpmn-tooling"
+  ],
+  "meta": {
+    "expert": true,
+    "skills": "ai/skills/l2",
+    "lifecycle": [
+      "plan",
+      "author",
+      "validate"
+    ]
+  }
+}

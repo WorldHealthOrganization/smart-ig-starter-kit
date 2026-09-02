@@ -1,0 +1,23 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "business-analyst",
+  "name": "Business Analyst",
+  "type": "person",
+  "description": "Authors the structured L2 DAK components: business processes, data dictionary, decision and scheduling logic.",
+  "inherits": [
+    "author"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "bpmn-authoring",
+    "dmn-authoring",
+    "data-dictionary-authoring"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.BusinessAnalyst",
+    "lifecycle": [
+      "author",
+      "validate"
+    ]
+  }
+}

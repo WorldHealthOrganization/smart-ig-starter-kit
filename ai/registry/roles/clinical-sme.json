@@ -1,0 +1,21 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "clinical-sme",
+  "name": "Clinical Subject Matter Expert",
+  "type": "person",
+  "description": "Validates clinical accuracy of L2 content against the underlying L1 guideline. Sign-off authority on clinical meaning.",
+  "inherits": [
+    "reviewer"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "clinical-validation"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.ClinicalSME",
+    "lifecycle": [
+      "validate",
+      "review"
+    ]
+  }
+}

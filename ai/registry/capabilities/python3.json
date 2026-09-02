@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "python3",
+  "name": "Python 3",
+  "description": "Used by extraction tooling for DAK spreadsheets.",
+  "detection": {
+    "method": "command",
+    "value": "python3 --version"
+  }
+}

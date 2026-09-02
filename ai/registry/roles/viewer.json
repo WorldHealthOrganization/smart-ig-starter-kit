@@ -1,0 +1,9 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "viewer",
+  "name": "Viewer",
+  "type": "person",
+  "description": "Reads published and in-progress content. Submits feedback. Cannot write.",
+  "inherits": [],
+  "capabilities": []
+}

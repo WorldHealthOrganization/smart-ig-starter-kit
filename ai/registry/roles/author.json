@@ -1,0 +1,16 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "author",
+  "name": "Author",
+  "type": "person",
+  "description": "Creates and modifies content, and pushes to a branch.",
+  "inherits": [
+    "reviewer"
+  ],
+  "capabilities": [
+    "git-push"
+  ],
+  "permissions": [
+    "content-authoring"
+  ]
+}

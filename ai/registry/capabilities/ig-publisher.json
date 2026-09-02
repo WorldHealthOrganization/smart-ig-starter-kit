@@ -1,0 +1,13 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "ig-publisher",
+  "name": "HL7 IG Publisher",
+  "description": "Builds the Implementation Guide and runs conformance validation against smart-base profiles. The only place several classes of defect appear.",
+  "detection": {
+    "method": "file-exists",
+    "value": "input-cache/publisher.jar"
+  },
+  "requires": [
+    "java-runtime"
+  ]
+}

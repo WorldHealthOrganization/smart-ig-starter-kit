@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/schemas/common/skill-frontmatter.schema.json",
+  "title": "SKILL.md frontmatter",
+  "description": "The YAML frontmatter block at the top of every SKILL.md. This is the machine view of a skill: who may run it, what it needs, whether it is reproducible, and which contract it satisfies. The procedure itself is NOT here — it stays in the standard operating procedure page named by `sop`, which remains the single source of truth for narrative. The body below the frontmatter carries only what the contract needs and the SOP does not say.",
+  "type": "object",
+  "required": ["id", "name", "description", "expert", "determinism", "roles", "sop", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(l2|l3|commons)/[a-z][a-z0-9-]*$",
+      "description": "Level-qualified skill id, matching its folder path under skills/."
+    },
+    "name": { "type": "string" },
+    "description": {
+      "type": "string",
+      "description": "One sentence. Used for routing without reading the body, so it must say what the skill does, not what area it is about."
+    },
+    "expert": {
+      "enum": ["l2-dak-expert", "l3-ig-expert", "commons-steward"],
+      "description": "The expert bundle this skill belongs to."
+    },
+    "determinism": {
+      "enum": ["deterministic", "judgment"],
+      "description": "deterministic: reproducible, same inputs give the same bytes, runs freely. judgment: something is being decided, so the result is a diff and a reason, never a silent write. A conforming runtime surfaces this before execution, not after."
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Role ids permitted to run this skill. Resolved against registry/roles/."
+    },
+    "requiredCapabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "degradation"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "degradation": {
+            "enum": ["fail", "warn", "skip", "fallback"],
+            "description": "What to do when the capability is absent. fail: stop and say so, never substitute an approximation. warn: log and continue. skip: omit the dependent step. fallback: use fallbackId."
+          },
+          "fallbackId": { "type": "string" }
+        }
+      }
+    },
+    "satisfies": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^req:[a-z0-9-]+(#[a-z0-9-]+)?$" },
+      "description": "Requirement ids or requirement statement keys this skill discharges."
+    },
+    "lifecycleStages": {
+      "type": "array",
+      "items": { "enum": ["plan", "author", "validate", "review", "test", "publish", "feedback", "retire"] }
+    },
+    "routingPatterns": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Regular expressions matching requests this skill handles. Matched case-insensitively by convention, so patterns must not carry an inline flag group: JavaScript rejects the PCRE (?i) prefix outright, and a pattern that fails to compile silently routes nothing."
+    },
+    "inputSchema": { "type": "string" },
+    "outputSchema": { "type": "string" },
+    "sop": {
+      "type": "string",
+      "description": "Repository path to the standard operating procedure page holding this skill's procedure — normally under input/pagecontent. The SOP is the single source of truth for narrative and this skill does not restate it; an agent reads both. Required, because a skill whose procedure is nowhere is not a skill."
+    },
+    "alsoRead": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Further SOP pages this skill depends on but does not own, such as authoring_conventions.md or versioning.md."
+    },
+    "status": {
+      "enum": ["specified", "placeholder"],
+      "description": "Describes the contract, not the narrative. specified: the input and output schemas constrain real structure and a requirement file carries the definition of done. placeholder: the schemas permit anything and no requirement file exists yet, so validating against them is not evidence of a correct artifact. Both kinds point at a real SOP and are usable by a person today."
+    },
+    "tooling": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "specified" } }, "required": ["status"] },
+      "then": {
+        "required": ["satisfies"],
+        "description": "A specified contract must name the requirement its output is checked against, or nothing distinguishes it from a placeholder."
+      }
+    }
+  ]
+}

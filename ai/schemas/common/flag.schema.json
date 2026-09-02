@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json",
+  "title": "Flag",
+  "description": "A question that arose during authoring and is not the author's to close. Flags leave the pipeline rather than blocking it, which is what keeps review effort proportional to the number of decisions rather than the number of artifacts. Do not guess, and do not silently skip: name the question, route it, attach evidence.",
+  "type": "object",
+  "required": ["id", "status", "owner", "summary", "reason", "raisedBy", "raisedAt"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier, unique within the guideline."
+    },
+    "status": {
+      "enum": ["accepted", "fixed", "skipped", "deferred", "escalated"],
+      "description": "accepted: the source is right and the output follows it. fixed: corrected in place. skipped: deliberately not handled. deferred: to be handled later. escalated: filed with the owner as a tracked issue."
+    },
+    "owner": {
+      "enum": ["l2-authors", "technical-wg", "dak-repository", "l3-author", "commons-steward"],
+      "description": "l2-authors: the DAK does not settle it, such as an ambiguous unit or an option set referenced but absent. technical-wg: a convention outliving one DAK, such as identifiers, naming, or how traceability is carried. dak-repository: a defect in the published dictionary. Set this honestly; routing a question to yourself because correct routing is inconvenient defeats the mechanism."
+    },
+    "summary": {
+      "type": "string",
+      "description": "One line naming the question. Naming it is what makes it routable."
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Why this status and this owner. Always required."
+    },
+    "evidence": {
+      "type": "object",
+      "description": "Where the question arises. Required unless the status is fixed.",
+      "required": ["location"],
+      "additionalProperties": false,
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Source location, as file:line, a spreadsheet cell reference, or a BPMN node id."
+        },
+        "quote": {
+          "type": "string",
+          "description": "Verbatim text from the source. A flag that cannot quote its source is usually a flag that has not been checked."
+        },
+        "artifact": {
+          "type": "string",
+          "description": "The generated artifact affected, where one exists."
+        }
+      }
+    },
+    "issueRef": {
+      "type": "string",
+      "description": "Tracked issue URL. Expected when status is escalated."
+    },
+    "raisedBy": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["script", "agent", "human"] },
+        "id": { "type": "string", "description": "Script path, agent skill name, or user login." },
+        "model": { "type": "string", "description": "Model id, when kind is agent." },
+        "session": { "type": "string" }
+      }
+    },
+    "raisedAt": { "type": "string", "format": "date-time" },
+    "resolvedBy": { "type": "string" },
+    "resolvedAt": { "type": "string", "format": "date-time" },
+    "skill": {
+      "type": "string",
+      "description": "Skill id that raised the flag."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "not": { "const": "fixed" } } },
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["evidence"],
+        "description": "Anything other than an actual fix has to point at something. A flag with nothing to point at is itself a defect."
+      }
+    },
+    {
+      "if": { "properties": { "status": { "const": "escalated" } }, "required": ["status"] },
+      "then": { "required": ["issueRef"] }
+    }
+  ],
+  "examples": [
+    {
+      "id": "IMMZ.B1.lane-unresolved",
+      "status": "escalated",
+      "owner": "l2-authors",
+      "summary": "BPMN lane names a persona not declared in the DAK",
+      "reason": "The lane is titled Vaccinator but the DAK generic persona list has no such entry. Mapping it to Health Worker would be a decision the DAK does not contain, so it is raised rather than assumed.",
+      "evidence": {
+        "location": "input/business-processes/bpmn/IMMZ.B1.bpmn#Lane_0x4f2a",
+        "quote": "<bpmn:lane id=\"Lane_0x4f2a\" name=\"Vaccinator\">",
+        "artifact": "input/plandefinitions/PlanDefinition-IMMZB1.json"
+      },
+      "issueRef": "https://github.com/WorldHealthOrganization/smart-immunizations/issues/000",
+      "raisedBy": { "kind": "script", "id": "l2/validate-business-processes" },
+      "raisedAt": "2026-08-27T09:14:02Z",
+      "skill": "l2/validate-business-processes"
+    }
+  ]
+}

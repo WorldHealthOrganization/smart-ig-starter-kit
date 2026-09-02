@@ -1,0 +1,23 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "technical-officer",
+  "name": "Technical Officer",
+  "type": "person",
+  "description": "First-pass review and coordination with subject matter experts.",
+  "inherits": [
+    "reviewer"
+  ],
+  "capabilities": [
+    "git-push"
+  ],
+  "permissions": [
+    "first-pass-review",
+    "sme-coordination"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.TechnicalOfficer",
+    "lifecycle": [
+      "review"
+    ]
+  }
+}

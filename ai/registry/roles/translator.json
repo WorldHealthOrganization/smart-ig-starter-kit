@@ -1,0 +1,20 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "translator",
+  "name": "Translator",
+  "type": "person",
+  "description": "Produces and maintains language variants of narrative and designations.",
+  "inherits": [
+    "author"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "translation"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.Translator",
+    "lifecycle": [
+      "author"
+    ]
+  }
+}

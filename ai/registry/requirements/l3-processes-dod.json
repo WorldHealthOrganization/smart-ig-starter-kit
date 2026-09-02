@@ -1,0 +1,85 @@
+{
+  "$schema": "../registry.schema.json#/$defs/requirement",
+  "id": "req:l3-processes-dod",
+  "title": "Definition of done: business processes as PlanDefinitions",
+  "description": "The output criteria from the Business Processes SOP, expressed as checkable statements. Statement text is taken from the SOP; where the SOP says SHALL this file says SHALL, and where it says should this file says SHOULD.",
+  "derivedFrom": ["req:content-lifecycle"],
+  "actors": ["l3-ig-expert", "fhir-modeller", "qc-reviewer"],
+  "meta": {
+    "sopSource": "input/pagecontent/l3_processes.md",
+    "tier": "T2"
+  },
+  "statements": [
+    {
+      "key": "process-has-plandefinition",
+      "label": "Every business process has a PlanDefinition",
+      "conformance": "SHALL",
+      "requirement": "Each Business Process SHALL have a corresponding PlanDefinition.",
+      "satisfiedBy": [{ "kind": "skill", "ref": "l3/author-processes" }]
+    },
+    {
+      "key": "conforms-crmi-shareable",
+      "label": "Conforms to CRMIShareablePlanDefinition",
+      "conformance": "SHALL",
+      "requirement": "Each PlanDefinition representing a Business Process SHALL conform to the CRMIShareablePlanDefinition profile.",
+      "meta": { "profile": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition" },
+      "dependsOn": ["process-has-plandefinition"]
+    },
+    {
+      "key": "conforms-crmi-publishable",
+      "label": "Conforms to CRMIPublishablePlanDefinition when active",
+      "conformance": "SHALL",
+      "requirement": "Each active published PlanDefinition representing a Business Process SHALL conform to the CRMIPublishablePlanDefinition profile.",
+      "meta": { "profile": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition" },
+      "dependsOn": ["conforms-crmi-shareable"]
+    },
+    {
+      "key": "required-elements",
+      "label": "Required elements are present",
+      "conformance": "SHALL",
+      "requirement": "Each PlanDefinition representing a Business Process SHALL have: name, a computable name for the process; title, a short user-friendly description; type set to workflow-definition; and description, a detailed description of the process.",
+      "meta": { "elements": ["name", "title", "type", "description"], "typeFixedValue": "workflow-definition" },
+      "dependsOn": ["process-has-plandefinition"]
+    },
+    {
+      "key": "action-per-node",
+      "label": "One action per process node",
+      "conformance": "SHOULD",
+      "requirement": "For each node in the business process representing an activity to be performed, the PlanDefinition should have an action element carrying title, description, and participant identifying the expected participants by Persona.",
+      "meta": { "elements": ["action.title", "action.description", "action.participant"] },
+      "dependsOn": ["required-elements"]
+    },
+    {
+      "key": "related-action-flow",
+      "label": "Process flow is connected in one direction",
+      "conformance": "SHOULD",
+      "requirement": "Nodes should be connected to indicate process flow using relatedAction with actionId referencing the related activity and relationship giving the type of relationship. The before-start relationship should be favoured, and relationships should only be characterised in one direction.",
+      "meta": { "preferredRelationship": "before-start", "singleDirection": true },
+      "dependsOn": ["action-per-node"]
+    },
+    {
+      "key": "round-trip-complete",
+      "label": "Round trip is complete in both directions",
+      "conformance": "SHALL",
+      "requirement": "Every BPMN activity node SHALL correspond to exactly one PlanDefinition action, and every PlanDefinition action SHALL correspond to exactly one BPMN activity node. An orphan on either side SHALL fail, and the failure SHALL name the orphaned node or action identifier as evidence.",
+      "meta": { "note": "Not in the SOP. Added by the package as the strongest mechanical proxy for fidelity." },
+      "satisfiedBy": [{ "kind": "skill", "ref": "l3/validate-processes" }],
+      "dependsOn": ["action-per-node"]
+    },
+    {
+      "key": "no-version-element",
+      "label": "The version element is not set by the author",
+      "conformance": "SHALL NOT",
+      "requirement": "The version element of a PlanDefinition defined in a SMART Guideline SHALL NOT be set by the author. It is set by the publication process.",
+      "meta": { "sopSource": "input/pagecontent/versioning.md" }
+    },
+    {
+      "key": "ig-build-clean",
+      "label": "The IG Publisher build is clean",
+      "conformance": "SHALL",
+      "requirement": "The PlanDefinition SHALL survive an IG Publisher build without new errors or warnings. A clean SUSHI compile SHALL NOT be treated as evidence: identifier, mapping and traceability defects pass SUSHI and appear only in the publisher.",
+      "satisfiedBy": [{ "kind": "capability", "ref": "ig-publisher" }],
+      "dependsOn": ["conforms-crmi-shareable"]
+    }
+  ]
+}

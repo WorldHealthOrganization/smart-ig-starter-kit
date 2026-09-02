@@ -100,8 +100,10 @@ menu:
       L3 : 'diagram_l3_overview.html'
       Content Types : 'diagram_content_types.html'
       Diagrams Legend: 'diagram_legend.html'
-  L4 Authoring: 
+  L4 Authoring:
     L4: 'l4-compliance.html'
+  AI-Ready Package:
+    Overview: 'ai_package.html'
   Validating IG:
     QA Check: 'qa_check.html'
   Indices:
@@ -191,6 +193,8 @@ pages:
         title: "L3 ArchiMate Diagram"
       diagram_content_types.md:
         title: "Content Types ArchiMate Diagram"
+  ai_package.md:
+    title: "AI-Ready Package"
   validating_ig.md:
     title: "Validating IG"
     qa_check.md:

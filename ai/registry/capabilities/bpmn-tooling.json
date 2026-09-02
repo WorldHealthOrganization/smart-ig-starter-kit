@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "bpmn-tooling",
+  "name": "BPMN tooling",
+  "description": "Reads and writes BPMN 2.0 XML. Camunda Modeler is recommended because it emits the metadata L3 authoring needs.",
+  "detection": {
+    "method": "always",
+    "value": null
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "sushi-compiler",
+  "name": "SUSHI",
+  "description": "Compiles FSH to FHIR JSON. Note that a clean SUSHI run is not evidence of a clean build.",
+  "detection": {
+    "method": "command",
+    "value": "sushi --version"
+  },
+  "requires": [
+    "node-runtime"
+  ]
+}

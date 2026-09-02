@@ -1,0 +1,24 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "fhir-modeller",
+  "name": "FHIR Modeller",
+  "type": "person",
+  "description": "Authors L3 FHIR artifacts: logical models, profiles, questionnaires, CQL, plan definitions, measures.",
+  "inherits": [
+    "author"
+  ],
+  "capabilities": [
+    "sushi-compiler",
+    "ig-publisher"
+  ],
+  "permissions": [
+    "cql-authoring"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.FHIRModeller",
+    "lifecycle": [
+      "author",
+      "validate"
+    ]
+  }
+}

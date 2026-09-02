@@ -1,0 +1,20 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "content-reviewer",
+  "name": "Content Reviewer",
+  "type": "person",
+  "description": "Formal approval authority on content transitions, including the L2 to L3 gate.",
+  "inherits": [
+    "reviewer"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "approval-authority"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.ContentReviewer",
+    "lifecycle": [
+      "review"
+    ]
+  }
+}

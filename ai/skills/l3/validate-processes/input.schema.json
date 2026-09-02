@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l3/validate-processes/input.schema.json",
+  "title": "Input: validate business process PlanDefinitions",
+  "type": "object",
+  "required": ["planDefinitions", "bpmnFiles"],
+  "additionalProperties": false,
+  "properties": {
+    "planDefinitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Paths to the generated PlanDefinition resources."
+    },
+    "bpmnFiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Paths to the source BPMN files. Required: without them the round trip can only be checked in one direction, which is the direction that misses silently dropped nodes."
+    },
+    "traceability": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/traceability-link.schema.json" },
+      "description": "Links emitted by the authoring skill. Where absent, correspondence is recovered from action.sourceNodeId and any mismatch is reported rather than repaired."
+    },
+    "personas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "canonical"],
+        "properties": {
+          "label": { "type": "string" },
+          "canonical": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "runPublisher": {
+      "type": "boolean",
+      "default": true,
+      "description": "Run the IG Publisher for profile conformance. Setting this false makes tier 2 report not-run; it does not make it pass."
+    },
+    "igRoot": { "type": "string", "default": "." }
+  }
+}

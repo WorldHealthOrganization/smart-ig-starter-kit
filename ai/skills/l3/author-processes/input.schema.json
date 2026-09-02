@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l3/author-processes/input.schema.json",
+  "title": "Input: author business processes as PlanDefinitions",
+  "type": "object",
+  "required": ["bpmnFiles", "igRoot"],
+  "additionalProperties": false,
+  "properties": {
+    "bpmnFiles": {
+      "type": "array",
+      "minItems": 1,
+      "description": "BPMN 2.0 XML files from the L2 DAK repository, normally input/business-processes/bpmn. Source files, not exported images: an image carries none of the structure this skill needs.",
+      "items": {
+        "type": "object",
+        "required": ["path"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string" },
+          "processId": {
+            "type": "string",
+            "description": "Which bpmn:process to use when the file declares more than one."
+          },
+          "isOverview": {
+            "type": "boolean",
+            "default": false,
+            "description": "True for the key-business-processes overview diagram, which describes the health area rather than one process."
+          }
+        }
+      }
+    },
+    "igRoot": {
+      "type": "string",
+      "default": ".",
+      "description": "Root of the L3 Implementation Guide being authored."
+    },
+    "personas": {
+      "type": "array",
+      "description": "Resolved ActorDefinition canonicals for the personas declared in the DAK, used to populate action.participant. Omit and every lane resolution becomes a flag rather than a link.",
+      "items": {
+        "type": "object",
+        "required": ["label", "canonical"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "description": "Display name as it appears in a BPMN lane." },
+          "canonical": { "type": "string", "format": "uri" },
+          "id": { "type": "string" }
+        }
+      }
+    },
+    "identifierGrammar": {
+      "type": "object",
+      "description": "How a dotted DAK activity identifier becomes a resource id. Owned by the Commons Steward, not chosen here; supplied so the transform is the same across guidelines.",
+      "additionalProperties": false,
+      "properties": {
+        "strategy": {
+          "enum": ["strip-dots", "replace-dots-with-hyphen", "explicit-map"],
+          "default": "strip-dots"
+        },
+        "explicitMap": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "prefix": { "type": "string" }
+      }
+    },
+    "fshOutputDir": {
+      "type": "string",
+      "default": "input/fsh/plandefinitions"
+    },
+    "existingPlanDefinitions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Paths to PlanDefinitions already authored. Regenerating over hand-edited content triggers the regeneration-conflict gate rather than overwriting."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "git-push",
+  "name": "Git push",
+  "description": "Write access to the target repository.",
+  "detection": {
+    "method": "command",
+    "value": "git"
+  }
+}

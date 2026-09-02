@@ -1,0 +1,23 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "qc-reviewer",
+  "name": "Quality Control Reviewer",
+  "type": "person",
+  "description": "Runs the build and quality checks and reports on their results.",
+  "inherits": [
+    "reviewer"
+  ],
+  "capabilities": [
+    "ig-publisher"
+  ],
+  "permissions": [
+    "qa-reporting"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.QCReviewer",
+    "lifecycle": [
+      "validate",
+      "test"
+    ]
+  }
+}

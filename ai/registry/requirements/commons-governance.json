@@ -1,0 +1,49 @@
+{
+  "$schema": "../registry.schema.json#/$defs/requirement",
+  "id": "req:commons-governance",
+  "title": "Commons and cross-guideline governance",
+  "description": "Rules that outlive a single Implementation Guide. Derived from gov_concepts.md and authoring_conventions.md, which already mandate these but assign them to no operational owner. The Commons and Governance Steward is that owner.",
+  "derivedFrom": ["req:content-lifecycle"],
+  "actors": ["commons-steward", "terminologist"],
+  "statements": [
+    {
+      "key": "element-maps-to-commons-concept",
+      "label": "Every data element maps to a WHO Commons concept",
+      "conformance": "SHALL",
+      "requirement": "Every logical model data element SHALL map to a concept in the WHO Commons glossary. Where no concept exists, a draft concept SHALL be raised rather than the mapping omitted.",
+      "satisfiedBy": [{ "kind": "skill", "ref": "commons/govern-concepts" }]
+    },
+    {
+      "key": "draft-concepts-block-release",
+      "label": "Draft concepts block release",
+      "conformance": "SHALL",
+      "requirement": "An Implementation Guide SHALL NOT be released while any data element maps only to a draft concept.",
+      "dependsOn": ["element-maps-to-commons-concept"]
+    },
+    {
+      "key": "identifier-grammar-consistent",
+      "label": "Identifier derivation is consistent across guidelines",
+      "conformance": "SHALL",
+      "requirement": "The transformation from a dotted DAK data element identifier to a resource identifier SHALL follow one documented grammar across all guidelines. Resource ids SHALL match the regular expression in authoring_conventions.md and SHALL NOT contain a dot, which the publisher treats as a path separator.",
+      "satisfiedBy": [{ "kind": "skill", "ref": "commons/govern-identifiers" }]
+    },
+    {
+      "key": "traceability-convention-single",
+      "label": "One traceability convention",
+      "conformance": "SHALL",
+      "requirement": "Traceability from an L3 element to its source concept SHALL use one convention across all guidelines. A model using one convention scores zero against a checker expecting the other, so the choice SHALL be recorded in the registry and not left per-model.",
+      "actors": ["commons-steward"],
+      "meta": {
+        "status": "open",
+        "note": "The proof of concept proposes ^code into the guideline concept CodeSystem with ConceptMaps for external systems. Unratified. No conformance checker can be written until this is settled."
+      }
+    },
+    {
+      "key": "reuse-before-create",
+      "label": "Search for reuse before creating",
+      "conformance": "SHOULD",
+      "requirement": "Before creating a profile, extension, value set or code system, existing artifacts SHOULD be searched in priority order: other SMART Guidelines Implementation Guides, balloted HL7 international content, IHE, HL7 national guides, then others. Divergence SHOULD be visible as a diff rather than absorbed locally.",
+      "satisfiedBy": [{ "kind": "skill", "ref": "commons/govern-identifiers" }]
+    }
+  ]
+}

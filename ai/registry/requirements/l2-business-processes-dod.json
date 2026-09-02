@@ -1,0 +1,75 @@
+{
+  "$schema": "../registry.schema.json#/$defs/requirement",
+  "id": "req:l2-business-processes-dod",
+  "title": "Definition of done: L2 business processes",
+  "description": "Output criteria for the business process component of a DAK. Derived from l2_dak_authoring.md sections 2.1.4 and 2.1.5 and from l2_templates.md, which mandate BPMN and state why the choice of modeller matters downstream.",
+  "derivedFrom": ["req:content-lifecycle"],
+  "actors": ["l2-dak-expert", "business-analyst", "clinical-sme"],
+  "meta": {
+    "sopSource": "input/pagecontent/l2_dak_authoring.md",
+    "tier": "T2"
+  },
+  "statements": [
+    {
+      "key": "bpmn-standard",
+      "label": "Diagrams follow the BPMN standard",
+      "conformance": "SHALL",
+      "requirement": "Business process diagrams SHALL follow the BPMN standard and SHALL be committed as BPMN 2.0 XML, not only as an exported image.",
+      "meta": { "location": "input/business-processes/bpmn" },
+      "satisfiedBy": [{ "kind": "skill", "ref": "l2/author-business-processes" }]
+    },
+    {
+      "key": "bpmn-parses",
+      "label": "BPMN files are well-formed and parse",
+      "conformance": "SHALL",
+      "requirement": "Each BPMN file SHALL be well-formed XML conforming to the BPMN 2.0 schema, and SHALL contain at least one process element.",
+      "dependsOn": ["bpmn-standard"],
+      "satisfiedBy": [{ "kind": "skill", "ref": "l2/validate-business-processes" }]
+    },
+    {
+      "key": "overview-diagram",
+      "label": "An overview diagram of key business processes exists",
+      "conformance": "SHALL",
+      "requirement": "A diagram reflecting the overview of key business processes for the health area SHALL exist, in addition to the specific diagram for each business process.",
+      "dependsOn": ["bpmn-standard"]
+    },
+    {
+      "key": "activity-identifiers",
+      "label": "Every activity carries a stable identifier",
+      "conformance": "SHALL",
+      "requirement": "Each activity node SHALL carry a stable activity identifier and a human-readable name. These identifiers are what the data dictionary, decision logic and indicator components reference, and what L3 traceability is carried on.",
+      "dependsOn": ["bpmn-parses"]
+    },
+    {
+      "key": "lane-names-persona",
+      "label": "Every lane names a declared persona",
+      "conformance": "SHALL",
+      "requirement": "Each lane SHALL correspond to a generic persona declared in the DAK. A lane naming an undeclared persona SHALL raise a flag routed to the L2 authors rather than being silently accepted.",
+      "dependsOn": ["bpmn-parses"],
+      "satisfiedBy": [{ "kind": "skill", "ref": "l2/validate-business-processes" }]
+    },
+    {
+      "key": "cross-component-references-resolve",
+      "label": "Activity references from other components resolve",
+      "conformance": "SHALL",
+      "requirement": "Every activity identifier referenced by the data dictionary, decision support logic, scheduling logic or indicator components SHALL exist in some business process diagram. An unresolved reference SHALL fail and SHALL name the referencing row as evidence.",
+      "dependsOn": ["activity-identifiers"],
+      "satisfiedBy": [{ "kind": "skill", "ref": "l2/validate-business-processes" }]
+    },
+    {
+      "key": "tooling-metadata-preserved",
+      "label": "Exported BPMN retains the metadata L3 needs",
+      "conformance": "SHOULD",
+      "requirement": "The modelling tool used should produce BPMN files that contain the structure and metadata needed for drafting related L3 content. Camunda Modeler is recommended for this reason.",
+      "dependsOn": ["bpmn-standard"]
+    },
+    {
+      "key": "sme-validated",
+      "label": "Processes are validated by subject matter experts",
+      "conformance": "SHALL",
+      "requirement": "Business processes SHALL be reviewed and validated by clinical subject matter experts before the L2 content is declared ready for transformation.",
+      "actors": ["clinical-sme"],
+      "dependsOn": ["overview-diagram"]
+    }
+  ]
+}

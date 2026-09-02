@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "java-runtime",
+  "name": "Java runtime",
+  "description": "Java 21 or later. Required by the IG Publisher.",
+  "detection": {
+    "method": "command",
+    "value": "java -version"
+  }
+}

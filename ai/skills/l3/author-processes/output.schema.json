@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l3/author-processes/output.schema.json",
+  "title": "Output: business processes as PlanDefinitions",
+  "description": "Required fields follow model_process.plantuml and the Definition of Done in req:l3-processes-dod. Because this skill is judgment rather than deterministic, the output is a proposal plus its reasoning, not a completed write: every file arrives as a diff under the write-is-a-diff gate.",
+  "type": "object",
+  "required": ["planDefinitions", "traceability", "diffs"],
+  "additionalProperties": false,
+  "properties": {
+    "planDefinitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "title", "type", "description", "sourceBpmn"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9\\-]{1,64}$",
+            "description": "No dot. The publisher reads a dot as a path separator, and a dotted id is rejected at build time even though SUSHI accepts it."
+          },
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Z]([A-Za-z0-9_]){1,254}$",
+            "description": "A computable name for the process."
+          },
+          "title": { "type": "string", "description": "A short, user-friendly description of the process." },
+          "type": {
+            "const": "workflow-definition",
+            "description": "Fixed by req:l3-processes-dod#required-elements."
+          },
+          "description": { "type": "string", "description": "A detailed description of the process." },
+          "url": { "type": "string", "format": "uri" },
+          "status": { "enum": ["draft", "active", "retired", "unknown"], "default": "draft" },
+          "sourceBpmn": {
+            "type": "string",
+            "description": "Path to the BPMN file this was derived from."
+          },
+          "profiles": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" },
+            "description": "Asserted conformance. CRMIShareablePlanDefinition always; CRMIPublishablePlanDefinition once active."
+          },
+          "action": {
+            "type": "array",
+            "description": "One per BPMN activity node. Gateways and events are out of scope.",
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "sourceNodeId"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "title": { "type": "string" },
+                "description": { "type": "string" },
+                "sourceNodeId": {
+                  "type": "string",
+                  "description": "BPMN element id. This is what the round-trip check matches on."
+                },
+                "participant": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["actorCanonical"],
+                    "properties": {
+                      "actorCanonical": { "type": "string", "format": "uri" },
+                      "sourceLaneId": { "type": "string" }
+                    }
+                  }
+                },
+                "relatedAction": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["actionId", "relationship"],
+                    "properties": {
+                      "actionId": { "type": "string" },
+                      "relationship": {
+                        "type": "string",
+                        "description": "before-start should be favoured, and a relationship should be characterised in one direction only."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "not": {
+          "required": ["version"],
+          "description": "The version element is set by the publication process, never by the author."
+        }
+      }
+    },
+    "traceability": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/traceability-link.schema.json" },
+      "description": "One link per BPMN node and per resolved lane. This is what the round-trip check consumes, and what lets a reviewer ask where an action came from."
+    },
+    "diffs": {
+      "type": "array",
+      "description": "Proposed file changes. Nothing lands until an explicit apply.",
+      "items": {
+        "type": "object",
+        "required": ["path", "action"],
+        "properties": {
+          "path": { "type": "string" },
+          "action": { "enum": ["create", "modify"] },
+          "conflictsWithHandEdits": {
+            "type": "boolean",
+            "default": false,
+            "description": "True triggers the regeneration-conflict gate: stop and ask, do not reconcile."
+          }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json" },
+      "description": "Questions the BPMN does not settle. An unresolvable lane persona or a missing activity identifier belongs here, not in a guessed value."
+    }
+  }
+}

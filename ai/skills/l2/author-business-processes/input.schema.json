@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l2/author-business-processes/input.schema.json",
+  "title": "Input: author L2 business processes",
+  "type": "object",
+  "required": ["healthDomain", "dakRoot"],
+  "additionalProperties": false,
+  "properties": {
+    "healthDomain": {
+      "type": "object",
+      "required": ["abbreviation", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "abbreviation": {
+          "type": "string",
+          "description": "Short code used to prefix identifiers, such as IMMZ or ANC."
+        },
+        "name": { "type": "string" }
+      }
+    },
+    "dakRoot": { "type": "string", "description": "Root of the DAK repository." },
+    "sourceGuideline": {
+      "type": "string",
+      "description": "Reference to the L1 guideline being adapted."
+    },
+    "personas": {
+      "type": "array",
+      "description": "Generic personas declared for this DAK. Lanes are checked against these, so an incomplete list produces flags rather than silent acceptance.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "existingProcesses": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "BPMN files already authored, for revision rather than first authoring."
+    },
+    "referencingComponents": {
+      "type": "array",
+      "description": "Other DAK components that reference activity identifiers. Supplied so authoring can see what a rename would break.",
+      "items": {
+        "type": "object",
+        "required": ["component", "path"],
+        "properties": {
+          "component": {
+            "enum": ["data-dictionary", "decision-logic", "scheduling-logic", "indicators", "functional-requirements"]
+          },
+          "path": { "type": "string" }
+        }
+      }
+    }
+  }
+}

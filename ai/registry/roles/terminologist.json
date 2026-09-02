@@ -1,0 +1,21 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "terminologist",
+  "name": "Terminologist",
+  "type": "person",
+  "description": "Owns code systems, value sets, concept maps and bindings to the WHO Commons glossary.",
+  "inherits": [
+    "author"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "terminology-management"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.Terminologist",
+    "lifecycle": [
+      "author",
+      "validate"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l3/author-valuesets/input.schema.json",
+  "title": "Input: Author value sets",
+  "description": "Placeholder. The procedure for this skill is at input/pagecontent/l3_valuesets.md and is complete; it is this contract that is not. The schema permits anything, so validating against it is not evidence of a correct artifact. See ai/skills/l3/author-processes for a specified contract.",
+  "type": "object"
+}

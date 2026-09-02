@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "docker",
+  "name": "Docker",
+  "description": "Runs the local test harnesses in testing/docker.",
+  "detection": {
+    "method": "command",
+    "value": "docker --version"
+  }
+}

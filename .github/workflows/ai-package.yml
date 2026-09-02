@@ -1,0 +1,70 @@
+# Structural checks for the AI-ready package in ai/.
+#
+# Deliberately independent of the three IG workflows, which delegate wholesale to smart-base and
+# smart-html. This one runs only against this repository's own files, needs no FHIR toolchain, and
+# touches nothing the IG build depends on.
+#
+# It exists because the package's cross-references — a skill naming a role, a requirement naming a
+# skill, a schema referencing a common definition — break silently. Markdown does not complain when
+# a link points at nothing, and an agent following a dead reference gets a confident wrong answer
+# rather than an error.
+
+name: AI package
+
+on:
+  push:
+    branches-ignore:
+      - 'gh-pages'
+    paths:
+      - 'ai/**'
+      - 'input/pagecontent/**'
+      - '.github/workflows/ai-package.yml'
+  pull_request:
+    paths:
+      - 'ai/**'
+      - 'input/pagecontent/**'
+      - '.github/workflows/ai-package.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Validate package structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # registry.json is generated and committed, because nothing regenerates it at build time.
+      # This fails when it no longer matches the tree it was generated from.
+      - name: Check registry.json is current
+        run: node ai/tools/build-registry.mjs --check
+
+      # Resolves every cross-reference: role inheritance is acyclic, capabilities and requirements
+      # exist, routing patterns compile, schemas parse, every skill names an SOP page that exists,
+      # and every L3 SOP page is reachable from some skill.
+      - name: Validate package integrity
+        run: node ai/tools/validate-package.mjs
+
+      # Compiles every schema properly, which the integrity check does not do — it only parses
+      # JSON. A schema can be valid JSON and still be an invalid schema. Each file is compiled with
+      # the other common schemas preloaded so cross-schema $refs resolve, excluding itself: ajv
+      # rejects a schema supplied as both -s and -r.
+      - name: Compile schemas
+        run: |
+          npm install --no-save --no-audit --no-fund ajv-cli@5 ajv-formats@2
+          COMMON=$(ls ai/schemas/common/*.json)
+          ALL="$COMMON ai/registry/registry.schema.json $(find ai/skills -name '*.schema.json')"
+          for f in $ALL; do
+            REFS=""
+            for c in $COMMON; do [ "$c" = "$f" ] || REFS="$REFS -r $c"; done
+            npx ajv compile --spec=draft2020 -c ajv-formats $REFS -s "$f" > /dev/null
+          done
+          echo "$(echo $ALL | wc -w) schemas compile"

@@ -1,0 +1,1592 @@
+{
+  "schemaVersion": "1.0",
+  "repository": "WorldHealthOrganization/smart-ig-starter-kit",
+  "generatedFrom": "286b2a48404453945ef9d2a6f57404327ebab88a",
+  "roles": [
+    {
+      "id": "author",
+      "name": "Author",
+      "type": "person",
+      "description": "Creates and modifies content, and pushes to a branch.",
+      "inherits": [
+        "reviewer"
+      ],
+      "capabilities": [
+        "git-push"
+      ],
+      "permissions": [
+        "content-authoring"
+      ]
+    },
+    {
+      "id": "business-analyst",
+      "name": "Business Analyst",
+      "type": "person",
+      "description": "Authors the structured L2 DAK components: business processes, data dictionary, decision and scheduling logic.",
+      "inherits": [
+        "author"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "bpmn-authoring",
+        "dmn-authoring",
+        "data-dictionary-authoring"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.BusinessAnalyst",
+        "lifecycle": [
+          "author",
+          "validate"
+        ]
+      }
+    },
+    {
+      "id": "clinical-sme",
+      "name": "Clinical Subject Matter Expert",
+      "type": "person",
+      "description": "Validates clinical accuracy of L2 content against the underlying L1 guideline. Sign-off authority on clinical meaning.",
+      "inherits": [
+        "reviewer"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "clinical-validation"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.ClinicalSME",
+        "lifecycle": [
+          "validate",
+          "review"
+        ]
+      }
+    },
+    {
+      "id": "commons-steward",
+      "name": "Commons and Governance Steward",
+      "type": "person",
+      "description": "Owns what crosses Implementation Guide boundaries: concept governance, identifier grammar, reuse decisions and release authorisation.",
+      "inherits": [
+        "terminologist",
+        "programme-manager",
+        "publication-manager"
+      ],
+      "capabilities": [],
+      "meta": {
+        "expert": true,
+        "skills": "ai/skills/commons",
+        "lifecycle": [
+          "author",
+          "validate",
+          "publish"
+        ]
+      }
+    },
+    {
+      "id": "content-reviewer",
+      "name": "Content Reviewer",
+      "type": "person",
+      "description": "Formal approval authority on content transitions, including the L2 to L3 gate.",
+      "inherits": [
+        "reviewer"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "approval-authority"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.ContentReviewer",
+        "lifecycle": [
+          "review"
+        ]
+      }
+    },
+    {
+      "id": "fhir-modeller",
+      "name": "FHIR Modeller",
+      "type": "person",
+      "description": "Authors L3 FHIR artifacts: logical models, profiles, questionnaires, CQL, plan definitions, measures.",
+      "inherits": [
+        "author"
+      ],
+      "capabilities": [
+        "sushi-compiler",
+        "ig-publisher"
+      ],
+      "permissions": [
+        "cql-authoring"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.FHIRModeller",
+        "lifecycle": [
+          "author",
+          "validate"
+        ]
+      }
+    },
+    {
+      "id": "l2-dak-expert",
+      "name": "L2 DAK Expert",
+      "type": "person",
+      "description": "Authors and validates the nine DAK components. The L2 half of the transformation: everything upstream of the L2 to L3 gate.",
+      "inherits": [
+        "business-analyst",
+        "clinical-sme"
+      ],
+      "capabilities": [
+        "bpmn-tooling"
+      ],
+      "meta": {
+        "expert": true,
+        "skills": "ai/skills/l2",
+        "lifecycle": [
+          "plan",
+          "author",
+          "validate"
+        ]
+      }
+    },
+    {
+      "id": "l3-ig-expert",
+      "name": "L3 IG Expert",
+      "type": "person",
+      "description": "Authors and validates FHIR artifacts from L2 sources. The L3 half of the transformation: everything downstream of the gate.",
+      "inherits": [
+        "fhir-modeller",
+        "qc-reviewer"
+      ],
+      "capabilities": [
+        "sushi-compiler",
+        "ig-publisher"
+      ],
+      "meta": {
+        "expert": true,
+        "skills": "ai/skills/l3",
+        "lifecycle": [
+          "author",
+          "validate",
+          "test"
+        ]
+      }
+    },
+    {
+      "id": "programme-manager",
+      "name": "Programme Manager",
+      "type": "person",
+      "description": "Governance oversight, scope, and release authorisation.",
+      "inherits": [
+        "content-reviewer"
+      ],
+      "capabilities": [
+        "git-push"
+      ],
+      "permissions": [
+        "project-governance",
+        "release-authorization"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.ProgrammeManager",
+        "lifecycle": [
+          "plan",
+          "review",
+          "publish"
+        ]
+      }
+    },
+    {
+      "id": "publication-manager",
+      "name": "Publication Manager",
+      "type": "person",
+      "description": "Runs the publication process and manages releases.",
+      "inherits": [
+        "author"
+      ],
+      "capabilities": [
+        "ig-publisher"
+      ],
+      "permissions": [
+        "release-management"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.PublicationManager",
+        "lifecycle": [
+          "publish"
+        ]
+      }
+    },
+    {
+      "id": "qc-reviewer",
+      "name": "Quality Control Reviewer",
+      "type": "person",
+      "description": "Runs the build and quality checks and reports on their results.",
+      "inherits": [
+        "reviewer"
+      ],
+      "capabilities": [
+        "ig-publisher"
+      ],
+      "permissions": [
+        "qa-reporting"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.QCReviewer",
+        "lifecycle": [
+          "validate",
+          "test"
+        ]
+      }
+    },
+    {
+      "id": "reviewer",
+      "name": "Reviewer",
+      "type": "person",
+      "description": "Reviews content and leaves comments. Cannot author or push.",
+      "inherits": [
+        "viewer"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "review-comments"
+      ]
+    },
+    {
+      "id": "technical-officer",
+      "name": "Technical Officer",
+      "type": "person",
+      "description": "First-pass review and coordination with subject matter experts.",
+      "inherits": [
+        "reviewer"
+      ],
+      "capabilities": [
+        "git-push"
+      ],
+      "permissions": [
+        "first-pass-review",
+        "sme-coordination"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.TechnicalOfficer",
+        "lifecycle": [
+          "review"
+        ]
+      }
+    },
+    {
+      "id": "terminologist",
+      "name": "Terminologist",
+      "type": "person",
+      "description": "Owns code systems, value sets, concept maps and bindings to the WHO Commons glossary.",
+      "inherits": [
+        "author"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "terminology-management"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.Terminologist",
+        "lifecycle": [
+          "author",
+          "validate"
+        ]
+      }
+    },
+    {
+      "id": "translator",
+      "name": "Translator",
+      "type": "person",
+      "description": "Produces and maintains language variants of narrative and designations.",
+      "inherits": [
+        "author"
+      ],
+      "capabilities": [],
+      "permissions": [
+        "translation"
+      ],
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.Translator",
+        "lifecycle": [
+          "author"
+        ]
+      }
+    },
+    {
+      "id": "viewer",
+      "name": "Viewer",
+      "type": "person",
+      "description": "Reads published and in-progress content. Submits feedback. Cannot write.",
+      "inherits": [],
+      "capabilities": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "bpmn-tooling",
+      "name": "BPMN tooling",
+      "description": "Reads and writes BPMN 2.0 XML. Camunda Modeler is recommended because it emits the metadata L3 authoring needs.",
+      "detection": {
+        "method": "always",
+        "value": null
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "description": "Runs the local test harnesses in testing/docker.",
+      "detection": {
+        "method": "command",
+        "value": "docker --version"
+      }
+    },
+    {
+      "id": "git-push",
+      "name": "Git push",
+      "description": "Write access to the target repository.",
+      "detection": {
+        "method": "command",
+        "value": "git"
+      }
+    },
+    {
+      "id": "ig-publisher",
+      "name": "HL7 IG Publisher",
+      "description": "Builds the Implementation Guide and runs conformance validation against smart-base profiles. The only place several classes of defect appear.",
+      "detection": {
+        "method": "file-exists",
+        "value": "input-cache/publisher.jar"
+      },
+      "requires": [
+        "java-runtime"
+      ]
+    },
+    {
+      "id": "java-runtime",
+      "name": "Java runtime",
+      "description": "Java 21 or later. Required by the IG Publisher.",
+      "detection": {
+        "method": "command",
+        "value": "java -version"
+      }
+    },
+    {
+      "id": "node-runtime",
+      "name": "Node.js runtime",
+      "description": "Node.js 18 or later. Required by the package maintenance scripts.",
+      "detection": {
+        "method": "command",
+        "value": "node --version"
+      }
+    },
+    {
+      "id": "python3",
+      "name": "Python 3",
+      "description": "Used by extraction tooling for DAK spreadsheets.",
+      "detection": {
+        "method": "command",
+        "value": "python3 --version"
+      }
+    },
+    {
+      "id": "sushi-compiler",
+      "name": "SUSHI",
+      "description": "Compiles FSH to FHIR JSON. Note that a clean SUSHI run is not evidence of a clean build.",
+      "detection": {
+        "method": "command",
+        "value": "sushi --version"
+      },
+      "requires": [
+        "node-runtime"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req:commons-governance",
+      "title": "Commons and cross-guideline governance",
+      "description": "Rules that outlive a single Implementation Guide. Derived from gov_concepts.md and authoring_conventions.md, which already mandate these but assign them to no operational owner. The Commons and Governance Steward is that owner.",
+      "derivedFrom": [
+        "req:content-lifecycle"
+      ],
+      "actors": [
+        "commons-steward",
+        "terminologist"
+      ],
+      "statements": [
+        {
+          "key": "element-maps-to-commons-concept",
+          "label": "Every data element maps to a WHO Commons concept",
+          "conformance": "SHALL",
+          "requirement": "Every logical model data element SHALL map to a concept in the WHO Commons glossary. Where no concept exists, a draft concept SHALL be raised rather than the mapping omitted.",
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "commons/govern-concepts"
+            }
+          ]
+        },
+        {
+          "key": "draft-concepts-block-release",
+          "label": "Draft concepts block release",
+          "conformance": "SHALL",
+          "requirement": "An Implementation Guide SHALL NOT be released while any data element maps only to a draft concept.",
+          "dependsOn": [
+            "element-maps-to-commons-concept"
+          ]
+        },
+        {
+          "key": "identifier-grammar-consistent",
+          "label": "Identifier derivation is consistent across guidelines",
+          "conformance": "SHALL",
+          "requirement": "The transformation from a dotted DAK data element identifier to a resource identifier SHALL follow one documented grammar across all guidelines. Resource ids SHALL match the regular expression in authoring_conventions.md and SHALL NOT contain a dot, which the publisher treats as a path separator.",
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "commons/govern-identifiers"
+            }
+          ]
+        },
+        {
+          "key": "traceability-convention-single",
+          "label": "One traceability convention",
+          "conformance": "SHALL",
+          "requirement": "Traceability from an L3 element to its source concept SHALL use one convention across all guidelines. A model using one convention scores zero against a checker expecting the other, so the choice SHALL be recorded in the registry and not left per-model.",
+          "actors": [
+            "commons-steward"
+          ],
+          "meta": {
+            "status": "open",
+            "note": "The proof of concept proposes ^code into the guideline concept CodeSystem with ConceptMaps for external systems. Unratified. No conformance checker can be written until this is settled."
+          }
+        },
+        {
+          "key": "reuse-before-create",
+          "label": "Search for reuse before creating",
+          "conformance": "SHOULD",
+          "requirement": "Before creating a profile, extension, value set or code system, existing artifacts SHOULD be searched in priority order: other SMART Guidelines Implementation Guides, balloted HL7 international content, IHE, HL7 national guides, then others. Divergence SHOULD be visible as a diff rather than absorbed locally.",
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "commons/govern-identifiers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "req:content-lifecycle",
+      "title": "Content lifecycle gates",
+      "description": "The five actions that cannot be completed by an agent alone. Gates sit only where an action is hard to undo; everything cheap and reversible runs freely. A gate on a cheap action is friction that teaches people to click through gates.",
+      "actors": [
+        "l2-dak-expert",
+        "l3-ig-expert",
+        "commons-steward",
+        "content-reviewer",
+        "programme-manager"
+      ],
+      "statements": [
+        {
+          "key": "write-is-a-diff",
+          "label": "Every file write is proposed as a diff",
+          "conformance": "SHALL",
+          "requirement": "An agent SHALL NOT write to the working tree directly. Every proposed change SHALL be presented as a diff against the current content, and SHALL land only on an explicit apply action by a person. What a model proposed and what a person accepted SHALL remain separate records.",
+          "satisfiedBy": [
+            {
+              "kind": "requirement-statement",
+              "ref": "req:content-lifecycle#write-is-a-diff"
+            }
+          ]
+        },
+        {
+          "key": "publisher-run-confirmed",
+          "label": "IG Publisher runs only on explicit confirmation",
+          "conformance": "SHALL",
+          "requirement": "Invoking the IG Publisher SHALL require explicit confirmation and SHALL be serialised behind a lock. The run costs minutes and a 6 GB JVM; it is not a background convenience.",
+          "actors": [
+            "l3-ig-expert",
+            "qc-reviewer"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "capability",
+              "ref": "ig-publisher"
+            }
+          ]
+        },
+        {
+          "key": "regeneration-conflict",
+          "label": "Regeneration stops before overwriting hand-edited content",
+          "conformance": "SHALL",
+          "requirement": "A regeneration that would overwrite hand-edited FSH or any other hand-authored artifact SHALL stop and ask. It SHALL NOT silently reconcile, and SHALL NOT choose a winner on the agent's own judgment.",
+          "actors": [
+            "l3-ig-expert"
+          ]
+        },
+        {
+          "key": "l2-to-l3-transform",
+          "label": "L2 content is reviewed before transformation",
+          "conformance": "SHALL",
+          "requirement": "L2 content SHALL be declared ready and confirmed by a Content Reviewer before L3 transformation begins. Transformation of unreviewed L2 propagates defects into artifacts that are more expensive to correct.",
+          "actors": [
+            "content-reviewer"
+          ],
+          "dependsOn": [
+            "write-is-a-diff"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l2/validate-business-processes"
+            }
+          ]
+        },
+        {
+          "key": "commons-concepts-resolved",
+          "label": "Draft concepts block release",
+          "conformance": "SHALL",
+          "requirement": "Release SHALL be authorised by the Commons and Governance Steward. Every logical model data element SHALL map to a WHO Commons concept. Draft concepts are permitted during authoring and SHALL block release.",
+          "actors": [
+            "commons-steward",
+            "programme-manager"
+          ],
+          "dependsOn": [
+            "l2-to-l3-transform"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "commons/govern-concepts"
+            }
+          ]
+        },
+        {
+          "key": "fidelity-not-auto-passed",
+          "label": "Fidelity is never auto-passed",
+          "conformance": "SHALL",
+          "requirement": "Tier 3 fidelity — whether an L3 artifact faithfully represents its L2 source — SHALL NOT be marked passed by any automated check. A validation report SHALL record it as requiring a human ruling until a person rules on it. Mechanical checks verify form; none of them verifies meaning.",
+          "dependsOn": [
+            "l2-to-l3-transform"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "req:l2-business-processes-dod",
+      "title": "Definition of done: L2 business processes",
+      "description": "Output criteria for the business process component of a DAK. Derived from l2_dak_authoring.md sections 2.1.4 and 2.1.5 and from l2_templates.md, which mandate BPMN and state why the choice of modeller matters downstream.",
+      "derivedFrom": [
+        "req:content-lifecycle"
+      ],
+      "actors": [
+        "l2-dak-expert",
+        "business-analyst",
+        "clinical-sme"
+      ],
+      "meta": {
+        "sopSource": "input/pagecontent/l2_dak_authoring.md",
+        "tier": "T2"
+      },
+      "statements": [
+        {
+          "key": "bpmn-standard",
+          "label": "Diagrams follow the BPMN standard",
+          "conformance": "SHALL",
+          "requirement": "Business process diagrams SHALL follow the BPMN standard and SHALL be committed as BPMN 2.0 XML, not only as an exported image.",
+          "meta": {
+            "location": "input/business-processes/bpmn"
+          },
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l2/author-business-processes"
+            }
+          ]
+        },
+        {
+          "key": "bpmn-parses",
+          "label": "BPMN files are well-formed and parse",
+          "conformance": "SHALL",
+          "requirement": "Each BPMN file SHALL be well-formed XML conforming to the BPMN 2.0 schema, and SHALL contain at least one process element.",
+          "dependsOn": [
+            "bpmn-standard"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l2/validate-business-processes"
+            }
+          ]
+        },
+        {
+          "key": "overview-diagram",
+          "label": "An overview diagram of key business processes exists",
+          "conformance": "SHALL",
+          "requirement": "A diagram reflecting the overview of key business processes for the health area SHALL exist, in addition to the specific diagram for each business process.",
+          "dependsOn": [
+            "bpmn-standard"
+          ]
+        },
+        {
+          "key": "activity-identifiers",
+          "label": "Every activity carries a stable identifier",
+          "conformance": "SHALL",
+          "requirement": "Each activity node SHALL carry a stable activity identifier and a human-readable name. These identifiers are what the data dictionary, decision logic and indicator components reference, and what L3 traceability is carried on.",
+          "dependsOn": [
+            "bpmn-parses"
+          ]
+        },
+        {
+          "key": "lane-names-persona",
+          "label": "Every lane names a declared persona",
+          "conformance": "SHALL",
+          "requirement": "Each lane SHALL correspond to a generic persona declared in the DAK. A lane naming an undeclared persona SHALL raise a flag routed to the L2 authors rather than being silently accepted.",
+          "dependsOn": [
+            "bpmn-parses"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l2/validate-business-processes"
+            }
+          ]
+        },
+        {
+          "key": "cross-component-references-resolve",
+          "label": "Activity references from other components resolve",
+          "conformance": "SHALL",
+          "requirement": "Every activity identifier referenced by the data dictionary, decision support logic, scheduling logic or indicator components SHALL exist in some business process diagram. An unresolved reference SHALL fail and SHALL name the referencing row as evidence.",
+          "dependsOn": [
+            "activity-identifiers"
+          ],
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l2/validate-business-processes"
+            }
+          ]
+        },
+        {
+          "key": "tooling-metadata-preserved",
+          "label": "Exported BPMN retains the metadata L3 needs",
+          "conformance": "SHOULD",
+          "requirement": "The modelling tool used should produce BPMN files that contain the structure and metadata needed for drafting related L3 content. Camunda Modeler is recommended for this reason.",
+          "dependsOn": [
+            "bpmn-standard"
+          ]
+        },
+        {
+          "key": "sme-validated",
+          "label": "Processes are validated by subject matter experts",
+          "conformance": "SHALL",
+          "requirement": "Business processes SHALL be reviewed and validated by clinical subject matter experts before the L2 content is declared ready for transformation.",
+          "actors": [
+            "clinical-sme"
+          ],
+          "dependsOn": [
+            "overview-diagram"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "req:l3-processes-dod",
+      "title": "Definition of done: business processes as PlanDefinitions",
+      "description": "The output criteria from the Business Processes SOP, expressed as checkable statements. Statement text is taken from the SOP; where the SOP says SHALL this file says SHALL, and where it says should this file says SHOULD.",
+      "derivedFrom": [
+        "req:content-lifecycle"
+      ],
+      "actors": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "qc-reviewer"
+      ],
+      "meta": {
+        "sopSource": "input/pagecontent/l3_processes.md",
+        "tier": "T2"
+      },
+      "statements": [
+        {
+          "key": "process-has-plandefinition",
+          "label": "Every business process has a PlanDefinition",
+          "conformance": "SHALL",
+          "requirement": "Each Business Process SHALL have a corresponding PlanDefinition.",
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l3/author-processes"
+            }
+          ]
+        },
+        {
+          "key": "conforms-crmi-shareable",
+          "label": "Conforms to CRMIShareablePlanDefinition",
+          "conformance": "SHALL",
+          "requirement": "Each PlanDefinition representing a Business Process SHALL conform to the CRMIShareablePlanDefinition profile.",
+          "meta": {
+            "profile": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition"
+          },
+          "dependsOn": [
+            "process-has-plandefinition"
+          ]
+        },
+        {
+          "key": "conforms-crmi-publishable",
+          "label": "Conforms to CRMIPublishablePlanDefinition when active",
+          "conformance": "SHALL",
+          "requirement": "Each active published PlanDefinition representing a Business Process SHALL conform to the CRMIPublishablePlanDefinition profile.",
+          "meta": {
+            "profile": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"
+          },
+          "dependsOn": [
+            "conforms-crmi-shareable"
+          ]
+        },
+        {
+          "key": "required-elements",
+          "label": "Required elements are present",
+          "conformance": "SHALL",
+          "requirement": "Each PlanDefinition representing a Business Process SHALL have: name, a computable name for the process; title, a short user-friendly description; type set to workflow-definition; and description, a detailed description of the process.",
+          "meta": {
+            "elements": [
+              "name",
+              "title",
+              "type",
+              "description"
+            ],
+            "typeFixedValue": "workflow-definition"
+          },
+          "dependsOn": [
+            "process-has-plandefinition"
+          ]
+        },
+        {
+          "key": "action-per-node",
+          "label": "One action per process node",
+          "conformance": "SHOULD",
+          "requirement": "For each node in the business process representing an activity to be performed, the PlanDefinition should have an action element carrying title, description, and participant identifying the expected participants by Persona.",
+          "meta": {
+            "elements": [
+              "action.title",
+              "action.description",
+              "action.participant"
+            ]
+          },
+          "dependsOn": [
+            "required-elements"
+          ]
+        },
+        {
+          "key": "related-action-flow",
+          "label": "Process flow is connected in one direction",
+          "conformance": "SHOULD",
+          "requirement": "Nodes should be connected to indicate process flow using relatedAction with actionId referencing the related activity and relationship giving the type of relationship. The before-start relationship should be favoured, and relationships should only be characterised in one direction.",
+          "meta": {
+            "preferredRelationship": "before-start",
+            "singleDirection": true
+          },
+          "dependsOn": [
+            "action-per-node"
+          ]
+        },
+        {
+          "key": "round-trip-complete",
+          "label": "Round trip is complete in both directions",
+          "conformance": "SHALL",
+          "requirement": "Every BPMN activity node SHALL correspond to exactly one PlanDefinition action, and every PlanDefinition action SHALL correspond to exactly one BPMN activity node. An orphan on either side SHALL fail, and the failure SHALL name the orphaned node or action identifier as evidence.",
+          "meta": {
+            "note": "Not in the SOP. Added by the package as the strongest mechanical proxy for fidelity."
+          },
+          "satisfiedBy": [
+            {
+              "kind": "skill",
+              "ref": "l3/validate-processes"
+            }
+          ],
+          "dependsOn": [
+            "action-per-node"
+          ]
+        },
+        {
+          "key": "no-version-element",
+          "label": "The version element is not set by the author",
+          "conformance": "SHALL NOT",
+          "requirement": "The version element of a PlanDefinition defined in a SMART Guideline SHALL NOT be set by the author. It is set by the publication process.",
+          "meta": {
+            "sopSource": "input/pagecontent/versioning.md"
+          }
+        },
+        {
+          "key": "ig-build-clean",
+          "label": "The IG Publisher build is clean",
+          "conformance": "SHALL",
+          "requirement": "The PlanDefinition SHALL survive an IG Publisher build without new errors or warnings. A clean SUSHI compile SHALL NOT be treated as evidence: identifier, mapping and traceability defects pass SUSHI and appear only in the publisher.",
+          "satisfiedBy": [
+            {
+              "kind": "capability",
+              "ref": "ig-publisher"
+            }
+          ],
+          "dependsOn": [
+            "conforms-crmi-shareable"
+          ]
+        }
+      ]
+    }
+  ],
+  "experts": [
+    {
+      "id": "commons-steward",
+      "name": "Commons and Governance Steward",
+      "path": "ai/experts/commons-steward/EXPERT.md",
+      "role": "commons-steward",
+      "skills": [
+        "commons/govern-concepts",
+        "commons/govern-identifiers"
+      ],
+      "gates": [
+        "write-is-a-diff",
+        "commons-concepts-resolved"
+      ]
+    },
+    {
+      "id": "l2-dak-expert",
+      "name": "L2 DAK Expert",
+      "path": "ai/experts/l2-dak-expert/EXPERT.md",
+      "role": "l2-dak-expert",
+      "skills": [
+        "l2/author-business-processes",
+        "l2/author-data-dictionary",
+        "l2/author-decision-logic",
+        "l2/author-functional-requirements",
+        "l2/author-indicators",
+        "l2/author-non-functional-requirements",
+        "l2/author-personas",
+        "l2/author-scheduling-logic",
+        "l2/author-user-scenarios",
+        "l2/validate-business-processes"
+      ],
+      "gates": [
+        "write-is-a-diff",
+        "l2-to-l3-transform"
+      ]
+    },
+    {
+      "id": "l3-ig-expert",
+      "name": "L3 IG Expert",
+      "path": "ai/experts/l3-ig-expert/EXPERT.md",
+      "role": "l3-ig-expert",
+      "skills": [
+        "l3/author-codesystems",
+        "l3/author-conceptmaps",
+        "l3/author-cql",
+        "l3/author-decisiontables",
+        "l3/author-examples",
+        "l3/author-forms",
+        "l3/author-indicators",
+        "l3/author-libraries",
+        "l3/author-logical-models",
+        "l3/author-personas",
+        "l3/author-processes",
+        "l3/author-profiles",
+        "l3/author-requirements",
+        "l3/author-scenarios",
+        "l3/author-structuremaps",
+        "l3/author-testing",
+        "l3/author-valuesets",
+        "l3/validate-processes"
+      ],
+      "gates": [
+        "write-is-a-diff",
+        "publisher-run-confirmed",
+        "regeneration-conflict",
+        "fidelity-not-auto-passed"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "commons/govern-concepts",
+      "name": "Govern concepts against the WHO Commons glossary",
+      "description": "Resolve every data element to a Commons concept, raise drafts where none exists, and block release while drafts remain.",
+      "path": "ai/skills/commons/govern-concepts/SKILL.md",
+      "expert": "commons-steward",
+      "determinism": "judgment",
+      "roles": [
+        "commons-steward",
+        "terminologist"
+      ],
+      "lifecycleStages": [
+        "author",
+        "validate"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/gov_concepts.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "commons/govern-identifiers",
+      "name": "Govern identifiers, naming and reuse",
+      "description": "Apply one identifier derivation grammar and one reuse search order across guidelines.",
+      "path": "ai/skills/commons/govern-identifiers/SKILL.md",
+      "expert": "commons-steward",
+      "determinism": "judgment",
+      "roles": [
+        "commons-steward",
+        "terminologist"
+      ],
+      "lifecycleStages": [
+        "author",
+        "validate"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/authoring_conventions.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-business-processes",
+      "name": "Author L2 business processes",
+      "description": "Produce the BPMN business process diagrams for a DAK, with stable activity identifiers and lanes that name declared personas.",
+      "path": "ai/skills/l2/author-business-processes/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [
+        "req:l2-business-processes-dod"
+      ],
+      "routingPatterns": [
+        "(author|create|draft).*(business process|bpmn)",
+        "dak.*business process"
+      ],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "specified"
+    },
+    {
+      "id": "l2/author-data-dictionary",
+      "name": "Author the L2 data dictionary",
+      "description": "Populate the core data dictionary workbook: one tab per data structure, with data elements, types, option sets and terminology mappings.",
+      "path": "ai/skills/l2/author-data-dictionary/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-decision-logic",
+      "name": "Author L2 decision support logic",
+      "description": "Populate the decision support logic workbook and its DMN, with inputs, outputs, guidance and a hit policy per table.",
+      "path": "ai/skills/l2/author-decision-logic/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-functional-requirements",
+      "name": "Author L2 functional requirements",
+      "description": "Populate the functional requirements sheet in as-a / I-want / so-that form, keyed to activities.",
+      "path": "ai/skills/l2/author-functional-requirements/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-indicators",
+      "name": "Author L2 indicators",
+      "description": "Populate the indicators and performance metrics workbook with numerator, denominator and disaggregation.",
+      "path": "ai/skills/l2/author-indicators/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-non-functional-requirements",
+      "name": "Author L2 non-functional requirements",
+      "description": "Populate the non-functional requirements sheet against the categories in the template.",
+      "path": "ai/skills/l2/author-non-functional-requirements/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-personas",
+      "name": "Author L2 generic personas",
+      "description": "Identify and describe the generic personas for the health area.",
+      "path": "ai/skills/l2/author-personas/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-scheduling-logic",
+      "name": "Author L2 scheduling logic",
+      "description": "Populate the scheduling logic workbook, where the single output is a communication message.",
+      "path": "ai/skills/l2/author-scheduling-logic/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/author-user-scenarios",
+      "name": "Author L2 user scenarios",
+      "description": "Write the user scenarios showing how personas interact in a typical workflow.",
+      "path": "ai/skills/l2/author-user-scenarios/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l2/validate-business-processes",
+      "name": "Validate L2 business processes",
+      "description": "Check BPMN files parse, carry stable activity identifiers, name declared personas in every lane, and resolve every activity reference made by other DAK components.",
+      "path": "ai/skills/l2/validate-business-processes/SKILL.md",
+      "expert": "l2-dak-expert",
+      "determinism": "deterministic",
+      "roles": [
+        "l2-dak-expert",
+        "business-analyst",
+        "reviewer",
+        "content-reviewer"
+      ],
+      "lifecycleStages": [
+        "validate",
+        "review"
+      ],
+      "satisfies": [
+        "req:l2-business-processes-dod",
+        "req:content-lifecycle#l2-to-l3-transform"
+      ],
+      "routingPatterns": [
+        "validate.*(bpmn|l2 business process)",
+        "(check|verify).*dak.*process"
+      ],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l2_dak_authoring.md",
+      "status": "specified"
+    },
+    {
+      "id": "l3/author-codesystems",
+      "name": "Author code systems",
+      "description": "Create the guideline concept CodeSystem and any supplements needed for designations and properties.",
+      "path": "ai/skills/l3/author-codesystems/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_codesystems.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-conceptmaps",
+      "name": "Author concept maps",
+      "description": "Create one ConceptMap per target code system in the data dictionary terminology mappings.",
+      "path": "ai/skills/l3/author-conceptmaps/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_conceptmaps.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-cql",
+      "name": "Author CQL",
+      "description": "Write the concept, element, decision, indicator and scheduling CQL libraries, using the documented comment tag conventions.",
+      "path": "ai/skills/l3/author-cql/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_cql.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-decisiontables",
+      "name": "Author decision tables as PlanDefinitions",
+      "description": "Turn L2 decision support tables into PlanDefinitions conforming to CPGRecommendationDefinition, with backing CQL.",
+      "path": "ai/skills/l3/author-decisiontables/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_decisiontables.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-examples",
+      "name": "Author example instances",
+      "description": "Create example instances for each definitional artifact, using terminology defined in the guideline.",
+      "path": "ai/skills/l3/author-examples/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_examples.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-forms",
+      "name": "Author questionnaires",
+      "description": "Turn logical models into SDC Questionnaires with the two-step structure map extraction pattern.",
+      "path": "ai/skills/l3/author-forms/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_forms.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-indicators",
+      "name": "Author indicators as Measures",
+      "description": "Turn L2 indicators into FHIR Measures with populations and stratifiers, and the CQL behind them.",
+      "path": "ai/skills/l3/author-indicators/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_indicators.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-libraries",
+      "name": "Author libraries",
+      "description": "Create the FHIR Library resources that carry CQL, with the metadata required by the shareable and publishable profiles.",
+      "path": "ai/skills/l3/author-libraries/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_libraries.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-logical-models",
+      "name": "Author logical models from the data dictionary",
+      "description": "Turn each data dictionary tab into a logical model, one tab to one data structure, with each column mapped to an element property.",
+      "path": "ai/skills/l3/author-logical-models/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_logicalmodels.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-personas",
+      "name": "Author personas as ActorDefinitions",
+      "description": "Turn L2 generic personas into FHIR ActorDefinition resources.",
+      "path": "ai/skills/l3/author-personas/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_personas.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-processes",
+      "name": "Author business processes as PlanDefinitions",
+      "description": "Turn each L2 BPMN business process into a FHIR PlanDefinition, with one action per process node and participants identified by persona.",
+      "path": "ai/skills/l3/author-processes/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [
+        "req:l3-processes-dod"
+      ],
+      "routingPatterns": [
+        "business process.*(plandefinition|l3|fhir)",
+        "bpmn.*(plandefinition|convert|transform)"
+      ],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_processes.md",
+      "status": "specified"
+    },
+    {
+      "id": "l3/author-profiles",
+      "name": "Author profiles and extensions",
+      "description": "Identify reusable profiles and extensions before creating new ones, and give every profile at least one example.",
+      "path": "ai/skills/l3/author-profiles/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_profiles.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-requirements",
+      "name": "Author requirements",
+      "description": "Turn L2 functional and non-functional requirements into FHIR Requirements resources.",
+      "path": "ai/skills/l3/author-requirements/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_requirements.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-scenarios",
+      "name": "Author user scenarios as ExampleScenarios",
+      "description": "Turn L2 user scenarios into FHIR ExampleScenario resources.",
+      "path": "ai/skills/l3/author-scenarios/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_scenarios.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-structuremaps",
+      "name": "Author structure maps",
+      "description": "Create the maps that extract a QuestionnaireResponse into a logical model instance and onward into resources.",
+      "path": "ai/skills/l3/author-structuremaps/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_structuremaps.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-testing",
+      "name": "Author test plans and test data",
+      "description": "Turn L2 test criteria into test plans, test data and test reports.",
+      "path": "ai/skills/l3/author-testing/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_testing.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/author-valuesets",
+      "name": "Author value sets",
+      "description": "Create or reuse ValueSets for the option sets referenced by data elements, following the preferred code system order.",
+      "path": "ai/skills/l3/author-valuesets/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "judgment",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "author"
+      ],
+      "lifecycleStages": [
+        "author"
+      ],
+      "satisfies": [],
+      "routingPatterns": [],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_valuesets.md",
+      "status": "placeholder"
+    },
+    {
+      "id": "l3/validate-processes",
+      "name": "Validate business process PlanDefinitions",
+      "description": "Check generated PlanDefinitions against their definition of done and against the source BPMN, in both directions, and report which findings still need a human.",
+      "path": "ai/skills/l3/validate-processes/SKILL.md",
+      "expert": "l3-ig-expert",
+      "determinism": "deterministic",
+      "roles": [
+        "l3-ig-expert",
+        "fhir-modeller",
+        "qc-reviewer",
+        "reviewer"
+      ],
+      "lifecycleStages": [
+        "validate",
+        "test"
+      ],
+      "satisfies": [
+        "req:l3-processes-dod",
+        "req:content-lifecycle#fidelity-not-auto-passed"
+      ],
+      "routingPatterns": [
+        "validate.*(plandefinition|business process)",
+        "(round.?trip|orphan).*(bpmn|plandefinition)"
+      ],
+      "inputSchema": "./input.schema.json",
+      "outputSchema": "./output.schema.json",
+      "sop": "input/pagecontent/l3_processes.md",
+      "status": "specified"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l3/validate-processes/output.schema.json",
+  "title": "Output: validate business process PlanDefinitions",
+  "description": "A validation report, plus the round-trip counts that make a silently wrong run visible. Constrains the common report schema rather than replacing it.",
+  "type": "object",
+  "required": ["report", "roundTrip"],
+  "additionalProperties": false,
+  "properties": {
+    "report": {
+      "allOf": [
+        { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/validation-report.schema.json" },
+        {
+          "type": "object",
+          "properties": {
+            "tiers": {
+              "type": "object",
+              "properties": {
+                "fidelity": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "const": "requires-human",
+                      "description": "This skill may only ever write requires-human. A human ruling is recorded by amending the report, not by producing one that already claims to have it."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "roundTrip": {
+      "type": "object",
+      "description": "Reported in both directions, on pass as well as on fail. A run that exits clean with implausible counts is the failure mode these controls exist for, and the counts are what make it visible.",
+      "required": ["bpmnNodes", "actions", "orphanNodes", "orphanActions"],
+      "additionalProperties": false,
+      "properties": {
+        "bpmnNodes": { "type": "integer", "minimum": 0, "description": "Activity nodes across all source BPMN files. Gateways and events are out of scope." },
+        "actions": { "type": "integer", "minimum": 0 },
+        "orphanNodes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "BPMN node ids with no corresponding action."
+        },
+        "orphanActions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Action ids with no corresponding BPMN node. These are the more alarming direction: something was invented."
+        },
+        "unresolvedLanes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Lane ids whose persona could not be resolved. Flagged, never guessed."
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json" }
+    },
+    "auditEntries": {
+      "type": "array",
+      "description": "Verdicts to append to each artifact's .qa.json sidecar. Supply the verdict only; the writer stamps hashes, timestamp and commit.",
+      "items": {
+        "type": "object",
+        "required": ["artifact", "criterion", "result"],
+        "properties": {
+          "artifact": { "type": "string" },
+          "criterion": { "type": "string", "description": "Requirement statement key, such as round-trip-complete." },
+          "result": { "enum": ["pass", "fail", "warn", "n/a"] },
+          "severity": { "enum": ["critical", "major", "minor"] },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["location"],
+              "properties": {
+                "location": { "type": "string" },
+                "quote": { "type": "string" }
+              }
+            }
+          },
+          "metrics": { "type": "object", "additionalProperties": { "anyOf": [{ "type": "number" }, { "type": "string" }] } }
+        }
+      }
+    }
+  }
+}

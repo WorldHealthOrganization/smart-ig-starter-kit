@@ -1,0 +1,56 @@
+{
+  "$schema": "../registry.schema.json#/$defs/requirement",
+  "id": "req:content-lifecycle",
+  "title": "Content lifecycle gates",
+  "description": "The five actions that cannot be completed by an agent alone. Gates sit only where an action is hard to undo; everything cheap and reversible runs freely. A gate on a cheap action is friction that teaches people to click through gates.",
+  "actors": ["l2-dak-expert", "l3-ig-expert", "commons-steward", "content-reviewer", "programme-manager"],
+  "statements": [
+    {
+      "key": "write-is-a-diff",
+      "label": "Every file write is proposed as a diff",
+      "conformance": "SHALL",
+      "requirement": "An agent SHALL NOT write to the working tree directly. Every proposed change SHALL be presented as a diff against the current content, and SHALL land only on an explicit apply action by a person. What a model proposed and what a person accepted SHALL remain separate records.",
+      "satisfiedBy": [{ "kind": "requirement-statement", "ref": "req:content-lifecycle#write-is-a-diff" }]
+    },
+    {
+      "key": "publisher-run-confirmed",
+      "label": "IG Publisher runs only on explicit confirmation",
+      "conformance": "SHALL",
+      "requirement": "Invoking the IG Publisher SHALL require explicit confirmation and SHALL be serialised behind a lock. The run costs minutes and a 6 GB JVM; it is not a background convenience.",
+      "actors": ["l3-ig-expert", "qc-reviewer"],
+      "satisfiedBy": [{ "kind": "capability", "ref": "ig-publisher" }]
+    },
+    {
+      "key": "regeneration-conflict",
+      "label": "Regeneration stops before overwriting hand-edited content",
+      "conformance": "SHALL",
+      "requirement": "A regeneration that would overwrite hand-edited FSH or any other hand-authored artifact SHALL stop and ask. It SHALL NOT silently reconcile, and SHALL NOT choose a winner on the agent's own judgment.",
+      "actors": ["l3-ig-expert"]
+    },
+    {
+      "key": "l2-to-l3-transform",
+      "label": "L2 content is reviewed before transformation",
+      "conformance": "SHALL",
+      "requirement": "L2 content SHALL be declared ready and confirmed by a Content Reviewer before L3 transformation begins. Transformation of unreviewed L2 propagates defects into artifacts that are more expensive to correct.",
+      "actors": ["content-reviewer"],
+      "dependsOn": ["write-is-a-diff"],
+      "satisfiedBy": [{ "kind": "skill", "ref": "l2/validate-business-processes" }]
+    },
+    {
+      "key": "commons-concepts-resolved",
+      "label": "Draft concepts block release",
+      "conformance": "SHALL",
+      "requirement": "Release SHALL be authorised by the Commons and Governance Steward. Every logical model data element SHALL map to a WHO Commons concept. Draft concepts are permitted during authoring and SHALL block release.",
+      "actors": ["commons-steward", "programme-manager"],
+      "dependsOn": ["l2-to-l3-transform"],
+      "satisfiedBy": [{ "kind": "skill", "ref": "commons/govern-concepts" }]
+    },
+    {
+      "key": "fidelity-not-auto-passed",
+      "label": "Fidelity is never auto-passed",
+      "conformance": "SHALL",
+      "requirement": "Tier 3 fidelity — whether an L3 artifact faithfully represents its L2 source — SHALL NOT be marked passed by any automated check. A validation report SHALL record it as requiring a human ruling until a person rules on it. Mechanical checks verify form; none of them verifies meaning.",
+      "dependsOn": ["l2-to-l3-transform"]
+    }
+  ]
+}

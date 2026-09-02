@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l2/validate-business-processes/input.schema.json",
+  "title": "Input: validate L2 business processes",
+  "type": "object",
+  "required": ["bpmnFiles"],
+  "additionalProperties": false,
+  "properties": {
+    "bpmnFiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Paths to BPMN 2.0 XML files, normally input/business-processes/bpmn."
+    },
+    "personas": {
+      "type": "array",
+      "description": "Declared generic personas. Omitting these does not make the lane check pass; it makes every lane unresolved.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "referencingComponents": {
+      "type": "array",
+      "description": "Other DAK components that reference activity identifiers, so references can be checked in both directions.",
+      "items": {
+        "type": "object",
+        "required": ["component", "path"],
+        "properties": {
+          "component": {
+            "enum": ["data-dictionary", "decision-logic", "scheduling-logic", "indicators", "functional-requirements"]
+          },
+          "path": { "type": "string" },
+          "activityIdColumn": {
+            "type": "string",
+            "description": "Column header holding the activity identifier, where it differs from the template default."
+          }
+        }
+      }
+    },
+    "dakRoot": { "type": "string", "default": "." }
+  }
+}

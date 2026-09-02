@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/schemas/common/audit-entry.schema.json",
+  "title": "Audit sidecar",
+  "description": "One <artifact>.qa.json sits beside each artifact. Adapted from folio-assistant's block-qa/v1. Entries are append-only and are NOT deduplicated: script, agent and human verdicts co-exist. The current verdict for a criterion is the most recent entry whose fieldHash matches the present sources; if none matches, the criterion is stale and needs re-auditing, which is the design working rather than a fault. The trail is a by-product of doing the work, not written up afterwards.",
+  "type": "object",
+  "required": ["schemaVersion", "artifact", "sources", "criteria", "updatedAt"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "sg-audit/v1" },
+    "artifact": { "type": "string", "description": "Path to the artifact this sidecar describes." },
+    "sources": {
+      "type": "object",
+      "description": "The inputs the artifact derives from, by role. Keys are stable names such as bpmn, dictionary, skill.",
+      "additionalProperties": { "type": "string" }
+    },
+    "sourceHashes": {
+      "$ref": "#/$defs/hashSet",
+      "description": "Twelve-character SHA-256 prefixes of the sources at the time of the most recent write."
+    },
+    "criteria": {
+      "type": "object",
+      "description": "Keyed by requirement statement key or checker-defined criterion id. Each value is the append-only list of verdicts for that criterion, oldest first.",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "$ref": "#/$defs/entry" }
+      }
+    },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+
+  "$defs": {
+    "hashSet": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[0-9a-f]{12}$" }
+    },
+
+    "reviewer": {
+      "type": "object",
+      "description": "Who produced this verdict. The three kinds are not interchangeable and the record must not blur them.",
+      "required": ["kind", "id"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": ["script", "agent", "human"],
+          "description": "script: a deterministic checker, reproducible. agent: model-driven, not deterministic. human: final authority."
+        },
+        "id": { "type": "string", "description": "Script path, agent skill id, or user login." },
+        "version": { "type": "string" },
+        "scriptHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$",
+          "description": "SHA-256 prefix of the checker's own source at audit time. A mismatch means the checker's logic changed, so its past verdicts have expired too."
+        },
+        "scriptCommit": { "type": "string", "description": "Full commit SHA of the last change to the checker. Audit trail only." },
+        "model": { "type": "string", "description": "Model id, when kind is agent." },
+        "session": { "type": "string" },
+        "skill": { "type": "string", "description": "Skill id the reviewer ran under." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "agent" } }, "required": ["kind"] },
+          "then": {
+            "required": ["model"],
+            "description": "An agent verdict without a model id cannot be reproduced or discounted later."
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "script" } }, "required": ["kind"] },
+          "then": { "required": ["scriptHash"] }
+        }
+      ]
+    },
+
+    "entry": {
+      "type": "object",
+      "required": ["fieldHash", "result", "reviewer", "reviewedAt"],
+      "additionalProperties": false,
+      "properties": {
+        "fieldHash": {
+          "$ref": "#/$defs/hashSet",
+          "description": "Source hashes at the moment of this verdict. This is what pins the verdict: edit a source and every verdict derived from it goes stale on its own, with no bookkeeping."
+        },
+        "result": { "enum": ["pass", "fail", "warn", "n/a"] },
+        "severity": { "enum": ["critical", "major", "minor"] },
+        "evidence": {
+          "type": "array",
+          "description": "Required on a failing verdict. A failure that cannot point at anything is itself a defect.",
+          "items": {
+            "type": "object",
+            "required": ["location"],
+            "properties": {
+              "location": { "type": "string", "description": "file:line, a spreadsheet cell, or an element id." },
+              "quote": { "type": "string", "description": "Verbatim text from the source." }
+            }
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": { "anyOf": [{ "type": "number" }, { "type": "string" }] },
+          "description": "Checker-defined counts. Worth recording even on a pass: a clean run with implausible numbers is the failure mode these controls exist for."
+        },
+        "reviewer": { "$ref": "#/$defs/reviewer" },
+        "reviewedAt": { "type": "string", "format": "date-time" },
+        "reviewedSha": { "type": "string", "description": "Repository HEAD at audit time." },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "result": { "const": "fail" } }, "required": ["result"] },
+          "then": { "required": ["evidence"] }
+        }
+      ]
+    }
+  },
+
+  "examples": [
+    {
+      "schemaVersion": "sg-audit/v1",
+      "artifact": "input/plandefinitions/PlanDefinition-IMMZB1.json",
+      "sources": {
+        "bpmn": "input/business-processes/bpmn/IMMZ.B1.bpmn",
+        "skill": "ai/skills/l3/author-processes/SKILL.md"
+      },
+      "sourceHashes": { "bpmn": "3f9a1c8e2b04", "skill": "aa71b30cd915" },
+      "criteria": {
+        "round-trip-complete": [
+          {
+            "fieldHash": { "bpmn": "3f9a1c8e2b04", "skill": "aa71b30cd915" },
+            "result": "pass",
+            "metrics": { "bpmnNodes": 12, "actions": 12, "orphanNodes": 0, "orphanActions": 0 },
+            "reviewer": {
+              "kind": "script",
+              "id": "ai/skills/l3/validate-processes",
+              "scriptHash": "c02d84fe1a37"
+            },
+            "reviewedAt": "2026-08-27T09:20:41Z",
+            "reviewedSha": "286b2a48f1c9d0b7a3e5426889fbb1204c7de315"
+          }
+        ],
+        "fidelity": [
+          {
+            "fieldHash": { "bpmn": "3f9a1c8e2b04", "skill": "aa71b30cd915" },
+            "result": "warn",
+            "severity": "major",
+            "evidence": [
+              {
+                "location": "input/business-processes/bpmn/IMMZ.B1.bpmn#Lane_0x4f2a",
+                "quote": "<bpmn:lane id=\"Lane_0x4f2a\" name=\"Vaccinator\">"
+              }
+            ],
+            "reviewer": {
+              "kind": "agent",
+              "id": "l3/author-processes",
+              "model": "claude-opus-5",
+              "skill": "l3/author-processes"
+            },
+            "reviewedAt": "2026-08-27T09:21:03Z",
+            "notes": "Lane persona does not resolve. Flagged to l2-authors rather than mapped by guess. Fidelity remains a human ruling."
+          }
+        ]
+      },
+      "updatedAt": "2026-08-27T09:21:03Z"
+    }
+  ]
+}

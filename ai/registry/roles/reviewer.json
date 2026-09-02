@@ -1,0 +1,14 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "reviewer",
+  "name": "Reviewer",
+  "type": "person",
+  "description": "Reviews content and leaves comments. Cannot author or push.",
+  "inherits": [
+    "viewer"
+  ],
+  "capabilities": [],
+  "permissions": [
+    "review-comments"
+  ]
+}

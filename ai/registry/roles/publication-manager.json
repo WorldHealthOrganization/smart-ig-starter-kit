@@ -1,0 +1,22 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "publication-manager",
+  "name": "Publication Manager",
+  "type": "person",
+  "description": "Runs the publication process and manages releases.",
+  "inherits": [
+    "author"
+  ],
+  "capabilities": [
+    "ig-publisher"
+  ],
+  "permissions": [
+    "release-management"
+  ],
+  "meta": {
+    "smartBaseAnalog": "SGAuthoring.Persona.PublicationManager",
+    "lifecycle": [
+      "publish"
+    ]
+  }
+}

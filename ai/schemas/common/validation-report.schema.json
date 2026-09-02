@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/schemas/common/validation-report.schema.json",
+  "title": "Validation report",
+  "description": "The output of every validate skill, so results compose across experts. Three tiers, and only the first two are mechanical. A report that marks tier 3 passed is malformed, not reassuring: mechanical checks verify form, and whether an artifact faithfully represents its source is a human ruling.",
+  "type": "object",
+  "required": ["skill", "subject", "generatedAt", "tiers", "outcome"],
+  "additionalProperties": false,
+  "properties": {
+    "skill": { "type": "string", "description": "Skill id that produced this report." },
+    "subject": {
+      "type": "object",
+      "required": ["artifact"],
+      "additionalProperties": false,
+      "properties": {
+        "artifact": { "type": "string", "description": "Path to the artifact validated." },
+        "source": { "type": "string", "description": "Path to the L2 source it was derived from, where applicable." },
+        "sourceHashes": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "pattern": "^[0-9a-f]{12}$" },
+          "description": "Twelve-character SHA-256 prefixes of the inputs at validation time, so this report expires when they change."
+        }
+      }
+    },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "generatedBy": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "enum": ["script", "agent", "human"] },
+        "id": { "type": "string" },
+        "model": { "type": "string" },
+        "session": { "type": "string" }
+      }
+    },
+    "tiers": {
+      "type": "object",
+      "required": ["shape", "conformance", "fidelity"],
+      "additionalProperties": false,
+      "properties": {
+        "shape": {
+          "$ref": "#/$defs/tierResult",
+          "description": "T1. Does the artifact match its output schema."
+        },
+        "conformance": {
+          "$ref": "#/$defs/tierResult",
+          "description": "T2. Definition of done statements, profile conformance, and round-trip completeness."
+        },
+        "fidelity": {
+          "$ref": "#/$defs/fidelityTierResult",
+          "description": "T3. Does the artifact faithfully represent its source. Never auto-passed."
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json" },
+      "description": "Questions raised during validation that are not the validator's to close."
+    },
+    "outcome": {
+      "enum": ["pass", "fail", "requires-human"],
+      "description": "pass is only reachable once a person has ruled on fidelity. A report whose fidelity tier is still pending is requires-human, which is a complete and correct terminal state, not a failure."
+    }
+  },
+
+  "$defs": {
+    "tierResult": {
+      "type": "object",
+      "required": ["result", "checks"],
+      "additionalProperties": false,
+      "properties": {
+        "result": { "enum": ["pass", "fail", "warn", "not-run"] },
+        "checks": { "type": "array", "items": { "$ref": "#/$defs/check" } }
+      }
+    },
+    "fidelityTierResult": {
+      "type": "object",
+      "required": ["result"],
+      "additionalProperties": false,
+      "properties": {
+        "result": {
+          "enum": ["requires-human", "pass", "fail"],
+          "description": "Only a human ruling may set this to pass or fail. An automated validator writes requires-human."
+        },
+        "ruledBy": { "type": "string", "description": "Who ruled. Required when result is not requires-human." },
+        "ruledAt": { "type": "string", "format": "date-time" },
+        "comparisons": {
+          "type": "array",
+          "description": "What the agent presents to the person: source beside output, with its reading of the difference. This is what makes the human step cheap rather than a full re-read.",
+          "items": {
+            "type": "object",
+            "required": ["sourceRef", "outputRef"],
+            "properties": {
+              "sourceRef": { "type": "string" },
+              "sourceQuote": { "type": "string" },
+              "outputRef": { "type": "string" },
+              "outputQuote": { "type": "string" },
+              "reading": { "type": "string", "description": "The agent's argument for why these correspond, or why they do not." },
+              "confidence": { "enum": ["derived", "inferred", "decided"] }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "result": { "enum": ["pass", "fail"] } }, "required": ["result"] },
+          "then": { "required": ["ruledBy", "ruledAt"] }
+        }
+      ]
+    },
+    "check": {
+      "type": "object",
+      "required": ["id", "result"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Requirement statement key where the check comes from one, otherwise a checker-defined id."
+        },
+        "requirement": { "type": "string", "description": "Requirement id, as req:name#statement-key." },
+        "result": { "enum": ["pass", "fail", "warn", "n/a"] },
+        "severity": { "enum": ["critical", "major", "minor"] },
+        "message": { "type": "string" },
+        "evidence": {
+          "type": "array",
+          "description": "Required on any failing check. file:line plus a verbatim quote. A failure with nothing to point at is itself a defect.",
+          "items": {
+            "type": "object",
+            "required": ["location"],
+            "properties": {
+              "location": { "type": "string" },
+              "quote": { "type": "string" }
+            }
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "description": "Checker-defined counts. Useful for the failure mode where a run exits clean with implausible numbers.",
+          "additionalProperties": { "anyOf": [{ "type": "number" }, { "type": "string" }] }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "result": { "const": "fail" } }, "required": ["result"] },
+          "then": { "required": ["evidence", "message"] }
+        }
+      ]
+    }
+  }
+}

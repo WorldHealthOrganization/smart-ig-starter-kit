@@ -1,0 +1,10 @@
+{
+  "$schema": "../registry.schema.json#/$defs/capability",
+  "id": "node-runtime",
+  "name": "Node.js runtime",
+  "description": "Node.js 18 or later. Required by the package maintenance scripts.",
+  "detection": {
+    "method": "command",
+    "value": "node --version"
+  }
+}

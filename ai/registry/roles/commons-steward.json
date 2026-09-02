@@ -1,0 +1,22 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "commons-steward",
+  "name": "Commons and Governance Steward",
+  "type": "person",
+  "description": "Owns what crosses Implementation Guide boundaries: concept governance, identifier grammar, reuse decisions and release authorisation.",
+  "inherits": [
+    "terminologist",
+    "programme-manager",
+    "publication-manager"
+  ],
+  "capabilities": [],
+  "meta": {
+    "expert": true,
+    "skills": "ai/skills/commons",
+    "lifecycle": [
+      "author",
+      "validate",
+      "publish"
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/registry/registry.schema.json",
+  "title": "SMART Guidelines AI-ready package registry",
+  "description": "Shape of registry.json, the generated index an agent loads first, and of the role, capability and requirement files it is built from.",
+  "type": "object",
+  "required": ["schemaVersion", "repository", "generatedFrom", "roles", "capabilities", "requirements", "experts", "skills"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "repository": {
+      "type": "string",
+      "description": "Repository this package ships in, as owner/name."
+    },
+    "generatedFrom": {
+      "type": "string",
+      "description": "Commit SHA the index was generated from. Informational; staleness is detected by regenerating and comparing."
+    },
+    "roles": { "type": "array", "items": { "$ref": "#/$defs/role" } },
+    "capabilities": { "type": "array", "items": { "$ref": "#/$defs/capability" } },
+    "requirements": { "type": "array", "items": { "$ref": "#/$defs/requirement" } },
+    "experts": { "type": "array", "items": { "$ref": "#/$defs/expert" } },
+    "skills": { "type": "array", "items": { "$ref": "#/$defs/skillIndexEntry" } }
+  },
+
+  "$defs": {
+    "conformance": {
+      "enum": ["SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "MAY"],
+      "description": "RFC 2119 strength, matching the FHIR R5 Requirements resource."
+    },
+
+    "role": {
+      "type": "object",
+      "description": "An actor. Experts are roles with meta.expert set; they inherit from the WHO SMART Guidelines authoring personas rather than replacing them.",
+      "required": ["id", "name", "type", "description", "inherits", "capabilities"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "type": { "enum": ["person", "system"] },
+        "description": { "type": "string" },
+        "inherits": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Role ids this role inherits capabilities from. The graph across all roles must be acyclic."
+        },
+        "capabilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capability ids granted directly, in addition to those inherited. These are tools and access rights that can be detected at runtime, and every entry must resolve to a file in registry/capabilities."
+        },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Authority this role carries that no runtime probe can detect — approval-authority, clinical-validation, release-authorization. Kept separate from capabilities because a capability check answers can this machine do it, and a permission answers may this person decide it. Conflating them makes the first check unreliable and the second meaningless."
+        },
+        "meta": {
+          "type": "object",
+          "properties": {
+            "smartBaseAnalog": {
+              "type": "string",
+              "description": "The corresponding SGAuthoring.Persona.* actor in smart-base, where one exists."
+            },
+            "lifecycle": {
+              "type": "array",
+              "items": { "enum": ["plan", "author", "validate", "review", "test", "publish", "feedback", "retire"] }
+            },
+            "expert": { "type": "boolean" },
+            "skills": { "type": "string", "description": "Path to the skill tree this expert bundles." }
+          }
+        }
+      }
+    },
+
+    "capability": {
+      "type": "object",
+      "description": "A tool or permission a skill may require, with a way to detect whether it is present.",
+      "required": ["id", "name", "description", "detection"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "detection": {
+          "type": "object",
+          "required": ["method"],
+          "properties": {
+            "method": { "enum": ["command", "env-var", "file-exists", "mcp-probe", "always"] },
+            "value": { "type": ["string", "null"] }
+          }
+        },
+        "requires": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capability ids this one depends on."
+        }
+      }
+    },
+
+    "requirement": {
+      "type": "object",
+      "description": "A set of conformance statements, mirroring the FHIR R5 Requirements resource so the governance spec is itself a SMART Guidelines artifact.",
+      "required": ["id", "title", "description", "actors", "statements"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "id": { "type": "string", "pattern": "^req:[a-z][a-z0-9-]*$" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "derivedFrom": { "type": "array", "items": { "type": "string" } },
+        "actors": { "type": "array", "items": { "type": "string" } },
+        "meta": { "type": "object" },
+        "statements": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/requirementStatement" }
+        }
+      }
+    },
+
+    "requirementStatement": {
+      "type": "object",
+      "required": ["key", "label", "conformance", "requirement"],
+      "properties": {
+        "key": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "label": { "type": "string" },
+        "conformance": { "$ref": "#/$defs/conformance" },
+        "requirement": {
+          "type": "string",
+          "description": "Full statement text. Where the statement comes from an SOP page, the SOP's own wording and strength are preserved."
+        },
+        "actors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Narrows the parent requirement's actors for this statement only."
+        },
+        "dependsOn": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Keys of statements in the same requirement that must hold first."
+        },
+        "satisfiedBy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "ref"],
+            "properties": {
+              "kind": { "enum": ["skill", "capability", "requirement-statement"] },
+              "ref": { "type": "string" }
+            }
+          }
+        },
+        "meta": { "type": "object" }
+      }
+    },
+
+    "expert": {
+      "type": "object",
+      "description": "Index entry for an expert bundle. The prose lives in experts/<id>/EXPERT.md.",
+      "required": ["id", "name", "path", "role", "skills"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "path": { "type": "string" },
+        "role": { "type": "string", "description": "Role id this expert acts as." },
+        "skills": { "type": "array", "items": { "type": "string" } },
+        "gates": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "skillIndexEntry": {
+      "type": "object",
+      "description": "Index entry generated from a SKILL.md frontmatter block. Carries enough to route without reading the body.",
+      "required": ["id", "name", "description", "path", "expert", "determinism", "roles", "sop", "status"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "path": { "type": "string" },
+        "expert": { "type": "string" },
+        "determinism": { "enum": ["deterministic", "judgment"] },
+        "roles": { "type": "array", "items": { "type": "string" } },
+        "lifecycleStages": { "type": "array", "items": { "type": "string" } },
+        "satisfies": { "type": "array", "items": { "type": "string" } },
+        "routingPatterns": { "type": "array", "items": { "type": "string" } },
+        "inputSchema": { "type": "string" },
+        "outputSchema": { "type": "string" },
+        "sop": {
+          "type": "string",
+          "description": "The standard operating procedure page holding this skill's procedure. The SOP is the single source of truth for narrative; the skill carries the contract around it."
+        },
+        "alsoRead": { "type": "array", "items": { "type": "string" } },
+        "status": {
+          "enum": ["specified", "placeholder"],
+          "description": "Describes the contract, not the narrative. specified: schemas constrain real structure and a requirement file carries the definition of done. placeholder: schemas permit anything and no requirement file exists yet."
+        }
+      }
+    }
+  }
+}

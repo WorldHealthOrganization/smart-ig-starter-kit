@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l2/author-business-processes/output.schema.json",
+  "title": "Output: L2 business processes",
+  "description": "BPMN source files plus the structure L3 depends on, declared explicitly so it can be checked without re-parsing. Required properties follow req:l2-business-processes-dod.",
+  "type": "object",
+  "required": ["processes", "diffs"],
+  "additionalProperties": false,
+  "properties": {
+    "processes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "processId", "name", "isOverview", "activities"],
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "\\.bpmn$",
+            "description": "BPMN 2.0 XML, normally under input/business-processes/bpmn. An exported image is not an output of this skill."
+          },
+          "processId": { "type": "string" },
+          "name": { "type": "string" },
+          "isOverview": {
+            "type": "boolean",
+            "description": "True for the key-business-processes overview. Exactly one process across the set must set this."
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "activityId", "name"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string", "description": "BPMN element id." },
+                "activityId": {
+                  "type": "string",
+                  "description": "The stable DAK activity identifier other components reference. Changing it breaks references in spreadsheets that will not report the breakage."
+                },
+                "name": { "type": "string" },
+                "laneId": { "type": "string" }
+              }
+            }
+          },
+          "lanes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "label"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "label": { "type": "string" },
+                "personaId": {
+                  "type": "string",
+                  "description": "Declared persona this lane names. Absent means unresolved, which is a flag, not a default."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "diffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "action"],
+        "properties": {
+          "path": { "type": "string" },
+          "action": { "enum": ["create", "modify"] }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json" }
+    }
+  }
+}

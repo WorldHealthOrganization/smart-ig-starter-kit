@@ -1,0 +1,24 @@
+{
+  "$schema": "../registry.schema.json#/$defs/role",
+  "id": "l3-ig-expert",
+  "name": "L3 IG Expert",
+  "type": "person",
+  "description": "Authors and validates FHIR artifacts from L2 sources. The L3 half of the transformation: everything downstream of the gate.",
+  "inherits": [
+    "fhir-modeller",
+    "qc-reviewer"
+  ],
+  "capabilities": [
+    "sushi-compiler",
+    "ig-publisher"
+  ],
+  "meta": {
+    "expert": true,
+    "skills": "ai/skills/l3",
+    "lifecycle": [
+      "author",
+      "validate",
+      "test"
+    ]
+  }
+}

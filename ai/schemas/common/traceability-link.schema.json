@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/schemas/common/traceability-link.schema.json",
+  "title": "Traceability link",
+  "description": "One correspondence between an L2 source element and an L3 output element. The set of links for an artifact is what the round-trip check consumes: every source element maps to exactly one output element and back, with no orphans on either side. Links are also what lets a reviewer ask what a given output came from and get an answer rather than an inference.",
+  "type": "object",
+  "required": ["source", "target", "derivation"],
+  "additionalProperties": false,
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": ["kind", "ref"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": ["bpmn-node", "bpmn-lane", "dictionary-row", "decision-rule", "scheduling-rule", "indicator-row", "requirement-row", "narrative"],
+          "description": "What kind of L2 element this is."
+        },
+        "ref": {
+          "type": "string",
+          "description": "Stable reference: a BPMN element id, a spreadsheet sheet and row, or a data element id such as IMMZ.C.DE1."
+        },
+        "file": { "type": "string" },
+        "label": { "type": "string", "description": "Human-readable label from the source, for reading the link without opening the DAK." }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["kind", "ref"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": ["resource", "element", "action", "concept", "action-participant"],
+          "description": "What kind of L3 element this is."
+        },
+        "ref": {
+          "type": "string",
+          "description": "FHIRPath into the generated resource, or a canonical URL."
+        },
+        "file": { "type": "string" },
+        "resourceType": { "type": "string" }
+      }
+    },
+    "derivation": {
+      "enum": ["derived", "inferred", "decided"],
+      "description": "derived: mechanically produced from the source with no choice involved. inferred: produced by a rule that could reasonably have gone another way. decided: the source is silent and a person or agent chose. The third category is the one that matters — almost every difference between a generated model and a hand-authored one is a decision the source does not contain, and recording which links are decisions is what makes those differences reviewable instead of mysterious."
+    },
+    "rule": {
+      "type": "string",
+      "description": "The transformation rule applied, where the derivation is mechanical."
+    },
+    "note": {
+      "type": "string",
+      "description": "Why, when the derivation is inferred or decided. Expected on anything not derived."
+    },
+    "flagRef": {
+      "type": "string",
+      "description": "Flag id, where the link is provisional pending someone else's answer."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "derivation": { "enum": ["inferred", "decided"] } },
+        "required": ["derivation"]
+      },
+      "then": {
+        "required": ["note"],
+        "description": "A link that is not mechanically derived must say why it is what it is, or the record is no better than no record."
+      }
+    }
+  ],
+  "examples": [
+    {
+      "source": {
+        "kind": "bpmn-node",
+        "ref": "Activity_1qz8k3d",
+        "file": "input/business-processes/bpmn/IMMZ.B1.bpmn",
+        "label": "Check immunization history"
+      },
+      "target": {
+        "kind": "action",
+        "ref": "PlanDefinition.action[2]",
+        "file": "input/plandefinitions/PlanDefinition-IMMZB1.json",
+        "resourceType": "PlanDefinition"
+      },
+      "derivation": "derived",
+      "rule": "one bpmn:task becomes one PlanDefinition.action, in document order"
+    },
+    {
+      "source": {
+        "kind": "bpmn-lane",
+        "ref": "Lane_0a91bc",
+        "file": "input/business-processes/bpmn/IMMZ.B1.bpmn",
+        "label": "Health worker"
+      },
+      "target": {
+        "kind": "action-participant",
+        "ref": "PlanDefinition.action[2].participant[0]",
+        "file": "input/plandefinitions/PlanDefinition-IMMZB1.json"
+      },
+      "derivation": "inferred",
+      "note": "Lane title matched a declared persona by normalised name. The BPMN carries no persona identifier, so the match is by label and could be wrong if two personas share a display name."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://smart.who.int/ig-starter-kit/ai/skills/l2/validate-business-processes/output.schema.json",
+  "title": "Output: validate L2 business processes",
+  "description": "A validation report plus the counts that make a quiet regression visible. This is the evidence the Content Reviewer confirms against at the l2-to-l3-transform gate.",
+  "type": "object",
+  "required": ["report", "coverage"],
+  "additionalProperties": false,
+  "properties": {
+    "report": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/validation-report.schema.json" },
+    "coverage": {
+      "type": "object",
+      "required": ["processes", "activities", "lanes", "references"],
+      "additionalProperties": false,
+      "properties": {
+        "processes": {
+          "type": "object",
+          "required": ["total", "overviewCount"],
+          "properties": {
+            "total": { "type": "integer", "minimum": 0 },
+            "overviewCount": {
+              "type": "integer",
+              "description": "Must be exactly 1. Zero means no overview diagram; more than one means the set disagrees about which it is."
+            },
+            "unparseable": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "activities": {
+          "type": "object",
+          "required": ["total", "missingIdentifier", "duplicateIdentifiers"],
+          "properties": {
+            "total": { "type": "integer", "minimum": 0 },
+            "missingIdentifier": { "type": "array", "items": { "type": "string" } },
+            "duplicateIdentifiers": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Identifiers appearing on more than one activity. These resolve arbitrarily downstream."
+            }
+          }
+        },
+        "lanes": {
+          "type": "object",
+          "required": ["total", "resolved", "unresolved", "ambiguous"],
+          "description": "Three outcomes reported separately. Ambiguous is not a kind of resolved.",
+          "properties": {
+            "total": { "type": "integer", "minimum": 0 },
+            "resolved": { "type": "integer", "minimum": 0 },
+            "unresolved": { "type": "array", "items": { "type": "string" } },
+            "ambiguous": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "references": {
+          "type": "object",
+          "required": ["incoming", "dangling", "unreferencedActivities"],
+          "properties": {
+            "incoming": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Activity references made by other DAK components."
+            },
+            "dangling": {
+              "type": "array",
+              "description": "References to activities that do not exist. Each names its referencing row.",
+              "items": {
+                "type": "object",
+                "required": ["activityId", "component", "location"],
+                "properties": {
+                  "activityId": { "type": "string" },
+                  "component": { "type": "string" },
+                  "location": { "type": "string" }
+                }
+              }
+            },
+            "unreferencedActivities": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Activities no other component references. Not necessarily a defect, but worth seeing."
+            }
+          }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "https://smart.who.int/ig-starter-kit/ai/schemas/common/flag.schema.json" }
+    },
+    "readyForTransform": {
+      "type": "boolean",
+      "description": "True only when every SHALL statement passes. Advisory: the l2-to-l3-transform gate is closed by a Content Reviewer, not by this field."
+    }
+  }
+}
