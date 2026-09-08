@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>L2 Authoring Overview - SMART Guidelines Starter Kit v2.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+      
+<img height="50" style="margin:7px" alt="Welcome on standards website" src="assets/images/h-logo-blue.svg"/>
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-active">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0 - release
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>L2 Authoring Overview</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the SMART IG STARTER KIT (v2.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>L2 Authoring Overview</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#abbreviations" id="markdown-toc-abbreviations">Abbreviations</a></li>
+  <li><a href="#objective-of-this-sop" id="markdown-toc-objective-of-this-sop">Objective of this SOP</a></li>
+  <li><a href="#what-is-a-dak" id="markdown-toc-what-is-a-dak">What is a DAK?</a></li>
+  <li><a href="#why-is-a-dak-needed" id="markdown-toc-why-is-a-dak-needed">Why is a DAK needed?</a></li>
+  <li><a href="#target-audience-for-the-dak" id="markdown-toc-target-audience-for-the-dak">Target audience for the DAK?</a></li>
+  <li><a href="#uses-of-the-dak" id="markdown-toc-uses-of-the-dak">Uses of the DAK</a></li>
+</ul>
+
+</div>
+<p><strong>Standard Operating Procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK)</strong></p>
+
+<h3 id="abbreviations">Abbreviations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Abbreviation</strong></th>
+      <th><strong>Abbreviated term</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANC</td>
+      <td>antenatal care</td>
+    </tr>
+    <tr>
+      <td>BPMN</td>
+      <td>Business Process Model and Notation</td>
+    </tr>
+    <tr>
+      <td>DAK</td>
+      <td>digital adaptation kit</td>
+    </tr>
+    <tr>
+      <td>DHI</td>
+      <td>digital health and innovations</td>
+    </tr>
+    <tr>
+      <td>DMN</td>
+      <td>Decision Model Notation</td>
+    </tr>
+    <tr>
+      <td>HMIS</td>
+      <td>health management information systems</td>
+    </tr>
+    <tr>
+      <td>PCPOSS</td>
+      <td>person-centred point of service system</td>
+    </tr>
+    <tr>
+      <td>SMART</td>
+      <td>standards-based, machine-readable, adaptive, requirements-based and testable</td>
+    </tr>
+    <tr>
+      <td>SME</td>
+      <td>subject matter expert</td>
+    </tr>
+    <tr>
+      <td>SOP</td>
+      <td>standard operating procedure</td>
+    </tr>
+    <tr>
+      <td>TB</td>
+      <td>tuberculosis</td>
+    </tr>
+    <tr>
+      <td>TPT</td>
+      <td>tuberculosis preventive treatment</td>
+    </tr>
+    <tr>
+      <td>UHC</td>
+      <td>universal health coverage</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="objective-of-this-sop">Objective of this SOP</h3>
+<p>The standard operating procedure (SOP) for developing business requirements documentation in the format of WHO SMART guidelines digital adaptation kits (DAK) is intended to guide the WHO SMART Guidelines community who are creating a DAK (e.g., consultants, business analysts, contracted vendors). Authoring a DAK can initially feel overwhelming due to the complexity and the number of components it requires, especially for the first-time authors. This SOP aims to simplify the process by establishing a standardized framework.  Countries and/or organisations intending to develop a DAK should first check if a WHO DAK exists for the health area of interest. If a WHO DAK exists, its content should be adapted to the local needs. In cases where a WHO DAK does not exist, this DAK SOP can be used as a standardized method and tool for countries to develop their own DAK based on local guidelines, policies and requirements.</p>
+
+<h3 id="what-is-a-dak">What is a DAK?</h3>
+<p>WHO SMART Guidelines Digital adaptation kits or “DAKs” are operational, software-neutral, standardized documentation that distil clinical, public health and data use guidance into a format that can be transparently incorporated into digital systems. Information detailed in the DAKs reflect generic workflow processes, data and decision-support algorithms, as derived from specific health interventions and WHO guidelines and other normative products as well as associated publications for specific health areas, including WHO normative guidance, WHO normative products, WHO guidance and their normative statements.</p>
+
+<p>For example, among the documents reviewed for TB DAK we have “<a href="https://iris.who.int/handle/10665/331170"><em>WHO consolidated guidelines on tuberculosis – Module 1: prevention (tuberculosis preventive treatment)</em></a><em>”<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, “</em><a href="https://iris.who.int/handle/10665/340255"><em>WHO consolidated guidelines on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease)</em></a><em>”</em><sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> but also the corresponding operational handbooks <em>“</em><a href="https://iris.who.int/handle/10665/331525"><em>WHO operational handbook on tuberculosis – Module 1: prevention (tuberculosis preventive treatment)</em></a><em>”</em><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and <em>“</em><a href="https://iris.who.int/handle/10665/340256"><em>WHO operational handbook on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease)</em></a><em>”</em><sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> as well as the associated publication <em>“</em><a href="https://iris.who.int/handle/10665/361989"><em>Framework for collaborative action on tuberculosis and comorbidities</em></a><em>”</em><sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</p>
+
+<p>The outputs of the DAKs published by WHO are intentionally generic, as per WHO guidelines and other normative products as well as associated publications for specific health areas, and need to be contextualized to local policies and requirements.</p>
+
+<p>DAKs are only one type of output and artefact within the SMART Guidelines framework. See here for additional details: <a href="https://smart.who.int/">SMART Guidelines</a><sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</p>
+
+<h3 id="why-is-a-dak-needed">Why is a DAK needed?</h3>
+<p>Evidence-based recommendations, such as those featured in WHO guidelines and other normative products, are often only available in a narrative format. Trying to adopt these recommendations in a digital system often results in:</p>
+
+<ul>
+  <li>a resource-intensive process to elaborate the normative statements into specifications needed for digital systems;</li>
+  <li>subjective interpretation by technology partners, which can lead to inaccuracies and inconsistencies;</li>
+  <li>inability to verify clinical content within these systems, potentially leading to adverse health outcomes and other unintended effects.</li>
+</ul>
+
+<p>A DAK outlines the content contained in WHO guidelines and other normative products and publications into a business requirements document to:</p>
+
+<ul>
+  <li>provide a common language and understanding across various audiences, in particular between health programme managers and technology partners, enabling key stakeholders to have a joint understanding of the health content within the digital system, with a transparent mechanism to review the validity and accuracy of the health content;</li>
+  <li>support adherence to evidence-based recommendations with fidelity and facilitate consistent applications and implementation of those recommendations in point-of-service services and applications;</li>
+  <li>provide a starting point for the business requirements gathering process to accelerate the development of a <a href="https://iris.who.int/handle/10665/379452">person-centred point of service system (PCPOSS)</a><sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>, reducing the time and resources needed;</li>
+  <li>provide a benchmark of minimum requirements in a software service or application for the specified scope, enabling stronger governance of digital health interventions in countries.</li>
+</ul>
+
+<h3 id="target-audience-for-the-dak">Target audience for the DAK?</h3>
+
+<p>The primary target audience for a DAK includes:</p>
+
+<ul>
+  <li>
+    <p>Health programme managers, so they can:</p>
+
+    <ul>
+      <li>understand and outline what content should be in a digital person-centred point of service system (PCPOSS)</li>
+      <li>create roadmaps and plan activities needed for the implementation of the clinical practices and policies for the health programme area;</li>
+      <li>estimate costs based on what functions and features need to be in a digital health service and application;</li>
+      <li>oversee and monitor the implementation of the clinical practices and policies for the health programme area via embedded decision support systems used at the point of service.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Digital health team (business analysts, software architects, software developers, quality assurance specialists, software vendors, etc.), so they can:</p>
+
+    <ul>
+      <li>understand health programme requirements;</li>
+      <li>systematically document health programme requirements and processes in a standards-compliant way to support development of PCPOSS;</li>
+      <li>estimate the level of effort for developing a PCPOSS;</li>
+      <li>implement the requirements outlined in a DAK in machine-readable, computable format (i.e., L3: Machine readable guidelines).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The DAK content therefore should keep these audiences in mind and ensure that all DAK components offer:</p>
+
+<ul>
+  <li>easily readable content for people with varying backgrounds and technical knowledge and skills;</li>
+  <li>clarity in outputs expected, including thoughts/annotations for times when there could be confusion or ambiguity;</li>
+  <li>annotations for implementers that can help with the interpretation of guidance wherever applicable.</li>
+</ul>
+
+<h3 id="uses-of-the-dak">Uses of the DAK</h3>
+<p>The DAK may be used across various scenarios, some of which are listed below.</p>
+
+<p><strong>Scenario 1: Incorporating WHO guideline content into existing digital systems</strong></p>
+
+<p>Countries that already have digital systems in place, such as electronic medical records (EMRs), decision-support tools and/or surveillance tools, may use the information in the DAK to cross-check whether the underlying content and data for specific health programme areas are aligned with WHO recommendations. Users of the DAK can identify and extract specific decision support algorithms that would need to be incorporated into their existing digital systems. By reviewing this systematic documentation, health programme managers and implementers can more readily identify differences in workflows, data inputs and decision-support logics to examine the rationale for deviations and understanding local adaptions of global guidelines.</p>
+
+<p><strong>Scenario 2: Transitioning from paper to digital</strong></p>
+
+<p>Some countries may currently have paper-based systems that they would like to digitize. The process of optimizing paper-based client-level systems into digital records with decision support may be overwhelming. Users in this scenario may review the DAK as a starting point for streamlining the necessary data elements and decision support that should be in the optimized client-level digital system. Users may also then refer to the paper-based tools to determine whether there are missing fields or content that should also be included within the digital system.</p>
+
+<p>Additionally, users should also review the WHO <a href="https://iris.who.int/handle/10665/379452">Digital transformation handbook for primary health care</a><sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>, which provides stepwise guidance on how to map data on paper-based forms into a digital system, including ways of accounting for data elements that are redundant or may not add value to the health system.</p>
+
+<p><strong>Scenario 3: Linking aggregate health management information systems (HMIS) to PCPOSS used at point of care</strong></p>
+
+<p>In some instances, countries may already have a digital system for aggregate reporting and HMIS but may not have yet implemented digital systems that function at the service-delivery level. The DAK can guide the development of a PCPOSS that includes an electronic medical (or health) record system, a community-based information system, decision-support system and personal health records that operates at the point of service, or point of care, and ensures that there are linkages between the data collected at the service-delivery levels (e.g. community or facility level) and at the aggregate levels.</p>
+
+<p>As such, a component of the DAK provides aggregate indicators derived from individual-level data to provide the linkage between these different levels (e.g. service delivery at community or facility level and aggregate reporting at district and national level). Complementary guidance dedicated specifically to aggregate-level data, should also be consulted for supporting the use of routine data at the facility management and district levels.</p>
+
+<p><strong>Scenario 4: Leveraging data standards to promote interoperability and integrated systems</strong></p>
+
+<p>The DAK can include data elements mapped to different code systems, such as International Classification of Diseases 11th Revision (ICD-11) codes, International Classification of Diseases 10th Revision (ICD-10) codes, Logical Observation Identifiers Names and Codes  (LOINC), International Classification of Health Interventions (ICHI), International Classification of Functioning, Disability and Health (ICF), and Systematized Nomenclature of Medicine (SNOMED) codes, to support the design of interoperable systems. Therefore, the data dictionary can provide the necessary codes for different data elements, thus reducing the time for implementers to incorporate these global standards into the design of their digital systems. For guidance on developing the third layer of the SMART guidelines and its role in designing interoperable systems, please follow the <a href="authoring_overview.html"><strong>L3 SOP</strong></a>.</p>
+
+<p><strong>Scenario 5: Linking point-of-service systems used at the point of care by health workers to personal health records systems held by individuals</strong></p>
+
+<p>A critical part of service delivery in any health domain relies on engaging with clients. <a href="https://iris.who.int/handle/10665/373581">Digital interventions</a><sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup> aimed at clients themselves – such as on-demand information services, targeted client communication (e.g. transmitting health information and reminders), reporting of health-system feedback by clients on the quality of care, accessing their own medical records/home-based records, and self-monitoring of their health and diagnostic data – are all emerging approaches for complementing the services provided by health workers.</p>
+
+<p><strong>Scenario 6: Updating paper registers</strong></p>
+
+<p>Countries not yet ready to move to digital systems can use the DAK content to update existing paper registers and decision-support tools by simplifying them, reducing data collection and updating paper-based tools to align with the latest evidence-based guidelines and WHO recommendations. Thus, non-digital processes can also be supported by the DAK.</p>
+
+<p><strong>Scenario 7: Establishing benchmark requirements to facilitate governance of digital health systems</strong></p>
+
+<p>The DAK allows for countries to clearly outline software-agnostic baseline expectations and requirements for a digital service and application for a particular use case. The templated format allows for countries to establish their own standards for any digital service and application that is to be implemented in country. The DAK provides a shared language to allow for alignment across all the relevant stakeholders, regardless of which software system is used.</p>
+
+<p><strong>References</strong></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/331170">WHO consolidated guidelines on tuberculosis – Module 1: prevention (tuberculosis preventive treatment). Geneva: World Health Organization; 2020</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/340255">WHO consolidated guidelines on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease). Geneva: World Health Organization; 2021</a>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/331525">WHO operational handbook on tuberculosis – Module 1: prevention (tuberculosis preventive treatment). Geneva: World Health Organization; 2020</a>. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/340256">WHO operational handbook on tuberculosis – Module 2: screening (systematic screening for tuberculosis disease). Geneva: World Health Organization; 2021</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/361989">Framework for collaborative action on tuberculosis and comorbidities. Geneva: World Health Organization; 2022</a>. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p><a href="https://smart.who.int">SMART Guidelines Publications</a>. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/379452">Digital transformation handbook for primary health care: optimizing person-centred point of service systems. Geneva: World Health Organization;2024</a>. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p><a href="https://iris.who.int/handle/10665/373581">Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, 2nd ed.</a>. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Sat, Nov 30, 2024 06:43+0000">2024-11-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="changes.html">Change Log</a>
+                
+| <a style="color: #81BEF7" target="_blank" href="http://smart.who.int/ig-starter-kit/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,30 @@
+# L2 DAK Templates - SMART Guidelines Starter Kit v2.1.0
+
+* [**Table of Contents**](toc.md)
+* [**L2 Authoring Overview**](l2_authoring_overview.md)
+* **L2 DAK Templates**
+
+## L2 DAK Templates
+
+The Digital Adaptation Kit (DAK) consists of 6 documents, 1 narrative document with Excel spreadsheets that cover 5 of the 9 key components of a DAK:
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **File** | **Format** | **Comments** | **Download link** |
+| The “main” DAK document**(this is the template for the final PDF)** | Written in Word document, published in PDF | The template for the “main” DAK document. The narrative text can and should be changed as needed for each specific health domain. However, highlighted throughout the document are places where health domain specificity should be added.The following narrative components: health interventions and recommendations (component 1), generic personas (component 2) and user scenarios (component 3) can be directly edited and drafted within the DAK document template. The generic business processes and workflows diagrams would be generated in another tool, such as[Camunda Modeler](https://camunda.com/download/modeler/). The selected tool should:* be able to import/export .bpmn files;
+* be able to export the diagrams in .bpmn format;
+* not pose issues in terms of licencing.
+The freely available tools we have identified so far, that respect the requirements above are:* [Camunda Modeler](https://camunda.com/download/modeler/) (allows import/export of bpmn files and export as SVG file);
+* [BPMN Editor extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-bpmn-editor) (offline tool that allows import/export of bpmn files and export as SVG file);
+* [Bizagi Modeler](https://portal.bizagi.com/?task=register&tmpl=component&prd=mdl) (offline tool that allows import/export of Visio and .bpmn files);
+* [Cloud application for Jira/Confluence (Atlassian)](https://flower-bpm.com/docs/components/bpmn/coverage) (online application that allows import/export of bpmn files and export as SVG file);
+* [BPMN 2.0 Plugin for Eclipse Java IDE](https://docs.jboss.org/jbpm/v5.3/userguide/ch.eclipse-bpmn-plugin.html).
+**Note: To facilitate the development of downstream layers (L3, L4) it is recommended to use Camunda Modeler because this tool produces .bpmn files that contain the structure and metadata needed for an easier drafting of related L3 content.** | [Digital Adaptation Kit template](Digital Adaptation Kit Template_v2.1.docx) |
+| Core data dictionary | Excel spreadsheet | For the core data elements/data dictionary (component 5), decision-support logic (component 6), scheduling logic (component 7), indicators and performance metrics (component 8), and high-level functional and non-functional requirements (component 9), it is recommended that they are finalized in the Excel spreadsheet first before copying content over into the “main” DAK document.Please refer to each Excel spreadsheet for detailed instructions. |  [Core data dictionary template](DAK_core data dictionary_template_v2.1.xlsx) |
+| Decision-support logic | Excel spreadsheet |  [Decision-support logic template](DAK_decision-support logic_template_v2.1.xlsx) | |
+| Scheduling logic | Excel spreadsheet |  [Scheduling logic template](DAK_scheduling logic_template_v2.1.xlsx) | |
+| Indicators and performance metrics | Excel spreadsheet |  [Indicators and performance metrics template](DAK_indicators and performance metrics_template_v2.1.xlsx) | |
+| High-level functional and non-functional requirements | Excel spreadsheet |  [High-level functional and non-functional requirements template](DAK_high-level functional and non-functional requirements_template_v2.1.xlsx) | |
+
+If you want to download all the templates at once, please download [this archive](DAK_templates_v2.1.zip).
+

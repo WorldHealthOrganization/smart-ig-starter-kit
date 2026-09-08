@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Forms - SMART Guidelines Starter Kit v2.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.3.14"}
+    h3,h4,h5,h6{--heading-prefix:"5.3.14"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L4 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l426">​</a>
+        <a href="l4-compliance.html">L4</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">2.1.0 - ci-build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="authoring_overview.html"><b>L3 Authoring Overview</b></a></li><li><a href="authoring_conventions.html"><b>Authoring Conventions</b></a></li><li><b>Forms</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 2.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/126/merge">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/126/merge</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Forms</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#inputs" id="markdown-toc-inputs"><strong>Inputs</strong></a></li>
+  <li><a href="#outputs" id="markdown-toc-outputs"><strong>Outputs</strong></a></li>
+  <li><a href="#activities" id="markdown-toc-activities"><strong>Activities</strong></a></li>
+  <li><a href="#output-criteria--definition-of-done" id="markdown-toc-output-criteria--definition-of-done"><strong>Output Criteria / Definition of Done</strong></a></li>
+  <li><a href="#change-tracking" id="markdown-toc-change-tracking"><strong>Change tracking</strong></a></li>
+  <li><a href="#tooling" id="markdown-toc-tooling"><strong>Tooling</strong></a></li>
+  <li><a href="#informative-examples" id="markdown-toc-informative-examples"><strong>Informative examples</strong></a></li>
+  <li><a href="#known-issues-and-dependencies" id="markdown-toc-known-issues-and-dependencies"><strong>Known issues and dependencies</strong></a></li>
+</ul>
+
+</div>
+<p>Data used in the different stages of the business processes can be captured from the system, or directly from the user. When data is intended to be captured from the user, a form is created, which in L3 terms corresponds to a Questionnaire.</p>
+
+<p>Since the purpose of the forms is to expose data in a user-friendly manner (and following the L2 DAK data structures), it is expected that several of these forms will result in the data being extracted to FHIR-native resources, like Patient, Observation, Condition, etc.
+This means the L2 data structures are represented both as instances Questionnaires and as FHIR resource profiles, and these FHIR resources can be obtained natively or by extracting a QuestionnaireResponse:
+<img src="./forms_resources.png" style="width:40%"/>
+<br clear="all"/></p>
+
+<p>SMART Guidelines make use of the <a href="http://hl7.org/fhir/uv/sdc">FHIR Structured Data Capture specification</a> to define the common aspects around Questionnaire resources:</p>
+<ul>
+  <li>Design</li>
+  <li>Reuse</li>
+  <li>Data extraction</li>
+</ul>
+
+<p>Forms are reuse other forms and make use of value sets.</p>
+<figure style="width:25em">
+  <svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 391 409" zoomAndPan="magnify" data-diagram-type="CLASS" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs></defs><g>  <!-- class F --><g data-entity="F" id="entity_F" data-uid="ent0002" class="entity" data-source-line="7"><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="192.9688"></rect><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="164.542" x="7" y="28.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#505090;stroke-width:0.5;" fill="none" height="192.9688"></rect><text font-weight="bold" lengthAdjust="spacing" x="68.9341" font-size="14" textLength="40.6738" y="24.9951" font-family="sans-serif" fill="#000000">Form</text><line y1="33.2969" x1="8" y2="33.2969" style="stroke:#505090;stroke-width:0.5;" x2="170.542"></line><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="92.0869" y="56.292" font-family="sans-serif" fill="#000000">identifier 1..*</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="47.7764" y="72.5889" font-family="sans-serif" fill="#000000">url 1..*</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="74.1836" y="88.8857" font-family="sans-serif" fill="#000000">status 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="70.8682" y="105.1826" font-family="sans-serif" fill="#000000">name 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="58.5361" y="121.4795" font-family="sans-serif" fill="#000000">title 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="124.291" y="137.7764" font-family="sans-serif" fill="#000000">experimental 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="109.0059" y="154.0732" font-family="sans-serif" fill="#000000">description 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="60.8877" y="170.3701" font-family="sans-serif" fill="#000000">item 1..*</text><text lengthAdjust="spacing" x="37.4502" font-size="14" textLength="60.8877" y="186.667" font-family="sans-serif" fill="#000000">item 0..*</text><rect width="2" x="22" y="50.4453" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="51.4453" x1="15" y2="51.4453" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="43.2969" x1="15" y2="51.4453" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="66.7422" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="67.7422" x1="15" y2="67.7422" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="51.4453" x1="15" y2="67.7422" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="83.0391" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="84.0391" x1="15" y2="84.0391" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="67.7422" x1="15" y2="84.0391" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="99.3359" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="100.3359" x1="15" y2="100.3359" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="84.0391" x1="15" y2="100.3359" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="115.6328" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="116.6328" x1="15" y2="116.6328" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="100.3359" x1="15" y2="116.6328" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="131.9297" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="132.9297" x1="15" y2="132.9297" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="116.6328" x1="15" y2="132.9297" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="148.2266" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="149.2266" x1="15" y2="149.2266" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="132.9297" x1="15" y2="149.2266" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="164.5234" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="165.5234" x1="15" y2="165.5234" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="149.2266" x1="15" y2="165.5234" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="30" y="180.8203" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="181.8203" x1="23" y2="181.8203" style="stroke:#000000;stroke-width:1;" x2="31"></line><line y1="165.5234" x1="23" y2="181.8203" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="191.9688" x1="8" y2="191.9688" style="stroke:#505090;stroke-width:1;" x2="170.542"></line></g>  <!-- class MF --><g data-entity="MF" id="entity_MF" data-uid="ent0003" class="entity" data-source-line="21"><rect rx="4.5" ry="4.5" width="112.7637" x="272" y="82.5" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="112.7637" x="272" y="82.5" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="112.7637" x="272" y="104.2969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="112.7637" x="272" y="82.5" style="stroke:#505090;stroke-width:0.5;" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="275" font-size="14" textLength="106.7637" y="100.4951" font-family="sans-serif" fill="#000000">Modular form</text><line y1="108.7969" x1="273" y2="108.7969" style="stroke:#505090;stroke-width:0.5;" x2="383.7637"></line><line y1="116.7969" x1="273" y2="116.7969" style="stroke:#505090;stroke-width:0.5;" x2="383.7637"></line></g>  <!-- class VS --><g data-entity="VS" id="entity_VS" data-uid="ent0004" class="entity" data-source-line="23"><rect rx="4.5" ry="4.5" width="76.8135" x="51" y="277" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="76.8135" x="51" y="277" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="76.8135" x="51" y="298.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="76.8135" x="51" y="277" style="stroke:#505090;stroke-width:0.5;" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="54" font-size="14" textLength="70.8135" y="294.9951" font-family="sans-serif" fill="#000000">ValueSet</text><line y1="303.2969" x1="52" y2="303.2969" style="stroke:#505090;stroke-width:0.5;" x2="126.8135"></line><line y1="311.2969" x1="52" y2="311.2969" style="stroke:#505090;stroke-width:0.5;" x2="126.8135"></line></g>  <!-- link F to MF --><g data-entity-2="MF" data-entity-1="F" id="link_F_MF" data-uid="lnk5" class="link" data-source-line="27"><path codeLine="27" d="M172.08,103.5 C205.01,103.5 242.07,103.5 271.86,103.5" style="stroke:#107050;stroke-width:1;" id="F-MF" fill="none"></path><text lengthAdjust="spacing" x="198.7646" font-size="13" textLength="46.814" y="96.5669" font-family="sans-serif" fill="#000000">Reuses</text></g>  <!-- link F to VS --><g data-entity-2="VS" data-entity-1="F" id="link_F_VS" data-uid="lnk6" class="link" data-source-line="35"><path codeLine="35" d="M89.5,200.19 C89.5,229.25 89.5,258.38 89.5,276.98" style="stroke:#107050;stroke-width:1;" id="F-VS" fill="none"></path><text lengthAdjust="spacing" x="98.7646" font-size="13" textLength="56.9575" y="243.0669" font-family="sans-serif" fill="#000000">Contains</text></g><text lengthAdjust="spacing" x="151.3145" font-size="12" textLength="68.707" y="353.4355" font-family="Arial" fill="#000000">Data needs</text><text lengthAdjust="spacing" x="151.3145" font-size="12" textLength="54.7559" y="367.4043" font-family="Arial" fill="#000000">for forms</text><text lengthAdjust="spacing" x="151.3145" font-size="12" textLength="25.6992" y="381.373" font-family="Arial" fill="#000000">(see</text><a xlink:type="simple" xlink:show="new" xlink:title="./diagram_legend.html#data-object-details-with-plantuml" href="./diagram_legend.html#data-object-details-with-plantuml" xlink:actuate="onRequest" title="./diagram_legend.html#data-object-details-with-plantuml" xlink:href="./diagram_legend.html#data-object-details-with-plantuml" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="180.8281" font-size="12" textLength="40.9395" y="381.373" font-family="Arial" fill="#0000FF">legend</text></a><text lengthAdjust="spacing" x="221.7676" font-size="12" textLength="4.6816" y="381.373" font-family="Arial" fill="#000000">)</text></g></svg>
+</figure>
+
+<p>This extraction uses <a href="l3_structuremaps.html">structure maps</a> and is represented as follows:</p>
+<figure style="width:75em; max-width:90%">
+  <svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 933 333" zoomAndPan="magnify" data-diagram-type="CLASS" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs></defs><g>  <!-- cluster RIP --><g data-entity="RIP" id="cluster_RIP" data-uid="ent0010" class="cluster" data-source-line="33"><path d="M747,112 L876.6855,112 A6.75,6.75 0 0 1 881.1855,116.5 L888.1855,134.2969 L922,134.2969 A4.5,4.5 0 0 1 926.5,138.7969 L926.5,200.5 A4.5,4.5 0 0 1 922,205 L747,205 A4.5,4.5 0 0 1 742.5,200.5 L742.5,116.5 A4.5,4.5 0 0 1 747,112" style="stroke:#107050;stroke-width:1.5;" fill="#FFFFFF"></path><line y1="134.2969" x1="742.5" y2="134.2969" style="stroke:#107050;stroke-width:1.5;" x2="888.1855"></line><text font-weight="bold" lengthAdjust="spacing" x="746.5" font-size="14" textLength="132.6855" y="126.9951" font-family="sans-serif" fill="#000000">Resource Bundle</text></g>  <!-- class RI --><g data-entity="RI" id="entity_RI" data-uid="ent0011" class="entity" data-source-line="34"><rect rx="4.5" ry="4.5" width="151.1748" x="759" y="147" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="151.1748" x="759" y="147" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="151.1748" x="759" y="168.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="151.1748" x="759" y="147" style="stroke:#505090;stroke-width:0.5;" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="762" font-size="14" textLength="145.1748" y="164.9951" font-family="sans-serif" fill="#000000">Resource Instance</text><line y1="173.2969" x1="760" y2="173.2969" style="stroke:#505090;stroke-width:0.5;" x2="909.1748"></line><line y1="181.2969" x1="760" y2="181.2969" style="stroke:#505090;stroke-width:0.5;" x2="909.1748"></line></g>  <!-- class LM --><g data-entity="LM" id="entity_LM" data-uid="ent0002" class="entity" data-source-line="8"><rect rx="4.5" ry="4.5" width="114.6436" x="420" y="7" style="stroke:#107050;stroke-width:0.5;" fill="#FFFFFF" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="423" font-size="14" textLength="108.6436" y="24.9951" font-family="sans-serif" fill="#000000">Logical Model</text><line y1="33.2969" x1="421" y2="33.2969" style="stroke:#107050;stroke-width:0.5;" x2="533.6436"></line><line y1="41.2969" x1="421" y2="41.2969" style="stroke:#107050;stroke-width:0.5;" x2="533.6436"></line></g>  <!-- class P --><g data-entity="P" id="entity_P" data-uid="ent0003" class="entity" data-source-line="11"><rect rx="4.5" ry="4.5" width="57.9668" x="805.5" y="7" style="stroke:#107050;stroke-width:0.5;" fill="#FFFFFF" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="808.5" font-size="14" textLength="51.9668" y="24.9951" font-family="sans-serif" fill="#000000">Profile</text><line y1="33.2969" x1="806.5" y2="33.2969" style="stroke:#107050;stroke-width:0.5;" x2="862.4668"></line><line y1="41.2969" x1="806.5" y2="41.2969" style="stroke:#107050;stroke-width:0.5;" x2="862.4668"></line></g>  <!-- class SMQL --><g data-entity="SMQL" id="entity_SMQL" data-uid="ent0004" class="entity" data-source-line="14"><rect rx="4.5" ry="4.5" width="106.1055" x="247.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="#C9FFC9" height="58.5938"></rect><rect rx="4.5" ry="4.5" width="106.1055" x="247.5" y="268" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="42.5938"></rect><rect width="106.1055" x="247.5" y="306.0938" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="106.1055" x="247.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="none" height="58.5938"></rect><text font-weight="bold" lengthAdjust="spacing" x="250.5" font-size="14" textLength="100.1055" y="285.9951" font-family="sans-serif" fill="#000000">StrutureMap</text><text font-weight="bold" lengthAdjust="spacing" x="253.1216" font-size="14" textLength="94.8623" y="302.292" font-family="sans-serif" fill="#000000">QResp → LM</text><line y1="310.5938" x1="248.5" y2="310.5938" style="stroke:#505090;stroke-width:0.5;" x2="352.6055"></line><line y1="318.5938" x1="248.5" y2="318.5938" style="stroke:#505090;stroke-width:0.5;" x2="352.6055"></line></g>  <!-- class SMLR --><g data-entity="SMLR" id="entity_SMLR" data-uid="ent0005" class="entity" data-source-line="17"><rect rx="4.5" ry="4.5" width="117.7402" x="599.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="#C9FFC9" height="58.5938"></rect><rect rx="4.5" ry="4.5" width="117.7402" x="599.5" y="268" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="42.5938"></rect><rect width="117.7402" x="599.5" y="306.0938" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="117.7402" x="599.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="none" height="58.5938"></rect><text font-weight="bold" lengthAdjust="spacing" x="608.3174" font-size="14" textLength="100.1055" y="285.9951" font-family="sans-serif" fill="#000000">StrutureMap</text><text font-weight="bold" lengthAdjust="spacing" x="602.5" font-size="14" textLength="111.7402" y="302.292" font-family="sans-serif" fill="#000000">LM → Instance</text><line y1="310.5938" x1="600.5" y2="310.5938" style="stroke:#505090;stroke-width:0.5;" x2="716.2402"></line><line y1="318.5938" x1="600.5" y2="318.5938" style="stroke:#505090;stroke-width:0.5;" x2="716.2402"></line></g>  <!-- class SMG --><g data-entity="SMG" id="entity_SMG" data-uid="ent0006" class="entity" data-source-line="20"><rect rx="4.5" ry="4.5" width="106.1055" x="423.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="#C9FFC9" height="58.5938"></rect><rect rx="4.5" ry="4.5" width="106.1055" x="423.5" y="268" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="42.5938"></rect><rect width="106.1055" x="423.5" y="306.0938" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="106.1055" x="423.5" y="268" style="stroke:#505090;stroke-width:0.5;" fill="none" height="58.5938"></rect><text font-weight="bold" lengthAdjust="spacing" x="426.5" font-size="14" textLength="100.1055" y="285.9951" font-family="sans-serif" fill="#000000">StrutureMap</text><text font-weight="bold" lengthAdjust="spacing" x="446.1533" font-size="14" textLength="60.7988" y="302.292" font-family="sans-serif" fill="#000000">(Group)</text><line y1="310.5938" x1="424.5" y2="310.5938" style="stroke:#505090;stroke-width:0.5;" x2="528.6055"></line><line y1="318.5938" x1="424.5" y2="318.5938" style="stroke:#505090;stroke-width:0.5;" x2="528.6055"></line></g>  <!-- class Q --><g data-entity="Q" id="entity_Q" data-uid="ent0007" class="entity" data-source-line="23"><rect rx="4.5" ry="4.5" width="117.3848" x="45" y="7" style="stroke:#107050;stroke-width:0.5;" fill="#FFFFFF" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="48" font-size="14" textLength="111.3848" y="24.9951" font-family="sans-serif" fill="#000000">Questionnaire</text><line y1="33.2969" x1="46" y2="33.2969" style="stroke:#107050;stroke-width:0.5;" x2="161.3848"></line><line y1="41.2969" x1="46" y2="41.2969" style="stroke:#107050;stroke-width:0.5;" x2="161.3848"></line></g>  <!-- class QR --><g data-entity="QR" id="entity_QR" data-uid="ent0008" class="entity" data-source-line="26"><rect rx="4.5" ry="4.5" width="193.4277" x="7" y="147" style="stroke:#505090;stroke-width:0.5;" fill="#C9FFC9" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="193.4277" x="7" y="147" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="26.2969"></rect><rect width="193.4277" x="7" y="168.7969" style="stroke:#88DDBB;stroke-width:0.5;" fill="#88DDBB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="193.4277" x="7" y="147" style="stroke:#505090;stroke-width:0.5;" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="10" font-size="14" textLength="187.4277" y="164.9951" font-family="sans-serif" fill="#000000">QuestionnaireResponse</text><line y1="173.2969" x1="8" y2="173.2969" style="stroke:#505090;stroke-width:0.5;" x2="199.4277"></line><line y1="181.2969" x1="8" y2="181.2969" style="stroke:#505090;stroke-width:0.5;" x2="199.4277"></line></g>  <!-- class LMI --><g data-entity="LMI" id="entity_LMI" data-uid="ent0009" class="entity" data-source-line="30"><rect rx="4.5" ry="4.5" width="101.1357" x="427" y="147" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="42.2969"></rect><rect rx="4.5" ry="4.5" width="101.1357" x="427" y="147" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="101.1357" x="427" y="168.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="101.1357" x="427" y="147" style="stroke:#505090;stroke-width:0.5;" fill="none" height="42.2969"></rect><text font-weight="bold" lengthAdjust="spacing" x="430" font-size="14" textLength="95.1357" y="164.9951" font-family="sans-serif" fill="#000000">LM Instance</text><line y1="173.2969" x1="428" y2="173.2969" style="stroke:#505090;stroke-width:0.5;" x2="527.1357"></line><line y1="181.2969" x1="428" y2="181.2969" style="stroke:#505090;stroke-width:0.5;" x2="527.1357"></line></g>  <!-- entity T1 --><g data-entity="T1" id="entity_T1" data-uid="ent0012" class="entity" data-source-line="42"><path d="M240,155 L365.4043,155 C370.4043,155 370.4043,168.1484 370.4043,168.1484 C370.4043,168.1484 370.4043,181.2969 365.4043,181.2969 L240,181.2969 C235,181.2969 235,168.1484 235,168.1484 C235,168.1484 235,155 240,155" style="stroke:#107050;stroke-width:0.5;" fill="#FFFFFF"></path><path d="M365.4043,155 C360.4043,155 360.4043,168.1484 360.4043,168.1484 C360.4043,181.2969 365.4043,181.2969 365.4043,181.2969" style="stroke:#107050;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="253.3506" font-size="14" textLength="79.8027" y="172.9951" font-family="sans-serif" fill="#000000">(transform)</text></g>  <!-- entity T2 --><g data-entity="T2" id="entity_T2" data-uid="ent0013" class="entity" data-source-line="43"><path d="M594,155 L719.4043,155 C724.4043,155 724.4043,168.1484 724.4043,168.1484 C724.4043,168.1484 724.4043,181.2969 719.4043,181.2969 L594,181.2969 C589,181.2969 589,168.1484 589,168.1484 C589,168.1484 589,155 594,155" style="stroke:#107050;stroke-width:0.5;" fill="#FFFFFF"></path><path d="M719.4043,155 C714.4043,155 714.4043,168.1484 714.4043,168.1484 C714.4043,181.2969 719.4043,181.2969 719.4043,181.2969" style="stroke:#107050;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="607.3506" font-size="14" textLength="79.8027" y="172.9951" font-family="sans-serif" fill="#000000">(transform)</text></g>  <!-- link QR to T1 --><g data-entity-2="T1" data-entity-1="QR" id="link_QR_T1" data-uid="lnk14" class="link" data-source-line="45"><path codeLine="45" d="M200.28,168 C215,168 224.43,168 228.89,168" style="stroke:#107050;stroke-width:1;" id="QR-to-T1" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="234.89,168,225.89,164,229.89,168,225.89,172,234.89,168"></polygon></g>  <!-- link T1 to LMI --><g data-entity-2="LMI" data-entity-1="T1" id="link_T1_LMI" data-uid="lnk15" class="link" data-source-line="46"><path codeLine="46" d="M370.16,168 C389.01,168 403.16,168 420.85,168" style="stroke:#107050;stroke-width:1;" id="T1-to-LMI" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="426.85,168,417.85,164,421.85,168,417.85,172,426.85,168"></polygon><text lengthAdjust="spacing" x="390.5" font-size="13" textLength="16.5293" y="161.0669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;</text></g>  <!-- reverse link T1 to SMQL --><g data-entity-2="SMQL" data-entity-1="T1" id="link_T1_SMQL" data-uid="lnk17" class="link" data-source-line="47"><path codeLine="47" d="M302.2162,187.2293 C301.9062,207.0493 301.38,240.71 300.95,267.93" style="stroke:#107050;stroke-width:1;" id="T1-backto-SMQL" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="302.31,181.23,298.1697,190.1663,302.2318,186.2294,306.1688,190.2915,302.31,181.23"></polygon></g>  <!-- link LMI to T2 --><g data-entity-2="T2" data-entity-1="LMI" id="link_LMI_T2" data-uid="lnk18" class="link" data-source-line="49"><path codeLine="49" d="M528.32,168 C547.13,168 562.76,168 582.84,168" style="stroke:#107050;stroke-width:1;" id="LMI-to-T2" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="588.84,168,579.84,164,583.84,168,579.84,172,588.84,168"></polygon><text lengthAdjust="spacing" x="550.5" font-size="13" textLength="16.5293" y="161.0669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;</text></g>  <!-- link T2 to RI --><g data-entity-2="RI" data-entity-1="T2" id="link_T2_RI" data-uid="lnk19" class="link" data-source-line="50"><path codeLine="50" d="M724.08,168 C733,168 741.44,168 752.7,168" style="stroke:#107050;stroke-width:1;" id="T2-to-RI" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="758.7,168,749.7,164,753.7,168,749.7,172,758.7,168"></polygon></g>  <!-- reverse link T2 to SMLR --><g data-entity-2="SMLR" data-entity-1="T2" id="link_T2_SMLR" data-uid="lnk21" class="link" data-source-line="51"><path codeLine="51" d="M656.7838,187.2293 C657.0938,207.0493 657.62,240.71 658.05,267.93" style="stroke:#107050;stroke-width:1;" id="T2-backto-SMLR" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="656.69,181.23,652.8312,190.2915,656.7682,186.2294,660.8303,190.1663,656.69,181.23"></polygon><text lengthAdjust="spacing" x="659.5" font-size="13" textLength="28.9263" y="234.0669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></g>  <!-- link LM to LMI --><g data-entity-2="LMI" data-entity-1="LM" id="link_LM_LMI" data-uid="lnk22" class="link" data-source-line="55"><path codeLine="55" d="M477.5,49.07 C477.5,75.23 477.5,102.73 477.5,128.91" style="stroke:#107050;stroke-width:1;stroke-dasharray:7.0,7.0;" id="LM-to-LMI" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="477.5,146.91,483.5,128.91,471.5,128.91,477.5,146.91"></polygon><text lengthAdjust="spacing" x="478.5" font-size="13" textLength="99.1758" y="92.0669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></g>  <!-- reverse link Q to QR --><g data-entity-2="QR" data-entity-1="Q" id="link_Q_QR" data-uid="lnk24" class="link" data-source-line="56"><path codeLine="56" d="M103.5,67.07 C103.5,93.23 103.5,120.73 103.5,146.91" style="stroke:#107050;stroke-width:1;stroke-dasharray:7.0,7.0;" id="Q-backto-QR" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="103.5,49.07,97.5,67.07,109.5,67.07,103.5,49.07"></polygon></g>  <!-- reverse link P to RI --><g data-entity-2="RI" data-entity-1="P" id="link_P_RI" data-uid="lnk26" class="link" data-source-line="58"><path codeLine="58" d="M834.5,67.07 C834.5,93.23 834.5,120.73 834.5,146.91" style="stroke:#107050;stroke-width:1;stroke-dasharray:7.0,7.0;" id="P-backto-RI" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="834.5,49.07,828.5,67.07,840.5,67.07,834.5,49.07"></polygon></g>  <!-- link SMQL to SMG --><g data-entity-2="SMG" data-entity-1="SMQL" id="link_SMQL_SMG" data-uid="lnk27" class="link" data-source-line="60"><path codeLine="60" d="M353.78,297.5 C375.84,297.5 389.36,297.5 411.4,297.5" style="stroke:#107050;stroke-width:1;" id="SMQL-to-SMG" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="423.4,297.5,417.4,293.5,411.4,297.5,417.4,301.5,423.4,297.5"></polygon><text lengthAdjust="spacing" x="372" font-size="13" textLength="33.0586" y="290.5669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></g>  <!-- reverse link SMG to SMLR --><g data-entity-2="SMLR" data-entity-1="SMG" id="link_SMG_SMLR" data-uid="lnk29" class="link" data-source-line="61"><path codeLine="61" d="M541.63,297.5 C563.45,297.5 576.82,297.5 599.24,297.5" style="stroke:#107050;stroke-width:1;" id="SMG-backto-SMLR" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="529.63,297.5,535.63,301.5,541.63,297.5,535.63,293.5,529.63,297.5"></polygon><text lengthAdjust="spacing" x="548" font-size="13" textLength="33.0586" y="290.5669" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></g></g></svg>
+</figure>
+
+<h3 id="inputs"><strong>Inputs</strong></h3>
+<ul>
+  <li>Logical model</li>
+  <li>ValueSets associated with logical model</li>
+</ul>
+
+<h3 id="outputs"><strong>Outputs</strong></h3>
+<ul>
+  <li>Questionnaires</li>
+  <li>
+    <p>Example QuestionnaireResponses for testing</p>
+  </li>
+  <li>Questionnaires elements may link to the data elements in the common definitions, when those common definitions exist
+    <ul>
+      <li>Note that this can conflict with the definition-based extraction described below</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="activities"><strong>Activities</strong></h3>
+
+<p>For each data element in the logical model (i.e. in the data dictionary)</p>
+
+<ul>
+  <li>For extracting data, ensure the Questionnaire is an instance of <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap">SDC extractable questionnaire profile</a>
+    <ul>
+      <li>For StructureMap extraction, the extension <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">Target Structure Map</a> needs to be present. See <a href="l3_structuremaps.html">Authoring StructureMaps</a> for authoring of structuremaps.</li>
+    </ul>
+  </li>
+  <li>The Questionnaire shall indicate what is the StructureMap that should be used for extracting the data, using the <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"><code class="language-plaintext highlighter-rouge">targetStructureMap</code></a> extension.</li>
+  <li>Define the questionnaire extraction in 2 steps -
+    <ol>
+      <li>transform a QuestionnaireResponse to a logical model instance ;</li>
+      <li>transform a logical model instance into the FHIR resources. 
+These shall be 2 StructureMaps, and a third StructureMap that includes these 2 and runs the two transformations one after the other.</li>
+    </ol>
+  </li>
+  <li>The StructureMap that is mentioned in the Questionnaire is the one corresponding to the <strong>combined</strong> transformation.
+    <ul>
+      <li>for example:
+```</li>
+    </ul>
+  </li>
+  <li>extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"</li>
+  <li>extension[=].valueCanonical = "http://worldhealthorganization.github.io/smart-example-immz/StructureMap/IMMZCQRToResources"
+```</li>
+</ul>
+
+<p>StructureMap authoring requires tooling for validation. Please see the tooling section below.</p>
+
+<h3 id="output-criteria--definition-of-done"><strong>Output Criteria / Definition of Done</strong></h3>
+
+<ul>
+  <li>For using the $extract operation, Questionnaires shall have the extension pointing to the StructureMap, and the map should also be present (see <a href="l3_structuremaps.html">Authoring StructureMaps</a>.)</li>
+  <li>Example instances of the QuestionnaireResponses, the corresponding Logical Model instance and the FHIR resources are available (the latter should actually be obtained by running the data extraction).</li>
+  <li>No QA errors in the build</li>
+  <li>Confirmation that extraction is working with the reference extraction tool.</li>
+  <li>Questionnaires SHALL conform to <a href="https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablequestionnaire.html">CRMIShareableQuestionnaire</a></li>
+  <li>Active, published Questionnaires SHALL conform to <a href="https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-publishablequestionnaire.html">CRMIPublishableQuestionnaire</a></li>
+  <li>Questionnaires SHALL conform to <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-computablequestionnaire.html">CPGComputableQuestionnaire</a></li>
+  <li>Questionnaires SHALL conform to <a href="https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></li>
+  <li>Questionnaires SHOULD conform to other <a href="https://hl7.org/fhir/uv/sdc/STU3/artifacts.html#structures-resource-profiles">SDC Questionnaire Profiles</a> if they support other rendering and questionnaire behavior described by SDC.</li>
+</ul>
+
+<h3 id="change-tracking"><strong>Change tracking</strong></h3>
+
+<p>As with all FHIR Conformance resources, change management is critical. Do not set the version element of Questionnaires and StructureMaps defined in the SMART Guideline, the version element will be set by the publication process. See the <a href="versioning.html">versioning</a> topic for more information on change management.</p>
+
+<p>Example instances (QuestionnaireResponse, logical model instance, and FHIR resource instances) may be tracked.</p>
+
+<h3 id="tooling"><strong>Tooling</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Usage</th>
+      <th>Doc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Matchbox</td>
+      <td>Compile FML files; Extract data</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>LHC Form viewer</td>
+      <td>Display questionnaires</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Several SDC-related tools and implementations are available from the <a href="https://confluence.hl7.org/display/FHIRI/SDC+Implementations">HL7 Confluence</a>.</p>
+
+<h3 id="informative-examples"><strong>Informative examples</strong></h3>
+<p><a href="https://worldhealthorganization.github.io/smart-example-immz/artifacts.html#structures-questionnaires">SMART Guidelines - Immunizations (Measles): Questionnaires</a></p>
+
+<h3 id="known-issues-and-dependencies"><strong>Known issues and dependencies</strong></h3>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 30, 2025 13:09+0000">2025-06-30</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues" target="_blank">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="changes.html" target="_blank">Change Log</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues&quot;,&quot;label&quot;:&quot;Issues&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new&quot;,&quot;label&quot;:&quot;New Issue&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;label&quot;:&quot;Change Log&quot;,&quot;url&quot;:&quot;changes.html&quot;}}]" data-repo-name="null" data-repo-source="null" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</body></html>

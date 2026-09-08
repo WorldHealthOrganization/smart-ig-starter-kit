@@ -1,0 +1,20 @@
+{
+  "url" : "http://smart.who.int/ig/smart-ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit",
+  "name" : "SMARTStarterKit",
+  "title" : "DRAFT SMART Guidelines L3 SOP",
+  "description" : "DRAFT SMART Guidelines L3 SOP",
+  "ig-date" : "2021-06-03",
+  "status" : "draft",
+  "package-id" : "smart.who.int.ig-starter-kit",
+  "ig-ver" : "0.2.1",
+  "date" : "Fri, 07 Jun, 2024 14:09:04 +0000",
+  "dateISO8601" : "2024-06-07T14:09:04+00:00",
+  "errs" : 0,
+  "warnings" : 0,
+  "hints" : 1,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 2,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2343390336
+}

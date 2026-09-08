@@ -1,0 +1,114 @@
+[
+  {
+    "id" : "WHO.TRUST.ACTOR",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.ACTOR",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_ACTOR"
+  },
+  {
+    "id" : "WHO.TRUST.DOMAIN",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.DOMAIN",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_DOMAIN"
+  },
+  {
+    "id" : "WHO.TRUST.KEYUSAGE",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.KEYUSAGE",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_KEYUSAGE"
+  },
+  {
+    "id" : "WHO.TRUST.TRANSACTION",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/trust/CodeSystem/WHO.TRUST.TRANSACTION",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_TRANSACTION"
+  },
+  {
+    "id" : "smart.who.int.trust",
+    "type" : "ImplementationGuide",
+    "url" : "http://smart.who.int/trust/ImplementationGuide/smart.who.int.trust",
+    "version" : "1.1.4",
+    "name" : "Trust"
+  },
+  {
+    "id" : "COSEHeader",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/COSEHeader",
+    "version" : "1.1.4",
+    "name" : "COSEHeader"
+  },
+  {
+    "id" : "CWT",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/CWT",
+    "version" : "1.1.4",
+    "name" : "CWT"
+  },
+  {
+    "id" : "CWTPayload",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/CWTPayload",
+    "version" : "1.1.4",
+    "name" : "CWTPayload"
+  },
+  {
+    "id" : "HCert",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/HCert",
+    "version" : "1.1.4",
+    "name" : "HCert"
+  },
+  {
+    "id" : "SchemeInformation",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/SchemeInformation",
+    "version" : "1.1.4",
+    "name" : "SchemeInformation"
+  },
+  {
+    "id" : "SmartHealthLink",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/SmartHealthLink",
+    "version" : "1.1.4",
+    "name" : "SmartHealthLink"
+  },
+  {
+    "id" : "SmartHealthLinkPayload",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/trust/StructureDefinition/SmartHealthLinkPayload",
+    "version" : "1.1.4",
+    "name" : "SmartHealthLinkPayload"
+  },
+  {
+    "id" : "WHO.TRUST.ACTOR",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.ACTOR",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_ACTOR"
+  },
+  {
+    "id" : "WHO.TRUST.DOMAIN",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.DOMAIN",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_DOMAIN"
+  },
+  {
+    "id" : "WHO.TRUST.KEYUSAGE",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.KEYUSAGE",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_KEYUSAGE"
+  },
+  {
+    "id" : "WHO.TRUST.TRANSACTION",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/trust/ValueSet/WHO.TRUST.TRANSACTION",
+    "version" : "1.1.4",
+    "name" : "WHO_TRUST_TRANSACTION"
+  }
+]

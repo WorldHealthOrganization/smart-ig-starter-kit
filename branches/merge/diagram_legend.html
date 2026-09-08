@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>ArchiMate Diagrams Legend - SMART Guidelines Starter Kit v2.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.5"}
+    h3,h4,h5,h6{--heading-prefix:"5.5.0"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Overview</a>
+      </li>
+      <li>
+        <a href="cop.html">SMART Guidelines Community</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Setup
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ig_repositories.html">GitHub Repositories</a>
+      </li>
+      <li>
+        <a href="ig_setup.html">GitHub Setup</a>
+      </li>
+      <li>
+        <a href="ig_configuration.html">Configuration</a>
+      </li>
+      <li>
+        <a href="ig_publication.html">Publication</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L2 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="l2_authoring_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="l2_dak_authoring.html">Authoring a L2 DAK</a>
+      </li>
+      <li>
+        <a href="l2_templates.html">L2 DAK Templates</a>
+      </li>
+      <li>
+        <a href="l2_faq.html">L2 DAK FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L3 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authoring_overview.html">Overview</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Commons and Governance
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="gov_overview.html">Governance overview</a>
+          </li>
+          <li>
+            <a href="gov_concepts.html">Concept Governance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="narrative.html">Authoring Narrative content</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Authoring Artifacts
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="authoring_conventions.html">Authoring Conventions</a>
+          </li>
+          <li>
+            <a href="structure.html">Structure of the SOP IG</a>
+          </li>
+          <li>
+            <a href="l3_personas.html">Personas</a>
+          </li>
+          <li>
+            <a href="l3_scenarios.html">User scenarios</a>
+          </li>
+          <li>
+            <a href="l3_processes.html">Business Processes</a>
+          </li>
+          <li>
+            <a href="l3_logicalmodels.html">Logical Models</a>
+          </li>
+          <li>
+            <a href="l3_valuesets.html">Value Sets</a>
+          </li>
+          <li>
+            <a href="l3_codesystems.html">Code Systems</a>
+          </li>
+          <li>
+            <a href="l3_conceptmaps.html">Concept Maps</a>
+          </li>
+          <li>
+            <a href="l3_profiles.html">Profiles</a>
+          </li>
+          <li>
+            <a href="l3_decisiontables.html">Decision Tables</a>
+          </li>
+          <li>
+            <a href="l3_indicators.html">Indicators</a>
+          </li>
+          <li>
+            <a href="l3_libraries.html">Libraries</a>
+          </li>
+          <li>
+            <a href="l3_cql.html">CQL</a>
+          </li>
+          <li>
+            <a href="l3_forms.html">Forms</a>
+          </li>
+          <li>
+            <a href="l3_structuremaps.html">Structure Maps</a>
+          </li>
+          <li>
+            <a href="l3_testing.html">Testing</a>
+          </li>
+          <li>
+            <a href="l3_requirements.html">Requirements</a>
+          </li>
+          <li>
+            <a href="l3_examples.html">Examples</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="versioning.html">Versioning</a>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">ArchiMate Diagrams
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="diagram_l2_overview.html">L2</a>
+          </li>
+          <li>
+            <a href="diagram_l3_overview.html">L3</a>
+          </li>
+          <li>
+            <a href="diagram_content_types.html">Content Types</a>
+          </li>
+          <li>
+            <a href="diagram_legend.html">Diagrams Legend</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">L4 Authoring
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l426">​</a>
+        <a href="l4-compliance.html">L4</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Validating IG
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="qa_check.html">QA Check</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART Guidelines Starter Kit</span>
+            <br/>
+            <span style="display:inline-block;">2.1.0 - ci-build
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="authoring_overview.html"><b>L3 Authoring Overview</b></a></li><li><b>ArchiMate Diagrams Legend</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART Guidelines Starter Kit, published by WHO. This guide is not an authorized publication; it is the continuous build for version 2.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/126/merge">https://github.com/WorldHealthOrganization/smart-ig-starter-kit/tree/126/merge</a> and changes regularly. See the <a href="http://smart.who.int/ig-starter-kit/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>ArchiMate Diagrams Legend</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#archimate-notation-overview" id="markdown-toc-archimate-notation-overview">ArchiMate Notation Overview</a></li>
+  <li><a href="#artifact-authoring-processes" id="markdown-toc-artifact-authoring-processes">Artifact Authoring Processes</a></li>
+  <li><a href="#data-object-details-with-plantuml" id="markdown-toc-data-object-details-with-plantuml">Data Object Details with PlantUML</a></li>
+</ul>
+
+</div>
+<p>This specification utilizes a subset of ArchiMate notation to visually represent and structure the authoring processes. This distinguishes between the functional description (application layer) and the physical artifacts (technology layer).</p>
+
+<p>This specification uses:</p>
+
+<ol>
+  <li>ArchiMate's layering concept, distinguishing between application and technology layers.</li>
+  <li>ArchiMate relations, namely aggregation, composition, and the labeled "related to" relationship.</li>
+  <li>Representation of starting artifacts as technology artifacts (e.g., files or data objects).</li>
+  <li>Display of processes within the application layer, illustrating how functional processes transform L2 inputs  into L3 outputs.</li>
+</ol>
+
+<h3 id="archimate-notation-overview">ArchiMate Notation Overview</h3>
+
+<h4 id="layers">Layers</h4>
+
+<ul>
+  <li>
+    <p><strong>Application Layer</strong>: Offers a functional description, typically illustrating processes, functions, and services. This is represented by blue elements.</p>
+  </li>
+  <li>
+    <p><strong>Technology Layer</strong>: Represents actual artifacts, like files, resource instances, or other data objects. This is represented by green elements.</p>
+  </li>
+</ul>
+
+<h4 id="relations">Relations</h4>
+
+<p>The relations are represented by arrows</p>
+
+<ul>
+  <li>
+    <p><strong>Aggregation</strong>: Illustrates that an object groups several other objects.</p>
+  </li>
+  <li>
+    <p><strong>Composition</strong>: Indicates that an object is composed of one or more other objects, implying a stronger, "whole-part" relationship compared to aggregation.</p>
+  </li>
+  <li>
+    <p><strong>Access (Read/Write)</strong>: Indicates that a process has an artifact as input, or as output.</p>
+  </li>
+  <li>
+    <p><strong>Related To</strong>: A generic relationship with a label specifying the nature of the connection.</p>
+  </li>
+  <li>
+    <p><strong>Flows to</strong>: A relationship where an activity (process) is followed by another activity</p>
+  </li>
+</ul>
+
+<figure style="width:80em; max-width:90%">
+  <svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 1107 622" zoomAndPan="magnify" data-diagram-type="CLASS" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs></defs><g>  <!-- entity Aggregation --><g data-entity="Aggregation" id="entity_Aggregation" data-uid="ent0002" class="entity" data-source-line="12"><rect rx="4.5" ry="4.5" width="99.9121" x="18.5" y="8.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="28.5" font-size="14" textLength="79.9121" y="31.561" font-family="sans-serif" fill="#000000">Data Model</text></g>  <!-- entity Department --><g data-entity="Department" id="entity_Department" data-uid="ent0003" class="entity" data-source-line="15"><rect rx="4.5" ry="4.5" width="123.1338" x="7" y="181.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="17" font-size="14" textLength="103.1338" y="204.561" font-family="sans-serif" fill="#000000">Data Elements</text></g>  <!-- entity Composition --><g data-entity="Composition" id="entity_Composition" data-uid="ent0004" class="entity" data-source-line="19"><rect rx="4.5" ry="4.5" width="112.4971" x="616.5" y="8.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="626.5" font-size="14" textLength="92.4971" y="31.561" font-family="sans-serif" fill="#000000">Code System</text></g>  <!-- entity Course --><g data-entity="Course" id="entity_Course" data-uid="ent0007" class="entity" data-source-line="25"><rect rx="4.5" ry="4.5" width="77.9004" x="633.5" y="181.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="643.5" font-size="14" textLength="57.9004" y="204.561" font-family="sans-serif" fill="#000000">Concept</text></g>  <!-- entity Access --><g data-entity="Access" id="entity_Access" data-uid="ent0008" class="entity" data-source-line="28"><rect rx="4.5" ry="4.5" width="100.165" x="622.5" y="278.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="52.5938"></rect><text lengthAdjust="spacing" x="632.5" font-size="14" textLength="80.165" y="301.561" font-family="sans-serif" fill="#000000">L2: Generic</text><text lengthAdjust="spacing" x="641.4004" font-size="14" textLength="63.417" y="317.8579" font-family="sans-serif" fill="#000000">Personas</text></g>  <!-- entity Database --><g data-entity="Database" id="entity_Database" data-uid="ent0011" class="entity" data-source-line="34"><rect rx="4.5" ry="4.5" width="127.3994" x="609" y="453.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C2F0FF" height="51.2969"></rect><image width="16" x="665.1997" y="463.5659" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASklEQVR4XmNgGCrgP7oAqQBkAEWG/N/6/z9eQ2CSODHIAHyGwBUQg0HqKTIAmyEYCvBhdM1gAwhhfJqJARRpBgGKNIMARZoHOQAAJeS3ra9owBEAAAAASUVORK5CYII=" height="16"></image><text lengthAdjust="spacing" x="619" font-size="14" textLength="107.3994" y="491.561" font-family="sans-serif" fill="#000000">Create Persona</text></g>  <!-- entity RelatedTo --><g data-entity="RelatedTo" id="entity_RelatedTo" data-uid="ent0012" class="entity" data-source-line="37"><rect rx="4.5" ry="4.5" width="115.8398" x="8.5" y="287.0659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="18.5" font-size="14" textLength="95.8398" y="310.061" font-family="sans-serif" fill="#000000">Data Element</text></g>  <!-- entity Research --><g data-entity="Research" id="entity_Research" data-uid="ent0014" class="entity" data-source-line="45"><rect rx="4.5" ry="4.5" width="82.5215" x="25" y="461.0659" style="stroke:#107050;stroke-width:0.5;" fill="#C9FFC9" height="36.2969"></rect><text lengthAdjust="spacing" x="35" font-size="14" textLength="62.5215" y="484.061" font-family="sans-serif" fill="#000000">ValueSet</text></g>  <!-- entity FlowsTo --><g data-entity="FlowsTo" id="entity_FlowsTo" data-uid="ent0015" class="entity" data-source-line="48"><rect rx="4.5" ry="4.5" width="99.8711" x="16.5" y="565.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C2F0FF" height="51.2969"></rect><image width="16" x="58.9355" y="575.5659" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASklEQVR4XmNgGCrgP7oAqQBkAEWG/N/6/z9eQ2CSODHIAHyGwBUQg0HqKTIAmyEYCvBhdM1gAwhhfJqJARRpBgGKNIMARZoHOQAAJeS3ra9owBEAAAAASUVORK5CYII=" height="16"></image><text lengthAdjust="spacing" x="26.5" font-size="14" textLength="79.8711" y="603.561" font-family="sans-serif" fill="#000000">Create CQL</text></g>  <!-- entity NextActivity --><g data-entity="NextActivity" id="entity_NextActivity" data-uid="ent0018" class="entity" data-source-line="56"><rect rx="4.5" ry="4.5" width="105.4629" x="607" y="565.5659" style="stroke:#107050;stroke-width:0.5;" fill="#C2F0FF" height="51.2969"></rect><image width="16" x="652.2314" y="575.5659" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASklEQVR4XmNgGCrgP7oAqQBkAEWG/N/6/z9eQ2CSODHIAHyGwBUQg0HqKTIAmyEYCvBhdM1gAwhhfJqJARRpBgGKNIMARZoHOQAAJeS3ra9owBEAAAAASUVORK5CYII=" height="16"></image><text lengthAdjust="spacing" x="617" font-size="14" textLength="85.4629" y="603.561" font-family="sans-serif" fill="#000000">NextActivity</text></g>  <!-- link Aggregation to Composition -->  <!-- link Course to Access -->  <!-- link RelatedTo to Access -->  <!-- link Research to FlowsTo -->  <!-- reverse link Aggregation to Department --><g data-entity-2="Department" data-entity-1="Aggregation" id="link_Aggregation_Department" data-uid="lnk19" class="link" data-source-line="63"><path codeLine="63" d="M68.5,56.5859 C68.5,89.2759 68.5,148.5259 68.5,181.3559" style="stroke:#107050;stroke-width:1;" id="Aggregation-backto-Department" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="none" points="68.5,44.5859,64.5,50.5859,68.5,56.5859,72.5,50.5859,68.5,44.5859"></polygon><text lengthAdjust="spacing" x="227.2869" font-size="13" textLength="79.8599" y="87.6328" font-family="sans-serif" fill="#000000">Aggregation</text><text lengthAdjust="spacing" x="145.1323" font-size="13" textLength="240.0366" y="102.7656" font-family="sans-serif" fill="#000000">- Illustrates that an object or process</text><text lengthAdjust="spacing" x="137.4231" font-size="13" textLength="259.5874" y="117.8984" font-family="sans-serif" fill="#000000">groups several other objects/processes.</text><text lengthAdjust="spacing" x="77.7646" font-size="13" textLength="387.1689" y="133.0313" font-family="sans-serif" fill="#000000">Example: A Data model aggregates several Data Elements.</text><text lengthAdjust="spacing" x="93.3132" font-size="13" textLength="347.8071" y="148.1641" font-family="sans-serif" fill="#000000">The Data Elements can exist without the Data Model.</text></g>  <!-- reverse link Composition to Course --><g data-entity-2="Course" data-entity-1="Composition" id="link_Composition_Course" data-uid="lnk20" class="link" data-source-line="64"><path codeLine="64" d="M672.5,56.5859 C672.5,89.2759 672.5,148.5259 672.5,181.3559" style="stroke:#107050;stroke-width:1;" id="Composition-backto-Course" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="672.5,44.5859,668.5,50.5859,672.5,56.5859,676.5,50.5859,672.5,44.5859"></polygon><text lengthAdjust="spacing" x="829.3699" font-size="13" textLength="81.1865" y="87.6328" font-family="sans-serif" fill="#000000">Composition</text><text lengthAdjust="spacing" x="750.5923" font-size="13" textLength="234.6094" y="102.7656" font-family="sans-serif" fill="#000000">- Indicates that an object or process</text><text lengthAdjust="spacing" x="697.3259" font-size="13" textLength="345.2744" y="117.8984" font-family="sans-serif" fill="#000000">is composed of one or more other objects/processes.</text><text lengthAdjust="spacing" x="706.6284" font-size="13" textLength="330.8018" y="133.0313" font-family="sans-serif" fill="#000000">Example: A CodeSystem is composed of Concepts.</text><text lengthAdjust="spacing" x="685.897" font-size="13" textLength="380.5293" y="148.1641" font-family="sans-serif" fill="#000000">If the CodeSystem is deleted, the Concepts cease to exist.</text></g>  <!-- link Access to Database --><g data-entity-2="Database" data-entity-1="Access" id="link_Access_Database" data-uid="lnk21" class="link" data-source-line="65"><path codeLine="65" d="M672.5,331.8159 C672.5,364.7059 672.5,415.2359 672.5,447.5359" style="stroke:#107050;stroke-width:1;" id="Access-to-Database" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="672.5,453.5359,676.5,444.5359,672.5,448.5359,668.5,444.5359,672.5,453.5359"></polygon><text lengthAdjust="spacing" x="820.626" font-size="13" textLength="131.5425" y="382.1328" font-family="sans-serif" fill="#000000">Access (Read/Write)</text><text lengthAdjust="spacing" x="692.3208" font-size="13" textLength="388.1528" y="397.2656" font-family="sans-serif" fill="#000000">- Indicates that a process has an artifact as input or output.</text><text lengthAdjust="spacing" x="677.6323" font-size="13" textLength="421.6621" y="412.3984" font-family="sans-serif" fill="#000000">Example: To Create a Persona has L2 Generic Personas as input.</text></g>  <!-- link RelatedTo to Research --><g data-entity-2="Research" data-entity-1="RelatedTo" id="link_RelatedTo_Research" data-uid="lnk22" class="link" data-source-line="66"><path codeLine="66" d="M66.5,323.1859 C66.5,356.1559 66.5,428.0959 66.5,461.0159" style="stroke:#107050;stroke-width:1;" id="RelatedTo-Research" fill="none"></path><text lengthAdjust="spacing" x="202.4321" font-size="13" textLength="69.9829" y="374.6328" font-family="sans-serif" fill="#000000">Related To</text><text lengthAdjust="spacing" x="159.7219" font-size="13" textLength="151.271" y="389.7656" font-family="sans-serif" fill="#000000">- A generic relationship</text><text lengthAdjust="spacing" x="87.0571" font-size="13" textLength="300.7329" y="404.8984" font-family="sans-serif" fill="#000000">with a label specifying the type of connection.</text><text lengthAdjust="spacing" x="79.897" font-size="13" textLength="327.4502" y="420.0313" font-family="sans-serif" fill="#000000">Example: A ValueSet is related to a Data Element.</text></g>  <!-- link FlowsTo to NextActivity --><g data-entity-2="NextActivity" data-entity-1="FlowsTo" id="link_FlowsTo_NextActivity" data-uid="lnk23" class="link" data-source-line="67"><path codeLine="67" d="M116.55,591.0659 C227.54,591.0659 487.45,591.0659 600.84,591.0659" style="stroke:#107050;stroke-width:1;" id="FlowsTo-to-NextActivity" fill="none"></path><polygon style="stroke:#107050;stroke-width:1;" fill="#107050" points="606.84,591.0659,597.84,587.0659,601.84,591.0659,597.84,595.0659,606.84,591.0659"></polygon><text lengthAdjust="spacing" x="278.0227" font-size="13" textLength="48.8452" y="554.1328" font-family="sans-serif" fill="#000000">Activity</text><text font-weight="bold" lengthAdjust="spacing" x="331.0002" font-size="13" textLength="61.6865" y="554.1328" font-family="sans-serif" fill="#000000">Flows to</text><text lengthAdjust="spacing" x="396.8191" font-size="13" textLength="48.8452" y="554.1328" font-family="sans-serif" fill="#000000">Activity</text><text lengthAdjust="spacing" x="198.1025" font-size="13" textLength="331.6143" y="569.2656" font-family="sans-serif" fill="#000000">- A relationship where one activity follows another.</text><text lengthAdjust="spacing" x="224.001" font-size="13" textLength="304.6113" y="584.3984" font-family="sans-serif" fill="#000000">Example: "Create CQL" flows to "Encode CQL".</text></g></g></svg>
+</figure>
+
+<h4 id="example-diagram">Example Diagram</h4>
+
+<p>The diagram below represents the process for creating an indicator:</p>
+<ul>
+  <li>The input artifact is an L2 definition of an indicator (in a spreadsheet)</li>
+  <li>The main process is to create an L3 Measure artifact</li>
+  <li>To define the Measure, there's a subprocess where the L3 author adds population and stratifiers, by consulting the cqf-measures-guidance.</li>
+  <li>The next step (as part of the Create Measure process) is then to create CQL definitions</li>
+  <li>Following that, the L3 author encodes CQL into libraries.</li>
+  <li>The output of this is the L3 library that is referenced by the Measure resource</li>
+</ul>
+
+<p><img src="./l3_process_indicator.png" style="width:50%"/>
+<br clear="all"/></p>
+
+<h3 id="artifact-authoring-processes">Artifact Authoring Processes</h3>
+
+<p>The diagrams capture the essence of transforming an L2 input into the corresponding L3 artifacts through processes. These processes can use different tooling or technologies; however the criteria for output and for process are defined.</p>
+
+<h3 id="data-object-details-with-plantuml">Data Object Details with PlantUML</h3>
+
+<p>To describe the content L3 authors are supposed to produce, the key content of the output artifacts is modeled with PlantUML diagrams. This diagram summarizes the data that is part of an object definition. For example, the diagram below shows that for a ValueSet, the L3 author is required to have a status, a name, an identifier and a URL.</p>
+
+<figure style="width:15em">
+  <svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 185 217" zoomAndPan="magnify" data-diagram-type="CLASS" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs></defs><g>  <!-- class VS --><g data-entity="VS" id="entity_VS" data-uid="ent0002" class="entity" data-source-line="9"><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#505090;stroke-width:0.5;" fill="#C2F0FF" height="160.375"></rect><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="26.2969"></rect><rect width="164.542" x="7" y="28.7969" style="stroke:#87CEEB;stroke-width:0.5;" fill="#87CEEB" height="4.5"></rect><rect rx="4.5" ry="4.5" width="164.542" x="7" y="7" style="stroke:#505090;stroke-width:0.5;" fill="none" height="160.375"></rect><text font-weight="bold" lengthAdjust="spacing" x="53.8643" font-size="14" textLength="70.8135" y="24.9951" font-family="sans-serif" fill="#000000">ValueSet</text><line y1="33.2969" x1="8" y2="33.2969" style="stroke:#505090;stroke-width:0.5;" x2="170.542"></line><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="92.0869" y="56.292" font-family="sans-serif" fill="#000000">identifier 1..*</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="47.7764" y="72.5889" font-family="sans-serif" fill="#000000">url 1..*</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="74.1836" y="88.8857" font-family="sans-serif" fill="#000000">status 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="70.8682" y="105.1826" font-family="sans-serif" fill="#000000">name 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="58.5361" y="121.4795" font-family="sans-serif" fill="#000000">title 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="124.291" y="137.7764" font-family="sans-serif" fill="#000000">experimental 1..1</text><text lengthAdjust="spacing" x="29.4502" font-size="14" textLength="109.0059" y="154.0732" font-family="sans-serif" fill="#000000">description 1..1</text><rect width="2" x="22" y="50.4453" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="51.4453" x1="15" y2="51.4453" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="43.2969" x1="15" y2="51.4453" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="66.7422" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="67.7422" x1="15" y2="67.7422" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="51.4453" x1="15" y2="67.7422" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="83.0391" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="84.0391" x1="15" y2="84.0391" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="67.7422" x1="15" y2="84.0391" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="99.3359" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="100.3359" x1="15" y2="100.3359" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="84.0391" x1="15" y2="100.3359" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="115.6328" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="116.6328" x1="15" y2="116.6328" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="100.3359" x1="15" y2="116.6328" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="131.9297" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="132.9297" x1="15" y2="132.9297" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="116.6328" x1="15" y2="132.9297" style="stroke:#000000;stroke-width:1;" x2="15"></line><rect width="2" x="22" y="148.2266" style="stroke:#000000;stroke-width:1;" fill="#C2F0FF" height="2"></rect><line y1="149.2266" x1="15" y2="149.2266" style="stroke:#000000;stroke-width:1;" x2="23"></line><line y1="132.9297" x1="15" y2="149.2266" style="stroke:#000000;stroke-width:1;" x2="15"></line><line y1="159.375" x1="8" y2="159.375" style="stroke:#505090;stroke-width:1;" x2="170.542"></line></g><text lengthAdjust="spacing" x="60.1431" font-size="10" textLength="57.2559" y="183.6572" font-family="sans-serif" fill="#000000">Data needs</text><text lengthAdjust="spacing" x="54.8135" font-size="10" textLength="67.915" y="195.2979" font-family="sans-serif" fill="#000000">for value sets</text><text lengthAdjust="spacing" x="57.4648" font-size="10" textLength="21.416" y="206.9385" font-family="sans-serif" fill="#000000">(see</text><a xlink:type="simple" xlink:show="new" xlink:title="./diagram_legend.html#data-object-details-with-plantuml" href="./diagram_legend.html#data-object-details-with-plantuml" xlink:actuate="onRequest" title="./diagram_legend.html#data-object-details-with-plantuml" xlink:href="./diagram_legend.html#data-object-details-with-plantuml" target="_top"><text lengthAdjust="spacing" text-decoration="underline" x="82.0596" font-size="10" textLength="34.1162" y="206.9385" font-family="sans-serif" fill="#0000FF">legend</text></a><text lengthAdjust="spacing" x="116.1758" font-size="10" textLength="3.9014" y="206.9385" font-family="sans-serif" fill="#000000">)</text></g></svg>
+</figure>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://smart.who.int">WHO</a>.  Package smart.who.int.ig-starter-kit#2.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 30, 2025 13:09+0000">2025-06-30</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues" target="_blank">Issues</a> | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new" target="_blank">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" href="changes.html" target="_blank">Change Log</a>
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/ig-starter-kit/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues&quot;,&quot;label&quot;:&quot;Issues&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;url&quot;:&quot;https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues/new&quot;,&quot;label&quot;:&quot;New Issue&quot;}},{&quot;active&quot;:true,&quot;dashboard&quot;:{&quot;label&quot;:&quot;Change Log&quot;,&quot;url&quot;:&quot;changes.html&quot;}}]" data-repo-name="null" data-repo-source="null" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</body></html>

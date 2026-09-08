@@ -1,0 +1,13 @@
+{
+  "package": "who.fhir.smart-ig-starter-kit",
+  "version": "0.2.1",
+  "fhirVersion": "5.0.0",
+  "jurisdiction": "001",
+  "extensions": [],
+  "profiles": {},
+  "usage": {
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ]
+  }
+}

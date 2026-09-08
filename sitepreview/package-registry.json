@@ -1,0 +1,118 @@
+{
+  "packages" : [
+    {
+      "path" : "base/package-list.json",
+      "package-id" : "smart.who.int.base",
+      "title" : "SMART Base",
+      "canonical" : "http://smart.who.int/base",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-base",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-03",
+        "path" : "http://smart.who.int/base/0.1.0"
+      },
+      "milestone" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-03",
+        "path" : "http://smart.who.int/base/0.1.0"
+      }
+    },
+    {
+      "path" : "ts/package-list.json",
+      "package-id" : "smart.who.int.ts",
+      "title" : "SMART TS",
+      "canonical" : "http://smart.who.int/ts",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-ts",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-04",
+        "path" : "http://smart.who.int/ts/0.1.0"
+      },
+      "milestone" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-04",
+        "path" : "http://smart.who.int/ts/0.1.0"
+      }
+    },
+    {
+      "path" : "icvp/package-list.json",
+      "package-id" : "smart.who.int.icvp",
+      "title" : "ICVP",
+      "canonical" : "http://smart.who.int/icvp",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-icvp",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-07",
+        "path" : "http://smart.who.int/icvp/0.1.0"
+      },
+      "milestone" : {
+        "version" : "0.1.0",
+        "date" : "2024-10-07",
+        "path" : "http://smart.who.int/icvp/0.1.0"
+      }
+    },
+    {
+      "path" : "trust/package-list.json",
+      "package-id" : "smart.who.int.trust",
+      "title" : "Trust",
+      "canonical" : "http://smart.who.int/trust",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-trust",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.1.4",
+        "date" : "2024-11-04",
+        "path" : "http://smart.who.int/trust/1.1.4"
+      },
+      "milestone" : {
+        "version" : "1.1.4",
+        "date" : "2024-11-04",
+        "path" : "http://smart.who.int/trust/1.1.4"
+      }
+    },
+    {
+      "path" : "dak-immz/package-list.json",
+      "package-id" : "smart.who.int.dak-immz",
+      "title" : "SMART DAK IMMZ",
+      "canonical" : "http://smart.who.int/dak-immz",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-dak-immz",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.9.9",
+        "date" : "2024-11-19",
+        "path" : "http://smart.who.int/dak-immz/v0.9.9"
+      },
+      "milestone" : {
+        "version" : "0.9.9",
+        "date" : "2024-11-19",
+        "path" : "http://smart.who.int/dak-immz/v0.9.9"
+      }
+    },
+    {
+      "path" : "ig-starter-kit/package-list.json",
+      "package-id" : "smart.who.int.ig-starter-kit",
+      "title" : "SMART IG STARTER KIT",
+      "canonical" : "http://smart.who.int/ig-starter-kit",
+      "category" : "base",
+      "ci-build" : "http://worldhealthorganization.github.io/smart-ig-starter-kit",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2024-11-30",
+        "path" : "http://smart.who.int/ig-starter-kit/v2.0.0"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2024-11-30",
+        "path" : "http://smart.who.int/ig-starter-kit/v2.0.0"
+      }
+    }
+  ]
+}

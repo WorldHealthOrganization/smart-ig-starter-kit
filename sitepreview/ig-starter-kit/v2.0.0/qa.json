@@ -1,0 +1,19 @@
+{
+  "url" : "http://smart.who.int/ig-starter-kit/ImplementationGuide/smart.who.int.ig-starter-kit",
+  "name" : "IgStarterKit",
+  "title" : "SMART Guidelines Starter Kit",
+  "description" : "SMART Guidelines Starter Kit with L2 and L3 SOP",
+  "status" : "active",
+  "package-id" : "smart.who.int.ig-starter-kit",
+  "ig-ver" : "2.0.0",
+  "date" : "Sat, 30 Nov, 2024 06:42:53 +0000",
+  "dateISO8601" : "2024-11-30T06:42:53+00:00",
+  "errs" : 0,
+  "warnings" : 0,
+  "hints" : 0,
+  "suppressed-hints" : 1,
+  "suppressed-warnings" : 2,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1960145232
+}

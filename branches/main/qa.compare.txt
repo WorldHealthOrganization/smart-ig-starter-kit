@@ -1,0 +1,53 @@
+IgStarterKit : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 1
+$--
+Generated $--. FHIR version $-- for smart.who.int.ig-starter-kit#$-- (canonical = http://smart.who.int/ig-starter-kit)
+ Build Errors : 41 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit : 0 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/ig_configuration.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 344, column 55: The link '/StructureDefinition-crmi-shareableimplementationguide.html' for "CRMIShareableImplementationGuide" cannot be resolved
+ERROR: /github/workspace/output/ig_configuration.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 345, column 73: The link '/StructureDefinition-crmi-publishableimplementationguide.html' for "CRMIPublishableImplementationGuide" cannot be resolved
+ERROR: /github/workspace/output/ig_configuration.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 346, column 55: The link '/StructureDefinition-cpg-computableguideline.html' for "CPGComputableGuideline" cannot be resolved
+ERROR: /github/workspace/output/l3_codesystems.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 387, column 46: The link '/StructureDefinition-crmi-shareablecodesystem.html' for "CRMIShareableCodeSystem" cannot be resolved
+ERROR: /github/workspace/output/l3_codesystems.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 388, column 64: The link '/StructureDefinition-crmi-publishablecodesystem.html' for "CRMIPublishableCodeSystem" cannot be resolved
+ERROR: /github/workspace/output/l3_conceptmaps.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 362, column 37: The link '/StructureDefinition-crmi-shareableconceptmap.html' for "CRMIShareableConceptMap" cannot be resolved
+ERROR: /github/workspace/output/l3_conceptmaps.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 363, column 55: The link '/StructureDefinition-crmi-publishableconceptmap.html' for "CRMIPublishableConceptMap" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 596, column 41: The link '/StructureDefinition-crmi-shareableplandefinition.html' for "CRMIShareablePlanDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 597, column 59: The link '/StructureDefinition-crmi-publishableplandefinition.html' for "CRMIPublishablePlanDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 598, column 70: The link '/StructureDefinition-cpg-recommendationdefinition.html' for "CPGRecommendationDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_decisiontables.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 599, column 65: The link '/StructureDefinition-cpg-strategydefinition.html' for "CPGStrategyDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 414, column 40: The link '/StructureDefinition-crmi-shareablequestionnaire.html' for "CRMIShareableQuestionnaire" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 415, column 58: The link '/StructureDefinition-crmi-publishablequestionnaire.html' for "CRMIPublishableQuestionnaire" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 416, column 40: The link '/StructureDefinition-cpg-computablequestionnaire.html' for "CPGComputableQuestionnaire" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 417, column 40: The link '/StructureDefinition-sdc-questionnaire.html' for "SDCBaseQuestionnaire" cannot be resolved
+ERROR: /github/workspace/output/l3_forms.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 418, column 47: The link '/artifacts.html#structures-resource-profiles' for "SDC Questionnaire Profiles" cannot be resolved (valid targets: [segment-header, project-nav, publish-box, bottom, segment-post-footer, fhir-logo, who-logo, family-nav, ig-status, artifacts-summary, top, stripe, segment-footer, segment-navbar, language-selector, segment-content, segment-breadcrumb])
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ol/li/ul/li/a at Line 372, column 28: The link '/StructureDefinition-proportion-measure-cqfm.html' for "CQFMProportionMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ol/li/ul/li/a at Line 373, column 24: The link '/StructureDefinition-ratio-measure-cqfm.html' for "CQFMRatioMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ol/li/ul/li/a at Line 374, column 26: The link '/StructureDefinition-cohort-measure-cqfm.html' for "CQFMCohortMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ol/li/ul/li/a at Line 375, column 37: The link '/StructureDefinition-cv-measure-cqfm.html' for "CQFMContinuousVariableMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ul/li/p/a at Line 415, column 81: The link '/measure-conformance.html#conformance-requirement-3-8' for "CQF Guidance" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ul/li/p/a at Line 464, column 86: The link '/StructureDefinition-crmi-effectiveDataRequirements.html' for "EffectiveDataRequirements" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ul/li/ul/li/a at Line 470, column 53: The link '/StructureDefinition-cqf-logicDefinition.html' for "Logic Definition" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 488, column 34: The link '/StructureDefinition-crmi-shareablemeasure.html' for "CRMIShareableMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_indicators.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 489, column 52: The link '/StructureDefinition-publishablemeasure-cqfm.html' for "CQFMPublishableMeasure" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 362, column 43: The link '/StructureDefinition-crmi-shareablelibrary.html' for "CRMIShareableLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 427, column 125: The link '/StructureDefinition-crmi-publishablelibrary.html' for "CRMIPublishableLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 512, column 46: The link '/StructureDefinition-cql-library.html' for "CQLLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 513, column 46: The link '/StructureDefinition-elm-json-library.html' for "ELMJSONLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 563, column 47: The link '/StructureDefinition-crmi-shareablelibrary.html' for "CRMIShareableLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 564, column 55: The link '/StructureDefinition-crmi-publishablelibrary.html' for "CRMIPublishableLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 565, column 74: The link '/StructureDefinition-cql-library.html' for "CQLLibrary" cannot be resolved
+ERROR: /github/workspace/output/l3_libraries.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 566, column 74: The link '/StructureDefinition-cql-module.html' for "CQLModule" cannot be resolved
+ERROR: /github/workspace/output/l3_logicalmodels.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 535, column 59: The link '/StructureDefinition-crmi-shareablestructuredefinition.html' for "CRMIShareableStructureDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_logicalmodels.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 536, column 67: The link '/StructureDefinition-crmi-publishablestructuredefinition.html' for "CRMIPublishableStructureDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_profiles.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 415, column 59: The link '/StructureDefinition-crmi-shareablestructuredefinition.html' for "CRMIShareableStructureDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_profiles.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 416, column 67: The link '/StructureDefinition-crmi-publishablestructuredefinition.html' for "CRMIPublishableStructureDefinition" cannot be resolved
+ERROR: /github/workspace/output/l3_valuesets.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 447, column 48: The link '/StructureDefinition-crmi-shareablevalueset.html' for "CRMIShareableValueSet" cannot be resolved
+ERROR: /github/workspace/output/l3_valuesets.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 448, column 56: The link '/StructureDefinition-crmi-publishablevalueset.html' for "CRMIPublishableValueSet" cannot be resolved
+ERROR: /github/workspace/output/l3_valuesets.html#/html/head/link/body/div/div/div/div/div/ul/li/a at Line 449, column 39: The link '/StructureDefinition-crmi-computablevalueset.html' for "CRMIComputableValueSet" cannot be resolved
+ERROR: /github/workspace/output/versioning.html#/html/head/link/body/div/div/div/div/div/p/a at Line 336, column 248: The link '/artifact-lifecycle.html#artifact-versioning' for "Artifact Versioning" cannot be resolved
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json ==
+INFORMATION: ImplementationGuide/smart.who.int.ig-starter-kit: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

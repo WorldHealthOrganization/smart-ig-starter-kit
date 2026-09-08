@@ -1,0 +1,657 @@
+{
+  "date" : "Fri, 12 Dec, 2025 06:37:05 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-smart.who.int.ig-starter-kit.json",
+      "size" : 11214,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 30,
+          "length" : 23
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 31,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 31,
+          "length" : 81
+        },
+        {
+          "activity" : "validate",
+          "start" : 31,
+          "length" : 10939
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 50,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 50,
+          "length" : 72
+        },
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 49
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 59,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 64,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/fsh-generated/includes/menu.xml",
+      "size" : 6336
+    },
+    {
+      "name" : "/input/data/features.yml",
+      "size" : 378
+    },
+    {
+      "name" : "/input/pagecontent/authoring_conventions.md",
+      "size" : 2884,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/validating_ig.md",
+      "size" : 1652
+    },
+    {
+      "name" : "/input/pagecontent/cop.md",
+      "size" : 2739,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/diagram_legend.md",
+      "size" : 3111
+    },
+    {
+      "name" : "/input/pagecontent/l3_indicators.md",
+      "size" : 13271,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_codesystems.md",
+      "size" : 2622
+    },
+    {
+      "name" : "/input/pagecontent/l3_processes.md",
+      "size" : 3243
+    },
+    {
+      "name" : "/input/pagecontent/qa_check.md",
+      "size" : 1954
+    },
+    {
+      "name" : "/input/pagecontent/license.md",
+      "size" : 16454,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_logicalmodels.md",
+      "size" : 9520,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l2_dak_authoring.md",
+      "size" : 36315,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/maps.md",
+      "size" : 0
+    },
+    {
+      "name" : "/input/pagecontent/ig_configuration.md",
+      "size" : 1789,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/checklist.md",
+      "size" : 19817,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/changes.md",
+      "size" : 4598
+    },
+    {
+      "name" : "/input/pagecontent/gov_concepts.md",
+      "size" : 2812,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/structure.md",
+      "size" : 1065
+    },
+    {
+      "name" : "/input/pagecontent/l3_personas.md",
+      "size" : 4045
+    },
+    {
+      "name" : "/input/pagecontent/versioning.md",
+      "size" : 2878
+    },
+    {
+      "name" : "/input/pagecontent/diagram_l3_overview.md",
+      "size" : 149
+    },
+    {
+      "name" : "/input/pagecontent/narrative.md",
+      "size" : 1217,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l2_l3_overview.md",
+      "size" : 8943
+    },
+    {
+      "name" : "/input/pagecontent/l3_testing.md",
+      "size" : 2561
+    },
+    {
+      "name" : "/input/pagecontent/l4_compliance.md",
+      "size" : 5424,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/indices.md",
+      "size" : 0
+    },
+    {
+      "name" : "/input/pagecontent/l3_valuesets.md",
+      "size" : 4797,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_requirements.md",
+      "size" : 3494
+    },
+    {
+      "name" : "/input/pagecontent/ig_repositories.md",
+      "size" : 580
+    },
+    {
+      "name" : "/input/pagecontent/l2_faq.md",
+      "size" : 7044,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_examples.md",
+      "size" : 2413
+    },
+    {
+      "name" : "/input/pagecontent/l2_templates.md",
+      "size" : 5126,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/ig_publication.md",
+      "size" : 7796
+    },
+    {
+      "name" : "/input/pagecontent/ig_setup.md",
+      "size" : 3577
+    },
+    {
+      "name" : "/input/pagecontent/diagram_l2_overview.md",
+      "size" : 178
+    },
+    {
+      "name" : "/input/pagecontent/l3_decisiontables.md",
+      "size" : 13462,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/authoring_overview.md",
+      "size" : 32
+    },
+    {
+      "name" : "/input/pagecontent/gov_overview.md",
+      "size" : 1425
+    },
+    {
+      "name" : "/input/pagecontent/l3_cql.md",
+      "size" : 18997,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_scenarios.md",
+      "size" : 2146
+    },
+    {
+      "name" : "/input/pagecontent/l3_profiles.md",
+      "size" : 4188,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/l3_forms.md",
+      "size" : 5634
+    },
+    {
+      "name" : "/input/pagecontent/home.md",
+      "size" : 0
+    },
+    {
+      "name" : "/input/pagecontent/l2_authoring_overview.md",
+      "size" : 14355,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/diagram_content_types.md",
+      "size" : 4321
+    },
+    {
+      "name" : "/input/pagecontent/overview.md",
+      "size" : 687
+    },
+    {
+      "name" : "/input/pagecontent/l3_libraries.md",
+      "size" : 6091,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/index.md",
+      "size" : 2916
+    },
+    {
+      "name" : "/input/pagecontent/semanticreferences.md",
+      "size" : 1145
+    },
+    {
+      "name" : "/input/pagecontent/l3_conceptmaps.md",
+      "size" : 1576
+    },
+    {
+      "name" : "/input/pagecontent/l3_structuremaps.md",
+      "size" : 4672,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/template/config",
+      "size" : 0
+    },
+    {
+      "name" : "/template/config/_config.yml",
+      "size" : 140
+    },
+    {
+      "name" : "/input/images",
+      "size" : 0
+    },
+    {
+      "name" : "/input/images/help.png",
+      "size" : 3438
+    },
+    {
+      "name" : "/input/images/L2_DAK_components_relationships.png",
+      "size" : 140613,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/L2_Develop phase.PNG",
+      "size" : 66558
+    },
+    {
+      "name" : "/input/images/DAK_core data dictionary_template_v2.1.xlsx",
+      "size" : 120037
+    },
+    {
+      "name" : "/input/images/L2_DMN_cells_merging.png",
+      "size" : 312653
+    },
+    {
+      "name" : "/input/images/Digital Adaptation Kit Template_v2.docx",
+      "size" : 1357086,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/concept_governance.png",
+      "size" : 593325
+    },
+    {
+      "name" : "/input/images/L2_DAK_development_process.png",
+      "size" : 28495
+    },
+    {
+      "name" : "/input/images/Digital Adaptation Kit Template_v2.1.docx",
+      "size" : 1366222,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/content_types.png",
+      "size" : 151148,
+      "processes" : [
+        {
+          "activity" : "load-configure",
+          "start" : 31,
+          "length" : 1
+        },
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/DAK_core data dictionary_template_v2.xlsx",
+      "size" : 113636
+    },
+    {
+      "name" : "/input/images/DAK_high-level functional and non-functional requirements_template_v2.1.xlsx",
+      "size" : 68031
+    },
+    {
+      "name" : "/input/images/DAK_decision-support logic_template_v2.xlsx",
+      "size" : 69400
+    },
+    {
+      "name" : "/input/images/l3_process_process.png",
+      "size" : 49383
+    },
+    {
+      "name" : "/input/images/DAK_scheduling logic_template_v2.xlsx",
+      "size" : 66535
+    },
+    {
+      "name" : "/input/images/l3_process_codeset.png",
+      "size" : 127818
+    },
+    {
+      "name" : "/input/images/L2_develop_DAK_components.png",
+      "size" : 19102
+    },
+    {
+      "name" : "/input/images/L2_tb_dak_example_roadmap.PNG",
+      "size" : 105879
+    },
+    {
+      "name" : "/input/images/DAK_decision-support logic_template_v2.1.xlsx",
+      "size" : 70927,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 59,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/l3_process_persona.png",
+      "size" : 66707
+    },
+    {
+      "name" : "/input/images/l3_process_scenario.png",
+      "size" : 73546
+    },
+    {
+      "name" : "/input/images/forms_resources.png",
+      "size" : 88696
+    },
+    {
+      "name" : "/input/images/knowledge-levels.png",
+      "size" : 118771
+    },
+    {
+      "name" : "/input/images/l3_process_logic.png",
+      "size" : 135051
+    },
+    {
+      "name" : "/input/images/DAK_templates_v2.1.zip",
+      "size" : 1442145,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/DAK_indicators and performance metrics_template_v2.xlsx",
+      "size" : 50311
+    },
+    {
+      "name" : "/input/images/smart-guidelines.png",
+      "size" : 555051,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/l3_process_requirements.png",
+      "size" : 57018
+    },
+    {
+      "name" : "/input/images/l2_artifacts.png",
+      "size" : 153052
+    },
+    {
+      "name" : "/input/images/l3_process_profile.png",
+      "size" : 202776
+    },
+    {
+      "name" : "/input/images/DAK_high-level functional and non-functional requirements_template_v2.xlsx",
+      "size" : 64212
+    },
+    {
+      "name" : "/input/images/l3_artifacts.png",
+      "size" : 137944,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/L2_TB_Screening.png",
+      "size" : 99017
+    },
+    {
+      "name" : "/input/images/l3_process_indicator.png",
+      "size" : 109855
+    },
+    {
+      "name" : "/input/images/DAK_indicators and performance metrics_template_v2.1.xlsx",
+      "size" : 51424
+    },
+    {
+      "name" : "/input/images/test-process.png",
+      "size" : 657486
+    },
+    {
+      "name" : "/input/images/DAK_scheduling logic_template_v2.1.xlsx",
+      "size" : 67532,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/l3_process_logicalmodel.png",
+      "size" : 185304
+    },
+    {
+      "name" : "/input/images/DAK_templates_v2.zip",
+      "size" : 1418841,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/temp/pages/_includes/artifacts.xml",
+      "size" : 630
+    }
+  ]
+}
