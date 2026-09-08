@@ -41,7 +41,7 @@ provide; implementing them is the runtime's job. The only executable code in thi
 
 | Path | Contents |
 |---|---|
-| [`registry/`](registry/) | Roles, capabilities, requirements, and the generated index |
+| [`registry/`](registry/) | Roles, capabilities, requirements, providers, and the generated index |
 | [`schemas/common/`](schemas/common/) | Shared schemas every skill references rather than restates |
 | [`experts/`](experts/) | The three expert bundles — L2 DAK, L3 IG, Commons & Governance |
 | [`skills/`](skills/) | One folder per artifact type: `SKILL.md` plus its two schemas |
@@ -49,6 +49,7 @@ provide; implementing them is the runtime's job. The only executable code in thi
 | [`tools/`](tools/) | Package maintenance. Nothing here runs during a guideline transformation |
 | [`METHODOLOGY.md`](METHODOLOGY.md) | The normative doctrine — determinism, validation tiers, gates, delegation, audit |
 | [`architecture.md`](architecture.md) | The layer diagram and the worked BPMN vertical |
+| [`SKILL_DISTRIBUTION.md`](SKILL_DISTRIBUTION.md) | Which repository a skill belongs in, and how a skill here delegates a check to `smart-skills` |
 
 ## The three experts
 
@@ -60,6 +61,29 @@ Validation lives as skills *inside* each expert rather than as a separate review
 | [L2 DAK Expert](experts/l2-dak-expert/EXPERT.md) | The nine DAK components — author and validate |
 | [L3 IG Expert](experts/l3-ig-expert/EXPERT.md) | FHIR artifact production — author and validate |
 | [Commons & Governance Steward](experts/commons-steward/EXPERT.md) | What crosses IG boundaries — concepts, identifiers, reuse, release |
+
+## The knowledge graph
+
+A DAK is already a graph — nine components cross-referencing each other by identifier, and every L3
+artifact derived from one of them. The schema saying which connections the methodology permits lives
+in [`smart-kg`](https://github.com/WorldHealthOrganization/smart-kg), generated from the ArchiMate
+model this repository ships at
+[`archimate/WHO_SMART_GUIDELINES.archimate`](../archimate/WHO_SMART_GUIDELINES.archimate).
+
+The model stays here because it is Implementation Guide documentation; smart-kg references it as
+substrate, pinned by content hash, exactly as it references smart-base's logical models. Nothing in
+this package is generated from it.
+
+## Where a skill lives
+
+Skills answerable to a **WHO standard operating procedure** live here. Skills answerable to an
+**external normative specification** — OMG BPMN 2.0, OMG DMN 1.3, the HL7 FHIR validator — live in
+[`smart-skills`](https://github.com/WorldHealthOrganization/smart-skills) and are referenced through
+[`registry/providers/`](registry/providers/), never vendored.
+
+A skill here may borrow one of those checks with `delegatesTo` without giving up its contract: it
+still owns its report and its definition of done. [`SKILL_DISTRIBUTION.md`](SKILL_DISTRIBUTION.md)
+has the criterion and the placement table.
 
 ## Source of truth
 

@@ -118,6 +118,8 @@ export function buildRegistry() {
     readJson(join(reg, "capabilities", f)));
   const requirements = jsonFiles(join(reg, "requirements")).map((f) =>
     readJson(join(reg, "requirements", f)));
+  const providers = jsonFiles(join(reg, "providers")).map((f) =>
+    readJson(join(reg, "providers", f)));
 
   const skills = collectSkills();
 
@@ -142,6 +144,7 @@ export function buildRegistry() {
     roles: roles.map(({ $schema, ...r }) => r),
     capabilities: capabilities.map(({ $schema, ...c }) => c),
     requirements: requirements.map(({ $schema, ...r }) => r),
+    providers: providers.map(({ $schema, ...p }) => p),
     experts,
     skills: skills.map(({ id, path, data }) => ({
       id,
@@ -156,6 +159,7 @@ export function buildRegistry() {
       routingPatterns: data.routingPatterns ?? [],
       inputSchema: data.inputSchema,
       outputSchema: data.outputSchema,
+      ...(data.delegatesTo ? { delegatesTo: data.delegatesTo } : {}),
       sop: data.sop,
       ...(data.alsoRead ? { alsoRead: data.alsoRead } : {}),
       status: data.status,

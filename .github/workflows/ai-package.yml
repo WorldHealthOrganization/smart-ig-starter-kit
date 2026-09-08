@@ -49,7 +49,8 @@ jobs:
 
       # Resolves every cross-reference: role inheritance is acyclic, capabilities and requirements
       # exist, routing patterns compile, schemas parse, every skill names an SOP page that exists,
-      # and every L3 SOP page is reachable from some skill.
+      # every delegation resolves to a skill its provider lists, and every L3 SOP page is reachable
+      # from some skill.
       - name: Validate package integrity
         run: node ai/tools/validate-package.mjs
 

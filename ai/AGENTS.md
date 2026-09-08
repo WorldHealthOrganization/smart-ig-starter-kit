@@ -5,8 +5,8 @@ files, this is what you need to know before acting.
 
 ## Load order
 
-1. **`registry/registry.json`** — the index. Every skill, role, capability, requirement and expert,
-   with paths. Load this first; it saves you walking the tree.
+1. **`registry/registry.json`** — the index. Every skill, role, capability, requirement, provider
+   and expert, with paths. Load this first; it saves you walking the tree.
 2. **`METHODOLOGY.md`** — the rules that apply to every skill. Read once per session.
 3. **The expert** you are acting as — `experts/<expert>/EXPERT.md`. It tells you which skills are
    in scope and which gates apply to you.
@@ -32,6 +32,13 @@ authorised for is not a skill you may run "just this once".
 **Check `requiredCapabilities`.** Each entry has a `degradation` policy — `fail`, `warn`, `skip`,
 or `fallback`. Honour it. If a capability marked `fail` is absent, stop and say so; do not
 substitute an approximation.
+
+**Check `delegatesTo`.** Some checks are borrowed from `smart-skills`, because they are answerable
+to a specification WHO does not own rather than to a WHO procedure. Resolve the provider through
+`registry/providers/`, honour the same `degradation` vocabulary, and when a delegated check does not
+run, report that row as `not-run`. A report that silently omits it is not a shorter report, it is a
+wrong one. The delegating skill still owns its definition of done — borrowing a verdict is not
+handing over a contract. See `SKILL_DISTRIBUTION.md`.
 
 ## While you act
 
@@ -72,6 +79,10 @@ row beside the generated element, argue your reading, and let a person decide.
   needs and the SOP does not say.
 - **`status: placeholder` means the contract is unspecified, not the procedure.** The schemas
   permit anything, so passing them proves nothing. The SOP is still complete and still correct.
+- **The graph is derived data, and never the citation.** If you answer from a DAK knowledge graph,
+  cite the DAK it was built from — the BPMN element, the spreadsheet row, the SOP page. Where a
+  graph node and its source disagree, the source is right. The ingestion contract is `docs/RAG.md`
+  in smart-kg.
 - **Never edit an SOP page to suit a skill.** Those pages are published guidance with their own
   review process. If a procedure is wrong, raise a flag owned by `technical-wg`.
 - Follow [`authoring_conventions.md`](../input/pagecontent/authoring_conventions.md) for resource

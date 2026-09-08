@@ -8,6 +8,9 @@ roles: [l3-ig-expert, fhir-modeller, qc-reviewer, reviewer]
 requiredCapabilities:
   - { id: sushi-compiler, degradation: fail }
   - { id: ig-publisher, degradation: warn }
+delegatesTo:
+  - { provider: smart-skills, skill: fhir/validate-resource, degradation: warn, check: profile-conformance }
+  - { provider: smart-skills, skill: fhir/validate-ig-build, degradation: warn, check: the-build }
 satisfies:
   - req:l3-processes-dod
   - req:content-lifecycle#fidelity-not-auto-passed
@@ -61,11 +64,20 @@ Every statement in `req:l3-processes-dod`, plus:
 on every active published one. Asserted through the IG Publisher against the profiles in
 `smart-base`, not by inspection.
 
+*Which* profiles a process must conform to is a WHO decision and stays here. Whether a resource
+conforms to a profile is HL7's rule, executed by HL7's validator, and is delegated to
+`smart-skills fhir/validate-resource`.
+
 **The build.** A clean SUSHI compile is not evidence and must not be reported as one. Three defect
 classes seen in practice pass SUSHI and appear only in the publisher: a dotted identifier used as
 a resource id, `^mapping.map` without a matching identity, and a traceability style that does not
 match what the checker expects. If the `ig-publisher` capability is unavailable, say the build was
 not run — do not report tier 2 as passed.
+
+Reading the publisher's output is delegated to `smart-skills fhir/validate-ig-build`, which compares
+`qa.json` against a baseline and reports the delta. The delta is the point: an IG carrying
+pre-existing warnings hides new ones behind an absolute count, and an absolute count is what a
+person reads when nobody has written the comparison down.
 
 **The round trip.** Every BPMN activity node corresponds to exactly one `action`, and every `action`
 to exactly one node. Check both directions and report counts either way. An orphan fails, and the

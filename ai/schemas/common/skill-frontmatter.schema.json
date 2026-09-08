@@ -47,6 +47,33 @@
         }
       }
     },
+    "delegatesTo": {
+      "type": "array",
+      "description": "Checks this skill borrows from another repository rather than performing itself, because they are answerable to an external specification rather than to a WHO standard operating procedure. See ai/SKILL_DISTRIBUTION.md. Delegating a check does not move this skill's definition of done: it still owns the report and still decides what a failure means for a DAK.",
+      "items": {
+        "type": "object",
+        "required": ["provider", "skill", "degradation"],
+        "additionalProperties": false,
+        "properties": {
+          "provider": {
+            "type": "string",
+            "description": "Provider id, resolved against registry/providers/. A provider pins a repository, a ref and a contract version, so a delegation cannot rot into a dead pointer."
+          },
+          "skill": {
+            "type": "string",
+            "description": "Skill id within that provider. Must be one the provider lists."
+          },
+          "degradation": {
+            "enum": ["fail", "warn", "skip"],
+            "description": "What to do when the provider is unavailable. fail: stop, and never substitute an approximation. warn: report that the check was not run and continue with the rest. skip: omit the dependent step, which is rarely right for a validator. A report saying a delegated check was not run is a complete report; one silently omitting the row is not."
+          },
+          "check": {
+            "type": "string",
+            "description": "Which check in this skill the delegation stands behind, so a reader can see what is lost when it degrades."
+          }
+        }
+      }
+    },
     "satisfies": {
       "type": "array",
       "items": { "type": "string", "pattern": "^req:[a-z0-9-]+(#[a-z0-9-]+)?$" },

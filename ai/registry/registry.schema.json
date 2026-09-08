@@ -4,7 +4,7 @@
   "title": "SMART Guidelines AI-ready package registry",
   "description": "Shape of registry.json, the generated index an agent loads first, and of the role, capability and requirement files it is built from.",
   "type": "object",
-  "required": ["schemaVersion", "repository", "generatedFrom", "roles", "capabilities", "requirements", "experts", "skills"],
+  "required": ["schemaVersion", "repository", "generatedFrom", "roles", "capabilities", "requirements", "providers", "experts", "skills"],
   "additionalProperties": false,
   "properties": {
     "schemaVersion": { "const": "1.0" },
@@ -19,6 +19,7 @@
     "roles": { "type": "array", "items": { "$ref": "#/$defs/role" } },
     "capabilities": { "type": "array", "items": { "$ref": "#/$defs/capability" } },
     "requirements": { "type": "array", "items": { "$ref": "#/$defs/requirement" } },
+    "providers": { "type": "array", "items": { "$ref": "#/$defs/provider" } },
     "experts": { "type": "array", "items": { "$ref": "#/$defs/expert" } },
     "skills": { "type": "array", "items": { "$ref": "#/$defs/skillIndexEntry" } }
   },
@@ -153,6 +154,39 @@
       }
     },
 
+    "provider": {
+      "type": "object",
+      "description": "Another repository supplying skills this package delegates to. A provider's skills are answerable to an external normative specification rather than to a WHO standard operating procedure, which is the line ai/SKILL_DISTRIBUTION.md draws. Pinning the repository, ref and contract version is what keeps a delegation from becoming a dead pointer.",
+      "required": ["id", "name", "repository", "ref", "contractVersion", "description", "skills"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "repository": { "type": "string", "description": "owner/name." },
+        "url": { "type": "string" },
+        "ref": { "type": "string", "description": "Branch, tag or commit this package is written against." },
+        "contractVersion": { "type": "string" },
+        "description": { "type": "string" },
+        "rationale": { "type": "string", "description": "Why these skills are referenced rather than vendored." },
+        "skills": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "specification"],
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" },
+              "specification": {
+                "type": "string",
+                "description": "The normative specification the skill is answerable to. This is the field that takes the place of a skill's sop:, and having one is what qualifies a skill to live in a provider rather than here."
+              }
+            }
+          }
+        }
+      }
+    },
+
     "expert": {
       "type": "object",
       "description": "Index entry for an expert bundle. The prose lives in experts/<id>/EXPERT.md.",
@@ -184,6 +218,19 @@
         "routingPatterns": { "type": "array", "items": { "type": "string" } },
         "inputSchema": { "type": "string" },
         "outputSchema": { "type": "string" },
+        "delegatesTo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["provider", "skill", "degradation"],
+            "properties": {
+              "provider": { "type": "string" },
+              "skill": { "type": "string" },
+              "degradation": { "enum": ["fail", "warn", "skip"] },
+              "check": { "type": "string" }
+            }
+          }
+        },
         "sop": {
           "type": "string",
           "description": "The standard operating procedure page holding this skill's procedure. The SOP is the single source of truth for narrative; the skill carries the contract around it."

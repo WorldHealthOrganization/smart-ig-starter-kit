@@ -24,6 +24,12 @@ const stmtKeys = new Set(
   reg.requirements.flatMap((r) => r.statements.map((s) => `${r.id}#${s.key}`)));
 const skills = collectSkills();
 const skillIds = new Set(skills.map((s) => s.id));
+// Provider skills are addressed as "<provider>:<skill>". A delegation naming a provider or a skill
+// the provider does not list is a dead pointer across a repository boundary, which is the hardest
+// kind to notice: nothing in this checkout changes when the other repository does.
+const providerIds = new Set(reg.providers.map((p) => p.id));
+const providerSkills = new Set(
+  reg.providers.flatMap((p) => p.skills.map((s) => `${p.id}:${s.id}`)));
 
 // ---------------------------------------------------------------- roles
 
@@ -74,6 +80,22 @@ for (const r of reg.requirements) {
   }
 }
 
+// ------------------------------------------------------------- providers
+
+for (const p of reg.providers) {
+  const ids = new Set();
+  for (const s of p.skills) {
+    if (ids.has(s.id)) fail(`provider ${p.id}: duplicate skill id "${s.id}"`);
+    ids.add(s.id);
+    // A provider skill has no SOP page by definition; what it must have instead is the
+    // specification it answers to. Without one it is a starter-kit skill in the wrong repository.
+    if (!s.specification) fail(`provider ${p.id}: skill "${s.id}" names no specification`);
+  }
+  if (!skills.some((k) => (k.data.delegatesTo ?? []).some((g) => g.provider === p.id))) {
+    warn(`provider ${p.id}: no skill delegates to it`);
+  }
+}
+
 // --------------------------------------------------------------- experts
 
 for (const e of collectExperts()) {
@@ -107,6 +129,17 @@ for (const s of skills) {
     }
     if (c.degradation === "fallback" && !capIds.has(c.fallbackId)) {
       fail(`${at}: capability ${c.id} declares fallback but fallbackId does not resolve`);
+    }
+  }
+  for (const g of d.delegatesTo ?? []) {
+    if (!providerIds.has(g.provider)) {
+      fail(`${at}: delegatesTo unknown provider "${g.provider}". ` +
+           `Add it under registry/providers, or the delegation points nowhere.`);
+    } else if (!providerSkills.has(`${g.provider}:${g.skill}`)) {
+      fail(`${at}: provider "${g.provider}" does not list skill "${g.skill}"`);
+    }
+    if (!["fail", "warn", "skip"].includes(g.degradation)) {
+      fail(`${at}: delegation to ${g.provider}:${g.skill} has invalid degradation "${g.degradation}"`);
     }
   }
   for (const q of d.satisfies ?? []) {
@@ -212,7 +245,8 @@ const specified = skills.filter((s) => s.data.status === "specified").length;
 console.log(
   `${skills.length} skills (${specified} specified, ${skills.length - specified} placeholder), ` +
   `${reg.roles.length} roles, ${reg.capabilities.length} capabilities, ` +
-  `${reg.requirements.length} requirements, ${reg.experts.length} experts`);
+  `${reg.requirements.length} requirements, ${reg.experts.length} experts, ` +
+  `${reg.providers.length} providers`);
 
 for (const w of warnings) console.warn(`warning: ${w}`);
 for (const e of errors) console.error(`error: ${e}`);

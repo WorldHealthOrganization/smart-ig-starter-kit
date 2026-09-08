@@ -7,6 +7,8 @@ determinism: deterministic
 roles: [l2-dak-expert, business-analyst, reviewer, content-reviewer]
 requiredCapabilities:
   - { id: bpmn-tooling, degradation: warn }
+delegatesTo:
+  - { provider: smart-skills, skill: bpmn/validate-spec, degradation: warn, check: well-formedness }
 satisfies:
   - req:l2-business-processes-dod
   - req:content-lifecycle#l2-to-l3-transform
@@ -44,6 +46,13 @@ Deterministic. Same DAK, same report.
 
 **Well-formedness.** Each file parses as BPMN 2.0 XML and declares at least one process. A file
 that does not parse fails here rather than three components downstream.
+
+Conformance to the BPMN specification itself is not this skill's to judge: the rule is OMG's, it is
+identical for a DAK and for a supply-chain diagram, and it changes on OMG's schedule rather than
+WHO's. It is delegated to `smart-skills bpmn/validate-spec`, whose findings are folded into this
+report under this check. Where that provider is unavailable, report the check as `not-run` and
+continue with the rest — every check below is about what a DAK means, not about what BPMN permits,
+and all of them still hold. Do not approximate a spec verdict with a parse.
 
 **Overview present.** Exactly one process is marked as the key-business-processes overview.
 
