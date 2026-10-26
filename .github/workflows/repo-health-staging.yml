@@ -8,6 +8,8 @@
 # (the same folder rule as the IG branch previews, smart-base
 # input/scripts/resolve_branch.py). It runs on a push that touches the
 # dashboard or its config; re-run it from the Actions tab for fresh data.
+# A re-run reuses the smart-base workflow file it started with, so after
+# changing that file, push here again rather than re-running.
 # workflow_dispatch is not offered because GitHub only dispatches workflows
 # that already exist on the default branch.
 
