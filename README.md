@@ -28,3 +28,6 @@ Issues and change requests are managed here:
 Issues:  __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/issues__  
     or the Kanban board: __https://github.com/WorldHealthOrganization/smart-ig-starter-kit/projects/31__
 
+Health of all smart-* repositories (builds, open issues and PRs, updated daily): __https://worldhealthorganization.github.io/smart-ig-starter-kit/dashboard/__  
+How we triage them: [TRIAGE.md](TRIAGE.md)
+

@@ -1,0 +1,30 @@
+# SMART repo health: who is tagged, and the triage rota.
+# Read by the reusable workflow in smart-base (.github/workflows/repo-health.yml),
+# called from .github/workflows/repo-health.yml in this repository.
+
+org: WorldHealthOrganization
+# Every non-fork repository whose name starts with this is tracked, archived ones included.
+prefix: smart-
+# Alerts and weekly digests are opened here (the workflow's own token can only write to this repository).
+alertsRepo: WorldHealthOrganization/smart-ig-starter-kit
+
+# Tagged and assigned on build-broken alerts; tagged on the weekly digest.
+maintainers:
+  - ritikarawlani
+  - litlfred
+
+# Triage lead rotates weekly, in this order, counting from the week of `start`.
+rota:
+  start: 2026-11-02
+  order:
+    - ritikarawlani
+    - litlfred
+
+# Repository names to leave out entirely.
+exclude: []
+
+thresholds:
+  prReviewDays: 7
+  issueResponseDays: 14
+  archiveCandidateMonths: 24
+  keepaliveWarnDays: 45

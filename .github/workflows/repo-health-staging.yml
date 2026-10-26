@@ -1,0 +1,59 @@
+# SMART repo health, staging: preview the dashboard from a branch before it
+# reaches main. Same reusable workflow as repo-health.yml, with real data for
+# every smart-* repository, but as a dry run: it opens no alert or digest
+# issues and writes no state. The page goes to this branch's preview folder:
+#
+#   https://worldhealthorganization.github.io/smart-ig-starter-kit/branches/<last part of the branch name>/dashboard/
+#
+# (the same folder rule as the IG branch previews, smart-base
+# input/scripts/resolve_branch.py). It runs on a push that touches the
+# dashboard or its config; re-run it from the Actions tab for fresh data.
+# A re-run reuses the smart-base workflow file it started with, so after
+# changing that file, push here again rather than re-running.
+# workflow_dispatch is not offered because GitHub only dispatches workflows
+# that already exist on the default branch.
+
+name: SMART repo health (staging)
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - gh-pages
+      - dashboard-state
+    paths:
+      - 'dashboard/**'
+      - '.github/repo-health/**'
+      - '.github/workflows/repo-health*.yml'
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+  pull-requests: read
+
+concurrency:
+  group: repo-health-staging-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  where:
+    runs-on: ubuntu-latest
+    outputs:
+      dir: ${{ steps.dir.outputs.dir }}
+    steps:
+      - id: dir
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: echo "dir=branches/${BRANCH##*/}/dashboard" >> "$GITHUB_OUTPUT"
+
+  health:
+    needs: where
+    # TODO before merging smart-base#337: point both refs at main.
+    uses: WorldHealthOrganization/smart-base/.github/workflows/repo-health.yml@claude/epic-hawking-k8s5uc
+    with:
+      tools_ref: claude/epic-hawking-k8s5uc
+      mode: collect
+      dry_run: true
+      environment: staging
+      pages_dir: ${{ needs.where.outputs.dir }}
