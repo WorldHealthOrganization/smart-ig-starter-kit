@@ -268,11 +268,16 @@
     const now = Date.now();
     const checked = Date.parse(status.checkedAt);
     $("sub").textContent = `${status.repos.length} non-fork smart-* repositories in ${status.org}. Last checked ${new Date(checked).toLocaleString()}; checked daily.`;
-    if (now - checked > 26 * 3600000) {
-      $("banner").replaceChildren(el("div", { class: "banner", role: "status", text: `This data is ${Math.floor((now - checked) / 3600000)} hours old: the daily check has not run or failed. Treat every row as unknown.` }));
-    } else if (status.undetermined) {
-      $("banner").replaceChildren(el("div", { class: "banner", role: "status", text: "The last check could not read everything. Rows marked Unknown were not checked; they are not passing." }));
+    const banners = [];
+    if (status.environment && status.environment !== "production") {
+      banners.push(el("div", { class: "banner", role: "status", text: `${status.environment[0].toUpperCase()}${status.environment.slice(1)} preview: real data, but this run sends no alerts and keeps no history. The live dashboard is at worldhealthorganization.github.io/smart-ig-starter-kit/dashboard/.` }));
     }
+    if (now - checked > 26 * 3600000) {
+      banners.push(el("div", { class: "banner", role: "status", text: `This data is ${Math.floor((now - checked) / 3600000)} hours old: the daily check has not run or failed. Treat every row as unknown.` }));
+    } else if (status.undetermined) {
+      banners.push(el("div", { class: "banner", role: "status", text: "The last check could not read everything. Rows marked Unknown were not checked; they are not passing." }));
+    }
+    $("banner").replaceChildren(...banners);
     const all = status.repos;
     const active = all.filter((r) => !r.archived);
     const count = (v) => active.reduce((n, r) => n + SIGNALS.filter(([k]) => r.signals[k].verdict === v).length, 0);

@@ -44,3 +44,5 @@ jobs:
     with:
       mode: ${{ github.event.schedule == '17 7 * * 1' && 'digest' || inputs.mode || 'collect' }}
       dry_run: ${{ inputs.dry_run == true }}
+      # A manual dry run never overwrites the live page.
+      pages_dir: ${{ inputs.dry_run == true && '' || 'dashboard' }}
