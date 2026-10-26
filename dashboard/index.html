@@ -317,6 +317,7 @@
     for (const id of ["f-problems", "f-inactive", "f-q"]) $(id).addEventListener("input", draw);
     draw();
     $("footer").replaceChildren("Data: ", el("a", { href: "status.json", text: "status.json" }), " · ", el("a", { href: "trend.json", text: "trend.json" }),
+      status.runUrl ? " · " : "", status.runUrl ? el("a", { href: status.runUrl, target: "_blank", rel: "noopener", text: "the run that produced it" }) : "",
       " · Produced by the smart-repo-health workflow in ", el("a", { href: "https://github.com/WorldHealthOrganization/smart-base/tree/main/.github/repo-health", text: "smart-base" }),
       " · How we triage: ", el("a", { href: "https://github.com/WorldHealthOrganization/smart-ig-starter-kit/blob/main/TRIAGE.md", text: "TRIAGE.md" }));
   }
