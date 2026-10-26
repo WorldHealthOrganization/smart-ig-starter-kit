@@ -1,0 +1,46 @@
+# SMART repo health: daily check of every non-fork smart-* repository, and the
+# Monday digest. The code is the reusable workflow in smart-base; this file
+# only supplies the schedule, the config (.github/repo-health/config.yml) and
+# this repository's token, which is why alerts, the digest, the state branch
+# and the dashboard (gh-pages/dashboard/) all live here.
+#
+# Process: smart-base/.github/repo-health/processes/repo-health-watch.bpmn
+# How we triage: TRIAGE.md
+
+name: SMART repo health
+
+on:
+  schedule:
+    # Off the hour on purpose: GitHub queues scheduled jobs heavily at :00.
+    - cron: '41 5 * * *'   # daily check, alerts and dashboard
+    # Over an hour after the daily check, so the two never share one hour of
+    # the token's 1,000-request rate limit.
+    - cron: '17 7 * * 1'   # weekly digest, Mondays
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'collect = daily check; digest = weekly digest issue'
+        type: choice
+        options: [collect, digest]
+        default: collect
+      dry_run:
+        description: 'Read and report only (no issues, state or dashboard)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+  pull-requests: read
+
+concurrency:
+  group: repo-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    uses: WorldHealthOrganization/smart-base/.github/workflows/repo-health.yml@main
+    with:
+      mode: ${{ github.event.schedule == '17 7 * * 1' && 'digest' || inputs.mode || 'collect' }}
+      dry_run: ${{ inputs.dry_run == true }}
