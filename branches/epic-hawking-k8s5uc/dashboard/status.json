@@ -1,6 +1,6 @@
 {
  "schema": "smart-repo-health/status/v1",
- "checkedAt": "2026-10-26T09:08:39.668Z",
+ "checkedAt": "2026-10-26T09:12:22.409Z",
  "org": "WorldHealthOrganization",
  "repos": [
   {
@@ -327,7 +327,7 @@
    "url": "https://github.com/WorldHealthOrganization/smart-base",
    "archived": false,
    "defaultBranch": "main",
-   "pushedAt": "2026-10-26T09:08:11Z",
+   "pushedAt": "2026-10-26T09:12:02Z",
    "sizeKb": 1823976,
    "signals": {
     "ci": {
@@ -838,9 +838,9 @@
      "detail": "passing, last run 2026-04-07"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ccc/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2495,9 +2495,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-core/branches/master/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2575,9 +2575,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-bds/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2607,9 +2607,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-ccc/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2641,9 +2641,9 @@
      "detail": "passing, last run 2026-01-05"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-chud/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2749,9 +2749,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-example-immz/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2781,9 +2781,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-immz/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2918,9 +2918,9 @@
      "detail": "passing, last run 2025-09-17"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-pnc/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "url": "https://github.com/WorldHealthOrganization/smart-dak-pnc/actions/runs/17790759550",
@@ -2954,9 +2954,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-smbp/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -2989,9 +2989,9 @@
      "detail": "last run failed, but it has not run for 221 days (last green 2026-02-19); may be stale"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-srv/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "url": "https://github.com/WorldHealthOrganization/smart-dak-srv/actions/runs/23437616092",
@@ -3025,9 +3025,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-dak-tb/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -3533,9 +3533,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-example-immz/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -3921,9 +3921,9 @@
      "detail": "passing, last run 2026-03-05"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-hiv/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -4361,9 +4361,9 @@
      "detail": "last run failed, but it has not run for 233 days (last green 2025-12-10); may be stale"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-empty/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -4444,7 +4444,7 @@
    "url": "https://github.com/WorldHealthOrganization/smart-ig-starter-kit",
    "archived": false,
    "defaultBranch": "main",
-   "pushedAt": "2026-10-26T09:08:24Z",
+   "pushedAt": "2026-10-26T09:12:05Z",
    "sizeKb": 153365,
    "signals": {
     "ci": {
@@ -4454,9 +4454,9 @@
      "detail": "passing, last run 2025-12-12"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ig-starter-kit/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6435,9 +6435,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ips-pilgrimage/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6513,9 +6513,9 @@
      "detail": "passing, last run 2025-12-19"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-l2-hhas/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6547,9 +6547,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ot/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6616,9 +6616,9 @@
      "detail": "passing, last run 2026-02-18"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-pcmt/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6653,9 +6653,9 @@
      "detail": "last run failed, but it has not run for 109 days (no green run in the window); may be stale"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ph4h/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "url": "https://github.com/WorldHealthOrganization/smart-ph4h/actions/runs/29004180042",
@@ -6737,9 +6737,9 @@
      "detail": "passing, last run 2026-07-09"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ra/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6894,9 +6894,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-refmart/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -6985,28 +6985,26 @@
    "signals": {
     "ci": {
      "verdict": "none",
-     "detail": "no ghbuild.yml or ci.yml workflow"
+     "detail": "empty repository (no commits)"
     },
     "fhir": {
      "verdict": "none",
-     "detail": "no fhirbuild.yml workflow"
+     "detail": "empty repository (no commits)"
     },
     "release": {
      "verdict": "none",
-     "detail": "no release.yml workflow"
+     "detail": "empty repository (no commits)"
     },
     "pages": {
      "verdict": "none",
-     "detail": "no Pages deployments in the recent window"
+     "detail": "empty repository (no commits)"
     }
    },
    "openIssues": 0,
    "openPrs": 0,
    "untriaged": 0,
    "items": [],
-   "errors": [
-    "branch: GET /repos/WorldHealthOrganization/smart-terminologies/branches/main -> HTTP 404 {\"message\":\"Branch not found\",\"documentation_url\":\"https://docs.github.com/rest/branches/branches#get-a-branch\",\"status\":\"404\"}"
-   ]
+   "errors": []
   },
   {
    "repo": "smart-trust",
@@ -7616,9 +7614,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-ts/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -7648,9 +7646,9 @@
      "detail": "no run on the default branch in the recent window"
     },
     "fhir": {
-     "verdict": "unknown",
+     "verdict": "none",
      "url": "https://build.fhir.org/ig/WorldHealthOrganization/smart-tuberculosis/branches/main/",
-     "detail": "no build of this branch found on build.fhir.org"
+     "detail": "not built on build.fhir.org (no published page, no failure log)"
     },
     "release": {
      "verdict": "none",
@@ -7668,6 +7666,7 @@
    "errors": []
   }
  ],
- "undetermined": true,
- "environment": "staging"
+ "undetermined": false,
+ "environment": "staging",
+ "runUrl": "https://github.com/WorldHealthOrganization/smart-ig-starter-kit/actions/runs/40297729353"
 }
