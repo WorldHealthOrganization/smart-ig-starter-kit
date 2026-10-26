@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMART repo health</title>
+<meta name="description" content="Daily build, issue and PR status of the WHO SMART smart-* repositories.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%230ca30c%22/%3E%3C/svg%3E">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-0: #f4f4f1;
+    --surface-1: #fcfcfb;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #6f6e69;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11, 11, 11, 0.10);
+    --series-1: #2a78d6;
+    --good: #0ca30c;
+    --warning: #fab219;
+    --serious: #ec835a;
+    --critical: #d03b3b;
+    --neutral: #8a8984;
+    --banner: #fff4d6;
+    --focus: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-0: #121211;
+      --surface-1: #1a1a19;
+      --text-primary: #f0efec;
+      --text-secondary: #c3c2b7;
+      --text-muted: #9c9b95;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255, 255, 255, 0.10);
+      --series-1: #3987e5;
+      --neutral: #8f8e88;
+      --banner: #3a3115;
+      --focus: #3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-0: #121211;
+    --surface-1: #1a1a19;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #9c9b95;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --series-1: #3987e5;
+    --neutral: #8f8e88;
+    --banner: #3a3115;
+    --focus: #3987e5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--surface-0);
+    color: var(--text-primary);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 1280px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--text-secondary); margin: 0 0 16px; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .banner { background: var(--banner); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin: 0 0 16px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 0 0 20px; }
+  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .tile .k { color: var(--text-secondary); font-size: 13px; }
+  .tile .v { font-size: 28px; font-weight: 600; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin: 0 0 10px; }
+  .controls input[type="search"] { padding: 6px 10px; border: 1px solid var(--axis); border-radius: 6px; background: var(--surface-1); color: var(--text-primary); min-width: 200px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--text-secondary); font-size: 13px; margin: 0 0 10px; }
+  .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 1060px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+  th { font-size: 12px; color: var(--text-secondary); font-weight: 600; position: sticky; top: 0; background: var(--surface-1); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.archived td { color: var(--text-muted); }
+  .repo button { all: unset; cursor: pointer; font-weight: 600; }
+  .repo button::before { content: "▸ "; color: var(--text-muted); }
+  .repo button[aria-expanded="true"]::before { content: "▾ "; }
+  .tag { font-size: 11px; color: var(--text-muted); border: 1px solid var(--grid); border-radius: 4px; padding: 0 4px; margin-left: 4px; }
+  .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; white-space: nowrap; text-decoration: none; }
+  .pill .dot { width: 16px; height: 16px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; }
+  .v-green .dot { background: var(--good); }
+  .v-red .dot { background: var(--critical); }
+  .v-stale .dot { background: var(--warning); color: #0b0b0b; }
+  .v-superseded .dot { background: var(--serious); }
+  .v-unknown .dot { background: var(--neutral); }
+  .v-none { color: var(--text-muted); }
+  .v-none .dot { background: transparent; color: var(--text-muted); border: 1px dashed var(--axis); }
+  a.pill:hover span:last-child { text-decoration: underline; }
+  .detail td { background: var(--surface-0); }
+  .detail ul { margin: 6px 0; padding-left: 18px; }
+  .detail h3 { font-size: 13px; margin: 8px 0 2px; color: var(--text-secondary); }
+  .spark { display: block; }
+  .spark .line { fill: none; stroke: var(--series-1); stroke-width: 2; }
+  .spark .base { stroke: var(--grid); stroke-width: 1; }
+  .spark .end { fill: var(--series-1); stroke: var(--surface-1); stroke-width: 2; }
+  #tip { position: fixed; pointer-events: none; background: var(--surface-1); color: var(--text-primary); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.15); max-width: 320px; display: none; z-index: 10; }
+  footer { color: var(--text-muted); font-size: 13px; margin-top: 18px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<main>
+  <h1>SMART repo health</h1>
+  <p class="sub" id="sub">Loading…</p>
+  <div id="banner"></div>
+  <section class="tiles" id="tiles" aria-label="Summary"></section>
+  <div class="controls" role="group" aria-label="Filters">
+    <label><input type="checkbox" id="f-problems"> Only problems</label>
+    <label><input type="checkbox" id="f-inactive" checked> Hide archived and inactive (12+ months)</label>
+    <input type="search" id="f-q" placeholder="Filter repositories" aria-label="Filter repositories">
+  </div>
+  <div class="legend" id="legend" aria-label="Legend"></div>
+  <div class="card">
+    <table aria-describedby="sub">
+      <thead>
+        <tr>
+          <th scope="col">Repository</th>
+          <th scope="col">CI build</th>
+          <th scope="col">FHIR IG build</th>
+          <th scope="col">Release build</th>
+          <th scope="col">Pages deploy</th>
+          <th scope="col" class="num">Open issues</th>
+          <th scope="col" class="num">Open PRs</th>
+          <th scope="col" class="num">Untriaged</th>
+          <th scope="col" class="num">Oldest untriaged</th>
+          <th scope="col">Open issues + PRs, 12 weeks</th>
+          <th scope="col">Last push</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <footer id="footer"></footer>
+</main>
+<div id="tip" role="tooltip"></div>
+<script>
+(() => {
+  const VERDICT = {
+    red:        { label: "Failing",    icon: "✕", rank: 0 },
+    unknown:    { label: "Unknown",    icon: "?", rank: 1 },
+    superseded: { label: "Superseded", icon: "↻", rank: 2 },
+    stale:      { label: "Stale",      icon: "!", rank: 3 },
+    green:      { label: "Passing",    icon: "✓", rank: 4 },
+    none:       { label: "n/a",        icon: "–", rank: 5 },
+  };
+  const VERDICT_HELP = {
+    red: "failing on the default branch now",
+    unknown: "could not be checked; never treated as passing",
+    superseded: "last run failed, but the workflow changed since; not known to be fixed",
+    stale: "last result is old (failed a week+ ago, or older than the latest commit)",
+    green: "passing",
+    none: "this repository has no such build",
+  };
+  const SIGNALS = [["ci", "CI build"], ["fhir", "FHIR IG build"], ["release", "Release build"], ["pages", "Pages deploy"]];
+  const DAY = 86400000;
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else n.setAttribute(k, v);
+    }
+    for (const k of kids) if (k != null) n.append(k);
+    return n;
+  };
+  const tip = $("tip");
+  const showTip = (e, text) => { tip.textContent = text; tip.style.display = "block"; moveTip(e); };
+  const moveTip = (e) => {
+    const x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 8);
+    tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px";
+  };
+  const hideTip = () => { tip.style.display = "none"; };
+  const withTip = (n, text) => {
+    n.addEventListener("mouseenter", (e) => showTip(e, text));
+    n.addEventListener("mousemove", moveTip);
+    n.addEventListener("mouseleave", hideTip);
+    n.addEventListener("focus", () => { const r = n.getBoundingClientRect(); showTip({ clientX: r.left, clientY: r.bottom }, text); });
+    n.addEventListener("blur", hideTip);
+    return n;
+  };
+
+  function pill(sig, name) {
+    const v = VERDICT[sig.verdict] ? sig.verdict : "unknown";
+    const kids = [el("span", { class: "dot", "aria-hidden": "true", text: VERDICT[v].icon }), el("span", { text: VERDICT[v].label })];
+    const n = sig.url ? el("a", { class: `pill v-${v}`, href: sig.url, target: "_blank", rel: "noopener" }, ...kids)
+                      : el("span", { class: `pill v-${v}`, tabindex: "0" }, ...kids);
+    n.setAttribute("aria-label", `${name}: ${VERDICT[v].label}. ${sig.detail || ""}`);
+    return withTip(n, `${name}: ${VERDICT[v].label}. ${sig.detail || ""}`);
+  }
+
+  function spark(points) {
+    const W = 120, H = 28, P = 4;
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", W); svg.setAttribute("height", H); svg.setAttribute("class", "spark");
+    if (points.length < 2) {
+      svg.setAttribute("aria-label", "Not enough history yet");
+      const t = document.createElementNS(svg.namespaceURI, "text");
+      t.setAttribute("x", 0); t.setAttribute("y", 18); t.setAttribute("fill", "currentColor"); t.setAttribute("font-size", "11");
+      t.textContent = points.length ? `${points[0].v} (history builds daily)` : "no history";
+      svg.append(t); return svg;
+    }
+    const max = Math.max(1, ...points.map((p) => p.v));
+    const x = (i) => P + (i * (W - 2 * P)) / (points.length - 1);
+    const y = (v) => H - P - (v / max) * (H - 2 * P);
+    const base = document.createElementNS(svg.namespaceURI, "line");
+    base.setAttribute("x1", P); base.setAttribute("x2", W - P); base.setAttribute("y1", H - P); base.setAttribute("y2", H - P); base.setAttribute("class", "base");
+    const line = document.createElementNS(svg.namespaceURI, "polyline");
+    line.setAttribute("points", points.map((p, i) => `${x(i)},${y(p.v)}`).join(" ")); line.setAttribute("class", "line");
+    const end = document.createElementNS(svg.namespaceURI, "circle");
+    end.setAttribute("cx", x(points.length - 1)); end.setAttribute("cy", y(points.at(-1).v)); end.setAttribute("r", 4); end.setAttribute("class", "end");
+    svg.append(base, line, end);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", `Open issues and PRs: ${points[0].v} on ${points[0].d}, ${points.at(-1).v} on ${points.at(-1).d}`);
+    svg.addEventListener("mousemove", (e) => {
+      const r = svg.getBoundingClientRect();
+      const i = Math.max(0, Math.min(points.length - 1, Math.round(((e.clientX - r.left - P) / (W - 2 * P)) * (points.length - 1))));
+      end.setAttribute("cx", x(i)); end.setAttribute("cy", y(points[i].v));
+      showTip(e, `${points[i].d}: ${points[i].v} open issues + PRs`);
+    });
+    svg.addEventListener("mouseleave", () => { end.setAttribute("cx", x(points.length - 1)); end.setAttribute("cy", y(points.at(-1).v)); hideTip(); });
+    return svg;
+  }
+
+  const severity = (r) => {
+    const ranks = SIGNALS.map(([k]) => (VERDICT[r.signals[k].verdict] || VERDICT.unknown).rank);
+    return [Math.min(...ranks), -ranks.filter((x) => x === 0).length, -r.untriaged, r.repo];
+  };
+  const cmp = (a, b) => { for (let i = 0; i < a.length; i++) { if (a[i] < b[i]) return -1; if (a[i] > b[i]) return 1; } return 0; };
+  const isProblem = (r) => SIGNALS.some(([k]) => ["red", "unknown", "superseded", "stale"].includes(r.signals[k].verdict)) || r.untriaged > 0;
+  const inactive = (r, now) => r.archived || now - Date.parse(r.pushedAt) > 365 * DAY;
+
+  function detailRow(r) {
+    const td = el("td", { colspan: "11" });
+    const list = (title, items) => {
+      td.append(el("h3", { text: `${title} (${items.length})` }));
+      if (!items.length) { td.append(el("p", { text: "None." })); return; }
+      const ul = el("ul");
+      for (const i of items.slice(0, 25)) {
+        ul.append(el("li", {}, el("a", { href: i.url, target: "_blank", rel: "noopener", text: `#${i.number} ${i.title}` }),
+          ` · ${i.kind === "pr" ? "PR" : "issue"} by ${i.author}, ${Math.floor((Date.now() - Date.parse(i.createdAt)) / DAY)}d`));
+      }
+      if (items.length > 25) ul.append(el("li", {}, el("a", { href: `${r.url}/issues`, target: "_blank", rel: "noopener", text: `…and ${items.length - 25} more` })));
+      td.append(ul);
+    };
+    td.append(el("h3", { text: "Builds" }));
+    const ul = el("ul");
+    for (const [k, name] of SIGNALS) ul.append(el("li", { text: `${name} (${VERDICT[r.signals[k].verdict]?.label ?? "Unknown"}): ${r.signals[k].detail}` }));
+    td.append(ul);
+    list("Untriaged (no P0-P3 label)", r.items.filter((i) => !i.triaged));
+    list("Awaiting a first response", r.items.filter((i) => i.responded === false));
+    if (r.errors.length) td.append(el("p", { text: `Could not read everything: ${r.errors.join("; ")}` }));
+    return el("tr", { class: "detail", hidden: "" }, td);
+  }
+
+  function render(status, trend) {
+    const now = Date.now();
+    const checked = Date.parse(status.checkedAt);
+    $("sub").textContent = `${status.repos.length} non-fork smart-* repositories in ${status.org}. Last checked ${new Date(checked).toLocaleString()}; checked daily.`;
+    const banners = [];
+    if (status.environment && status.environment !== "production") {
+      banners.push(el("div", { class: "banner", role: "status", text: `${status.environment[0].toUpperCase()}${status.environment.slice(1)} preview: real data, but this run sends no alerts and keeps no history. The live dashboard is at worldhealthorganization.github.io/smart-ig-starter-kit/dashboard/.` }));
+    }
+    if (now - checked > 26 * 3600000) {
+      banners.push(el("div", { class: "banner", role: "status", text: `This data is ${Math.floor((now - checked) / 3600000)} hours old: the daily check has not run or failed. Treat every row as unknown.` }));
+    } else if (status.undetermined) {
+      banners.push(el("div", { class: "banner", role: "status", text: "The last check could not read everything. Rows marked Unknown were not checked; they are not passing." }));
+    }
+    $("banner").replaceChildren(...banners);
+    const all = status.repos;
+    const active = all.filter((r) => !r.archived);
+    const count = (v) => active.reduce((n, r) => n + SIGNALS.filter(([k]) => r.signals[k].verdict === v).length, 0);
+    const prWait = active.reduce((n, r) => n + r.items.filter((i) => i.kind === "pr" && i.responded === false && now - Date.parse(i.createdAt) >= 7 * DAY).length, 0);
+    const tiles = [["Builds failing", count("red")], ["Builds unknown", count("unknown")], ["Untriaged items", active.reduce((n, r) => n + r.untriaged, 0)], ["PRs unreviewed 7+ days", prWait], ["Open issues", active.reduce((n, r) => n + r.openIssues, 0)], ["Open PRs", active.reduce((n, r) => n + r.openPrs, 0)]];
+    $("tiles").replaceChildren(...tiles.map(([k, v]) => el("div", { class: "tile" }, el("div", { class: "k", text: k }), el("div", { class: "v", text: String(v) }))));
+    $("legend").replaceChildren(...Object.entries(VERDICT).map(([v, d]) => withTip(el("span", { class: `pill v-${v}`, tabindex: "0" }, el("span", { class: "dot", "aria-hidden": "true", text: d.icon }), el("span", { text: d.label })), VERDICT_HELP[v])));
+
+    const cutoff = now - 84 * DAY;
+    const series = (repo) => trend.filter((p) => Date.parse(p.date) >= cutoff && p.repos[repo]).map((p) => ({ d: p.date, v: p.repos[repo].issues + p.repos[repo].prs }));
+
+    const draw = () => {
+      const onlyProblems = $("f-problems").checked, hideInactive = $("f-inactive").checked, q = $("f-q").value.trim().toLowerCase();
+      const rows = all
+        .filter((r) => (!onlyProblems || isProblem(r)) && (!hideInactive || !inactive(r, now)) && (!q || r.repo.toLowerCase().includes(q)))
+        .sort((a, b) => cmp(severity(a), severity(b)));
+      const body = $("rows");
+      body.replaceChildren();
+      for (const r of rows) {
+        const btn = el("button", { "aria-expanded": "false", text: r.repo });
+        const repoCell = el("td", { class: "repo" }, btn, " ", el("a", { href: r.url, target: "_blank", rel: "noopener", class: "tag", text: "GitHub" }), r.archived ? el("span", { class: "tag", text: "archived" }) : null);
+        const tr = el("tr", { class: r.archived ? "archived" : "" }, repoCell,
+          ...SIGNALS.map(([k, name]) => el("td", {}, pill(r.signals[k], name))),
+          el("td", { class: "num", text: String(r.openIssues) }),
+          el("td", { class: "num", text: String(r.openPrs) }),
+          el("td", { class: "num", text: String(r.untriaged) }),
+          el("td", { class: "num", text: r.oldestUntriagedDays != null ? `${r.oldestUntriagedDays}d` : "–" }),
+          el("td", {}, spark(series(r.repo))),
+          el("td", { style: "white-space:nowrap", text: r.pushedAt.slice(0, 10) }));
+        const det = detailRow(r);
+        btn.addEventListener("click", () => { const open = det.hidden; det.hidden = !open; btn.setAttribute("aria-expanded", String(open)); });
+        body.append(tr, det);
+      }
+      if (!rows.length) body.append(el("tr", {}, el("td", { colspan: "11", text: "No repositories match these filters." })));
+    };
+    for (const id of ["f-problems", "f-inactive", "f-q"]) $(id).addEventListener("input", draw);
+    draw();
+    $("footer").replaceChildren("Data: ", el("a", { href: "status.json", text: "status.json" }), " · ", el("a", { href: "trend.json", text: "trend.json" }),
+      " · Produced by the smart-repo-health workflow in ", el("a", { href: "https://github.com/WorldHealthOrganization/smart-base/tree/main/.github/repo-health", text: "smart-base" }),
+      " · How we triage: ", el("a", { href: "https://github.com/WorldHealthOrganization/smart-ig-starter-kit/blob/main/TRIAGE.md", text: "TRIAGE.md" }));
+  }
+
+  Promise.all([
+    fetch("status.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(`status.json: HTTP ${r.status}`); return r.json(); }),
+    fetch("trend.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).catch(() => []),
+  ]).then(([s, t]) => render(s, t)).catch((e) => {
+    $("sub").textContent = "";
+    $("banner").replaceChildren(el("div", { class: "banner", role: "alert", text: `Could not load the dashboard data (${e.message}). This is not the same as everything passing.` }));
+  });
+})();
+</script>
+</body>
+</html>

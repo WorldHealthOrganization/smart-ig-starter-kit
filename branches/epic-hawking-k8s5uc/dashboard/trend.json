@@ -1,0 +1,237 @@
+[
+ {
+  "date": "2026-10-26",
+  "repos": {
+   "smart-anc": {
+    "issues": 23,
+    "prs": 2,
+    "untriaged": 25
+   },
+   "smart-base": {
+    "issues": 30,
+    "prs": 4,
+    "untriaged": 34
+   },
+   "smart-base-clinical": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-base-old": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-ccc": {
+    "issues": 122,
+    "prs": 0,
+    "untriaged": 122
+   },
+   "smart-core": {
+    "issues": 2,
+    "prs": 2,
+    "untriaged": 4
+   },
+   "smart-dak-bds": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-ccc": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-chud": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-empty": {
+    "issues": 1,
+    "prs": 2,
+    "untriaged": 3
+   },
+   "smart-dak-example-immz": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-immz": {
+    "issues": 9,
+    "prs": 0,
+    "untriaged": 9
+   },
+   "smart-dak-pnc": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-smbp": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-srv": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-dak-tb": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-data-dictionary": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-emcare-cmr": {
+    "issues": 22,
+    "prs": 0,
+    "untriaged": 22
+   },
+   "smart-emcare-irq": {
+    "issues": 5,
+    "prs": 0,
+    "untriaged": 5
+   },
+   "smart-example-anc": {
+    "issues": 0,
+    "prs": 1,
+    "untriaged": 1
+   },
+   "smart-example-immz": {
+    "issues": 17,
+    "prs": 9,
+    "untriaged": 26
+   },
+   "smart-fp": {
+    "issues": 1,
+    "prs": 2,
+    "untriaged": 3
+   },
+   "smart-hiv": {
+    "issues": 1,
+    "prs": 0,
+    "untriaged": 1
+   },
+   "smart-html": {
+    "issues": 6,
+    "prs": 3,
+    "untriaged": 9
+   },
+   "smart-icvp": {
+    "issues": 18,
+    "prs": 1,
+    "untriaged": 19
+   },
+   "smart-ig-empty": {
+    "issues": 5,
+    "prs": 0,
+    "untriaged": 5
+   },
+   "smart-ig-starter-kit": {
+    "issues": 107,
+    "prs": 1,
+    "untriaged": 108
+   },
+   "smart-ig-template": {
+    "issues": 13,
+    "prs": 5,
+    "untriaged": 18
+   },
+   "smart-immunizations": {
+    "issues": 16,
+    "prs": 14,
+    "untriaged": 30
+   },
+   "smart-ips-pilgrimage": {
+    "issues": 0,
+    "prs": 1,
+    "untriaged": 1
+   },
+   "smart-kg": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-l2-hhas": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-ot": {
+    "issues": 1,
+    "prs": 2,
+    "untriaged": 3
+   },
+   "smart-pcmt": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-ph4h": {
+    "issues": 3,
+    "prs": 1,
+    "untriaged": 4
+   },
+   "smart-ra": {
+    "issues": 8,
+    "prs": 3,
+    "untriaged": 11
+   },
+   "smart-refmart": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-skills": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-sti": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-terminologies": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-trust": {
+    "issues": 28,
+    "prs": 7,
+    "untriaged": 35
+   },
+   "smart-trust-demo": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-trust-phw": {
+    "issues": 3,
+    "prs": 3,
+    "untriaged": 6
+   },
+   "smart-trust-tools": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-ts": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   },
+   "smart-tuberculosis": {
+    "issues": 0,
+    "prs": 0,
+    "untriaged": 0
+   }
+  }
+ }
+]
